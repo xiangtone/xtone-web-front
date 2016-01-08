@@ -7,7 +7,6 @@
     pageEncoding="UTF-8"%>
 <%
 	CheckLoad check = new CheckLoad();
-	System.out.println("pone:"+check.JudgeIsMoblie(request));
 	if(check.JudgeIsMoblie(request)){
 		response.sendRedirect("view/mpLoad.jsp");
 	}
