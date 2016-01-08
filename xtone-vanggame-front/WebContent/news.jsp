@@ -38,7 +38,7 @@
 	try {
 		con = ConnectionService.getInstance().getConnectionForLocal();
 		String limit = " limit " + 6 * (pageIndex - 1) + "," + 6;
-		String sql = "SELECT id,`title`,`content`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%news%' AND `status`=1 ORDER BY lastModifyTime DESC "
+		String sql = "SELECT id,`title`,`subTitle`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%news%' AND `status`=1 ORDER BY lastModifyTime DESC "
 				+ limit;
 		ps = con.prepareStatement(sql);
 		rs = ps.executeQuery();
@@ -48,7 +48,7 @@
 			news.setId(rs.getInt("id"));
 			news.setCatalog(rs.getString("catalog"));
 			news.setTitle(rs.getString("title"));
-			news.setContent(rs.getString("content"));
+			news.setSubTitle(rs.getString("subTitle"));
 			news.setLastModifyTime(rs.getLong("lastModifyTime"));
 			list.add(news);
 		}
@@ -171,13 +171,13 @@
 				<a href="index.jsp"><img alt="logo" src="images/logo.png" class="logo-size"></a>
 			</div>
 			<nav id="bs-navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right ztgs">
-					<li><a id="index" href="index.jsp"><small class="nav-chinese">首页</small><br><small class="nav-english">HOME</small></a></li>
-					<li class="active"><a id="news" href="news.jsp"><small class="nav-chinese">新闻动态</small><br><small class="nav-english">NEWS</small></a></li>
-					<li><a id="partform" href="porducts-sjyx.html"><small class="nav-chinese">旗下产品</small><br><small class="nav-english">PORDUCTS</small></a></li>					
-					<li><a id="abouts" href="about-us-gsjs.html"><small class="nav-chinese">关于我们</small><br><small class="nav-english">VANGGAME</small></a></li>
-					<li><a id="cooperation" href="cooperation.html"><small class="nav-chinese">商务合作</small><br><small class="nav-english">COOPERATION</small></a></li>
-					<li><a id="join" href="join-us-shzp.html"><small class="nav-chinese">招贤纳士</small><br><small class="nav-english">JOIN&nbsp;US</small></a></li>
+				<ul class="nav navbar-nav navbar-right ztgs my-nav">
+					<li><a id="index" href="index.jsp"><font class="nav-chinese">首页</font><br><font class="nav-english">HOME</font></a></li>
+					<li class="active"><a id="news" href="news.jsp"><font class="nav-chinese">新闻动态</font><br><font class="nav-english">NEWS</font></a></li>
+					<li><a id="partform" href="porducts-sjyx.html"><font class="nav-chinese">旗下产品</font><br><font class="nav-english">PORDUCTS</font></a></li>					
+					<li><a id="abouts" href="about-us-gsjs.html"><font class="nav-chinese">关于我们</font><br><font class="nav-english">VANGGAME</font></a></li>
+					<li><a id="cooperation" href="cooperation.html"><font class="nav-chinese">商务合作</font><br><font class="nav-english">COOPERATION</font></a></li>
+					<li><a id="join" href="join-us-shzp.html"><font class="nav-chinese">招贤纳士</font><br><font class="nav-english">JOIN&nbsp;US</font></a></li>
 					
 				</ul>
 			</nav>
@@ -192,10 +192,11 @@
 				</div>
 				<%
 						for (Content news : list) {
-							String content = news.getContent();
-							if (content.length() > 150) {
-								content = content.substring(0, 150) + "...";
-							}
+							
+// 							String content = news.getContent();
+// 							if (content.length() > 150) {
+// 								content = content.substring(0, 150) + "...";
+// 							}
 					%>
 				<div class="col-md-12 col-sm-12 col-xs-12 content">
 					<div class="col-md-12 col-sm-12 col-xs-12">
@@ -207,7 +208,7 @@
 								<small class="content-time"><%=news.getTimeStr()%></small>
 							</div>
 						</div>
-						<%=content%>
+						<%=news.getSubTitle()%>
 					</div>
 					<div class="col-md-12 col-sm-12 col-xs-12">
 						<a
