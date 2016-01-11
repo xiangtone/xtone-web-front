@@ -310,10 +310,10 @@
 			<!--       </div> -->
 		</div>
 		<!-- 轮播（Carousel）导航 -->
-		<!--    <a class="carousel-control left" href="#myCarousel"  -->
-		<!--       data-slide="prev">&lsaquo;</a> -->
-		<!--    <a class="carousel-control right" href="#myCarousel"  -->
-		<!--       data-slide="next">&rsaquo;</a> -->
+		   <a class="carousel-control left" href="#myCarousel" 
+		      data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+		   <a class="carousel-control right" href="#myCarousel" 
+		      data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 	</div>
 	<div
 		style="background-image: url(images/index/index-bg.jpg); background-size: cover;">
@@ -530,6 +530,7 @@
 			}
 			_this.parent().hide();
 		}
+				
 	</script>
 	<script type="text/javascript">
 		function openPop(popID) {
