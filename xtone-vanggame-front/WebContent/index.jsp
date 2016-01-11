@@ -21,7 +21,7 @@
 	try {
 		con = ConnectionService.getInstance().getConnectionForLocal();
 		String limit = " limit " + 6 * (1 - 1) + "," + 6;
-		String sql = "SELECT id,`title`,`lastModifyTime` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%news%' AND `status`=1 ORDER BY lastModifyTime DESC "
+		String sql = "SELECT id,`title`,`lastModifyTime` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%news%' AND `status`=1 ORDER BY priority DESC "
 				+ limit;
 		ps = con.prepareStatement(sql);
 		rs = ps.executeQuery();
@@ -260,29 +260,6 @@
 <body class="bs-docs-home">
 	<header class="navbar navbar-static-top bs-docs-nav" id="top"
 		role="banner">
-		
-		<div class="container">
-			<div class="navbar-header">
-				<button class="navbar-toggle collapsed" type="button"
-					data-toggle="collapse" data-target="#bs-navbar"
-					aria-controls="bs-navbar" aria-expanded="false">
-					<span class="sr-only"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span>
-				</button>
-				<a href="index.jsp"><img alt="logo" src="images/logo.png" class="logo-size"></a>
-			</div>
-			<nav id="bs-navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right ztgs my-nav">
-					<li class="active"><a id="index" href="index.jsp"><font class="nav-chinese">首页</font><br><font class="nav-english">HOME</font></a></li>
-					<li><a id="news" href="news.jsp"><font class="nav-chinese">新闻动态</font><br><font class="nav-english">NEWS</font></a></li>
-					<li><a id="partform" href="porducts-sjyx.html"><font class="nav-chinese">旗下产品</font><br><font class="nav-english">PORDUCTS</font></a></li>					
-					<li><a id="abouts" href="about-us-gsjs.html"><font class="nav-chinese">关于我们</font><br><font class="nav-english">VANGGAME</font></a></li>
-					<li><a id="cooperation" href="cooperation.html"><font class="nav-chinese">商务合作</font><br><font class="nav-english">COOPERATION</font></a></li>
-					<li><a id="join" href="join-us-shzp.html"><font class="nav-chinese">招贤纳士</font><br><font class="nav-english">JOIN&nbsp;US</font></a></li>
-					
-				</ul>
-			</nav>
-		</div>
 	</header>
 
 	<div id="myCarousel" class="carousel slide" data-ride="carousel"
@@ -332,7 +309,7 @@
 					</div>
 
 					<div class="col-md-12 col-sm-12 col-xs-12 nopadding">
-						<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
+						<div class="col-md-4 col-sm-4 col-xs-12 nopadding">
 							<div class="hot_game hot_list">
 
 								<div class="l hot_gamebox mb1">
@@ -355,7 +332,7 @@
 
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
+						<div class="col-md-4 col-sm-4 col-xs-12 nopadding">
 							<div class="hot_game hot_list">
 								<div class="l hot_gamebox mb1">
 									<a href="porducts-sjyx.html"><img
@@ -376,7 +353,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
+						<div class="col-md-4 col-sm-4 col-xs-12 nopadding">
 							<div class="hot_game hot_list">
 								<div class="hot_gamebox mb1">
 									<a href="porducts-sjyx.html"><img
@@ -410,7 +387,7 @@
 							<img src="images/index/business_structure.png"></img>
 						</div>
 					</div>
-					<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
+					<div class="col-md-4 col-sm-4 col-xs-12 nopadding">
 						<!-- 					<a href="http://expo.getbootstrap.com/2014/10/29/lyft/" -->
 						<!-- 						target="_blank" title="Lyft"> -->
 
@@ -419,12 +396,12 @@
 							alt="First cooperation" class="bsimg">
 						</a>
 					</div>
-					<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
+					<div class="col-md-4 col-sm-4 col-xs-12 nopadding">
 						<a href="cooperation.html"> <img src="images/index/ad3.jpg"
 							alt="Second cooperation" class="bsimg">
 						</a>
 					</div>
-					<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
+					<div class="col-md-4 col-sm-4 col-xs-12 nopadding">
 						<a href="cooperation.html"> <img src="images/index/ad2.jpg"
 							alt="Third cooperation" class="bsimg">
 						</a>
@@ -518,7 +495,8 @@
 // 		}();
 	</script>
 	<script type="text/javascript">
-		$(function() {
+	$("#top").load("top.html");
+	$(function() {
 			$('.hot_list .hot_gamebox').hotlist();
 			updateVido();
 		})
@@ -533,6 +511,8 @@
 				
 	</script>
 	<script type="text/javascript">
+	
+
 		function openPop(popID) {
 			closePop();
 
