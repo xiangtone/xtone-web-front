@@ -1,3 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@page import="org.common.util.ConnectionService"%>
+<%@page import="java.util.List"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="org.vanggame.info.Content"%>
+<%@page import="org.vanggame.util.PageUtil"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +20,62 @@
 	content="Bootstrap.">
 <meta name="keywords"
 	content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
-<title>万家游戏-旗下产品</title>
+<%
+	int pageIndex =1;
+	try{
+		String index = request.getParameter("pageindex");
+		pageIndex =Integer.parseInt(index);
+	}catch(Exception e){
+// 		System.out.println("第一页");
+// 		e.printStackTrace();
+	}
+	int count = 0;
+
+	Connection con = null;
+	PreparedStatement ps = null;
+	ResultSet rs = null;
+	List<Content> list = new ArrayList<Content>();
+	try {
+		con = ConnectionService.getInstance().getConnectionForLocal();
+		String limit = " limit " + 6 * (pageIndex - 1) + "," + 6;
+		String sql = "SELECT id,`title`,`content`,`subTitle`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%job%' AND `status`=1 ORDER BY lastModifyTime DESC "
+				+ limit;
+		ps = con.prepareStatement(sql);
+		rs = ps.executeQuery();
+
+		while (rs.next()) {
+			Content job = new Content();
+			job.setId(rs.getInt("id"));
+			job.setCatalog(rs.getString("catalog"));
+			job.setTitle(rs.getString("title"));
+			job.setContent(rs.getString("content"));
+			job.setSubTitle(rs.getString("subTitle"));
+			list.add(job);
+		}
+
+		sql = "SELECT count(*) count FROM `tbl_cms_contents` WHERE `catalog` LIKE '%news%' AND `status`=1 ";
+		ps = con.prepareStatement(sql);
+		rs = ps.executeQuery();
+		while (rs.next()) {
+			int m = 1;
+			count = rs.getInt(m);
+		}
+
+	} catch (Exception e) {
+		e.printStackTrace();
+	} finally {
+		if (con != null) {
+			try {
+				con.close();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+	}
+%>
+<title>万家游戏-关于我们</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/docs.min.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -66,7 +132,7 @@ color: #aaaaaa;
     display: block;
     color: #cf1232;
     padding-left: 20px;
-    font-size: 28px;
+    font-size: 21px;
 }
 
 .content{
@@ -75,35 +141,14 @@ color: #aaaaaa;
  	padding: 15px 0px 15px 0px;
 }
 
-.sjyx-left{
-	padding-top: 39px;
-	background: #fff;
-}
-
-.sjyx-right{
- 	height:259px;
-	background: #37383d;
-}
-
-.btn-black{
-	float:right;
-	margin: 15px 0 0 0px;
-    background: #5d5d5d;
-    color: #fff;
-    padding: 8px 25px 8px 25px;
-    font: 17px Verdana, Arial, Helvetica, sans-serif;
-    border:none;
-}
-    
-.btn-red{
-	float:right;
-	margin: 15px 0 0 0px;
+.btn{
+	margin: 4px 0 0 10px;
     background: #cf1232;
     color: #fff;
-    padding: 8px 25px 8px 25px;
-    font: 17px Verdana, Arial, Helvetica, sans-serif;
-    border:none;
-}
+    padding-left: 25px;
+    padding-right: 25px;
+    font: 14px Verdana, Arial, Helvetica, sans-serif;
+    }
 </style>
 </head>
 <body class="bs-docs-home">
@@ -124,82 +169,47 @@ color: #aaaaaa;
 				<ul class="nav navbar-nav navbar-right ztgs my-nav">
 					<li><a id="index" href="index.jsp"><font class="nav-chinese">首页</font><br><font class="nav-english">HOME</font></a></li>
 					<li><a id="news" href="news.jsp"><font class="nav-chinese">新闻动态</font><br><font class="nav-english">NEWS</font></a></li>
-					<li class="active"><a id="partform" href="porducts-sjyx.html"><font class="nav-chinese">旗下产品</font><br><font class="nav-english">PORDUCTS</font></a></li>					
+					<li><a id="partform" href="porducts-sjyx.html"><font class="nav-chinese">旗下产品</font><br><font class="nav-english">PORDUCTS</font></a></li>					
 					<li><a id="abouts" href="about-us-gsjs.html"><font class="nav-chinese">关于我们</font><br><font class="nav-english">VANGGAME</font></a></li>
 					<li><a id="cooperation" href="cooperation.html"><font class="nav-chinese">商务合作</font><br><font class="nav-english">COOPERATION</font></a></li>
-					<li><a id="join" href="join-us-shzp.html"><font class="nav-chinese">招贤纳士</font><br><font class="nav-english">JOIN&nbsp;US</font></a></li>
+					<li class="active"><a id="join" href="join-us-shzp.html"><font class="nav-chinese">招贤纳士</font><br><font class="nav-english">JOIN&nbsp;US</font></a></li>
 					
 				</ul>
 			</nav>
 		</div>
 	</header>
-	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/products/banner-products.jpg" class="bsimg"></div>
+	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/about-us/banner_about.jpg" class="bsimg"></div>
 	<div class="bs-docs-featurette" style="background: #f1f1f1">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
-					<a href="porducts-sjyx.html"><img src="images/products/sjyx1.png"
+				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
+					<a href="join-us-position.jsp"><img src="images/about-us/shzp2.png"
 						class="bsimg tab"></a>
 				</div>
-				<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
-					<a href="porducts-wyyx.html"><img src="images/products/wyyx1.png"
+				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
+					<a href="join-us-lxwm.html"><img src="images/about-us/lxwm1.jpg"
 						class="bsimg tab"></a>
 				</div>
-				<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
-					<a href="#"><img src="images/products/khdyx2.png"
-						class="bsimg tab"></a>
+				<%for(Content job:list){%>	
+				<div class="col-md-12 col-sm-12 col-xs-12 content ztgs">
+						
+					<div class="col-md-10 col-sm-9 col-xs-7">
+						 <p class="title"><%=job.getTitle() %></p>						
+					</div>
+					<div class="col-md-2 col-sm-3 col-xs-5">
+						<input type="button" value="查看详情" onclick="window.location.href='join-us-position-content.jsp?id=<%=job.getId()%>'" class="btn">
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12"><%=job.getSubTitle()%></div>
+					
+					
 				</div>
-<!-- 				<div class="col-md-12 col-sm-12 col-xs-12 nopadding game-bg" style="background-image:url(images/products3/ljy.png);margin-top: 0px;">					 -->
-<!-- 					<div class="col-md-10 col-sm-10 col-xs-10"> -->
-<!-- 						<a href="#" class="game-btn-download"><img src="images/products2/xiazai_1.png" -->
-<!-- 						class=""></a> -->
-<!-- 					</div> -->
-<!-- 					<div class="col-md-2 col-sm-2 col-xs-2"> -->
-<!-- 					<a href="http://www.ljy0.com/home.html" target="_blank" class="game-btn-web"><img src="images/products2/guanwang_1.png" -->
-<!-- 						class=""></a> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-				<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
-					<div class="wyyx1">
-						<img src="images/products/ljy1.jpg" class="bsimg">
-					</div>
-					<div class="sjyx3">
-						<a href="javascript:alert('敬请期待！');"><img src="images/products/ljy2.png" class="bsimg"></a>
-					</div>
-					<div class="sjyx3">
-						<a href="http://www.ljy0.com/home.html" target="_blank"><img src="images/products/ljy3.png" class="bsimg"></a>
-					</div>
-				</div>
+				<%} %>
 				<div class="col-md-12 col-sm-12 col-xs-12 bottom-hieght"></div>
 			</div>
 		</div>	
 	</div>
 	<footer class="bs-docs-footer" role="contentinfo">
-		<div class="container nopadding">
-			<div class="col-md-3 col-sm-5 col-xs-12 nopadding">
-				<a href="index.jsp"><img alt="footlogo" src="images/footlogo.png" class="logo-foot-size"></a>
-			</div>
-			<div class="col-md-9 col-sm-7 col-xs-12 nopadding ztgs"
-				style="text-align: center;">
-				<ul class="bs-docs-footer-links">
-					<!-- 			 style="border-right: #fff 1px solid;display: block;width: 80px;" -->
-					<li><a href="about-us-gsjs.html">关于我们</a></li>
-					<li><a href="cooperation.html">商务合作</a></li>
-					<li><a href="join-us-shzp.html">招贤纳士</a></li>
-					<li><a href="flsm.html">法律声明</a></li>				
-					<li><a data-toggle="popover" onclick="ishidden();"><img alt="" src="images/ico-weixin.png">&nbsp;微信 </a></li>
-					<li><a href="http://weibo.com/vanggame" target="_blank"><img alt="" src="images/ico-weibo.png"></a>&nbsp;<a href="http://weibo.com/vanggame" target="_blank">微博</a></li>
-				</ul>
-				<p class="footer-fontsize">
-					万家游戏版权所有Copyright2002-2015中国网络游戏版权保护联盟举报中心&nbsp;闽B2-20040096-20&nbsp;&nbsp;&nbsp;&nbsp;
-						<img alt="" src="images/index/foot1.png">&nbsp;&nbsp;&nbsp;&nbsp;
-						<img alt="" src="images/index/foot2.png">&nbsp;&nbsp;&nbsp;&nbsp;
-						<img alt="" src="images/index/foot3.png">&nbsp;&nbsp;&nbsp;&nbsp;
-						<img alt="" src="images/index/foot4.png">
-				<br>
-				健康游戏忠告：抵制不良游戏&nbsp;拒绝盗版游戏&nbsp;注意自我保护&nbsp;谨防上当受骗&nbsp;适度游戏益脑&nbsp;沉迷游戏伤身&nbsp;合理安排时间&nbsp;享受健康生活</p>
-			</div>
-		</div>
+		<jsp:include page="footer.html"/>
 	</footer>
 	
 	<script	src="js/bootstrap/jquery.min.js"></script>
@@ -207,6 +217,5 @@ color: #aaaaaa;
 	<script	src="js/docs.min.js"></script>
 	<script	src="js/bootstrap/ie10-viewport-bug-workaround.js"></script>
 <!-- 	<script>var _gauges=_gauges||[];!function(){var e=document.createElement("script");e.async=!0,e.id="gauges-tracker",e.setAttribute("data-site-id","4f0dc9fef5a1f55508000013"),e.src="//secure.gaug.es/track.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();</script> -->
-	
 </body>
 </html>

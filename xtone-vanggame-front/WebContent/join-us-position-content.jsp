@@ -1,3 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@page import="org.common.util.ConnectionService"%>
+<%@page import="java.util.List"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="org.vanggame.info.Content"%>
+<%@page import="org.vanggame.util.PageUtil"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +20,38 @@
 	content="Bootstrap.">
 <meta name="keywords"
 	content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<%
+	String idStr = request.getParameter("id");
+// 	String index = request.getParameter("pageindex");
+// 	int pageIndex=Integer.parseInt(index);
+	int id = Integer.parseInt(idStr);
+	Connection con = null;
+	PreparedStatement ps = null;
+	ResultSet rs = null;
+	Content content = new Content();
+	try {
+		con = ConnectionService.getInstance().getConnectionForLocal();
+		String sql = "SELECT `title`,`content` FROM `tbl_cms_contents` WHERE id=?";
+		ps = con.prepareStatement(sql);
+		ps.setInt(1, id);
+		rs = ps.executeQuery();
+		if (rs.next()) {
+			content.setTitle(rs.getString("title"));
+			content.setContent(rs.getString("content"));
+		}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}finally {
+		if (con != null) {
+			try {
+				con.close();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+%>
 <title>万家游戏-关于我们</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/docs.min.css" rel="stylesheet">
@@ -21,62 +64,25 @@
 <!-- <script>!function(e,t,a,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(a),s=t.getElementsByTagName(a)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-146052-10","getbootstrap.com"),ga("send","pageview");</script> -->
 <style>
 
-.newsli{
-	border-bottom: #e1e1e0 solid 1px;
-	padding-top: 15px;
-	padding-bottom: 16px;
-/* 	list-style-image: url("images/index/dian_1.png"); */
-	color: #cf1232;
+.title-left{
+    display: block;
+    color: #cf1232;
+    font-size: 28px;
 }
 
-@media ( min-width :768px){
-.newsli{
-	border-bottom: #e1e1e0 solid 1px;
-	padding-top: 11px;
-	padding-bottom: 11px;
-/* 	list-style-image: url("images/index/dian_1.png"); */
-color: #cf1232;
-}
-}
-@media ( min-width :1201px){
-.newsli{
-	border-bottom: #e1e1e0 solid 1px;
-	padding-top: 16px;
-	padding-bottom: 16px;
-/* 	list-style-image: url("images/index/dian_1.png"); */
-color: #cf1232;
-}
-}
-
-.newsli i{
-color: #aaaaaa;
-}
-
-.newsli em{
-color: #aaaaaa;
-}
-
-.links{
-	color: #aaaaaa;
-    text-decoration: none;
-}
-
-.title{
-	font-size:30px;
-	color: #cf1232;
-	margin: 0;
+.title-right{
+    color: #000;
 }
 
 .content{
 	background: #fff;
-	margin-top: 25px;
-	padding: 15px 100px 15px 100px;
+ 	padding: 15px 0px 15px 0px;
 }
 
-.titleimg{
-	float: left;
-    padding-top: 10px;
-    margin-right: 10px;
+.content-top{
+	background: #2c2b30;
+	margin-top: 25px;
+	padding: 15px 0px 15px 20px;
 }
 
 </style>
@@ -113,45 +119,31 @@ color: #aaaaaa;
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
-					<a href="join-us-shzp.html"><img src="images/about-us/shzp1.png"
+					<a href="join-us-position.jsp"><img src="images/about-us/shzp2.png"
 						class="bsimg tab"></a>
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
-					<a href="join-us-lxwm.html"><img src="images/about-us/lxwm2.jpg"
+					<a href="join-us-lxwm.html"><img src="images/about-us/lxwm1.jpg"
 						class="bsimg tab"></a>
 				</div>
-				<div class="col-md-12 col-sm-12 col-xs-12 nopadding bottom-hieght">					
-						<img src="images/about-us/map.png" class="bsimg" style="padding-top: 100px;padding-bottom: 103px;background: #fff;">
+				<div class="col-md-12 col-sm-12 col-xs-12 content-top ztgs">
+				<font class="locate">您所在位置&nbsp;:&nbsp;<a class="locate" href="join-us-position.jsp">社会招聘</a>&nbsp;>&nbsp;<a class="locate" href="#"><%=content.getTitle() %></a></font>
 				</div>
+				<div class="col-md-12 col-sm-12 col-xs-12 content ztgs">
+												
+					<div class="col-md-12 col-sm-12 col-xs-12" style="padding-left: 37px;">
+					<%=content.getContent() %>
+					</div>
+
+					
+				</div>
+				
 			</div>
+			<div class="col-md-12 col-sm-12 col-xs-12 bottom-hieght"></div>
 		</div>	
 	</div>
 	<footer class="bs-docs-footer" role="contentinfo">
-		<div class="container nopadding">
-			<div class="col-md-3 col-sm-5 col-xs-12 nopadding">
-				<a href="index.jsp"><img alt="footlogo" src="images/footlogo.png" class="logo-foot-size"></a>
-			</div>
-			<div class="col-md-9 col-sm-7 col-xs-12 nopadding ztgs"
-				style="text-align: center;">
-				<ul class="bs-docs-footer-links">
-					<!-- 			 style="border-right: #fff 1px solid;display: block;width: 80px;" -->
-					<li><a href="about-us-gsjs.html">关于我们</a></li>
-					<li><a href="cooperation.html">商务合作</a></li>
-					<li><a href="join-us-shzp.html">招贤纳士</a></li>
-					<li><a href="flsm.html">法律声明</a></li>				
-					<li><a data-toggle="popover" onclick="ishidden();"><img alt="" src="images/ico-weixin.png">&nbsp;微信 </a></li>
-					<li><a href="http://weibo.com/vanggame" target="_blank"><img alt="" src="images/ico-weibo.png"></a>&nbsp;<a href="http://weibo.com/vanggame" target="_blank">微博</a></li>
-				</ul>
-				<p class="footer-fontsize">
-					万家游戏版权所有Copyright2002-2015中国网络游戏版权保护联盟举报中心&nbsp;闽B2-20040096-20&nbsp;&nbsp;&nbsp;&nbsp;
-						<img alt="" src="images/index/foot1.png">&nbsp;&nbsp;&nbsp;&nbsp;
-						<img alt="" src="images/index/foot2.png">&nbsp;&nbsp;&nbsp;&nbsp;
-						<img alt="" src="images/index/foot3.png">&nbsp;&nbsp;&nbsp;&nbsp;
-						<img alt="" src="images/index/foot4.png">
-				<br>
-				健康游戏忠告：抵制不良游戏&nbsp;拒绝盗版游戏&nbsp;注意自我保护&nbsp;谨防上当受骗&nbsp;适度游戏益脑&nbsp;沉迷游戏伤身&nbsp;合理安排时间&nbsp;享受健康生活</p>
-			</div>
-		</div>
+		<jsp:include page="footer.html"/>
 	</footer>
 	
 	<script	src="js/bootstrap/jquery.min.js"></script>
@@ -159,5 +151,6 @@ color: #aaaaaa;
 	<script	src="js/docs.min.js"></script>
 	<script	src="js/bootstrap/ie10-viewport-bug-workaround.js"></script>
 <!-- 	<script>var _gauges=_gauges||[];!function(){var e=document.createElement("script");e.async=!0,e.id="gauges-tracker",e.setAttribute("data-site-id","4f0dc9fef5a1f55508000013"),e.src="//secure.gaug.es/track.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();</script> -->
+	
 </body>
 </html>

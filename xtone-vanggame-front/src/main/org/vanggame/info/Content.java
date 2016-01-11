@@ -15,7 +15,8 @@ public class Content {
 	private String lastModifyName;
 	private Long lastModifyTime;
 	private String timeStr;
-	
+	private String subTitle;
+	private int priority;
 	public Content() {
 		super();
 	}
@@ -130,6 +131,22 @@ public class Content {
 	public void setTimeStr(Long time) {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
 		this.timeStr = sdf.format(time);
+	}
+
+	public String getSubTitle() {
+		return subTitle;
+	}
+
+	public void setSubTitle(String subTitle) {
+		this.subTitle = subTitle;
+	}
+
+	public int getPriority() {
+		return priority;
+	}
+
+	public void setPriority(int priority) {
+		this.priority = priority;
 	}
 	
 }
