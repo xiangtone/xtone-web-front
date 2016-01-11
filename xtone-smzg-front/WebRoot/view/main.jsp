@@ -171,12 +171,12 @@
 		.top_box .menus li a{display:block; padding:0 0 0 25px; font-size:18px; color: rgba(38, 2, 2, 0.81); overflow: hidden;text-decoration:none;font-size:14px;}
 		.top_box .menus li a:hover{color:#ffcc00;}
 		.top_box .menus{ width:400px;  padding:12px 0 0 550px; overflow: hidden; margin:0;}
-		.model2{width:100%;height:713px;padding:0;margin:0;position:relative;background:url(../img/main/bg_2.png) no-repeat center 0;}
-		.tab_news{width:1200px;height:461px;padding:0;margin:0 auto;}
+		.model2{width: 100%;height: 786px;padding: 0px;margin: 0px;background: transparent url("../img/main/bg_2.png") no-repeat scroll center 0px;position: relative;background: rgb(35,16,36);}
+		.tab_news{width:1200px;height:403px;padding:0;margin:0 auto;}
 		.newsList font{color:rgb(248, 244, 245);}
 		.active{width:156px;height:97px;float:left;background-color: white;margin: 18px 10px;padding: 0;}
 		.partner{width: 1200px;height: 135px;padding: 0px;margin: 0px auto;}
-		.partnerimg{height: 85px;width: 178px;margin: 0 11px;float:left;}
+		.partnerimg{height: 85px;width: 178px;margin: 0 11px;float:left;background: #000;}
 		.test-top{height: 55px;background: #FBFBFB none repeat scroll 0% 0%;}
 		#NIE-topBar *, #NIE-topBar-include * {font-size: 12px;font-style: normal;}
 		.test-top-main {position: relative;z-index: 9999;width: 1165px;margin: auto;}
@@ -416,22 +416,27 @@
 	</div>
 	<div class="partner">
 		<div class="partnerimg" style="margin: 0px 15px 0px 0px;" >
-			<img src="../img/main/partner/1.png" width="178px" height="85px" alt="" />
+			<a href="http://www.8477.com/" target="_blank"><img src="../img/main/partner/1.png" width="178px" height="85px" alt="" /></a>
 		</div>
 		<div class="partnerimg" >
-			<img src="../img/main/partner/2.png" width="178px" height="85px" alt="" />
+			<a href="http://www.18183.com/" target="_blank"><img src="../img/main/partner/2.png" width="178px" height="85px" alt="" /></a>
 		</div>
 		<div class="partnerimg" >
-			<img src="../img/main/partner/3.png" width="178px" height="85px" alt="" />
+			<a href="http://www.youxiduo.com/" target="_blank"><img src="../img/main/partner/3.png" width="178px" height="85px" alt="" /></a>
 		</div>
 		<div class="partnerimg" >
-			<img src="../img/main/partner/4.png" width="178px" height="85px" alt="" />
+			<a href="http://www.youxiniao.com/" target="_blank"><img src="../img/main/partner/4.png" width="178px" height="85px" alt="" /></a>
 		</div>
 		<div class="partnerimg" >
-			<img src="../img/main/partner/5.png" width="178px" height="85px" alt="" />
+			<a href="http://www.pipaw.com/" target="_blank"><img src="../img/main/partner/5.png" width="178px" height="85px" alt="" /></a>
 		</div>
 		<div class="partnerimg" >
-			<img src="../img/main/partner/6.png" width="178px" height="85px" alt="" />
+			<a href="http://www.benshouji.com/" target="_blank"><img src="../img/main/partner/6.png" width="178px" height="85px" alt="" /></a>
+		</div>
+	</div>
+	<div class="partner">
+		<div class="partnerimg" style="margin: 0px 15px 0px 0px;" >
+			<a href="http://www.23.com/" target="_blank"><img src="../img/main/partner/7.png" width="178px" height="85px" alt="" /></a>
 		</div>
 	</div>
 	<div class="" style="padding: 0px;margin: 0px auto;width: 672px;height: 70px;">
