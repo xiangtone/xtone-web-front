@@ -67,6 +67,7 @@
 <script type="text/javascript">try{document.execCommand("BackgroundImageCache",false,true);}catch(e){}</script>
 <script src="BeatMouse.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="http://cdn.bootcss.com/hammer.js/1.0.0/jquery.hammer.min.js"></script>
 <script src="hammer.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(function(){
@@ -83,14 +84,24 @@ $(function(){
     });
 	/*锁死界面选择复制功能*/
 	for(var i=0;i<9;i++){
-		var hammer = new Hammer(document.getElementById(i));
-		hammer.ontap = function(ev) { 
-			alert("click");
-			hit(i);
-		};
+		toush(i);
 	}
+	/*for(var i=0;i<9;i++){
+		$("#"+i)
+		   .bind("tap", function(ev) {
+			   alert("click");
+				hit(i);
+		   });
+	}*/
 	
 });
+
+function toush(id){
+	var hammer = new Hammer(document.getElementById(id));
+	hammer.on("tap", function (e) {
+		hit(id);
+	});
+}
 	/*锁死界面选择复制功能*/
 	$(document).bind("contextmenu",function(){return false;});
 

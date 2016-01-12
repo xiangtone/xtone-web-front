@@ -225,7 +225,7 @@
 	<div class="download" style="background: url(../img/main/kuang.png) no-repeat;">
 	  <img  src="../img/main/code_main.jpg" width="125" height="124" alt="神魔传奇" style="margin-top: 23px;margin-left: 4px;">
 	  <a class="download--ios" style="background: url(../img/main/btn_download_ios.png) no-repeat;" href="javascript:;" rel="nofollow">App Store下载</a>
-	  <a class="download--android" style="background: url(../img/main/androidbt.png) no-repeat;" href="javascript:;" title="">安卓下载</a>
+	  <a class="download--android" style="background: url(../img/main/androidbt.png) no-repeat;" href="../view/content.jsp?id=213" title="">安卓下载</a>
 	  <a class="btn-gifts" style="background: url(../img/main/btn_gift_bg.png) no-repeat;" href="javascript:openPop('#pop-android');"><b style="background: url(../img/main/btn_gift_item.png) no-repeat;">领取礼包</b></a>
 	  <!--epart end-->
 	</div>

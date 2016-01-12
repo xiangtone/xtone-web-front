@@ -175,7 +175,7 @@
 
 				<ul class="re-imgtext-15 clear">
 					<li>
-						<a href="" style="color: #20202C;text-decoration: none;display: block;width: 34%;height: 43px;top: 70%;background: transparent url(../img/mp_load/btn_download.jpg) no-repeat scroll left center / 98px auto;position: absolute;left: 13%;"></a>
+						<a href="../view/mpContent.jsp?id=213" style="color: #20202C;text-decoration: none;display: block;width: 34%;height: 43px;top: 70%;background: transparent url(../img/mp_load/btn_download.jpg) no-repeat scroll left center / 98px auto;position: absolute;left: 13%;"></a>
 						<!-- 图片按钮大小为98X32 -->
 						<!--<img src="img/btn_download.png" alt="花千骨">-->
 					</li>

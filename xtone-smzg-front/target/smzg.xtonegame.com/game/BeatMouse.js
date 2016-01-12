@@ -259,12 +259,12 @@ function GameStart(){
 
 function hit(id){
 	if(Game.time > 59 && Game.time != 0){
-		//alert("游戏尚未开始！");
-		$("#text").text(id);
+		alert("游戏尚未开始！");
+		//$("#text").text(id);
 		return;
 	}else{
 		//alert(id);
 		$("#"+id).children().eq(1).click();
-		$("#text").text(id);
+		//$("#text").text(id);
 	}
 }
