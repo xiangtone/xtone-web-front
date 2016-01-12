@@ -86,13 +86,6 @@ $(function(){
 	for(var i=0;i<9;i++){
 		toush(i);
 	}
-	/*for(var i=0;i<9;i++){
-		$("#"+i)
-		   .bind("tap", function(ev) {
-			   alert("click");
-				hit(i);
-		   });
-	}*/
 	
 });
 
