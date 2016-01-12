@@ -413,6 +413,7 @@ h2 code, h3 code, h4 code {
 
 .navbar-nav li{
 	text-align: center;
+	width: 16%;
 }
 
 .active {
@@ -2216,4 +2217,6 @@ h1[id] {
 	background-color: #fff
 }
 
-
+.my-nav{
+	width: 70%;
+}

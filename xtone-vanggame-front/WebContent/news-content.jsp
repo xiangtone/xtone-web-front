@@ -114,13 +114,13 @@
 				<a href="index.jsp"><img alt="logo" src="images/logo.png" class="logo-size"></a>
 			</div>
 			<nav id="bs-navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right ztgs">
-					<li><a id="index" href="index.jsp"><small class="nav-chinese">首页</small><br><small class="nav-english">HOME</small></a></li>
-					<li class="active"><a id="news" href="news.jsp"><small class="nav-chinese">新闻动态</small><br><small class="nav-english">NEWS</small></a></li>
-					<li><a id="partform" href="porducts-sjyx.html"><small class="nav-chinese">旗下产品</small><br><small class="nav-english">PORDUCTS</small></a></li>					
-					<li><a id="abouts" href="about-us-gsjs.html"><small class="nav-chinese">关于我们</small><br><small class="nav-english">VANGGAME</small></a></li>
-					<li><a id="cooperation" href="cooperation.html"><small class="nav-chinese">商务合作</small><br><small class="nav-english">COOPERATION</small></a></li>
-					<li><a id="join" href="join-us-shzp.html"><small class="nav-chinese">招贤纳士</small><br><small class="nav-english">JOIN&nbsp;US</small></a></li>
+				<ul class="nav navbar-nav navbar-right ztgs my-nav">
+					<li><a id="index" href="index.jsp"><font class="nav-chinese">首页</font><br><font class="nav-english">HOME</font></a></li>
+					<li class="active"><a id="news" href="news.jsp"><font class="nav-chinese">新闻动态</font><br><font class="nav-english">NEWS</font></a></li>
+					<li><a id="partform" href="porducts-sjyx.html"><font class="nav-chinese">旗下产品</font><br><font class="nav-english">PORDUCTS</font></a></li>					
+					<li><a id="abouts" href="about-us-gsjs.html"><font class="nav-chinese">关于我们</font><br><font class="nav-english">VANGGAME</font></a></li>
+					<li><a id="cooperation" href="cooperation.html"><font class="nav-chinese">商务合作</font><br><font class="nav-english">COOPERATION</font></a></li>
+					<li><a id="join" href="join-us-shzp.html"><font class="nav-chinese">招贤纳士</font><br><font class="nav-english">JOIN&nbsp;US</font></a></li>
 					
 				</ul>
 			</nav>
@@ -129,19 +129,19 @@
 	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/news/banner-news.jpg" class="bsimg"></div>
 	<div class="bs-docs-featurette" style="background: #f1f1f1">
 		<div class="container">
-			<div class="row ztgs">
+			<div class="row">
 				<div class="col-md-12 col-sm-12 col-xs-12 nopadding">
 					<a href="new.html"><img src="images/news/news.png"
 						class="bsimg tab"></a>
 				</div>
-				<div class="col-md-12 col-sm-12 col-xs-12 content-top">
+				<div class="col-md-12 col-sm-12 col-xs-12 content-top ztgs">
 				<font class="locate">您所在位置&nbsp;:&nbsp;<a class="locate" href="news.jsp">新闻中心</a>&nbsp;>&nbsp;<a class="locate" href="#">综合正文</a></font>
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12 artText">
-					<div class="col-md-12 col-sm-12 col-xs-12" align="center">
+					<div class="col-md-12 col-sm-12 col-xs-12 ztgs" align="center">
 						<strong style="font-size: 30px;"><%=content.getTitle()%></strong>
 					</div>
-					<div class="col-md-12 col-sm-12 col-xs-12" align="center">
+					<div class="col-md-12 col-sm-12 col-xs-12 ztgs" align="center">
 						<p class="" style="color: #8f8f8f;"><%=content.getTimeStr()%>
 					</div>
 					<div class="col-md-12 col-sm-12 col-xs-12 nopadding" id="content">
