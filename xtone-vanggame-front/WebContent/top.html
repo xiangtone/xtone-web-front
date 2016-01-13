@@ -21,7 +21,7 @@
 					class="nav-chinese">关于我们</font><br> <font class="nav-english">VANGGAME</font></a></li>
 			<li id="cooperation" ><a href="cooperation.html"><font
 					class="nav-chinese">商务合作</font><br> <font class="nav-english">COOPERATION</font></a></li>
-			<li id="join"><a href="join-us-shzp.html"><font
+			<li id="join"><a href="join-us-position.jsp"><font
 					class="nav-chinese">招贤纳士</font><br> <font class="nav-english">JOIN&nbsp;US</font></a></li>
 		</ul>
 	</nav>
@@ -32,7 +32,7 @@
 	var url = this.location.href;
 	var htmlName = url.split("/");
 	var name=htmlName[htmlName.length - 1].split("?")[0];
-	if (name == "index.jsp") {
+	if (name == "index.jsp"||name == "") {
 		$("#index").addClass("active");
 	}else if (name == "news.jsp"||name == "news-content.jsp") {
 		$("#news").addClass("active");
@@ -42,7 +42,7 @@
 		$("#abouts").addClass("active");
 	}else if (name == "cooperation.html") {
 		$("#cooperation").addClass("active");
-	}else if (name == "join-us-shzp.html"||name == "join-us-contact.html") {
+	}else if (name == "join-us-position.jsp"||name == "join-us-contact.html") {
 		$("#join").addClass("active");
 	}
 </script>
