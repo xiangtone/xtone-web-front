@@ -188,7 +188,7 @@
 						<%=news.getSubTitle()%>
 					</div>
 					<div class="col-md-12 col-sm-12 col-xs-12">
-						<a
+						<a	
 							href="news-content.jsp?pageindex=<%=pageIndex%>&id=<%=news.getId()%>"
 							target="_blank" class="content-all">[阅读全文]</a>
 					</div>

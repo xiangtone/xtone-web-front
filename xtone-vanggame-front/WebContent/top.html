@@ -28,14 +28,21 @@
 	
 </div>
 <script type="text/javascript">
-// var url=this.location.href;
-// var htmlName=url.split("/");
-// if (htmlname[htmlName.length-1]=="join-us-shzp.html")
-// {
-// 	$("#join").addClass("active");
-// }
-// else
-// {
-// 	$("#index").addClass("active");
-// }		
+
+	var url = this.location.href;
+	var htmlName = url.split("/");
+	var name=htmlName[htmlName.length - 1].split("?")[0];
+	if (name == "index.jsp") {
+		$("#index").addClass("active");
+	}else if (name == "news.jsp"||name == "news-content.jsp") {
+		$("#news").addClass("active");
+	}else if (name == "porducts-phone.html"||name == "porducts-web.html"||name == "porducts-client.html") {
+		$("#porducts").addClass("active");
+	}else if (name == "about-us-company.html"||name == "about-us-enterprise.html") {
+		$("#abouts").addClass("active");
+	}else if (name == "cooperation.html") {
+		$("#cooperation").addClass("active");
+	}else if (name == "join-us-shzp.html"||name == "join-us-contact.html") {
+		$("#join").addClass("active");
+	}
 </script>
