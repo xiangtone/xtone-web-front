@@ -303,7 +303,7 @@
 						</div>
 
 						<div class="col-md-9 col-sm-9 col-xs-6 nopadding">
-							<a href="porducts-sjyx.html" style="float: right"><img
+							<a href="porducts-phone.html" style="float: right"><img
 								src="images/index/more.png"></img></a>
 						</div>
 					</div>
@@ -313,7 +313,7 @@
 							<div class="hot_game hot_list">
 
 								<div class="l hot_gamebox mb1">
-									<a href="porducts-sjyx.html"><img
+									<a href="porducts-phone.html"><img
 										src="images/index/350x290_1.jpg" class="bsimg" alt="First game"></a>
 									<div class="hot_yt hot_yt_sw ztgs">
 										<h4 class="hot_yt_left">《口袋大冒险》</h4>
@@ -335,7 +335,7 @@
 						<div class="col-md-4 col-sm-4 col-xs-12 nopadding">
 							<div class="hot_game hot_list">
 								<div class="l hot_gamebox mb1">
-									<a href="porducts-sjyx.html"><img
+									<a href="porducts-phone.html"><img
 										src="images/index/350x290_2.jpg" class="bsimg" alt="Second game"></a>
 									<div class="hot_yt hot_yt_sw ztgs">
 										<h4 class="hot_yt_left">《绝地大逃亡》</h4>
@@ -356,7 +356,7 @@
 						<div class="col-md-4 col-sm-4 col-xs-12 nopadding">
 							<div class="hot_game hot_list">
 								<div class="hot_gamebox mb1">
-									<a href="porducts-sjyx.html"><img
+									<a href="porducts-phone.html"><img
 										src="images/index/350x290_3.jpg" class="bsimg" alt="Third game"></a>
 									<div class="hot_yt hot_yt_sw ztgs">
 										<h4 class="hot_yt_left">《神魔战歌》</h4>

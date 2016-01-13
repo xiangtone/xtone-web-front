@@ -90,29 +90,7 @@
 <body class="bs-docs-home">
 	<header class="navbar navbar-static-top bs-docs-nav" id="top"
 		role="banner">
-		<div class="container">
-			<div class="navbar-header">
-				<button class="navbar-toggle collapsed" type="button"
-					data-toggle="collapse" data-target="#bs-navbar"
-					aria-controls="bs-navbar" aria-expanded="false">
-					<span class="sr-only"></span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a href="index.jsp"><img alt="logo" src="images/logo.png" class="logo-size"></a>
-			</div>
-			<nav id="bs-navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right ztgs my-nav">
-					<li><a id="index" href="index.jsp"><font class="nav-chinese">首页</font><br><font class="nav-english">HOME</font></a></li>
-					<li><a id="news" href="news.jsp"><font class="nav-chinese">新闻动态</font><br><font class="nav-english">NEWS</font></a></li>
-					<li><a id="partform" href="porducts-sjyx.html"><font class="nav-chinese">旗下产品</font><br><font class="nav-english">PORDUCTS</font></a></li>					
-					<li><a id="abouts" href="about-us-gsjs.html"><font class="nav-chinese">关于我们</font><br><font class="nav-english">VANGGAME</font></a></li>
-					<li><a id="cooperation" href="cooperation.html"><font class="nav-chinese">商务合作</font><br><font class="nav-english">COOPERATION</font></a></li>
-					<li class="active"><a id="join" href="join-us-shzp.html"><font class="nav-chinese">招贤纳士</font><br><font class="nav-english">JOIN&nbsp;US</font></a></li>
-					
-				</ul>
-			</nav>
-		</div>
+		<jsp:include page="top.html"></jsp:include>
 	</header>
 	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/about-us/banner_about.jpg" class="bsimg"></div>
 	<div class="bs-docs-featurette" style="background: #f1f1f1">
@@ -123,7 +101,7 @@
 						class="bsimg tab"></a>
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
-					<a href="join-us-lxwm.html"><img src="images/about-us/lxwm1.jpg"
+					<a href="join-us-contact.html"><img src="images/about-us/lxwm1.jpg"
 						class="bsimg tab"></a>
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12 content-top ztgs">
