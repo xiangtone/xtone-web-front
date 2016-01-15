@@ -16,7 +16,7 @@
 	#panel li{display:block;float:left;width:100px;height:100px;
 			overflow:hidden;position:relative;text-align:center;}
 	#panel li span{display:block;position:relative;left:0;top:60px;
-			width:100px;height:40px;background:url(img/hole.gif) 0 -60px;z-index:100;}
+			width:100px;height:40px;background:url(img/hole.png) no-repeat center 0;z-index:100;}
 	#panel table{list-style:none;display:block;float:left;margin:0;padding:0;}
 	#panel td{display:block;float:left;width:100px;height:100px;
 			overflow:hidden;position:relative;text-align:center;}
@@ -61,7 +61,7 @@
 </div>
 </div>
 <div onselectstart="return false;">分数：<span id="score">0</span></div>
-<div onselectstart="return false;">倒计时：<span id="time">60</span></div>
+<div onselectstart="return false;">倒计时：<span id="time">45</span></div>
 <input type="button" value="开始" onclick="GameStart();" />
 </div>
 <script type="text/javascript">try{document.execCommand("BackgroundImageCache",false,true);}catch(e){}</script>

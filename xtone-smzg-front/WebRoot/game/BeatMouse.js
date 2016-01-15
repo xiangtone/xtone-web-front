@@ -16,10 +16,12 @@ var Mouse = function(type){
 Mouse.prototype = {
 		//地鼠类型，好，坏，好的被杀，坏的被杀
 		mousetype: {
-			"good": "img/good.gif",
-			"bad": "img/bad.gif",
-			"goodkill":"img/goodkill.gif",
-			"badkill":"img/badkill.gif"
+			"good": "img/good.png",
+			"good2":"img/good2.png",
+			"bad": "img/bad.png",
+			"goodkill":"img/goodkill.png",
+			"good2kill":"img/good2kill.png",
+			"badkill":"img/badkill.png"
 		},
 		//初始化地鼠
 		init : function(type){
@@ -31,8 +33,8 @@ Mouse.prototype = {
 			this.mouse.mousetype = type;
 			//扩展类型--属否活着
 			this.mouse.islive = true;
-			this.mouse.style.cssText = 'width:75px;height:100px;background:url('+this.mousetype[type]+');left:0;top:20px;\
-			position:relative;margin:auto;cursor:pointer;';
+			this.mouse.style.cssText = 'width:88px;height:100px;background:url('+this.mousetype[type]+');left:0;top:20px;\
+			position:relative;margin:auto;cursor:pointer;z-index: 101;';
 			//绑定地鼠被点击事件
 			this.mouse.onclick = function(e){_this.beat(e);};
 			/*alert(this.mouse);
@@ -55,15 +57,17 @@ Mouse.prototype = {
 			
 			speed = speed == 'fast'?20:speed == 'normal'?20:40;
 			
-			var obj = this.mouse,ost = obj.style,oTop = parseInt(ost.top,10),cut=5,_this = this;
+			var obj = this.mouse,ost = obj.style,oTop = parseInt(ost.top,10),oHight= parseInt(ost.height,0),cut=5,_this = this;
 			//让地鼠从地洞冒出来
-			var show = function(top){
+			var show = function(top,hight){
 				
 				top = top-cut;
 				
+				hight = hight+12.5;
+				
 				if(top >= -40){
 					ost.top = top + 'px';
-					setTimeout(function(){show(top);},speed);
+					setTimeout(function(){show(top,hight);},speed);
 				}
 				else
 				{
@@ -71,19 +75,20 @@ Mouse.prototype = {
 				}
 			}
 			//隐藏地鼠
-			var hide = function(top){
+			var hide = function(top,hight){
 				
 				top = top+cut;
+				hight = hight-12.5;
 				
 				if(top <= oTop){
 					ost.top = top + 'px';
-					setTimeout(function(){hide(top);},speed);
+					setTimeout(function(){hide(top,hight);},speed);
 				}
 				else {
 					_this.reset();
 				}
 			}
-			show(oTop);
+			show(oTop,oHight);
 		},
 		//重置地鼠,当地鼠滚回洞里的时候
 		reset : function(){
@@ -102,7 +107,7 @@ Mouse.prototype = {
 //游戏控制类
 var Game = {
 		//游戏时间,一分钟
-		time : 61,
+		time : 46,
 		//地鼠地图，总共有十只，其中两只是坏的
 		mouseMap : {
 			1:'good',
@@ -113,8 +118,9 @@ var Game = {
 			6:'good',
 			7:'bad',
 			8:'good',
-			9:'good',
-			10:'good'
+			9:'good2',
+			10:'good2',
+			11:'good2'
 		},
 		//所有的地鼠dom元素
 		allMouse : [],
@@ -132,12 +138,20 @@ var Game = {
 			this.lis = document.getElementById('panel').getElementsByTagName('li');
 			_this = this;
 			//初始化10只地鼠
-			for(var i=1;i <=10;i++){
+			for(var i=1;i <=11;i++){
 				var mouse = new Mouse(this.mouseMap[i]);
 				//扩展地鼠被点中事件
 				mouse.onbeat = function(){
 					//修改分数
-					Game.changeScore(100 * (this.mouse.mousetype=='good'?1:-1));
+					//Game.changeScore(100 * (this.mouse.mousetype=='good'?1:-1));
+					if(this.mouse.mousetype=='good'){
+						Game.changeScore(100);
+					}else if (this.mouse.mousetype=='good2') {
+						Game.changeScore(200);
+					}else if (this.mouse.mousetype=='bad') {
+						//Game.changeScore(-100);
+						changeTime(1);
+					}
 				}
 				//扩展地鼠动画结束事件
 				mouse.onend = function(){
@@ -151,6 +165,12 @@ var Game = {
 				}
 				this.allMouse.push(mouse);
 			}
+		},
+		//修改游戏时间
+		changeTime : function(time){
+			this.time-=time;
+			document.getElementById('time').innerHTML = this.time;
+			$("#num").css({"left": this.time+"px"}).html(this.time);
 		},
 		//修改游戏分数
 		changeScore : function(score){
@@ -201,10 +221,10 @@ var Game = {
 		$("#ibar").animate(
             {"width":"0px"},
             {
-                duration:60000,
+                duration:46000,
                 easing:"linear",
                 step: function(now, fx){
-                    $("#num").css({"left":now+"px"}).html(parseInt(now/5));
+                    $("#num").css({"left":now+"px"}).html(parseInt(now/6.3));
                     //this.time -= 1;
                     //alert("time:"+this.time);
                     //var _this = this;
@@ -231,8 +251,8 @@ var Game = {
 	reset : function(){
 		$("#ibar").stop(true);
 		$("#ibar").css("width", "300px");
-		$("#num").html(60);
-		this.time = 60;
+		$("#num").html(45);
+		this.time = 46;
 		this.allMouse = [];
 		this.nowScore = 0;
 		this.hasHole = {};
@@ -246,7 +266,7 @@ var Game = {
 //游戏开始函数
 function GameStart(){
 	
-	if(Game.time > 0 && Game.time != 61){
+	if(Game.time > 0 && Game.time != 46){
 		alert("游戏尚未结束，不能重新开始哦！");
 		return;
 	}
@@ -258,7 +278,7 @@ function GameStart(){
 }
 
 function hit(id){
-	if(Game.time > 59 && Game.time != 0){
+	if(Game.time > 44 && Game.time != 0){
 		alert("游戏尚未开始！");
 		//$("#text").text(id);
 		return;

@@ -438,6 +438,9 @@
 		<div class="partnerimg" style="margin: 0px 15px 0px 0px;" >
 			<a href="http://www.23.com/" target="_blank"><img src="../img/main/partner/7.png" width="178px" height="85px" alt="" /></a>
 		</div>
+		<div class="partnerimg" >
+			<a href="http://www.xiaopi.com/" target="_blank"><img src="../img/main/partner/8.png" width="178px" height="85px" alt="" /></a>
+		</div>
 	</div>
 	<div class="" style="padding: 0px;margin: 0px auto;width: 672px;height: 70px;">
 		<span style="margin:0px 15px 0px 0px;">客服QQ：1919505088</span>
