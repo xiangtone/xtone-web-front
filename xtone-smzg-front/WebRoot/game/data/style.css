@@ -1011,7 +1011,7 @@ hr {
         position: absolute;
         z-index: 2;
     }
- 
+ 	//明天继续
     .tile, .tile .tile-inner {
         width: 58px;
         height: 58px;
@@ -1157,7 +1157,7 @@ hr {
     }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 320px) {
     html, body {
         font-size: 15px;
     }

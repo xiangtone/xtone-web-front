@@ -18,9 +18,11 @@ Mouse.prototype = {
 		mousetype: {
 			"good": "img/good.png",
 			"good2":"img/good2.png",
+			"good3":"img/good3.png",
 			"bad": "img/bad.png",
 			"goodkill":"img/goodkill.png",
 			"good2kill":"img/good2kill.png",
+			"good3kill":"img/good3kill.png",
 			"badkill":"img/badkill.png"
 		},
 		//初始化地鼠
@@ -33,8 +35,8 @@ Mouse.prototype = {
 			this.mouse.mousetype = type;
 			//扩展类型--属否活着
 			this.mouse.islive = true;
-			this.mouse.style.cssText = 'width:88px;height:100px;background:url('+this.mousetype[type]+');left:0;top:20px;\
-			position:relative;margin:auto;cursor:pointer;z-index: 101;';
+			this.mouse.style.cssText = 'width:80px;height:100px;background:url('+this.mousetype[type]+');left:0;top:20px;\
+			position:relative;margin:auto;cursor:url("img/chuizi.ani"),auto;z-index: 101;';
 			//绑定地鼠被点击事件
 			this.mouse.onclick = function(e){_this.beat(e);};
 			/*alert(this.mouse);
@@ -110,7 +112,7 @@ var Game = {
 		time : 46,
 		//地鼠地图，总共有十只，其中两只是坏的
 		mouseMap : {
-			1:'good',
+			1:'good3',
 			2:'bad',
 			3:'good',
 			4:'good',
@@ -120,7 +122,8 @@ var Game = {
 			8:'good',
 			9:'good2',
 			10:'good2',
-			11:'good2'
+			11:'good2',
+			12:'good'
 		},
 		//所有的地鼠dom元素
 		allMouse : [],
@@ -138,7 +141,7 @@ var Game = {
 			this.lis = document.getElementById('panel').getElementsByTagName('li');
 			_this = this;
 			//初始化10只地鼠
-			for(var i=1;i <=11;i++){
+			for(var i=1;i <=12;i++){
 				var mouse = new Mouse(this.mouseMap[i]);
 				//扩展地鼠被点中事件
 				mouse.onbeat = function(){
@@ -146,6 +149,13 @@ var Game = {
 					//Game.changeScore(100 * (this.mouse.mousetype=='good'?1:-1));
 					if(this.mouse.mousetype=='good'){
 						Game.changeScore(100);
+						$("#add").delay(200).fadeIn(200).animate({bottom:40},{duration:200}).fadeOut(200,function(){
+							var x;
+							for (x in results){
+								vote_poll_res[x] = results[x];
+								pollBarShow();
+							}
+						}).css("bottom",10);
 					}else if (this.mouse.mousetype=='good2') {
 						Game.changeScore(200);
 					}else if (this.mouse.mousetype=='bad') {
