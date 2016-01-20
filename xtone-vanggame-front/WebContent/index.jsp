@@ -489,7 +489,14 @@
 						<div class="tt20"><a href="http://www.xtonecomic.com/" class="links" target="_blank">北京讯宇创世科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a href="http://14643233.czvv.com/" class="links" target="_blank">北京游动天地科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a href="http://www.pvc123.com/b-pxtonewinnie/" class="links"	target="_blank">深圳市创世互动科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp; </div>
-						<div class="tt20"><a href="http://www.m-time.com/" class="links">深圳市浩天投资有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>					
+						<div class="tt20"><a href="http://www.m-time.com/" class="links">深圳市浩天投资有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a href="http://dmx.xtonegame.com" class="links">口袋大冒险</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a href="http://lznh.cooguo.com/" class="links">龙之怒吼</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a href="http://smzg.xtonegame.com/" class="links">神魔战歌</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a href="http://fsz.ganwan.com/" class="links">封神战</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a href="http://www.ljy0.com/home.html/" class="links">零纪元</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>	
+						<div class="tt20"><a href="http://mmd.xtonegame.com/" class="links">电视萌萌答</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a href="http://jdtw.xtonegame.com/" class="links">绝地逃亡</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>		
 					</div>
 					
 				</div>
