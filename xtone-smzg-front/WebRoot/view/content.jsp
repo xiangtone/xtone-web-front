@@ -18,10 +18,7 @@
 	ResultSet rs = null;
 	List<News> list = new ArrayList();
 	try{
-		System.out.println("try load...");
-		//con = ConnConfigMain.getConnection();
 		con = ConnectionService.getInstance().getConnectionForLocal();
-		System.out.println("get Connection..");
 		String sql = "SELECT `title`,`lastModifyTime`,`catalog`,`content` FROM `tbl_cms_contents` WHERE id=? ";
 		
 		ps = con.prepareStatement(sql);

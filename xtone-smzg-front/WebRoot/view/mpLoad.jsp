@@ -23,10 +23,7 @@
 	List<News> list3 = new ArrayList();
 	List<News> list4 = new ArrayList();
 	try{
-		System.out.println("try load...");
 		con = ConnectionService.getInstance().getConnectionForLocal();
-		//con = ConnConfigMain.getConnection();
-		System.out.println("get Connection..");
 		String limit = " limit "+ 0 + "," + 5;
 		String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `status`=1  ORDER BY addTime DESC "+limit;
 		ps = con.prepareStatement(sql);

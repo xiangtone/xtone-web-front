@@ -1,3 +1,4 @@
+<%@page import="org.apache.log4j.Logger"%>
 <%@page import="com.xtone.util.CheckLoad"%>
 <%@page import="org.common.util.ConnectionService"%>
 <%@page import="com.system.database.ConnConfigMain"%>
@@ -13,6 +14,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
+	Logger log = Logger.getLogger("main.class"); 
 	CheckLoad check = new CheckLoad();
 	if(check.JudgeIsMoblie(request)){
 		response.sendRedirect("mpLoad.jsp");
@@ -26,7 +28,6 @@
 	List<News> list3 = new ArrayList();
 	List<News> list4 = new ArrayList();
 	try{
-		System.out.println("try load...");
 		con = ConnectionService.getInstance().getConnectionForLocal();
 		//con = ConnConfigMain.getConnection();
 		String limit = " limit "+ 0 + "," + 5;
@@ -295,11 +296,7 @@
 				<font >[<%=timeStr %>]</font>
 				</li>
 				<%} %>
-                               		<!-- <li><a href="http://smzg.xtonegame.com/news/index.html" class="tit" data="0" title="神魔战歌攻略： 如何完美通关英灵试炼40层" >【综合】</a><a href="http://smzg.xtonegame.com/news/index.html" target="_blank" title="神魔战歌攻略： 如何完美通关英灵试炼40层">神魔战歌攻略： 如何完美通关英灵试炼40层</a><font>[11/13]</font></li>
-                               		<li><a href="http://hqg.skymoons.com/html/active/2015/1105/374.html#content" class="tit" data="0" title="11月6日-11月7日App Store活动" target="_blank">【综合】</a><a href="http://hqg.skymoons.com/html/active/2015/1105/374.html#content" target="_blank" title="11月6日-11月7日App Store活动">11月6日-11月7日App Store活动</a><font>[11/05]</font></li>
-                               		<li><a href="http://hqg.skymoons.com/html/active/2015/1102/367.html#content" class="tit" data="0" title="11月3日-11月5日App Store活动" target="_blank">【综合】</a><a href="http://hqg.skymoons.com/html/active/2015/1102/367.html#content" target="_blank" title="11月3日-11月5日App Store活动">11月3日-11月5日App Store活动</a><font>[11/02]</font></li>
-                               		<li><a href="http://hqg.skymoons.com/html/active/2015/1031/366.html#content" class="tit" data="0" title="10月31日-11月2日App Store活动" target="_blank">【综合】</a><a href="http://hqg.skymoons.com/html/active/2015/1031/366.html#content" target="_blank" title="10月31日-11月2日App Store活动">10月31日-11月2日App Store活动</a><font >[10/31]</font></li></ul>
-                               		 -->
+                               		
              </ul>
 			<div class="active" style="margin:18px 13px 13px 29px;">
 				<img src="../img/main/news/active1.png" width="156px" height="97px" alt="" />

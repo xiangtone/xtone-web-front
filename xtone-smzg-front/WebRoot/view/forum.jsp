@@ -17,13 +17,9 @@
 	Connection con = null;
 	PreparedStatement ps = null;
 	ResultSet rs = null;
-	System.out.println("news load...");
 	List<News> list = new ArrayList();
 	try{
-		System.out.println("try load...");
-		//con = ConnConfigMain.getConnection();
 		con = ConnectionService.getInstance().getConnectionForLocal();
-		System.out.println("get Connection..");
 		String limit = " limit "+12*(pageIndex-1) + "," + 12;
 		String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%forum%' AND `status`=1 " +limit;
 		ps = con.prepareStatement(sql);
