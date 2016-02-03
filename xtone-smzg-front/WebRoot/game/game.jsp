@@ -62,7 +62,7 @@
 	<span id="add" class="add" style="bottom: 40px;display: none;">+1</span>
 </div>
 <div onselectstart="return false;">倒计时：<span id="time">45</span></div>
-<input type="button" value="开始" onclick="GameStart();" />
+<input type="button" value="再来一次" onclick="GameStart();" /> 
 </div>
 <script type="text/javascript">try{document.execCommand("BackgroundImageCache",false,true);}catch(e){}</script>
 <script src="BeatMouse.js" type="text/javascript"></script>
@@ -71,6 +71,7 @@
 <script src="hammer.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(function(){
+	
 	$('body').on('touchmove', function (event) {
 	    event.preventDefault();
 	});
@@ -86,6 +87,7 @@ $(function(){
 	for(var i=0;i<9;i++){
 		toush(i);
 	}
+	GameStart();
 });
 
 function toush(id){
@@ -138,7 +140,6 @@ $(function(){
 		$(".grid-cell").css({'width': '57.5px','height': '57.5px','margin-right': '10px','float': 'left','border-radius': '3px','background': 'rgba(238, 228, 218, 0.35)'});
 		$(".grid-cell:last-child").css({'margin-right': '0'});
 		$(".tile-container").css({'position': 'absolute','z-index': '2'});
-		
 	}
 });
 </script>

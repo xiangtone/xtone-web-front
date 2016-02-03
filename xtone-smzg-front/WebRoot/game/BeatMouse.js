@@ -35,8 +35,8 @@ Mouse.prototype = {
 			this.mouse.mousetype = type;
 			//扩展类型--属否活着
 			this.mouse.islive = true;
-			this.mouse.style.cssText = 'width:80px;height:100px;background:url('+this.mousetype[type]+');left:0;top:20px;\
-			position:relative;margin:auto;cursor:url("img/chuizi.ani"),auto;z-index: 101;';
+			this.mouse.style.cssText = 'width:80px;height:100px;background:url('+this.mousetype[type]+');background-repeat:no-repeat;left:0;top:20px;\
+			position:relative;margin:auto;cursor:url("img/chuizi.png"),auto;z-index: 101;';
 			//绑定地鼠被点击事件
 			this.mouse.onclick = function(e){_this.beat(e);};
 			/*alert(this.mouse);
@@ -51,7 +51,7 @@ Mouse.prototype = {
 				
 				this.mouse.islive = false;
 				this.onbeat();
-				this.mouse.style.background = "url("+this.mousetype[this.mouse.mousetype+"kill"]+")";
+				this.mouse.style.background = "url("+this.mousetype[this.mouse.mousetype+"kill"]+")"+" no-repeat";
 			}
 		},
 		//地鼠的动画
@@ -96,7 +96,7 @@ Mouse.prototype = {
 		reset : function(){
 			
 			this.mouse.islive =true;
-			this.mouse.style.background = "url("+this.mousetype[this.mouse.mousetype]+")";
+			this.mouse.style.background = "url("+this.mousetype[this.mouse.mousetype]+") no-repeat";
 			
 			this.onend();
 		},
@@ -149,18 +149,13 @@ var Game = {
 					//Game.changeScore(100 * (this.mouse.mousetype=='good'?1:-1));
 					if(this.mouse.mousetype=='good'){
 						Game.changeScore(100);
-						$("#add").delay(200).fadeIn(200).animate({bottom:40},{duration:200}).fadeOut(200,function(){
-							var x;
-							for (x in results){
-								vote_poll_res[x] = results[x];
-								pollBarShow();
-							}
-						}).css("bottom",10);
 					}else if (this.mouse.mousetype=='good2') {
 						Game.changeScore(200);
+					}else if (this.mouse.mousetype=='good3') {
+						Game.changeScore(300);
 					}else if (this.mouse.mousetype=='bad') {
 						//Game.changeScore(-100);
-						changeTime(1);
+						Game.changeTime(1);
 					}
 				}
 				//扩展地鼠动画结束事件
@@ -190,7 +185,14 @@ var Game = {
 		//游戏开始
 		start : function(){
 			
-			if(this.time <= 0)return;
+			if(this.time <= 0){
+				$("#ibar").stop(true);
+				$("#ibar").css("width", "0px");
+				$("#num").html(0);
+				this.time = 1;
+				this.changeScore(100);
+				return;
+			}
 			
 			if(this.nowScore<=-100){
 				$("#ibar").stop(true);
@@ -288,7 +290,7 @@ function GameStart(){
 }
 
 function hit(id){
-	if(Game.time > 44 && Game.time != 0){
+	if(Game.time > 45 && Game.time != 0){
 		alert("游戏尚未开始！");
 		//$("#text").text(id);
 		return;
