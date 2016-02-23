@@ -124,7 +124,7 @@
 <html lang="zh-cmn-Hans"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <style type="text/css" id="znBdcsStyle">#bdcs-rec{display:none;}</style><meta charset="utf-8">
-<title>《神魔战歌》官方网站-年度魔幻轻动作手游</title>
+<title>《神魔战歌》2016年最炫酷神魔题材手游</title>
 <!-- 优先使用 IE 最新版本和 Chrome -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <!-- 页面描述 -->
