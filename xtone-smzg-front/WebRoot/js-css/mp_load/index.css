@@ -35,9 +35,9 @@ figure figcaption{-webkit-box-flex:1;box-flex:1;-moz-box-flex:1;-ms-flex:1;displ
 .top-bar .con-tit span{ width:10px; background:url(http://img.18183.duoku.com/uploads/wap/levelc/2015/bbs_tlang.png) center center no-repeat;-webkit-background-size:auto 48px; display:block;}
 .top-bar .get_back{ background-image:none; color:#f6ad00;}
 .nav-bar{ width:100%; position:absolute; top:49px; left:0; background:#fff; z-index:99999; box-shadow: 0 1px 1px #d8d8d8;}
-.nav-bar .t{ height:42px; line-height:42px; border-bottom:1px solid #e6e6e6; padding:0 10px; overflow:hidden;}
+.nav-bar .t{ height:42px; line-height:42px; border-bottom:1px solid #e6e6e6; padding:0 10px; overflow:hidden;background: #5C095A none repeat scroll 0% 0%;color: #fff}
 .nav-bar .t a{ float:right; color:#4c95de;}
-.nav{ padding:10px 0;}
+.nav{ padding:10px 0;background: #5C095A none repeat scroll 0% 0%;}
 ul.n_c{width:100%;display:-webkit-box;-webkit-box-sizing:border-box;display:-ms-flexbox; height:30px; line-height:30px;}
 ul.n_c li{-webkit-box-flex:1;box-flex:1;-moz-box-flex:1;-ms-flex:1; width:1%;text-align:center;}
 ul.n_c li:after{content: "|";color: #ccc; float:right;}

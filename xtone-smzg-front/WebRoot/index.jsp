@@ -41,8 +41,9 @@
 
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
 <meta charset="gb2312">
-<title>《神魔战歌》2015 最酷炫神魔题材手游</title>
-<meta name="keywords" content="神魔,魔幻,战歌,卡牌,魔兽,刀塔,LOL,养成,RPG,动作,游戏,手游,点控,酷炫特效,美女,英雄,大集合,大乱斗,MOBA,公会战,图腾,女神">
+<meta name="baidu-site-verification" content="mqSW5JDWtN" />
+<title>《神魔战歌》2016年最炫酷神魔题材手游</title>
+<meta name="keywords" content="神魔战歌,神魔,魔幻,战歌,卡牌,魔兽,刀塔,LOL,养成,RPG,动作,游戏,手游,点控,酷炫特效,美女,英雄,大集合,大乱斗,MOBA,公会战,图腾,女神">
 <meta name="description" content="2015最酷炫神魔题材手游《神魔战歌》正式登陆。神魔狂战，鹿死谁手!集齐史上各路神魔，养成史上最强神魔英雄。突破传统动作卡牌限制，领地建设给你带来不一样的养成体验~">
 <meta name="author" content="神魔传奇.">
 <meta name="copyright" content="神魔传奇.">
