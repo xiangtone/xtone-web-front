@@ -26,9 +26,7 @@
 	List<News> list3 = new ArrayList();
 	List<News> list4 = new ArrayList();
 	try{
-		System.out.println("try load...");
 		con = ConnectionService.getInstance().getConnectionForLocal();
-		//con = ConnConfigMain.getConnection();
 		String limit = " limit "+ 0 + "," + 5;
 		String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `status`=1  ORDER BY addTime DESC "+limit;
 		ps = con.prepareStatement(sql);
@@ -108,7 +106,7 @@
 <meta name="description" content="2015最酷炫神魔题材手游《神魔战歌》正式登陆。神魔狂战，鹿死谁手!集齐史上各路神魔，养成史上最强神魔英雄。突破传统动作卡牌限制，领地建设给你带来不一样的养成体验~">
 <meta name="author" content="神魔传奇.">
 <meta name="copyright" content="神魔传奇.">
-<link type="text/css" rel="stylesheet" href="index.css">
+<link type="text/css" rel="stylesheet" href="../js-css/main/index.css">
 <link href="/favicon.ico" rel="icon" type="image/x-icon" />
 <link type="text/css" rel="stylesheet" href="../js-css/main/share.v3.2.css">
 <style type="text/css">#NIE-copyRight a{text-decoration: none;}#NIE-copyRight a:hover{text-decoration: underline;}</style>
@@ -116,15 +114,18 @@
 <style type="text/css">
 
 	 #news{background:url("../img/main/2_2.png");}
-     #news:hover{background:url("../img/main/2_1.png");}
+     #news:hover{background:url("../img/main/2_1.png");border-top: 4px solid #d1d1d1;margin-top: 0px;}
      #material{background:url("../img/main/3_2.png");}
-     #material:hover{background:url("../img/main/3_1.png");}
+     #material:hover{background:url("../img/main/3_1.png");border-top: 4px solid #d1d1d1;margin-top: 0px;}
      #forum{background:url("../img/main/4_2.png");}
-     #forum:hover{background:url("../img/main/4_1.png");}
+     #forum:hover{background:url("../img/main/4_1.png");border-top: 4px solid #d1d1d1;margin-top: 0px;}
 	 #home{background:url("../img/main/1_2.png");}
-     #home:hover{background:url("../img/main/1_1.png");}
+     #home:hover{background:url("../img/main/1_1.png");border-top: 4px solid #d1d1d1;margin-top: 0px;}
 
-	.nav{width:100%;height:81px;background:url(../img/main/bg_Navigator.png) no-repeat center 0}
+	 #ios:hover{background: url(../img/main/btn_download_ios2.png) no-repeat;}
+	 #android:hover{background: url(../img/main/btn_download_android2.png) no-repeat;}
+
+	.nav{width:100%;height:81px;background:#000;}
 	.title{width: 87px;height:31px;line-height:31px;display:block;text-align:center;color:#6CCD2C;font-size: 14px;overflow: hidden;}
 	.topmenu1{float: left;width: 102px;height: auto;overflow: hidden;margin: 0 0 0 30px;}
 
@@ -164,19 +165,21 @@
 
 		.test{float:left; width:630px; height:45px; overflow: hidden;background: url(../img/main/top_corp.png) no-repeat 0 0 / 627px 40px;line-height:30px;position:relative;left:50%;margin-left:-650px}
 		.menu li{width:163px;height:81px;float:left;margin:5px 13px;}
-	    .menu a{display:block;width:163px;height:81px;text-indent:100px;white-space:nowrap;overflow:hidden;}
+	    .menu a{display:block;width:163px;height:82px;text-indent:100px;white-space:nowrap;overflow:hidden;margin-top: 4px;}
 		.menu,.menu li{padding:0;margin: 0px; }
 	    .menu{width:1300px;-margin:0 ;list-style-type:none;-float: right;margin-left:39% }
 		.top_box .menus li{float:left; width:53px; height:auto; overflow: hidden;}
 		.top_box .menus li a{display:block; padding:0 0 0 25px; font-size:18px; color: rgba(38, 2, 2, 0.81); overflow: hidden;text-decoration:none;font-size:14px;}
 		.top_box .menus li a:hover{color:#ffcc00;}
 		.top_box .menus{ width:400px;  padding:12px 0 0 550px; overflow: hidden; margin:0;}
-		.model2{width:100%;height:713px;padding:0;margin:0;position:relative;background:url(../img/main/bg_2.png) no-repeat center 0;}
-		.tab_news{width:1200px;height:461px;padding:0;margin:0 auto;}
+		.model2{width:100%;height:847px;padding:0;margin:0;position:relative;background:url(../img/main/bg_2.jpg) no-repeat center 0;}
+		.tab_news{width:1200px;height:426px;padding:0;margin:0 auto;}
 		.newsList font{color:rgb(248, 244, 245);}
 		.active{width:156px;height:97px;float:left;background-color: white;margin: 18px 10px;padding: 0;}
-		.partner{width: 1200px;height: 135px;padding: 0px;margin: 0px auto;}
+		.partner{width: 1090px;height: 264px;padding: 0px;margin: 0px auto;background: white;}
 		.partnerimg{height: 85px;width: 178px;margin: 0 11px;float:left;}
+		.partner p{padding: 7.5px 0px 2.5px 50px;color:black;}
+		.partner p a{color: rgb(109,109,109);text-decoration:none;padding: 0 26px 0 0; font-size:15px;}
 		.test-top{height: 55px;background: #FBFBFB none repeat scroll 0% 0%;}
 		#NIE-topBar *, #NIE-topBar-include * {font-size: 12px;font-style: normal;}
 		.test-top-main {position: relative;z-index: 9999;width: 1165px;margin: auto;}
@@ -208,12 +211,12 @@
         <li ><a href="main.jsp" id="home"></a></li>
 		<li><a href="news.jsp" id="news"></a></li>
 		<li><a href="material.jsp" id="material"></a></li>
-		<li ><a href="forum.jsp" id="forum"></a></li>
+		
       </ul>
 </div>
 
 <div class="wrap" style="width: 100%;">
-<div class="wrap-1" style="width: 100%;background: url(../img/main/bg_1.png) no-repeat center 0;">
+<div class="wrap-1" style="width: 100%;background: url(../img/main/bg_1.jpg) no-repeat center 0;">
 
 
 
@@ -223,10 +226,9 @@
 
 
 	<div class="download" style="background: url(../img/main/kuang.png) no-repeat;">
-	  <img  src="../img/main/code_main.jpg" width="125" height="124" alt="神魔传奇" style="margin-top: 23px;margin-left: 4px;">
-	  <a class="download--ios" style="background: url(../img/main/btn_download_ios.png) no-repeat;" href="javascript:;" rel="nofollow">App Store下载</a>
-	  <a class="download--android" style="background: url(../img/main/androidbt.png) no-repeat;" href="javascript:;" title="">安卓下载</a>
-	  <a class="btn-gifts" style="background: url(../img/main/btn_gift_bg.png) no-repeat;" href="javascript:openPop('#pop-android');"><b style="background: url(../img/main/btn_gift_item.png) no-repeat;">领取礼包</b></a>
+	  <!-- <img  src="../img/main/code_main.jpg" width="125" height="124" alt="神魔传奇" style="margin-top: 23px;margin-left: 4px;"> -->
+	  <a class="download--ios" id="ios" style="background: url(../img/main/btn_download_ios.png) no-repeat;" href="javascript:;" rel="nofollow">App Store下载</a>
+	  <a class="download--android" id="android" style="background: url(../img/main/btn_download_android.png) no-repeat;" href="javascript:;" title="">安卓下载</a>
 	  <!--epart end-->
 	</div>
 
@@ -265,12 +267,12 @@
 		    </div>
 		</div>
 		<div class="HotNewsBox" style="font-family:'微软雅黑';">
-		<div class="tabNav" style="background:rgb(11, 10, 9) none repeat scroll 0% 0%">
+		<div class="tabNav" style="background:rgb(255, 255, 255) none repeat scroll 0% 0%">
             <ul id="news_nav">
              <li class="current" style="margin:0px 0px 0px 35px;padding:0px 0px 0px 1px;"><a title="综合" href="javascript:;">综合</a></li>
               <li class=""><a title="神魔战歌新闻"  href="news.jsp">新闻</a> </li>
               <li class=""><a title="神魔战歌公告"  href="material.jsp">资料</a></li>
-              <li class="" ><a title="神魔战歌活动"  href="rorum.jsp">论坛</a></li>
+              <!-- <li class="" ><a title="神魔战歌活动"  href="rorum.jsp">论坛</a></li> -->
             </ul>
 
           </div>
@@ -415,34 +417,71 @@
         </div>
 	</div>
 	<div class="partner">
-		<div class="partnerimg" style="margin: 0px 15px 0px 0px;" >
-			<img src="../img/main/partner/1.png" width="178px" height="85px" alt="" />
-		</div>
-		<div class="partnerimg" >
-			<img src="../img/main/partner/2.png" width="178px" height="85px" alt="" />
-		</div>
-		<div class="partnerimg" >
-			<img src="../img/main/partner/3.png" width="178px" height="85px" alt="" />
-		</div>
-		<div class="partnerimg" >
-			<img src="../img/main/partner/4.png" width="178px" height="85px" alt="" />
-		</div>
-		<div class="partnerimg" >
-			<img src="../img/main/partner/5.png" width="178px" height="85px" alt="" />
-		</div>
-		<div class="partnerimg" >
-			<img src="../img/main/partner/6.png" width="178px" height="85px" alt="" />
-		</div>
+		<p style="-color: black;padding: 31px 0px 2.5px 50px;font-size: 19px;font-weight:bold;">	
+			<span style="-color: black;-padding: 0px 0px 0px 50px;">友情链接</span>
+		</p>
+		<p>
+			<a href="http://www.youxibao.com/ku/" target="_blank">游戏宝手游网</a>
+			<a href="http://www.shouyou.com/" target="_blank">17173手游网</a>
+			<a href="http://ka.yoyojie.com/" target="_blank">YOYO卡箱</a>
+			<a href="http://www.benshouji.com/" target="_blank">笨手机游戏网</a>
+			<a href="http://www.youxiduo.com" target="_blank">游戏多</a>
+			<a href="http://www.5253.com" target="_blank">5253手游网</a>
+			<a href="http://www.gamedog.cn/" target="_blank">游戏狗</a>
+			<a href="http://www.yzz.cn" target="_blank">叶子猪游戏网</a>
+			<a href="http://u.360.cn/" target="_blank">360</a>
+			<a href="http://game.91.com/" target="_blank">91手游网</a>
+		</p>
+		<p>
+			<a href="http://www.tgbus.com/" target="_blank">电玩巴士</a>
+			<a href="http://www.ptbus.com/" target="_blank">口袋巴士</a>
+			<a href="http://www.766.com/" target="_blank">766</a>
+			<a href="http://www.178.com/" target="_blank">178</a>
+			<a href="http://www.anqu.com/" target="_blank">安趣网</a>
+			<a href="http://www.72g.com/" target="_blank">72g</a>
+			<a href="http://m.7k7k.com/" target="_blank">7k7k手机游戏</a>
+			<a href="http://sy.07073.com/" target="_blank">07073</a>
+			<a href="http://www.yoyou.com/" target="_blank">优游网</a>
+			<a href="http://www.87g.com/" target="_blank">87g手游网</a>
+			<a href="http://www.mofang.com/" target="_blank">魔方网</a>
+			<a href="http://www.gao7.com/" target="_blank">搞趣网</a>
+		</p>
+		<p>
+			<a href="http://www.banma.com/" target="_blank">斑马网</a>
+			<a href="http://www.joyme.com/" target="_blank">着迷网</a>
+			<a href="http://www.18touch.com/" target="_blank">超好玩</a>
+			<a href="http://www.youxiniao.com/" target="_blank">游戏鸟</a>
+			<a href="http://www.appgame.com/" target="_blank">任玩堂</a>
+			<a href="http://www.bianwanjia.com" target="_blank">便玩家</a>
+			<a href="http://www.gk99.com/" target="_blank">游戏港口</a>
+			<a href="http://play.163.com/" target="_blank">爱玩网</a>
+			<a href="http://www.5676.com/" target="_blank">5676网游资讯</a>
+			<a href="http://www.fpwap.com/" target="_blank">飞鹏网</a>
+			<a href="http://www.139y.com/" target="_blank">手心攻略</a>
+			<a href="http://www.52ee.com/" target="_blank">易手游</a>
+		</p>
+		<p>
+			<a href="http://m.ali213.net/" target="_blank">手机游戏下载</a>
+			<a href="http://www.kela001.com/" target="_blank">克拉互娱</a>
+		</p>
 	</div>
-	<div class="" style="padding: 0px;margin: 0px auto;width: 672px;height: 70px;">
-		<span style="margin:0px 15px 0px 0px;">客服QQ：1919505088</span>
-		<span style="margin:0px 15px;">客服电话：020-38023617</span>
-		<span style="margin:0px 0px 0px 15px;">官方交流QQ群：253173745</span>
+	<div class="" style="padding: 0px;margin: 0px auto;width: 672px;height: 70px;margin-top: 43px;">
+		<span style="margin:0px 15px 0px 0px;color: black;">客服QQ：2442386648</span>
+		<span style="margin:0px 0px 0px 272px;color: black;">官方交流QQ群：546634309</span>
 	</div>
 
 </div>
-	<div id="NIE-copyRight"><p id="NIE-copyRight-corp" style="width:100%;text-align:center;margin:0 auto;padding:15px 0 0 0;font-size:12px;font-family:&#39;宋体&#39;;line-height:20px;display:block;position:relative;"><span style="position:relative;vertical-align:top;top:4px;display:inline-block;position:relative;"><a href="http://www.nomo.cn" target="_blank" style="width:224px;height:28px;padding-right:15px;display:inline-block;cursor:pointer;background:url(../img/main/corp.png) no-repeat"></a></span><span style="text-align:left;display:inline-block;padding-left:6px;"><span id="ncp-l1"><a href="javascript:alert('公司简介！');" target="_blank">相关法律</a> - <a href="javascript:alert('公司简介！');" target="_blank">翔通游戏</a> - <a href="javascript:alert('公司简介！');" target="_blank">联系我们</a> - <a href="javascript:alert('公司简介！');" target="_blank">商务合作</a></span><br><span id="ncp-l2">翔通游戏 创造精彩世界 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.uupark.com/jzjh_xtonegroup/supervise.html" target="_blank">家长监护</a>
-    </span><br><span id="ncp-l2">粤网文（2015）1397-182号&nbsp;<a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action" target="_blank">粤ICP备12058124号-20</a></span></span></p></div>
+	<div id="NIE-copyRight"><p id="NIE-copyRight-corp" style="width:100%;text-align:center;margin:0 auto;padding:15px 0 0 0;font-size:12px;font-family:&#39;宋体&#39;;line-height:20px;display:block;position:relative;"><span style="position:relative;vertical-align:top;top:4px;display:inline-block;position:relative;"><a href="http://www.vanggame.com/" target="_blank" style="width:268px;height:64px;padding-right:15px;display:inline-block;cursor:pointer;background:url(../img/main/corp.png) no-repeat"></a></span>
+	</p>
+	<p style="width:100%;text-align:center;margin:0 auto;padding:15px 0 0 0;font-size:12px;font-family:&#39;宋体&#39;;line-height:20px;display:block;position:relative;">
+		<span style="text-align:left;display:inline-block;padding-left:6px;">
+			<span id="ncp-l1">
+				万家游戏版权所有 Copyright@2016 中国网络游戏版权保护联盟举报中心 闽南B2-20040096-20&nbsp;&nbsp;&nbsp;&nbsp;
+			</span><a style="background: transparent url('../img/main/corp2.png') no-repeat scroll 0% 0%;width: 107px;height: 20px;display: inline-block;"></a><br>
+			<span id="ncp-l2">健康游戏忠告：抵制不良游戏&nbsp;拒绝盗版游戏&nbsp;注意自我保护&nbsp;谨防受骗上当&nbsp;适度游戏益脑&nbsp;沉迷游戏伤身&nbsp;合理安排时间&nbsp;享受健康生活
+    		</span><br></span>
+	</p>
+	</div>
 
 </div>
 
