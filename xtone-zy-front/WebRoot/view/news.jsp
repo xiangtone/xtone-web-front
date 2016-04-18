@@ -119,6 +119,7 @@
 		.test-topBar-mid {z-index: 12;right: 230px;width: 536px;position: absolute;text-align:right;-font-size: 12px;font-style: normal;line-height: 52px;-color: #333;-transition: background 0.33s ease-in-out 0s;}
 		.test-topBar-mid a{line-height: 52px;color: #333;transition: background 0.33s ease-in-out 0s;display: inline-block;padding: 0px 12px;text-decoration: none;}
 		.test-foot{font-size: 12px;text-decoration: none;color: #A0A0A0;padding: 35px 0px 60px;}
+		.back{background: transparent url(../img/news/top.png) no-repeat scroll 0% 0%;width:67px;height:161px;right:9%;top:53%;position:fixed;cursor: pointer;}
 
 		body{color:rgb(248, 244, 245);}
 		body {width:100%;min-height:1305px!important;font-family:"微软雅黑";color:#737C86;background-color:rgb(244,244,244)!important}
@@ -133,7 +134,7 @@
 
 
 
-    <!-- 将临天下新闻详情 start -->
+    <!-- 新闻详情 start -->
 <div class="nav">
 	  <div class="test-top-main" id="NIE-topBar-main">
         <a class="test-top-logo" href="#" ></a>
@@ -196,7 +197,7 @@
             <!-- 分享 start -->
             <div id="NIE-share" class="jltx-share"></div>
             <!-- 分享 end   -->
-	<div class="" style="background: transparent url(../img/news/top.png) no-repeat scroll 0% 0%;width:67px;height:161px;right:9%;top:53%;position:fixed;" >
+	<div id="backTop" class="back" style="display: none;opacity: 0.0;" onclick="setTop();" >
 		<a href="#" style="width:60px;height:155px;display: block;margin-left: 5px;margin-top: 5px;"></a>
 	</div>
             <!--此乃底部-->
@@ -213,13 +214,64 @@
     		</span><br></span>
 	</p></div>
     </div>
-    <!-- 将临天下新闻详情 end -->
-
-
-
-
-
-
-
+    <!-- 新闻详情 end -->
+	<script type="text/javascript">  
+		var i = 0;
+		var key = 0;
+        var scrollFunc = function (e) {  
+	        e = e || window.event; 
+	        console.log($(this).scrollTop());
+	        /*if (e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件               
+	            if (e.wheelDelta > 0) { //当滑轮向上滚动时  
+	               // alert("滑轮向上滚动");  
+	            }  
+	            if (e.wheelDelta < 0) { //当滑轮向下滚动时  
+	               // alert("滑轮向下滚动"); 
+	            	console.log(e.wheelDelta);
+	            }  
+	        } else if (e.detail) {  //Firefox滑轮事件 
+	        	console.log(e.detail);
+	        	i += e.detail;
+	            if (e.detail> 0) { //当滑轮向上滚动时  
+	                //alert("滑轮向下滚动");  
+	                if(i>=6&&key==0){
+	                	//alert("滑轮向下滚动");
+	                	$("#backTop").attr("style","display:block");
+	                	key = 1;
+	                }
+	            }  
+	            if (e.detail< 0) { //当滑轮向下滚动时  
+	                //alert("滑轮向下滚动");
+	            	console.log($(this).scrollTop());
+	            	i+= e.detail;
+	            	 if ($(this).scrollTop() <= 264) {  //滚动到头部部执行事件
+	                     //console.dir("我到头部了");
+	            		 $("#backTop").attr("style","display:none;");
+	                     key = 0;
+	                 }
+	            }  */
+	            if($(this).scrollTop()>428){
+	            	$("#backTop").attr("style","display:block");
+	            }else{
+	            	$("#backTop").attr("style","display:none;");
+	            }
+	           
+	         
+	    }  
+	    //给页面绑定滑轮滚动事件  
+	    if (document.addEventListener) {//firefox  
+	        document.addEventListener('DOMMouseScroll', scrollFunc, false);  
+	    }  
+	    //滚动滑轮触发scrollFunc方法  //ie 谷歌  
+	    window.onmousewheel = document.onmousewheel = scrollFunc;  
+	    
+	    
+	    
+	    function setTop(){
+	    	//console.dir("我到头部了");
+	    	 $("#backTop").attr("style","display:none;");
+	    	key = 0;
+	    }
+    </script>  
 
 </body></html>

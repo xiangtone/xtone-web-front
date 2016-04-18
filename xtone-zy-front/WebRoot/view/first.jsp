@@ -129,7 +129,7 @@
 
 
 
-    <!-- 将临天下新闻详情 start -->
+    <!-- 新闻详情 start -->
 <div class="nav">
 	  <div class="test-top-main" id="NIE-topBar-main">
         <a class="test-top-logo" href="#" ></a>
@@ -217,7 +217,7 @@
     		</span><br></span>
 	</p></div>
     </div>
-    <!-- 将临天下新闻详情 end -->
+    <!-- 新闻详情 end -->
 
 	<script type="text/javascript">  
 		var i = 0;
