@@ -119,7 +119,7 @@
      #material:hover{background:url("../img/main/3_1.png");border-top: 4px solid #d1d1d1;margin-top: 0px;}
      #forum{background:url("../img/main/4_2.png");}
      #forum:hover{background:url("../img/main/4_1.png");border-top: 4px solid #d1d1d1;margin-top: 0px;}
-	 #home{background:url("../img/main/1_2.png");}
+	 #home{background:url("../img/main/1_2.png");border-top: 4px solid #d1d1d1;margin-top: 0px;}
      #home:hover{background:url("../img/main/1_1.png");border-top: 4px solid #d1d1d1;margin-top: 0px;}
 
 	 #ios:hover{background: url(../img/main/btn_download_ios2.png) no-repeat;}
@@ -178,7 +178,7 @@
 		.active{width:156px;height:97px;float:left;background-color: white;margin: 18px 10px;padding: 0;}
 		.partner{width: 1090px;height: 264px;padding: 0px;margin: 0px auto;background: white;}
 		.partnerimg{height: 85px;width: 178px;margin: 0 11px;float:left;}
-		.partner p{padding: 7.5px 0px 2.5px 50px;color:black;}
+		.partner p{padding: 7.5px 0px 2.5px 50px;color: rgb(109,109,109);}
 		.partner p a{color: rgb(109,109,109);text-decoration:none;padding: 0 26px 0 0; font-size:15px;}
 		.test-top{height: 55px;background: #FBFBFB none repeat scroll 0% 0%;}
 		#NIE-topBar *, #NIE-topBar-include * {font-size: 12px;font-style: normal;}
@@ -466,8 +466,8 @@
 		</p>
 	</div>
 	<div class="" style="padding: 0px;margin: 0px auto;width: 672px;height: 70px;margin-top: 43px;">
-		<span style="margin:0px 15px 0px 0px;color: black;">客服QQ：2442386648</span>
-		<span style="margin:0px 0px 0px 272px;color: black;">官方交流QQ群：546634309</span>
+		<span style="margin:0px 15px 0px 0px;color: rgb(109,109,109);">客服QQ：2442386648</span>
+		<span style="margin:0px 0px 0px 272px;color: rgb(109,109,109);">官方交流QQ群：546634309</span>
 	</div>
 
 </div>

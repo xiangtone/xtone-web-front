@@ -44,11 +44,11 @@ body .wrap {
 	height: 76%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 23%;
+	margin-top: 28%;
 }
 body .wrap .right-wrap .content-wrap {
 	width: 1000px;
-	height: auto;
+	height: 1183px;
 	min-height: 955px;
 	margin: 93px 0 0 116px;
 	background-color: #fff;
@@ -58,7 +58,7 @@ body .wrap .right-wrap .content-wrap .content_title {
 	width:100%;
 	height:86px;
 	background:url(../img/news/title_bg.png) center 0 no-repeat;
-	top: 4%;
+	top: 1%;
 }
 body .wrap .right-wrap .content-wrap .content_title .title {
 	position:absolute;
