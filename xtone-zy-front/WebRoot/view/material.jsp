@@ -141,7 +141,7 @@
                  <div style="background: url(../img/material/title_bg.png) 0% 0px no-repeat;top: -25.3%; left: -2%; width: 103%; height: 353px; z-index: 100; float: left; margin-top: -22%; margin-left: -2.6% ! important;"></div>  
                 <div class="content_title" style="-background: url(../img/material/title_bg.png) 50% 0px no-repeat;">
                     <div class="title" style="background: url(../img/material/title.png) 50% 0px no-repeat;"></div>
-                    <span>当前位置：<a href="main.jsp">官网首页</a> &gt; 游戏资料</span>
+                    
                 </div>
                 
                 <div class="content_nav" style="width: 92%;height: 68px;margin-left: 33px;border-bottom: 1px solid #EBEDEE;clear: both;">

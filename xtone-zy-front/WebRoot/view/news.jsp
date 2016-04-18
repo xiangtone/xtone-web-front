@@ -152,7 +152,7 @@
                  <div style="background: url(../img/news/title_bg.png) 0% 0px no-repeat;top: -25.3%; left: -2%; width: 103%; height: 353px; z-index: 100; float: left; margin-top: -22%; margin-left: -2.6% ! important;"></div>  
                 <div class="content_title" style="-background: url(../img/news/title_bg.png) 50% 0px no-repeat;">
                     <div class="title" style="background: url(../img/news/title.png) 50% 0px no-repeat;"></div>
-                    <span>当前位置：<a href="main.jsp">官网首页</a> &gt; 新闻中心</span>
+                    
                 </div>
                 
                 <div class="content_nav" style="width: 92%;height: 68px;margin-left: 33px;border-bottom: 1px solid #EBEDEE;clear: both;">

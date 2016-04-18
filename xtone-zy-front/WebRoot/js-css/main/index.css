@@ -78,7 +78,7 @@ blockquote:before,blockquote:after,q:before,q:after {
 	_width:1200px;
 	margin:0 auto
 	width:100%;
-	height:847px;
+	height:822px;
 }
 .main {
 	position:relative;
@@ -266,8 +266,8 @@ html,body {
 }
 .download {
 	position:absolute;
-	top:446px;
-	left:126px;
+	top:501px;
+	left:346px;
 	width: 168px;
 	height: 141px;
 	background:url(./img/kuang.png) no-repeat;
