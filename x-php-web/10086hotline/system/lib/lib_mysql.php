@@ -6,8 +6,8 @@
  * @version     1.0
  */
 final class Mysql {
-	private $db_host='61.142.254.126'; //数据库主机
-	private $db_user='root'; //数据库用户名
+	private $db_host='120.26.78.220'; //数据库主机
+	private $db_user='daybread'; //数据库用户名
 	private $db_pwd='dtsgx!@#'; //数据库用户名密码dtsgx!@#
 	private $db_database='daybread'; //数据库名
 	private $conn; //数据库连接标识;

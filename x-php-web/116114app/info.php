@@ -8,8 +8,10 @@ $page = intval($page);
 //获取总记录数。
 $totalnum = array();
 $sqlrow = "SELECT count(id) FROM news where status=1";
-$queryrow = sqlsrv_query($con, $sqlrow);
-$rows = sqlsrv_fetch_array($queryrow);
+//$queryrow = sqlsrv_query($con, $sqlrow);
+$queryrow = mssql_query($sqlrow,$con);
+//$rows = sqlsrv_fetch_array($queryrow);
+$rows = mssql_fetch_array($queryrow);
 $totalnum = $rows[0];
 
 //计算总页数。

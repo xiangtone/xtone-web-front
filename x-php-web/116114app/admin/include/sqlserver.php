@@ -16,12 +16,21 @@ class sqlserver
 
 
 	function __construct(){
-		$this->db_host = "127.0.0.1";
-		$this->db_user = "sa";
+		$this->db_host = "120.55.189.114";
+		$this->db_user = "huisen";
 		$this->db_pwd = "huisen@8920";
 		$this->db_name = "hc";
 		$this->db_char = "GB2312";
 	}
+    
+    public function sqlsrv_connect($db_host_ip,$db_info_list){
+        $db_info_dbname=$db_info_list['Database'];
+        $db_info_user=$db_info_list['UID'];
+        $db_info_pwd=$db_info_list['PWD'];
+        $db_id = mssql_connect($db_host_ip, $db_info_user,$db_info_pwd);
+        $con = mssql_select_db($db_info_dbname,$db_id);
+        return $con;
+    }
 
 	public function connent(){
 		
@@ -31,28 +40,29 @@ class sqlserver
 			"PWD" => $this->db_pwd
 		);
 
-		$con = sqlsrv_connect($this->db_host, $con_info);
+		$con = $this->sqlsrv_connect($this->db_host, $con_info);
+
 		
 
 		if ($con == false)
-			die( print_r( sqlsrv_errors(), true));
-		
+//			die( print_r( sqlsrv_errors(), true));
 		$this->db = $con;
 		return $con;
 	}
 
 	public function close($con){
 		sqlsrv_close($this->db);
+        
 	}
 
 	public function query($sql){
 
-		$query = sqlsrv_query($this->db,$sql);
+//		$query = sqlsrv_query($this->db,$sql);
+        $query = mssql_query($sql);
 
-		if ($query == false)
-			die( print_r(sqlsrv_errors(), true));
-	
-		return $query;
+		if ($query != false){
+            return $query;
+        }
 	}
 
 	
@@ -64,12 +74,14 @@ class sqlserver
 
 		$query = $this->query($sql);
 
-		while($row = sqlsrv_fetch_array($query,SQLSRV_FETCH_ASSOC)){
+//		while($row = sqlsrv_fetch_array($query,SQLSRV_FETCH_ASSOC)){
+//		while($row = mssql_fetch_array($query,MSSQL_FETCH_ASSOC)){
+        while($row = mssql_fetch_array($query,MYSQL_ASSOC)){
 			$rst[] = $row;
 		}
 
-		if($isChars)
-			array_walk($rst, array($this, 'charset'), $setChars);
+//		if($isChars)
+//			array_walk($rst, array($this, 'charset'), $setChars);
 		
 		return $rst;
 	}
@@ -79,7 +91,8 @@ class sqlserver
 
 		$query = $this->query($sql);
 
-		$rst = sqlsrv_fetch_array($query,SQLSRV_FETCH_ASSOC);
+//		$rst = sqlsrv_fetch_array($query,SQLSRV_FETCH_ASSOC);
+		$rst = mssql_fetch_array($query,MSSQL_FETCH_ASSOC);
 
 		if($isChars)
 			array_walk($rst, array($this, 'charset'), $setChars);
