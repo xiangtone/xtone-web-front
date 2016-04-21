@@ -251,11 +251,11 @@ $(function(){
 	$('.hot_list .hot_gamebox').hotlist();
 	function ishidden(){
 		var _this = $("#hide").parent();
-		if(_this.is(':hidden')){
+		if(_this.parent().is(':hidden')){
 			_this.parent().show();
 			return;
 		}
-		_this.hide();
+		_this.parent().hide();
 	}
 })
 </script>
