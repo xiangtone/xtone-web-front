@@ -13,10 +13,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	CheckLoad check = new CheckLoad();
+	/**CheckLoad check = new CheckLoad();
 	if(check.JudgeIsMoblie(request)){
 		response.sendRedirect("mpLoad.jsp");
-	}
+	}**/
 	Connection con = null;
 	PreparedStatement ps = null;
 	ResultSet rs = null;
@@ -28,7 +28,7 @@
 	try{
 		con = ConnectionService.getInstance().getConnectionForLocal();
 		String limit = " limit "+ 0 + "," + 5;
-		String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `status`=1  ORDER BY addTime DESC "+limit;
+		String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `status`=1  ORDER BY priority DESC "+limit;
 		ps = con.prepareStatement(sql);
 		rs = ps.executeQuery();
 		
@@ -41,7 +41,7 @@
 			list.add(news);
 		}
 		
-		sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%news%' AND `status`=1 ORDER BY addTime DESC "+limit;
+		sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%news%' AND `status`=1 ORDER BY priority DESC "+limit;
 		ps = con.prepareStatement(sql);
 		rs = ps.executeQuery();
 		while(rs.next()){
@@ -53,7 +53,7 @@
 			list2.add(news);
 		}
 		
-		sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%material%' AND `status`=1 ORDER BY addTime DESC " +limit;
+		sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%material%' AND `status`=1 ORDER BY priority DESC " +limit;
 		ps = con.prepareStatement(sql);
 		rs = ps.executeQuery();
 		while(rs.next()){
@@ -65,7 +65,7 @@
 			list3.add(news);
 		}
 		
-		sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%forum%' AND `status`=1 ORDER BY addTime DESC " +limit;
+		sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%forum%' AND `status`=1 ORDER BY priority DESC " +limit;
 		ps = con.prepareStatement(sql);
 		rs = ps.executeQuery();
 		while(rs.next()){
@@ -101,11 +101,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
-<title>《神魔战歌》2015 最酷炫神魔题材手游</title>
-<meta name="keywords" content="神魔,魔幻,战歌,卡牌,魔兽,刀塔,LOL,养成,RPG,动作,游戏,手游,点控,酷炫特效,美女,英雄,大集合,大乱斗,MOBA,公会战,图腾,女神">
-<meta name="description" content="2015最酷炫神魔题材手游《神魔战歌》正式登陆。神魔狂战，鹿死谁手!集齐史上各路神魔，养成史上最强神魔英雄。突破传统动作卡牌限制，领地建设给你带来不一样的养成体验~">
-<meta name="author" content="神魔传奇.">
-<meta name="copyright" content="神魔传奇.">
+<title>《捉妖人友帐》年度最二次元Q萌消除手游</title>
+<meta name="keywords" content="二次元,Q萌,捉妖">
+<meta name="description" content="超人气暖心动画，夏目友人帐100%原著改编，2016必玩TOP级三消手游《捉妖友人帐》，引爆二次元捉妖大作战！小清新童话地图，数百收妖关卡，迷之三消玩法，上手简单，萌趣烧脑根本把持不住！现在就和萌萝莉千寻还有傲娇的娘口三三一起前往奇幻的妖界，打败女妖BOSS、收集调皮鬼小妖怪做式神，踏上最有妖气的消除之旅吧喵~ \(≧ω≦)/">
+<meta name="author" content="捉妖人友帐.">
+<meta name="copyright" content="捉妖人友帐.">
 <link type="text/css" rel="stylesheet" href="../js-css/main/index.css">
 <link href="/favicon.ico" rel="icon" type="image/x-icon" />
 <link type="text/css" rel="stylesheet" href="../js-css/main/share.v3.2.css">
@@ -174,7 +174,7 @@
 		.top_box .menus{ width:400px;  padding:12px 0 0 550px; overflow: hidden; margin:0;}
 		.model2{width:100%;height:847px;padding:0;margin:0;position:relative;background:url(../img/main/bg_2.jpg) no-repeat center 0;}
 		.tab_news{width:1200px;height:426px;padding:0;margin:0 auto;}
-		.newsList font{color:rgb(248, 244, 245);}
+		.newsList font{color:rgb(109, 109, 109);}
 		.active{width:156px;height:97px;float:left;background-color: white;margin: 18px 10px;padding: 0;}
 		.partner{width: 1090px;height: 264px;padding: 0px;margin: 0px auto;background: white;}
 		.partnerimg{height: 85px;width: 178px;margin: 0 11px;float:left;}
@@ -227,6 +227,7 @@
 
 	<div class="download" style="background: url(../img/main/kuang.png) no-repeat;">
 	  <!-- <img  src="../img/main/code_main.jpg" width="125" height="124" alt="神魔传奇" style="margin-top: 23px;margin-left: 4px;"> -->
+	  <img src="../img/main/ioscode.png" width="112" height="112" alt="捉妖友人帐" style="margin-top: 13px; margin-left: 16px;"/>
 	  <a class="download--ios" id="ios" style="background: url(../img/main/btn_download_ios.png) no-repeat;" href="javascript:;" rel="nofollow">App Store下载</a>
 	  <a class="download--android" id="android" style="background: url(../img/main/btn_download_android.png) no-repeat;" href="javascript:;" title="">安卓下载</a>
 	  <!--epart end-->
