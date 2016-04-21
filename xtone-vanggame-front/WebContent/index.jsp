@@ -21,7 +21,7 @@
 	try {
 		con = ConnectionService.getInstance().getConnectionForLocal();
 		String limit = " limit " + 6 * (1 - 1) + "," + 6;
-		String sql = "SELECT id,`title`,`lastModifyTime` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%news%' AND `status`=1 ORDER BY lastModifyTime DESC "
+		String sql = "SELECT id,`title`,`lastModifyTime` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%news%' AND `status`=1 ORDER BY priority DESC,lastModifyTime DESC "
 				+ limit;
 		ps = con.prepareStatement(sql);
 		rs = ps.executeQuery();
@@ -402,36 +402,36 @@
 				</div>
 			</div>
 		</div>
-		<div class="bs-docs-featurette">
-			<div class="container">
-				<div class="row home-padding">
-					<div class="col-md-12 col-sm-12 col-xs-12 nopadding title">
-						<div class="col-md-3 col-sm-3 nopadding">
-							<img src="images/index/business_structure.png"></img>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
-						<!-- 					<a href="http://expo.getbootstrap.com/2014/10/29/lyft/" -->
-						<!-- 						target="_blank" title="Lyft"> -->
+<!-- 		<div class="bs-docs-featurette"> -->
+<!-- 			<div class="container"> -->
+<!-- 				<div class="row home-padding"> -->
+<!-- 					<div class="col-md-12 col-sm-12 col-xs-12 nopadding title"> -->
+<!-- 						<div class="col-md-3 col-sm-3 nopadding"> -->
+<!-- 							<img src="images/index/business_structure.png"></img> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 					<div class="col-md-4 col-sm-4 col-xs-4 nopadding"> -->
+<!-- 											<a href="http://expo.getbootstrap.com/2014/10/29/lyft/" -->
+<!-- 												target="_blank" title="Lyft"> -->
 
-						<a
-							href="cooperation.html"> <img src="images/index/ad1.jpg"
-							alt="First cooperation" class="bsimg">
-						</a>
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
-						<a href="cooperation.html"> <img src="images/index/ad3.jpg"
-							alt="Second cooperation" class="bsimg">
-						</a>
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
-						<a href="cooperation.html"> <img src="images/index/ad2.jpg"
-							alt="Third cooperation" class="bsimg">
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
+<!-- 						<a -->
+<!-- 							href="cooperation.html"> <img src="images/index/ad1.jpg" -->
+<!-- 							alt="First cooperation" class="bsimg"> -->
+<!-- 						</a> -->
+<!-- 					</div> -->
+<!-- 					<div class="col-md-4 col-sm-4 col-xs-4 nopadding"> -->
+<!-- 						<a href="cooperation.html"> <img src="images/index/ad3.jpg" -->
+<!-- 							alt="Second cooperation" class="bsimg"> -->
+<!-- 						</a> -->
+<!-- 					</div> -->
+<!-- 					<div class="col-md-4 col-sm-4 col-xs-4 nopadding"> -->
+<!-- 						<a href="cooperation.html"> <img src="images/index/ad2.jpg" -->
+<!-- 							alt="Third cooperation" class="bsimg"> -->
+<!-- 						</a> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
 		<div class="bs-docs-featurette">
 			<div class="container">
 				<div class="row home-padding">
