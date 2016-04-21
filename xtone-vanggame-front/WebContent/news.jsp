@@ -38,7 +38,7 @@
 	try {
 		con = ConnectionService.getInstance().getConnectionForLocal();
 		String limit = " limit " + 6 * (pageIndex - 1) + "," + 6;
-		String sql = "SELECT id,`title`,`subTitle`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%news%' AND `status`=1 ORDER BY lastModifyTime DESC "
+		String sql = "SELECT id,`title`,`subTitle`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%news%' AND `status`=1 ORDER BY priority DESC,lastModifyTime DESC "
 				+ limit;
 		ps = con.prepareStatement(sql);
 		rs = ps.executeQuery();
