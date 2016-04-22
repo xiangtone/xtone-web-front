@@ -23,10 +23,7 @@
 	List<News> list3 = new ArrayList();
 	List<News> list4 = new ArrayList();
 	try{
-		System.out.println("try load...");
 		con = ConnectionService.getInstance().getConnectionForLocal();
-		//con = ConnConfigMain.getConnection();
-		System.out.println("get Connection..");
 		String limit = " limit "+ 0 + "," + 5;
 		String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `status`=1  ORDER BY addTime DESC "+limit;
 		ps = con.prepareStatement(sql);
@@ -102,7 +99,7 @@
 <html lang="zh-cmn-Hans"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <style type="text/css" id="znBdcsStyle">#bdcs-rec{display:none;}</style><meta charset="utf-8">
-<title>《神魔战歌》官方网站-年度魔幻轻动作手游</title>
+<title>《神魔战歌》2016年最炫酷神魔题材手游</title>
 <!-- 优先使用 IE 最新版本和 Chrome -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <!-- 页面描述 -->
@@ -138,18 +135,14 @@
     </div>
     <div class="nav">
         <ul class="n_c">
-            <li><a href="">新游</a></li>
-            <li><a href="">论坛</a></li>
-            <li><a href="">礼包</a></li>
-            <li><a href="">娱乐</a></li>
-            <li><a href="">产业</a></li>
+            <li><a href="mpList.jsp?catalog=first">综合</a></li>
+            <li><a href="mpList.jsp?catalog=news">新闻</a></li>
+            <li><a href="javascript:openPop('#pop-android');">礼包</a></li>
         </ul>
         <ul class="n_c">
-            <li><a href="">商场</a></li>
-            <li><a href="">活动</a></li>
-            <li><a href="">安卓</a></li>
-            <li><a href="">iOS</a></li>
-            <li><a href="">专区</a></li>
+            <li><a href="mpList.jsp?catalog=material">资料</a></li>
+            <li><a href="mpList.jsp?catalog=forum">论坛</a></li>
+            <li><a href="../view/mpContent.jsp?id=213">下载</a></li>
         </ul>
     </div>
 </nav>
@@ -158,7 +151,7 @@
 <!--导航-->
 <nav style="position: fixed;" class="nav-mod" id="nav-mod">
 	<ul>
-    	<!--<li class="l1"><a class="cur" href="http://www.18183.com/hqg"><i>专区</i><span></span></a></li>
+   	<!--  <li class="l1"><a class="cur" href="http://www.18183.com/hqg"><i>专区</i><span></span></a></li>
         <li class="l2"><a href="http://ku.18183.com/huaqiangu.html"><i>下载</i><span></span></a></li>
         <li class="l3"><a href="http://ka.18183.com/list_game_1922.shtml"><i>礼包</i><span></span></a></li>
         <li class="l4"><a href="http://bbs.18183.com/forum-3931-1.html"><i>论坛</i><span></span></a></li>-->
@@ -175,7 +168,7 @@
 
 				<ul class="re-imgtext-15 clear">
 					<li>
-						<a href="" style="color: #20202C;text-decoration: none;display: block;width: 34%;height: 43px;top: 70%;background: transparent url(../img/mp_load/btn_download.jpg) no-repeat scroll left center / 98px auto;position: absolute;left: 13%;"></a>
+						<a href="../view/mpContent.jsp?id=213" style="color: #20202C;text-decoration: none;display: block;width: 34%;height: 43px;top: 70%;background: transparent url(../img/mp_load/btn_download.jpg) no-repeat scroll left center / 98px auto;position: absolute;left: 13%;"></a>
 						<!-- 图片按钮大小为98X32 -->
 						<!--<img src="img/btn_download.png" alt="花千骨">-->
 					</li>
@@ -770,6 +763,14 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 </script><script src="%E8%8A%B1%E5%8D%83%E9%AA%A8%E6%89%8B%E6%B8%B8_%E8%8A%B1%E5%8D%83%E9%AA%A8%E6%89%8B%E6%B8%B8%E5%AE%98%E7%BD%91_%E6%94%BB%E7%95%A5_%E4%B8%8B%E8%BD%BD_%E7%A4%BC%E5%8C%85_18183%E8%8A%B1%E5%8D%83%E9%AA%A8%E4%B8%93%E5%8C%BA_files/h.js" type="text/javascript"></script>
 </div>-->
 <script charset="gb2312" type="text/javascript">
+function headerToggle()
+{
+	if($("#j_head_nav").css("display")=="block"){
+		$("#j_head_nav").css("display","none");
+	}else {
+		$("#j_head_nav").css("display","block");
+	}
+}
 nie.config.copyRight.setWhite();
 //分享
 var shareTxt = " 神魔战歌";

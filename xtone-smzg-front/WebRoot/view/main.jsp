@@ -1,3 +1,4 @@
+<%@page import="org.apache.log4j.Logger"%>
 <%@page import="com.xtone.util.CheckLoad"%>
 <%@page import="org.common.util.ConnectionService"%>
 <%@page import="com.system.database.ConnConfigMain"%>
@@ -13,6 +14,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
+	Logger log = Logger.getLogger("main.class"); 
 	CheckLoad check = new CheckLoad();
 	if(check.JudgeIsMoblie(request)){
 		response.sendRedirect("mpLoad.jsp");
@@ -26,7 +28,6 @@
 	List<News> list3 = new ArrayList();
 	List<News> list4 = new ArrayList();
 	try{
-		System.out.println("try load...");
 		con = ConnectionService.getInstance().getConnectionForLocal();
 		//con = ConnConfigMain.getConnection();
 		String limit = " limit "+ 0 + "," + 5;
@@ -103,7 +104,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
-<title>《神魔战歌》2015 最酷炫神魔题材手游</title>
+<title>《神魔战歌》2016年最炫酷神魔题材手游</title>
 <meta name="keywords" content="神魔,魔幻,战歌,卡牌,魔兽,刀塔,LOL,养成,RPG,动作,游戏,手游,点控,酷炫特效,美女,英雄,大集合,大乱斗,MOBA,公会战,图腾,女神">
 <meta name="description" content="2015最酷炫神魔题材手游《神魔战歌》正式登陆。神魔狂战，鹿死谁手!集齐史上各路神魔，养成史上最强神魔英雄。突破传统动作卡牌限制，领地建设给你带来不一样的养成体验~">
 <meta name="author" content="神魔传奇.">
@@ -171,12 +172,12 @@
 		.top_box .menus li a{display:block; padding:0 0 0 25px; font-size:18px; color: rgba(38, 2, 2, 0.81); overflow: hidden;text-decoration:none;font-size:14px;}
 		.top_box .menus li a:hover{color:#ffcc00;}
 		.top_box .menus{ width:400px;  padding:12px 0 0 550px; overflow: hidden; margin:0;}
-		.model2{width:100%;height:713px;padding:0;margin:0;position:relative;background:url(../img/main/bg_2.png) no-repeat center 0;}
-		.tab_news{width:1200px;height:461px;padding:0;margin:0 auto;}
+		.model2{width: 100%;height: 786px;padding: 0px;margin: 0px;background: transparent url("../img/main/bg_2.png") no-repeat scroll center 0px;position: relative;background: rgb(35,16,36);}
+		.tab_news{width:1200px;height:403px;padding:0;margin:0 auto;}
 		.newsList font{color:rgb(248, 244, 245);}
 		.active{width:156px;height:97px;float:left;background-color: white;margin: 18px 10px;padding: 0;}
 		.partner{width: 1200px;height: 135px;padding: 0px;margin: 0px auto;}
-		.partnerimg{height: 85px;width: 178px;margin: 0 11px;float:left;}
+		.partnerimg{height: 85px;width: 178px;margin: 0 11px;float:left;background: #000;}
 		.test-top{height: 55px;background: #FBFBFB none repeat scroll 0% 0%;}
 		#NIE-topBar *, #NIE-topBar-include * {font-size: 12px;font-style: normal;}
 		.test-top-main {position: relative;z-index: 9999;width: 1165px;margin: auto;}
@@ -225,7 +226,7 @@
 	<div class="download" style="background: url(../img/main/kuang.png) no-repeat;">
 	  <img  src="../img/main/code_main.jpg" width="125" height="124" alt="神魔传奇" style="margin-top: 23px;margin-left: 4px;">
 	  <a class="download--ios" style="background: url(../img/main/btn_download_ios.png) no-repeat;" href="javascript:;" rel="nofollow">App Store下载</a>
-	  <a class="download--android" style="background: url(../img/main/androidbt.png) no-repeat;" href="javascript:;" title="">安卓下载</a>
+	  <a class="download--android" style="background: url(../img/main/androidbt.png) no-repeat;" href="../view/content.jsp?id=213" title="">安卓下载</a>
 	  <a class="btn-gifts" style="background: url(../img/main/btn_gift_bg.png) no-repeat;" href="javascript:openPop('#pop-android');"><b style="background: url(../img/main/btn_gift_item.png) no-repeat;">领取礼包</b></a>
 	  <!--epart end-->
 	</div>
@@ -295,11 +296,7 @@
 				<font >[<%=timeStr %>]</font>
 				</li>
 				<%} %>
-                               		<!-- <li><a href="http://smzg.xtonegame.com/news/index.html" class="tit" data="0" title="神魔战歌攻略： 如何完美通关英灵试炼40层" >【综合】</a><a href="http://smzg.xtonegame.com/news/index.html" target="_blank" title="神魔战歌攻略： 如何完美通关英灵试炼40层">神魔战歌攻略： 如何完美通关英灵试炼40层</a><font>[11/13]</font></li>
-                               		<li><a href="http://hqg.skymoons.com/html/active/2015/1105/374.html#content" class="tit" data="0" title="11月6日-11月7日App Store活动" target="_blank">【综合】</a><a href="http://hqg.skymoons.com/html/active/2015/1105/374.html#content" target="_blank" title="11月6日-11月7日App Store活动">11月6日-11月7日App Store活动</a><font>[11/05]</font></li>
-                               		<li><a href="http://hqg.skymoons.com/html/active/2015/1102/367.html#content" class="tit" data="0" title="11月3日-11月5日App Store活动" target="_blank">【综合】</a><a href="http://hqg.skymoons.com/html/active/2015/1102/367.html#content" target="_blank" title="11月3日-11月5日App Store活动">11月3日-11月5日App Store活动</a><font>[11/02]</font></li>
-                               		<li><a href="http://hqg.skymoons.com/html/active/2015/1031/366.html#content" class="tit" data="0" title="10月31日-11月2日App Store活动" target="_blank">【综合】</a><a href="http://hqg.skymoons.com/html/active/2015/1031/366.html#content" target="_blank" title="10月31日-11月2日App Store活动">10月31日-11月2日App Store活动</a><font >[10/31]</font></li></ul>
-                               		 -->
+                               		
              </ul>
 			<div class="active" style="margin:18px 13px 13px 29px;">
 				<img src="../img/main/news/active1.png" width="156px" height="97px" alt="" />
@@ -416,22 +413,30 @@
 	</div>
 	<div class="partner">
 		<div class="partnerimg" style="margin: 0px 15px 0px 0px;" >
-			<img src="../img/main/partner/1.png" width="178px" height="85px" alt="" />
+			<a href="http://www.8477.com/" target="_blank"><img src="../img/main/partner/1.png" width="178px" height="85px" alt="" /></a>
 		</div>
 		<div class="partnerimg" >
-			<img src="../img/main/partner/2.png" width="178px" height="85px" alt="" />
+			<a href="http://www.18183.com/" target="_blank"><img src="../img/main/partner/2.png" width="178px" height="85px" alt="" /></a>
 		</div>
 		<div class="partnerimg" >
-			<img src="../img/main/partner/3.png" width="178px" height="85px" alt="" />
+			<a href="http://www.youxiduo.com/" target="_blank"><img src="../img/main/partner/3.png" width="178px" height="85px" alt="" /></a>
 		</div>
 		<div class="partnerimg" >
-			<img src="../img/main/partner/4.png" width="178px" height="85px" alt="" />
+			<a href="http://www.youxiniao.com/" target="_blank"><img src="../img/main/partner/4.png" width="178px" height="85px" alt="" /></a>
 		</div>
 		<div class="partnerimg" >
-			<img src="../img/main/partner/5.png" width="178px" height="85px" alt="" />
+			<a href="http://www.pipaw.com/" target="_blank"><img src="../img/main/partner/5.png" width="178px" height="85px" alt="" /></a>
 		</div>
 		<div class="partnerimg" >
-			<img src="../img/main/partner/6.png" width="178px" height="85px" alt="" />
+			<a href="http://www.benshouji.com/" target="_blank"><img src="../img/main/partner/6.png" width="178px" height="85px" alt="" /></a>
+		</div>
+	</div>
+	<div class="partner">
+		<div class="partnerimg" style="margin: 0px 15px 0px 0px;" >
+			<a href="http://www.23.com/" target="_blank"><img src="../img/main/partner/7.png" width="178px" height="85px" alt="" /></a>
+		</div>
+		<div class="partnerimg" >
+			<a href="http://www.xiaopi.com/" target="_blank"><img src="../img/main/partner/8.png" width="178px" height="85px" alt="" /></a>
 		</div>
 	</div>
 	<div class="" style="padding: 0px;margin: 0px auto;width: 672px;height: 70px;">

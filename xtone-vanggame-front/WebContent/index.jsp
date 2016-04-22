@@ -21,7 +21,7 @@
 	try {
 		con = ConnectionService.getInstance().getConnectionForLocal();
 		String limit = " limit " + 6 * (1 - 1) + "," + 6;
-		String sql = "SELECT id,`title`,`lastModifyTime` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%news%' AND `status`=1 ORDER BY priority DESC "
+		String sql = "SELECT id,`title`,`lastModifyTime` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%news%' AND `status`=1 ORDER BY priority DESC,lastModifyTime DESC "
 				+ limit;
 		ps = con.prepareStatement(sql);
 		rs = ps.executeQuery();
@@ -56,10 +56,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Bootstrap.">
+<meta name="description" content="万家游戏致力创造美好娱乐生活，主要业务涵盖游戏的运营发行、移动广告及增值支付等业务。旗下拥有《口袋大冒险》、《电视萌萌答》、《捉妖友人帐》等IP经典热门游戏，立足全国放眼海外，万家游戏将打造成全国乃至全球领先的网络游戏平台。">
 <meta name="keywords"
-	content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
-<title>万家游戏-首页</title>
+	content="万家游戏，万家，游戏，手游，商务，合作，招聘，发行，vanggame,VANGGAME，手机游戏，网页游戏">
+<title>万家游戏 - 专注全球网络游戏发行平台</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/docs.min.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -379,36 +379,36 @@
 				</div>
 			</div>
 		</div>
-		<div class="bs-docs-featurette">
-			<div class="container">
-				<div class="row home-padding">
-					<div class="col-md-12 col-sm-12 col-xs-12 nopadding title">
-						<div class="col-md-3 col-sm-3 nopadding">
-							<img src="images/index/business_structure.png"></img>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12 nopadding">
-						<!-- 					<a href="http://expo.getbootstrap.com/2014/10/29/lyft/" -->
-						<!-- 						target="_blank" title="Lyft"> -->
+<!-- 		<div class="bs-docs-featurette"> -->
+<!-- 			<div class="container"> -->
+<!-- 				<div class="row home-padding"> -->
+<!-- 					<div class="col-md-12 col-sm-12 col-xs-12 nopadding title"> -->
+<!-- 						<div class="col-md-3 col-sm-3 nopadding"> -->
+<!-- 							<img src="images/index/business_structure.png"></img> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 					<div class="col-md-4 col-sm-4 col-xs-4 nopadding"> -->
+<!-- 											<a href="http://expo.getbootstrap.com/2014/10/29/lyft/" -->
+<!-- 												target="_blank" title="Lyft"> -->
 
-						<a
-							href="cooperation.html"> <img src="images/index/ad1.jpg"
-							alt="First cooperation" class="bsimg">
-						</a>
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12 nopadding">
-						<a href="cooperation.html"> <img src="images/index/ad3.jpg"
-							alt="Second cooperation" class="bsimg">
-						</a>
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12 nopadding">
-						<a href="cooperation.html"> <img src="images/index/ad2.jpg"
-							alt="Third cooperation" class="bsimg">
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
+<!-- 						<a -->
+<!-- 							href="cooperation.html"> <img src="images/index/ad1.jpg" -->
+<!-- 							alt="First cooperation" class="bsimg"> -->
+<!-- 						</a> -->
+<!-- 					</div> -->
+<!-- 					<div class="col-md-4 col-sm-4 col-xs-4 nopadding"> -->
+<!-- 						<a href="cooperation.html"> <img src="images/index/ad3.jpg" -->
+<!-- 							alt="Second cooperation" class="bsimg"> -->
+<!-- 						</a> -->
+<!-- 					</div> -->
+<!-- 					<div class="col-md-4 col-sm-4 col-xs-4 nopadding"> -->
+<!-- 						<a href="cooperation.html"> <img src="images/index/ad2.jpg" -->
+<!-- 							alt="Third cooperation" class="bsimg"> -->
+<!-- 						</a> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
 		<div class="bs-docs-featurette">
 			<div class="container">
 				<div class="row home-padding">
@@ -466,7 +466,14 @@
 						<div class="tt20"><a href="http://www.xtonecomic.com/" class="links" target="_blank">北京讯宇创世科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a href="http://14643233.czvv.com/" class="links" target="_blank">北京游动天地科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a href="http://www.pvc123.com/b-pxtonewinnie/" class="links"	target="_blank">深圳市创世互动科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp; </div>
-						<div class="tt20"><a href="http://www.m-time.com/" class="links">深圳市浩天投资有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>					
+						<div class="tt20"><a href="http://www.m-time.com/" class="links">深圳市浩天投资有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a href="http://dmx.xtonegame.com" class="links" target="_blank">口袋大冒险</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a href="http://lznh.cooguo.com/" class="links" target="_blank">龙之怒吼</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a href="http://smzg.xtonegame.com/" class="links" target="_blank">神魔战歌</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a href="http://fsz.ganwan.com/" class="links" target="_blank">封神战</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a href="http://www.ljy0.com/home.html" class="links" target="_blank">零纪元</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>	
+						<div class="tt20"><a href="http://mmd.xtonegame.com/" class="links" target="_blank">电视萌萌答</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a href="http://jdtw.xtonegame.com/" class="links" target="_blank">绝地逃亡</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>		
 					</div>
 					
 				</div>

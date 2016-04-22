@@ -63,7 +63,7 @@
 <html lang="zh-cmn-Hans"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <style type="text/css" id="znBdcsStyle">#bdcs-rec{display:none;}</style><meta charset="utf-8">
-<title>花千骨手游_花千骨手游官网_攻略_下载_礼包_18183花千骨专区</title>
+<title>《神魔战歌》2016年最炫酷神魔题材手游</title>
 <!-- 优先使用 IE 最新版本和 Chrome -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <!-- 页面描述 -->
@@ -219,7 +219,7 @@
 	<!--mod-frame-1-->
     <section class="re-mod mod-frame-1">
         <figure>
-			<a href="" style="color: #20202C;text-decoration: none;display: block;width: 34%;height: 43px;-top: 70%;background: transparent url(../img/mp_news/btn_download.jpg) no-repeat scroll left center / 98px auto;position: absolute;left: 13%;margin-top: 6%;"></a>
+			<a href="../view/mpContent.jsp?id=213" style="color: #20202C;text-decoration: none;display: block;width: 34%;height: 43px;-top: 70%;background: transparent url(../img/mp_news/btn_download.jpg) no-repeat scroll left center / 98px auto;position: absolute;left: 13%;margin-top: 6%;"></a>
 			<a style="color: #20202C;text-decoration: none;display: block;width: 34%;height: 43px;-top: 70%;background: transparent url(../img/mp_news/btn.jpg) no-repeat scroll left center / 98px auto;position: absolute;left: 58%;margin-top: 6%;-bottom: -50%;" href="javascript:openPop('#pop-android');"></a>
 			<!--<ul class="re-imgtext-15 clear">
 					<li>

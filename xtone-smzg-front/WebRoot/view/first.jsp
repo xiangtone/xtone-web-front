@@ -14,27 +14,17 @@
     pageEncoding="UTF-8"%>
 <%
 	CheckLoad check = new CheckLoad();
-	System.out.println("pone:"+check.JudgeIsMoblie(request));
 	if(check.JudgeIsMoblie(request)){
 		response.sendRedirect("mpList.jsp?catalog=first");
 	}
-	//String pageIndexStr = request.getParameter("pageIndex");
 	int count = 0;
     int pageIndex = StringUtil.getInteger(request.getParameter("pageindex"), 1);
-	//if(pageIndexStr.equals("")){
-	//}else{
-	//	pageIndex = Integer.parseInt(pageIndexStr);
-	//}
 	Connection con = null;
 	PreparedStatement ps = null;
 	ResultSet rs = null;
-	System.out.println("news load...");
 	List<News> list = new ArrayList();
 	try{
-		System.out.println("try load...");
-		//con = ConnConfigMain.getConnection();
 		con = ConnectionService.getInstance().getConnectionForLocal();
-		System.out.println("get Connection..");
 		String limit = " limit "+12*(pageIndex-1) + "," + 12;
 		String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `status`=1  ORDER BY addTime DESC  "+limit;
 		ps = con.prepareStatement(sql);
@@ -49,11 +39,6 @@
 			list.add(news);
 		}
 		
-		//sql = "SELECT count(*) count FROM `tbl_cms_contents` ";
-		//ps = con.prepareStatement(sql);
-		//rs = ps.executeQuery();
-		//if(rs.next())
-			//count = rs.getInt(1);
 		count = 12;
 	}catch(Exception e){
 		e.printStackTrace();
@@ -71,7 +56,7 @@
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html><head>
-    <title>神魔战歌详情</title>
+    <title>《神魔战歌》2016年最炫酷神魔题材手游</title>
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="keywords" content="">
