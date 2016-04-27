@@ -338,7 +338,7 @@
 									<a href="porducts-phone.html"><img
 										src="images/index/350x290_2.jpg" class="bsimg" alt="Second game"></a>
 									<div class="hot_yt hot_yt_sw ztgs">
-										<h4 class="hot_yt_left">《绝地大逃亡》</h4>
+										<h4 class="hot_yt_left">《绝地逃亡》</h4>
 										<h4 class="hot_yt_right">动作格斗</h4>
 									</div>
 									<!-- 								<div class="hot_mark" align="center"> -->
