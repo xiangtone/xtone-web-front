@@ -2,6 +2,9 @@
     <wb-module deploy-name="xtone-web">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main"/>
+        <dependent-module archiveName="xtone-java-common.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/xtone-common/xtone-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="java-output-path" value="/xtone-web/build/classes"/>
         <property name="context-root" value="vanggame.xtonegame.com"/>
     </wb-module>
