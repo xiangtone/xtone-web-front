@@ -60,7 +60,7 @@
 <meta name="keywords"
 	content="万家游戏，万家，游戏，手游，商务，合作，招聘，发行，vanggame,VANGGAME，手机游戏，网页游戏">
 <meta name="author" content="Shirp" />
-<title>万家游戏 - 汇聚精品</title>
+<title>万家游戏 -万家游戏 汇聚精品</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/docs.min.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
