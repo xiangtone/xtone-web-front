@@ -60,7 +60,7 @@
 <meta name="keywords"
 	content="万家游戏，万家，游戏，手游，商务，合作，招聘，发行，vanggame,VANGGAME，手机游戏，网页游戏">
 <meta name="author" content="Shirp" />
-<title>万家游戏 - 专注全球网络游戏发行平台</title>
+<title>万家游戏 - 汇聚精品</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/docs.min.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -467,7 +467,7 @@
 						<div class="tt20"><a href="http://www.xtonecomic.com/" class="links" target="_blank">北京讯宇创世科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a href="http://14643233.czvv.com/" class="links" target="_blank">北京游动天地科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a href="http://www.pvc123.com/b-pxtonewinnie/" class="links"	target="_blank">深圳市创世互动科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp; </div>
-						<div class="tt20"><a href="http://www.m-time.com/" class="links">深圳市浩天投资有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a href="http://www.m-time.com/" class="links" target="_blank">深圳市浩天投资有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a href="http://dmx.xtonegame.com" class="links" target="_blank">口袋大冒险</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a href="http://lznh.cooguo.com/" class="links" target="_blank">龙之怒吼</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a href="http://smzg.xtonegame.com/" class="links" target="_blank">神魔战歌</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -482,15 +482,8 @@
 		</div>
 	</div>
 	<footer class="bs-docs-footer" role="contentinfo">
-		<jsp:include page="footer.html"/>
+		<div id="footer"></div>
 	</footer>
-
-	<script src="js/bootstrap/jquery.min.js"></script>
-	<script src="js/bootstrap/bootstrap.min.js"></script>
-	<script src="js/docs.min.js"></script>
-	<script src="js/index.js"></script>
-	<script src="js/bootstrap/ie10-viewport-bug-workaround.js"></script>
-	
 	<script>
 // 		var _gauges = _gauges || [];
 // 		!function() {
@@ -502,8 +495,10 @@
 // 			t.parentNode.insertBefore(e, t)
 // 		}();
 	</script>
+	<script src="js/bootstrap/jquery.min.js"></script>
 	<script type="text/javascript">
 	$("#top").load("top.html");
+	$("#footer").load("footer.html");
 	$(function() {
 			$('.hot_list .hot_gamebox').hotlist();
 			updateVido();

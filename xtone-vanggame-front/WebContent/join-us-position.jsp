@@ -187,13 +187,10 @@ color: #aaaaaa;
 		</div>	
 	</div>
 	<footer class="bs-docs-footer" role="contentinfo">
-		<jsp:include page="footer.html"/>
+		<div id="footer"></div>
 	</footer>
 	
 	<script	src="js/bootstrap/jquery.min.js"></script>
-	<script	src="js/bootstrap/bootstrap.min.js"></script>
-	<script	src="js/docs.min.js"></script>
-	<script	src="js/bootstrap/ie10-viewport-bug-workaround.js"></script>
 	<script type="text/javascript">
 		$("#top").load("top.html");
 		$("#footer").load("footer.html");
