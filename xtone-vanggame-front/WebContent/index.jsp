@@ -59,7 +59,10 @@
 <meta name="description" content="万家游戏致力创造美好娱乐生活，主要业务涵盖游戏的运营发行、移动广告及增值支付等业务。旗下拥有《口袋大冒险》、《电视萌萌答》、《捉妖友人帐》等IP经典热门游戏，立足全国放眼海外，万家游戏将打造成全国乃至全球领先的网络游戏平台。">
 <meta name="keywords"
 	content="万家游戏，万家，游戏，手游，商务，合作，招聘，发行，vanggame,VANGGAME，手机游戏，网页游戏">
-<title>万家游戏 - 专注全球网络游戏发行平台</title>
+
+<meta name="author" content="Shirp" />
+<title>万家游戏 -万家游戏 汇聚精品</title>
+
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/docs.min.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -260,29 +263,6 @@
 <body class="bs-docs-home">
 	<header class="navbar navbar-static-top bs-docs-nav" id="top"
 		role="banner">
-		
-		<div class="container">
-			<div class="navbar-header">
-				<button class="navbar-toggle collapsed" type="button"
-					data-toggle="collapse" data-target="#bs-navbar"
-					aria-controls="bs-navbar" aria-expanded="false">
-					<span class="sr-only"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span>
-				</button>
-				<a href="index.jsp"><img alt="logo" src="images/logo.png" class="logo-size"></a>
-			</div>
-			<nav id="bs-navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right ztgs my-nav">
-					<li class="active"><a id="index" href="index.jsp"><font class="nav-chinese">首页</font><br><font class="nav-english">HOME</font></a></li>
-					<li><a id="news" href="news.jsp"><font class="nav-chinese">新闻动态</font><br><font class="nav-english">NEWS</font></a></li>
-					<li><a id="partform" href="porducts-sjyx.html"><font class="nav-chinese">旗下产品</font><br><font class="nav-english">PORDUCTS</font></a></li>					
-					<li><a id="abouts" href="about-us-gsjs.html"><font class="nav-chinese">关于我们</font><br><font class="nav-english">VANGGAME</font></a></li>
-					<li><a id="cooperation" href="cooperation.html"><font class="nav-chinese">商务合作</font><br><font class="nav-english">COOPERATION</font></a></li>
-					<li><a id="join" href="join-us-shzp.html"><font class="nav-chinese">招贤纳士</font><br><font class="nav-english">JOIN&nbsp;US</font></a></li>
-					
-				</ul>
-			</nav>
-		</div>
 	</header>
 
 	<div id="myCarousel" class="carousel slide" data-ride="carousel"
@@ -310,10 +290,10 @@
 			<!--       </div> -->
 		</div>
 		<!-- 轮播（Carousel）导航 -->
-		<!--    <a class="carousel-control left" href="#myCarousel"  -->
-		<!--       data-slide="prev">&lsaquo;</a> -->
-		<!--    <a class="carousel-control right" href="#myCarousel"  -->
-		<!--       data-slide="next">&rsaquo;</a> -->
+		   <a class="carousel-control left" href="#myCarousel" 
+		      data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+		   <a class="carousel-control right" href="#myCarousel" 
+		      data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 	</div>
 	<div
 		style="background-image: url(images/index/index-bg.jpg); background-size: cover;">
@@ -326,7 +306,7 @@
 						</div>
 
 						<div class="col-md-9 col-sm-9 col-xs-6 nopadding">
-							<a href="porducts-sjyx.html" style="float: right"><img
+							<a href="porducts-phone.html" style="float: right"><img
 								src="images/index/more.png"></img></a>
 						</div>
 					</div>
@@ -336,7 +316,7 @@
 							<div class="hot_game hot_list">
 
 								<div class="l hot_gamebox mb1">
-									<a href="porducts-sjyx.html"><img
+									<a href="porducts-phone.html"><img
 										src="images/index/350x290_1.jpg" class="bsimg" alt="First game"></a>
 									<div class="hot_yt hot_yt_sw ztgs">
 										<h4 class="hot_yt_left">《口袋大冒险》</h4>
@@ -358,7 +338,7 @@
 						<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
 							<div class="hot_game hot_list">
 								<div class="l hot_gamebox mb1">
-									<a href="porducts-sjyx.html"><img
+									<a href="porducts-phone.html"><img
 										src="images/index/350x290_2.jpg" class="bsimg" alt="Second game"></a>
 									<div class="hot_yt hot_yt_sw ztgs">
 										<h4 class="hot_yt_left">《绝地逃亡》</h4>
@@ -379,7 +359,7 @@
 						<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
 							<div class="hot_game hot_list">
 								<div class="hot_gamebox mb1">
-									<a href="porducts-sjyx.html"><img
+									<a href="porducts-phone.html"><img
 										src="images/index/350x290_3.jpg" class="bsimg" alt="Third game"></a>
 									<div class="hot_yt hot_yt_sw ztgs">
 										<h4 class="hot_yt_left">《神魔战歌》</h4>
@@ -489,7 +469,7 @@
 						<div class="tt20"><a href="http://www.xtonecomic.com/" class="links" target="_blank">北京讯宇创世科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a href="http://14643233.czvv.com/" class="links" target="_blank">北京游动天地科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a href="http://www.pvc123.com/b-pxtonewinnie/" class="links"	target="_blank">深圳市创世互动科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp; </div>
-						<div class="tt20"><a href="http://www.m-time.com/" class="links">深圳市浩天投资有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a href="http://www.m-time.com/" class="links" target="_blank">深圳市浩天投资有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a href="http://dmx.xtonegame.com" class="links" target="_blank">口袋大冒险</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a href="http://lznh.cooguo.com/" class="links" target="_blank">龙之怒吼</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a href="http://smzg.xtonegame.com/" class="links" target="_blank">神魔战歌</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -504,15 +484,8 @@
 		</div>
 	</div>
 	<footer class="bs-docs-footer" role="contentinfo">
-		<jsp:include page="footer.html"/>
+		<div id="footer"></div>
 	</footer>
-
-	<script src="js/bootstrap/jquery.min.js"></script>
-	<script src="js/bootstrap/bootstrap.min.js"></script>
-	<script src="js/docs.min.js"></script>
-	<script src="js/index.js"></script>
-	<script src="js/bootstrap/ie10-viewport-bug-workaround.js"></script>
-	
 	<script>
 // 		var _gauges = _gauges || [];
 // 		!function() {
@@ -524,8 +497,11 @@
 // 			t.parentNode.insertBefore(e, t)
 // 		}();
 	</script>
+	<script src="js/bootstrap/jquery.min.js"></script>
 	<script type="text/javascript">
-		$(function() {
+	$("#top").load("top.html");
+	$("#footer").load("footer.html");
+	$(function() {
 			$('.hot_list .hot_gamebox').hotlist();
 			updateVido();
 		})
@@ -537,8 +513,11 @@
 			}
 			_this.parent().hide();
 		}
+				
 	</script>
 	<script type="text/javascript">
+	
+
 		function openPop(popID) {
 			closePop();
 

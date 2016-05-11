@@ -12,7 +12,7 @@
 <%
 	CheckLoad check = new CheckLoad();
 	if(!check.JudgeIsMoblie(request)){
-		response.sendRedirect("main.jsp");
+		response.sendRedirect("../index.jsp");
 	}
 	Connection con = null;
 	PreparedStatement ps = null;

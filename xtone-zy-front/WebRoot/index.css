@@ -309,6 +309,24 @@ html,body {
 	background:url(img/load/btn_download_android.png) no-repeat;
 	text-indent:-9999em
 }
+.download--qq1 {
+	position:absolute;
+	top:136px;
+	left:135px;
+	width:189px;
+	height:55px;
+    
+	text-indent:-9999em
+}
+.download--qq2 {
+	position:absolute;
+	top:136px;
+	left:190px;
+	width:189px;
+	height:55px;
+	
+	text-indent:-9999em
+}
 .btn-video {
 	position:absolute;
 	top:11px;
