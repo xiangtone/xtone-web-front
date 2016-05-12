@@ -102,13 +102,14 @@
 <body class="bs-docs-home">
 	<header class="navbar navbar-static-top bs-docs-nav" id="top"
 		role="banner">
+		<jsp:include page="top.html"></jsp:include>
 	</header>
 	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/news/banner-news.jpg" class="bsimg"></div>
 	<div class="bs-docs-featurette" style="background: #f1f1f1">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-sm-12 col-xs-12 nopadding">
-					<a href="new.html"><img src="images/news/news.png"
+					<a href="news.jsp"><img src="images/news/news.png"
 						class="bsimg tab"></a>
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12 content-top ztgs">
@@ -144,7 +145,7 @@
 <!-- 	<script>var _gauges=_gauges||[];!function(){var e=document.createElement("script");e.async=!0,e.id="gauges-tracker",e.setAttribute("data-site-id","4f0dc9fef5a1f55508000013"),e.src="//secure.gaug.es/track.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();</script> -->
 	<script type="text/javascript">
 
-	$("#top").load("top.html");
+// 	$("#top").load("top.html");
 	$("#footer").load("footer.html");
 	$(function(){
 		apendDiv();

@@ -165,7 +165,7 @@ color: #aaaaaa;
 						class="bsimg tab"></a>
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
-					<a href="join-us-contact.html"><img src="images/about-us/lxwm1.jpg"
+					<a href="join-us-contact.jsp"><img src="images/about-us/lxwm1.jpg"
 						class="bsimg tab"></a>
 				</div>
 				<%for(Content job:list){%>	

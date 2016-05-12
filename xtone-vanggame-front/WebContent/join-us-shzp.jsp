@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -88,17 +89,18 @@ color: #aaaaaa;
 <body class="bs-docs-home">
 	<header class="navbar navbar-static-top bs-docs-nav" id="top"
 		role="banner">
+		<jsp:include page="top.html"></jsp:include>
 	</header>
 	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/about-us/banner_about.jpg" class="bsimg"></div>
 	<div class="bs-docs-featurette" style="background: #f1f1f1">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
-					<a href="join-us-shzp.html"><img src="images/about-us/shzp2.png"
+					<a href="join-us-shzp.jsp"><img src="images/about-us/shzp2.png"
 						class="bsimg tab"></a>
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
-					<a href="join-us-contact.html"><img src="images/about-us/lxwm1.jpg"
+					<a href="join-us-contact.jsp"><img src="images/about-us/lxwm1.jpg"
 						class="bsimg tab"></a>
 				</div>
 <!-- 				<div class="col-md-12 col-sm-12 col-xs-12 content ztgs"> -->
@@ -221,14 +223,8 @@ color: #aaaaaa;
 	
 	<script	src="js/bootstrap/jquery.min.js"></script>
 	<script type="text/javascript">
-		$("#top").load("top.html");
+// 		$("#top").load("top.html");
 		$("#footer").load("footer.html");
-		$(document).ready(function(){ 
-			$("#join").click(function () { 
-				$("#join").addClass("active");
-				alert("sususu");
-			});
-		}); 
 		 
 	</script>
 <!-- 	<script>var _gauges=_gauges||[];!function(){var e=document.createElement("script");e.async=!0,e.id="gauges-tracker",e.setAttribute("data-site-id","4f0dc9fef5a1f55508000013"),e.src="//secure.gaug.es/track.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();</script> -->

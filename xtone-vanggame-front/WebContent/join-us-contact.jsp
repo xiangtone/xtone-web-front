@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -9,7 +10,7 @@
 <meta name="keywords"
 	content="万家游戏，万家，游戏，手游，商务，合作，招聘，发行，vanggame,VANGGAME，手机游戏，网页游戏">
 <meta name="author" content="Shirp" />
-<title>万家游戏-关于万家</title>
+<title>万家游戏-关于我们</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/docs.min.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -67,6 +68,12 @@ color: #aaaaaa;
 	margin: 0;
 }
 
+.content{
+	background: #fff;
+	margin-top: 25px;
+	padding: 15px 100px 15px 100px;
+}
+
 .titleimg{
 	float: left;
     padding-top: 10px;
@@ -78,45 +85,34 @@ color: #aaaaaa;
 <body class="bs-docs-home">
 	<header class="navbar navbar-static-top bs-docs-nav" id="top"
 		role="banner">
+		<jsp:include page="top.html"></jsp:include>
 	</header>
-	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/about/banner-about.jpg" class="bsimg"></div>
+	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/about-us/banner_about.jpg" class="bsimg"></div>
 	<div class="bs-docs-featurette" style="background: #f1f1f1">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
-					<a href="about-us-company.html"><img src="images/about/gsjs1.jpg"
+					<a href="join-us-shzp.jsp"><img src="images/about-us/shzp1.png"
 						class="bsimg tab"></a>
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
-					<a href="#"><img src="images/about/qywh2.jpg"
+					<a href="#"><img src="images/about-us/lxwm2.jpg"
 						class="bsimg tab"></a>
 				</div>
-				<div class="col-md-12 col-sm-12 col-xs-12 nopadding">
-					<img src="images/about/logo.jpg" class="bsimg" style="margin-bottom: 30px;">
+				<div class="col-md-12 col-sm-12 col-xs-12 nopadding bottom-hieght">					
+						<img src="images/about-us/map.png" class="bsimg" style="padding-top: 100px;padding-bottom: 103px;background: #fff;">
 				</div>
-				<div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12 ">
-					
-					<div class="artText ztgs" style="background: #f1f1f1;">
-						<p style="line-height: 1.5;" class="content-size">
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>企业愿景</strong>：成为全球领先的移动游戏平台<br><br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>品牌理念</strong>：玩家至上<br><br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>品牌主张</strong>：万家出品 汇聚精品<br><br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>品牌优势</strong>：专注、高效、富有创造力<br><br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>提供价值</strong>：提供高品质游戏，让全球用户愉悦的享受游戏
-					</div>
-<!-- <img src="images/content/qywh.png" class="bsimg"> -->
-				</div>
-				<div class="col-md-12 col-sm-12 col-xs-12 bottom-hieght"></div>
 			</div>
 		</div>	
 	</div>
+	
 	<footer class="bs-docs-footer" role="contentinfo">
 		<div id="footer"></div>
 	</footer>
 	
 	<script	src="js/bootstrap/jquery.min.js"></script>
 	<script type="text/javascript">
-		$("#top").load("top.html");
+// 		$("#top").load("top.html");
 		$("#footer").load("footer.html");
 	</script>
 <!-- 	<script>var _gauges=_gauges||[];!function(){var e=document.createElement("script");e.async=!0,e.id="gauges-tracker",e.setAttribute("data-site-id","4f0dc9fef5a1f55508000013"),e.src="//secure.gaug.es/track.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();</script> -->
