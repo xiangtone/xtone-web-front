@@ -161,7 +161,7 @@
 		role="banner">
 		<jsp:include page="top.html"></jsp:include>
 	</header>
-	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/news/banner-news.jpg" class="bsimg"></div>
+	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/news/banner_news.jpg" class="bsimg"></div>
 	<div class="bs-docs-featurette" style="background: #f1f1f1">
 		<div class="container">
 			<div class="row ztgs">
