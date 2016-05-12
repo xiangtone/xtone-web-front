@@ -249,8 +249,8 @@
 	<div class="download" style="margin-left:-50.5%;margin-top:170px;z-index:10111;">
 	  <!-- <img  src="../img/main/code_main.jpg" width="125" height="124" alt="神魔传奇" style="margin-top: 23px;margin-left: 4px;"> -->
 	  <img src="img/newmain/erweima.PNG" width="203" height="167" alt="捉妖友人帐" style="margin-top: -15px; margin-left: 16px;"/>
-	  <a class="download--ios" id="ios"  href="javascript:;" rel="nofollow">App Store下载</a>
-	  <a class="download--android" id="android"  href="javascript:;" title="">安卓下载</a>
+	  <a class="download--ios" id="ios"  href="https://itunes.apple.com/cn/app/zhuo-yao-you-ren-zhang-2016zui/id1055284673?l=en&mt=8">App Store下载</a>
+	  <a class="download--android" id="android"  href="http://zy-src.xtonegame.com/%E6%8D%89%E5%A6%96%E5%8F%8B%E4%BA%BA%E5%B8%90_Puzzleblast.apk" title="">安卓下载</a>
 	  <!--epart end-->
 	  
 	   <a  class="download--qq1" id="qq1" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2442386648&site=qq&menu=yes"><img  border="0" src="img/newmain/btn_qq1.png" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
@@ -629,7 +629,7 @@ function openVideo(){
  function mutilChannel(){
     //多渠道处理
     var url = window.location.href,
-        $iosBtn = $(".download--ios"),
+//         $iosBtn = $(".download--ios"),
         $androidBtn = $(".download-android"),
         $codeImg = $(".download-qrcode"),
         ua = window.navigator.userAgent,
@@ -637,7 +637,7 @@ function openVideo(){
 
     if(/fab/.test(url)){
         //fab
-        $iosBtn.attr("href","javascript:alert('敬请期待！');");
+//         $iosBtn.attr("href","javascript:alert('敬请期待！');");
         $androidBtn.attr("href","javascript:alert('安卓没的下！');");
         $codeImg.attr("src","");
 
@@ -647,7 +647,7 @@ function openVideo(){
 
     }else if(/shenma/.test(url)){
         //神马
-        $iosBtn.attr("href","javascript:alert('敬请期待！');");
+//         $iosBtn.attr("href","javascript:alert('敬请期待！');");
         $androidBtn.attr("href","javascript:alert('安卓没的下！');");
         $codeImg.attr("src","./qrcode_9536f25.png");
 
@@ -657,7 +657,7 @@ function openVideo(){
 
     }else if(/baidu/.test(url)){
         //百度sem
-        $iosBtn.attr("href","javascript:alert('敬请期待！');");
+//         $iosBtn.attr("href","javascript:alert('敬请期待！');");
         $androidBtn.attr("href","javascript:alert('安卓没的下！');");
         $codeImg.attr("src","./qrcode_9536f25.png");
 
@@ -667,7 +667,7 @@ function openVideo(){
 
     }else if(/pinpai/.test(url)){
     	//百度品牌
-        $iosBtn.attr("href","javascript:alert('敬请期待！');");
+//         $iosBtn.attr("href","javascript:alert('敬请期待！');");
         $androidBtn.attr("href","javascript:alert('安卓没的下！');");
         $codeImg.attr("src","./qrcode_9536f25.png");
 
@@ -677,7 +677,7 @@ function openVideo(){
 
     }else if(/weix/.test(url)){
     	//微信
-        $iosBtn.attr("href","javascript:alert('敬请期待！');");
+//         $iosBtn.attr("href","javascript:alert('敬请期待！');");
         $androidBtn.attr("href","javascript:alert('安卓没的下！');");
         $codeImg.attr("src","./qrcode_9536f25.png");
 
@@ -687,7 +687,7 @@ function openVideo(){
 
     }else if(/tieb/.test(url)){
     	//贴吧
-        $iosBtn.attr("href","javascript:alert('敬请期待！');");
+//         $iosBtn.attr("href","javascript:alert('敬请期待！');");
         $androidBtn.attr("href","javascript:alert('安卓没的下！');");
         $codeImg.attr("src","./qrcode_9536f25.png");
 
@@ -697,7 +697,7 @@ function openVideo(){
 
     }else if(/weib/.test(url)){
     	//微博
-        $iosBtn.attr("href","javascript:alert('敬请期待！');");
+//         $iosBtn.attr("href","javascript:alert('敬请期待！');");
         $androidBtn.attr("href","javascript:alert('安卓没的下！');");
         $codeImg.attr("src","./qrcode_9536f25.png");
 
@@ -707,7 +707,7 @@ function openVideo(){
 
     }else{
         //官网
-        $iosBtn.attr("href","javascript:alert('敬请期待！');");
+//         $iosBtn.attr("href","javascript:alert('敬请期待！');");
         $androidBtn.attr("href","javascript:alert('安卓没的下！');");
         $codeImg.attr("src","");
     }
