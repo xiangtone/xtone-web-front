@@ -10,7 +10,7 @@ public class Content {
 	private int status;
 	private Long authorId;
 	private String authorName;
-	private Long addTime;
+	private Long addTime;                   
 	private Long lastModifyId;
 	private String lastModifyName;
 	private Long lastModifyTime;
