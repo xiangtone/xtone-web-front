@@ -125,7 +125,8 @@
 		.test-top{height: 55px;background: #FBFBFB none repeat scroll 0% 0%;}
 		#NIE-topBar *, #NIE-topBar-include * {font-size: 12px;font-style: normal;}
 		.test-top-main {position: relative;z-index: 9999;width: 1165px;margin: auto;}
-		.test-top-logo {width: 412px;height: 232px;display: block;float: left;margin-top: 37px;margin-left: -10%;background: transparent url(../img/newmain/top_corp.PNG) no-repeat scroll 0% 0%;}
+/* 		.test-top-logo {width: 412px;height: 232px;display: block;float: left;margin-top: 37px;margin-left: -10%;background: transparent url(../img/newmain/top_corp.PNG) no-repeat scroll 0% 0%;} */
+		.test-top-logo {width: 28.5%;height: 232px;display: block;float: left;margin-top: 37px;margin-left: -10%;background: transparent url(../img/newmain/top_corp.PNG) no-repeat scroll  0% 0%; background-size:100%;}
 		.test-topBar-mid {z-index: 12;right: 230px;width: 536px;position: absolute;text-align:right;-font-size: 12px;font-style: normal;line-height: 52px;-color: #333;-transition: background 0.33s ease-in-out 0s;}
 		.test-topBar-mid a{line-height: 52px;color: #333;transition: background 0.33s ease-in-out 0s;display: inline-block;padding: 0px 12px;text-decoration: none;}
 		.test-foot{font-size: 12px;text-decoration: none;color: #A0A0A0;padding: 35px 0px 60px;}
@@ -179,7 +180,7 @@
  <div class="test-top-main" id="NIE-topBar-main">
         <a class="test-top-logo" href="#" ></a>
       </div>
-    <div class="wrap" style="    background: transparent url(../img/news/bg.png) no-repeat scroll center 0px;">
+    <div class="wrap" style="    background: transparent url(../img/news/bg.png) no-repeat scroll center 0px;background-size:100%;">
         <div class="right-wrap">
             <div class="content-wrap" style="margin-left: 0%;">
                  <div style="background: url(../img/news/title_bg.png) 0% 0px no-repeat;top: -25.3%; left: -2%; width: 103%; height: 353px; z-index: 100; float: left; margin-top: -22%; margin-left: -2.6% ! important;"></div>  

@@ -97,7 +97,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
-<title>《捉妖人友帐》年度最二次元Q萌消除手游</title>
+<title>《捉妖友人帐》年度最二次元Q萌消除手游</title>
 <meta name="keywords" content="二次元,Q萌,捉妖">
 <meta name="description" content="超人气暖心动画，夏目友人帐100%;min-width:1500px;原著改编，2016必玩TOP级三消手游《捉妖友人帐》，引爆二次元捉妖大作战！小清新童话地图，数百收妖关卡，迷之三消玩法，上手简单，萌趣烧脑根本把持不住！现在就和萌萝莉千寻还有傲娇的娘口三三一起前往奇幻的妖界，打败女妖BOSS、收集调皮鬼小妖怪做式神，踏上最有妖气的消除之旅吧喵~ \(≧ω≦)/">
 <meta name="author" content="捉妖人友帐.">
@@ -249,8 +249,8 @@
 	<div class="download" style="margin-left:-50.5%;margin-top:170px;z-index:10111;">
 	  <!-- <img  src="../img/main/code_main.jpg" width="125" height="124" alt="神魔传奇" style="margin-top: 23px;margin-left: 4px;"> -->
 	  <img src="img/newmain/erweima.PNG" width="203" height="167" alt="捉妖友人帐" style="margin-top: -15px; margin-left: 16px;"/>
-	  <a class="download--ios" id="ios"  href="javascript:;" rel="nofollow">App Store下载</a>
-	  <a class="download--android" id="android"  href="javascript:;" title="">安卓下载</a>
+	  <a class="download--ios" id="ios"  href="https://itunes.apple.com/cn/app/zhuo-yao-you-ren-zhang-2016zui/id1055284673?l=en&mt=8">App Store下载</a>
+	  <a class="download--android" id="android"  href="http://zy-src.xtonegame.com/%E6%8D%89%E5%A6%96%E5%8F%8B%E4%BA%BA%E5%B8%90_Puzzleblast.apk" title="">安卓下载</a>
 	  <!--epart end-->
 	  
 	   <a  class="download--qq1" id="qq1" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2442386648&site=qq&menu=yes"><img  border="0" src="img/newmain/btn_qq1.png" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
@@ -529,7 +529,7 @@
 		<span style="text-align:left;display:inline-block;padding-left:6px;">
 			<span id="ncp-l1">
 				万家游戏版权所有 Copyright@2016 中国网络游戏版权保护联盟举报中心 闽南B2-20040096-20&nbsp;&nbsp;&nbsp;&nbsp;
-			</span><a style="background: transparent url('img/main/corp2.png') no-repeat scroll 0% 0%;width: 107px;height: 20px;display: inline-block;"></a><br>
+			</span><a style="cursor: pointer;background: transparent url('img/main/corp2.png') no-repeat scroll 0% 0%;width: 107px;height: 20px;display: inline-block;"></a><br>
 			<span id="ncp-l2">健康游戏忠告：抵制不良游戏&nbsp;拒绝盗版游戏&nbsp;注意自我保护&nbsp;谨防受骗上当&nbsp;适度游戏益脑&nbsp;沉迷游戏伤身&nbsp;合理安排时间&nbsp;享受健康生活
     		</span><br></span>
 	</p>
@@ -629,7 +629,7 @@ function openVideo(){
  function mutilChannel(){
     //多渠道处理
     var url = window.location.href,
-        $iosBtn = $(".download--ios"),
+//         $iosBtn = $(".download--ios"),
         $androidBtn = $(".download-android"),
         $codeImg = $(".download-qrcode"),
         ua = window.navigator.userAgent,
@@ -637,7 +637,7 @@ function openVideo(){
 
     if(/fab/.test(url)){
         //fab
-        $iosBtn.attr("href","javascript:alert('敬请期待！');");
+//         $iosBtn.attr("href","javascript:alert('敬请期待！');");
         $androidBtn.attr("href","javascript:alert('安卓没的下！');");
         $codeImg.attr("src","");
 
@@ -647,7 +647,7 @@ function openVideo(){
 
     }else if(/shenma/.test(url)){
         //神马
-        $iosBtn.attr("href","javascript:alert('敬请期待！');");
+//         $iosBtn.attr("href","javascript:alert('敬请期待！');");
         $androidBtn.attr("href","javascript:alert('安卓没的下！');");
         $codeImg.attr("src","./qrcode_9536f25.png");
 
@@ -657,7 +657,7 @@ function openVideo(){
 
     }else if(/baidu/.test(url)){
         //百度sem
-        $iosBtn.attr("href","javascript:alert('敬请期待！');");
+//         $iosBtn.attr("href","javascript:alert('敬请期待！');");
         $androidBtn.attr("href","javascript:alert('安卓没的下！');");
         $codeImg.attr("src","./qrcode_9536f25.png");
 
@@ -667,7 +667,7 @@ function openVideo(){
 
     }else if(/pinpai/.test(url)){
     	//百度品牌
-        $iosBtn.attr("href","javascript:alert('敬请期待！');");
+//         $iosBtn.attr("href","javascript:alert('敬请期待！');");
         $androidBtn.attr("href","javascript:alert('安卓没的下！');");
         $codeImg.attr("src","./qrcode_9536f25.png");
 
@@ -677,7 +677,7 @@ function openVideo(){
 
     }else if(/weix/.test(url)){
     	//微信
-        $iosBtn.attr("href","javascript:alert('敬请期待！');");
+//         $iosBtn.attr("href","javascript:alert('敬请期待！');");
         $androidBtn.attr("href","javascript:alert('安卓没的下！');");
         $codeImg.attr("src","./qrcode_9536f25.png");
 
@@ -687,7 +687,7 @@ function openVideo(){
 
     }else if(/tieb/.test(url)){
     	//贴吧
-        $iosBtn.attr("href","javascript:alert('敬请期待！');");
+//         $iosBtn.attr("href","javascript:alert('敬请期待！');");
         $androidBtn.attr("href","javascript:alert('安卓没的下！');");
         $codeImg.attr("src","./qrcode_9536f25.png");
 
@@ -697,7 +697,7 @@ function openVideo(){
 
     }else if(/weib/.test(url)){
     	//微博
-        $iosBtn.attr("href","javascript:alert('敬请期待！');");
+//         $iosBtn.attr("href","javascript:alert('敬请期待！');");
         $androidBtn.attr("href","javascript:alert('安卓没的下！');");
         $codeImg.attr("src","./qrcode_9536f25.png");
 
@@ -707,7 +707,7 @@ function openVideo(){
 
     }else{
         //官网
-        $iosBtn.attr("href","javascript:alert('敬请期待！');");
+//         $iosBtn.attr("href","javascript:alert('敬请期待！');");
         $androidBtn.attr("href","javascript:alert('安卓没的下！');");
         $codeImg.attr("src","");
     }

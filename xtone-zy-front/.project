@@ -3,7 +3,7 @@
 	<name>xtone-front-zy</name>
 	<comment></comment>
 	<projects>
-		<project>xtone-java-common</project>
+		<project>xtone-common</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
