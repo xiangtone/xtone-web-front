@@ -144,7 +144,7 @@
 				<runtime.env>config\zywebsite</runtime.env>
 				<final.name>zy.xtonegame.com</final.name>
 				<ftp.server.id>HYServer</ftp.server.id>
-				<ftp.to.url>ftp://121.40.137.243/swap_dir/</ftp.to.url>
+				<ftp.to.url>ftp://121.40.137.243/tomcat_9010/swap_dir/</ftp.to.url>
 			</properties>
 		</profile>
 	</profiles>
