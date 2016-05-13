@@ -86,14 +86,18 @@ color: #aaaaaa;
 	<div class="bs-docs-featurette" style="background: #f1f1f1">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
-					<a href="#"><img src="images/about/gsjs2.jpg"
+				<div class="col-md-12 col-sm-12 col-xs-12 nopadding"> -->
+					<a href="#"><img src="images/about/gsjs.jpg"
 						class="bsimg tab"></a>
 				</div>
-				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
-					<a href="about-us-enterprise.jsp"><img src="images/about/qywh1.jpg"
-						class="bsimg tab"></a>
-				</div>
+<!-- 				<div class="col-md-6 col-sm-6 col-xs-6 nopadding"> -->
+<!-- 					<a href="#"><img src="images/about/gsjs2.jpg" -->
+<!-- 						class="bsimg tab"></a> -->
+<!-- 				</div> -->
+<!-- 				<div class="col-md-6 col-sm-6 col-xs-6 nopadding"> -->
+<!-- 					<a href="about-us-enterprise.jsp"><img src="images/about/qywh1.jpg" -->
+<!-- 						class="bsimg tab"></a> -->
+<!-- 				</div> -->
 				<div class="col-md-12 col-sm-12 col-xs-12 nopadding">
 					<img src="images/about/logo.jpg" class="bsimg" style="margin-bottom: 30px;">
 				</div>

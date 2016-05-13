@@ -477,7 +477,8 @@
 <!-- 						<div class="tt20"><a href="http://fsz.ganwan.com/" class="links" target="_blank">封神战</a>&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
 <!-- 						<div class="tt20"><a href="http://www.ljy0.com/home.html" class="links" target="_blank">零纪元</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>	 -->
 <!-- 						<div class="tt20"><a href="http://mmd.xtonegame.com/" class="links" target="_blank">电视萌萌答</a>&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
-						<div class="tt20"><a href="http://jdtw.xtonegame.com/" class="links" target="_blank">绝地逃亡</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>		
+						<div class="tt20"><a href="http://jdtw.xtonegame.com/" class="links" target="_blank">绝地逃亡</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a href="http://zy.xtonegame.com/" class="links" target="_blank">捉妖友人帐</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 					</div>
 					
 				</div>
