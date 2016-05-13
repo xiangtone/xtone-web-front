@@ -362,7 +362,7 @@
 										src="images/index/350x290_3.jpg" class="bsimg" alt="Third game"></a>
 									<div class="hot_yt hot_yt_sw ztgs">
 										<h4 class="hot_yt_left">《捉妖友人帐》</h4>
-										<h4 class="hot_yt_right">三消</h4>
+										<h4 class="hot_yt_right">休闲三消</h4>
 									</div>
 									<!-- 								<div class="hot_mark" align="center"> -->
 									<!-- 									<dl class="c" style="box-sizing: content-box"> -->
@@ -470,11 +470,11 @@
 						<div class="tt20"><a href="http://www.pvc123.com/b-pxtonewinnie/" class="links"	target="_blank">深圳市创世互动科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp; </div>
 						<div class="tt20"><a href="http://www.m-time.com/" class="links" target="_blank">深圳市浩天投资有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a href="http://dmx.xtonegame.com" class="links" target="_blank">口袋大冒险</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a href="http://lznh.cooguo.com/" class="links" target="_blank">龙之怒吼</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a href="http://smzg.xtonegame.com/" class="links" target="_blank">神魔战歌</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a href="http://fsz.ganwan.com/" class="links" target="_blank">封神战</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a href="http://www.ljy0.com/home.html" class="links" target="_blank">零纪元</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>	
-						<div class="tt20"><a href="http://mmd.xtonegame.com/" class="links" target="_blank">电视萌萌答</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<!-- 						<div class="tt20"><a href="http://lznh.cooguo.com/" class="links" target="_blank">龙之怒吼</a>&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
+<!-- 						<div class="tt20"><a href="http://smzg.xtonegame.com/" class="links" target="_blank">神魔战歌</a>&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
+<!-- 						<div class="tt20"><a href="http://fsz.ganwan.com/" class="links" target="_blank">封神战</a>&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
+<!-- 						<div class="tt20"><a href="http://www.ljy0.com/home.html" class="links" target="_blank">零纪元</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>	 -->
+<!-- 						<div class="tt20"><a href="http://mmd.xtonegame.com/" class="links" target="_blank">电视萌萌答</a>&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
 						<div class="tt20"><a href="http://jdtw.xtonegame.com/" class="links" target="_blank">绝地逃亡</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>		
 					</div>
 					
