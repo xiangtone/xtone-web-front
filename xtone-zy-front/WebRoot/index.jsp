@@ -250,7 +250,7 @@
 	  <!-- <img  src="../img/main/code_main.jpg" width="125" height="124" alt="神魔传奇" style="margin-top: 23px;margin-left: 4px;"> -->
 	  <img src="img/newmain/erweima.PNG" width="203" height="167" alt="捉妖友人帐" style="margin-top: -15px; margin-left: 16px;"/>
 	  <a class="download--ios" id="ios"  href="https://itunes.apple.com/cn/app/zhuo-yao-you-ren-zhang-2016zui/id1055284673?l=en&mt=8">App Store下载</a>
-	  <a class="download--android" id="android"  href="http://zy-src.xtonegame.com/%E6%8D%89%E5%A6%96%E5%8F%8B%E4%BA%BA%E5%B8%90_Puzzleblast.apk" title="">安卓下载</a>
+	  <a class="download--android" id="android"  href="http://cdnsrc.xtonegame.com/download/zyyrz/Puzzleblast160513_02.apk" title="">安卓下载</a>
 	  <!--epart end-->
 	  
 	   <a  class="download--qq1" id="qq1" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2442386648&site=qq&menu=yes"><img  border="0" src="img/newmain/btn_qq1.png" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
@@ -528,8 +528,8 @@
 	<p style="width:100%;min-width:1500px;;text-align:center;margin:0 auto;padding:15px 0 0 0;font-size:12px;font-family:&#39;宋体&#39;;line-height:20px;display:block;position:relative;">
 		<span style="text-align:left;display:inline-block;padding-left:6px;">
 			<span id="ncp-l1">
-				万家游戏版权所有 Copyright@2016 中国网络游戏版权保护联盟举报中心 闽南B2-20040096-20&nbsp;&nbsp;&nbsp;&nbsp;
-			</span><a style="cursor: pointer;background: transparent url('img/main/corp2.png') no-repeat scroll 0% 0%;width: 107px;height: 20px;display: inline-block;"></a><br>
+				万家游戏版权所有 Copyright@2016 中国网络游戏版权保护联盟举报中心</span><a href="http://www.miitbeian.gov.cn/"> 闽南B2-20040096-20</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;<a style="cursor: pointer;background: transparent url('img/main/corp2.png') no-repeat scroll 0% 0%;width: 107px;height: 20px;display: inline-block;"></a><br>
 			<span id="ncp-l2">健康游戏忠告：抵制不良游戏&nbsp;拒绝盗版游戏&nbsp;注意自我保护&nbsp;谨防受骗上当&nbsp;适度游戏益脑&nbsp;沉迷游戏伤身&nbsp;合理安排时间&nbsp;享受健康生活
     		</span><br></span>
 	</p>
