@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="mxkl-web">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main"/>
+        <wb-resource deploy-path="/" source-path="/WebRoot"/>
+        <dependent-module archiveName="xtone-java-common.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/xtone-common/xtone-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="mxkl-web"/>
+        <property name="java-output-path" value="/mxkl-web/target/classes"/>
+    </wb-module>
+</project-modules>
