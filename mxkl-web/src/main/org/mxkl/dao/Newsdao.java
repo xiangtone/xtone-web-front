@@ -11,15 +11,15 @@ import org.common.util.ConnectionService;
 import org.mxkl.bean.Newsbean;
 
 public class Newsdao {
-private static Connection con;
+private static Connection con = ConnectionService.getInstance().getConnectionForLocal();
 private static Newsbean newsbean;
 private static ArrayList<Newsbean> list;
 private static PreparedStatement pre;
 private static String sql;
 private static ResultSet result;
 public static List<Newsbean> selectAll(){
-	con = ConnectionService.getInstance().getConnectionForLocal();
-	sql = "select * from tbl_cms_contents";
+	
+	sql = "select * from tbl_cms_contents where catalog like 'mxkl_%'";
 	list = new ArrayList<Newsbean>();
 	try {
 		pre = con.prepareStatement(sql);
@@ -32,12 +32,42 @@ public static List<Newsbean> selectAll(){
 			newsbean.setCatalog(result.getString("catalog"));
 			newsbean.setContent(result.getString("content"));
 			list.add(newsbean);
-			
+			 
 		}
+		result.close();
 	} catch (SQLException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
+  
 	return list;
+	
+}
+public static Newsbean selectByid(int id){
+	
+	sql = "select * from tbl_cms_contents where id=?";
+	
+	try {
+		pre = con.prepareStatement(sql);
+		pre.setInt(1, id);
+		System.out.println(pre);
+		result = pre.executeQuery();
+		 if(result.next()){
+			newsbean = new Newsbean();
+			newsbean.setId(result.getInt("id"));
+			newsbean.setTitle(result.getString("title"));
+			newsbean.setAddTime(result.getLong("lastModifyTime"));
+			newsbean.setCatalog(result.getString("catalog"));
+			newsbean.setContent(result.getString("content"));
+		 }
+			result.close();
+		
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+return newsbean;
+	
+	
 }
 }

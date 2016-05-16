@@ -112,22 +112,22 @@
         <a href="http://www.18183.com/sitemap.html" style="display:none">站点地图</a>
         <span>频道</span>
     </div>
-    <div class="nav">
-        <ul class="n_c">
-            <li><a href="http://m.18183.com/xin">新游</a></li>
-            <li><a href="http://bbs.18183.com/">论坛</a></li>
-            <li><a href="http://ka.18183.com/">礼包</a></li>
-            <li><a href="http://m.18183.com/yy">娱乐</a></li>
-            <li><a href="http://m.18183.com/chanye">产业</a></li>
-        </ul>
-        <ul class="n_c">
-            <li><a href="http://bbs.18183.com/shop">商场</a></li>
-            <li><a href="http://hd.18183.com/">活动</a></li>
-            <li><a href="http://m.18183.com/android">安卓</a></li>
-            <li><a href="http://m.18183.com/iphone">iOS</a></li>
-            <li><a href="http://m.18183.com/zhuangqu.html">专区</a></li>
-        </ul>
-    </div>
+<!--     <div class="nav"> -->
+<!--         <ul class="n_c"> -->
+<!--             <li><a href="http://m.18183.com/xin">新游</a></li> -->
+<!--             <li><a href="http://bbs.18183.com/">论坛</a></li> -->
+<!--             <li><a href="http://ka.18183.com/">礼包</a></li> -->
+<!--             <li><a href="http://m.18183.com/yy">娱乐</a></li> -->
+<!--             <li><a href="http://m.18183.com/chanye">产业</a></li> -->
+<!--         </ul> -->
+<!--         <ul class="n_c"> -->
+<!--             <li><a href="http://bbs.18183.com/shop">商场</a></li> -->
+<!--             <li><a href="http://hd.18183.com/">活动</a></li> -->
+<!--             <li><a href="http://m.18183.com/android">安卓</a></li> -->
+<!--             <li><a href="http://m.18183.com/iphone">iOS</a></li> -->
+<!--             <li><a href="http://m.18183.com/zhuangqu.html">专区</a></li> -->
+<!--         </ul> -->
+<!--     </div> -->
 </nav>
 <script>newhanawa.createAdBanner("topwap",2);</script>
 </header>
