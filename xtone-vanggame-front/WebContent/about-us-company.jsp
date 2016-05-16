@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +11,7 @@
 <meta name="keywords"
 	content="万家游戏，万家，游戏，手游，商务，合作，招聘，发行，vanggame,VANGGAME，手机游戏，网页游戏">
 <meta name="author" content="Shirp" />
-<title>万家游戏-关于我们</title>
+<title>万家游戏-关于万家</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/docs.min.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -67,12 +69,6 @@ color: #aaaaaa;
 	margin: 0;
 }
 
-.content{
-	background: #fff;
-	margin-top: 25px;
-	padding: 15px 100px 15px 100px;
-}
-
 .titleimg{
 	float: left;
     padding-top: 10px;
@@ -84,33 +80,50 @@ color: #aaaaaa;
 <body class="bs-docs-home">
 	<header class="navbar navbar-static-top bs-docs-nav" id="top"
 		role="banner">
+		<jsp:include page="top.html"></jsp:include>
 	</header>
-	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/about-us/banner_about.jpg" class="bsimg"></div>
+	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/about/banner_vanggame.jpg" class="bsimg"></div>
 	<div class="bs-docs-featurette" style="background: #f1f1f1">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
-					<a href="join-us-position.jsp"><img src="images/about-us/shzp1.png"
+				<div class="col-md-12 col-sm-12 col-xs-12 nopadding"> -->
+					<a href="#"><img src="images/about/gsjs.jpg"
 						class="bsimg tab"></a>
 				</div>
-				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
-					<a href="#"><img src="images/about-us/lxwm2.jpg"
-						class="bsimg tab"></a>
+<!-- 				<div class="col-md-6 col-sm-6 col-xs-6 nopadding"> -->
+<!-- 					<a href="#"><img src="images/about/gsjs2.jpg" -->
+<!-- 						class="bsimg tab"></a> -->
+<!-- 				</div> -->
+<!-- 				<div class="col-md-6 col-sm-6 col-xs-6 nopadding"> -->
+<!-- 					<a href="about-us-enterprise.jsp"><img src="images/about/qywh1.jpg" -->
+<!-- 						class="bsimg tab"></a> -->
+<!-- 				</div> -->
+				<div class="col-md-12 col-sm-12 col-xs-12 nopadding">
+					<img src="images/about/logo.jpg" class="bsimg" style="margin-bottom: 30px;">
 				</div>
-				<div class="col-md-12 col-sm-12 col-xs-12 nopadding bottom-hieght">					
-						<img src="images/about-us/map.png" class="bsimg" style="padding-top: 100px;padding-bottom: 103px;background: #fff;">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="artText ztgs" style="background: #f1f1f1;">
+						<p style="line-height: 1.5;" class="content-size">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;万家游戏是浙江万好万家文化股份有限公司（简称：万家文化，股票代码：600576）旗下全资子公司，万家游戏是万家文化在移动互联网和文化领域的核心战略产业布局，公司成立于2015年11月，总部设在杭州，并在北京、上海、深圳等地设有分公司。<br><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;万家游戏专注精品移动游戏的研发和发行业务，汇聚全球精品游戏，为全球游戏玩家提供高品质的移动游戏，致力成为全球顶尖的移动游戏开发商与发行商，打造全球玩家热爱的游戏品牌。<br><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;万家游戏着重在IP挖掘开发、CP深度合作方面拓展，拥有成龙、范冰冰同名大电影《绝地逃亡》等强势IP资源，全面打造影视、动漫、文学、综艺等影游IP资源互动的泛娱乐产业链。<br><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;万家游戏的产品和运营核心团队均来自腾讯、网易、新浪等知名互联网公司，核心团队均拥有8年以上的知名互联网公司从业经验，在产品发行、游戏运营、商务合作和市场推广方面拥有成熟丰富的经验。<br><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“专注、高效、且富有创造力”是我们引以自豪的企业价值观，坚持“用户第一”的理念，为游戏玩家提供高品质的移动游戏，持续创新，提升玩家体验，我们的愿景是汇聚全球精品游戏，坚持精细化的运营理念，成为深受玩家喜爱的国际化品牌游戏运营商。		
+					</div>
+<!-- 						<img src="images/content/gsjs.png" class="bsimg"> -->
 				</div>
+				<div class="col-md-12 col-sm-12 col-xs-12 bottom-hieght"></div>
 			</div>
 		</div>	
 	</div>
-	
 	<footer class="bs-docs-footer" role="contentinfo">
 		<div id="footer"></div>
 	</footer>
 	
 	<script	src="js/bootstrap/jquery.min.js"></script>
+
 	<script type="text/javascript">
-		$("#top").load("top.html");
+// 		$("#top").load("top.html");
 		$("#footer").load("footer.html");
 	</script>
 <!-- 	<script>var _gauges=_gauges||[];!function(){var e=document.createElement("script");e.async=!0,e.id="gauges-tracker",e.setAttribute("data-site-id","4f0dc9fef5a1f55508000013"),e.src="//secure.gaug.es/track.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();</script> -->

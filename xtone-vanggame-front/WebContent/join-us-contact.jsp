@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -9,7 +10,7 @@
 <meta name="keywords"
 	content="万家游戏，万家，游戏，手游，商务，合作，招聘，发行，vanggame,VANGGAME，手机游戏，网页游戏">
 <meta name="author" content="Shirp" />
-<title>万家游戏-旗下产品</title>
+<title>万家游戏-关于我们</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/docs.min.css" rel="stylesheet">
 <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -62,105 +63,58 @@ color: #aaaaaa;
 }
 
 .title{
-	border-left: #cf1232 6px solid;
-    display: block;
-    color: #cf1232;
-    padding-left: 20px;
-    font-size: 28px;
+	font-size:30px;
+	color: #cf1232;
+	margin: 0;
 }
 
 .content{
 	background: #fff;
 	margin-top: 25px;
- 	padding: 15px 0px 15px 0px;
+	padding: 15px 100px 15px 100px;
 }
 
-.sjyx-left{
-	padding-top: 39px;
-	background: #fff;
+.titleimg{
+	float: left;
+    padding-top: 10px;
+    margin-right: 10px;
 }
 
-.sjyx-right{
- 	height:259px;
-	background: #37383d;
-}
-
-.btn-black{
-	float:right;
-	margin: 15px 0 0 0px;
-    background: #5d5d5d;
-    color: #fff;
-    padding: 8px 25px 8px 25px;
-    font: 17px Verdana, Arial, Helvetica, sans-serif;
-    border:none;
-}
-    
-.btn-red{
-	float:right;
-	margin: 15px 0 0 0px;
-    background: #cf1232;
-    color: #fff;
-    padding: 8px 25px 8px 25px;
-    font: 17px Verdana, Arial, Helvetica, sans-serif;
-    border:none;
-}
 </style>
 </head>
 <body class="bs-docs-home">
 	<header class="navbar navbar-static-top bs-docs-nav" id="top"
 		role="banner">
+		<jsp:include page="top.html"></jsp:include>
 	</header>
-	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/products/banner-products.jpg" class="bsimg"></div>
+	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/about-us/banner_recruitment.jpg" class="bsimg"></div>
 	<div class="bs-docs-featurette" style="background: #f1f1f1">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
-					<a href="porducts-phone.html"><img src="images/products/sjyx1.png"
+				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
+					<a href="join-us-shzp.jsp"><img src="images/about-us/shzp1.png"
 						class="bsimg tab"></a>
 				</div>
-				<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
-					<a href="#"><img src="images/products/wyyx2.png"
+				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
+					<a href="#"><img src="images/about-us/lxwm2.jpg"
 						class="bsimg tab"></a>
 				</div>
-				<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
-					<a href="porducts-client.html"><img src="images/products/khdyx1.png"
-						class="bsimg tab"></a>
+				<div class="col-md-12 col-sm-12 col-xs-12 nopadding bottom-hieght">					
+						<img src="images/about-us/map.png" class="bsimg" style="padding-top: 100px;padding-bottom: 103px;background: #fff;">
 				</div>
-<!-- 				<div class="col-md-12 col-sm-12 col-xs-12 nopadding game-bg" style="background-image:url(images/products3/fsz.png);margin-top: 0px;">					 -->
-<!-- 					<div class="col-md-10 col-sm-10 col-xs-10"> -->
-<!-- 						<a href="#" class="game-btn-download"><img src="images/products2/xiazai_1.png" -->
-<!-- 						class=""></a> -->
-<!-- 					</div> -->
-<!-- 					<div class="col-md-2 col-sm-2 col-xs-2"> -->
-<!-- 					<a href="http://fsz.ganwan.com/" target="_blank" class="game-btn-web"><img src="images/products2/guanwang_1.png" -->
-<!-- 						class=""></a> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-				<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
-					<div class="wyyx1">
-						<img src="images/products/fsz1.jpg" class="bsimg">
-					</div>
-					<div class="sjyx3">
-						<a href="javascript:alert('敬请期待！');"><img src="images/products/fsz2.png" class="bsimg"></a>
-					</div>
-					<div class="sjyx3">
-						<a href="http://fsz.ganwan.com/" target="_blank"><img src="images/products/fsz3.png" class="bsimg"></a>
-					</div>
-				</div>
-				<div class="col-md-12 col-sm-12 col-xs-12 bottom-hieght"></div>
 			</div>
 		</div>	
 	</div>
+	
 	<footer class="bs-docs-footer" role="contentinfo">
 		<div id="footer"></div>
 	</footer>
 	
 	<script	src="js/bootstrap/jquery.min.js"></script>
 	<script type="text/javascript">
-		$("#top").load("top.html");
+// 		$("#top").load("top.html");
 		$("#footer").load("footer.html");
 	</script>
 <!-- 	<script>var _gauges=_gauges||[];!function(){var e=document.createElement("script");e.async=!0,e.id="gauges-tracker",e.setAttribute("data-site-id","4f0dc9fef5a1f55508000013"),e.src="//secure.gaug.es/track.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();</script> -->
-	
 </body>
 </html>

@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,6 +79,7 @@
 <body class="bs-docs-home">
 	<header class="navbar navbar-static-top bs-docs-nav" id="top"
 		role="banner">
+		<jsp:include page="top.html"></jsp:include>
 	</header>
 	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding">
 		<img src="images/cooperation/banner_business.jpg" class="bsimg">
@@ -149,12 +152,9 @@
 	</script>
 	<script type="text/javascript">
 
-	$("#top").load("top.html");
+// 	$("#top").load("top.html");
 	$("#footer").load("footer.html");
 
-		$(function() {
-			$('.hot_list .hot_gamebox').hotlist();
-		})
 	</script>
 </body>
 </html>

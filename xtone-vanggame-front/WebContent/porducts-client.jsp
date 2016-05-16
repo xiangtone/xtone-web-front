@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,17 +111,18 @@ color: #aaaaaa;
 <body class="bs-docs-home">
 	<header class="navbar navbar-static-top bs-docs-nav" id="top"
 		role="banner">
+		<jsp:include page="top.html"></jsp:include>
 	</header>
 	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/products/banner-products.jpg" class="bsimg"></div>
 	<div class="bs-docs-featurette" style="background: #f1f1f1">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
-					<a href="porducts-phone.html"><img src="images/products/sjyx1.png"
+					<a href="porducts-phone.jsp"><img src="images/products/sjyx1.png"
 						class="bsimg tab"></a>
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
-					<a href="porducts-web.html"><img src="images/products/wyyx1.png"
+					<a href="porducts-web.jsp"><img src="images/products/wyyx1.png"
 						class="bsimg tab"></a>
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
@@ -136,18 +139,18 @@ color: #aaaaaa;
 <!-- 						class=""></a> -->
 <!-- 					</div> -->
 <!-- 				</div> -->
-				<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
-					<div class="wyyx1">
-						<img src="images/products/ljy1.jpg" class="bsimg">
-					</div>
-					<div class="sjyx3">
-						<a href="javascript:alert('敬请期待！');"><img src="images/products/ljy2.png" class="bsimg"></a>
-					</div>
-					<div class="sjyx3">
-						<a href="http://www.ljy0.com/home.html" target="_blank"><img src="images/products/ljy3.png" class="bsimg"></a>
-					</div>
-				</div>
-				<div class="col-md-12 col-sm-12 col-xs-12 bottom-hieght"></div>
+<!-- 				<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top"> -->
+<!-- 					<div class="wyyx1"> -->
+<!-- 						<img src="images/products/ljy1.jpg" class="bsimg"> -->
+<!-- 					</div> -->
+<!-- 					<div class="sjyx3"> -->
+<!-- 						<a href="javascript:alert('敬请期待！');"><img src="images/products/ljy2.png" class="bsimg"></a> -->
+<!-- 					</div> -->
+<!-- 					<div class="sjyx3"> -->
+<!-- 						<a href="http://www.ljy0.com/home.html" target="_blank"><img src="images/products/ljy3.png" class="bsimg"></a> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+				<div class="col-md-12 col-sm-12 col-xs-12 bottom-hieght" style="padding-bottom: 200px;"></div>
 			</div>
 		</div>	
 	</div>
@@ -158,7 +161,7 @@ color: #aaaaaa;
 	<script	src="js/bootstrap/jquery.min.js"></script>
 
 	<script type="text/javascript">
-		$("#top").load("top.html");
+// 		$("#top").load("top.html");
 		$("#footer").load("footer.html");
 	</script>
 <!-- 	<script>var _gauges=_gauges||[];!function(){var e=document.createElement("script");e.async=!0,e.id="gauges-tracker",e.setAttribute("data-site-id","4f0dc9fef5a1f55508000013"),e.src="//secure.gaug.es/track.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();</script> -->
