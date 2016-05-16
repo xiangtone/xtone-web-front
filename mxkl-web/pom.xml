@@ -153,7 +153,7 @@
 		<profile>
 			<id>mxkl</id>
 			<properties>
-				<runtime.env>config\zywebsite</runtime.env>
+				<runtime.env>config\mxkl</runtime.env>
 				<final.name>mxkl.xtonegame.com</final.name>
 				<ftp.server.id>HYServer</ftp.server.id>
 				<ftp.to.url>ftp://121.40.137.243/tomcat-8_10000/swap_dir/</ftp.to.url>

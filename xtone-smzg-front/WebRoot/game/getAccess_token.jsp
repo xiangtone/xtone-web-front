@@ -22,7 +22,7 @@
     	String userCode = "";
     	CodeDAO dao = new CodeDAO();
     	
-    	/*int codeForOpenId = dao.checkOpenId(openid);
+    	int codeForOpenId = dao.checkOpenId(openid);
     	
     	if(codeForOpenId>0){
     		userCode = codeForOpenId+"";
@@ -40,7 +40,7 @@
     				userCode = "服务器繁忙，请稍后重试！";
     			}
     		} 
-    	}*/
+    	}
     %>
 <!DOCTYPE html>
 <html><head>
