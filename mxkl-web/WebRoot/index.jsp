@@ -96,7 +96,11 @@
                 <div class="content">
                 <%
                
+<<<<<<< HEAD
                      Service.mainnew(out,5);
+=======
+                     Service.mainnew(out);
+>>>>>>> zhujinghua
                 
                 %>                                    
 <!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1594/"> -->

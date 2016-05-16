@@ -9,6 +9,13 @@
     height: 0;
 }
 
+.poster-adjacent {
+    margin: 2rem -2rem 0;
+    background-color: #f0f0f0;
+    padding: 1.4rem 2rem;
+    color: #dd4516;
+}
+
 ul.clearfix li { float: left; }
 
 *{

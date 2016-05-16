@@ -47,20 +47,30 @@
         <div id="body">
     <div class="block block-news">
     <div class="block-header clearfix">
-                <a href="main.jsp" class="block-unit"><span class="font-icon-j for-align">返回</span></a>
+                <a href="index.jsp" class="block-unit"><span class="font-icon-j for-align">返回</span></a>
                         <div class="title material"><span class="font-icon-b">最新资讯</span></div>
                     </div>
     <div class="block-body">
                 <div class="content">
-               <%Service.mainnew(out, 10); %> 
+                
+               <%
+                int pagenum;
+                 try{
+                Integer tem = Integer.parseInt(request.getParameter("page"));
+            
+                	pagenum = Integer.valueOf(tem);
+                 }catch(Exception ex){
+                	 pagenum = 1;
+                 }
+               Service.newsnew(out,pagenum); %>  
 
-                                                    <div class="wp-pagenavi">
+                                                   
                                                     
                                                     
 <!-- <span class="current">1</span> -->
-<a href="http://hs.xd.com/category/news/page/2/" class="page larger">2</a>
-<a href="http://hs.xd.com/category/news/page/3/" class="page larger">3</a>
-<a href="http://hs.xd.com/category/news/page/4/" class="page larger">4</a>
+<!-- <a href="http://hs.xd.com/category/news/page/2/" class="page larger">2</a> -->
+<!-- <a href="http://hs.xd.com/category/news/page/3/" class="page larger">3</a> -->
+<!-- <a href="http://hs.xd.com/category/news/page/4/" class="page larger">4</a> -->
 <!-- <a href="http://hs.xd.com/category/news/page/5/" class="page larger">5</a> -->
 <!-- <span class="extend">...</span> -->
 <!-- <a href="http://hs.xd.com/category/news/page/10/" class="larger page">10</a> -->
@@ -70,7 +80,7 @@
 
 </div>                            </div>
     </div>
-</div>    </div>
+</div>   
     <div class="black-drop">
         <div id="popupVideo" data-video-url="http://res.xdcdn.net/hsqj/hsqj-0707-480.mp4">
         </div>
