@@ -263,6 +263,7 @@
 <body class="bs-docs-home">
 	<header class="navbar navbar-static-top bs-docs-nav" id="top"
 		role="banner">
+		<jsp:include page="top.html"></jsp:include>
 	</header>
 
 	<div id="myCarousel" class="carousel slide" data-ride="carousel"
@@ -306,7 +307,7 @@
 						</div>
 
 						<div class="col-md-9 col-sm-9 col-xs-6 nopadding">
-							<a href="porducts-phone.html" style="float: right"><img
+							<a href="porducts.jsp" style="float: right"><img
 								src="images/index/more.png"></img></a>
 						</div>
 					</div>
@@ -316,7 +317,7 @@
 							<div class="hot_game hot_list">
 
 								<div class="l hot_gamebox mb1">
-									<a href="porducts-phone.html"><img
+									<a href="porducts.jsp"><img
 										src="images/index/350x290_1.jpg" class="bsimg" alt="First game"></a>
 									<div class="hot_yt hot_yt_sw ztgs">
 										<h4 class="hot_yt_left">《口袋大冒险》</h4>
@@ -338,7 +339,7 @@
 						<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
 							<div class="hot_game hot_list">
 								<div class="l hot_gamebox mb1">
-									<a href="porducts-phone.html"><img
+									<a href="porducts.jsp"><img
 										src="images/index/350x290_2.jpg" class="bsimg" alt="Second game"></a>
 									<div class="hot_yt hot_yt_sw ztgs">
 										<h4 class="hot_yt_left">《绝地逃亡》</h4>
@@ -359,11 +360,11 @@
 						<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
 							<div class="hot_game hot_list">
 								<div class="hot_gamebox mb1">
-									<a href="porducts-phone.html"><img
+									<a href="porducts.jsp"><img
 										src="images/index/350x290_3.jpg" class="bsimg" alt="Third game"></a>
 									<div class="hot_yt hot_yt_sw ztgs">
-										<h4 class="hot_yt_left">《神魔战歌》</h4>
-										<h4 class="hot_yt_right">卡牌/RPG</h4>
+										<h4 class="hot_yt_left">《捉妖友人帐》</h4>
+										<h4 class="hot_yt_right">休闲三消</h4>
 									</div>
 									<!-- 								<div class="hot_mark" align="center"> -->
 									<!-- 									<dl class="c" style="box-sizing: content-box"> -->
@@ -471,12 +472,13 @@
 						<div class="tt20"><a href="http://www.pvc123.com/b-pxtonewinnie/" class="links"	target="_blank">深圳市创世互动科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp; </div>
 						<div class="tt20"><a href="http://www.m-time.com/" class="links" target="_blank">深圳市浩天投资有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a href="http://dmx.xtonegame.com" class="links" target="_blank">口袋大冒险</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a href="http://lznh.cooguo.com/" class="links" target="_blank">龙之怒吼</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a href="http://smzg.xtonegame.com/" class="links" target="_blank">神魔战歌</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a href="http://fsz.ganwan.com/" class="links" target="_blank">封神战</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a href="http://www.ljy0.com/home.html" class="links" target="_blank">零纪元</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>	
-						<div class="tt20"><a href="http://mmd.xtonegame.com/" class="links" target="_blank">电视萌萌答</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a href="http://jdtw.xtonegame.com/" class="links" target="_blank">绝地逃亡</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>		
+<!-- 						<div class="tt20"><a href="http://lznh.cooguo.com/" class="links" target="_blank">龙之怒吼</a>&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
+<!-- 						<div class="tt20"><a href="http://smzg.xtonegame.com/" class="links" target="_blank">神魔战歌</a>&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
+<!-- 						<div class="tt20"><a href="http://fsz.ganwan.com/" class="links" target="_blank">封神战</a>&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
+<!-- 						<div class="tt20"><a href="http://www.ljy0.com/home.html" class="links" target="_blank">零纪元</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>	 -->
+<!-- 						<div class="tt20"><a href="http://mmd.xtonegame.com/" class="links" target="_blank">电视萌萌答</a>&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
+						<div class="tt20"><a href="http://jdtw.xtonegame.com/" class="links" target="_blank">绝地逃亡</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a href="http://zy.xtonegame.com/" class="links" target="_blank">捉妖友人帐</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 					</div>
 					
 				</div>
@@ -499,7 +501,7 @@
 	</script>
 	<script src="js/bootstrap/jquery.min.js"></script>
 	<script type="text/javascript">
-	$("#top").load("top.html");
+// 	$("#top").load("top.html");
 	$("#footer").load("footer.html");
 	$(function() {
 			$('.hot_list .hot_gamebox').hotlist();
