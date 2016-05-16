@@ -5,6 +5,8 @@
 <html dir="ltr" lang="zh-CN" class="is-mobile is-wechat page-news"><head>
  <script type="text/javascript" async="" src="js/main.js"></script>  
   <script async="" src="js/main2.js"></script>  
+  <!-- 为移动设备添加 viewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no">
 <!--         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
 <!--         <meta name="viewport" content="width=device-width,user-scalable=no,minimal-ui"> -->
 <!--     <meta name="apple-mobile-web-app-capable" content="yes"> -->

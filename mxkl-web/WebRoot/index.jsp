@@ -21,7 +21,8 @@
 <link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-76.png?1451359882">
 <link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-120.png?1451359882">
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-152.png?1451359882">
-        
+        <!-- 为移动设备添加 viewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no">
     <!-- title -->
     <title>梦想昆仑</title>
 
@@ -36,7 +37,8 @@
 
 <style type="text/css">
 .fancybox-margin{margin-right:0px;}
-#download{background-image: url(img/anniu.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%; position: absolute;height:100%;width:100%;}
+ #download{background-image: url(img/anniu.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%; position: absolute;height:100%;width:100%;} 
+
 </style>
 </head>
 <body >
@@ -54,8 +56,8 @@
 <!--         </div> -->
         <div class="block-body">
             <div class="for-bg hide-text" style="background-color:#211f2c;">
-                <div class="list-outer list-outer-1" style="width:46.875%;height:20%;">
-                    <a id="download" href="http://www.xd.com/api/misc/dynamic_url/hsqj" class="dl-btn hide-text"></a>
+                <div  class="list-outer list-outer-1" style="width:46.875%;height:12%;">
+                    <a id="download" href="" class="dl-btn hide-text"></a>
                 </div>
               
             </div>
@@ -138,7 +140,7 @@
     </div>
 </div>    <div class="block block-download">
     <div class="block-header">
-        <a class="title custom-btn dl-btn" href="http://www.xd.com/api/misc/dynamic_url/hsqj">立即下载</a>
+        <a class="title custom-btn dl-btn" href="">立即下载</a>
     </div>
 </div>
     <div class="block block-share xdshare">
