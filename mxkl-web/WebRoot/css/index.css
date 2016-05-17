@@ -7,7 +7,7 @@ Author:+c
 /* css reset */
 @charset "utf-8";body,h1,h2,h3,h4,h5,h6,hr,p,pre,dl,dt,dd,ul,ol,li,th,td,form,fieldset,legend,button,input,textarea,figure,figcaption,nav,footer,menu{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}address,em,i,b{font-style:normal}a,a:hover{color:#EEEEF6;text-decoration:none}ul,ol,li{list-style:none}fieldset,img{border:0}button,input,select,textarea{font:15px \5FAE\8F6F\96C5\9ED1,Helvetica;outline:none}body{background:#5C095A none repeat scroll 0% 0%;font:15px \5FAE\8F6F\96C5\9ED1,Helvetica;color:#20202c;overflow:visible}html{-webkit-text-size-adjust:none}.header,.content,.footer{width:100%;overflow:hidden;z-index:1}
 
-/*����*/
+/*锟斤拷锟斤拷*/
 figure{display:-webkit-box;display:box;display:-ms-flexbox;}
 figure figcaption{-webkit-box-flex:1;box-flex:1;-moz-box-flex:1;-ms-flex:1;display:block;}
 .clear:after {content:"."; display:block; height:0;clear:both; visibility:hidden;}
@@ -43,7 +43,7 @@ ul.n_c li{-webkit-box-flex:1;box-flex:1;-moz-box-flex:1;-ms-flex:1; width:1%;tex
 ul.n_c li:after{content: "|";color: #ccc; float:right;}
 ul.n_c li:last-child:after{content: "";}
 
-/* �ڶ��б� */
+/* 锟节讹拷锟叫憋拷 */
 .top-bar2{display:-webkit-box;width:100%;height:50px; line-height:48px; background-color:rgb(73,65,86); border-bottom:1px solid rgb(73,65,86); position:relative;}
 .top-bar2 .fl{ position:absolute; left:10px; top:0;}
 .top-bar2 .logo{width:50px; height:45px;background: transparent url("img/ico.png") no-repeat scroll left center / 35px auto;-webkit-background-size:60px auto;background-size:40px auto; -border-right:1px solid #ccc; padding-right:0px;margin-top:4px;padding-top:1px;}
@@ -396,7 +396,7 @@ ul.n_c2 li:last-child:after{content: "";}
 .mod-frame-14 .plus-cur li{ width:33.333%;}
 .mod-frame-14 .plus-cur li span{ padding:0 2.5px;}
 
-/*gameinfo-mod�����޸�*/
+/*gameinfo-mod锟斤拷锟斤拷锟睫革拷*/
 .gameinfo-mod{ padding:0px; overflow:hidden; position:relative;}
 .gameinfo-mod .pd_game{ margin:0 auto;min-width:300px;}
 .gameinfo-mod dl{ width:100%; overflow:hidden;}
@@ -465,7 +465,7 @@ ul.n_c2 li:last-child:after{content: "";}
 .mod-app-intro li span{ margin:0 8px;}
 .mod-app-intro li .con{ line-height:22px;color:#808080;font-size:12px;}
 
-/*����v1.0*/
+/*锟斤拷锟斤拷v1.0*/
 .gameinfo-mod .bc-btn-ios{height:42px; margin-top:15px; display:block; color:#fff; line-height:32px; border-radius:7px;display:-webkit-box;display:box;display:-ms-flexbox;}
 .gameinfo-mod .bc-btn-ios p{-webkit-box-flex:1;box-flex:1;-moz-box-flex:1;-ms-flex:1;display:block; height:42px; width:1%;}
 .gameinfo-mod .bc-btn-ios p.a-y{ padding-right:5px;}
@@ -493,7 +493,7 @@ ul.n_c2 li:last-child:after{content: "";}
 
 .j_hide_empty{display:none;}
 
-/*�ȵ�����*/
+/*锟饺碉拷锟斤拷锟斤拷*/
 
 .HotNewsBox{height:282px;overflow:hidden;float:left;width:100%;}
 .tabNav{ height:47px;line-height:45px;border-bottom: 1px solid rgb(98,61,94);}
@@ -514,7 +514,7 @@ height: 234px; }
 .a_bboxnav{margin:auto;background:url(../../images/hqg/sprite_titles.png) no-repeat 0px -43px;width:100%;height:40px;}
 .line_news{background:url("../../images/hqg/dian.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);}
 
-/* ��� */
+/* 锟斤拷锟� */
 .pop {
 	display:none;
 	-position:absolute;
@@ -600,7 +600,7 @@ height: 234px; }
 	color:#ffea00
 }
 
-/*   �����б�  */
+/*   锟斤拷锟斤拷锟叫憋拷  */
 body .content_list_wrap {
 	width:99%;
 	margin-left:5px;
@@ -653,7 +653,7 @@ body .pageNum p a {
 	border:1px solid #ebedee
 }
 
-/* ����ҳ */
+/* 锟斤拷锟斤拷页 */
 body #NIE-art {
 	width:90%;
 	padding:58px 15px 0;
@@ -665,7 +665,7 @@ body #NIE-art .artTitle {
 }
 body #NIE-art .artDate {
 	margin-top:10px;
-	font-family:"΢���ź�";
+	font-family:"微锟斤拷锟脚猴拷";
 	font-size:14px;
 	color:#5c5552;
 	display:inline-block
@@ -704,8 +704,7 @@ body #NIE-art .artText img {
 	-width: 200px;
     -height: 192px;
 	-onload='AutoResizeImage(200,150,this)';
-	max-width:250px;
-	max-height: 126px;
+	
 }
 body #NIE-art .table-pic td {
 	border:1px #a99359 solid
