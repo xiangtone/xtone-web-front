@@ -9,18 +9,16 @@ import javax.servlet.jsp.JspWriter;
 import org.mxkl.bean.Newsbean;
 import org.mxkl.dao.Newsdao;
 
-
-
 public class Service{
-private static ArrayList<Newsbean> newslist = (ArrayList<Newsbean>)Newsdao.selectAll();
+ 
 
 public static void mainnew(JspWriter out){
-	
+	ArrayList<Newsbean> newslist = (ArrayList<Newsbean>)Newsdao.selectAll();
 			int result = viewEachten(out,1,5);
 			if(result==-2){
 				
 				try {
-					out.println("<span class=\"label label-gg\" style=\"width:100%;color:red;\">暂无最新资讯！！！！</span>");
+					out.println("<span class=\"label label-gg\" style=\"width:100%;color:red;\">暂无最新资讯!!!</span>");
 					
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -37,7 +35,7 @@ public static void newsnew(JspWriter out,int page){
 	if(result==-3){
 		
 		try {
-			out.println("<span class=\"label label-gg\" style=\"width:100%;color:red;\">page参数错误!!!</span>");
+			out.println("<span class=\"label label-gg\" style=\"width:100%;color:red;\">page输入错误!!!</span>");
 			
 			
 		} catch (IOException e) {
@@ -49,13 +47,14 @@ public static void newsnew(JspWriter out,int page){
 	
 }
 public static int viewEachten(JspWriter out,int page,int num){
+	ArrayList<Newsbean> newslist2 = (ArrayList<Newsbean>)Newsdao.selectAll();
 	SimpleDateFormat sdf = new SimpleDateFormat("MM/dd");
 
-	int pagesize = newslist.size()/10+1;
-	if(newslist.size()%10==0){
+	int pagesize = newslist2.size()/10+1;
+	if(newslist2.size()%10==0){
 		pagesize-=1;
 	}
-	if(newslist.size()==0){
+	if(newslist2.size()==0){
 		return -2;
 	}
 	if(page>pagesize)
@@ -64,17 +63,17 @@ public static int viewEachten(JspWriter out,int page,int num){
 		return 0;
 	if(page<1)
 		return -3;
-	if(num>newslist.size()-(page-1)*10)
-		num = newslist.size()-(page-1)*10;
+	if(num>newslist2.size()-(page-1)*10)
+		num = newslist2.size()-(page-1)*10;
 		
 	  for(int i=(page-1)*10;i<(page-1)*10+num;i++){
   	  
   	  try {
   		  
-			out.println("<a class=\"cat-list no-break\" href=\"content.jsp?id="+newslist.get(i).getId()+"\">"
-					+  "<span class=\"label label-gg\">"+newslist.get(i).getCatalog().substring(5)+"</span>"
-			         +"<span class=\"title \">"+newslist.get(i).getTitle()+"</span>"
-			        + "<span class=\"size-small primary-note-color time\">"+sdf.format( newslist.get(i).getAddTime())+"</span>"+"</a>");
+			out.println("<a class=\"cat-list no-break\" href=\"content.jsp?id="+newslist2.get(i).getId()+"\">"
+					+  "<span class=\"label label-gg\">"+newslist2.get(i).getCatalog().substring(5)+"</span>"
+			         +"<span class=\"title \">"+newslist2.get(i).getTitle()+"</span>"
+			        + "<span class=\"size-small primary-note-color time\">"+sdf.format( newslist2.get(i).getAddTime())+"</span>"+"</a>");
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -117,6 +116,8 @@ public static void yema(JspWriter out,int num){
 
 }
 
-
+//<a class="cat-list no-break" href="http://hs.xd.com/1594/">
+//<span class="label label-gg">����</span>
+//<span class="title ">����ս�����������ʶ���������</span>
 //<span class="size-small primary-note-color time">04 - 20</span>
 //</a>

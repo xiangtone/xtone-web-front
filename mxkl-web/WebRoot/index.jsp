@@ -57,7 +57,7 @@
         <div class="block-body">
             <div class="for-bg hide-text" style="background-color:#211f2c;">
                 <div  class="list-outer list-outer-1" style="width:46.875%;height:12%;">
-                    <a id="download" href="" class="dl-btn hide-text"></a>
+                    <a id="download" href="http://cdnsrc.xtonegame.com/download/mxkl/mxkl160513_01.apk" class="dl-btn hide-text"></a>
                 </div>
               
             </div>
@@ -134,13 +134,13 @@
         <div class="title hide-text material"><span class="font-icon-g">游戏客服</span></div>
     </div>
     <div class="block-body" style="text-align:center;width:100%;">
-        <p style="margin:12% auto;">客服QQ:<span style="color:red;">&nbsp 2442386648</span></p>
+        <p style="margin:12% auto;">客服QQ:<span style="color:red;">&nbsp 3421893764</span></p>
 <!--         <p>玩家交流QQ群：********</p> -->
 <!--         <p>投诉邮箱: <a href="mailto:tousu@xindong.com" target="_blank">tousu@xindong.com</a></p> -->
     </div>
 </div>    <div class="block block-download">
     <div class="block-header">
-        <a class="title custom-btn dl-btn" href="">立即下载</a>
+        <a class="title custom-btn dl-btn" href="http://cdnsrc.xtonegame.com/download/mxkl/mxkl160513_01.apk">立即下载</a>
     </div>
 </div>
     <div class="block block-share xdshare">

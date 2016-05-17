@@ -24,7 +24,10 @@ public static List<Newsbean> selectAll(){
 	try {
 		pre = con.prepareStatement(sql);
 		result = pre.executeQuery();
+		int status;
 		while(result.next()){
+			status = result.getInt("status");
+			if(status==1){
 			newsbean = new Newsbean();
 			newsbean.setId(result.getInt("id"));
 			newsbean.setTitle(result.getString("title"));
@@ -32,7 +35,7 @@ public static List<Newsbean> selectAll(){
 			newsbean.setCatalog(result.getString("catalog"));
 			newsbean.setContent(result.getString("content"));
 			list.add(newsbean);
-			 
+			}
 		}
 		result.close();
 	} catch (SQLException e) {
