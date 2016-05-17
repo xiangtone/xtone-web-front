@@ -17,13 +17,18 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 			<scope>provided</scope>
+		</dependency>  -->
+		<dependency>
+		    <groupId>org.apache.tomcat</groupId>
+		    <artifactId>tomcat-jsp-api</artifactId>
+		    <version>8.0.35</version>
+		    <scope>provided</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -158,6 +163,7 @@
 				<ftp.server.id>HYServer</ftp.server.id>
 				<ftp.to.url>ftp://121.40.137.243/tomcat-8_10000/swap_dir/</ftp.to.url>
 			</properties>
+			
 		</profile>
 	</profiles>
 </project>

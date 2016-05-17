@@ -21,23 +21,23 @@
 		String userCode = "";
 		CodeDAO dao = new CodeDAO();
 		
-		int codeForOpenId = dao.checkOpenId(openid);
+		long codeForOpenId = dao.checkOpenId(openid);
 		
 		if(codeForOpenId>0){
 			userCode = codeForOpenId+"";
 		}else{
-			List<Integer> list = dao.checkGameId();
-			if(list.size()<0){
-				userCode = "兑换码已发放完！";
-			}else{
-				int CodeNumber = list.get(1);
+			long id = dao.checkGameId();
+			if(id!=0){
+				long CodeNumber = id;
 				Date date = new Date();
 				long time = date.getTime();
 				if(dao.updateOpenIdForId(CodeNumber, openid,time)>0){
-					userCode = CodeNumber+"";
+					userCode = CodeNumber+" ";
 				}else{
 					userCode = "服务器繁忙，请稍后重试！";
 				}
+			}else{
+				userCode = "兑换码已发放完！";
 			} 
 		}
     %>
@@ -81,7 +81,7 @@
   </div>
   <p class="news_detail_time" style="font-size: 11px;">　</p>
   <div style="width: 90%; height: 38px; margin: auto; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-radius: 5px;">
-  	 <p align="center" style="font-size: 17px; padding-top: 9px; color: rgb(255, 82, 37);"><%=userCode %></p>
+  	 <p align="center" style="font-size: 17px; padding-top: 9px; color: rgb(255, 82, 37);"><input value="<%=userCode %>" type="text" readOnly="true" style="text-align: center;color:rgb(255, 82, 37);font-size: 17px;border-style:none; " /></p>
   </div>
   <p class="news_detail_time" style="font-size: 15px;margin-top: 10px;">
   <!-- <br style="clear: both;" /> -->

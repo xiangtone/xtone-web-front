@@ -9,6 +9,8 @@ import javax.servlet.jsp.JspWriter;
 import org.mxkl.bean.Newsbean;
 import org.mxkl.dao.Newsdao;
 
+
+
 public class Service{
 private static ArrayList<Newsbean> newslist = (ArrayList<Newsbean>)Newsdao.selectAll();
 
@@ -18,7 +20,7 @@ public static void mainnew(JspWriter out){
 			if(result==-2){
 				
 				try {
-					out.println("<span class=\"label label-gg\" style=\"width:100%;color:red;\">ÔİÎŞ×îĞÂ×ÊÑ¶!!!</span>");
+					out.println("<span class=\"label label-gg\" style=\"width:100%;color:red;\">æš‚æ— æœ€æ–°èµ„è®¯ï¼ï¼ï¼ï¼</span>");
 					
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -35,7 +37,7 @@ public static void newsnew(JspWriter out,int page){
 	if(result==-3){
 		
 		try {
-			out.println("<span class=\"label label-gg\" style=\"width:100%;color:red;\">page²ÎÊı´íÎó!!!</span>");
+			out.println("<span class=\"label label-gg\" style=\"width:100%;color:red;\">pageå‚æ•°é”™è¯¯!!!</span>");
 			
 			
 		} catch (IOException e) {
@@ -115,8 +117,6 @@ public static void yema(JspWriter out,int num){
 
 }
 
-//<a class="cat-list no-break" href="http://hs.xd.com/1594/">
-//<span class="label label-gg">¹«¸æ</span>
-//<span class="title ">ÎåÔÂÕ½Õù¼¾¡ªÖÁ×ğÎÊ¶¦¼´½«¿ªÆô</span>
+
 //<span class="size-small primary-note-color time">04 - 20</span>
 //</a>

@@ -11,17 +11,17 @@ import org.mxkl.info.Code;
 
 public class CodeDAO {
 	
-	public int checkOpenId(String openId){
+	public long checkOpenId(String openId){
 		PreparedStatement ps = null;
 	    Connection con = null;
 	    ResultSet rs = null;
 		try {
 			con = ConnectionService.getInstance().getConnectionForLocal();
-			ps = con.prepareStatement("SELECT id FROM tbl_exchange_codes WHERE wechatOpenId = ? AND gameName='mengxiangkunlun'");
+			ps = con.prepareStatement("SELECT id FROM tbl_exchange_codes WHERE wechatOpenId=? AND gameName='mengxiangkunlun'");
 			ps.setString(1, openId);
 			rs = ps.executeQuery();
 			if(rs.next()){
-				return rs.getInt("id");
+				return rs.getLong("id");
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -36,23 +36,21 @@ public class CodeDAO {
 			}
 
 		}
-	    return 0;
+	    return 0L;
 	}
 	
-	public List<Integer> checkGameId(){
+	public long checkGameId(){
 		PreparedStatement ps = null;
 	    Connection con = null;
 	    ResultSet rs = null;
-	    List<Integer> list = null;
 	    try {
 			con = ConnectionService.getInstance().getConnectionForLocal();
-			ps = con.prepareStatement("SELECT id FROM tbl_exchange_codes WHERE matchOpenIdTime IS NULL AND gameName='mengxiangkunlun'");
+			ps = con.prepareStatement("SELECT id FROM tbl_exchange_codes WHERE matchOpenIdTime IS NULL AND gameName='mengxiangkunlun' LIMIT 1");
 			rs = ps.executeQuery();
-			list = new ArrayList<Integer>();
-			while(rs.next()){
-				list.add(rs.getInt("id"));
+			if(rs.next()){
+				return rs.getLong("id");
 			}
-			return list;
+			
 		} catch (Exception e) {
 			// TODO: handle exception
 		}finally{
@@ -66,10 +64,10 @@ public class CodeDAO {
 			}
 
 		}
-		return list;
+		return 0;
 	}
 	
-	public int updateOpenIdForId(int id,String openId,long time){
+	public int updateOpenIdForId(long id,String openId,long time){
 		PreparedStatement ps = null;
 	    Connection con = null;
 	    try {
@@ -77,7 +75,7 @@ public class CodeDAO {
 			ps = con.prepareStatement("UPDATE tbl_exchange_codes SET wechatOpenId=?,matchOpenIdTime=? WHERE id=? AND gameName='mengxiangkunlun'");
 			ps.setString(1, openId);
 			ps.setLong(2, time);
-			ps.setInt(3, id);
+			ps.setLong(3, id);
 			return ps.executeUpdate();
 		} catch (Exception e) {
 			// TODO: handle exception
