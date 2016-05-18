@@ -64,7 +64,7 @@
                  }catch(Exception ex){
                 	 pagenum = 1;
                  }
-               Service.newsnew(out,pagenum); %>  
+               Service.newsnew(out,pagenum,"select * from tbl_cms_contents where catalog like 'mxkl_%' ORDER BY priority DESC"); %>  
 
                                                    
                                                     

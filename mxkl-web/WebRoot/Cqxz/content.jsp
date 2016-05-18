@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>梦想昆仑</title>
+<title>苍穹仙尊</title>
 <link rel="stylesheet" href="css/index.css">
 
 
@@ -71,7 +71,7 @@ Newsbean newsbean = Newsdao.selectByid(id);
 </article>
 <%
 
-ArrayList<Newsbean> list = (ArrayList)Newsdao.selectAll("select * from tbl_cms_contents where catalog like 'mxkl_%' ORDER BY priority DESC");
+ArrayList<Newsbean> list = (ArrayList)Newsdao.selectAll("select * from tbl_cms_contents where catalog like 'cqxz_%' ORDER BY priority DESC");
 Newsbean newsbean2;
 Newsbean newsbean3;
 int index = 0;

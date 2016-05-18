@@ -17,9 +17,9 @@ private static ArrayList<Newsbean> list;
 private static PreparedStatement pre;
 private static String sql;
 private static ResultSet result;
-public static List<Newsbean> selectAll(){
+public static List<Newsbean> selectAll(String sql2){
 	
-	sql = "select * from tbl_cms_contents where catalog like 'mxkl_%'";
+	sql = sql2;
 	list = new ArrayList<Newsbean>();
 	try {
 		pre = con.prepareStatement(sql);

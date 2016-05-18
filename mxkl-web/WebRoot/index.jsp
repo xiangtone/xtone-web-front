@@ -31,13 +31,13 @@
 
 <link rel="canonical" href="http://hs.xd.com/">
 <link rel="next" href="http://hs.xd.com/page/2/">
-
+<script charset="gb2312" type="text/javascript" src="js/jquery(mixNIE).last.js"></script>
 <!-- / Yoast WordPress SEO plugin. -->
 
 
 <style type="text/css">
 .fancybox-margin{margin-right:0px;}
- #download{background-image: url(img/anniu.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%; position: absolute;height:100%;width:100%;} 
+ #download{background-image: url(img/downloadbtn.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%; position: absolute;height:100%;width:100%;} 
 
 </style>
 </head>
@@ -57,7 +57,7 @@
         <div class="block-body">
             <div class="for-bg hide-text" style="background-color:#211f2c;">
                 <div  class="list-outer list-outer-1" style="width:46.875%;height:12%;">
-                    <a id="download" href="http://cdnsrc.xtonegame.com/download/mxkl/mxkl160513_01.apk" class="dl-btn hide-text"></a>
+                    <a id="download" href="download.jsp" class="dl-btn hide-text"></a>
                 </div>
               
             </div>
@@ -98,7 +98,7 @@
                 <div class="content">
                 <%
                
-                     Service.mainnew(out);
+                     Service.mainnew(out,"select * from tbl_cms_contents where catalog like 'mxkl_%' ORDER BY priority DESC");
                 
                 %>                                    
 <!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1594/"> -->
@@ -140,7 +140,7 @@
     </div>
 </div>    <div class="block block-download">
     <div class="block-header">
-        <a class="title custom-btn dl-btn" href="http://cdnsrc.xtonegame.com/download/mxkl/mxkl160513_01.apk">立即下载</a>
+        <a class="title custom-btn dl-btn" href="download.jsp">立即下载</a>
     </div>
 </div>
     <div class="block block-share xdshare">
@@ -177,21 +177,7 @@
     
 <!-- Google Annalytics Code -->
 <script type="text/javascript">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-16408836-1', 'auto', {'cookieDomain':'xd.com'});
-  ga('send', 'pageview');
-    (function() {
-        var s = document.createElement('script');
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = '//tajs.qq.com/gdt.php?sId=47245038';
-        var x = document.getElementsByTagName('script')[0];
-        x.parentNode.insertBefore(s, x);
-    })();
 </script>
 
 <!-- Google Remarketing Code -->

@@ -11,10 +11,9 @@ import org.mxkl.dao.Newsdao;
 
 public class Service{
  
-
-public static void mainnew(JspWriter out){
-	ArrayList<Newsbean> newslist = (ArrayList<Newsbean>)Newsdao.selectAll();
-			int result = viewEachten(out,1,5);
+public static void mainnew(JspWriter out,String sql2){
+	ArrayList<Newsbean> newslist = (ArrayList<Newsbean>)Newsdao.selectAll(sql2);
+			int result = viewEachten(out,1,5,sql2);
 			if(result==-2){
 				
 				try {
@@ -29,9 +28,9 @@ public static void mainnew(JspWriter out){
 
 			}
 
-public static void newsnew(JspWriter out,int page){
+public static void newsnew(JspWriter out,int page,String sql2){
 	
-	int result  = viewEachten(out, page, 10);
+	int result  = viewEachten(out, page, 10,sql2);
 	if(result==-3){
 		
 		try {
@@ -46,8 +45,8 @@ public static void newsnew(JspWriter out,int page){
 	yema(out,result);
 	
 }
-public static int viewEachten(JspWriter out,int page,int num){
-	ArrayList<Newsbean> newslist2 = (ArrayList<Newsbean>)Newsdao.selectAll();
+public static int viewEachten(JspWriter out,int page,int num,String sql2){
+	ArrayList<Newsbean> newslist2 = (ArrayList<Newsbean>)Newsdao.selectAll(sql2);
 	SimpleDateFormat sdf = new SimpleDateFormat("MM/dd");
 
 	int pagesize = newslist2.size()/10+1;
