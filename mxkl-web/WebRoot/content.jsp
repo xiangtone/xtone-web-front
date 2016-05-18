@@ -112,5 +112,11 @@ if(next==null)
         
                 <p class="no-break" style="margin-top:10px;margin-left:;"><a href="content.jsp?id=<%= nextid %>"><%=next %></a></p>
             </div>
+   <script type="text/javascript">
+   	$(function(){
+   		$(".artText img").removeAttr('style');
+   		$(".artText img").css({"width":"90%","display":"block","clear":"both","margin":"auto"});
+   	});
+   </script>
 </body>
 </html>
