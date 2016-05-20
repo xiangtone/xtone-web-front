@@ -12,9 +12,9 @@
 		if(!check.JudgeIsMoblie(request)){
 			response.sendRedirect("http://www.baidu.com");
 		}*/
-    	String code = request.getParameter("code");
+    	//String code = request.getParameter("code");
     	//System.out.println("code: "+code);
-    	HttpsRequest req = new HttpsRequest();
+    	/*HttpsRequest req = new HttpsRequest();
     	String resours = (String)req.sendGet("https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx26d9b9ff5f0fc4ed&secret=8b1de189eefa9c0d78c1a847122eaf38&code="+code+"&grant_type=authorization_code");
     	Gson gson = new Gson();
     	Message msg = gson.fromJson(resours, Message.class);
@@ -40,7 +40,7 @@
     				userCode = "服务器繁忙，请稍后重试！";
     			}
     		} 
-    	}
+    	}*/
     %>
 <!DOCTYPE html>
 <html><head>
@@ -82,7 +82,7 @@
   </div>
   <p class="news_detail_time" style="font-size: 11px;">　</p>
   <div style="width: 90%; height: 38px; margin: auto; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-radius: 5px;">
-  	 <p align="center" style="font-size: 17px; padding-top: 9px; color: rgb(255, 82, 37);"><%=openid %></p>
+  	 <p align="center" style="font-size: 17px; padding-top: 9px; color: rgb(255, 82, 37);">00000000</p>
   </div>
   <p class="news_detail_time" style="font-size: 15px;margin-top: 10px;">
   <!-- <br style="clear: both;" /> -->
