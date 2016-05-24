@@ -32,9 +32,8 @@
 <link rel="canonical" href="http://hs.xd.com/">
 <link rel="next" href="http://hs.xd.com/page/2/">
 <script charset="gb2312" type="text/javascript" src="js/jquery(mixNIE).last.js"></script>
+<script charset="gb2312" type="text/javascript" src="js/my.js"></script>
 <!-- / Yoast WordPress SEO plugin. -->
-
-
 <style type="text/css">
 .fancybox-margin{margin-right:0px;}
  #download{background-image: url(img/downloadbtn.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%; position: absolute;height:100%;width:100%;} 
@@ -57,7 +56,7 @@
         <div class="block-body">
             <div class="for-bg hide-text" style="background-color:#211f2c;">
                 <div  class="list-outer list-outer-1" style="width:46.875%;height:12%;">
-                    <a id="download" href="download.jsp" class="dl-btn hide-text"></a>
+                    <a id="download" href="download.jsp" class="dl-btn hide-text" onClick="clicknum()"></a>
                 </div>
               
             </div>
@@ -140,7 +139,8 @@
     </div>
 </div>    <div class="block block-download">
     <div class="block-header">
-        <a class="title custom-btn dl-btn" href="download.jsp">立即下载</a>
+        <a class="title custom-btn dl-btn" href="download.jsp" onClick="clicknum()">立即下载</a>
+      
     </div>
 </div>
     <div class="block block-share xdshare">
