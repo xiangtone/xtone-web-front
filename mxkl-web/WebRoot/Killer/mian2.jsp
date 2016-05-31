@@ -17,7 +17,8 @@
 <link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-76.png?1451359882">
 <link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-120.png?1451359882">
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-152.png?1451359882">
-        
+<!-- 为移动设备添加 viewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no">       
     <!-- title -->
     <title>杀手2</title>
 
@@ -34,7 +35,7 @@
 <body>
         <div id="header">
                     <div class="block block-bbs">
-        <div class="block-header">
+        <!-- <div class="block-header">
             <img class="game-logo block-unit" src="http://web.xdcdn.net/game/hsqj/img/mobile/logo.png?1443064621" alt="梦想昆仑">
             <div class="title block-unit block-unit-left">
                 <h1>杀手2</h1>
@@ -43,7 +44,7 @@
             <div class="block-unit more">
                 <i class="line"></i>
             </div>
-        </div>
+        </div> -->
         <div class="block-body">
             <div class="for-bg hide-text">
                 <div class="list-outer list-outer-1">
@@ -57,13 +58,13 @@
                 </div>
             </div>
         </div>
-        <div class="block-footer">
+       <!--  <div class="block-footer">
             <div class="content">
                 <a href="/data" class="custom-btn"><span class="font-icon-i">资料站</span></a>
                 <div class="space"></div>
                 <a href="http://bbs.xd.com/forum-109-1.html" class="custom-btn" target="_blank"><span class="font-icon-h">游戏论坛</span></a>
             </div>
-        </div>
+        </div> -->
         <ul class="block-other">
             <li><a href="http://hs.xd.com" class="nav-home nav-item"><span class="for-align">首页</span></a></li>
             <li><a href="/data" class="nav-data nav-item"><span class="for-align">资料站</span></a></li>
@@ -85,7 +86,10 @@
 <!--     </div> -->
 <!-- </div>  -->  <div class="block block-news"> 
     <div class="block-header clearfix">
-                        <div class="title material"><span class="font-icon-b(*)">最新资讯</span></div>
+                        <div class="title material" style="top: 30%;">
+                        	<img alt="" src="img/title_target.png" width="40px" height="40px">
+                        	<span class="font-icon-b(*)" style="vertical-align: 37%; height: 40px; line-height: 40px;font-weight:bold;">最新资讯</span>
+                        </div>
                     </div>
     <div class="block-body">
                 <div class="content">
@@ -120,12 +124,14 @@
     </div>
 </div>    <div class="block block-service">
     <div class="block-header">
-        <div class="title hide-text material"><span class="font-icon-g(*)">游戏客服</span></div>
+        <div class="title hide-text material" style="top: 40%;">
+        	<img alt="" src="img/GM.png" width="30px" height="30px">
+        	<span class="font-icon-g(*)" style="vertical-align: 30%; height: 30px; line-height: 30px;">游戏客服</span>
+        </div>
     </div>
-    <div class="block-body">
-        <p>客服QQ:2442386648</p>
-        <p>玩家交流QQ群：********</p>
-        <p>投诉邮箱: <a href="mailto:tousu@xindong.com" target="_blank">tousu@xindong.com</a></p>
+    <div class="block-body" style="text-align: center;font-weight:bold;padding: 4rem;">
+        <p style="font-size: 15.8px;">客服QQ : <span style="color: rgb(228, 134, 59);">123456789</span></p>
+        <p style="font-size: 15.8px;">客服电话 : <span style="color: rgb(228, 134, 59);">010-123456789</span></p>
     </div>
 </div>    <div class="block block-download">
     <div class="block-header">

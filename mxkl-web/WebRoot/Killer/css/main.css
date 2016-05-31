@@ -406,13 +406,13 @@ label[for]{
 .font-icon-b:before { background-image:url(../img/zuixinzixun.png);content:"";background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;position: absolute; left: 0.5rem; top: 50%; margin-top: -0.8rem; width:15px; height: 20px; }
 
 .font-icon-c { position: relative; padding-left: 2.4rem; }
-.font-icon-c:before { content: "¡Ä"; position: absolute; left: 0; top: 50%; margin-top: -1.2rem; text-align: center; font-family: "hs"; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 2.4rem; line-height: 2.4rem; height: 2.4rem; }
+.font-icon-c:before { content: "ï¿½ï¿½"; position: absolute; left: 0; top: 50%; margin-top: -1.2rem; text-align: center; font-family: "hs"; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 2.4rem; line-height: 2.4rem; height: 2.4rem; }
 
 .font-icon-d { position: relative; padding-left: 2.4rem; }
-.font-icon-d:before { content: "¡Ä"; position: absolute; left: 0; top: 50%; margin-top: -1.2rem; text-align: center; font-family: "hs"; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 2.4rem; line-height: 2.4rem; height: 2.4rem; }
+.font-icon-d:before { content: "ï¿½ï¿½"; position: absolute; left: 0; top: 50%; margin-top: -1.2rem; text-align: center; font-family: "hs"; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 2.4rem; line-height: 2.4rem; height: 2.4rem; }
 
 .font-icon-e { position: relative; padding-left: 2.4rem; }
-.font-icon-e:before { content: "¡Ä"; position: absolute; left: 0; top: 50%; margin-top: -1.2rem; text-align: center; font-family: "hs"; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 2.4rem; line-height: 2.4rem; height: 2.4rem; }
+.font-icon-e:before { content: "ï¿½ï¿½"; position: absolute; left: 0; top: 50%; margin-top: -1.2rem; text-align: center; font-family: "hs"; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 2.4rem; line-height: 2.4rem; height: 2.4rem; }
 
 .font-icon-f { position: relative; padding-left: 2.4rem; }
 .font-icon-f:before { content: ""; position: absolute; left: 0; top: 50%; margin-top: -1.2rem; text-align: center; font-family: "hs"; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 2.4rem; line-height: 2.4rem; height: 2.4rem; }
@@ -438,14 +438,14 @@ a { color: #211f2c; }
 .block .block-unit { position: absolute; top: 0; height: 100%; }
 .block .for-align { position: absolute; top: 50%; margin-top: -0.6rem; height: 1.2rem; line-height: 1.2rem; font-size: 1.2rem; }
 
-.block-header { width: 100%; position: relative; padding-top: 15.625%; background-color: #f0f0f0; color: #211f2c; }
+.block-header { width: 100%; position: relative; padding-top: 15.625%; background-color: rgb(173,129,125); color: rgb(225,225,225);font-weight:bold; }
 .block-header .custom-btn { background-color: #dd4516; font-size: 1.2rem; border-top: 0.1rem solid #f67926; border-radius: 0.3rem; display: block; color: #fff; height: 4rem; line-height: 4rem; }
 
 #body .block-news .block-body { padding: 0; }
 #body .block-news .cat-list { position: relative; border-bottom: 0.1rem solid #dadada; padding: 1.6rem 7rem 1.6rem 1.4rem; line-height: 2.1rem; display: block; }
-#body .block-news .cat-list .label { color: #fff; display: inline-block; padding: 0 1.2rem; margin-right: 1rem; background-color: #997af3; border-radius: 0.3rem; line-height: 2.1rem; }
+#body .block-news .cat-list .label { color: #fff; display: inline-block; padding: 0 1.2rem; margin-right: 1rem; background-color: #997af3; border-radius: 0.8rem; line-height: 2.1rem; }
 #body .block-news .cat-list .time { position: absolute; width: 5rem; top: 1.6rem; right: 1.4rem; }
-#body .block-news .cat-list .label-gg { background-color: #77b0dc; }
+#body .block-news .cat-list .label-gg { background-color: rgb(173,129,125); }
 #body .block-news .cat-list .label-hd { background-color: #73dcd6; }
 #body .block-news .cat-list .label-gl { background-color: #f1795e; }
 #body .block-news .cat-list.on-touch { background-color: #e6e6e6; }
@@ -461,7 +461,7 @@ a { color: #211f2c; }
 .block-data .block-body .ride { background-image: url(../img/bg_01.jpg); background-repeat: no-repeat; background-position: 0 33.3%; background-color: transparent; left: 1.25%; top: 51.28205%; }
 .block-data .block-body .resource { background-image: url(../img/bg_01.jpg); background-repeat: no-repeat; background-position: 0 100%; background-color: transparent; left: 50.625%; top: 51.28205%; }
 
-.block-service .block-header { background-color: #1b0b0f; color: #fff; }
+.block-service .block-header { background-color: rgb(72,44,44); color: #fff; }
 .block-service .block-body { background-color: #271d20; color: #9e9e9e; }
 .block-service .block-body p { line-height: 1.8; text-indent: 2rem; }
 .block-service .block-body a { color: #dd4516; }
