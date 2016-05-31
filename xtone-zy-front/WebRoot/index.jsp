@@ -512,6 +512,7 @@
 		<p>
 			<a href="http://m.ali213.net/" target="_blank">手机游戏下载</a>
 			<a href="http://www.kela001.com/" target="_blank">克拉互娱</a>
+			<a href="http://www.93636.com/" target="_blank">93636手游</a>
 		</p>
 		</div>
 	</div>
