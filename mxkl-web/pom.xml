@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>mxkl</groupId>
+	<groupId>com.xtone</groupId>
 	<artifactId>mxkl-web</artifactId>
-	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>mxkl-web Maven Webapp</name>
-	<url>http://maven.apache.org</url>
+	<packaging>war</packaging>
+	<name>mxkl-web</name>
+	<description/>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -18,12 +18,11 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
-			<scope>provided</scope>
+		    <groupId>org.apache.tomcat</groupId>
+		    <artifactId>tomcat-jsp-api</artifactId>
+		    <version>8.0.35</version>
+		    <scope>provided</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -136,7 +135,7 @@
 		<profile>
 			<id>mxkllocal</id>
 			<properties>
-				<runtime.env>config\product</runtime.env>
+				<runtime.env>config\mxkl</runtime.env>
 				<final.name>mxkl.xtonegame.com</final.name>
 			</properties>
 			<activation>
