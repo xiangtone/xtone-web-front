@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>苍穹仙尊游戏下载</title>
+<title>杀手2-合金装备游戏下载</title>
 </head>
 <body>
 <div style="width:100%;">

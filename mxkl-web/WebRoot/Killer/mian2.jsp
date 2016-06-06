@@ -1,3 +1,4 @@
+<%@page import="org.mxkl.service.Service"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -20,7 +21,7 @@
 <!-- 为移动设备添加 viewport -->
 <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no">       
     <!-- title -->
-    <title>杀手2</title>
+    <title> 杀手2-合金装备</title>
 
   
 <!-- This site is optimized with the Yoast WordPress SEO plugin v1.5.3 - https://yoast.com/wordpress/plugins/seo/ -->
@@ -29,48 +30,44 @@
 <link rel="next" href="http://hs.xd.com/page/2/">
 
 <!-- / Yoast WordPress SEO plugin. -->
+<style type="text/css">
+.fancybox-margin{margin-right:0px;}
+ #download{background-image: url(img/downloadbtn.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%; position: absolute;height:100%;width:100%;} 
 
-
-<style type="text/css">.fancybox-margin{margin-right:0px;}</style></head>
+</style></head>
 <body>
         <div id="header">
                     <div class="block block-bbs">
-        <!-- <div class="block-header">
-            <img class="game-logo block-unit" src="http://web.xdcdn.net/game/hsqj/img/mobile/logo.png?1443064621" alt="梦想昆仑">
-            <div class="title block-unit block-unit-left">
-                <h1>杀手2</h1>
-                <p class="size-small">1111</p>
-            </div>
-            <div class="block-unit more">
-                <i class="line"></i>
-            </div>
-        </div> -->
+        <div class="block block-bbs">
+<!--         <div class="block-header"> -->
+<!--             <img class="game-logo block-unit" src="http://web.xdcdn.net/game/hsqj/img/mobile/logo.png?1443064621" alt="梦想昆仑"> -->
+<!--             <div class="title block-unit block-unit-left"> -->
+<!--                 <h1>梦想昆仑</h1> -->
+<!--                 <p class="size-small">1111</p> -->
+<!--             </div> -->
+<!--             <div class="block-unit more"> -->
+<!--                 <i class="line"></i> -->
+<!--             </div> -->
+<!--         </div> -->
         <div class="block-body">
-            <div class="for-bg hide-text">
-                <div class="list-outer list-outer-1">
-                    <a href="http://www.xd.com/api/misc/dynamic_url/hsqj" class="dl-btn hide-text">游戏下载</a>
+            <div class="for-bg hide-text" style="background-color:#211f2c;">
+                <div  class="list-outer list-outer-1" style="width:46.875%;height:12%;">
+                    <a id="download" href="download.jsp" class="dl-btn hide-text" onClick="clicknum()"></a>
                 </div>
-                <div class="list-outer list-outer-2">
-                    <a href="#" class="for-play-video hide-text">播放视频</a>
-                </div>
-                <div class="list-outer list-outer-3">
-                    <a target="_blank" href="http://bbs.xd.com/thread-2809365-1-1.html" class="hide-text entrance">心动先行版-A服系列入口&gt;</a>
-                </div>
+              
             </div>
         </div>
-       <!--  <div class="block-footer">
-            <div class="content">
-                <a href="/data" class="custom-btn"><span class="font-icon-i">资料站</span></a>
-                <div class="space"></div>
-                <a href="http://bbs.xd.com/forum-109-1.html" class="custom-btn" target="_blank"><span class="font-icon-h">游戏论坛</span></a>
-            </div>
-        </div> -->
         <ul class="block-other">
             <li><a href="http://hs.xd.com" class="nav-home nav-item"><span class="for-align">首页</span></a></li>
             <li><a href="/data" class="nav-data nav-item"><span class="for-align">资料站</span></a></li>
             <li><a href="/category/news" class="nav-news nav-item"><span class="for-align">最新资讯</span></a></li>
             <li><a href="http://bbs.xd.com/forum-109-1.html" class="nav-bbs nav-item" target="_blank"><span class="for-align">论坛</span></a></li>
                     </ul>
+         <div>
+         	<a href="http://www.xd.com/api/misc/dynamic_url/hsqj" style="display:block;">
+         		<img src="img/button_dl2.png" width="90%"/>
+         	</a>
+         </div>
     </div>            </div>
         <div id="body">
 <!--     <div class="block block-data"> -->
@@ -93,32 +90,36 @@
                     </div>
     <div class="block-body">
                 <div class="content">
-                                    
-                                                            <a class="cat-list no-break" href="http://hs.xd.com/1594/">
-                <span class="label label-gg">公告</span>
-                <span class="title ">五月战争季—至尊问鼎即将开启</span>
-                <span class="size-small primary-note-color time">04 - 20</span>
-            </a>
-                                                            <a class="cat-list no-break" href="http://hs.xd.com/1591/">
-                <span class="label label-gg">公告</span>
-                <span class="title ">7.0武将走势分析</span>
-                <span class="size-small primary-note-color time">04 - 19</span>
-            </a>
-                                                            <a class="cat-list no-break" href="http://hs.xd.com/1585/">
-                <span class="label label-gg">公告</span>
-                <span class="title ">《梦想昆仑》携手游戏多空降超级福利</span>
-                <span class="size-small primary-note-color time">04 - 13</span>
-            </a>
-                                                            <a class="cat-list no-break" href="http://hs.xd.com/1578/">
-                <span class="label label-gg">公告</span>
-                <span class="title ">6.0首届“万国远征”    今晚8点开打</span>
-                <span class="size-small primary-note-color time">04 - 06</span>
-            </a>
-                                                            <a class="cat-list no-break" href="http://hs.xd.com/1571/">
-                <span class="label label-gg">公告</span>
-                <span class="title ">《梦想昆仑》携手游戏多愚人节送福利</span>
-                <span class="size-small primary-note-color time">03 - 31</span>
-            </a>
+                <%
+               
+                     Service.mainnew(out,"select * from tbl_cms_contents where catalog like 'ss2_%' ORDER BY priority DESC");
+                
+                %>                                    
+<!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1594/"> -->
+<!--                 <span class="label label-gg">公告</span> -->
+<!--                 <span class="title ">五月战争季—至尊问鼎即将开启</span> -->
+<!--                 <span class="size-small primary-note-color time">04 - 20</span> -->
+<!--             </a> -->
+<!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1591/"> -->
+<!--                 <span class="label label-gg">公告</span> -->
+<!--                 <span class="title ">7.0武将走势分析</span> -->
+<!--                 <span class="size-small primary-note-color time">04 - 19</span> -->
+<!--             </a> -->
+<!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1585/"> -->
+<!--                 <span class="label label-gg">公告</span> -->
+<!--                 <span class="title ">《梦想昆仑》携手游戏多空降超级福利</span> -->
+<!--                 <span class="size-small primary-note-color time">04 - 13</span> -->
+<!--             </a> -->
+<!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1578/"> -->
+<!--                 <span class="label label-gg">公告</span> -->
+<!--                 <span class="title ">6.0首届“万国远征”    今晚8点开打</span> -->
+<!--                 <span class="size-small primary-note-color time">04 - 06</span> -->
+<!--             </a> -->
+<!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1571/"> -->
+<!--                 <span class="label label-gg">公告</span> -->
+<!--                 <span class="title ">《梦想昆仑》携手游戏多愚人节送福利</span> -->
+<!--                 <span class="size-small primary-note-color time">03 - 31</span> -->
+<!--             </a> -->
                                                                 <a class="text-center more" href="news.jsp">查看更多〉</a>
                                         </div>
     </div>
@@ -129,13 +130,15 @@
         	<span class="font-icon-g(*)" style="vertical-align: 30%; height: 30px; line-height: 30px;">游戏客服</span>
         </div>
     </div>
-    <div class="block-body" style="text-align: center;font-weight:bold;padding: 4rem;">
-        <p style="font-size: 15.8px;">客服QQ : <span style="color: rgb(228, 134, 59);">123456789</span></p>
-        <p style="font-size: 15.8px;">客服电话 : <span style="color: rgb(228, 134, 59);">010-123456789</span></p>
+    <div class="block-body" style="font-weight: bold; text-align: center; padding: 10% auto;">
+        <p style="font-size: 15.8px;">客服QQ : <span style="color: rgb(228, 134, 59);">1481214260</span></p>
+        <p style="font-size: 15.8px;">客服电话 : <span style="color: rgb(228, 134, 59);">4001059566</span></p>
     </div>
 </div>    <div class="block block-download">
-    <div class="block-header">
-        <a class="title custom-btn dl-btn" href="http://www.xd.com/api/misc/dynamic_url/hsqj">立即下载</a>
+    <div  style="padding-top: 6.625%; text-align: center;overflow: auto;background-color: rgb(72,44,44);">
+        <!-- <a class="title custom-btn dl-btn" href="http://www.xd.com/api/misc/dynamic_url/hsqj">立即下载</a> -->
+        <a href="http://www.xd.com/api/misc/dynamic_url/hsqj" style="display:block;"><img src="img/button_dl2.png" width="90%"/></a><br/>
+        <a href="http://www.xd.com/api/misc/dynamic_url/hsqj" style="display:block;padding-bottom: 5%;"><img src="img/button_more.png" width="90%"/></a>
     </div>
 </div>
     <div class="block block-share xdshare">
@@ -145,7 +148,7 @@
 <!--     <p class="text-center">动动手指，大家一起《梦想昆仑》</p> -->
     <a href="#" class="font-icon-a go-top">返回顶部</a>
 <!--     <a href="http://www.xd.com" class="logo-xd hide-text">心动游戏</a> -->
-   <p class="site-info"><span class="xd-site-copyright">Copyright&nbsp;&nbsp;©2016&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;xd.com</span><span class="xd-wwybz">&nbsp;&nbsp;</span> <span class="xd-site-name">万家文化</span></p> 
+  <!--  <p class="site-info"><span class="xd-site-copyright">Copyright&nbsp;&nbsp;©2016&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;xd.com</span><span class="xd-wwybz">&nbsp;&nbsp;</span> <span class="xd-site-name">万家文化</span></p>  -->
     </div>    </div>
     <div class="black-drop">
         <div id="popupVideo" data-video-url="http://res.xdcdn.net/hsqj/hsqj-0707-480.mp4">

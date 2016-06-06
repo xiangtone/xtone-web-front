@@ -19,7 +19,7 @@ var ua = navigator.userAgent.toLowerCase();
 var isWeixin = ua.indexOf('micromessenger') != -1;
 if (!isWeixin) {
 	document.body.innerHTML='';
-	document.location.href ="http://cdnsrc.xtonegame.com/download/mxkl/mxkl160513_01.apk";
+	document.location.href ="http://cdnsrc.xtonegame.com/download/mxkl/mxkl160602_01.apk";
 	
 }
 </script>

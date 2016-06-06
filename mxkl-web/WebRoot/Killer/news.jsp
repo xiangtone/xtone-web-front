@@ -24,7 +24,7 @@
 <!-- <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-152.png?1451359882"> -->
         
     <!-- title -->
-    <title>最新资讯 - 苍穹仙尊 -</title>
+    <title>最新资讯 - 杀手2-合金装备 -</title>
 
   
 <!-- This site is optimized with the Yoast WordPress SEO plugin v1.5.3 - https://yoast.com/wordpress/plugins/seo/ -->
@@ -50,7 +50,10 @@
     <div class="block block-news">
     <div class="block-header clearfix">
                 <a href="index.jsp" class="block-unit"><span class="font-icon-j for-align">返回</span></a>
-                        <div class="title material"><span class="font-icon-b">最新资讯</span></div>
+                        <div class="title material" style="top: 30%;">
+                        	<img alt="" src="img/title_target.png" width="40px" height="40px">
+                        	<span class="font-icon-b(*)" style="vertical-align: 37%; height: 40px; line-height: 40px;font-weight:bold;">最新资讯</span>
+                        </div>
                     </div>
     <div class="block-body">
                 <div class="content">
@@ -64,7 +67,7 @@
                  }catch(Exception ex){
                 	 pagenum = 1;
                  }
-               Service.newsnew(out,pagenum,"select * from tbl_cms_contents where catalog like 'cqxz_%' ORDER BY priority DESC"); %>  
+               Service.newsnew(out,pagenum,"select * from tbl_cms_contents where catalog like 'ss2_%' ORDER BY priority DESC"); %>  
 
                                                    
                                                     
