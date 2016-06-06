@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>苍穹仙尊</title>
+<title>杀手2-合金装备</title>
 <link rel="stylesheet" href="css/index.css">
 
 

@@ -1,6 +1,3 @@
-<%@page import="java.util.ArrayList"%>
-<%@page import="org.mxkl.dao.Newsdao"%>
-<%@page import="org.mxkl.bean.Newsbean"%>
 <%@page import="org.mxkl.service.Service"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
@@ -13,7 +10,7 @@
     
 <!--     <meta property="al:ios:url" content="https://itunes.apple.com/cn/app/heng-sao-qian-jun-tang-guo/id997636530"> -->
 <!--     <meta property="al:ios:app_store_id" content="997636530"> -->
-<!--     <meta property="al:ios:app_name" content="苍穹仙尊"> -->
+<!--     <meta property="al:ios:app_name" content="杀手2"> -->
 
 <link type="text/css" rel="stylesheet" href="css/main.css">        
 <link href="http://web.xdcdn.net/game/hsqj/img/favicon.ico?1423469731" type="image/x-icon" rel="shortcut icon bookmark">
@@ -21,59 +18,31 @@
 <link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-76.png?1451359882">
 <link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-120.png?1451359882">
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-152.png?1451359882">
-        <!-- 为移动设备添加 viewport -->
-<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no">
+<!-- 为移动设备添加 viewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no">       
     <!-- title -->
-    <title>苍穹仙尊</title>
+    <title> 杀手2-合金装备</title>
 
   
 <!-- This site is optimized with the Yoast WordPress SEO plugin v1.5.3 - https://yoast.com/wordpress/plugins/seo/ -->
 
 <link rel="canonical" href="http://hs.xd.com/">
 <link rel="next" href="http://hs.xd.com/page/2/">
-<script charset="gb2312" type="text/javascript" src="js/jquery(mixNIE).last.js"></script>
+
 <!-- / Yoast WordPress SEO plugin. -->
-<script type="text/javascript">
-
-	
-	function clicknum(){
-	
-		 var data = "cqxz"
-					$.ajax({
-						type : "post",
-						url : "../Servlet.jsp",
-						async : false,
-						data :data,
-						dataType : "text",
-						success : function(msg) {
-							
-					      		
-							
-						},
-						error : function(XMLHttpRequest, textStatus, errorThrown) {
-						
-							
-						}
-					});
-	}
-	
-
-
-</script>
-
 <style type="text/css">
 .fancybox-margin{margin-right:0px;}
  #download{background-image: url(img/downloadbtn.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%; position: absolute;height:100%;width:100%;} 
 
-</style>
-</head>
-<body >
+</style></head>
+<body>
         <div id="header">
                     <div class="block block-bbs">
+        <div class="block block-bbs">
 <!--         <div class="block-header"> -->
-<!--             <img class="game-logo block-unit" src="http://web.xdcdn.net/game/hsqj/img/mobile/logo.png?1443064621" alt="苍穹仙尊"> -->
+<!--             <img class="game-logo block-unit" src="http://web.xdcdn.net/game/hsqj/img/mobile/logo.png?1443064621" alt="梦想昆仑"> -->
 <!--             <div class="title block-unit block-unit-left"> -->
-<!--                 <h1>苍穹仙尊</h1> -->
+<!--                 <h1>梦想昆仑</h1> -->
 <!--                 <p class="size-small">1111</p> -->
 <!--             </div> -->
 <!--             <div class="block-unit more"> -->
@@ -82,28 +51,24 @@
 <!--         </div> -->
         <div class="block-body">
             <div class="for-bg hide-text" style="background-color:#211f2c;">
-                <div  class="list-outer list-outer-1" style="width:60.875%;height:12%;">
-                    <a id="download" href="download.jsp" class="dl-btn hide-text" onclick="clicknum()"></a>
+                <div  class="list-outer list-outer-1" style="width:46.875%;height:12%;">
+                    <a id="download" href="download.jsp" class="dl-btn hide-text" onClick="clicknum()"></a>
                 </div>
               
             </div>
         </div>
-<!--         <div class="block-footer"> -->
-<!--             <div class="content"> -->
-<!--                 <a href="/data" class="custom-btn"><span class="font-icon-i">资料站</span></a> -->
-<!--                 <div class="space"></div> -->
-<!--                 <a href="http://bbs.xd.com/forum-109-1.html" class="custom-btn" target="_blank"><span class="font-icon-h">游戏论坛</span></a> -->
-<!--             </div> -->
-<!--         </div> -->
         <ul class="block-other">
             <li><a href="http://hs.xd.com" class="nav-home nav-item"><span class="for-align">首页</span></a></li>
             <li><a href="/data" class="nav-data nav-item"><span class="for-align">资料站</span></a></li>
             <li><a href="/category/news" class="nav-news nav-item"><span class="for-align">最新资讯</span></a></li>
             <li><a href="http://bbs.xd.com/forum-109-1.html" class="nav-bbs nav-item" target="_blank"><span class="for-align">论坛</span></a></li>
                     </ul>
+         <div>
+         	<a href="http://www.xd.com/api/misc/dynamic_url/hsqj" style="display:block;">
+         		<img src="img/button_dl2.png" width="90%"/>
+         	</a>
+         </div>
     </div>            </div>
-    
-      <div style="background-color:#211f2c;width:100%;height:50px;"></div>
         <div id="body">
 <!--     <div class="block block-data"> -->
 <!--     <div class="block-header clearfix"> -->
@@ -118,13 +83,16 @@
 <!--     </div> -->
 <!-- </div>  -->  <div class="block block-news"> 
     <div class="block-header clearfix">
-                        <div class="title material"><span class="font-icon-b">最新资讯</span></div>
+                        <div class="title material" style="top: 30%;">
+                        	<img alt="" src="img/title_target.png" width="40px" height="40px">
+                        	<span class="font-icon-b(*)" style="vertical-align: 37%; height: 40px; line-height: 40px;font-weight:bold;">最新资讯</span>
+                        </div>
                     </div>
     <div class="block-body">
                 <div class="content">
                 <%
                
-                     Service.mainnew(out,"select * from tbl_cms_contents where catalog like 'cqxz_%' ORDER BY priority DESC");
+                     Service.mainnew(out,"select * from tbl_cms_contents where catalog like 'ss2_%' ORDER BY priority DESC");
                 
                 %>                                    
 <!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1594/"> -->
@@ -139,7 +107,7 @@
 <!--             </a> -->
 <!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1585/"> -->
 <!--                 <span class="label label-gg">公告</span> -->
-<!--                 <span class="title ">《苍穹仙尊》携手游戏多空降超级福利</span> -->
+<!--                 <span class="title ">《梦想昆仑》携手游戏多空降超级福利</span> -->
 <!--                 <span class="size-small primary-note-color time">04 - 13</span> -->
 <!--             </a> -->
 <!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1578/"> -->
@@ -149,34 +117,38 @@
 <!--             </a> -->
 <!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1571/"> -->
 <!--                 <span class="label label-gg">公告</span> -->
-<!--                 <span class="title ">《苍穹仙尊》携手游戏多愚人节送福利</span> -->
+<!--                 <span class="title ">《梦想昆仑》携手游戏多愚人节送福利</span> -->
 <!--                 <span class="size-small primary-note-color time">03 - 31</span> -->
 <!--             </a> -->
-                                                                <a class="text-center more" href="news.jsp">查看更多 〉</a>
+                                                                <a class="text-center more" href="news.jsp">查看更多〉</a>
                                         </div>
     </div>
 </div>    <div class="block block-service">
     <div class="block-header">
-        <div class="title hide-text material"><span class="font-icon-g">游戏客服</span></div>
+        <div class="title hide-text material" style="top: 40%;">
+        	<img alt="" src="img/GM.png" width="30px" height="30px">
+        	<span class="font-icon-g(*)" style="vertical-align: 30%; height: 30px; line-height: 30px;">游戏客服</span>
+        </div>
     </div>
-    <div class="block-body" style="text-align:center;width:100%;">
-        <p style="margin:12% auto;">客服QQ:<span style="color:yellow;">&nbsp 3421893764</span></p>
-<!--         <p>玩家交流QQ群：********</p> -->
-<!--         <p>投诉邮箱: <a href="mailto:tousu@xindong.com" target="_blank">tousu@xindong.com</a></p> -->
+    <div class="block-body" style="font-weight: bold; text-align: center; padding: 10% auto;">
+        <p style="font-size: 15.8px;">客服QQ : <span style="color: rgb(228, 134, 59);">1481214260</span></p>
+        <p style="font-size: 15.8px;">客服电话 : <span style="color: rgb(228, 134, 59);">4001059566</span></p>
     </div>
 </div>    <div class="block block-download">
-    <div class="block-header">
-        <a class="title custom-btn dl-btn" href="download.jsp" onclick="clicknum()">立即下载</a>
+    <div  style="padding-top: 6.625%; text-align: center;overflow: auto;background-color: rgb(72,44,44);">
+        <!-- <a class="title custom-btn dl-btn" href="http://www.xd.com/api/misc/dynamic_url/hsqj">立即下载</a> -->
+        <a href="http://www.xd.com/api/misc/dynamic_url/hsqj" style="display:block;"><img src="img/button_dl2.png" width="90%"/></a><br/>
+        <a href="http://www.xd.com/api/misc/dynamic_url/hsqj" style="display:block;padding-bottom: 5%;"><img src="img/button_more.png" width="90%"/></a>
     </div>
 </div>
     <div class="block block-share xdshare">
 <!--     <p>分享到：</p> -->
 <!--     <p class="text-center"><span class="font-icon" data-share="sina">e</span><span class="font-icon" data-share="qweibo">c</span></p> -->
 <!--         <p class="text-center">独乐乐不如众乐乐</p> -->
-<!--     <p class="text-center">动动手指，大家一起《苍穹仙尊》</p> -->
-    <a href="#" class="font-icon-a go-top" style="margin:1% auto;font-size:17px;font-weight:bold;">返回首页</a>
+<!--     <p class="text-center">动动手指，大家一起《梦想昆仑》</p> -->
+    <a href="#" class="font-icon-a go-top">返回顶部</a>
 <!--     <a href="http://www.xd.com" class="logo-xd hide-text">心动游戏</a> -->
-<!--    <p class="site-info"><span class="xd-site-copyright">Copyright&nbsp;&nbsp;©2016&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;xd.com</span><span class="xd-wwybz">&nbsp;&nbsp;</span> <span class="xd-site-name">万家文化</span></p>  -->
+  <!--  <p class="site-info"><span class="xd-site-copyright">Copyright&nbsp;&nbsp;©2016&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;xd.com</span><span class="xd-wwybz">&nbsp;&nbsp;</span> <span class="xd-site-name">万家文化</span></p>  -->
     </div>    </div>
     <div class="black-drop">
         <div id="popupVideo" data-video-url="http://res.xdcdn.net/hsqj/hsqj-0707-480.mp4">
@@ -188,7 +160,7 @@
                 <a href="" class="close font-icon">k</a>
             </div>
             <div class="popup-body message-download">
-                <p>预约《苍穹仙尊》</p>
+                <p>预约《梦想昆仑》</p>
                 <p>短信推送公测版下载地址，最先玩游戏！</p>
                 <p><input type="text" placeholder="手机号" class="mobile subscribe-mobile"><a href="" class="subscribe-submit btn-submit">约</a></p>
             </div>
@@ -203,7 +175,21 @@
     
 <!-- Google Annalytics Code -->
 <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-16408836-1', 'auto', {'cookieDomain':'xd.com'});
+  ga('send', 'pageview');
+    (function() {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//tajs.qq.com/gdt.php?sId=47245038';
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+    })();
 </script>
 
 <!-- Google Remarketing Code -->
