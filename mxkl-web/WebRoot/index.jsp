@@ -2,8 +2,25 @@
 <%@page import="org.mxkl.dao.Newsdao"%>
 <%@page import="org.mxkl.bean.Newsbean"%>
 <%@page import="org.mxkl.service.Service"%>
+<%@page import="org.mxkl.util.CheckLoad"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%
+	CheckLoad check = new CheckLoad();
+	String str = "";
+	String str2 = "";
+	String str3 = "";
+	if(!check.JudgeIsMoblie(request)){
+	    str = "background-size: 27%;";
+	    str2 = "width: 22.875%;height: 37%;top: 83%;left: 45%;";
+	    str3 = "width: 52%;";
+	}else{
+		str = "";
+		str2 = "width:46.875%;height:12%;";
+		str3 = "";
+	}
+	
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html dir="ltr" lang="zh-CN" class="is-mobile is-wechat page-home"><head><script type="text/javascript" async="" src="//tajs.qq.com/gdt.php?sId=47245038"></script><script type="text/javascript"  async="" src="//www.google-analytics.com/analytics.js"></script>
 <!--         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
@@ -54,9 +71,10 @@
 <!--             </div> -->
 <!--         </div> -->
         <div class="block-body">
-            <div class="for-bg hide-text" style="background-color:#211f2c;">
-                <div  class="list-outer list-outer-1" style="width:46.875%;height:12%;">
-                    <a id="download" href="download.jsp" class="dl-btn hide-text" onClick="clicknum()"></a>
+            <div class="for-bg hide-text" style="background-color:#211f2c;<%=str%>">
+                <div  class="list-outer list-outer-1" style="<%=str2%>">
+<!--                     <a id="download" href="download.jsp" class="dl-btn hide-text" onClick="clicknum()"></a> -->
+                    <a id="download" href="downskip?gamenameId=m" class="dl-btn hide-text" onClick="clicknum()" style="<%=str3%>"></a>
                 </div>
               
             </div>
@@ -128,27 +146,36 @@
                                                                 <a class="text-center more" href="news.jsp">查看更多〉</a>
                                         </div>
     </div>
-</div>    <div class="block block-service">
+</div>   
+
+<!--  <div class="block block-service"> -->
+<!--     <div class="block-header"> -->
+<!--         <div class="title hide-text material"><span class="font-icon-g">游戏客服</span></div> -->
+<!--     </div> -->
+<!--     <div class="block-body" style="text-align:center;width:100%;"> -->
+<!--         <p style="margin:12% auto;">客服QQ:<span style="color:red;">&nbsp 3421893764</span></p> -->
+<!-- <!--         <p>玩家交流QQ群：********</p> --> 
+<!-- <!--         <p>投诉邮箱: <a href="mailto:tousu@xindong.com" target="_blank">tousu@xindong.com</a></p> --> 
+<!--     </div> -->
+<!-- </div>    -->
+
+ <div class="block block-download">
     <div class="block-header">
-        <div class="title hide-text material"><span class="font-icon-g">游戏客服</span></div>
-    </div>
-    <div class="block-body" style="text-align:center;width:100%;">
-        <p style="margin:12% auto;">客服QQ:<span style="color:red;">&nbsp 3421893764</span></p>
-<!--         <p>玩家交流QQ群：********</p> -->
-<!--         <p>投诉邮箱: <a href="mailto:tousu@xindong.com" target="_blank">tousu@xindong.com</a></p> -->
-    </div>
-</div>    <div class="block block-download">
-    <div class="block-header">
-        <a class="title custom-btn dl-btn" href="download.jsp" onClick="clicknum()">立即下载</a>
+        <a class="title custom-btn dl-btn" href="downskip?gamenameId=m" onClick="clicknum()">立即下载</a>
+<!--         <a class="title custom-btn dl-btn" href="downskip?gamenameId=m" onClick="clicknum()">立即下载</a> -->
       
     </div>
 </div>
-    <div class="block block-share xdshare">
+    <div align="center" class="block block-share xdshare" style="font-weight:bold;height:100%;">
+    <br/><br/><br/><br/>
+      版权所有：深圳创世互动科技有限公司<br/><br/>
+      客服QQ：3421893764<br/><br/>
+      ICP备案号：粤ICP备12058124号
 <!--     <p>分享到：</p> -->
 <!--     <p class="text-center"><span class="font-icon" data-share="sina">e</span><span class="font-icon" data-share="qweibo">c</span></p> -->
 <!--         <p class="text-center">独乐乐不如众乐乐</p> -->
 <!--     <p class="text-center">动动手指，大家一起《梦想昆仑》</p> -->
-    <a href="#" class="font-icon-a go-top" style="margin:8% auto;">返回顶部</a>
+    <a href="#" class="font-icon-a go-top" style="margin:60px -8px  auto;">返回顶部</a>
 <!--     <a href="http://www.xd.com" class="logo-xd hide-text">心动游戏</a> -->
 <!--    <p class="site-info"><span class="xd-site-copyright">Copyright&nbsp;&nbsp;©2016&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;xd.com</span><span class="xd-wwybz">&nbsp;&nbsp;</span> <span class="xd-site-name">万家文化</span></p>  -->
     </div>    </div>

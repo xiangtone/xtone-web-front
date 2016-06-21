@@ -15,19 +15,21 @@
 		//System.out.println("code: "+code);
 		HttpsRequest req = new HttpsRequest();
 		String resours = (String)req.sendGet("https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx26d9b9ff5f0fc4ed&secret=8b1de189eefa9c0d78c1a847122eaf38&code="+code+"&grant_type=authorization_code");
+// 		System.out.println(resours);
+// 		System.out.println(1010);
 		Gson gson = new Gson();
 		Message msg = gson.fromJson(resours, Message.class);
 		String openid = msg.getOpenid();
 		String userCode = "";
 		CodeDAO dao = new CodeDAO();
 		
-		Long codeForOpenId = dao.checkOpenId(openid);
+		String codeForOpenId = dao.checkOpenId(openid);
 		
-		if(codeForOpenId>0){
+		if(codeForOpenId!=null){
 			userCode = codeForOpenId+"";
 		}else{
-			Long CodeNumber = dao.checkGameId();
-			if(CodeNumber!=0){
+			String CodeNumber = dao.checkGameId();
+			if(CodeNumber!=null){
 				Date date = new Date();
 				long time = date.getTime();
 				if(dao.updateOpenIdForId(CodeNumber, openid,time)>0){

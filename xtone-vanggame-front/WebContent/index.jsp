@@ -273,18 +273,26 @@
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 			<li data-target="#myCarousel" data-slide-to="1"></li>
 			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+			<li data-target="#myCarousel" data-slide-to="4"></li>
 			<!--       <li data-target="#myCarousel" data-slide-to="3"></li> -->
 		</ol>
 		<!-- 轮播（Carousel）项目 -->
 		<div class="carousel-inner">
 			<div class="item active" style="border: none;">
-				<img src="images/index/1900x540_1.jpg" alt="First banner">
+				<img src="images/index/1900x540_2.jpg" alt="First banner">
 			</div>
 			<div class="item" style="border: none;">
-				<img src="images/index/1900x540_2.jpg" alt="Second banner">
+				<img src="images/index/1900x540-1.jpg" alt="Second banner">
 			</div>
 			<div class="item" style="border: none;">
 				<img src="images/index/1900x540_3.jpg" alt="Thrid banner">
+			</div>
+			<div class="item" style="border: none;">
+				<img src="images/index/1900x540_1.jpg" alt="Fourth banner">
+			</div>
+			<div class="item" style="border: none;">
+				<img src="images/index/zhulaile.jpg" alt="Fifth banner">
 			</div>
 			<!-- 		<div class="item" style="border: none;"> -->
 			<!--          <img src="images/index/1900x540_2.png" alt="Second slide"> -->
@@ -318,10 +326,10 @@
 
 								<div class="l hot_gamebox mb1">
 									<a href="porducts.jsp"><img
-										src="images/index/350x290_1.jpg" class="bsimg" alt="First game"></a>
+										src="images/index/350x290_2.jpg" class="bsimg" alt="First game"></a>
 									<div class="hot_yt hot_yt_sw ztgs">
-										<h4 class="hot_yt_left">《口袋大冒险》</h4>
-										<h4 class="hot_yt_right">Q版/ARPG</h4>
+										<h4 class="hot_yt_left">《绝地逃亡》</h4>
+										<h4 class="hot_yt_right">动作格斗</h4>
 									</div>
 									<!-- 								<div class="hot_mark" align="center"> -->
 									<!-- 									<dl class="c" style="box-sizing: content-box"> -->
@@ -340,10 +348,10 @@
 							<div class="hot_game hot_list">
 								<div class="l hot_gamebox mb1">
 									<a href="porducts.jsp"><img
-										src="images/index/350x290_2.jpg" class="bsimg" alt="Second game"></a>
+										src="images/index/350x290-2.jpg" class="bsimg" alt="Second game"></a>
 									<div class="hot_yt hot_yt_sw ztgs">
-										<h4 class="hot_yt_left">《绝地逃亡》</h4>
-										<h4 class="hot_yt_right">动作格斗</h4>
+										<h4 class="hot_yt_left">《梦想昆仑》</h4>
+										<h4 class="hot_yt_right">仙侠/RPG</h4>
 									</div>
 									<!-- 								<div class="hot_mark" align="center"> -->
 									<!-- 									<dl class="c" style="box-sizing: content-box"> -->
@@ -361,9 +369,9 @@
 							<div class="hot_game hot_list">
 								<div class="hot_gamebox mb1">
 									<a href="porducts.jsp"><img
-										src="images/index/350x290_3.jpg" class="bsimg" alt="Third game"></a>
+										src="images/index/zhulaile2.jpg" class="bsimg" alt="Third game"></a>
 									<div class="hot_yt hot_yt_sw ztgs">
-										<h4 class="hot_yt_left">《捉妖友人帐》</h4>
+										<h4 class="hot_yt_left">《猪来了》</h4>
 										<h4 class="hot_yt_right">休闲三消</h4>
 									</div>
 									<!-- 								<div class="hot_mark" align="center"> -->

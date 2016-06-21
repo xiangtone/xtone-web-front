@@ -1,17 +1,17 @@
 package org.mxkl.info;
 
 public class Code {
-	private int id;
+	private String id;
 	private String content;
 	private String wechatOpenId;
 	private String wechatUnionId;
 	private long addTime;
 	private long matchOpenIdTime;
 	private String gameName;
-	public int getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getContent() {

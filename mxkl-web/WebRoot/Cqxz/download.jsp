@@ -19,7 +19,7 @@ var ua = navigator.userAgent.toLowerCase();
 var isWeixin = ua.indexOf('micromessenger') != -1;
 if (!isWeixin) {
 	document.body.innerHTML='';
-	document.location.href ="";
+	document.location.href ="../downskip?gamenameId=c";
 }
 </script>
 

@@ -6,7 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>mxkl-web</name>
-	<description/>
+	<description />
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -18,10 +18,10 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-		    <groupId>org.apache.tomcat</groupId>
-		    <artifactId>tomcat-jsp-api</artifactId>
-		    <version>8.0.35</version>
-		    <scope>provided</scope>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jsp-api</artifactId>
+			<version>8.0.35</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
@@ -58,6 +58,12 @@
 			<artifactId>xtone-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>com.x</groupId>
+			<artifactId>redirect-interface</artifactId>
+			<version>0.0.1-REDIRECT</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<finalName>${final.name}</finalName>
@@ -75,8 +81,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -84,7 +90,7 @@
 				<version>2.2</version>
 				<configuration>
 					<warSourceDirectory>${basedir}/WebRoot</warSourceDirectory>
-					<version>3.0</version>
+					<version>3.1</version>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 					<webResources>
 						<resource>
@@ -158,6 +164,12 @@
 				<ftp.to.url>ftp://121.40.137.243/tomcat-8_10000/swap_dir/</ftp.to.url>
 			</properties>
 		</profile>
+		
+		
+		
+	
+	
+		
 	</profiles>
 </project>
 

@@ -83,7 +83,7 @@
         <div class="block-body">
             <div class="for-bg hide-text" style="background-color:#211f2c;">
                 <div  class="list-outer list-outer-1" style="width:60.875%;height:12%;">
-                    <a id="download" href="download.jsp" class="dl-btn hide-text" onclick="clicknum()"></a>
+                    <a id="download" href="../downskip?gamenameId=c" class="dl-btn hide-text" onclick="clicknum()"></a>
                 </div>
               
             </div>
@@ -166,7 +166,7 @@
     </div>
 </div>    <div class="block block-download">
     <div class="block-header">
-        <a class="title custom-btn dl-btn" href="download.jsp" onclick="clicknum()">立即下载</a>
+        <a class="title custom-btn dl-btn" href="../downskip?gamenameId=c" onclick="clicknum()">立即下载</a>
     </div>
 </div>
     <div class="block block-share xdshare">

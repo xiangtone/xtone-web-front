@@ -157,20 +157,7 @@ height: 116px;
 <!-- 					</div> -->
 <!-- 				</div> -->				
 				
-				<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
-					<div class="sjyx1">
-						<img src="images/products/kddmx1.png" class="bsimg">
-					</div>
-					<div class="sjyx2">
-						<img src="images/products/kddmx2.jpg" class="bsimg">
-					</div>
-					<div class="sjyx3">
-						<a href="javascript:alert('敬请期待！');"><img src="images/products/kddmx3.png" class="bsimg"></a>
-					</div>
-					<div class="sjyx3">
-						<a href="http://dmx.xtonegame.com" target="_blank"><img src="images/products/kddmx4.png" class="bsimg"></a>
-					</div>
-				</div>
+			
 <!-- 				<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top"> -->
 <!-- 					<div class="sjyx1"> -->
 <!-- 						<img src="images/products/hsjs1.png" class="bsimg"> -->
@@ -227,6 +214,83 @@ height: 116px;
 <!-- 						<a href="javascript:alert('敬请期待！');"><img src="images/products/fkbdj4.png" class="bsimg"></a> -->
 <!-- 					</div> -->
 <!-- 				</div> -->
+	
+			<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
+					<div class="sjyx1">
+						<img src="images/products/jdtw1.png" class="bsimg">
+					</div>
+					<div class="sjyx2">
+						<img src="images/products/jdtw2.jpg" class="bsimg">
+					</div>
+					<div class="sjyx3">
+						<a href="javascript:alert('敬请期待！');"><img src="images/products/jdtw3.png" class="bsimg"></a>
+					</div>
+					<div class="sjyx3">
+						<a href="http://jdtw.xtonegame.com/" target="_blank"><img src="images/products/jdtw4.png" class="bsimg"></a>
+					</div>
+				</div>
+			<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
+					<div class="sjyx1">
+						<img src="images/products/3.jpg" class="bsimg">
+					</div>
+					<div class="sjyx2">
+						<img src="images/products/4.jpg" class="bsimg">
+					</div>
+					<div class="sjyx3">
+						<a href="http://cdnsrc.xtonegame.com/download/mxkl/mxkl160602_01.apk"><img src="images/products/1170-271-05.png" class="bsimg"></a>
+					</div>
+					<div class="sjyx3">
+						<a href="javascript:alert('敬请期待！');" target="_blank"><img src="images/products/1170-271-05(1).png" class="bsimg"></a>
+					</div>
+				</div>
+				
+				
+				<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
+					<div class="sjyx1">
+						<img src="images/products/zhu1.png" class="bsimg">
+					</div>
+					<div class="sjyx2">
+						<img src="images/products/zhu2.jpg" class="bsimg">
+					</div>
+					<div class="sjyx3">
+						<a href=""><img src="images/products/zhu3.png" class="bsimg"></a>
+					</div>
+					<div class="sjyx3">
+						<a href="javascript:alert('敬请期待！');" target="_blank"><img src="images/products/zhu4.png" class="bsimg"></a>
+					</div>
+				</div>
+				
+				
+				
+		<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
+					<div class="sjyx1">
+						<img src="images/products/zyyrz1.png" class="bsimg">
+					</div>
+					<div class="sjyx2">
+						<img src="images/products/zyyrz2.jpg" class="bsimg">
+					</div>
+					<div class="sjyx3">
+						<a href="javascript:alert('敬请期待！');"><img src="images/products/zyyrz3.png" class="bsimg"></a>
+					</div>
+					<div class="sjyx3">
+						<a href="http://zy.xtonegame.com/" target="_blank"><img src="images/products/zyyrz4.png" class="bsimg"></a>
+					</div>
+				</div>
+			</div>
+					<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
+					<div class="sjyx1">
+						<img src="images/products/kddmx1.png" class="bsimg">
+					</div>
+					<div class="sjyx2">
+						<img src="images/products/kddmx2.jpg" class="bsimg">
+					</div>
+					<div class="sjyx3">
+						<a href="javascript:alert('敬请期待！');"><img src="images/products/kddmx3.png" class="bsimg"></a>
+					</div>
+					<div class="sjyx3">
+						<a href="http://dmx.xtonegame.com" target="_blank"><img src="images/products/kddmx4.png" class="bsimg"></a>
+					</div>
+				</div>
 				<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
 					<div class="sjyx1">
 						<img src="images/products/ssgl1.png" class="bsimg">
@@ -240,7 +304,7 @@ height: 116px;
 					<div class="sjyx3">
 						<a href="javascript:alert('敬请期待！');"><img src="images/products/ssgl4.png" class="bsimg"></a>
 					</div>
-				</div>
+			
 <!-- 				<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top"> -->
 <!-- 					<div class="sjyx1"> -->
 <!-- 						<img src="images/products/smzg1.png" class="bsimg"> -->
@@ -255,20 +319,7 @@ height: 116px;
 <!-- 						<a href="http://smzg.xtonegame.com/" target="_blank"><img src="images/products/smzg4.png" class="bsimg"></a> -->
 <!-- 					</div> -->
 <!-- 				</div> -->
-				<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
-					<div class="sjyx1">
-						<img src="images/products/zyyrz1.png" class="bsimg">
-					</div>
-					<div class="sjyx2">
-						<img src="images/products/zyyrz2.jpg" class="bsimg">
-					</div>
-					<div class="sjyx3">
-						<a href="javascript:alert('敬请期待！');"><img src="images/products/zyyrz3.png" class="bsimg"></a>
-					</div>
-					<div class="sjyx3">
-						<a href="http://zy.xtonegame.com/" target="_blank"><img src="images/products/zyyrz4.png" class="bsimg"></a>
-					</div>
-				</div>
+				
 <!-- 				<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top"> -->
 <!-- 					<div class="sjyx1"> -->
 <!-- 						<img src="images/products/dsmmd1.png" class="bsimg"> -->
@@ -283,20 +334,14 @@ height: 116px;
 <!-- 						<a href="http://mmd.xtonegame.com/" target="_blank"><img src="images/products/dsmmd4.png" class="bsimg"></a> -->
 <!-- 					</div> -->
 <!-- 				</div> -->
-				<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
-					<div class="sjyx1">
-						<img src="images/products/jdtw1.png" class="bsimg">
-					</div>
-					<div class="sjyx2">
-						<img src="images/products/jdtw2.jpg" class="bsimg">
-					</div>
-					<div class="sjyx3">
-						<a href="javascript:alert('敬请期待！');"><img src="images/products/jdtw3.png" class="bsimg"></a>
-					</div>
-					<div class="sjyx3">
-						<a href="http://jdtw.xtonegame.com/" target="_blank"><img src="images/products/jdtw4.png" class="bsimg"></a>
-					</div>
-				</div>
+			
+		
+				
+				
+				
+				
+				
+				
 				<div class="col-md-12 col-sm-12 col-xs-12 bottom-hieght"></div>
 			</div>
 		</div>	

@@ -1,5 +1,40 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="org.mxkl.dao.Newsdao"%>
+<%@page import="org.mxkl.bean.Newsbean"%>
+<%@page import="org.mxkl.service.Service"%>
+<%@page import="org.mxkl.util.CheckLoad"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%
+	CheckLoad check = new CheckLoad();
+	String str = "";
+	String str2 = "";
+	String str3 = "";
+	if(!check.JudgeIsMoblie(request)){
+	    str = "background-size: 27%;";
+	    str2 = "width: 22.875%;height: 37%;top: 83%;left: 45%;";
+	    str3 = "width: 52%;";
+	}else{
+		str = "";
+		str2 = "width:46.875%;height:12%;";
+		str3 = "";
+	}
+	String f = request.getParameter("f");
+	if(f.equalsIgnoreCase("uc")){
+		out.println("<script language=\"javascript\" type=\"text/javascript\" src=\"http://js.users.51.la/18897133.js\"></script>");
+		out.println("<noscript><a href=\"http://www.51.la/?18897133\" target=\"_blank\"><img alt=\"&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;\" src=\"http://img.users.51.la/18897133.asp\" style=\"border:none\" /></a></noscript>");
+	}
+	if(f.equalsIgnoreCase("jrtt")){
+		out.println("<script language=\"javascript\" type=\"text/javascript\" src=\"http://js.users.51.la/18897128.js\"></script>");
+		out.println("<noscript><a href=\"http://www.51.la/?18897128\" target=\"_blank\"><img alt=\"&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;\" src=\"http://img.users.51.la/18897128.asp\" style=\"border:none\" /></a></noscript>");
+	}
+	if(f.equalsIgnoreCase("zht")){
+		out.println("<script language=\"javascript\" type=\"text/javascript\" src=\"http://js.users.51.la/18897136.js\"></script>");
+		out.println("<noscript><a href=\"http://www.51.la/?18897136\" target=\"_blank\"><img alt=\"&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;\" src=\"http://img.users.51.la/18897136.asp\" style=\"border:none\" /></a></noscript>");
+	}
+	
+	
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html dir="ltr" lang="zh-CN" class="is-mobile is-wechat page-home"><head><script type="text/javascript" async="" src="//tajs.qq.com/gdt.php?sId=47245038"></script><script type="text/javascript"  async="" src="//www.google-analytics.com/analytics.js"></script>
 <!--         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
@@ -17,7 +52,8 @@
 <link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-76.png?1451359882">
 <link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-120.png?1451359882">
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-152.png?1451359882">
-        
+        <!-- 为移动设备添加 viewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no">
     <!-- title -->
     <title>梦想昆仑</title>
 
@@ -26,44 +62,44 @@
 
 <link rel="canonical" href="http://hs.xd.com/">
 <link rel="next" href="http://hs.xd.com/page/2/">
-
+<script charset="gb2312" type="text/javascript" src="js/jquery(mixNIE).last.js"></script>
+<script charset="gb2312" type="text/javascript" src="js/my.js"></script>
 <!-- / Yoast WordPress SEO plugin. -->
+<style type="text/css">
+.fancybox-margin{margin-right:0px;}
+ #download{background-image: url(img/downloadbtn.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%; position: absolute;height:100%;width:100%;} 
 
-
-<style type="text/css">.fancybox-margin{margin-right:0px;}</style></head>
-<body>
+</style>
+</head>
+<body >
         <div id="header">
                     <div class="block block-bbs">
-        <div class="block-header">
-            <img class="game-logo block-unit" src="http://web.xdcdn.net/game/hsqj/img/mobile/logo.png?1443064621" alt="梦想昆仑">
-            <div class="title block-unit block-unit-left">
-                <h1>梦想昆仑</h1>
-                <p class="size-small">1111</p>
-            </div>
-            <div class="block-unit more">
-                <i class="line"></i>
-            </div>
-        </div>
+<!--         <div class="block-header"> -->
+<!--             <img class="game-logo block-unit" src="http://web.xdcdn.net/game/hsqj/img/mobile/logo.png?1443064621" alt="梦想昆仑"> -->
+<!--             <div class="title block-unit block-unit-left"> -->
+<!--                 <h1>梦想昆仑</h1> -->
+<!--                 <p class="size-small">1111</p> -->
+<!--             </div> -->
+<!--             <div class="block-unit more"> -->
+<!--                 <i class="line"></i> -->
+<!--             </div> -->
+<!--         </div> -->
         <div class="block-body">
-            <div class="for-bg hide-text">
-                <div class="list-outer list-outer-1">
-                    <a href="http://www.xd.com/api/misc/dynamic_url/hsqj" class="dl-btn hide-text">游戏下载</a>
+            <div class="for-bg hide-text" style="background-color:#211f2c;<%=str%>">
+                <div  class="list-outer list-outer-1" style="<%=str2%>">
+<!--                     <a id="download" href="download.jsp" class="dl-btn hide-text" onClick="clicknum()"></a> -->
+                    <a id="download" href="downskip?gamenameId=m" class="dl-btn hide-text" onClick="clicknum()" style="<%=str3%>"></a>
                 </div>
-                <div class="list-outer list-outer-2">
-                    <a href="#" class="for-play-video hide-text">播放视频</a>
-                </div>
-                <div class="list-outer list-outer-3">
-                    <a target="_blank" href="http://bbs.xd.com/thread-2809365-1-1.html" class="hide-text entrance">心动先行版-A服系列入口&gt;</a>
-                </div>
+              
             </div>
         </div>
-        <div class="block-footer">
-            <div class="content">
-                <a href="/data" class="custom-btn"><span class="font-icon-i">资料站</span></a>
-                <div class="space"></div>
-                <a href="http://bbs.xd.com/forum-109-1.html" class="custom-btn" target="_blank"><span class="font-icon-h">游戏论坛</span></a>
-            </div>
-        </div>
+<!--         <div class="block-footer"> -->
+<!--             <div class="content"> -->
+<!--                 <a href="/data" class="custom-btn"><span class="font-icon-i">资料站</span></a> -->
+<!--                 <div class="space"></div> -->
+<!--                 <a href="http://bbs.xd.com/forum-109-1.html" class="custom-btn" target="_blank"><span class="font-icon-h">游戏论坛</span></a> -->
+<!--             </div> -->
+<!--         </div> -->
         <ul class="block-other">
             <li><a href="http://hs.xd.com" class="nav-home nav-item"><span class="for-align">首页</span></a></li>
             <li><a href="/data" class="nav-data nav-item"><span class="for-align">资料站</span></a></li>
@@ -71,6 +107,8 @@
             <li><a href="http://bbs.xd.com/forum-109-1.html" class="nav-bbs nav-item" target="_blank"><span class="for-align">论坛</span></a></li>
                     </ul>
     </div>            </div>
+    
+      <div style="background-color:#211f2c;width:100%;height:50px;"></div>
         <div id="body">
 <!--     <div class="block block-data"> -->
 <!--     <div class="block-header clearfix"> -->
@@ -85,61 +123,75 @@
 <!--     </div> -->
 <!-- </div>  -->  <div class="block block-news"> 
     <div class="block-header clearfix">
-                        <div class="title material"><span class="font-icon-b(*)">最新资讯</span></div>
+                        <div class="title material"><span class="font-icon-b">最新资讯</span></div>
                     </div>
     <div class="block-body">
                 <div class="content">
-                                    
-                                                            <a class="cat-list no-break" href="http://hs.xd.com/1594/">
-                <span class="label label-gg">公告</span>
-                <span class="title ">五月战争季—至尊问鼎即将开启</span>
-                <span class="size-small primary-note-color time">04 - 20</span>
-            </a>
-                                                            <a class="cat-list no-break" href="http://hs.xd.com/1591/">
-                <span class="label label-gg">公告</span>
-                <span class="title ">7.0武将走势分析</span>
-                <span class="size-small primary-note-color time">04 - 19</span>
-            </a>
-                                                            <a class="cat-list no-break" href="http://hs.xd.com/1585/">
-                <span class="label label-gg">公告</span>
-                <span class="title ">《梦想昆仑》携手游戏多空降超级福利</span>
-                <span class="size-small primary-note-color time">04 - 13</span>
-            </a>
-                                                            <a class="cat-list no-break" href="http://hs.xd.com/1578/">
-                <span class="label label-gg">公告</span>
-                <span class="title ">6.0首届“万国远征”    今晚8点开打</span>
-                <span class="size-small primary-note-color time">04 - 06</span>
-            </a>
-                                                            <a class="cat-list no-break" href="http://hs.xd.com/1571/">
-                <span class="label label-gg">公告</span>
-                <span class="title ">《梦想昆仑》携手游戏多愚人节送福利</span>
-                <span class="size-small primary-note-color time">03 - 31</span>
-            </a>
+                <%
+               
+                     Service.mainnew(out,"select * from tbl_cms_contents where catalog like 'mxkl_%' ORDER BY priority DESC");
+                
+                %>                                    
+<!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1594/"> -->
+<!--                 <span class="label label-gg">公告</span> -->
+<!--                 <span class="title ">五月战争季—至尊问鼎即将开启</span> -->
+<!--                 <span class="size-small primary-note-color time">04 - 20</span> -->
+<!--             </a> -->
+<!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1591/"> -->
+<!--                 <span class="label label-gg">公告</span> -->
+<!--                 <span class="title ">7.0武将走势分析</span> -->
+<!--                 <span class="size-small primary-note-color time">04 - 19</span> -->
+<!--             </a> -->
+<!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1585/"> -->
+<!--                 <span class="label label-gg">公告</span> -->
+<!--                 <span class="title ">《梦想昆仑》携手游戏多空降超级福利</span> -->
+<!--                 <span class="size-small primary-note-color time">04 - 13</span> -->
+<!--             </a> -->
+<!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1578/"> -->
+<!--                 <span class="label label-gg">公告</span> -->
+<!--                 <span class="title ">6.0首届“万国远征”    今晚8点开打</span> -->
+<!--                 <span class="size-small primary-note-color time">04 - 06</span> -->
+<!--             </a> -->
+<!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1571/"> -->
+<!--                 <span class="label label-gg">公告</span> -->
+<!--                 <span class="title ">《梦想昆仑》携手游戏多愚人节送福利</span> -->
+<!--                 <span class="size-small primary-note-color time">03 - 31</span> -->
+<!--             </a> -->
                                                                 <a class="text-center more" href="news.jsp">查看更多〉</a>
                                         </div>
     </div>
-</div>    <div class="block block-service">
+</div>   
+
+<!--  <div class="block block-service"> -->
+<!--     <div class="block-header"> -->
+<!--         <div class="title hide-text material"><span class="font-icon-g">游戏客服</span></div> -->
+<!--     </div> -->
+<!--     <div class="block-body" style="text-align:center;width:100%;"> -->
+<!--         <p style="margin:12% auto;">客服QQ:<span style="color:red;">&nbsp 3421893764</span></p> -->
+<!-- <!--         <p>玩家交流QQ群：********</p> --> 
+<!-- <!--         <p>投诉邮箱: <a href="mailto:tousu@xindong.com" target="_blank">tousu@xindong.com</a></p> --> 
+<!--     </div> -->
+<!-- </div>    -->
+
+ <div class="block block-download">
     <div class="block-header">
-        <div class="title hide-text material"><span class="font-icon-g(*)">游戏客服</span></div>
-    </div>
-    <div class="block-body">
-        <p>客服QQ:2442386648</p>
-        <p>玩家交流QQ群：********</p>
-        <p>投诉邮箱: <a href="mailto:tousu@xindong.com" target="_blank">tousu@xindong.com</a></p>
-    </div>
-</div>    <div class="block block-download">
-    <div class="block-header">
-        <a class="title custom-btn dl-btn" href="http://www.xd.com/api/misc/dynamic_url/hsqj">立即下载</a>
+        <a class="title custom-btn dl-btn" href="downskip?gamenameId=m" onClick="clicknum()">立即下载</a>
+<!--         <a class="title custom-btn dl-btn" href="downskip?gamenameId=m" onClick="clicknum()">立即下载</a> -->
+      
     </div>
 </div>
-    <div class="block block-share xdshare">
+    <div align="center" class="block block-share xdshare" style="font-weight:bold;height:100%;">
+    <br/><br/><br/><br/>
+      版权所有：深圳创世互动科技有限公司<br/><br/>
+      客服QQ：3421893764<br/><br/>
+      ICP备案号：粤ICP备12058124号
 <!--     <p>分享到：</p> -->
 <!--     <p class="text-center"><span class="font-icon" data-share="sina">e</span><span class="font-icon" data-share="qweibo">c</span></p> -->
 <!--         <p class="text-center">独乐乐不如众乐乐</p> -->
 <!--     <p class="text-center">动动手指，大家一起《梦想昆仑》</p> -->
-    <a href="#" class="font-icon-a go-top">返回顶部</a>
+    <a href="#" class="font-icon-a go-top" style="margin:60px -8px  auto;">返回顶部</a>
 <!--     <a href="http://www.xd.com" class="logo-xd hide-text">心动游戏</a> -->
-   <p class="site-info"><span class="xd-site-copyright">Copyright&nbsp;&nbsp;©2016&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;xd.com</span><span class="xd-wwybz">&nbsp;&nbsp;</span> <span class="xd-site-name">万家文化</span></p> 
+<!--    <p class="site-info"><span class="xd-site-copyright">Copyright&nbsp;&nbsp;©2016&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;xd.com</span><span class="xd-wwybz">&nbsp;&nbsp;</span> <span class="xd-site-name">万家文化</span></p>  -->
     </div>    </div>
     <div class="black-drop">
         <div id="popupVideo" data-video-url="http://res.xdcdn.net/hsqj/hsqj-0707-480.mp4">
@@ -166,21 +218,7 @@
     
 <!-- Google Annalytics Code -->
 <script type="text/javascript">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-16408836-1', 'auto', {'cookieDomain':'xd.com'});
-  ga('send', 'pageview');
-    (function() {
-        var s = document.createElement('script');
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = '//tajs.qq.com/gdt.php?sId=47245038';
-        var x = document.getElementsByTagName('script')[0];
-        x.parentNode.insertBefore(s, x);
-    })();
 </script>
 
 <!-- Google Remarketing Code -->

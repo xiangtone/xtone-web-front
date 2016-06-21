@@ -14,7 +14,7 @@ public class QqxzCodeDAO {
 	    ResultSet rs = null;
 		try {
 			con = ConnectionService.getInstance().getConnectionForLocal();
-			ps = con.prepareStatement("SELECT id FROM tbl_exchange_codes WHERE wechatOpenId = ? AND gameName='mengxiangkunlun'");
+			ps = con.prepareStatement("SELECT id FROM tbl_exchange_codes WHERE wechatOpenId = ? AND gameName='cangqiongxianzun'");
 			ps.setString(1, openId);
 			rs = ps.executeQuery();
 			if(rs.next()){
@@ -43,7 +43,7 @@ public class QqxzCodeDAO {
 	    
 	    try {
 			con = ConnectionService.getInstance().getConnectionForLocal();
-			ps = con.prepareStatement("SELECT id FROM tbl_exchange_codes WHERE matchOpenIdTime IS NULL AND gameName='mengxiangkunlun' LIMIT 1");
+			ps = con.prepareStatement("SELECT id FROM tbl_exchange_codes WHERE matchOpenIdTime IS NULL AND gameName='cangqiongxianzun' LIMIT 1");
 			rs = ps.executeQuery();
 			
 			if(rs.next()){
@@ -71,7 +71,7 @@ public class QqxzCodeDAO {
 	    Connection con = null;
 	    try {
 			con = ConnectionService.getInstance().getConnectionForLocal();
-			ps = con.prepareStatement("UPDATE tbl_exchange_codes SET wechatOpenId=?,matchOpenIdTime=? WHERE id=? AND gameName='mengxiangkunlun'");
+			ps = con.prepareStatement("UPDATE tbl_exchange_codes SET wechatOpenId=?,matchOpenIdTime=? WHERE id=? AND gameName='cangqiongxianzun'");
 			ps.setString(1, openId);
 			ps.setLong(2, time);
 			ps.setLong(3, id);
