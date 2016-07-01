@@ -29,5 +29,6 @@
 	<classpathentry kind="lib" path="WebContent/lib/commons-io-1.4-javadoc.jar"/>
 	<classpathentry kind="lib" path="WebContent/lib/commons-io-1.4-sources.jar"/>
 	<classpathentry kind="lib" path="WebContent/lib/commons-io-1.4.jar"/>
+	<classpathentry kind="lib" path="WebContent/lib/gson-2.3.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

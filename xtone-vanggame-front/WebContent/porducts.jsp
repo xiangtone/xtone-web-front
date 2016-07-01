@@ -253,7 +253,7 @@ height: 116px;
 						<img src="images/products/zhu2.jpg" class="bsimg">
 					</div>
 					<div class="sjyx3">
-						<a href=""><img src="images/products/zhu3.png" class="bsimg"></a>
+						<a href="javascript:alert('敬请期待！');"><img src="images/products/zhu3.png" class="bsimg"></a>
 					</div>
 					<div class="sjyx3">
 						<a href="javascript:alert('敬请期待！');" target="_blank"><img src="images/products/zhu4.png" class="bsimg"></a>

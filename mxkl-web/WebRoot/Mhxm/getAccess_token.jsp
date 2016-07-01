@@ -14,13 +14,17 @@
 			response.sendRedirect("http://www.baidu.com");
 		}*/
 		String code = request.getParameter("code");
+		String userCode = "";
+		  if(code!=null){
+			  
+		  
 		//System.out.println("code: "+code);
 		HttpsRequest req = new HttpsRequest();
 		String resours = (String)req.sendGet("https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx26d9b9ff5f0fc4ed&secret=8b1de189eefa9c0d78c1a847122eaf38&code="+code+"&grant_type=authorization_code");
 		Gson gson = new Gson();
 		Message msg = gson.fromJson(resours, Message.class);
 		String openid = msg.getOpenid();
-		String userCode = "";
+		
 		MhxmCodeDao dao = new MhxmCodeDao();
 		
 		String codeForOpenId = dao.checkOpenId(openid);
@@ -41,7 +45,9 @@
 			}else{
 				userCode = "兑换码已发放完！";
 			} 
-		}
+		}}
+		  else
+			  userCode = "";
     %>
 <!DOCTYPE html>
 <html><head>

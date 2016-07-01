@@ -372,7 +372,7 @@
 										src="images/index/zhulaile2.jpg" class="bsimg" alt="Third game"></a>
 									<div class="hot_yt hot_yt_sw ztgs">
 										<h4 class="hot_yt_left">《猪来了》</h4>
-										<h4 class="hot_yt_right">休闲三消</h4>
+										<h4 class="hot_yt_right">社交/休闲</h4>
 									</div>
 									<!-- 								<div class="hot_mark" align="center"> -->
 									<!-- 									<dl class="c" style="box-sizing: content-box"> -->

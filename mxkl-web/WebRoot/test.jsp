@@ -7,17 +7,11 @@
 <title></title>
 </head>
 <body>
-<% 
-String targetUrl = "http://vanggame.com";
-String ua = ((HttpServletRequest) request).getHeader("user-agent").toLowerCase();
-out.println(ua);
+<script>
+alert(hex_md5(10))
 
 
 
-
-
-
-
-%>
+</script>
 </body>
 </html>

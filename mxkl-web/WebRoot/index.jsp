@@ -1,3 +1,5 @@
+<%@page import="org.mxkl.service.Mxklloginsert"%>
+<%@page import="org.common.util.ThreadPool"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="org.mxkl.dao.Newsdao"%>
 <%@page import="org.mxkl.bean.Newsbean"%>
@@ -19,6 +21,9 @@
 		str2 = "width:46.875%;height:12%;";
 		str3 = "";
 	}
+	
+	
+	
 	
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -166,16 +171,16 @@
       
     </div>
 </div>
-    <div align="center" class="block block-share xdshare" style="font-weight:bold;height:100%;">
+    <div align="center" class="block block-share xdshare" style="font-weight:bold;height:100%;color:white;">
     <br/><br/><br/><br/>
       版权所有：深圳创世互动科技有限公司<br/><br/>
-      客服QQ：3421893764<br/><br/>
+     <input value="客服QQ：3421893764" type="text" readOnly="true" style="text-align: center;color:white;font-family:'Arial,sans-serif';font-weight:bold;background-color:#271d20;color:white;"/><br/><br/>
       ICP备案号：粤ICP备12058124号
 <!--     <p>分享到：</p> -->
 <!--     <p class="text-center"><span class="font-icon" data-share="sina">e</span><span class="font-icon" data-share="qweibo">c</span></p> -->
 <!--         <p class="text-center">独乐乐不如众乐乐</p> -->
 <!--     <p class="text-center">动动手指，大家一起《梦想昆仑》</p> -->
-    <a href="#" class="font-icon-a go-top" style="margin:60px -8px  auto;">返回顶部</a>
+    <a href="#" class="font-icon-a go-top" style="margin:60px -8px  auto;color:white;">返回顶部</a>
 <!--     <a href="http://www.xd.com" class="logo-xd hide-text">心动游戏</a> -->
 <!--    <p class="site-info"><span class="xd-site-copyright">Copyright&nbsp;&nbsp;©2016&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;xd.com</span><span class="xd-wwybz">&nbsp;&nbsp;</span> <span class="xd-site-name">万家文化</span></p>  -->
     </div>    </div>

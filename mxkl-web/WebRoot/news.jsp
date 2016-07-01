@@ -49,13 +49,14 @@
         <div id="body">
     <div class="block block-news">
     <div class="block-header clearfix">
-                <a href="index.jsp" class="block-unit"><span class="font-icon-j for-align">返回</span></a>
+                <a href="<%=request.getHeader("referer")%>" class="block-unit"><span class="font-icon-j for-align">返回</span></a>
                         <div class="title material"><span class="font-icon-b">最新资讯</span></div>
                     </div>
     <div class="block-body">
                 <div class="content">
                 
                <%
+//                System.out.println(request.getHeader("referer"));
                 int pagenum;
                  try{
                 Integer tem = Integer.parseInt(request.getParameter("page"));

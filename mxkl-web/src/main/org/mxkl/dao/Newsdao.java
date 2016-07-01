@@ -53,7 +53,7 @@ public static Newsbean selectByid(int id){
 	try {
 		pre = con.prepareStatement(sql);
 		pre.setInt(1, id);
-		System.out.println(pre);
+//		System.out.println(pre);
 		result = pre.executeQuery();
 		 if(result.next()){
 			newsbean = new Newsbean();

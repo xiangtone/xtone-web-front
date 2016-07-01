@@ -25,13 +25,7 @@
     <servlet-name>Cg</servlet-name>
     <url-pattern>/cg</url-pattern>
   </servlet-mapping>
-  
-  
-  
-  
-  
-  
-   <servlet>
+  <servlet>
     <servlet-name>wechat</servlet-name>
     <servlet-class>org.mxkl.wctalk.WeChatTalkServlet</servlet-class>
   </servlet>
