@@ -17,12 +17,12 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.apache.tomcat</groupId> -->
-<!-- 			<artifactId>tomcat-jsp-api</artifactId> -->
-<!-- 			<version>8.0.35</version> -->
-<!-- 			<scope>provided</scope> -->
-<!-- 		</dependency> -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jsp-api</artifactId>
+			<version>8.0.35</version>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -49,6 +49,11 @@
 			<version>2.3.1</version>
 		</dependency>
 		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.5</version>
+		</dependency>
+		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient-osgi</artifactId>
 			<version>4.3</version>
@@ -58,12 +63,11 @@
 			<artifactId>xtone-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<dependency>
-			<groupId>com.x</groupId>
-			<artifactId>redirect-interface</artifactId>
-			<version>0.0.1-REDIRECT</version>
-		</dependency>
-
+		<!-- <dependency> -->
+		<!-- <groupId>com.x</groupId> -->
+		<!-- <artifactId>redirect-interface</artifactId> -->
+		<!-- <version>0.0.1-REDIRECT</version> -->
+		<!-- </dependency> -->
 	</dependencies>
 	<build>
 		<finalName>${final.name}</finalName>
@@ -164,12 +168,12 @@
 				<ftp.to.url>ftp://121.40.137.243/tomcat-8_10000/swap_dir/</ftp.to.url>
 			</properties>
 		</profile>
-		
-		
-		
-	
-	
-		
+
+
+
+
+
+
 	</profiles>
 </project>
 
