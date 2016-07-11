@@ -8,7 +8,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%
-if(request.getHeader("X-Real-IP").equals("121.42.0.88")){
+if(request.getHeader("X-Real-IP")!=null&&request.getHeader("X-Real-IP").equals("121.42.0.88")){
 	response.sendRedirect("https://www.baidu.com/");
 }
 	CheckLoad check = new CheckLoad();
