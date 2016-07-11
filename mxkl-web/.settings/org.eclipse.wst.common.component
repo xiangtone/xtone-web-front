@@ -8,9 +8,6 @@
         <dependent-module archiveName="xtone-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/xtone-common/xtone-common">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="redirect-interface-0.0.1-REDIRECT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/redirect-interface/redirect-interface">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <property name="context-root" value="mxkl.xtonegame.com"/>
         <property name="java-output-path" value="/mxkl-web/target/classes"/>
     </wb-module>
