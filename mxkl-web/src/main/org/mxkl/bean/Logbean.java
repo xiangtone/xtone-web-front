@@ -20,7 +20,7 @@ public String getPara01() {
 	return para01;
 }
 public void setPara01(String para01) {
-	this.para01 = para01;
+	this.para01 = para01;                                  
 }
 
 }

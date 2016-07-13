@@ -29,6 +29,8 @@ public class Mxklskip extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String f= request.getParameter("f");
+		String apk = request.getParameter("apk");
+		
 		String query = request.getQueryString();
 //		System.out.println(f);
 //		System.out.println(querry);
@@ -42,7 +44,15 @@ public class Mxklskip extends HttpServlet {
         if(f.equalsIgnoreCase("zht")){
         	targetUrl = "http://cdnsrc.xtonegame.com/download/mxkl/mxkl160627_03(zht).apk" ;
         }
-		
+        if(apk!=null){
+        	if(apk.equalsIgnoreCase("1")){
+        		targetUrl = "http://cdnsrc.xtonegame.com/download/mxkl/mxkl160713(01).apk" ;
+        	}
+        	if(apk.equalsIgnoreCase("2")){
+        		targetUrl = "http://cdnsrc.xtonegame.com/download/mxkl/mxkl160713(02).apk" ;
+        	}
+        	
+        }
 		ThreadPool.mThreadPool.execute(new Mxklloginsert(2002,"mengxiangkunlun",query,request.getRequestedSessionId(),request.getHeader("referer"),request.getHeader("user-agent"),request.getHeader("X-Real-IP")!=null?request.getHeader("X-Real-IP"):request.getRemoteAddr()));
 		response.sendRedirect(targetUrl);
 	}
