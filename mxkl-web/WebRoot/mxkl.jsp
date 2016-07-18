@@ -100,8 +100,8 @@ if(request.getHeader("X-Real-IP")!=null&&request.getHeader("X-Real-IP").equals("
 
               width_screen=1.3*document.documentElement.clientWidth;
               divheight=0.17*document.documentElement.clientWidth;
-              document.write("<a id='download' href='Mxklskip?<%=query %>' class='dl-btn hide-text'  style='<%=str3%>;width:50%;height:"+divheight+"px;margin-top:"+width_screen+"px;margin-left:23.5%;'></a>");
-<%--               document.write("<a id='download'  class='dl-btn hide-text'  style='<%=str3%>;width:50%;height:"+divheight+"px;margin-top:"+width_screen+"px;margin-left:23.5%;'></a>"); --%>
+<%--               document.write("<a id='download' href='Mxklskip?<%=query %>' class='dl-btn hide-text'  style='<%=str3%>;width:50%;height:"+divheight+"px;margin-top:"+width_screen+"px;margin-left:23.5%;'></a>"); --%>
+              document.write("<a id='download'  class='dl-btn hide-text'  style='<%=str3%>;width:50%;height:"+divheight+"px;margin-top:"+width_screen+"px;margin-left:23.5%;'></a>");
 
               </script> 
 
@@ -115,13 +115,13 @@ if(request.getHeader("X-Real-IP")!=null&&request.getHeader("X-Real-IP").equals("
                var bg = document.getElementById('for-bg');
                 bg.style.height=width*3.47+'px';
                 
-//                 function forbg(){
-//                 	var href = document.location.href
-//                 	  var num=href.indexOf("?")
-//                 	  var str=href.substr(num+1);
+                function forbg(){
+                	var href = document.location.href
+                	  var num=href.indexOf("?")
+                	  var str=href.substr(num+1);
                 	
-//                 	document.location.href ="Mxklskip?"+str;
-//                 }
+                	document.location.href ="Mxklskip?"+str;
+                }
              
              </script>   
         
