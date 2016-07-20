@@ -61,8 +61,8 @@
              
               <div style="width:100%;height:70%"></div>
              <a href="javascript:jjkf()">            
-             <div id="qhyy">             	
-             </div>
+             <div id="qhyy"></div>
+             <div style="margin-top:10px;text-align:center;">已有100人预约</div>
              </a>
              </div>
          </div>
@@ -115,26 +115,26 @@
          </div> -->
          <div class="fbg1">
              <h2><img src="js&css/ftit.png" alt=""></h2>
-             <div class="ftab-main" id="ftab-0">
-                 <img src="images\wzzs.png" alt="" height="81px" width="185px">
-                 <span><img src="images\rwzs.png" alt=""></span>
+             <div class="ftab-main" id="ftab-0" style="z-index:0;">
+                 <img src="images\wzfs.png" alt="" height="68px" width="140px">
+                 <span style="width:825px;height:395px;background:url(images/rwfs.png) left center;top:-92px;"></span>
                  <p>拥有高伤害法术输出和群打击能力，团战中扮演着一个主力输出的角色。法师技能极尽炫丽，操作相对简单。升级刷怪，团战控场，无所不能。选择法师必定成为队友坚实的后盾，用实力承担起应有的责任。</p>
              </div>
              <div class="ftab-main" id="ftab-1" style="display: none;">
-                 <img src="images\wzzs.png" alt="" height="81px" width="185px">
-                 <span><img src="images\rwzs.png" alt=""></span>
+                 <img src="images\wzzs.png" alt="" height="68px" width="140px">
+                 <span style="left:430px"><img src="images\rwzs.png" ></span>
                  <p>战士血量值高，攻击爆发能力强。战士的特质奠定了他是团队中的主力先锋的地位，无论是PVP还是PVE战士的表现都是那么勇猛无敌。选择战士就要近身搏杀，万军之中取敌将首级！</p>
              </div>
              <div class="ftab-main" id="ftab-2" style="display: none;">
-                 <img src="HomePage_files/daoshi.png" alt="" height="81px" width="185px">
-                 <span><img src="HomePage_files/ds-p.png" alt=""></span>
+                 <img src="images\wzds.png" alt="" height="68px" width="140px">
+                 <span style="left:468px"><img src="images\rwds.png" alt="人物道士"></span>
                  <p>拥有多种多样的技能，火，毒，嗜血，召唤骷髅与神兽协同作战。远程高伤害输出，配合毒的运用，随从宝宝的追击，使得道士成为战场上的幽灵杀手。灵活的跑位，神出鬼没的狙击向世人展现出道士的本色。</p>
              </div>
-             <div class="ftab-conl">
+             <div class="ftab-conl" style="position:absolute;z-index:1;margin-top:20px;">
                 <ul>
-                   <li>法师</li>
-                   <li>战士</li>
-                   <li>道士</li>
+                   <li id="l0"></li>
+                   <li id="l1"></li>
+                   <li id="l2"></li>
                 </ul>
              </div>
          </div>

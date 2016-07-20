@@ -48,7 +48,7 @@ else{
     </div>
 </div>
 <!--视频弹出内容 end-->        
-<div class="nWrap" style="background:url(images/fbg.jpg) center top no-repeat;">
+<div class="nWrap" style="background:url(images/body_bg3.jpg) center top no-repeat;">
   	<div class="header"></div> 
             <div class="nWrapper" >
                 <div class="nW_top">
@@ -92,7 +92,7 @@ else{
                                   $.ajax({
                                     type: "GET",
                                       url: "/lyxm.xtonegame.com/news?type=0&pagenum="+<%=pageid%>+"&count=10",
-                                      data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
+                                    //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
                                                   //$('#resText').empty();   //清空resText里面的所有内容

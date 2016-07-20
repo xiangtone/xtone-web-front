@@ -99,12 +99,12 @@ i,em{font-style:normal;}
 .download_ewm img{margin:14px 0 0 15px;}
 .download_btn1{width:245px;height:80px; float:left; margin:0 0 0 12px;background:url(../images/download_adH.png) left top no-repeat;}
 .download_btn1 a{width:245px;height:80px; float:left;}
-.download_btn1 a:hover{background:url(../images/download_adC.png) left top no-repeat;}
+.download_btn1 a:hover{background:url(../images/dlandroidh.png) left top no-repeat;}
 .download_btn2{width:245px;height:80px; float:left; margin:11px 0 0 12px;background:url(../images/download_iosH.png) left top no-repeat;}
 .download_btn2 a{width:245px;height:80px; float:left;}
-.download_btn2 a:hover{background:url(../images/download_iosC.png) left top no-repeat;}
+.download_btn2 a:hover{background:url(../images/dliosh.png) top no-repeat;}
 
-.fr_ewm_wx{background:url(../images/erweimabg.png) no-repeat 0 0;width:170px;height:231px;z-index: 1001; position: fixed; right: 2%; top:50%; margin-top: -92px;}
+.fr_ewm_wx{background:url(../images/erweimabg.png) no-repeat 0 0;width:140px;height:231px;z-index: 1001; position: fixed; right: 2%; top:50%; margin-top: -92px;}
 
 .w_main{width:990px;height:1400px; float:left;}
 .con1{width:990px;height:288px; float:left;background:url(../images/con1_bg2.jpg) left top no-repeat;}
@@ -163,8 +163,8 @@ i,em{font-style:normal;}
 .zy_word p em{min-width:10px; line-height:35px; float:left;font-size:13px;color:#e1d0bf;}
 
 .bh{width:210px;height:290px; float:left; margin-left:1px;}
-.bh a{width:210px;height:290px; float:left;background:url(../images/jmbhbg.png) no-repeat;}
-.bh a:hover{width:210px;height:290px; float:left;background:url(../images/jmbhhvbg.png) no-repeat;}
+.bh a{width:210px;height:290px; float:left;background:url(../images/jmbhbg.jpg) no-repeat;}
+.bh a:hover{width:210px;height:290px; float:left;background:url(../images/jmbhhvbg.jpg) no-repeat;}
 .ch{width:210px;height:266px; float:left; border:1px #3d2822 solid; background-color:#2e170f; padding:10px;}
 .ch_tit{width:210px;height:28px; float:left;}
 .ch_con{width:210px;height:120px; float:left;}

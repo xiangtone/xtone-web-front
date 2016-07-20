@@ -123,7 +123,7 @@ public class News extends HttpServlet {
 	            	   
 	               }
 
-	  
+	               System.out.println(array.toString());
 	               response.getWriter().write(array.toString());
 
 	         } catch (Exception e) {
