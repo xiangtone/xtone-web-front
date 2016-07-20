@@ -607,7 +607,7 @@ a:hover{text-decoration:none;}
 		<a class="pop_close sp pa" href="javascript:showDialog.hide()" title="关闭"></a>
 	</div>
 </div>
-
+<script src="js&css/qhyy.js"></script>
 <script src="js&css/jquery-1.js"></script>
 <script src="js&css/yanzhengma.js"></script>
 <script src="js&css/ZeroClipboard.js"></script>

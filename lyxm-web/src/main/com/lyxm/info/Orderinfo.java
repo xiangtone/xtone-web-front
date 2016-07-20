@@ -1,0 +1,32 @@
+package com.lyxm.info;
+
+public class Orderinfo {
+private long phoneNum;
+private int codeNum;
+private long invitePhoneNum;
+private long addTime;
+public long getPhoneNum() {
+	return phoneNum;
+}
+public void setPhoneNum(long phoneNum) {
+	this.phoneNum = phoneNum;
+}
+public int getCodeNum() {
+	return codeNum;
+}
+public long getAddTime() {
+	return addTime;
+}
+public void setAddTime(long addTime) {
+	this.addTime = addTime;
+}
+public void setCodeNum(int codeNum) {
+	this.codeNum = codeNum;
+}
+public long getInvitePhoneNum() {
+	return invitePhoneNum;
+}
+public void setInvitePhoneNum(long invitePhoneNum) {
+	this.invitePhoneNum = invitePhoneNum;
+}
+}

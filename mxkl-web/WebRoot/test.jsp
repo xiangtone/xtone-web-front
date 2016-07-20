@@ -1,3 +1,12 @@
+<%@page import="java.net.InetAddress"%>
+<%@page import="org.mxkl.service.LogInsert"%>
+<%@page import="org.mxkl.service.Log"%>
+<%@page import="java.io.BufferedWriter"%>
+<%@page import="java.io.OutputStreamWriter"%>
+<%@page import="java.io.OutputStream"%>
+<%@page import="java.io.BufferedReader"%>
+<%@page import="java.io.InputStreamReader"%>
+<%@page import="java.io.InputStream"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -5,31 +14,29 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title></title>
-<script charset="gb2312" type="text/javascript" src="js/jquery(mixNIE).last.js"></script>
-     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript"></script><script src="http://web.xdcdn.net/xd/assets.php?js=/vendor/js/jquery-1.10.2.min.js,/vendor/fancybox/2_1_5/jquery.fancybox.pack.js,/js/layout/xd.js?!,/js/layout/wx_api_config.js?!,/../game/template/js/elements/wechat_share.js?1454485317,/vendor/fastclick/lib/fastclick.js,/js/layout/share.js?!,/../game/hsqj/js/index-mobile.js?1446082823"></script>    <script>
-        if(typeof FastClick !== 'undefined') {
-            FastClick.attach(document.body);
-        }
-    </script>
 </head>
 <body>
-<a href="1" onClick="pgvSendClick({hottag:'a'});">地方</a>
+<% 
+request.setCharacterEncoding("utf-8");
+InputStream is =	request.getInputStream();
+InputStreamReader isr = new InputStreamReader(is);
+BufferedReader br = new BufferedReader(isr);
+String gamename = br.readLine();
 
+System.out.println(gamename);
+br.close();
 
+OutputStream os = response.getOutputStream();
+OutputStreamWriter osw = new OutputStreamWriter(os);
+BufferedWriter bw = new BufferedWriter(osw);
+bw.write("{\"msg\":\"right\"}");
+bw.flush();
 
+bw.close();
 
-<A onclick="pgvSendClick({hottag:'ISD.SHOW.BANNER.TT'});"  href="http://js.alixixi.com">dfdfdsfd</A>
-<script>
-// alert(1)
-function a(user,pwd){ //use constructor
-	this.user=user;
-	this.pwd=pwd;
-// 	this.get=get;
-	alert(0)
-	return this;
-	} 
-	var bb = new a(1,2);
-	alert(bb.user)
-</script>
+out.clear();  
+out = pageContext.pushBody();
+ 
+%>
 </body>
 </html>

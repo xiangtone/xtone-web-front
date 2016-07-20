@@ -28,6 +28,20 @@ onload = function () {
                     "#EEEE00"
                 ]
             });
+            document.getElementById("yySubmit").addEventListener("click", function () {
+            	var sMobile = document.all("mobile").value;
+            	if(/^1[3|4|5|7|8][0-9]\d{8}$/.test(sMobile)){ 
+            		if(code2.verify(document.getElementById("code2").value)){
+            			code2.update.call(code2);
+            			commit();
+            			
+            		}else{
+            			alert("图片验证码错误")
+            		}
+            		}
+            } );
+            
+            
             document.getElementById("yzms").addEventListener("click", function () {
             	var waitTime = 60;
 			    var dj = null;
@@ -36,6 +50,7 @@ onload = function () {
             	var sMobile = document.all("mobile").value;
             	if(/^1[3|4|5|7|8][0-9]\d{8}$/.test(sMobile)){ 
             		if(code2.verify(document.getElementById("code2").value)){
+            			
             			window.setInterval(function daojishi(){
             				if(waitTime == 0){
     			            flag = true;
@@ -49,7 +64,7 @@ onload = function () {
     			            $(".yzm").html('还剩' + waitTime + '秒');
     			        } },1000);
             			 $("#yzms").attr("onclick",false);
-            			   
+            			 sentCode(); 	   
             		} else{
             			alert("验证码错误");
             			
