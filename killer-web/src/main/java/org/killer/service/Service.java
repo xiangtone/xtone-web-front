@@ -70,7 +70,7 @@ public static int viewEachten(JspWriter out,int page,int num,String sql2){
   	  try {
   		  
 			out.println("<a class=\"cat-list no-break\" href=\"content.jsp?id="+newslist2.get(i).getId()+"\">"
-					+  "<span class=\"label label-gg\">"+newslist2.get(i).getCatalog().substring(5)+"</span>"
+					+  "<span class=\"label label-gg\">"+newslist2.get(i).getCatalog().substring(4)+"</span>"
 			         +"<span class=\"title \">"+newslist2.get(i).getTitle()+"</span>"
 			        + "<span class=\"size-small primary-note-color time\">"+sdf.format( newslist2.get(i).getAddTime())+"</span>"+"</a>");
 			

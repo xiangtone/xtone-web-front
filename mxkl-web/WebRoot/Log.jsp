@@ -9,25 +9,26 @@
 </head>
 <body>
 <script type="text/javascript">
-// 	   var data = "mxkl"
-// 	   var date = '{"starttime":"","endtime":"","appkey":"","channel":"","entries":""}';
+	   var data = "mxkl"
+	   var date = '{"starttime":"","endtime":"","appkey":"","channel":"","entries":""}';
+	   var date2={test:"msg"};
            
-// 			$.ajax({
-// 				type : "post",
-// 				url : "servlet.jsp",
-// 				async : false,
-// 				data :data,
-// 				dataType : "text",
-// 				success : function(msg) {
-// 					alert("成功")
+			$.ajax({
+				type : "post",
+				url : "test.jsp",
+				async : false,
+				data :data,
+				dataType : "json",
+				success : function(msg) {
+					alert(msg.msg)
 			      		
 					
-// 				},
-// 				error : function(XMLHttpRequest, textStatus, errorThrown) {
-// 				   alert(errorThrown)
+				},
+				error : function(XMLHttpRequest, textStatus, errorThrown) {
+				   alert(errorThrown)
 					
-// 				}
-// 			});
+				}
+			});
 			
 		
 		
