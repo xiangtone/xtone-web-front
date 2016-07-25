@@ -5,6 +5,13 @@ private long phoneNum;
 private int codeNum;
 private long invitePhoneNum;
 private long addTime;
+private String gift;
+public String getGift() {
+	return gift;
+}
+public void setGift(String gift) {
+	this.gift = gift;
+}
 public long getPhoneNum() {
 	return phoneNum;
 }
