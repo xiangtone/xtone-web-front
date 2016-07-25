@@ -1,3 +1,10 @@
+<%@page import="org.common.util.ConnectionService"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -11,14 +18,22 @@
     <script type="text/javascript" src="js&css/slide.htm"></script>
     <script type="text/javascript" src="js&css/placeholderfriend.js"></script>
     <script type="text/javascript" src="js&css/jquery.js"></script>
-	<title>灵域仙魔</title>	
+	<title>灵域仙魔</title>
+	 <script type="text/javascript">
+
+              width_screen=document.documentElement.clientWidth;
+              bodyheight=1.555*document.documentElement.clientWidth;
+            
+   </script> 
+	
+	
+		
 	<script type="text/javascript">    
     window.onerror = function () { return true; }    
     </script>   
     <script type="text/javascript">
     function jjkf(){
-    	alert("即将开放，敬请期待！");
-    	
+    	window.location.href="qhyy.jsp";    	
     	
     }
     
@@ -62,7 +77,40 @@
               <div style="width:100%;height:70%"></div>
              <a href="javascript:jjkf()">            
              <div id="qhyy"></div>
-             <div style="margin-top:10px;text-align:center;">已有100人预约</div>
+             <% 
+            
+         	Connection con = null;
+         	PreparedStatement ps = null;
+         	ResultSet rs = null;
+         	String exchange = "";
+         	int rowCount=0;
+         	try{
+         		con = ConnectionService.getInstance().getConnectionForLocal();   		
+         		String sql = "SELECT COUNT(1) rowCount FROM tbl_orders_users";
+         		ps = con.prepareStatement(sql);
+         		rs = ps.executeQuery();
+         		while(rs.next()){
+         		rowCount = rs.getInt("rowCount");
+         		}         		
+         	}catch(Exception e){
+         		e.printStackTrace();
+         	}finally{
+         		if (con != null) {
+         			try {
+         				con.close();
+         			} catch (Exception e) {
+         				// TODO Auto-generated catch block
+         				e.printStackTrace();
+         			}
+         		}
+         	
+         	}
+             
+             
+             %>
+             
+             
+             <div style="margin-top:10px;text-align:center;">已有<%=rowCount %>人预约</div>
              </a>
              </div>
          </div>
@@ -116,25 +164,39 @@
          <div class="fbg1">
              <h2><img src="js&css/ftit.png" alt=""></h2>
              <div class="ftab-main" id="ftab-0" style="z-index:0;">
-                 <img src="images\wzfs.png" alt="" height="68px" width="140px">
+             <table><tr>
+			<td><img src="images\conxy.png";border=0;height=68px;width=140px></td>
+			<td>&nbsp&nbsp&nbsp&nbsp</td>
+			<td><img src="images/xydw.png" border=5;padding-left=20px></td>
+			</tr></table>
+               <!--   <img src="images\conxy.png" alt="" height="68px" width="140px">
+                 <img alt="" src="images/xydw.png" float:left> -->
                  <span style="width:825px;height:395px;background:url(images/rwfs.png) left center;top:-92px;"></span>
-                 <p>拥有高伤害法术输出和群打击能力，团战中扮演着一个主力输出的角色。法师技能极尽炫丽，操作相对简单。升级刷怪，团战控场，无所不能。选择法师必定成为队友坚实的后盾，用实力承担起应有的责任。</p>
+                 <p>战场上最强大的杀手！手持法杖，掌控元素之力，高群攻伤害！技能多，依靠高超的技巧与风骚的走位更是让敌人眼花缭乱！</p>
              </div>
              <div class="ftab-main" id="ftab-1" style="display: none;">
-                 <img src="images\wzzs.png" alt="" height="68px" width="140px">
+                  <table><tr>
+			<td><img src="images\conkz.png";border=0;height=68px;width=140px></td>
+			<td>&nbsp&nbsp&nbsp&nbsp</td>
+			<td><img src="images/kzdw.png" border=5;padding-left=20px></td>
+			</tr></table>
                  <span style="left:430px"><img src="images\rwzs.png" ></span>
-                 <p>战士血量值高，攻击爆发能力强。战士的特质奠定了他是团队中的主力先锋的地位，无论是PVP还是PVE战士的表现都是那么勇猛无敌。选择战士就要近身搏杀，万军之中取敌将首级！</p>
+                 <p>战场上的先锋，手持利剑，勇闯敌阵！PK节奏爽快！1V1单挑很少有人能够完全正面的击败他！！</p>
              </div>
              <div class="ftab-main" id="ftab-2" style="display: none;">
-                 <img src="images\wzds.png" alt="" height="68px" width="140px">
+                  <table><tr>
+			<td><img src="images\conjl.png";border=0;height=68px;width=140px></td>
+			<td>&nbsp&nbsp&nbsp&nbsp</td>
+			<td><img src="images/jldw.png" border=5;padding-left=20px></td>
+			</tr></table>
                  <span style="left:468px"><img src="images\rwds.png" alt="人物道士"></span>
-                 <p>拥有多种多样的技能，火，毒，嗜血，召唤骷髅与神兽协同作战。远程高伤害输出，配合毒的运用，随从宝宝的追击，使得道士成为战场上的幽灵杀手。灵活的跑位，神出鬼没的狙击向世人展现出道士的本色。</p>
+                 <p>战场上最强大的杀手！手持法杖，掌控元素之力，高群攻伤害！技能多，依靠高超的技巧与风骚的走位更是让敌人眼花缭乱！</p>
              </div>
              <div class="ftab-conl" style="position:absolute;z-index:1;margin-top:20px;">
                 <ul>
-                   <li id="l0"></li>
-                   <li id="l1"></li>
-                   <li id="l2"></li>
+                   <li id="l0"><a id="a0" class="" href="javascript:void(0);"></a></li>
+                   <li id="l1"><a id="a1" class="" href="javascript:void(0);"></a></li>
+                   <li id="l2"><a id="a2" class="" href="javascript:void(0);"></a></li>
                 </ul>
              </div>
          </div>
@@ -192,6 +254,8 @@
                var num = $(this).index();
                $('.ftab-main').hide();
                $('#ftab-'+num).show();
+               $('.ftab-conl li a').removeClass("on2");
+               $('.ftab-conl li a#a'+num).addClass("on2");	
             });
         });
 </script>

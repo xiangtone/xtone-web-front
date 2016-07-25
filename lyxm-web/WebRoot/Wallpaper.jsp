@@ -34,7 +34,7 @@ else{
 	Integer tem = Integer.valueOf(request.getParameter("pagenum")); 
 	pageid = tem.intValue();
 }
-	System.out.print(pageid);
+	
 %>
 
     <!--视频弹出内容 start-->
@@ -64,8 +64,8 @@ else{
 <div class="movBtn"><a class="popcl" href="http://sdo-shabake.com/video"></a></div>
                 </div>
                 <div class="conNav">
-                    <span>精彩活动</span>
-                    <em><a href="http://sdo-shabake.com/index">官网首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a>精彩活动</a></em>
+                    <span>精美壁纸</span>
+                    <em><a href="http://sdo-shabake.com/index">官网首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a>精美壁纸</a></em>
                 </div>
                 <div class="nW_main">
                     <div class="conMain">
@@ -74,29 +74,30 @@ else{
                             <div class="nNewsTit">
                                 <ul>
                                 
-                                <li class="" id="nli_0"><a href="Events.jsp" class="roll_t" title="">精彩活动</a></li>                               
+                                <li class="" id="nli_0"><a href="Wallpaper.jsp" class="roll_t" title="">精美壁画</a></li>                               
                                 </ul>
                             </div>
                             <div class="nNews_xian"><div class="red2" style="left:106px;"></div></div>
                             <div class="h_15"></div>
                             <!-- 新闻类别按钮 结束-->
                             <!-- 新闻列表 开始-->
-                            <div id="news_0" style="display:block;" class="list">
+                            <div id="news_0" style="display:block;" class="wallpaperMain">
                             <ul>
                               <script type="text/javascript">
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "/lyxm.xtonegame.com/news?type='wallpaper'&count=9",
+                                      url: "/lyxm.xtonegame.com/wallpaper?type='wallpaper'&page="+<%=pageid %>+"&count=9",
                                       data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),content:$("#content").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
                                                   //$('#resText').empty();   //清空resText里面的所有内容
                                                   var html = '';
-                                                  $.each(data, function(commentIndex, comment){
-                                                	  
-                                                      html+='<li><span><img src="'+comment['content']+'"/></span><em><a target="_blank" href="'+comment['content']+'">'+
-                                                      		'1080x1920</a>|<a target="_blank" href="">720x1280</a></em></li>'
+                                                  $.each(data, function(commentIndex, comment){     
+                                                	  var hrefurl=comment['content'].split(";",2);
+
+                                                      html+='<li><span><img src="'+hrefurl[0]+'"/></span><em><a target="_blank" href="'+hrefurl[0]+'">'+
+                                                      		'1080x1920</a>|<a target="_blank" href="'+hrefurl[1]+'">720x1280</a></em></li>'
                                                   })
                                      $('#news_0 ul').html(html);
                                    }
@@ -115,14 +116,14 @@ else{
                              out.print("&nbsp<span class='de_prev'>上一页&nbsp </span>");
                              }else{
                             	 pagen=pageid-1;
-                            	 out.print("&nbsp<a href='/lyxm.xtonegame.com/Events.jsp?pagenum="+pagen+"&count=10'>上一页&nbsp </a>");
+                            	 out.print("&nbsp<a href='/lyxm.xtonegame.com/Wallpaper.jsp?pagenum="+pagen+"&count=9'>上一页&nbsp </a>");
                              }  
                              
                            %>
                            <% 
                            		                          
                            pagen=pageid+1;
-                      	   out.print("&nbsp<a href='/lyxm.xtonegame.com/Events.jsp?pagenum="+pagen+"&count=10'>下一页&nbsp </a>");
+                      	   out.print("&nbsp<a href='/lyxm.xtonegame.com/Wallpaper.jsp?pagenum="+pagen+"&count=9'>下一页&nbsp </a>");
                            
                            %>
                                         

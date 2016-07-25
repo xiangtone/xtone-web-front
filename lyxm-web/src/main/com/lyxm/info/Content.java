@@ -104,8 +104,8 @@ public class Content extends HttpServlet {
 //	                          "jdbc:mysql://192.168.1.152:3306/cms_lyxm", "root", "123456");   
 	        	 conn= ConnectionService.getInstance().getConnectionForLocal();
 	               stmt = conn.createStatement();   
-	               String sqlsel="SELECT id,title,"+catalog_sql+",content,lastModifyTime,title FROM tbl_cms_contents where id= "+contentId+" and catalog='"+contentType+"'";
-	              
+	               String sqlsel="SELECT id,title,"+catalog_sql+",content,FROM_UNIXTIME(lastModifyTime/1000,'%Y-%m-%d %h:%i:%s') as lastModifyTime,title FROM tbl_cms_contents where id= "+contentId+" and catalog='"+contentType+"'";
+	               
 	               System.out.println(sqlsel);
 	               rs = stmt.executeQuery(sqlsel);
 	               ResultSetMetaData metaData = rs.getMetaData();               

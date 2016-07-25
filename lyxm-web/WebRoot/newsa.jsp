@@ -48,7 +48,7 @@ else{
     </div>
 </div>
 <!--视频弹出内容 end-->        
-<div class="nWrap" style="background:url(images/fbg.jpg) center top no-repeat;">
+<div class="nWrap" style="background:url(images/body_bg3.jpg) center top no-repeat;">
 <div class="header"></div> 
             <div class="nWrapper" >
                 <div class="nW_top">
@@ -91,7 +91,7 @@ else{
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "/lyxm.xtonegame.com/news?type=1&pagenum="+<%=pageid%>+"&count=20",
+                                      url: "/lyxm.xtonegame.com/news?type=1&pagenum="+<%=pageid%>+"&count=15",
                                       data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -123,14 +123,14 @@ else{
                              out.print("&nbsp<span class='de_prev'>上一页&nbsp </span>");
                              }else{
                             	 pagen=pageid-1;
-                            	 out.print("&nbsp<a href='/lyxm.xtonegame.com/newsa.jsp?type=1&pagenum="+pagen+"'>上一页&nbsp </a>");
+                            	 out.print("&nbsp<a href='/lyxm.xtonegame.com/newsa.jsp?type=1&pagenum="+pagen+"&count=15'>上一页&nbsp </a>");
                              }  
                              
                            %>
                            <% 
                            		                          
                            pagen=pageid+1;
-                      	   out.print("&nbsp<a href='/lyxm.xtonegame.com/newsa.jsp?type=1&pagenum="+pagen+"'>下一页&nbsp </a>");
+                      	   out.print("&nbsp<a href='/lyxm.xtonegame.com/newsa.jsp?type=1&pagenum="+pagen+"&count=15'>下一页&nbsp </a>");
                            
                            %>
                                         

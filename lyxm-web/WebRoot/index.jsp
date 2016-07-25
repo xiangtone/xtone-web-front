@@ -44,7 +44,7 @@
 
     </script>   
 <style>
-.download_btn2{background:url(http://img.m.duoku.com/cimages/img/20436/20436.png) left top no-repeat;}
+
         .roll_l{left: 150px;}
         .slogan{display: none;}
 </style>
@@ -131,9 +131,9 @@
                 <div class="download_ewm"></div>
 
 			<div class="download_btn1">
-				<a href="http://uri6.com/YnmAZf" style="cursor：pointer;background:url(images/dlandroid.png) top no-repeat;"></a></div>
-                <div class="download_btn2">
-                    <a href="http://uri6.com/2euqUv" style="cursor:pointer;background:url(images/dlios.png) top no-repeat;"></a>
+				<a href="" style="cursor：pointer;"></a></div>
+            <div class="download_btn2">
+                    <a href="" style="cursor:pointer;"></a>
                 </div>
             </div>
         </div>
@@ -326,7 +326,7 @@
                        		<li><a class="nav_b2" href="javascript:void(0);"></a></li>
                    		</ul>
                     </div>
-                    <div style="display:block;" class="zy_con zy_bg1">
+                    <div style="display:block;" class="zy_con zy_bg0">
                         <div class="zy_p">
                             <div class="zy_tit">
                             <span><img src="images/zyjs.png" style="top:20px">&nbsp职业介绍</span>
@@ -334,14 +334,16 @@
                             <div class="h_10"></div>
                             <div class="zy_word">
                             	<p>
-                                	<span>狂战</span>
-                                    <em>warrior</em>
+                                	<span>逍遥</span>
+                                    <em>&nbsp<img src="images/zyjsxybq.png"/></em>
                                 </p>
-                                <p>战场上的先锋，手持利剑，勇闯敌阵！PK节奏爽快！1V1单挑很少有人能够完全正面的击败他！！</p>
+                             
+                                 <p>战场上最强大的杀手！手持法杖，掌控元素之力，高群攻伤害！技能多，依靠高超的技巧与风骚的走位更是让敌人眼花缭乱！</p>
+                            
                             </div>
                         </div>
                     </div>
-                    <div class="zy_con zy_bg2">
+                    <div class="zy_con zy_bg1">
                         <div class="zy_p">
                             <div class="zy_tit">
                             	<span><img src="images/zyjs.png" style="top:20px">&nbsp职业介绍</span>
@@ -350,14 +352,14 @@
                             <div class="h_10"></div>
                             <div class="zy_word">
                             	<p>
-                                	<span>逍遥</span>
+                                	<span>狂战</span>
                                     <em>wizard</em>
                                 </p>
-                                <p>战场上最强大的杀手！手持法杖，掌控元素之力，高群攻伤害！技能多，依靠高超的技巧与风骚的走位更是让敌人眼花缭乱！</p>
+                                 <p>战场上的先锋，手持利剑，勇闯敌阵！PK节奏爽快！1V1单挑很少有人能够完全正面的击败他！！</p>
                             </div>
                         </div>
                     </div>
-                    <div class="zy_con zy_bg1">
+                    <div class="zy_con zy_bg2">
                         <div class="zy_p">
                            	<div class="zy_tit">
                             	<span><img src="images/zyjs.png" style="top:20px">&nbsp职业介绍</span>

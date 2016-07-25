@@ -91,7 +91,7 @@ else{
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "/lyxm.xtonegame.com/news?type=0&pagenum="+<%=pageid%>+"&count=10",
+                                      url: "/lyxm.xtonegame.com/news?type=0&pagenum="+<%=pageid%>+"&count=15",
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -123,14 +123,14 @@ else{
                              out.print("&nbsp<span class='de_prev'>上一页&nbsp </span>");
                              }else{
                             	 pagen=pageid-1;
-                            	 out.print("&nbsp<a href='/lyxm.xtonegame.com/News.jsp?type=0&pagenum="+pagen+"&count=10'>上一页&nbsp </a>");
+                            	 out.print("&nbsp<a href='/lyxm.xtonegame.com/News.jsp?type=0&pagenum="+pagen+"&count=15'>上一页&nbsp </a>");
                              }  
                              
                            %>
                            <% 
                            		                          
                            pagen=pageid+1;
-                      	   out.print("&nbsp<a href='/lyxm.xtonegame.com/News.jsp?type=0&pagenum="+pagen+"&count=10'>下一页&nbsp </a>");
+                      	   out.print("&nbsp<a href='/lyxm.xtonegame.com/News.jsp?type=0&pagenum="+pagen+"&count=15'>下一页&nbsp </a>");
                            
                            %>
                                         

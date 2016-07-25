@@ -41,11 +41,11 @@ public class Wallpaper extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-	      String str_sql="WHERE catalog ='wallpaper' ";
+	      String str_sql=" WHERE catalog ='wallpaper' ";
 		
 		  String contentType =request.getParameter("type"); //每页条数
 		  if(contentType==null){
-			  contentType="news"; 			  
+			  contentType="Wallpaper"; 			  
 		  }
 		  
 		  String pageId =request.getParameter("page"); //页码
@@ -66,7 +66,10 @@ public class Wallpaper extends HttpServlet {
 	         
 	         
 	         try {
-
+	        	 	
+	        	  Integer coutint = 9;		
+	    		  Integer pageint = Integer.valueOf(pageId);
+	    		 int allcount=coutint.intValue()*(pageint.intValue()-1);
 //	               Class.forName("com.mysql.jdbc.Driver");
 //
 //	                conn = DriverManager.getConnection(
@@ -75,7 +78,8 @@ public class Wallpaper extends HttpServlet {
 	        	   Integer countall = (Integer.valueOf(pageId)-1)*9;	
 	        	   conn= ConnectionService.getInstance().getConnectionForLocal();
 	               stmt = conn.createStatement();   
-	               String sqlsel="SELECT id,title,catalog,content,lastModifyTime,title FROM tbl_cms_contents"+str_sql+" limit "+countall+",9";
+	               String sqlsel="SELECT id,title,catalog,content,FROM_UNIXTIME(lastModifyTime/1000,'%Y-%m-%d %h:%i:%s') as lastModifyTime,title FROM tbl_cms_contents"+str_sql+" limit "+allcount+",9";
+	               System.out.println(sqlsel);
 	               rs = stmt.executeQuery(sqlsel);
 	               ResultSetMetaData metaData = rs.getMetaData();               
 	               int columnCount=metaData.getColumnCount();

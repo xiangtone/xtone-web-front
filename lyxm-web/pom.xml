@@ -150,7 +150,7 @@
 				<runtime.env>config\lyxm</runtime.env>
 				<final.name>lyxm.xtonegame.com</final.name>
 				<ftp.server.id>HYServer</ftp.server.id>
-				<ftp.to.url>ftp://121.40.137.243/lyxm/swap_dir</ftp.to.url>
+				<ftp.to.url>ftp://121.40.125.15/lyxm.xtonegame.com/swap_dir</ftp.to.url>
 			</properties>
 			<activation>
 				<activeByDefault>true</activeByDefault>

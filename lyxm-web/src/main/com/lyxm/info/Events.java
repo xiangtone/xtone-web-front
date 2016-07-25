@@ -77,7 +77,7 @@ public class Events extends HttpServlet {
 //	                          "jdbc:mysql://192.168.1.152:3306/cms_lyxm", "root", "123456");   
 	        	 conn= ConnectionService.getInstance().getConnectionForLocal();
 	               stmt = conn.createStatement();   
-	               String sqlsel="SELECT id,'精彩活动' as catalog,CONCAT(SUBSTRING(tbl_cms_contents.lastModifytime,1,4),'-',SUBSTRING(tbl_cms_contents.lastModifytime,5,2)) as lastModifyTime,title FROM tbl_cms_contents "+str_sql+" ORDER BY priority DESC limit "+allcount+","+newscount;
+	               String sqlsel="SELECT id,'精彩活动' as catalog,FROM_UNIXTIME(lastModifyTime/1000,'%m-%d') as lastModifyTime,title FROM tbl_cms_contents "+str_sql+" ORDER BY priority DESC limit "+allcount+","+newscount;
 	               //System.out.println(sqlsel);
 	               rs = stmt.executeQuery(sqlsel);
 	               ResultSetMetaData metaData = rs.getMetaData();               

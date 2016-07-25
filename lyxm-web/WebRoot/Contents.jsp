@@ -40,7 +40,7 @@
     </div>
 </div>
 <!--视频弹出内容 end-->        
-<div class="nWrap" style="background:url(images/fbg.jpg) center top no-repeat;">
+<div class="nWrap" style="background:url(images/body_bg3.jpg) center top no-repeat;">
 <div class="header"></div> 
             <div class="nWrapper" >
                 <div class="nW_top">

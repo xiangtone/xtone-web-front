@@ -1,3 +1,23 @@
+<%@page import="org.common.util.ConnectionService"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
+<%@ page import="com.lyxm.info.Counter" %>
+<%    
+	Counter CountFileHandler=new Counter();//创建对象    
+	      int count=0;    
+	  if(application.getAttribute("count")==null){    
+		  count=CountFileHandler.readFile(request.getRealPath("/")+"count.txt");//读取文件获取数据赋给count    
+		  application.setAttribute("count",new Integer(count));  }  
+	      count=(Integer)application.getAttribute("count");  
+	     /*  if(session.isNew()) */
+	    	 count++;  
+	      application.setAttribute("count",count);  
+	      CountFileHandler.writeFile(request.getRealPath("/")+"count.txt",count);//更新文件记录
+%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -7,10 +27,8 @@
 <meta name="robots" content="all">
 <meta name="author" content="Tencent-CP">
 <meta name="Description" content="《全民斗战神》是由《斗战神》原班团队倾力打造的腾讯3D动作手游钜制。连击、浮空、闪避！极具操控感的操作系统，挑战操作极限！拳拳到肉，真实场景反馈，让你领略极致的打击快感！首创七十二变玩法，突破职业桎梏，一次成长，玩遍所有职业！ ">
-<meta name="Keywords" content="全民斗战神，全民斗战神官网，全民斗战神攻略，全民斗战神下载，斗战神，斗战，战斗，动作，格斗，手游，网游，移动游戏，arpg，角色扮演，西游，西游记，大圣归来，反叛西游，悟空传，3D，2.5D，全视角，无锁定，灵猴，齐天大圣，龙女
-"><!-- 设计：cp  | 重构：cp | 创建：2016/05/09 | 更新：| 团队博客：http://tgideas.qq.com/ -->
-<title>斗心未泯  战火不熄-全民斗战神 官方网站-腾讯游戏</title>
-<script>
+<title>灵域仙魔</title>
+<!-- <script>
 (function(){
 	var a=navigator.userAgent;
 	if(-1!=a.indexOf("iPhone")||-1!=a.indexOf("iPad")||-1!=a.indexOf("iPod")||-1!=a.indexOf("Android")){
@@ -18,11 +36,17 @@
 		if(-1<a.indexOf("baidu.com")||-1<a.indexOf("sogou.com")||-1<a.indexOf("haosou.com")||-1<a.indexOf("hao76.com"))
 			if(a=void 0,window.sessionStorage)sessionStorage.setItem("channel","seo");
 			else{var a=a||0,b="";0!=a&&(b=new Date,b.setTime(b.getTime()+1E3*a),b="; expires="+b.toGMTString());document.cookie="channel="+escape("seo")+b+"; path=/"}self.location="/m/"}})();</script>
-<link rel="stylesheet" href="qhyy_files/comm.css">
+ -->
+  <script type="text/javascript">
+
+              width_screen=document.documentElement.clientWidth;
+              bodyheight=document.documentElement.clientWidth;
+              
+       </script> 
 
 <style>
 /* reset */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
 table{border-collapse:collapse;border-spacing:0}
 address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal}
 ol,ul{list-style:none}
@@ -35,12 +59,12 @@ fieldset,img,abbr,acronym{border:0}
 .c:before,.c:after {content:"";display:table}
 .c:after {clear:both}
 .c {zoom:1}
-body {font:12px/1.5;font-family:"\5FAE\8F6F\96C5\9ED1";padding-top:42px;text-align:justify;background-color: #200e0c;}
+body {font:12px/1.5;font-family:"\5FAE\8F6F\96C5\9ED1";text-align:justify;background:url(images/orderbg.jpg)top center no-repeat;}
 a{text-decoration:none;overflow:hidden;}
 a:hover{text-decoration:none;}
-.wrap,.flash_box{width: 100%;min-width: 1000px;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1002?'1000px':'');}
+.wrap,.flash_box{width: 100%;min-width: 1000px;}
 .wrap{width: 100%;min-width:1000px;}
-.wrap{background:url(http://game.gtimg.cn/images/qmdzs/cp/a20160509gwyy/rp.jpg) no-repeat 50% 0;}
+.wrap{background:url() no-repeat;}
 .wrap .container,.flash_box .container{width:1000px;margin:0 auto;}
 .pr{position:relative;}
 .pa{position:absolute;}
@@ -50,11 +74,11 @@ a:hover{text-decoration:none;}
 .db{display:block;text-indent:-999em;}
 :focus{outline: none;}
 .foot-cpright{min-width: 960px!important;}
-.sp,.ico-topbtn,.txt-topbtn,.gift_list li .bx_num{background: url(http://game.gtimg.cn/images/qmdzs/cp/a20160509gwyy/sp.png) no-repeat;}
+.sp,.ico-topbtn,.txt-topbtn,.gift_list li .bx_num{background: url() no-repeat;}
 /*foot*/
 
 /*head*/
-.head{background: url(http://game.gtimg.cn/images/qmdzs/cp/a20160509gwyy/hd.jpg) no-repeat;height: 509px;}
+.head1{background: url() no-repeat;height: 400px;}
 .logo{width: 190px;height: 121px;top:20px;left:0;z-index: 88;background: url(images/flogo.png) no-repeat;}
 .btn-home{top: 30px;right: 10px;width: 125px;height: 42px;padding: 7px 18px 0 10px;}	
 .ico-topbtn{float: left;background-position: 0 -60px;width: 35px;height: 35px;}
@@ -64,13 +88,21 @@ a:hover{text-decoration:none;}
 .btn-home:hover .txt-topbtn{animation:swingright 0.5s 0s ease-out both;-webkit-animation:swingright 0.5s 0s ease-out both;}
 
 /*content*/
-.content{background: url(http://game.gtimg.cn/images/qmdzs/cp/a20160509gwyy/ct.jpg) no-repeat;}
-.content1{background: url(http://game.gtimg.cn/images/qmdzs/cp/a20160509gwyy/ct1.jpg) no-repeat 0 1000px;height: 2240px;}
-.box1{padding-top: 253px;}
-.box1 a,.yy_b_btn{left:370px;bottom:10px;display: block;width: 266px;height: 99px;background-position: 0 -117px;margin: 0px auto;animation:zoomIn 0.5s 0s ease-out both;-webkit-animation:zoomIn 0.5s 0s ease-out both;}
+.content{background: url() no-repeat;}
+.content1{background: url() no-repeat 0 1000px;}
+.box1{padding-top: 400px;}
+
+.box1 a,.yy_b_btn1{left:150px;bottom:40px;display: block;width: 500;height: 111px;animation:zoomIn 0.5s 0s ease-out both;-webkit-animation:zoomIn 0.5s 0s ease-out both;}
+
+.box1 a,.yy_b_btn{left:270px;bottom:-1px;display: block;width: 500;height: 111px;background:url("images/btnorder.png");animation:zoomIn 0.5s 0s ease-out both;-webkit-animation:zoomIn 0.5s 0s ease-out both;}
+.box1 a,.yy_b_btn:hover{background:url("images/btnorderh.png");}
+
+
+
 .btn_ht{height: 99px;}
+.btn_ht1{height: 59px;}
 .num{font-size: 16px;color: #e0bc93;text-align: center;padding-top: 20px;}
-.num span{color: #fff2e3;margin: 0px 4px;}
+.num span{color:red;margin: 0px 4px;}
 
 .box2{height: 275px;}
 .jdt_bg{width: 1000px;height: 270px;background: url(http://game.gtimg.cn/images/qmdzs/cp/a20160509gwyy/jdt.png) no-repeat;}
@@ -98,9 +130,9 @@ a:hover{text-decoration:none;}
 .box3{padding: 40px 0px 110px;}
 .suc_yy{text-align:center;font-size: 16px;color: #ad8c62;line-height: 20px;}
 .bx_frame{width: 460px;height: 235px;margin:0px auto;}
-.bx_pot{width: 346px;height: 235px;margin: 0 auto;cursor: pointer;}
+.bx_pot{width: 346px;height: 235px;margin: 0 auto;cursor: pointer;background:url(images/libaoxiang.png) center no-repeat;}
 .hand{display: block;width: 52px;height: 65px;background-position:  -280px -155px;left: 210px;top:103px;cursor: pointer;}
-.lq_gift_btn{left:140px;bottom:-45px;display: block;width: 188px;height: 32px;background-position: 0 -296px;}
+.lq_gift_btn{left:120px;bottom:-45px;display: block;width: 237px;height: 35px;background:url(images/huoqulibao.png) center no-repeat;}
 .bx_fc{left: 335px;top:-25px;display: none;}
 .box4{padding-top: 65px;}
 .gift_list{padding-left: 1px;}
@@ -109,15 +141,16 @@ a:hover{text-decoration:none;}
 .gift_list li.z_index2{z-index: 20;}
 .gift_list li.z_index3{z-index: 10;}
 .gift_list li.mr{margin-right: 0px;}
-.gift_list li .bx_num{position:absolute;width: 148px;height: 43px;background-position: -192px -5px;font-size: 22px;color: #fbdb9d;font-weight: bold;text-align: center;
-						line-height: 36px;left: 94px;top: 20px;}
-.gift_list li a{position:absolute;left:115px;bottom:10px;display: block;width: 100px;height: 30px;font-size: 16px;color: #ffb454;text-align: center;line-height: 30px;
+.gift_list li .bx_num{height: 43px;font-size: 22px;color: #fbdb9d;font-weight: bold;text-align: center;
+						line-height: 36px;left: 94px;t}
+.gift_list li a{display: block;height: 30px;font-size: 16px;color: #ffb454;text-align: center;line-height: 30px;
 					text-decoration: underline;}
-.gift_list li .gift_fc{position: absolute;top:16px;left: 244px;display: none;}				
-.gift_list li .suc_fd{position:absolute;top:70px;left: 0px;width: 330px;font-size: 16px;font-weight: bold;color: #ad8c62;text-align: center;}
+.gift_list li .gift_fc{position: absolute;top:16px;left: 244px;display: none;}
+.gift_list li img{height:200px;width:240px;top:100px;left: 20px;}				
+.gift_list li .suc_fd{width: 330px;font-size: 16px;font-weight: bold;color: #ad8c62;text-align: center;}
 .gift_list li .suc_fd em{font-style:normal;color: #fdcd59;font-weight: bold;}
-					
-.yq_frid{display:block;width: 264px;height: 59px;background-position: 0 -227px;margin:32px auto 0px;}
+.gift_list li  table{text-align:center}					
+.yq_frid{position:relative;left:50%;margin-left:-220px;display:block;width: 441px;height: 93px;background:url("images/yqfrd.png") top center no-repeat;}
 .ck_yq{text-align: center;font-size: 16px;color: #e0bc93;}
 .ck_yq a{font-size: 16px;color: #e0bc93;line-height: 30px;text-decoration: underline;margin-left:10px;}
 .ck_yq a:hover{text-decoration: underline;}
@@ -134,7 +167,7 @@ a:hover{text-decoration:none;}
 .fc_tab td{font-size: 14px;color: #2f270f;height: 24px;line-height: 24px;text-align: left;}
 .fc p{padding-top:5px;width:180px;font-size:14px;color: #6f623c;margin: 0px auto;}
 .fc i{left:-12px;bottom:10px;display: block;width: 12px;height: 19px;background-position: -288px -124px;}
-.flash_box{left: 0px;top:42px;width: 100%;height:870px;z-index: 9;}
+.flash_box{left: 0px;top:42px;width: 100%;height:800px;z-index: 9;margin-top:-30px;}
 .flash_box .container{left: 50%;top: 0;margin-left: -500px;height: 100%;}
 .login{left:0;bottom:120px;width: 1000px;text-align: center;font-size: 14px;color: #ffffff;line-height: 14px;}
 .login a{color: #FCEDC1;margin:0px 5px;}
@@ -245,17 +278,22 @@ a:hover{text-decoration:none;}
 .pop8_tl{text-align: left;padding-left: 280px;}
 </style>
 <style media="screen" type="text/css">#flash {visibility:hidden}#fsh {visibility:hidden}</style><link type="text/css" rel="stylesheet" href="qhyy_files/ost.css"><script charset="gb2312" type="text/javascript" src="qhyy_files/cgi_official_website.htm"></script><script charset="gb2312" type="text/javascript" src="qhyy_files/data.js"></script><script charset="gb2312" type="text/javascript" src="qhyy_files/data.js"></script><script charset="gb2312" type="text/javascript" src="qhyy_files/data.js"></script><script src="qhyy_files/report.htm" type="text/javascript"></script></head>
-<body style="padding-top: 42px;">
+<body style="width:100%;height:auto">
 <!--头部flash-->
 <div class="flash_box pa">
-	<object style="visibility: visible;" id="fsh" data="qhyy_files/fsh.swf" type="application/x-shockwave-flash" height="100%" width="100%"><param value="noscale" name="scale"><param value="transparent" name="wmode"><param value="middle" name="align"><param value="true" name="allowFullscreen"><param value="always" name="allowScriptAccess"></object>
+	
 	<div class="container pa">
-		<a href="http://qmdzs.qq.com/main.shtml" class="btn-home db pa sp" target="_blank" title="进入官网" ontouchstart="pgvSendClick({hottag:'a20160509gwyy.link.guanwang'});">
-        	<i class="ico-topbtn"></i>
-        	<span class="txt-topbtn">进入官网</span>
-	    </a>
-		<a href="javascript:;" class="yy_b_btn sp pa" ontouchstart="pgvSendClick({hottag:'a20160509gwyy.btn.yuyue'});"></a>	
-		<a href="http://qmdzs.qq.com/main.shtml" title="全民斗战神" target="_blank" class="logo pa"></a>
+			<div class="yy_b_btn1 sp pa" style="margin-left:40px;margin-bottom:20px;">
+            <table><tr>
+			<td><img src="images\xian_left.png";border=0;height=68px;width=140px></td>
+			<td><img src="images/sep_first.png"></td>
+			<td><img src="images/xian_right.png" border=0;padding-left=20px></td>
+			</tr>
+			</table>
+			</div>
+		
+		
+		<a href="javascript:;" class="yy_b_btn sp pa" ontouchstart="pgvSendClick({hottag:'a20160509gwyy.btn.yuyue'});"></a>
 		<div class="login pa">
 		
 		</div>
@@ -264,7 +302,7 @@ a:hover{text-decoration:none;}
 
 <div class="wrap">
 	<div class="container">
-		<div class="head pr">
+		<div class="head1 pr">
 			<h1 class="hide">斗心未泯  战火不熄</h1>
 		   <a href="http://qmdzs.qq.com/" class="logo db pa" target="_blank" title="全民斗战神">全民斗战神</a>
 			
@@ -272,24 +310,41 @@ a:hover{text-decoration:none;}
 		<div class="content">
 		<div class="content1">
 			<div class="box1">
-				<div class="btn_ht"></div>
-				<p class="num">已有 <span>248478</span> 人预约</p>
-			</div>
-			<div class="box2">
-				<div class="jdt_bg">
-					<!--当前状态样式分别为on1、on2、on3、on4-->
-					<div class="jdt_list pr c on1">
-						<p class="p1 wd1">斗战王者集结 </p>
-						<p class="p2 wd2">大IP新英雄首发</p>
-						<p class="p3 wd3">真七十二变玩法</p>
-						<p class="p4 wd4">不删档倒计时</p>
-						<div class="st"><object style="visibility: visible;" id="flash" data="qhyy_files/flash.swf" type="application/x-shockwave-flash" height="100%" width="100%"><param value="noscale" name="scale"><param value="transparent" name="wmode"><param value="middle" name="align"><param value="true" name="allowFullscreen"><param value="always" name="allowScriptAccess"></object></div>
-						<a href="javascript:;" class="jdt_pt pt_dzw" onclick="TGDialogS('pop9')"></a>
-						<a href="javascript:;" class="jdt_pt d_ip" onclick="TGDialogS('pop9')"></a>
-						<a href="javascript:;" class="jdt_pt z_st" onclick="TGDialogS('pop9')"></a>
-						<a href="javascript:;" class="jdt_pt b_sd" onclick="TGDialogS('pop9')"></a>
-					</div>
-				</div>
+							
+    <% 
+            
+         	Connection con = null;
+         	PreparedStatement ps = null;
+         	ResultSet rs = null;
+         	String exchange = "";
+         	int rowCount=0;
+         	try{
+         		con = ConnectionService.getInstance().getConnectionForLocal();   		
+         		String sql = "SELECT COUNT(1) rowCount FROM tbl_orders_users";
+         		ps = con.prepareStatement(sql);
+         		rs = ps.executeQuery();
+         		while(rs.next()){
+         		rowCount = rs.getInt("rowCount");
+         		}         		
+         	}catch(Exception e){
+         		e.printStackTrace();
+         	}finally{
+         		if (con != null) {
+         			try {
+         				con.close();
+         			} catch (Exception e) {
+         				// TODO Auto-generated catch block
+         				e.printStackTrace();
+         			}
+         		}
+         	
+         	}
+             
+             
+             %>
+				
+				
+				<p class="num" style="font-size:30px;color:red">已有 <span><%=rowCount %></span> 人预约</p>
 			</div>
 			<div class="box3">
 				<p class="suc_yy">成功预约即可获得</p>
@@ -323,32 +378,30 @@ a:hover{text-decoration:none;}
 					</div>
 				</div>
 			</div>
-			<div class="box5">
-				<div class="box5_con c">
-					<div class="box5_frm">
-						<img src="qhyy_files/dd_logo.jpg" height="100" width="180">
-						<a href="javascript:;" class="rcv_q sp"></a>
-						<!--p class="lg_dsp">滴滴 老用户121元满减券 新用户130元满减券大礼包</p-->
-					</div>
-					<div class="box5_frm">
-						<img src="qhyy_files/xc_logo.jpg" height="100" width="180">
-						<a href="javascript:;" class="rcv_q sp"></a>
-						<!--p class="lg_dsp">携程200元满减券的大礼包</p-->
-					</div>
-					<div class="box5_frm bd_rit">
-						<img src="qhyy_files/dz_logo.jpg" height="100" width="180">
-						<a href="javascript:;" class="rcv_q sp"></a>
-						<!--p class="lg_dsp">大众点评新用户20元的立减通用券</p-->
-					</div>
-				</div>
-			</div>
+			
+		
 			<div class="box4">
+			<div class="" style="margin-left:80px;margin-bottom:20px;">
+            <table><tr>
+			<td><img src="images\xian_left.png";border=0;height=68px;width=140px></td>
+			<td style="font-size:48;color:#2e2323;">邀请好友，仙盟争霸</td>
+			<td><img src="images/xian_right.png" border=0;padding-left=20px></td>
+			</tr>
+			</table>
+			</div>
 				<ul class="gift_list c">
 					<li class="z_index1">
-						<img src="qhyy_files/bx_gift1.jpg" height="274" width="330">
-						<p class="bx_num">高级宝匣  </p>
-						<a href="javascript:;">领取礼包</a>
-						<div class="suc_fd">成功邀请<em>3名</em>好友</div>
+					
+					
+					<table>
+					<tr><td><p class="bx_num">高级宝匣  </p></td></tr>
+					<tr><td><div class="suc_fd">成功邀请<em>3名</em>好友</div></td></tr>
+					<tr><td><img src="images/gaojibaoxiang.png"></td></tr>
+					<tr><td><a href="javascript:;">领取礼包</a></td></tr>
+					
+					
+					</table>
+						
 						<div class="gift_fc">
 							<div class="fc pr">
 								<table class="fc_tab">
@@ -374,11 +427,14 @@ a:hover{text-decoration:none;}
 							</div>
 						</div>
 					</li>
-					<li class="z_index2">
-						<img src="qhyy_files/bx_gift2.jpg" height="274" width="330">
-						<p class="bx_num">豪华宝匣 </p>
-						<a href="javascript:;">领取礼包</a>
-						<div class="suc_fd">成功邀请<em>5名</em>好友</div>
+					<li class="z_index2">	
+					<table>
+					<tr><td><p class="bx_num">豪华宝匣</p></td></tr>
+					<tr><td><div class="suc_fd">成功邀请<em>3名</em>好友</div></td></tr>
+					<tr><td><img src="images/haohuabaoxiang.png"></td></tr>
+					<tr><td><a href="javascript:;">领取礼包</a></td></tr>					
+					</table>					
+					
 						<div class="gift_fc">
 							<div class="fc pr">
 								<table class="fc_tab fc_b_tab">
@@ -405,10 +461,12 @@ a:hover{text-decoration:none;}
 						</div>
 					</li>
 					<li class="mr z_index3">
-						<img src="qhyy_files/bx_gift3.jpg" height="274" width="330">
-						<p class="bx_num">至尊宝匣 </p>
-						<a href="javascript:;">领取礼包</a>
-						<div class="suc_fd">成功邀请<em>10名</em>好友</div>
+					<table>
+					<tr><td><p class="bx_num">至尊宝匣</p></td></tr>
+					<tr><td><div class="suc_fd">成功邀请<em>3名</em>好友</div></td></tr>
+					<tr><td><img src="images/zhizunbaoxiang.png"></td></tr>
+					<tr><td><a href="javascript:;">领取礼包</a></td></tr>					
+					</table>	
 						<div class="gift_fc">
 							<div class="fc pr">
 								<table class="fc_tab fc_b_tab">
@@ -435,8 +493,10 @@ a:hover{text-decoration:none;}
 						</div>
 					</li>
 				</ul>
+				<p>&nbsp</p>
 				<a href="javascript:;" class="yq_frid sp"></a>
-				<p class="ck_yq">已邀请了<span>0</span>人<a href="javascript:;">查看</a></p>
+				<p>&nbsp</p>
+				<p class="ck_yq">您是第<span><%=count %></span>位访客</p>
 				<div class="ewm_frame">
 					<ul class="ewm_list c">
 						<li>
@@ -474,7 +534,7 @@ a:hover{text-decoration:none;}
     			<tr>
     				<td class="tr">手机号码：</td>
     				<td><input class="txt pl" id="mobile" type="text"></td>
-    				<td><a id="yzms" href="javascript:;" class="yzm">发送验证码</a></td>
+    				<td><button id="yzms" href="javascript:;" class="yzm">发送验证码</button></td>
     			</tr>
     			<tr>
     				<td class="tr">验证码：</td>
@@ -616,7 +676,6 @@ a:hover{text-decoration:none;}
 <script src="js&css/loadjs.js"></script>
 <script src="js&css/report.js"></script>
 <script src="js&css/swfobject.js"></script>
-<script id="gfooter" src="js&css/foot.js" charset="gbk"></script><div class="foot foot-dark"><div class="container"><div class="foot-cpright clear tool-tpline"><div class="f-left foot-logos"><a href="http://ieg.tencent.com/" title="腾讯互动娱乐" class="foot-logos-game" target="_blank">腾讯互动娱乐</a></div><ul class="f-right foot-links"><li><a target="_blank" href="http://ieg.tencent.com/">腾讯互动娱乐</a> <span class="foot-sprt">|</span> <a target="_blank" href="http://www.qq.com/contract.shtml">服务条款</a> <span class="foot-sprt">|</span> <a target="_blank" href="http://adver.qq.com/">广告服务</a> <span class="foot-sprt">|</span> <a target="_blank" href="http://game.qq.com/hr/">腾讯游戏招聘</a> <span class="foot-sprt">|</span> <a target="_blank" href="http://service.qq.com/">腾讯游戏客服</a> <span class="foot-sprt">|</span> <a target="_blank" href="http://tgact.qq.com/">游戏活动</a> <span class="foot-sprt">|</span> <a target="_blank" href="http://game.qq.com/gnav/">游戏地图</a> <span class="foot-sprt">|</span> <a target="_blank" href="http://game.qq.com/portal2010/business.htm">商务合作</a> <span class="foot-sprt">|</span> <a target="_blank" href="http://www.qq.com/">腾讯网</a> <span class="foot-sprt">|</span> <a target="_blank" href="http://www.qq.com/map/">网站导航</a></li><li class="f-right"><a target="_blank" href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm">腾讯公司版权所有</a></li><li>COPYRIGHT &#169; 1998 - 2016 TENCENT. ALL RIGHTS RESERVED.</li><li><a target="_blank" href="http://www.qq.com/culture.shtml">粤网文[2014]0633-233号</a><span class="foot-sprt"> | </span><a target="_blank" href="http://game.qq.com/culture2.htm">新出网证（粤）字010号</a></li></ul></div></div></div>
 <script>
 $(".yy_b_btn").on('click', function(){
 	TGDialogS("pop1");
@@ -685,10 +744,7 @@ function closeDialog(){
 }
 
 // 通用Top和统计
-milo.addEvent(window,'load',function(){
-	loadScript("http://ossweb-img.qq.com/images/js/title.js",function(){ostb_int()},"");
-	loadScript("http://pingjs.qq.com/ping_tcss_ied.js",function(){if(typeof(pgvMain) == 'function')pgvMain();});
-});
+
 
 </script><div style="position: absolute; left: -9999px; top: -9999px; width: 15px; height: 15px; z-index: 9999;" data-clipboard-ready="true" class="global-zeroclipboard-container" id="global-zeroclipboard-html-bridge">      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="global-zeroclipboard-flash-bridge" height="100%" width="100%">         <param name="movie" value="http://qmdzs.qq.com/cp/a20160509gwyy/ZeroClipboard.swf?nocache=1467597531174">         <param name="allowScriptAccess" value="sameDomain">         <param name="scale" value="exactfit">         <param name="loop" value="false">         <param name="menu" value="false">         <param name="quality" value="best">         <param name="bgcolor" value="#ffffff">         <param name="wmode" value="transparent">         <param name="flashvars" value="">         <embed src="qhyy_files/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="global-zeroclipboard-flash-bridge" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="" scale="exactfit" height="100%" width="100%">                </object></div>
 
@@ -697,6 +753,6 @@ milo.addEvent(window,'load',function(){
 
 
 <script type="text/javascript" src="js&css/dr.js">
-</script><script type="text/javascript" src="qhyy_files/eas.js"></script><script type="text/javascript" src="qhyy_files/dr.htm"></script><script src="qhyy_files/qmdzs_002.htm" type="text/javascript"></script><div style="position: absolute; top: -500px;" id="ost_box" class="ost_box ost_bg"><ul class="ost_inner ost_lsn"><li class="ost_logo ost_h40 ost_fl ost_bg"><a href="http://game.qq.com/?ADTAG=IED.InnerCop.gameWeb.topNav" target="_blank" class="ost_blnk ost_hdn" title="腾讯游戏十周年">腾讯游戏十周年</a></li><li id="ost_g" class="ost_ad ost_h40 ost_fl"><img style="display: block;" class="ost_nb" id="ost_go" src="qhyy_files/681161346_1380723443_1467283547_230_40.jpg" alt=""></li><li class="ost_total ost_ml10 ost_fr"><h3 class="ost_title ost_h40" id="ost_t">腾讯游戏排行榜<i class="ost_icon_arrow ost_bg"></i><sup class="ost_icon_reddot" id="ost_rank_v"></sup></h3><div class="ost_pop" id="ost_p"></div></li><li class="ost_fr ost_log ost_bg" id="ost_log"><ul class="ost_fl ost_lsn ost_info ost_bg ost_h40"><li id="log" class="ost_fl ost_login"><a href="http://ptlogin2.qq.com/pt4_web_jump?daid=37&amp;appid=21000601&amp;pt4_token=&amp;succ_url=http%3A%2F%2Figame%2Eqq%2Ecom%2Fcenter%2Findex%2Ephp%3Ffirst%3D1%26gid%3D237%26ADTAG%3Dgameweb%2Eqmdzs%2Enavigation%2EToCommunity" target="_blank" class="ost_loglnk">官方社区</a></li><li class="ost_fl ost_bg ost_gift"><a class="ost_gifturl ost_loglnk" href="http://ptlogin2.qq.com/pt4_web_jump?daid=37&amp;appid=21000601&amp;pt4_token=&amp;succ_url=http%3A%2F%2Figame%2Eqq%2Ecom%2Fcenter2%2Fgift%2Findex%2Ephp%3Fgid%3D237%26ADTAG%3Dgameweb%2Eqmdzs%2Enavigation%2Egift" target="_blank">礼包</a></li></ul></li></ul><div style="display: none;" id="ost_d" class="ost_big"><a href="http://ac.o2.qq.com/php/click.php?loc_id=119_0d8e2b9df01ce2966bb5d8dd52e865e1&amp;sch_id=425&amp;ad_id=23258&amp;mtr_id=239400&amp;gid=107182&amp;tag=0&amp;link_to=http%3A%2F%2Fwuxia.qq.com%2Fcp%2Fa20160616obt%2F%3Ftype%3D4%26ADTAG%3Dmedia.o2qqfree.topbanner.topbannerbigpic.o2-107182.0.239400&amp;algo_type=6&amp;expos_id=10.213.136.89_1467597532_5345658&amp;frq=2&amp;sub_adtag=" target="_blank"><img class="ost_nb" src="qhyy_files/1752770989_1844342311_1467283547_970_185.jpg" alt="" height="185" width="970"></a></div></div><div style="height: 0px; overflow: hidden;"><object id="storage" data="qhyy_files/ajaxcdr.swf" type="application/x-shockwave-flash" height="0" width="0"><param name="movie" value="/comm-htdocs/js/milo/ajaxcdr.swf?0.39461597700867435"><param name="quality" value="high"><param name="swliveconnect" value="true"><param name="pluginurl" value="http://www.macromedia.com/go/getflashplayer"><param name="pluginspage" value="http://www.macromedia.com/go/getflashplayer"><p>You need Flash for this. Get the latest version from <a href="http://www.macromedia.com/software/flashplayer/">here</a>.</p></object></div><div tabindex="-1" role="dialog" style="margin: -22px 0px 0px -120px; padding: 10px 20px; border: 1px solid rgb(51, 153, 255); background-color: rgb(204, 255, 255); display: none; visibility: visible; position: fixed; z-index: 9999; left: 50%; top: 50%;" id="_PopupMsg_"><img src="qhyy_files/load.gif"><span style="margin-left:5px;font-size:12px;display:inline-table;vertical-align:middle;color:222222;">数据正在提交中，请勿刷新页面...</span></div><div style="background-color: rgb(230, 245, 255); border-top: 1px solid rgb(230, 245, 255); position: absolute; height: 2879px; z-index: 9998; width: 100%; left: 0px; top: 0px; opacity: 0.7; display: none;" id="_overlay_">
-</div></body></html>
+</script><script type="text/javascript" src="qhyy_files/eas.js"></script><script type="text/javascript" src="qhyy_files/dr.htm"></script><script src="qhyy_files/qmdzs_002.htm" type="text/javascript"></script>
+</body></html>
 <!--[if !IE]>|xGv00|a32fc438b3db8df74339a1f3d57bde83<![endif]-->
