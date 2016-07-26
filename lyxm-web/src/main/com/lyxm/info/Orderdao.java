@@ -26,6 +26,7 @@ public class Orderdao {
 				orderinfo.setCodeNum(rs.getInt("codeNum"));
 				orderinfo.setInvitePhoneNum(rs.getLong("invitePhonenum"));
 				orderinfo.setAddTime(rs.getLong("addTime"));
+				orderinfo.setGift(rs.getString("gift"));
 				return orderinfo;
 			}
 		} catch (Exception e) {
@@ -50,11 +51,12 @@ public class Orderdao {
 	    ResultSet rs = null;
 		try {
 			con = ConnectionService.getInstance().getConnectionForLocal();
-			ps = con.prepareStatement("insert into tbl_orders_users values(?,?,?,?)");
+			ps = con.prepareStatement("insert into tbl_orders_users values(?,?,?,?,?)");
 		    ps.setLong(1, order.getPhoneNum());
 		    ps.setInt(2, order.getCodeNum());
 		    ps.setLong(3, order.getInvitePhoneNum());
 		    ps.setLong(4, order.getAddTime());
+		    ps.setString(5, order.getGift());
 		    ps.execute();
 			
 		} catch (Exception e) {
@@ -75,4 +77,32 @@ public class Orderdao {
 	    return 1;
 	}	
 	
+	public int updateGift(Orderinfo order){
+		PreparedStatement ps = null;
+	    Connection con = null;
+	    ResultSet rs = null;
+		try {
+			con = ConnectionService.getInstance().getConnectionForLocal();
+			ps = con.prepareStatement("update tbl_orders_users set gift=? where id = ?");
+			ps.setString(1, order.getGift());
+			ps.setLong(2, order.getPhoneNum());
+			ps.executeLargeUpdate();
+            
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			return 0;
+		}finally{
+			if (con != null) {
+				try {
+					con.close();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+
+		}
+	    return 1;
+	}	
 }
