@@ -105,4 +105,35 @@ public class Orderdao {
 		}
 	    return 1;
 	}	
+	
+	public int count(String phone){
+		PreparedStatement ps = null;
+	    Connection con = null;
+	    ResultSet rs = null;
+		try {
+			con = ConnectionService.getInstance().getConnectionForLocal();
+			ps = con.prepareStatement("SELECT COUNT(*) as s FROM `tbl_orders_users` WHERE invitepHOnenum = ?");
+			ps.setString(1, phone);
+			rs = ps.executeQuery();
+			if(rs.next()){
+			return rs.getInt("s");
+			}
+		} catch (Exception e) {
+			return 0;
+			
+		}finally{
+			if (con != null) {
+				try {
+					con.close();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+           return 0;
+		}
+	   
+		
+		
+	}
 }

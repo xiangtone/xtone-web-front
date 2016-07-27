@@ -14,7 +14,73 @@
             			    }    
 
 onload = function () {
-	
+	  var container2dl = document.getElementById("vCode2dl");
+      var code2dl = new vCode(container2dl, {
+          len: 6,
+          bgColor: "#444444",
+          colors: [
+              "#DDDDDD",
+              "#DDFF77",
+              "#77DDFF",
+              "#99BBFF",
+              "#7700BB",
+              "#EEEE00"
+          ]
+      });
+      document.getElementById("yySubmitdl").addEventListener("click", function () {  
+      	var sMobile = document.all("mobiledl").value; 
+      	if(/^1[3|4|5|7|8][0-9]\d{8}$/.test(sMobile)){ 
+      		if(code2dl.verify(document.getElementById("code2dl").value)){  
+      			code2dl.update.call(code2dl);
+      			commitdl();
+      			
+      		}else{
+      			alert("图片验证码错误")
+      		}
+      		}
+      } );
+      document.getElementById("yzmsdl").addEventListener("click", function () {
+      	var waitTime = 60;
+		    var dj = null;
+		    var flag = true;
+		    //发送验证码倒计时
+      	var sMobile = document.all("mobiledl").value;
+      	if(/^1[3|4|5|7|8][0-9]\d{8}$/.test(sMobile)){ 
+//      		if(code2.verify(document.getElementById("code2").value)){
+//      			
+      		$("#yzmsdl").html('还剩' + 60 + '秒'+'可重新发送');
+	            $("#yzmsdl").css("background","#D3D3D3");
+	            $("#yzmsdl").attr("disabled", "disabled");
+      			var valid = setInterval(function daojishi(){
+      				if(waitTime == 0){
+			            flag = true;
+			            $("#yzmsdl").html('重新发送');
+			            clearInterval(valid);
+			            waitTime = 60;
+			            $("#yzmsdl").css("background","#ffd244");
+			            $("#yzmsdl").attr("disabled", false);
+			        } else {
+			            waitTime--;
+			            flag = false;
+			            $("#yzmsdl").html('还剩' + waitTime + '秒'+'可重新发送');
+			            $("#yzmsdl").css("background","#D3D3D3");
+			            $("#yzmsdl").attr("disabled", "disabled");
+			        } },1000);
+      			 
+      			 sentCodedl(); 	   
+//      		} else{
+//      			alert("验证码错误");
+//      			
+//      		}
+      		
+      	}
+      	else{
+      		alert("请输入正确手机号");
+      		
+      	}
+      	
+         
+      });
             var container2 = document.getElementById("vCode2");
             var code2 = new vCode(container2, {
                 len: 6,
@@ -24,7 +90,7 @@ onload = function () {
                     "#DDFF77",
                     "#77DDFF",
                     "#99BBFF",
-                    //"#7700BB",
+                    "#7700BB",
                     "#EEEE00"
                 ]
             });
@@ -49,26 +115,32 @@ onload = function () {
 			    //发送验证码倒计时
             	var sMobile = document.all("mobile").value;
             	if(/^1[3|4|5|7|8][0-9]\d{8}$/.test(sMobile)){ 
-            		if(code2.verify(document.getElementById("code2").value)){
-            			
-            			window.setInterval(function daojishi(){
+//            		if(code2.verify(document.getElementById("code2").value)){
+//            			
+            		$("#yzms").html('还剩' + 60 + '秒'+'可重新发送');
+		            $("#yzms").css("background","#D3D3D3");
+		            $("#yzms").attr("disabled", "disabled");
+            			var valid = setInterval(function daojishi(){
             				if(waitTime == 0){
     			            flag = true;
-    			            $(".yzm").html('重新发送');
-    			            clearInterval(daojishi());
+    			            $("#yzms").html('重新发送');
+    			            clearInterval(valid);
     			            waitTime = 60;
+    			            $("#yzms").css("background","#ffd244");
     			            $("#yzms").attr("disabled", false);
     			        } else {
     			            waitTime--;
     			            flag = false;
-    			            $(".yzm").html('还剩' + waitTime + '秒');
+    			            $("#yzms").html('还剩' + waitTime + '秒'+'可重新发送');
+    			            $("#yzms").css("background","#D3D3D3");
+    			            $("#yzms").attr("disabled", "disabled");
     			        } },1000);
-            			 $("#yzms").attr("onclick",false);
+            			 
             			 sentCode(); 	   
-            		} else{
-            			alert("验证码错误");
-            			
-            		}
+//            		} else{
+//            			alert("验证码错误");
+//            			
+//            		}
             		
             	}
             	else{
@@ -76,7 +148,7 @@ onload = function () {
             		
             	}
             	
-                code2.update.call(code2);
+               
             });
         };
 
@@ -255,9 +327,9 @@ onload = function () {
         dom.style.cssText = [
             "font-size:" + randint(this.options.fontSizeMin, this.options.fontSizeMax) + "px",
             "color:" + this.options.colors[randint(0,  this.options.colors.length - 1)],
-            "position: absolute",
-            "left:" + this.uW*index + "px",
-            "top:" + randint(-10,10) + "px",
+            "position: relative",
+            "left:" + this.uW*index+15 + "px",
+            "top:" + randint(-17,-7) + "px",
             "transform:rotate(" + randint(-30, 30) + "deg)",
             "-ms-transform:rotate(" + randint(-30, 30) + "deg)",
             "-moz-transform:rotate(" + randint(-30, 30) + "deg)",

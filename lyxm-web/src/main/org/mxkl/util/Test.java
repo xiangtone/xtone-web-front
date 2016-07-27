@@ -13,13 +13,9 @@ import com.lyxm.info.Orderinfo;
 public class Test {
 
 	public static void main(String[] args) {
-        String testStr = "qqqqqqqqqqq,xxxxxxxxxxx";  
-        String[] strAry = testStr.split(",");
-        for(String s :strAry){
-        	System.out.println(s);
-        }
-                  
-                
+		 String str="Hello World";  //待判断的字符串
+	        String reg=".*ll.*";  //判断字符串中是否含有特定字符串ll
+	        System.out.println(str.matches(reg));      
 	}
 
 }

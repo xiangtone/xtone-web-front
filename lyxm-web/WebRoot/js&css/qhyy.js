@@ -60,14 +60,61 @@ function commit(){
 		}
 		else{
 		alert("成功预约")
-		document.getElementById("pop1").style.display = 'none'
+		window.location.reload()
+		showDialog.hide()
 		}
 	},function(data){
 		
 		
 	});
-	
-	
-		
-	
  }
+
+function giftAjaxCommit(giftNum){ 
+	 $.ajax({
+			type: "post",
+			contentType: "application/json;charset=utf-8",
+			url:"Present?giftNum="+giftNum,
+	        async:true,
+	        data:JSON.stringify({'a':'b'}),
+	        dataType:"json",
+	        success:function(data){
+	        	if(data.code!=null){
+	        		document.getElementById('kong').style.height='30px'
+	        		document.getElementById('uplbneirong').style.height=''
+	        		document.getElementById('lbneirong').style.textAlign=''	
+	        		document.getElementById('lbneirong').style.marginLeft='50px'
+	        		$('#lbneirong').text("");
+	        		$('#lbneirong').append("恭喜您，</br>成功领取礼包！</br></br>兑换码：<span id=\"cpcode\" style=\"color:red;\">"+data.code+"</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img id=\"fuzhianniu\" src=\"images\\fuzhianniu.png\"></img></br></br>"+
+	        				"请登录游戏输入兑换码兑换礼包，该礼包游戏内均可使用，限兑换1次。</br>"+
+	        				"邀请好友抢号预约，还能获得豪华礼包哦！</br>"+
+	        				"<div style=\"height:30px;\"></div>"
+	        				
+	        		);
+	        		TGDialogS("qxyy");
+	        	}
+	        	if(data.status=='none'){
+	        		TGDialogS("qxyy");
+	        	}
+	        	if(data.status=='cant'){
+	        		document.getElementById('uplbneirong').style.height='108px'
+	        			document.getElementById('lbneirong').style.textAlign='center'	
+	        		$('#lbneirong').text("");
+	        		$('#lbneirong').append(
+	        			 "<span style=\"color:red;\" font-family:'微软雅黑';>您暂未达到领取条件!!!<span>"
+	        		);
+	        		TGDialogS("qxyy");
+	        	}
+	        },
+	        error : function(data){
+	        	alert(data.status)
+	        }
+	 });
+}
+
+document.getElementById("fuzhianniu").addEventListener("click", function () {
+	var clip = new ZeroClipboard.Client();
+	  clip.setHandCursor( true );
+	    clip.setText(document.getElementById('cpcode').value);
+}
+
+);

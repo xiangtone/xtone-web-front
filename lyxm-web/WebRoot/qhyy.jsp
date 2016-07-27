@@ -7,14 +7,22 @@
 <%@page import="java.sql.Connection"%>
 <%@ page import="com.lyxm.info.Counter" %>
 <%    
+
+String phone = null;
+try{
+phone = (String)session.getAttribute("id");}catch(Exception ex){
+	ex.printStackTrace(); 
+}
+
 	Counter CountFileHandler=new Counter();//创建对象    
 	      int count=0;    
-	  if(application.getAttribute("count")==null){    
+	  if(application.getAttribute("count")==null){     
 		  count=CountFileHandler.readFile(request.getRealPath("/")+"count.txt");//读取文件获取数据赋给count    
 		  application.setAttribute("count",new Integer(count));  }  
 	      count=(Integer)application.getAttribute("count");  
+
 	     /*  if(session.isNew()) */
-	    	 count++;  
+	    	 count = count+1;  
 	      application.setAttribute("count",count);  
 	      CountFileHandler.writeFile(request.getRealPath("/")+"count.txt",count);//更新文件记录
 %>
@@ -141,13 +149,13 @@ a:hover{text-decoration:none;}
 .gift_list li.z_index2{z-index: 20;}
 .gift_list li.z_index3{z-index: 10;}
 .gift_list li.mr{margin-right: 0px;}
-.gift_list li .bx_num{height: 43px;font-size: 22px;color: #fbdb9d;font-weight: bold;text-align: center;
+.gift_list li .bx_num{height: 43px;font-size: 22px;color: #500f0f;font-weight: bold;text-align: center;
 						line-height: 36px;left: 94px;t}
 .gift_list li a{display: block;height: 30px;font-size: 16px;color: #ffb454;text-align: center;line-height: 30px;
 					text-decoration: underline;}
 .gift_list li .gift_fc{position: absolute;top:16px;left: 244px;display: none;}
 .gift_list li img{height:200px;width:240px;top:100px;left: 20px;}				
-.gift_list li .suc_fd{width: 330px;font-size: 16px;font-weight: bold;color: #ad8c62;text-align: center;}
+.gift_list li .suc_fd{width: 330px;font-size: 16px;font-weight: bold;color: #6f3818;text-align: center;}
 .gift_list li .suc_fd em{font-style:normal;color: #fdcd59;font-weight: bold;}
 .gift_list li  table{text-align:center}					
 .yq_frid{position:relative;left:50%;margin-left:-220px;display:block;width: 441px;height: 93px;background:url("images/yqfrd.png") top center no-repeat;}
@@ -155,7 +163,7 @@ a:hover{text-decoration:none;}
 .ck_yq a{font-size: 16px;color: #e0bc93;line-height: 30px;text-decoration: underline;margin-left:10px;}
 .ck_yq a:hover{text-decoration: underline;}
 .ewm_frame{padding: 50px 0px 45px;}
-.ewm_list{padding-left:155px;_padding-left:50px;}
+.ewm_list{padding-left:300px;_padding-left:50px;}
 .ewm_list li{float:left;border: 2px solid #73231c;margin-left: 100px;background: #ffffff;}
 .ewm_list li img{display: block;border: none;}
 .ewm_list li p{font-size: 16px;color: #570f0b;text-align: center;line-height: 30px;}
@@ -221,10 +229,10 @@ a:hover{text-decoration:none;}
 /*pop*/
 .dialog{display: none;}
 .pop_con{width: 802px;background: url(http://game.gtimg.cn/images/qmdzs/cp/a20160509gwyy/tc_bg.jpg) no-repeat;border: 2px solid #ffeace;}
-.pop{padding:25px 0px 30px;}
+.pop{padding:0px 0px 20px;} 
 .pop1_tit{width: 226px;height: 46px;background-position: 0 -340px;margin: 0px auto;}
 .pop_tab{margin:20px auto 15px;width: 670px;height: 260px;}
-.pop_tab td{font-size: 24px;color: #fee5bf;}
+.pop_tab td{font-size: 24px;color: black;}
 .pop_tab td.tr{text-align: right;}
 .pop_tab .lh{line-height: 21px;}
 .pop_tab td .radio{float:left;display: block;height: 41px;line-height:41px;background-position: -284px -223px;padding-left: 30px;color: #fee5bf;overflow: hidden;}
@@ -283,9 +291,22 @@ a:hover{text-decoration:none;}
 <div class="flash_box pa">
 	
 	<div class="container pa">
+	<% if(phone==null){
+		out.write("<div style=\"margin-left:85%;color:#666666;font-size:15px;\">您好，请先"+
+				"<a id=\"dlbtn\" href=\"javacript:;\" style=\"color:blue;font-size:15px;\"><u>登录</u></a>"+
+				"</div>");
+		}
+
+	else{
+		out.write("<div style=\"margin-left:85%;color:#666666;font-size:15px;\">"+"<u style=\"color:blue;\">"+phone+"</u>"+",您好"+
+				"</div>");
+	}
+				
+				
+				%>
 			<div class="yy_b_btn1 sp pa" style="margin-left:40px;margin-bottom:20px;">
             <table><tr>
-			<td><img src="images\xian_left.png";border=0;height=68px;width=140px></td>
+			<td><img src="images/xian_left.png";border=0;height=68px;width=140px></td>
 			<td><img src="images/sep_first.png"></td>
 			<td><img src="images/xian_right.png" border=0;padding-left=20px></td>
 			</tr>
@@ -300,11 +321,11 @@ a:hover{text-decoration:none;}
 	</div>
 </div>
 
-<div class="wrap">
+<div class="wrap">  
 	<div class="container">
 		<div class="head1 pr">
 			<h1 class="hide">斗心未泯  战火不熄</h1>
-		   <a href="http://qmdzs.qq.com/" class="logo db pa" target="_blank" title="全民斗战神">全民斗战神</a>
+		   <a href="lyxm.xtonegame.com" class="logo db pa" target="_blank" title="全民斗战神">全民斗战神</a>
 			
 		</div>
 		<div class="content">
@@ -348,7 +369,7 @@ a:hover{text-decoration:none;}
 			</div>
 			<div class="box3">
 				<p class="suc_yy">成功预约即可获得</p>
-				<div class="bx_frame pr">
+				<div class="bx_frame pr" id="lbbtn1">
 					<div class="bx_pot"></div>
 					<span class="hand sp pa"></span>
 					<a href="javascript:;" class="lq_gift_btn pa sp"></a>
@@ -356,23 +377,39 @@ a:hover{text-decoration:none;}
 						<div class="fc pr">
 							<table class="fc_tab">
 								<tbody><tr>
-									<td class="ft">宝匣内容：</td>
-									<td>钻石x88 </td>
+									<td class="ft">宝箱内容：</td>
+									<td>高级金币符*1</td>
 								</tr>
 								<tr>
 									<td></td>
-									<td>金币x8888 </td>
+									<td>中级金币符*2</td>
 								</tr>
 								<tr>
 									<td></td>
-									<td>浪漫值x20 </td>
+									<td>绑定元宝1500</td>
 								</tr>
 								<tr>
 									<td></td>
-									<td>五色石x1888 </td>
+									<td>千年人参*2</td>
+								</tr>
+									<tr>
+									<td></td>
+									<td>三级强化石*5</td>
+								</tr>
+									<tr>
+									<td></td>
+									<td>真龙丹*2</td>
+								</tr>
+									<tr>
+									<td></td>
+									<td>双倍经验符*1</td>
+								</tr>
+									<tr>
+									<td></td>
+									<td>坐骑进阶丹*10</td>
 								</tr>
 							</tbody></table>
-							<p>礼包将于不删档测试期在游戏内发放，请关注官方信息及时注册领取哦</p>
+							<p>礼包在封测公测期间均可使用，兑换限1次，请关注官方信息及时注册领取哦</p>
 							<i class="sp pa"></i>
 						</div>
 					</div>
@@ -394,100 +431,148 @@ a:hover{text-decoration:none;}
 					
 					
 					<table>
-					<tr><td><p class="bx_num">高级宝匣  </p></td></tr>
+					<tr><td><p class="bx_num">高级宝箱  </p></td></tr>
 					<tr><td><div class="suc_fd">成功邀请<em>3名</em>好友</div></td></tr>
-					<tr><td><img src="images/gaojibaoxiang.png"></td></tr>
-					<tr><td><a href="javascript:;">领取礼包</a></td></tr>
+					<tr><td><img id="lbbtn2" src="images/gaojibaoxiang.png"></td></tr>
+<!-- 					<tr><td><a id="lbbtn2" href="javascript:;" style="color:#980c00;">领取礼包</a></td></tr> -->
 					
 					
 					</table>
 						
 						<div class="gift_fc">
 							<div class="fc pr">
-								<table class="fc_tab">
+								<table class="fc_tab fc_b_tab">
 									<tbody><tr>
-										<td class="ft">宝匣内容：</td>
-										<td>钻石x58</td>
+										<td class="ft">宝箱内容：</td>
+										<td>百转招魂药水*10</td>
 									</tr>
 									<tr>
 										<td></td>
-										<td>五色石x888</td>
+										<td>绑定元宝*500</td>
 									</tr>
 									<tr>
 										<td></td>
-										<td>神将碎片x1</td>
+										<td>50W金币</td>
 									</tr>
 									<tr>
 										<td></td>
-										<td>神魔令x5</td>
+										<td>押运令*5</td>
+									</tr>
+										<tr>
+										<td></td>
+										<td>千年人参*5</td>
+									</tr>
+										<tr>
+										<td></td>
+										<td>防御药水*5</td>
+									</tr>
+										<tr>
+										<td></td>
+										<td>赎罪卷轴*5</td>
 									</tr>
 								</tbody></table>
-								<p>礼包将于不删档测试期在游戏内发放，请关注官方信息及时注册领取哦</p>
+								<p>礼包在封测公测期间均可使用，兑换限1次，请关注官方信息及时注册领取哦</p>
 								<i class="sp pa"></i>
 							</div>
 						</div>
 					</li>
 					<li class="z_index2">	
 					<table>
-					<tr><td><p class="bx_num">豪华宝匣</p></td></tr>
-					<tr><td><div class="suc_fd">成功邀请<em>3名</em>好友</div></td></tr>
-					<tr><td><img src="images/haohuabaoxiang.png"></td></tr>
-					<tr><td><a href="javascript:;">领取礼包</a></td></tr>					
+					<tr><td><p class="bx_num">豪华宝箱</p></td></tr>
+					<tr><td><div class="suc_fd">成功邀请<em>5名</em>好友</div></td></tr>
+					<tr><td><img id="lbbtn3" src="images/haohuabaoxiang.png"></td></tr>
+<!-- 					<tr><td><a id="lbbtn3" href="javascript:;" style="color:#980c00;">领取礼包</a></td></tr>					 -->
 					</table>					
 					
 						<div class="gift_fc">
 							<div class="fc pr">
 								<table class="fc_tab fc_b_tab">
 									<tbody><tr>
-										<td class="ft">宝匣内容：</td>
-										<td>钻石x88 </td>
+										<td class="ft">宝箱内容：</td>
+										<td>百转招魂药水*10</td>
 									</tr>
 									<tr>
 										<td></td>
-										<td>五色石x1888</td>
+										<td>绑定元宝*500</td>
 									</tr>
 									<tr>
 										<td></td>
-										<td>修罗碎片x1</td>
+										<td>50W金币</td>
 									</tr>
 									<tr>
 										<td></td>
-										<td>赤脚大仙（紫卡）</td>
+										<td>修为灵丹*5</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>千年人参*5</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>攻击药水*5</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>赎罪卷轴*5</td>
 									</tr>
 								</tbody></table>
-								<p>礼包将于不删档测试期在游戏内发放，请关注官方信息及时注册领取哦</p>
+								<p>礼包在封测公测期间均可使用，兑换限1次，请关注官方信息及时注册领取哦</p>
 								<i class="sp pa"></i>
 							</div>
 						</div>
 					</li>
 					<li class="mr z_index3">
 					<table>
-					<tr><td><p class="bx_num">至尊宝匣</p></td></tr>
-					<tr><td><div class="suc_fd">成功邀请<em>3名</em>好友</div></td></tr>
-					<tr><td><img src="images/zhizunbaoxiang.png"></td></tr>
-					<tr><td><a href="javascript:;">领取礼包</a></td></tr>					
+					<tr><td><p class="bx_num">至尊宝箱</p></td></tr>
+					<tr><td><div class="suc_fd">成功邀请<em>10名</em>好友</div></td></tr>
+					<tr><td><img id="lbbtn4" src="images/zhizunbaoxiang.png"></td></tr>
+<!-- 					<tr><td><a id="lbbtn4" href="javascript:;" style="color:#980c00;">领取礼包</a></td></tr>					 -->
 					</table>	
 						<div class="gift_fc">
 							<div class="fc pr">
 								<table class="fc_tab fc_b_tab">
 									<tbody><tr>
-										<td class="ft">宝匣内容：</td>
-										<td>钻石x108 </td>
+										<td class="ft">宝箱内容：</td>
+										<td>金砖*2</td>
 									</tr>
 									<tr>
 										<td></td>
-										<td>精炼护符x1 </td>
+										<td>绑定元宝*3000</td>
 									</tr>
 									<tr>
 										<td></td>
-										<td>万能碎片x1 </td>
+										<td>高级金币符*5</td>
 									</tr>
 									<tr>
 										<td></td>
-										<td>太上老君（橙卡）</td>
+										<td>修为灵丹*5</td>
+									</tr>
+										<tr>
+										<td></td>
+										<td>声望积分令牌*5</td>
+									</tr>
+										<tr>
+										<td></td>
+										<td>四级强化石*5</td>
+									</tr>
+										<tr>
+										<td></td>
+										<td>赎罪卷轴*10</td>
+									</tr>
+										<tr>
+										<td></td>
+										<td>百转招魂药水*10</td>
+									</tr>
+										<tr>
+										<td></td>
+										<td>坐骑进阶丹*20</td>
+									</tr>
+										<tr>
+										<td></td>
+										<td>双倍经验符*2</td>
 									</tr>
 								</tbody></table>
-								<p>礼包将于不删档测试期在游戏内发放，请关注官方信息及时注册领取哦</p>
+								<p>礼包在封测公测期间均可使用，兑换限1次，请关注官方信息及时注册领取哦</p>
 								<i class="sp pa"></i>
 							</div>
 						</div>
@@ -496,17 +581,14 @@ a:hover{text-decoration:none;}
 				<p>&nbsp</p>
 				<a href="javascript:;" class="yq_frid sp"></a>
 				<p>&nbsp</p>
-				<p class="ck_yq">您是第<span><%=count %></span>位访客</p>
+				<p class="ck_yq">已有<span><%=count %></span>人查看</p>
 				<div class="ewm_frame">
 					<ul class="ewm_list c">
 						<li>
-							<img src="qhyy_files/ewm_1.jpg" height="180" width="187">
+							<img src="images/erweima.png" height="180" width="187">
 							<p>关注微信公众号</p>
 						</li>
-						<li>
-							<img src="qhyy_files/ewm_2.jpg" height="180" width="187">
-							<p>进入官方部落</p>
-						</li>
+					
 					</ul>
 				</div>
 			</div>
@@ -514,15 +596,78 @@ a:hover{text-decoration:none;}
 		</div>
 	</div>
 </div>
-
-<!--点击抢号预约-->
-<div class="dialog" id="pop1">
-    <div class="pop_con pr">
+<!-- 快速登录 -->
+<div class="dialog" id="pop111" role="dialog" tabindex="-1" style="display:none; visibility: visible; position: fixed; z-index: 9999; left: 50%; top: 50%; margin-top: -243px; margin-left: -403px;"> <div style="position:absolute;z-index:10000;margin-top:10px;margin-left:38%;"><img src="images/kuaisudenglu.png"></img></div>
+    <div class="pop_con pr" style="border:0;background-image: url(images/dikuan.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;">
     	<div class="pop">
     		<p class="pop1_tit sp"></p>
     		<table class="pop_tab">
     			<tbody>
+    		
     			<tr>
+    				<td class="tr">手机号码：</td>
+    				<td><input class="txt pl" id="mobiledl" type="text"></td>
+    				<td><button id="yzmsdl" href="javascript:;" class="yzm">发送登录码</button></td>
+    			</tr>
+    						<tr>
+    				<td class="tr">登录码：</td>
+    				<td><input class="txt pl" id="codedl" type="text"></td>
+    				<td></td>
+    			</tr>
+    				<tr>
+    				<td class="tr lh">验证码：</td>
+    				<td class="c">
+    					<input class="txt pl" type="text" id="code2dl">
+    				</td>
+    				<td>
+<div id="vCode2dl" style="width:140px; height: 40px; border: 1px solid #ccc; display: inline-block;"></div>
+    				</td>
+    			</tr>
+<!--     			<tr> -->
+<!--     				<td class="tr">邀请码（选填）：</td> -->
+<!--     				<td><input class="txt pl" id="yqCode" type="text"></td> -->
+<!--     				<td></td> -->
+<!--     			</tr> -->
+    		</tbody></table>
+<!--     		<p class="pop_desp" style="color:999999;">填写好友发给你的邀请码，帮助好友获得惊喜宝箱！</p> -->
+    		<a href="javascript:;" id="yySubmitdl" class="submit">登录</a>
+    	</div>
+    	<a class="pop_close sp pa" href="javascript:showDialog.hide()" title="关闭" style="background-image: url(images/guanbianniu.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;"></a>
+    </div>
+    
+</div>
+<!-- 请先抢号预约  -->
+<div class="dialog" id="qxyy" class="dianji"> 
+    <div id="uplbneirong" class="pop_con pr" style="position:relative;height:130px;border:0;background-image: url(images/dikuan.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;">
+          <div id="kong" style="width:100%;height:37px;"></div>
+          <div id="lbneirong" style="height:100%;width:100%;text-align:center;">
+       
+
+想要获得礼包吗？先抢号预约哦~</br></br>
+邀请好友抢号预约，还能获得豪华礼包哦！  
+</div>
+    </div>
+    
+</div>
+<!--点击抢号预约-->
+<div class="dialog" id="pop1" > <div  style="position:absolute;z-index:10000;margin-top:10px;margin-left:34.5%;"><img src="images/kuaisuyuyue.png"></img></div>
+    <div class="pop_con pr" style="border:0;background-image: url(images/dikuan.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;">
+    	<div class="pop">
+    		<p class="pop1_tit sp"></p>
+    		<table class="pop_tab">
+    			<tbody>
+    		
+    			<tr>
+    				<td class="tr">手机号码：</td>
+    				<td><input class="txt pl" id="mobile" type="text"></td>
+    				<td><button id="yzms" href="javascript:;" class="yzm">发送登录码</button></td>
+    			</tr>
+    						<tr>
+    				<td class="tr">登录码：</td>
+    				<td><input class="txt pl" id="code" type="text"></td>
+    				<td></td>
+    			</tr>
+    				<tr>
     				<td class="tr lh">验证码：</td>
     				<td class="c">
     					<input class="txt pl" type="text" id="code2"/>
@@ -532,28 +677,19 @@ a:hover{text-decoration:none;}
     				</td>
     			</tr>
     			<tr>
-    				<td class="tr">手机号码：</td>
-    				<td><input class="txt pl" id="mobile" type="text"></td>
-    				<td><button id="yzms" href="javascript:;" class="yzm">发送验证码</button></td>
-    			</tr>
-    			<tr>
-    				<td class="tr">验证码：</td>
-    				<td><input class="txt pl" id="code" type="text"></td>
-    				<td></td>
-    			</tr>
-    			<tr>
     				<td class="tr">邀请码（选填）：</td>
     				<td><input class="txt pl" id="yqCode" type="text"></td>
     				<td></td>
     			</tr>
     		</tbody></table>
-    		<p class="pop_desp">填写好友发给你的邀请码，帮助好友获得惊喜宝匣！</p>
+    		<p class="pop_desp" style="color:999999;">填写好友发给你的邀请码，帮助好友获得惊喜宝箱！</p>
     		<a href="javascript:;" id="yySubmit" class="submit">提交</a>
     	</div>
-    	<a class="pop_close sp pa" href="javascript:showDialog.hide()" title="关闭"></a>
+    	<a class="pop_close sp pa" href="javascript:showDialog.hide()" title="关闭" style="background-image: url(images/guanbianniu.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;"></a>
     </div>
     
 </div>
+
 
 <!--成功预约-->
 <div class="dialog" id="pop2">
@@ -573,7 +709,7 @@ a:hover{text-decoration:none;}
 			<p class="pop2_desp pop2_desp1">您的邀请码是： <span id="svnPath"></span><a href="javascript:;" id="svnbtn" onclick="" class="btn blue" data-clipboard-target="svnPath">复制</a></p>
 			<p class="p_line line_b"></p>
 			<p class="p_line line_t"></p>
-			<p class="pop2_desp">快将邀请码告知您的好友，好友预约成功您可获得惊喜宝匣哦！</p>
+			<p class="pop2_desp">快将邀请码告知您的好友，好友预约成功您可获得惊喜宝箱哦！</p>
 			<p class="pop2_desp p_pt">方法1：复制邀请码，好友预约时填写；<br>
 									方法2：用微信或手机QQ扫描下方二维码邀请好友。
 			</p>
@@ -591,18 +727,18 @@ a:hover{text-decoration:none;}
 	</div>
 </div>
 
-<!--领取宝匣（满足条件）-->
+<!--领取宝箱（满足条件）-->
 <div class="dialog" id="pop6">
 	<div class="pop_con bx_y pr">
-		<p class="ft">宝匣将于不删档测试期在游戏内发放，<br>请关注官方信息及时注册领取哦~</p>
+		<p class="ft">宝箱将于不删档测试期在游戏内发放，<br>请关注官方信息及时注册领取哦~</p>
 		<a class="pop_close sp pa" href="javascript:showDialog.hide()" title="关闭"></a>
 	</div>
 </div>
 
-<!--领取宝匣（不满足条件）-->
+<!--领取宝箱（不满足条件）-->
 <div class="dialog" id="pop7">
 	<div class="pop_con bx_y pr">
-		<p class="ft">您还没满足获得该宝匣的条件哦！</p>
+		<p class="ft">您还没满足获得该宝箱的条件哦！</p>
 		<a class="pop_close sp pa" href="javascript:showDialog.hide()" title="关闭"></a>
 	</div>
 </div>
@@ -613,7 +749,7 @@ a:hover{text-decoration:none;}
 		<div class="pop8">
 			<p class="pop8_tit sp"></p>
 			<div class="p_pt">
-				<p class="ft tc pop8_tl">邀请好友，获得宝匣！</p>
+				<p class="ft tc pop8_tl">邀请好友，获得宝箱！</p>
 				<p class="pop2_desp ft tc pop8_tl">您的邀请码是： <span></span></p>
 				<p class="pop2_desp ft tc pop8_tl">已邀请：<span></span>人</p>
 				<table class="pop8_tab">
@@ -667,6 +803,8 @@ a:hover{text-decoration:none;}
 		<a class="pop_close sp pa" href="javascript:showDialog.hide()" title="关闭"></a>
 	</div>
 </div>
+<script src="js&css/dengluyanzhengma.js"></script>
+<script src="js&css/denglu.js"></script>
 <script src="js&css/qhyy.js"></script>
 <script src="js&css/jquery-1.js"></script>
 <script src="js&css/yanzhengma.js"></script>
@@ -680,8 +818,28 @@ a:hover{text-decoration:none;}
 $(".yy_b_btn").on('click', function(){
 	TGDialogS("pop1");
 });
-
-
+$("#dlbtn").on('click', function(){
+	TGDialogS("pop111");
+});
+$("#qxyy").on('click', function(){
+	showDialog.hide()
+});
+$("#lbbtn1").on('click', function(){
+	
+	giftAjaxCommit(1)
+});
+$("#lbbtn2").on('click', function(){
+	
+	giftAjaxCommit(2)
+});
+$("#lbbtn3").on('click', function(){
+	
+	giftAjaxCommit(3)
+});
+$("#lbbtn4").on('click', function(){
+	
+	giftAjaxCommit(4)
+});
 var clip = new ZeroClipboard( document.getElementById("svnbtn"), {
   moviePath: "http://qmdzs.qq.com/cp/a20160509gwyy/ZeroClipboard.swf"
 } );
@@ -695,7 +853,7 @@ var params = { scale:"noscale", wmode:"transparent",align: "middle",allowFullscr
 swfobject.embedSWF("http://qmdzs.qq.com/cp/a20160509gwyy/flash.swf", "flash", "100%", "100%", "8.0.0","http://ossweb-img.qq.com/images/swf/expressInstall.swf", null, params); 
 swfobject.embedSWF("http://qmdzs.qq.com/cp/a20160509gwyy/fsh.swf", "fsh", "100%", "100%", "8.0.0","http://ossweb-img.qq.com/images/swf/expressInstall.swf", null, params); 
 
-//预约宝匣浮层
+//预约宝箱浮层
 $(".bx_pot").hover(function(){
 	$(".bx_fc").stop(true).fadeIn();
 },function(){

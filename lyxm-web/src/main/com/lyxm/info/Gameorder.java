@@ -117,6 +117,7 @@ public class Gameorder extends HttpServlet {
 		  }
 		  
 		    pw.write("{\"status\":\"success\"}");
+		    request.getSession().setAttribute("id", Long.valueOf(order.getPhoneNum()).toString());
 		    pw.close();
 		      
 	  }
