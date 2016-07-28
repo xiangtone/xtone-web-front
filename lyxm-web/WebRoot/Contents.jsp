@@ -50,8 +50,8 @@
     <div class="navBtn b2"><a href="News.jsp"></a></div>
     <div class="navBtn b3"><a href="Events.jsp"></a></div>
     <div class="navBtn b4"><a href="Strategy.jsp"></a></div>
-    <div class="navBtn b5"><a target="_blank"></a></div>
-    <div class="navBtn b6"><a href="index.jsp"></a></div>
+    <div class="navBtn b5"><a href="http://tieba.baidu.com/f?ie=utf-8&kw=%E7%81%B5%E5%9F%9F%E4%BB%99%E9%AD%94&fr=search"></a></div>
+    <div class="navBtn b6"><a href="qhyy.jsp"></a></div>
 </div>
 <div class="movBtn"><a class="popcl" href=""></a></div>
                 </div>
@@ -81,7 +81,7 @@
                                                       		'<div class="w_380"><div class="h_30"></div>'+
                                                       		'<span class="qun">官方Q群: 3232698308</span>'+                                                      		
                                                       		'<span class="qun">游戏客服: 495265372</span>'+
-                                                      		'<a class="bd" style="color:#FFFFFF" href="">百度官方贴吧：灵域仙魔吧</a></div>'+
+                                                      		'<a class="bd" style="color:#FFFFFF" href="http://tieba.baidu.com/f?ie=utf-8&kw=%E7%81%B5%E5%9F%9F%E4%BB%99%E9%AD%94&fr=search">百度官方贴吧：灵域仙魔吧</a></div>'+
                                                       		'<div class="w_380"><div class="h_10"></div><em><img src="images/erweima.jpg"></em>'+
                                                       		'<i>官方微信号：灵域仙魔<br>关注微信扫一扫<br>最新动态一手掌握</i></div></div>'
                                                       	

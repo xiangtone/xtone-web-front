@@ -60,7 +60,7 @@ public class Guides extends HttpServlet {
 		}
 		  String newscount =request.getParameter("count"); //每页条数
 		  if(newscount==null){
-			 newscount="10"; 			  
+			 newscount="15"; 			  
 		  }
 		  
 		  String pagenum =request.getParameter("pagenum"); //页码
