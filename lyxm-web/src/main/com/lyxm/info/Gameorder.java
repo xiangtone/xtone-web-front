@@ -92,7 +92,7 @@ public class Gameorder extends HttpServlet {
     	    pw.write("{\"mobilecode\":\""+code+"\"}");
     	    pw.close();
     	  try {
-			Sentchit.sendTemplateSms(String.valueOf( order.getPhoneNum()), "ZD30010-0001", "@1@="+code);
+			Sentchit.sendTemplateSms(String.valueOf( order.getPhoneNum()), "ZD30010-0002", "@1@="+code);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

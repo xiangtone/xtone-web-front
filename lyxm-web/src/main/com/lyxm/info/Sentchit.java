@@ -16,7 +16,7 @@ import java.net.URLConnection;
 public class Sentchit {
 	
 	//账户
-	static String account = "ZD30010";//
+	static String account = "ZD30014";//
 	//密码
 	static String password = "wyy30010";//
 	//校验码

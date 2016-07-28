@@ -8,11 +8,6 @@
 <%@page import="java.sql.Connection"%>
 <%@ page import="com.lyxm.info.Counter" %>
 <%    
-CheckLoad check = new CheckLoad();
-
-if(check.JudgeIsMoblie(request)){
-  response.sendRedirect("mobileqhyy.jsp");
-}
 
 
 String phone = null;
@@ -37,6 +32,7 @@ phone = (String)session.getAttribute("id");}catch(Exception ex){
     pageEncoding="UTF-8"%>
 
 <html lang="zh-CN"><head>
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
 <meta name="robots" content="all">
