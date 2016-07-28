@@ -75,7 +75,7 @@
 				<!--                  <div style="text-align:center; bottom:0px;"><a href="javascript:jjkf()"><img src="images/qhyy.png"></a></div> -->
              
               <div style="width:100%;height:70%"></div>
-             <a href="javascript:jjkf()">            
+             <a href="qhyy.jsp" target="_blank">            
              <div id="qhyy"></div>
              <% 
             
@@ -161,8 +161,8 @@
              </script>
            
          </div> -->
-         <div class="fbg1">
-             <h2><img src="js&css/ftit.png" alt=""></h2>
+         <div class="fbg1">         
+                 <p><img src="images/zyjs.png" style="top:20px" />&nbsp职业介绍<p>
              <div class="ftab-main" id="ftab-0" style="z-index:0;">
              <table><tr>
 			<td><img src="images\conxy.png";border=0;height=68px;width=140px></td>
@@ -171,7 +171,7 @@
 			</tr></table>
                <!--   <img src="images\conxy.png" alt="" height="68px" width="140px">
                  <img alt="" src="images/xydw.png" float:left> -->
-                 <span style="width:825px;height:395px;background:url(images/rwfs.png) left center;top:-92px;"></span>
+                 <span style="width:825px;height:395px;background:url(images/rwfs.png) left center;top:-90px;left:158px"></span>
                  <p>战场上最强大的杀手！手持法杖，掌控元素之力，高群攻伤害！技能多，依靠高超的技巧与风骚的走位更是让敌人眼花缭乱！</p>
              </div>
              <div class="ftab-main" id="ftab-1" style="display: none;">
@@ -190,7 +190,7 @@
 			<td><img src="images/jldw.png" border=5;padding-left=20px></td>
 			</tr></table>
                  <span style="left:468px"><img src="images\rwds.png" alt="人物道士"></span>
-                 <p>战场上最强大的杀手！手持法杖，掌控元素之力，高群攻伤害！技能多，依靠高超的技巧与风骚的走位更是让敌人眼花缭乱！</p>
+                 <p>战场上最理想的辅助!并有神秘的召唤术，可召唤精灵、神兽、魔王作为强大的作战伙伴！还拥有治疗和增强防御等辅助手段！</p>
              </div>
              <div class="ftab-conl" style="position:absolute;z-index:1;margin-top:20px;">
                 <ul>

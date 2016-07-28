@@ -35,7 +35,8 @@
 		a=document.referrer;
 		if(-1<a.indexOf("baidu.com")||-1<a.indexOf("sogou.com")||-1<a.indexOf("haosou.com")||-1<a.indexOf("hao76.com"))
 			if(a=void 0,window.sessionStorage)sessionStorage.setItem("channel","seo");
-			else{var a=a||0,b="";0!=a&&(b=new Date,b.setTime(b.getTime()+1E3*a),b="; expires="+b.toGMTString());document.cookie="channel="+escape("seo")+b+"; path=/"}self.location="/m/"}})();</script>
+			else{var a=a||0,b="";0!=a&&(b=new Date,b.setTime(b.getTime()+1E3*a),b="; expires="+b.toGMTString());document.cookie="channel="+escape("seo")+b+"; path=/"}self.location="/m/"}})();
+</script>
  -->
   <script type="text/javascript">
 
@@ -304,7 +305,7 @@ a:hover{text-decoration:none;}
 	<div class="container">
 		<div class="head1 pr">
 			<h1 class="hide">斗心未泯  战火不熄</h1>
-		   <a href="http://qmdzs.qq.com/" class="logo db pa" target="_blank" title="全民斗战神">全民斗战神</a>
+		   <a href="index.jsp" class="logo db pa" target="_blank" title="全民斗战神">全民斗战神</a>
 			
 		</div>
 		<div class="content">

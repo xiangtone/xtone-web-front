@@ -1,0 +1,141 @@
+/* ::::: http://sdo-shabake.com/rsc/mobile/css/common.css?v=16 ::::: */
+
+html, body { margin: 0px; padding: 0px; height: 100%; overflow-x: hidden; }
+html {  }
+body, button, input, select, textarea { font: 20px/1.5 "Microsoft YaHei",Helvetica,Arial,sans-serif; color: rgb(212, 167, 119); }
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, q, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0px; padding: 0px; border: 0px none; font-weight: normal; font-style: normal; font-size: 100%; line-height: 1.5; font-family: inherit; }
+table { border-collapse: collapse; border-spacing: 0px; }
+ol, ul { list-style: outside none none; }
+a { text-decoration: none; outline: 0px none; }
+a:hover, a:focus { text-decoration: none; }
+img { height: auto; max-width: 100%; vertical-align: middle; border: 0px none; }
+q::before, q::after, blockquote::before, blockquote::after { content: ""; }
+h1, h2, h3, h4, h5, h6 { margin: 10px 0px; font-family: inherit; font-weight: bold; line-height: 20px; color: inherit; text-rendering: optimizelegibility; }
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-weight: normal; line-height: 1; color: rgb(153, 153, 153); }
+h1, h2, h3 { line-height: 40px; }
+h1 { font-size: 38.5px; }
+h2 { font-size: 31.5px; }
+h3 { font-size: 24.5px; }
+h4 { font-size: 17.5px; }
+h5 { font-size: 14px; }
+h6 { font-size: 11.9px; }
+h1 small { font-size: 24.5px; }
+h2 small { font-size: 17.5px; }
+h3 small { font-size: 14px; }
+h4 small { font-size: 14px; }
+hr { margin: 20px 0px; border-width: 1px 0px; border-style: solid none; border-color: rgb(238, 238, 238) -moz-use-text-color rgb(255, 255, 255); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; }
+audio:not([controls]) { display: none; }
+button, input, select, textarea { margin: 0px; font-size: 100%; vertical-align: middle; }
+button, input { line-height: normal; }
+button::-moz-focus-inner, input::-moz-focus-inner { padding: 0px; border: 0px none; }
+button, html input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; }
+label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] { cursor: pointer; }
+input[type="search"] { box-sizing: content-box; }
+textarea { height: auto; overflow: auto; vertical-align: top; word-wrap: break-word; word-break: normal; }
+small { font-size: 85%; }
+strong { font-weight: bold; }
+em { font-style: italic; }
+cite { font-style: normal; }
+p { margin: 0px 0px 10px; word-wrap: break-word; word-break: normal; }
+sub, sup { position: relative; font-size: 75%; line-height: 0; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+code, pre { padding: 0px 3px 2px; font-family: Monaco,Menlo,Consolas,"Courier New",monospace; font-size: 12px; color: rgb(51, 51, 51); border-radius: 3px; }
+code { padding: 2px 4px; color: rgb(221, 17, 68); white-space: nowrap; background-color: rgb(247, 247, 249); border: 1px solid rgb(225, 225, 232); }
+pre { display: block; padding: 9.5px; margin: 0px 0px 10px; font-size: 13px; line-height: 20px; word-break: break-all; word-wrap: break-word; white-space: pre-wrap; background-color: rgb(245, 245, 245); border: 1px solid rgba(0, 0, 0, 0.15); border-radius: 4px; }
+pre code { padding: 0px; color: inherit; white-space: pre-wrap; background-color: transparent; border: 0px none; }
+.clearfix {  }
+.clearfix::before, .clearfix::after { display: table; line-height: 0; content: ""; }
+.clearfix::after { clear: both; }
+.fl { float: left; display: inline; }
+.fr { float: right; display: inline; }
+.show { display: block; }
+.hide { display: none; }
+.hide-text { font: 0px/0 a; color: transparent; text-shadow: none; background-color: transparent; border: 0px none; }
+.pointer { cursor: pointer; }
+.overflow { overflow: hidden; }
+html, body { width: 100%; height: 100%; }
+body { background-color: rgb(25, 4, 9); }
+.container { width: 640px; position: absolute; top: 0px; left: 0px; overflow: hidden; }
+header { position: relative; }
+.headbar { width: 100%; height: 93px; position: absolute; top: 0px; left: 0px; background-color: rgb(0, 0, 0); }
+.icon-logo { width: 115px; height: 115px; margin: 10px 0px 0px 32px; }
+.icon-logo img { width: 100%; height: 100%; }
+.head-info { margin: 20px 0px 0px 10px; }
+.head-info h5 { font-size: 20px; color: rgb(255, 255, 255); margin: 0px 0px 10px; }
+.head-info p { font-size: 18px; color: rgb(173, 173, 173); margin-bottom: 0px; }
+.btn-dl-head { display: block; width: 197px; height: 55px; line-height: 56px; margin: 18px 53px 0px 0px; text-align: center; color: rgb(255, 255, 255); font-size: 29px; background-color: rgb(214, 3, 3); border-radius: 5px; text-decoration: none; }
+.btn-dl-head img { display: block; width: 100%; }
+footer { padding: 0px 0px;  margin-top: 0px; color: rgb(156, 154, 155); font-size: 15px; }
+footer img {width:720;height:215px; float: left; margin: 0px 0px;margin-top:-40px; }
+footer img:nth-child(2){ height:104px;margin-top:-0px; }
+.copyright { float: left; }
+.dialog { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 999; display: none; }
+.dialog-in { position: absolute; top: 0px; left: 50%; margin-left: -160px; margin-top: 200px; width: 320px; font-size: 30px; color: rgb(255, 255, 255); text-align: center; }
+.close { position: absolute; top: 0px; right: -40px; width: 40px; height: 40px; background: transparent url("close.png") no-repeat scroll 0% 0%; }
+.dialog-in img { width: 100%; height: 320px; margin-bottom: 20px; }
+.dialog-in p { margin-bottom: 0px; }
+/* ::::: http://sdo-shabake.com/rsc/mobile/css/index.css?v=16 ::::: */
+
+.container { background:url("../images/bg.jpg")top center no-repeat; }
+.top { width: 100%; overflow: hidden; margin-top: 860px; }
+.slogan { display: block; margin: 0px auto; }
+.download-btn { text-align: center; overflow: hidden; }
+.download-btn a { display: inline-block; margin: 60px 15px; width: 247px; height: 82px; background: transparent url("../images/anzhuoxiazai.png") no-repeat scroll 0% 0%; font: 0px/0 a; color: transparent; text-indent: -9999px; }
+.download-btn a:nth-child(2) {background: transparent url("../images/iosxiazai.png") no-repeat scroll 0% 0%; }
+.erweima { color: rgb(212, 167, 119); font-size: 20px; text-align: center; margin-top: 60px; }
+.erweima img { width: 193px; height: 193px; }
+.erweima p { margin-top: 12px; }
+.latest { width: 100%; background: transparent url("section_bg.png") no-repeat scroll 0% 0%; margin-top: -70px; padding-top: 100px; }
+.section-tit { display: block; margin: 0px auto; }
+.latest-pic { width: 684px; height: 413px; margin: 40px auto 0px; padding-bottom: 70px; position: relative; }
+.carousel-cont { position: relative; height: 100%; overflow: hidden; }
+.carousel-cont .cont-item { position: absolute; width: 100%; height: 100%; box-sizing: border-box; visibility: hidden; overflow: hidden; }
+.carousel-cont .cont-item.active { visibility: visible; z-index: 1; }
+.carousel-control { display: inline-block; position: absolute; width: 100%; box-sizing: border-box; text-align: center; bottom: 22px; left: 0px; z-index: 2; padding: 5px 5px 5px 0px; }
+.carousel-control .control-item { display: inline-block; width: 30px; height: 15px; background-color: rgb(69, 65, 65); margin: 0px 3px; }
+.carousel-control .control-item.active { background-color: rgb(204, 0, 0); }
+.latest-news { width:100%;align:center; margin-top:-10px; overflow: hidden; font-size: 22px; color: rgb(18, 19, 19); }
+.ln-nav { position: relative; width: 100%; height: 68px; font-size: 30px; color: rgb(212, 167, 119); border-bottom: 4px solid rgb(80, 62, 44); }
+.ln-nav ul { position: absolute; bottom: -3px; left: 0px; width: 100%; height: 100%; }
+.ln-nav li { float: left; height: 65px; line-height: 65px; padding: 0px 15px; border-bottom: 4px solid rgb(80, 62, 44); }
+.ln-nav li.active { color: rgb(255, 0, 0); border-color: rgb(255, 0, 0); }
+.ln-nav li a { display: block; width: 100%; height: 100%; line-height: 65px; color: rgb(212, 167, 119); }
+.ln-con { width: 100%; height: 204px; overflow: hidden; margin-top: 10px; margin-bottom: 25px; }
+.ln-item { width: 100%; overflow: hidden; display: none; }
+.ln-item.active { display: block; }
+.ln-item ul { width: 100%; overflow: hidden;margin-top:20px; }
+.ln-item ul li { float: left; width: 100%; height: 50px; line-height: 50px; }
+.ln-item ul li a { float: left; width: 90%; height: 100%; line-height: 50px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color:#999999; }
+
+.ln-item ul li span { float: right; width: 5%; height: 50px; background: transparent url("../images/gnegduo.png") no-repeat scroll 0% 0%; margin-top: -30px; }
+.more { display: block; margin: 20px auto; width: 142px; height: 42px; line-height: 42px; text-align: center; color:#999999; font-size: 22px; border: 1px solid rgb(153, 153, 153); }
+.contact { width: 100%; overflow: hidden; padding: 15px 0px 5px; background-color: rgb(212, 167, 119); font-size: 20px; color: rgb(0, 0, 0); text-align: center; }
+.contact-item { display: inline-block; height: 88px; overflow: hidden; padding: 8px 8px 0px; }
+.contact-item:nth-child(2) { border-left: 2px solid rgb(166, 131, 93); border-right: 2px solid rgb(166, 131, 93); }
+.contact-item i { float: left; width: 68px; height: 100%; background-repeat: no-repeat; margin-top: 7px; }
+.contact-item p { float: left; height: 100%; text-align: left; line-height: 28px; padding: 0px; margin: 0px 0px 0px 10px; }
+.contact-item p span { display: block; color: rgb(255, 0, 0); }
+.contact-item i.qq { background-image: url("qq.png"); }
+.contact-item i.user { background-image: url("user.png"); }
+.contact-item i.wx { background-image: url("wx.png"); }
+.gameinfo { margin-top: -45px; background-image: url("section_bg1.png"); }
+.jobinfo-box { width: 590px; margin: 40px auto 0px; overflow: hidden; }
+.job-con { position: relative; width: 574px; height: 470px; border: 8px solid rgb(50, 25, 21); background-color: rgb(67, 35, 21); }
+.job-label { position: absolute; top: 70px; left: 15px; color: rgb(225, 208, 191); font-size: 30px; font-weight: 900; background-color: rgb(61, 32, 20); padding: 2px 14px; z-index: 1; }
+.job-item { position: relative; width: 100%; height: 100%; overflow: hidden; display: none; }
+.job-item.active { display: block; }
+.job-item img { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; }
+.ji-con { position: relative; width: 280px; overflow: hidden; margin: 160px 0px 0px 18px; }
+.ji-name { width: 100%; color: rgb(225, 208, 191); border-bottom: 3px solid rgb(172, 0, 0); font-size: 30px; padding-bottom: 8px; }
+.ji-name span { font-size: 14px; text-transform: uppercase; margin-left: 10px; }
+.ji-w { width: 100%; overflow: hidden; color: rgb(178, 139, 99); margin-top: 15px; line-height: 32px; }
+.job-nav { width: 100%; overflow: hidden; text-align: center; margin: 20px auto 40px; font-size: 30px; color: rgb(225, 208, 191); }
+.job-nav span { display: inline-block; width: 142px; height: 57px; line-height: 57px; background: transparent url("job_btn.png") no-repeat scroll -142px 0px; margin: 0px 10px; }
+.job-nav span.active { background-position: 0px 0px; color: rgb(227, 150, 51); }
+.features { margin-top: -30px; }
+.features-pic { height: 331px; }
+.features .carousel-control .control-item { width: 15px; height: 15px; border-radius: 50%; margin: 0px 2px; }
+.gotop { display: block; width: 80px; height: 44px; margin: 30px auto 0px; background: transparent url("gotop.png") no-repeat scroll 0% 0%; }

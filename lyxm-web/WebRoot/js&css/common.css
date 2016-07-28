@@ -139,14 +139,14 @@ textarea::-webkit-input-placeholder {
 .fload ul li a{display: inline-block; width: 100%; height: 140px;}
 
 .fbg1{ margin: 10px auto 10px auto;padding:50px;  width: 1036px; height: 396px; background: url(../images/fbg1.jpg) center top no-repeat;}
-.fbg1 h2{padding-bottom: 20px; background: url(../images/fline.png) left bottom no-repeat;}
-.fbg1 h2 img{display: block;}
+.fbg1 p{padding-bottom: 20px;font-size:30px;color:white;}
+
 
 .ftab-main{position: relative;}
 
 .ftab-main img{display: block;padding-top:10px;margin-bottom:10px;}
-.ftab-main p{font-size: 14px; width: 340px; height: 90px; overflow: hidden; color: #ac724f; line-height: 1.6}
-.ftab-main span{top:-100px;left:150px;position: absolute; display: block; width: 568px; height: 403px;}
+.ftab-main p{font-size: 14px; width: 340px; height: 90px; overflow: hidden; color: #FFFFFF; line-height: 1.6}
+.ftab-main span{top:-100px;left:150px;position: absolute; display: block; width: 568px; height: 403px;margin-top:-20px;}
 .ftab-main span img{display: block;height:100%;}
 .ftab-conl{margin-top: 10px;}
 .ftab-conl li{margin-right: 10px; cursor: pointer; float: left; width: 82px; height: 82px; font-size: 18px; color: #ac724f; text-align: center; line-height: 82px;}

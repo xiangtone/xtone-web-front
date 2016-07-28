@@ -294,15 +294,19 @@ i,em{font-style:normal;}
 .w_380 i{width:200px;height:100px; line-height:32px; float:left; padding:20px 0 0 20px; font-size:14px; color:#FFFFFF;}
 
 .fr{width:275px;height:640px; position:absolute; left:50%; margin-left:307px; top:0; z-index:9;}
-.fr_ewm{width:275px;height:320px; float:left;background:url(../images/fr_ewm.png) center top no-repeat;}
+.fr_ewm{width:275px;height:320px; float:left;background:url() center top no-repeat;}
 .fr_ewm span{width:230px;height:230px; float:left; margin:68px 0 0 23px;}
 .fr_btn1{width:275px;height:89px; float:left; margin-top:15px;background:url(../images/dlandroid.png) center top no-repeat;}
-.fr_btn1 a{width:275px;height:89px; float:left;background:url(../images/dlandroid.png) center top no-repeat;}
-.fr_btn1 a:hover{background:url(../images/download_ad2C.png) center top no-repeat;}
+.fr_btn1:hover{width:275px;height:89px; float:left; margin-top:15px;background:url(../images/dlandroidh.png) center top no-repeat;}
+
+.fr_btn1 a{width:275px;height:89px; float:left;background:url() center top no-repeat;}
+.fr_btn1 a:hover{background:url() center top no-repeat;}
 .fr_btn2{width:275px;height:89px; float:left; margin-top:15px;background:url(../images/dlios.png) center top no-repeat;}
-.fr_btn2 a{width:275px;height:89px; float:left;background:url(../images/dlios.png) center top no-repeat;}
-.fr_btn2 a:hover{background:url(../images/download_ios2C.png) center top no-repeat;}
-.fr_goTop{width:35px;height:100px; float:left; margin-top:13px;background:url(../images/goTop.png) center top no-repeat;}
+.fr_btn2:hover{width:275px;height:89px; float:left; margin-top:15px;background:url(../images/dliosh.png) center top no-repeat;}
+
+.fr_btn2 a{width:275px;height:89px; float:left;background:url() center top no-repeat;}
+.fr_btn2 a:hover{background:url() center top no-repeat;}
+.fr_goTop{width:35px;height:100px; float:left; margin-top:13px;background:url(../images/goTop.png) center top no-repeat;margin-left:17px;}
 .fr_goTop a{width:35px;height:100px; float:left;}
 
 /*@media (min-width: 0px) and (max-width: 1200px){

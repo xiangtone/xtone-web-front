@@ -1,3 +1,11 @@
+<%@page import="org.common.util.ConnectionService"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
+<%@ page import="com.lyxm.info.Counter" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -48,7 +56,7 @@ else{
     </div>
 </div>
 <!--视频弹出内容 end-->        
-<div class="nWrap" style="background:url(images/fbg.jpg) center top no-repeat;">
+<div class="nWrap" style="background:url(images/body_bg3.jpg) center top no-repeat;">
 <div class="header"></div> 
             <div class="nWrapper" >
                 <div class="nW_top">
@@ -58,14 +66,15 @@ else{
     <div class="navBtn b2"><a href="News.jsp"></a></div>
     <div class="navBtn b3"><a href="Events.jsp"></a></div>
     <div class="navBtn b4"><a href="Strategy.jsp"></a></div>
-    <div class="navBtn b5"><a target="_blank"></a></div>
-    <div class="navBtn b6"><a href="index.jsp"></a></div>
+    <div class="navBtn b5"><a href="http://tieba.baidu.com/f?ie=utf-8&kw=%E7%81%B5%E5%9F%9F%E4%BB%99%E9%AD%94&fr=search"></a></div>
+    <div class="navBtn b6"><a href="qhyy.jsp"></a></div>
 </div>
 <div class="movBtn"><a class="popcl" href="http://sdo-shabake.com/video"></a></div>
                 </div>
                 <div class="conNav">
-                    <span>精美壁纸</span>
-                    <em><a href="http://sdo-shabake.com/index">官网首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a>精美壁纸</a></em>
+                    <span id="btn1">&nbsp</span>
+                      <a href="Cutpic.jsp"> <span id="btn2">&nbsp</span></a>
+                    <em><a href="index.jsp">官网首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a>精美壁纸</a></em>
                 </div>
                 <div class="nW_main">
                     <div class="conMain">
@@ -74,10 +83,10 @@ else{
                             <div class="nNewsTit">
                                 <ul>
                                 
-                                <li class="" id="nli_0"><a href="Wallpaper.jsp" class="roll_t" title="">精美壁画</a></li>                               
+                                <li class="" id="nli_0" style="margin-top:30px;"><img src="images/fengexianbg.png"></li>                               
                                 </ul>
                             </div>
-                            <div class="nNews_xian"><div class="red2" style="left:106px;"></div></div>
+                            
                             <div class="h_15"></div>
                             <!-- 新闻类别按钮 结束-->
                             <!-- 新闻列表 开始-->
@@ -87,17 +96,18 @@ else{
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "/lyxm.xtonegame.com/wallpaper?type='wallpaper'&page="+<%=pageid %>+"&count=9",
+                                      url: "/lyxm.xtonegame.com/wallpaper?type=1&page="+<%=pageid %>+"&count=4",
                                       data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),content:$("#content").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
                                                   //$('#resText').empty();   //清空resText里面的所有内容
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){     
-                                                	  var hrefurl=comment['content'].split(";",2);
+                                                	/*   var hrefurl=comment['content'].split(";",2); */
 
-                                                      html+='<li><span><img src="'+hrefurl[0]+'"/></span><em><a target="_blank" href="'+hrefurl[0]+'">'+
-                                                      		'1080x1920</a>|<a target="_blank" href="'+hrefurl[1]+'">720x1280</a></em></li>'
+                                             /*          html+='<li><span>'+comment['content']+'</span><em><a target="_blank" href="'+hrefurl[0]+'">'+
+                                                      		'1080x1920</a>|<a target="_blank" href="'+hrefurl[1]+'">720x1280</a></em></li>' */
+                                                	  html+='<li><span>'+comment['content']+'</span></li>'
                                                   })
                                      $('#news_0 ul').html(html);
                                    }
@@ -116,15 +126,46 @@ else{
                              out.print("&nbsp<span class='de_prev'>上一页&nbsp </span>");
                              }else{
                             	 pagen=pageid-1;
-                            	 out.print("&nbsp<a href='/lyxm.xtonegame.com/Wallpaper.jsp?pagenum="+pagen+"&count=9'>上一页&nbsp </a>");
+                            	 out.print("&nbsp<a href='/lyxm.xtonegame.com/Wallpaper.jsp?type=1&pagenum="+pagen+"&count=4'>上一页&nbsp </a>");
                              }  
                              
                            %>
-                           <% 
-                           		                          
-                           pagen=pageid+1;
-                      	   out.print("&nbsp<a href='/lyxm.xtonegame.com/Wallpaper.jsp?pagenum="+pagen+"&count=9'>下一页&nbsp </a>");
-                           
+                            <% 
+                       		Connection con = null;
+                        	PreparedStatement ps = null;
+                        	ResultSet rs = null;
+                        	String exchange = "";
+                        	int rowCount=0;
+                        	try{
+                        		con = ConnectionService.getInstance().getConnectionForLocal();   		
+                        		String sql = "SELECT COUNT(1) rowCount FROM tbl_cms_contents WHERE catalog='wallpaper'";
+                        		ps = con.prepareStatement(sql);
+                        		rs = ps.executeQuery();
+                        		while(rs.next()){
+                        		rowCount = rs.getInt("rowCount");
+                        		if(rowCount>pageid*4){
+                        			 pagen=pageid+1;
+                        			 out.print("&nbsp<a href='/lyxm.xtonegame.com/Wallpaper.jsp?type=1&pagenum="+pagen+"&count=4'>下一页&nbsp </a>");
+                                     
+                        		}else{
+                        			
+                        			 out.print("&nbsp<span class='de_prev'>下一页&nbsp </span>");
+                        		}
+                        		}         		
+                        	}catch(Exception e){
+                        		e.printStackTrace();
+                        	}finally{
+                        		if (con != null) {
+                        			try {
+                        				con.close();
+                        			} catch (Exception e) {
+                        				// TODO Auto-generated catch block
+                        				e.printStackTrace();
+                        			}
+                        		}
+                        	
+                        	}
+                          
                            %>
                                         
                           </div>
