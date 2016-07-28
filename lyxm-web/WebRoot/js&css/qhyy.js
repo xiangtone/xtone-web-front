@@ -1,4 +1,4 @@
-var mobilecode = "0";
+var mobilecode = "19940514";
 function getData(){
 	 var data = {
 		     phoneNum : ($("#mobile").val()=="") ? null : $("#mobile").val(),
@@ -59,9 +59,23 @@ function commit(){
 			alert("请填入正确的邀请人手机号")
 		}
 		else{
-		alert("成功预约")
-		window.location.reload()
-		showDialog.hide()
+//		alert("成功预约")
+//	window.location.reload()
+				document.getElementById('kong').style.height='30px'
+	        		document.getElementById('uplbneirong').style.height=''
+	        		document.getElementById('lbneirong').style.textAlign=''	
+	        		document.getElementById('lbneirong').style.marginLeft='50px'
+	        		$('#lbneirong').text("");
+	        		$('#lbneirong').append("恭喜您，</br>您已成功预约《灵域仙魔》！</br></br>您的邀请码是：<span id=\"cpcode\" style=\"color:red;\">"+getData().phoneNum+"</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img id=\"fuzhianniu\" src=\"images\\fuzhianniu.png\"></img></br></br>"+
+	        				"快将邀请码告知您的好友，好友预约成功您可获得惊喜宝箱哦</br>"+
+	        				"方法1：复制邀请码，好友预约时填写</br>"+
+	        				"方法2：用微信或手机QQ扫描下方二维码邀请好友。</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img style=\"align:center;text-align:center;vertical-align:middle;\"  src=\"images\\erweima2.png\"></img>"+
+	        				"<div style=\"height:30px;\"></div>"
+	        				
+	        		);
+	        		TGDialogS("qxyy");
+	        	
+		
 		}
 	},function(data){
 		
@@ -81,10 +95,10 @@ function giftAjaxCommit(giftNum){
 	        	if(data.code!=null){
 	        		document.getElementById('kong').style.height='30px'
 	        		document.getElementById('uplbneirong').style.height=''
-	        		document.getElementById('lbneirong').style.textAlign=''	
-	        		document.getElementById('lbneirong').style.marginLeft='50px'
+//	        		document.getElementById('lbneirong').style.textAlign=''	
+//	        		document.getElementById('lbneirong').style.marginLeft='50px'
 	        		$('#lbneirong').text("");
-	        		$('#lbneirong').append("恭喜您，</br>成功领取礼包！</br></br>兑换码：<span id=\"cpcode\" style=\"color:red;\">"+data.code+"</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img id=\"fuzhianniu\" src=\"images\\fuzhianniu.png\"></img></br></br>"+
+	        		$('#lbneirong').append("恭喜您，成功领取礼包！兑换码：<span id=\"cpcode\" style=\"color:red;\">"+data.code+"</span></br>"+
 	        				"请登录游戏输入兑换码兑换礼包，该礼包游戏内均可使用，限兑换1次。</br>"+
 	        				"邀请好友抢号预约，还能获得豪华礼包哦！</br>"+
 	        				"<div style=\"height:30px;\"></div>"
