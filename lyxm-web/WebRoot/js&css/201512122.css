@@ -267,6 +267,11 @@ i,em{font-style:normal;}
 .nW_top{width:990px;height:455px; margin:0 auto; position:relative;}
 .conNav{width:875px;height:79px; float:left; margin-top:20px;margin-left:60px;background:url(../images/ling_new.png) repeat;}
 .conNav span{min-width:40px; line-height:79px; float:left;margin-left:20px; font-size:26px; color:#ffffff;}
+.conNav span#btn1{min-width:40px;width:81px; line-height:79px; float:left;margin-left:20px; font-size:26px; color:#ffffff;background:url(../images/conbg.jpg) center top no-repeat;}
+
+.conNav span#btn2{min-width:40px;width:81px; line-height:79px; float:left;margin-left:0px; font-size:26px; color:#ffffff;background:url(../images/concut.jpg) center top no-repeat;}
+.conNav span#btn1:hover{background:url(../images/conbgh.jpg) center top no-repeat;}
+.conNav span#btn2:hover{background:url(../images/concuth.jpg) center top no-repeat;}
 .conNav em{min-width:40px; line-height:79px; float:right; font-size:16px; color:#ffffff;margin-right:20px; }
 .conNav em a{color:#ffffff;}
 .conNav em a:hover{ text-decoration:underline;color:#d4a777;}
@@ -294,15 +299,20 @@ i,em{font-style:normal;}
 .w_380 i{width:200px;height:100px; line-height:32px; float:left; padding:20px 0 0 20px; font-size:14px; color:#666;}
 
 .fr{width:275px;height:640px; position:absolute; left:50%; margin-left:307px; top:0; z-index:9;}
-.fr_ewm{width:275px;height:320px; float:left;background:url(../images/fr_ewm.png) center top no-repeat;}
+.fr_ewm{width:275px;height:320px; float:left;background:url() center top no-repeat;}
 .fr_ewm span{width:230px;height:230px; float:left; margin:68px 0 0 23px;}
 .fr_btn1{width:275px;height:89px; float:left; margin-top:15px;background:url(../images/dlandroid.png) center top no-repeat;}
+.fr_btn1:hover{width:275px;height:89px; float:left; margin-top:15px;background:url(../images/dlandroidh.png) center top no-repeat;}
+
 .fr_btn1 a{width:275px;height:89px; float:left;background:url(../images/dlandroid.png) center top no-repeat;}
-.fr_btn1 a:hover{background:url(../images/download_ad2C.png) center top no-repeat;}
+.fr_btn1 a:hover{background:url(../images/dlandroidh.png) center top no-repeat;}
 .fr_btn2{width:275px;height:89px; float:left; margin-top:15px;background:url(../images/dlios.png) center top no-repeat;}
+.fr_btn2:hover{width:275px;height:89px; float:left; margin-top:15px;background:url(../images/dliosh.png) center top no-repeat;}
+
+
 .fr_btn2 a{width:275px;height:89px; float:left;background:url(../images/dlios.png) center top no-repeat;}
 .fr_btn2 a:hover{background:url(../images/download_ios2C.png) center top no-repeat;}
-.fr_goTop{width:35px;height:100px; float:left; margin-top:13px;background:url(../images/goTop.png) center top no-repeat;}
+.fr_goTop{width:35px;height:100px; float:left; margin-top:13px;background:url(../images/goTop.png) center top no-repeat;margin-left:17px;}
 .fr_goTop a{width:35px;height:100px; float:left;}
 
 /*@media (min-width: 0px) and (max-width: 1200px){
@@ -347,10 +357,10 @@ i,em{font-style:normal;}
 .picMain ul li em a{height:40px; line-height:40px; display:inline-block; font-size:14px; color:#333;}
 .picMain ul li em a:hover{ text-decoration:underline;}
 
-.wallpaperMain{width:812px;min-height:580px; float:left; display:none; margin-bottom:150px;}
-.wallpaperMain ul li{width:252px;height:420px; float:left; margin:5px 9px;}
-.wallpaperMain ul li span{width:252px;height:380px; float:left;}
-.wallpaperMain ul li span img{max-width:252px;}
+.wallpaperMain{width:872px;min-height:580px; float:left; display:none; margin-bottom:150px;padding-left:10px;}
+.wallpaperMain ul li{width:400px;height:auto; float:left; margin:12px 12px;}
+.wallpaperMain ul li span{width:400px;height:auto; float:left;}
+.wallpaperMain ul li span img{max-width:400px;}
 .wallpaperMain ul li em{width:252px;height:40px; float:left; text-align:center;}
 .wallpaperMain ul li em a{height:40px; line-height:40px; display:inline-block; font-size:14px; color:#333;}
 .wallpaperMain ul li em a:hover{ text-decoration:underline;}

@@ -24,7 +24,7 @@ i,em{font-style:normal;}
 .wrap .header{width:100%;height:93px;background:url(../images/Navigation.jpg) center top no-repeat}
 .wrapper{width:990px;height:auto;margin:0 auto;margin-top:-93px}
 .w_top{width:990px;height:760px;float:left; position:relative;}
-.logo{width:190px;height:130px; position:absolute;top:0;left:0;z-index:9;background:url(../images/flogo.png) center top no-repeat;margin-left:-120px;}
+.logo{width:190px;height:130px; position:absolute;top:0;left:0;z-index:9;background:url(../images/flogo.png) center top no-repeat;margin-left:-80px;}
 .logo a{width:190px;height:130px; float:left;}
 .nav{width:852px;height:93px; float:left; margin-left:222px;background:url() left top no-repeat;}
 .navBtn{width:137px;height:93px; float:left;margin-right:6px;}
@@ -96,7 +96,7 @@ i,em{font-style:normal;}
 .roll_l li .roll_t{width:60px;height:6px; float:left;display:block; margin:0 5px; background-color:#bdb6b4;}
 .roll_l li.on .roll_t{ background-color:#be0000;}
 
-.download_ewm{width:171px;height:171px; float:left; margin-left:12px;background:url(../images/erweima1.jpg) left top no-repeat;}
+.download_ewm{width:171px;height:171px; float:left; margin-left:12px;background:url(../images/erweima.jpg) left top no-repeat;}
 .download_ewm img{margin:14px 0 0 15px;}
 .download_btn1{width:245px;height:80px; float:left; margin:0 0 0 12px;background:url(../images/dlandroid.png) top no-repeat;}
 .download_btn1 a{width:245px;height:80px; float:left;}
@@ -159,7 +159,7 @@ i,em{font-style:normal;}
 .zy_tit em{min-width:10px;height:20px; line-height:22px; float:left; margin-top:16px; padding:0 10px 0 10px; font-size:16px;color:#e1d0bf;border-left:1px #e1d0bf solid;}
 
 .zy_word{width:300px;height:165px; float:left; padding:0 10px;}
-.zy_word p{width:300px; line-height:22px; float:left; font-size:14px; color:#b28b63; margin:0;}
+.zy_word p{width:300px; line-height:22px; float:left; font-size:14px; color:#292929; margin:0;margin-top:10px}
 .zy_word p span{min-width:10px; line-height:22px; float:left; font-size:35px;color:#191919; padding-right:10px;}
 .zy_word p em{min-width:10px; line-height:35px; float:left;font-size:13px;color:#e1d0bf;}
 
@@ -299,7 +299,7 @@ i,em{font-style:normal;}
 .w_380 i{width:200px;height:100px; line-height:32px; float:left; padding:20px 0 0 20px; font-size:14px; color:#666;}
 
 .fr{width:275px;height:640px; position:absolute; left:50%; margin-left:307px; top:0; z-index:9;}
-.fr_ewm{width:275px;height:320px; float:left;background:url(../images/fr_ewm.png) center top no-repeat;}
+.fr_ewm{width:275px;height:320px; float:left;background:url() center top no-repeat;}
 .fr_ewm span{width:230px;height:230px; float:left; margin:68px 0 0 23px;}
 .fr_btn1{width:275px;height:89px; float:left; margin-top:15px;background:url(../images/download_ad2H.png) center top no-repeat;}
 .fr_btn1 a{width:275px;height:89px; float:left;background:url(../images/download_ad2.png) center top no-repeat;}
@@ -307,7 +307,7 @@ i,em{font-style:normal;}
 .fr_btn2{width:275px;height:89px; float:left; margin-top:15px;background:url(../images/download_ios2H.png) center top no-repeat;}
 .fr_btn2 a{width:275px;height:89px; float:left;background:url(../images/download_ios2.png) center top no-repeat;}
 .fr_btn2 a:hover{background:url(../images/download_ios2C.png) center top no-repeat;}
-.fr_goTop{width:35px;height:100px; float:left; margin-top:13px;background:url(../images/goTop.png) center top no-repeat;}
+.fr_goTop{width:35px;height:100px; float:left; margin-top:13px;background:url(../images/goTop.png) center top no-repeat;margin-left:17px;}
 .fr_goTop a{width:35px;height:100px; float:left;}
 
 /*@media (min-width: 0px) and (max-width: 1200px){

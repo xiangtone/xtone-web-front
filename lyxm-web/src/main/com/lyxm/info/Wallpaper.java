@@ -40,13 +40,22 @@ public class Wallpaper extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		
-	      String str_sql=" WHERE catalog ='wallpaper' ";
-		
+		  
+	      
+          String str_sql=" ";
 		  String contentType =request.getParameter("type"); //每页条数
-		  if(contentType==null){
-			  contentType="Wallpaper"; 			  
-		  }
+		  switch (contentType) {  
+
+		  case "1":
+			  str_sql=" where catalog='wallpaper' ";//改成英文！！！！
+		   break;
+		  case "2":
+			  str_sql=" where catalog='cutpic' ";//改成英文！！！！
+		   break;
+		 
+		  default:
+			break;
+		}
 		  
 		  String pageId =request.getParameter("page"); //页码
 		 
@@ -67,7 +76,7 @@ public class Wallpaper extends HttpServlet {
 	         
 	         try {
 	        	 	
-	        	  Integer coutint = 9;		
+	        	  Integer coutint = 4;		
 	    		  Integer pageint = Integer.valueOf(pageId);
 	    		 int allcount=coutint.intValue()*(pageint.intValue()-1);
 //	               Class.forName("com.mysql.jdbc.Driver");
@@ -78,7 +87,8 @@ public class Wallpaper extends HttpServlet {
 	        	   Integer countall = (Integer.valueOf(pageId)-1)*9;	
 	        	   conn= ConnectionService.getInstance().getConnectionForLocal();
 	               stmt = conn.createStatement();   
-	               String sqlsel="SELECT id,title,catalog,content,FROM_UNIXTIME(lastModifyTime/1000,'%Y-%m-%d %h:%i:%s') as lastModifyTime,title FROM tbl_cms_contents"+str_sql+" limit "+allcount+",9";
+	      
+				String sqlsel="SELECT id,title,CASE catalog \n WHEN 'wallpaper' THEN '精美壁纸' \n WHEN 'cutpic' THEN '游戏截图' \n   END as catalog,content,FROM_UNIXTIME(lastModifyTime/1000,'%Y-%m-%d %h:%i:%s') as lastModifyTime,title FROM tbl_cms_contents"+str_sql+" limit "+allcount+",4";
 	               System.out.println(sqlsel);
 	               rs = stmt.executeQuery(sqlsel);
 	               ResultSetMetaData metaData = rs.getMetaData();               

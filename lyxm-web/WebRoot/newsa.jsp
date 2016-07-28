@@ -1,3 +1,11 @@
+<%@page import="org.common.util.ConnectionService"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
+<%@ page import="com.lyxm.info.Counter" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -58,14 +66,14 @@ else{
     <div class="navBtn b2"><a href="News.jsp"></a></div>
     <div class="navBtn b3"><a href="Events.jsp"></a></div>
     <div class="navBtn b4"><a href="Strategy.jsp"></a></div>
-    <div class="navBtn b5"><a target="_blank"></a></div>
-    <div class="navBtn b6"><a href="index.jsp"></a></div>
+    <div class="navBtn b5"><a href="http://tieba.baidu.com/f?ie=utf-8&kw=%E7%81%B5%E5%9F%9F%E4%BB%99%E9%AD%94&fr=search"></a></div>
+    <div class="navBtn b6"><a href="qhyy.jsp"></a></div>
 </div>
 <div class="movBtn"><a class="popcl" href="http://sdo-shabake.com/video"></a></div>
                 </div>
                 <div class="conNav">
                     <span>新闻公告</span>
-                    <em><a href="http://sdo-shabake.com/index">官网首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a>新闻公告</a></em>
+                    <em><a href="index.jsp">官网首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a>新闻公告</a></em>
                 </div>
                 <div class="nW_main">
                     <div class="conMain">
@@ -128,10 +136,41 @@ else{
                              
                            %>
                            <% 
-                           		                          
-                           pagen=pageid+1;
-                      	   out.print("&nbsp<a href='/lyxm.xtonegame.com/newsa.jsp?type=1&pagenum="+pagen+"&count=15'>下一页&nbsp </a>");
-                           
+                       		Connection con = null;
+                        	PreparedStatement ps = null;
+                        	ResultSet rs = null;
+                        	String exchange = "";
+                        	int rowCount=0;
+                        	try{
+                        		con = ConnectionService.getInstance().getConnectionForLocal();   		
+                        		String sql = "SELECT COUNT(1) rowCount FROM tbl_cms_contents WHERE catalog='news'";
+                        		ps = con.prepareStatement(sql);
+                        		rs = ps.executeQuery();
+                        		while(rs.next()){
+                        		rowCount = rs.getInt("rowCount");
+                        		if(rowCount>pageid*15){
+                        			 pagen=pageid+1;
+                        			 out.print("&nbsp<a href='/lyxm.xtonegame.com/newsa.jsp?type=1&pagenum="+pagen+"&count=15'>下一页&nbsp </a>");
+                                     
+                        		}else{
+                        			
+                        			 out.print("&nbsp<span class='de_prev'>下一页&nbsp </span>");
+                        		}
+                        		}         		
+                        	}catch(Exception e){
+                        		e.printStackTrace();
+                        	}finally{
+                        		if (con != null) {
+                        			try {
+                        				con.close();
+                        			} catch (Exception e) {
+                        				// TODO Auto-generated catch block
+                        				e.printStackTrace();
+                        			}
+                        		}
+                        	
+                        	}
+                          
                            %>
                                         
                           </div>

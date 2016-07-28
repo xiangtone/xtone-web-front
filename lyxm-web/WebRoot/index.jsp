@@ -17,7 +17,7 @@
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
     <!--百度统计-->
-	<script type="text/javascript" src="js&css/baidu.js"></script>
+<!-- 	<script type="text/javascript" src="js&css/baidu.js"></script> -->
     <script type="text/javascript">
     function browserRedirect() {
         var sUserAgent = navigator.userAgent.toLowerCase();
@@ -30,7 +30,7 @@
         var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
         var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
         if ((bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){
-            window.location.href="http://www.baidu.com";
+            window.location.href="mobile/index.jsp";
         }
     }
     browserRedirect();
@@ -74,8 +74,8 @@
     <div class="navBtn b2"><a href="News.jsp"></a></div>
     <div class="navBtn b3"><a href="Events.jsp"></a></div>
     <div class="navBtn b4"><a href="Strategy.jsp"></a></div>
-    <div class="navBtn b5"><a target="_blank"></a></div>
-    <div class="navBtn b6"><a href="index.jsp"></a></div>
+    <div class="navBtn b5"><a href="http://tieba.baidu.com/f?ie=utf-8&kw=%E7%81%B5%E5%9F%9F%E4%BB%99%E9%AD%94&fr=search" target="_blank"></a></div>
+    <div class="navBtn b6"><a href="qhyy.jsp" target="_blank"></a></div>
 </div>
             <div class="slogan"></div>
             
@@ -171,7 +171,7 @@
                                       //$('#resText').empty();   //清空resText里面的所有内容
                                       var html = '';
                                       $.each(data, function(commentIndex, comment){
-                                    	  
+                                   
                                           html+='<li><a href="/lyxm.xtonegame.com/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                         		 +'" target="_blank"> <em class="" style="color:#ff4106;">【'+comment['catalog']
                                           		+'】'+comment['title']+'</em><span style="color:#ff4106;">'+comment['lastModifyTime']+'</span></a></li>'
@@ -309,8 +309,8 @@
                 	<!-- 新闻标题 结束 -->
                 </div>
                 <div class="right_pic" style="background:url('images/qqzx.jpg')">
-                  <div class="ch_bm"><img src="images/qq.png"/>&nbsp 3232698308</div>
-                   <div class="ch_bm1"><img src="images/qq.png"/>&nbsp 495265372</div>
+                  <div class="ch_bm"><img src="images/qq.png"/>&nbsp 495265372</div>
+                   <div class="ch_bm1"><img src="images/qq.png"/>&nbsp 3232698308</div>
                 </div>
             </div>
             <div class="h_30"></div>
@@ -329,7 +329,7 @@
                     <div style="display:block;" class="zy_con zy_bg0">
                         <div class="zy_p">
                             <div class="zy_tit">
-                            <span><img src="images/zyjs.png" style="top:20px">&nbsp职业介绍</span>
+                            <span><img src="images/zyjs.png" style="top:20px" />&nbsp职业介绍</span>
                             </div>
                             <div class="h_10"></div>
                             <div class="zy_word">
@@ -353,7 +353,7 @@
                             <div class="zy_word">
                             	<p>
                                 	<span>狂战</span>
-                                    <em>wizard</em>
+                                    <em>&nbsp<img src="images/zyjskzbq.png"/></em>
                                 </p>
                                  <p>战场上的先锋，手持利剑，勇闯敌阵！PK节奏爽快！1V1单挑很少有人能够完全正面的击败他！！</p>
                             </div>
@@ -369,9 +369,9 @@
                             <div class="zy_word">
                             	<p>
                                 	<span>剑灵</span>
-                                    <em>taoist</em>
+                                    <em>&nbsp<img src="images/zyjsjlbq.png"/></em>
                                 </p>
-                                <p>战场上最强大的杀手！手持法杖，掌控元素之力，高群攻伤害！技能多，依靠高超的技巧与风骚的走位更是让敌人眼花缭乱！</p>
+                                <p>战场上最理想的辅助!并有神秘的召唤术，可召唤精灵、神兽、魔王作为强大的作战伙伴！还拥有治疗和增强防御等辅助手段！</p>
                             </div>
                         </div>
            
