@@ -53,19 +53,19 @@ public class News extends HttpServlet {
 		 
 		  switch (newstype) {  
 		  case "0":
-			  str_sql=" where catalog in('news','announce','activity')";
+			  str_sql=" where status=1 and catalog in('news','announce','activity')";
 			break;
 		  case "1":
-			  str_sql=" where catalog='news'";//改成英文！！！！
+			  str_sql=" where status=1 and catalog='news'";//改成英文！！！！
 		   break;
 		  case "2":
-			  str_sql=" where catalog='activity'";//改成英文！！！！
+			  str_sql=" where  status=1 and catalog='activity'";//改成英文！！！！
 		   break;
 		  case "3":
-			  str_sql=" where catalog='announce'";//改成英文！！！！
+			  str_sql=" where status=1 and catalog='announce'";//改成英文！！！！
 		   break;
 		  case "4":
-			  str_sql=" where catalog='wallpaper'";//改成英文！！！！
+			  str_sql=" where  status=1 and catalog='wallpaper'";//改成英文！！！！
 		   break;
 		  default:
 			break;
@@ -84,7 +84,7 @@ public class News extends HttpServlet {
 		  Integer coutint = Integer.valueOf(newscount);		
 		  Integer pageint = Integer.valueOf(pagenum);
 		 int allcount=coutint.intValue()*(pageint.intValue()-1);
-		 System.out.println(allcount);
+		 //System.out.println(allcount);
 		  response.setContentType("text/html;charset=UTF-8");
 
 	         PrintWriter out = response.getWriter();
@@ -104,8 +104,8 @@ public class News extends HttpServlet {
 //                          "jdbc:mysql://192.168.1.152:3306/cms_lyxm", "root", "123456");   
 	        	   conn= ConnectionService.getInstance().getConnectionForLocal();
 	               stmt = conn.createStatement();
-	               String sqlsel="SELECT id,CASE catalog \n WHEN 'news' THEN '新闻' \n WHEN 'announce' THEN '公告' \n  WHEN 'activity' THEN '活动'\n END as catalog, \n FROM_UNIXTIME(lastModifyTime/1000,'%m-%d') as lastModifyTime,title FROM tbl_cms_contents "+str_sql+" ORDER BY priority DESC limit "+allcount+","+newscount;
-	             //  System.out.println(sqlsel);
+	               String sqlsel="SELECT id,CASE catalog \n WHEN 'news' THEN '新闻' \n WHEN 'announce' THEN '公告' \n  WHEN 'activity' THEN '活动'\n END as catalog, \n FROM_UNIXTIME(lastModifyTime/1000,'%m-%d') as lastModifyTime,title FROM tbl_cms_contents "+str_sql+" ORDER BY lastModifyTime DESC limit "+allcount+","+newscount;
+	               //System.out.println(sqlsel);
 	               rs = stmt.executeQuery(sqlsel);
 	               ResultSetMetaData metaData = rs.getMetaData();               
 	               int columnCount=metaData.getColumnCount();
@@ -123,7 +123,7 @@ public class News extends HttpServlet {
 	            	   
 	               }
 
-	               System.out.println(array.toString());
+	               //System.out.println(array.toString());
 	               response.getWriter().write(array.toString());
 
 	         } catch (Exception e) {

@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 	<meta content="telephone=no, email=no" name="format-detection">
-	<title>沙巴克传奇</title>
+    <title>灵域仙魔</title>
 	<script src="jscss/hm.js"></script>
 	<script src="jscss/hm_001.js"></script>
 	<link rel="stylesheet" type="text/css" href="jscss/index.css" media="all">
@@ -25,9 +25,9 @@
 			<script src="mui/dist/js/mui.min.js"></script>
 
 </head>
-<body>
-		
-	<div style="transform: scale(2.12812); transform-origin: left top 0px;" class="container">
+<body >
+<div style="transform: scale(1.02812); transform-origin: left top 0px;" class="container">
+
 		<!--页眉-->
 <header class="clearfix">
     <!--顶栏-->
@@ -35,7 +35,7 @@
     <!--顶栏 end-->
     <!--头图-->
    <!--  <section class="head-pic">
-        <img src="/rsc/mobile/images/img-header.jpg" />
+        <img src="images/top.png" />
     </section> -->
     <!--头图 end-->
 </header>		
@@ -117,9 +117,9 @@
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
-                                                      html+='<li><a data-sb-indepth="true" href="/lyxm.xtonegame.com/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                                      html+='<li><a data-sb-indepth="true" href="/lyxm.xtonegame.com/mobile/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                     		 +'"> <em class="" style="color:#999999;">【'+comment['catalog']
-                                                      		+'】'+comment['title']+'</em><span></span></a></li>'
+                                                      		+'】'+comment['title']+'</em></a></li>'
                                                       		  
                                                   })
                                      $('#ul1').html(html);
@@ -130,7 +130,7 @@
                               </script>
 												
 						</ul>
-						</li><li class="ln-item active">
+						</li><li class="ln-item">
 						<ul id="ul2">
 						<script type="text/javascript">
                                 $(document).ready(function(){
@@ -144,7 +144,7 @@
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
-                                                      html+='<li><a data-sb-indepth="true" href="/lyxm.xtonegame.com/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                                      html+='<li><a data-sb-indepth="true" href="/lyxm.xtonegame.com/mobile/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                     		 +'"> <em class="" style="">【'+comment['catalog']
                                                       		+'】'+comment['title']+'</em></a></li>'
                                                       		  
@@ -157,7 +157,7 @@
                               </script>
 												
 						</ul>
-						</li><li class="ln-item active">
+						</li><li class="ln-item">
 						<ul id="ul3">
 						<script type="text/javascript">
                                 $(document).ready(function(){
@@ -171,7 +171,7 @@
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
-                                                      html+='<li><a data-sb-indepth="true" href="/lyxm.xtonegame.com/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                                      html+='<li><a data-sb-indepth="true" href="/lyxm.xtonegame.com/mobile/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                     		 +'"> <em class="" style="">【'+comment['catalog']
                                                       		+'】'+comment['title']+'</em></a></li>'
                                                       		  
@@ -184,7 +184,7 @@
                               </script>
 												
 						</ul>
-						</li><li class="ln-item active">
+						</li><li class="ln-item ">
 						<ul id="ul4">
 						<script type="text/javascript">
                                 $(document).ready(function(){
@@ -198,9 +198,9 @@
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
-                                                      html+='<li><a data-sb-indepth="true" href="/lyxm.xtonegame.com/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                                      html+='<li><a data-sb-indepth="true" href="/lyxm.xtonegame.com/mobile/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                     		 +'"> <em class="" style="">【'+comment['catalog']
-                                                      		+'】'+comment['title']+'</em><span></span></a></li>'
+                                                      		+'】'+comment['title']+'</em></a><span></span></li>'
                                                       		  
                                                   })
                                      $('#ul4').html(html);
@@ -215,7 +215,7 @@
 						
 				</ul>
 
-				<a data-sb-indepth="true" class="more" href="synth.html">查看更多</a>
+				<a data-sb-indepth="true" class="more" href="Newslist.jsp">查看更多</a>
 			</div>
 
 		</section>
@@ -298,24 +298,21 @@
 <footer style="height:260px">
 		<img src="images/qqinfo.png">
 		<img src="images/companyinfo.png">
-		
 	
 </footer>		
 		<!-- footer end -->
 		
 		<!-- 微信关注弹窗 -->
-		<div class="dialog">
-			<div class="dialog-in">
-				<div class="close"></div>
-				<img src="erweima.png" alt="">
-				<p>长按微信二维码</p>
-				<p>关注沙巴克传奇</p>
-			</div>
-		</div>
-		<!-- 微信关注弹窗 end -->
+</div>
+		
 
-	</div>
 
+
+	
+	
+	
+	
+	
 	<script src="jscss/zepto.min.js"></script>
 	<script src="jscss/touch.js"></script>
 	<script src="jscss/fx.js"></script>
@@ -361,10 +358,13 @@
 			mui.init({
 				swipeBack:true //启用右滑关闭功能
 			});
-			
+			var slider1 = mui("#slider1");
+	    	slider1.slider({
+				interval: 2000
+			});
 		    	var slider = mui("#slider");
 		    	slider.slider({
-					interval: 5000
+					interval: 2000
 				});
 		    	
 		 

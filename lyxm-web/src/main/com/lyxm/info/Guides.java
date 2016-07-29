@@ -47,13 +47,14 @@ public class Guides extends HttpServlet {
 		 String str_sql="";
 		 
 		  switch (guidestype) {  
-		  case "0":			   
+		  case "0":		
+			  str_sql+=" where status=1 and catalog in('play','strategy') ";
 			break;
 		  case "1":
-			  str_sql+=" where catalog='play' ";//改成英文！！！！
+			  str_sql+=" where status=1 and catalog='play' ";//改成英文！！！！
 		   break;
 		  case "2":
-			  str_sql +=" where catalog='strategy' ";//改成英文！！！
+			  str_sql +=" where  status=1 and catalog='strategy' ";//改成英文！！！
 		   break;
 		  default:
 			break;
@@ -92,7 +93,7 @@ public class Guides extends HttpServlet {
 	                          "jdbc:mysql://192.168.1.152:3306/cms_lyxm", "root", "123456");  */ 
 	        	 conn= ConnectionService.getInstance().getConnectionForLocal();
 	               stmt = conn.createStatement();   
-	               String sqlsel="SELECT id,CASE catalog \n WHEN 'strategy' THEN '游戏玩法' \n WHEN 'play' THEN '游戏攻略' \n END as catalog,\n FROM_UNIXTIME(lastModifyTime/1000,'%m-%d') as lastModifyTime,title FROM tbl_cms_contents "+str_sql+" ORDER BY priority DESC limit "+allcount+","+newscount;
+	               String sqlsel="SELECT id,CASE catalog \n WHEN 'strategy' THEN '游戏玩法' \n WHEN 'play' THEN '游戏攻略' \n END as catalog,\n FROM_UNIXTIME(lastModifyTime/1000,'%m-%d') as lastModifyTime,title FROM tbl_cms_contents "+str_sql+" ORDER BY lastModifyTime DESC limit "+allcount+","+newscount;
 	               System.out.println(sqlsel);
 	               rs = stmt.executeQuery(sqlsel);
 	              // rs = stmt.executeQuery("SELECT id,guidestype,guidestitle,guidesurl,date_format(guidesdate,'%c-%d') guidesdate FROM tbl_guides "+str_sql+" ORDER BY guidesdate desc,id desc limit "+allcount+","+guidescount);

@@ -648,7 +648,7 @@ a:hover{text-decoration:none;}
 </div>
 <!-- 请先抢号预约  -->
 <div class="dialog" id="qxyy" class="dianji"> 
-<img id="closebtn" src="images\guanbianniu.png" width="20px" align="right"></img>
+<!-- <img id="closebtn" src="images\guanbianniu.png" width="20px" align="right"></img> -->
     <div id="uplbneirong" class="pop_con pr" style="position:relative;height:130px;border:0;background-image: url(images/dikuan.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;">
           <div id="kong" style="width:100%;height:37px;"></div>
           <div id="lbneirong" style="height:100%;width:100%;text-align:center;">
@@ -823,16 +823,17 @@ a:hover{text-decoration:none;}
 <script src="js&css/loadjs.js"></script>
 <script src="js&css/report.js"></script>
 <script src="js&css/swfobject.js"></script>
-<script>  alert(document.getElementById('closebtn').offsetLeft)
+<script>  
+// alert(document.getElementById('closebtn').offsetLeft)
 $(".yy_b_btn").on('click', function(){
 	TGDialogS("pop1");
 });
 $("#dlbtn").on('click', function(){
 	TGDialogS("pop111");
 });
-// $("#qxyy").on('click', function(){
-// 	showDialog.hide()
-// });
+$("#qxyy").on('click', function(){
+	showDialog.hide()
+});
 $("#lbbtn1").on('click', function(){
 	
 	giftAjaxCommit(1)

@@ -138,7 +138,7 @@ else{
                         	int rowCount=0;
                         	try{
                         		con = ConnectionService.getInstance().getConnectionForLocal();   		
-                        		String sql = "SELECT COUNT(1) rowCount FROM tbl_cms_contents WHERE catalog='wallpaper'";
+                        		String sql = "SELECT COUNT(1) rowCount FROM tbl_cms_contents WHERE status=1 and catalog='wallpaper'";
                         		ps = con.prepareStatement(sql);
                         		rs = ps.executeQuery();
                         		while(rs.next()){

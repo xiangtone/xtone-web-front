@@ -47,10 +47,10 @@ public class Wallpaper extends HttpServlet {
 		  switch (contentType) {  
 
 		  case "1":
-			  str_sql=" where catalog='wallpaper' ";//改成英文！！！！
+			  str_sql=" where status=1 and catalog='wallpaper' ";//改成英文！！！！
 		   break;
 		  case "2":
-			  str_sql=" where catalog='cutpic' ";//改成英文！！！！
+			  str_sql=" where status=1 and  catalog='cutpic' ";//改成英文！！！！
 		   break;
 		 
 		  default:
@@ -88,7 +88,7 @@ public class Wallpaper extends HttpServlet {
 	        	   conn= ConnectionService.getInstance().getConnectionForLocal();
 	               stmt = conn.createStatement();   
 	      
-				String sqlsel="SELECT id,title,CASE catalog \n WHEN 'wallpaper' THEN '精美壁纸' \n WHEN 'cutpic' THEN '游戏截图' \n   END as catalog,content,FROM_UNIXTIME(lastModifyTime/1000,'%Y-%m-%d %h:%i:%s') as lastModifyTime,title FROM tbl_cms_contents"+str_sql+" limit "+allcount+",4";
+				String sqlsel="SELECT id,title,CASE catalog \n WHEN 'wallpaper' THEN '精美壁纸' \n WHEN 'cutpic' THEN '游戏截图' \n   END as catalog,content,FROM_UNIXTIME(lastModifyTime/1000,'%Y-%m-%d %h:%i:%s') as lastModifyTime,title FROM tbl_cms_contents"+str_sql+" ORDER BY lastModifyTime limit "+allcount+",4";
 	               System.out.println(sqlsel);
 	               rs = stmt.executeQuery(sqlsel);
 	               ResultSetMetaData metaData = rs.getMetaData();               
