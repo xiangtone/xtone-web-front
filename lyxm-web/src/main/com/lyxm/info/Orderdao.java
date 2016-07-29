@@ -107,6 +107,7 @@ public class Orderdao {
 	}	
 	
 	public int count(String phone){
+		int r = 0;
 		PreparedStatement ps = null;
 	    Connection con = null;
 	    ResultSet rs = null;
@@ -116,9 +117,11 @@ public class Orderdao {
 			ps.setString(1, phone);
 			rs = ps.executeQuery();
 			if(rs.next()){
-			return rs.getInt("s");
+				 r = rs.getInt("s"); 
+			
 			}
 		} catch (Exception e) {
+			e.printStackTrace();
 			return 0;
 			
 		}finally{
@@ -130,10 +133,45 @@ public class Orderdao {
 					e.printStackTrace();
 				}
 			}
-           return 0;
+        return r;
 		}
 	   
 		
 		
+	}
+	public Orderinfo login(long id,int codeNum){
+		PreparedStatement ps = null;
+	    Connection con = null;
+	    ResultSet rs = null;
+		try {
+			con = ConnectionService.getInstance().getConnectionForLocal();
+			ps = con.prepareStatement("select * from tbl_orders_users where id = ? and codeNum = ?");
+			ps.setLong(1, id);
+			ps.setInt(2, codeNum);
+			rs = ps.executeQuery();
+			if(rs.next()){
+				Orderinfo orderinfo = new Orderinfo();
+				orderinfo.setPhoneNum(rs.getLong("id"));
+				orderinfo.setCodeNum(rs.getInt("codeNum"));
+				orderinfo.setInvitePhoneNum(rs.getLong("invitePhonenum"));
+				orderinfo.setAddTime(rs.getLong("addTime"));
+				orderinfo.setGift(rs.getString("gift"));
+				return orderinfo;
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}finally{
+			if (con != null) {
+				try {
+					con.close();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+
+		}
+	    return null;
 	}
 }

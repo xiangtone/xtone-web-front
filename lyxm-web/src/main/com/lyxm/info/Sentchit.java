@@ -192,16 +192,15 @@ public class Sentchit {
 		//发送普通短信
 //		result = sendTextSms("15618918208", "您的验证码为：3123，请勿向任何人提供短信验证码");
 		
-		//发送模版短信
-		//result = sendTemplateSms("15618918208", "ZD10003-0001", "@1@=Member,@2@=3918");
+//发送模版短信
+           result = sendTemplateSms("15700804472", "ZD30010-0002", "@1@=Member");
 		
 		//获取短信状态报告
 		//result = queryReport();
 		
 		//获取上行短信
-		result = queryMo();
+//		result = queryMo();
 		
-		System.out.println(result);
 	}
 
 }

@@ -73,7 +73,7 @@ public class Present extends HttpServlet {
 	        	pw.write("{\"code\":\""+userCode+"\"}");
 	        }
 	    	if(giftNum.equalsIgnoreCase("2")){
-	    		if(orderdao.count(phone)<3){  System.out.println(2);
+	    		if(orderdao.count(phone)<3){  System.out.println(phone+"--"+orderdao.count(phone));
 	    			pw.write("{\"status\":\"cant\"}");
 	    		}
 	    		else{
@@ -99,7 +99,7 @@ public class Present extends HttpServlet {
 		    			} 
 		    		}
 		        	
-		        
+		        	pw.write("{\"code\":\""+userCode+"\"}");
 //	    			礼包2
 	    		}
 	    		
@@ -130,7 +130,7 @@ public class Present extends HttpServlet {
 		    				userCode = "兑换码已发放完！";
 		    			} 
 		    		}
-		        	
+		        	pw.write("{\"code\":\""+userCode+"\"}");
 		        
 //	    			礼包3
             	}
@@ -160,7 +160,7 @@ public class Present extends HttpServlet {
 		    				userCode = "兑换码已发放完！";
 		    			} 
 		    		}
-		        	
+		        	pw.write("{\"code\":\""+userCode+"\"}");
 		        
 //	    			礼包4
 	    			

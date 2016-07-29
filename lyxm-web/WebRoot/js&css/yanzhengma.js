@@ -13,144 +13,144 @@
             			        }
             			    }    
 
-onload = function () {
-	  var container2dl = document.getElementById("vCode2dl");
-      var code2dl = new vCode(container2dl, {
-          len: 6,
-          bgColor: "#444444",
-          colors: [
-              "#DDDDDD",
-              "#DDFF77",
-              "#77DDFF",
-              "#99BBFF",
-              "#7700BB",
-              "#EEEE00"
-          ]
-      });
-      document.getElementById("yySubmitdl").addEventListener("click", function () {  
-      	var sMobile = document.all("mobiledl").value; 
-      	if(/^1[3|4|5|7|8][0-9]\d{8}$/.test(sMobile)){ 
-      		if(code2dl.verify(document.getElementById("code2dl").value)){  
-      			code2dl.update.call(code2dl);
-      			commitdl();
-      			
-      		}else{
-      			alert("图片验证码错误")
-      		}
-      		}
-      } );
-      document.getElementById("yzmsdl").addEventListener("click", function () {
-      	var waitTime = 60;
-		    var dj = null;
-		    var flag = true;
-		    //发送验证码倒计时
-      	var sMobile = document.all("mobiledl").value;
-      	if(/^1[3|4|5|7|8][0-9]\d{8}$/.test(sMobile)){ 
-//      		if(code2.verify(document.getElementById("code2").value)){
+//onload = function () {
+//	  var container2dl = document.getElementById("vCode2dl");
+//      var code2dl = new vCode(container2dl, {
+//          len: 6,
+//          bgColor: "#444444",
+//          colors: [
+//              "#DDDDDD",
+//              "#DDFF77",
+//              "#77DDFF",
+//              "#99BBFF",
+//              "#7700BB",
+//              "#EEEE00"
+//          ]
+//      });
+//      document.getElementById("yySubmitdl").addEventListener("click", function () {  
+//      	var sMobile = document.all("mobiledl").value; 
+//      	if(/^1[3|4|5|7|8][0-9]\d{8}$/.test(sMobile)){ 
+//      		if(code2dl.verify(document.getElementById("code2dl").value)){  
+//      			code2dl.update.call(code2dl);
+//      			commitdl();
 //      			
-      		$("#yzmsdl").html('还剩' + 60 + '秒'+'可重新发送');
-	            $("#yzmsdl").css("background","#D3D3D3");
-	            $("#yzmsdl").attr("disabled", "disabled");
-      			var valid = setInterval(function daojishi(){
-      				if(waitTime == 0){
-			            flag = true;
-			            $("#yzmsdl").html('重新发送');
-			            clearInterval(valid);
-			            waitTime = 60;
-			            $("#yzmsdl").css("background","#ffd244");
-			            $("#yzmsdl").attr("disabled", false);
-			        } else {
-			            waitTime--;
-			            flag = false;
-			            $("#yzmsdl").html('还剩' + waitTime + '秒'+'可重新发送');
-			            $("#yzmsdl").css("background","#D3D3D3");
-			            $("#yzmsdl").attr("disabled", "disabled");
-			        } },1000);
-      			 
-      			 sentCodedl(); 	   
-//      		} else{
-//      			alert("验证码错误");
-//      			
+//      		}else{
+//      			alert("图片验证码错误")
 //      		}
-      		
-      	}
-      	else{
-      		alert("请输入正确手机号");
-      		
-      	}
-      	
-         
-      });
-            var container2 = document.getElementById("vCode2");
-            var code2 = new vCode(container2, {
-                len: 6,
-                bgColor: "#444444",
-                colors: [
-                    "#DDDDDD",
-                    "#DDFF77",
-                    "#77DDFF",
-                    "#99BBFF",
-                    "#7700BB",
-                    "#EEEE00"
-                ]
-            });
-            document.getElementById("yySubmit").addEventListener("click", function () {
-            	var sMobile = document.all("mobile").value;
-            	if(/^1[3|4|5|7|8][0-9]\d{8}$/.test(sMobile)){ 
-            		if(code2.verify(document.getElementById("code2").value)){
-            			code2.update.call(code2);
-            			commit();
-            			
-            		}else{
-            			alert("图片验证码错误")
-            		}
-            		}
-            } );
-            
-            
-            document.getElementById("yzms").addEventListener("click", function () {
-            	var waitTime = 60;
-			    var dj = null;
-			    var flag = true;
-			    //发送验证码倒计时
-            	var sMobile = document.all("mobile").value;
-            	if(/^1[3|4|5|7|8][0-9]\d{8}$/.test(sMobile)){ 
+//      		}
+//      } );
+//      document.getElementById("yzmsdl").addEventListener("click", function () {
+//      	var waitTime = 60;
+//		    var dj = null;
+//		    var flag = true;
+//		    //发送验证码倒计时
+//      	var sMobile = document.all("mobiledl").value;
+//      	if(/^1[3|4|5|7|8][0-9]\d{8}$/.test(sMobile)){ 
+////      		if(code2.verify(document.getElementById("code2").value)){
+////      			
+//      		$("#yzmsdl").html('还剩' + 60 + '秒'+'可重新发送');
+//	            $("#yzmsdl").css("background","#D3D3D3");
+//	            $("#yzmsdl").attr("disabled", "disabled");
+//      			var valid = setInterval(function daojishi(){
+//      				if(waitTime == 0){
+//			            flag = true;
+//			            $("#yzmsdl").html('重新发送');
+//			            clearInterval(valid);
+//			            waitTime = 60;
+//			            $("#yzmsdl").css("background","#ffd244");
+//			            $("#yzmsdl").attr("disabled", false);
+//			        } else {
+//			            waitTime--;
+//			            flag = false;
+//			            $("#yzmsdl").html('还剩' + waitTime + '秒'+'可重新发送');
+//			            $("#yzmsdl").css("background","#D3D3D3");
+//			            $("#yzmsdl").attr("disabled", "disabled");
+//			        } },1000);
+//      			 
+//      			 sentCodedl(); 	   
+////      		} else{
+////      			alert("验证码错误");
+////      			
+////      		}
+//      		
+//      	}
+//      	else{
+//      		alert("请输入正确手机号");
+//      		
+//      	}
+//      	
+//         
+//      });
+//            var container2 = document.getElementById("vCode2");
+//            var code2 = new vCode(container2, {
+//                len: 6,
+//                bgColor: "#444444",
+//                colors: [
+//                    "#DDDDDD",
+//                    "#DDFF77",
+//                    "#77DDFF",
+//                    "#99BBFF",
+//                    "#7700BB",
+//                    "#EEEE00"
+//                ]
+//            });
+//            document.getElementById("yySubmit").addEventListener("click", function () {
+//            	var sMobile = document.all("mobile").value;
+//            	if(/^1[3|4|5|7|8][0-9]\d{8}$/.test(sMobile)){ 
 //            		if(code2.verify(document.getElementById("code2").value)){
+//            			code2.update.call(code2);
+//            			commit();
 //            			
-            		$("#yzms").html('还剩' + 60 + '秒'+'可重新发送');
-		            $("#yzms").css("background","#D3D3D3");
-		            $("#yzms").attr("disabled", "disabled");
-            			var valid = setInterval(function daojishi(){
-            				if(waitTime == 0){
-    			            flag = true;
-    			            $("#yzms").html('重新发送');
-    			            clearInterval(valid);
-    			            waitTime = 60;
-    			            $("#yzms").css("background","#ffd244");
-    			            $("#yzms").attr("disabled", false);
-    			        } else {
-    			            waitTime--;
-    			            flag = false;
-    			            $("#yzms").html('还剩' + waitTime + '秒'+'可重新发送');
-    			            $("#yzms").css("background","#D3D3D3");
-    			            $("#yzms").attr("disabled", "disabled");
-    			        } },1000);
-            			 
-            			 sentCode(); 	   
-//            		} else{
-//            			alert("验证码错误");
-//            			
+//            		}else{
+//            			alert("图片验证码错误")
 //            		}
-            		
-            	}
-            	else{
-            		alert("请输入正确手机号");
-            		
-            	}
-            	
-               
-            });
-        };
+//            		}
+//            } );
+//            
+//            
+//            document.getElementById("yzms").addEventListener("click", function () {
+//            	var waitTime = 60;
+//			    var dj = null;
+//			    var flag = true;
+//			    //发送验证码倒计时
+//            	var sMobile = document.all("mobile").value;
+//            	if(/^1[3|4|5|7|8][0-9]\d{8}$/.test(sMobile)){ 
+////            		if(code2.verify(document.getElementById("code2").value)){
+////            			
+//            		$("#yzms").html('还剩' + 60 + '秒'+'可重新发送');
+//		            $("#yzms").css("background","#D3D3D3");
+//		            $("#yzms").attr("disabled", "disabled");
+//            			var valid = setInterval(function daojishi(){
+//            				if(waitTime == 0){
+//    			            flag = true;
+//    			            $("#yzms").html('重新发送');
+//    			            clearInterval(valid);
+//    			            waitTime = 60;
+//    			            $("#yzms").css("background","#ffd244");
+//    			            $("#yzms").attr("disabled", false);
+//    			        } else {
+//    			            waitTime--;
+//    			            flag = false;
+//    			            $("#yzms").html('还剩' + waitTime + '秒'+'可重新发送');
+//    			            $("#yzms").css("background","#D3D3D3");
+//    			            $("#yzms").attr("disabled", "disabled");
+//    			        } },1000);
+//            			 
+//            			 sentCode(); 	   
+////            		} else{
+////            			alert("验证码错误");
+////            			
+////            		}
+//            		
+//            	}
+//            	else{
+//            		alert("请输入正确手机号");
+//            		
+//            	}
+//            	
+//               
+//            });
+//        };
 
 (function(){
     var randstr = function(length){
@@ -374,4 +374,4 @@ onload = function () {
 
     this.vCode = vCode;
 
-}).call(this);
+}).call(this);  
