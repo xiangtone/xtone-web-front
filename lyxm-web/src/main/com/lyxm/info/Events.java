@@ -41,7 +41,7 @@ public class Events extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-	      String str_sql="WHERE catalog ='events' ";
+	      String str_sql="WHERE status=1 and catalog ='events' ";
 		
 		  String newscount =request.getParameter("count"); //每页条数
 		  if(newscount==null){
@@ -77,7 +77,7 @@ public class Events extends HttpServlet {
 //	                          "jdbc:mysql://192.168.1.152:3306/cms_lyxm", "root", "123456");   
 	        	 conn= ConnectionService.getInstance().getConnectionForLocal();
 	               stmt = conn.createStatement();   
-	               String sqlsel="SELECT id,'精彩活动' as catalog,FROM_UNIXTIME(lastModifyTime/1000,'%m-%d') as lastModifyTime,title FROM tbl_cms_contents "+str_sql+" ORDER BY priority DESC limit "+allcount+","+newscount;
+	               String sqlsel="SELECT id,'精彩活动' as catalog,FROM_UNIXTIME(lastModifyTime/1000,'%m-%d') as lastModifyTime,title FROM tbl_cms_contents "+str_sql+" ORDER BY lastModifyTime DESC limit "+allcount+","+newscount;
 	               //System.out.println(sqlsel);
 	               rs = stmt.executeQuery(sqlsel);
 	               ResultSetMetaData metaData = rs.getMetaData();               
