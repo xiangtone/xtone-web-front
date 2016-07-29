@@ -41,20 +41,31 @@
 </style>
 </head>
 <body >
- 
- <div id="for-bg" style="background-color:#211f2c;width: 100%;background-image: url(img/beijing.jpg); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%; position: absolute; ">
- 
- 
- 
- </div>
-
-
+<span id="cpcode">dfdsffsfs</span>
+ <input type="text" value="159951159" id="te"/>
+ <input type="submit" value="复制" onclick="fuzhi()"/>
   <script>
-               var width= document.documentElement.clientWidth;
-           
-               var bg = document.getElementById('for-bg');
-                bg.style.height=width*3.6194+'px';
-    </script>         
+  function fuzhi(){
+	  var i = 0 ;     
+		 
+	  var contat = document.getElementById("cpcode").innerHTML;
+	  window.clipboardData.setData('text', contat);      
+	  if(window.clipboardData.getData('text')==''){        
+		  if(i==1){          alert("复制失败，请手动Ctrl+C快捷键复制！");
+		  }else{          
+			  alert("复制失败，请重新复制！");          i = 1;        
+			  }     
+		  }else{         alert("内容已经复制到剪贴板！");     
+		  }    
+	     
+		    
+		 
+	  
+  }
+  
+  
+  
+  </script>       
 </body>
 
 </html>

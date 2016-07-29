@@ -648,14 +648,13 @@ a:hover{text-decoration:none;}
 </div>
 <!-- 请先抢号预约  -->
 <div class="dialog" id="qxyy" class="dianji"> 
-<img id="closebtn" src="images\guanbianniu.png" width="20px" align="right"></img>
+<img id="closebtn" src="images\guanbianniu.png" width="20px" align="right" style="margin-left:800px;"></img>
     <div id="uplbneirong" class="pop_con pr" style="position:relative;height:130px;border:0;background-image: url(images/dikuan.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;">
           <div id="kong" style="width:100%;height:37px;"></div>
           <div id="lbneirong" style="height:100%;width:100%;text-align:center;">
        
 
 想要获得礼包吗？先抢号预约哦~</br></br>
-邀请好友抢号预约，还能获得豪华礼包哦！  
 </div>
     </div>
     
@@ -823,7 +822,7 @@ a:hover{text-decoration:none;}
 <script src="js&css/loadjs.js"></script>
 <script src="js&css/report.js"></script>
 <script src="js&css/swfobject.js"></script>
-<script>  alert(document.getElementById('closebtn').offsetLeft)
+<script>   
 $(".yy_b_btn").on('click', function(){
 	TGDialogS("pop1");
 });
@@ -833,6 +832,9 @@ $("#dlbtn").on('click', function(){
 // $("#qxyy").on('click', function(){
 // 	showDialog.hide()
 // });
+$("#closebtn").on('click', function(){
+	showDialog.hide()
+});
 $("#lbbtn1").on('click', function(){
 	
 	giftAjaxCommit(1)
@@ -903,12 +905,16 @@ function TGDialogS(e){
 			opacity:50      //弹出“遮罩”的透明度，格式为｛10-100｝，可选
 		});
             });
+            
 }
 function closeDialog(){
             need("biz.dialog-min",function(Dialog){
 		Dialog.hide();
             });
 }
+
+
+
 
 // 通用Top和统计
 

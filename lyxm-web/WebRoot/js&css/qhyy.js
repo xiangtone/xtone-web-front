@@ -36,7 +36,7 @@ function sentCode(){
 	 var data = getData();
 ajaxCommit("1",data,function(data){
    mobilecode = data.mobilecode;
-   alert(mobilecode)
+//   alert(mobilecode)
  
 },function(data){
 
@@ -69,7 +69,7 @@ function commit(){
 	        		document.getElementById('lbneirong').style.textAlign=''	
 	        		document.getElementById('lbneirong').style.marginLeft='50px'
 	        		$('#lbneirong').text("");
-	        		$('#lbneirong').append("恭喜您，</br>您已成功预约《灵域仙魔》！</br></br>您的邀请码是：<span id=\"cpcode\" style=\"color:red;\">"+getData().phoneNum+"</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img id=\"fuzhianniu\" src=\"images\\fuzhianniu.png\"></img></br></br>"+
+	        		$('#lbneirong').append("恭喜您，</br>您已成功预约《灵域仙魔》！</br></br>您的邀请码是：<span id=\"cpcode\" style=\"color:red;\">"+getData().phoneNum+"</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a id=\"fuzhianniu\" href=\"javascript:fuzhi();\" style=\"width:180px;height:40px;\"><img src=\"images\\fuzhianniu.png\"></img></a></br></br>"+
 	        				"快将邀请码告知您的好友，好友预约成功您可获得惊喜宝箱哦</br>"+
 	        				"方法1：复制邀请码，好友预约时填写</br>"+
 	        				"方法2：用微信或手机QQ扫描下方二维码邀请好友。</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img style=\"align:center;text-align:center;vertical-align:middle;\"  src=\"images\\erweima2.png\"></img>"+
@@ -101,7 +101,7 @@ function giftAjaxCommit(giftNum){
 //	        		document.getElementById('lbneirong').style.textAlign=''	
 //	        		document.getElementById('lbneirong').style.marginLeft='50px'
 	        		$('#lbneirong').text("");
-	        		$('#lbneirong').append("恭喜您，成功领取礼包！兑换码：<span id=\"cpcode\" style=\"color:red;\">"+data.code+"</span></br>"+
+	        		$('#lbneirong').append("恭喜您，成功领取礼包！兑换码：<span style=\"color:red;\">"+data.code+"</span></br>"+
 	        				"请登录游戏输入兑换码兑换礼包，该礼包游戏内均可使用，限兑换1次。</br>"+
 	        				"邀请好友抢号预约，还能获得豪华礼包哦！</br>"+
 	        				"<div style=\"height:30px;\"></div>"
@@ -342,10 +342,19 @@ document.getElementById("yzmsdl").addEventListener("click", function () {
     			
     		
     	 }
-//document.getElementById("fuzhianniu").addEventListener("click", function () {
-//	var clip = new ZeroClipboard.Client();
-//	  clip.setHandCursor( true );
-//	    clip.setText(document.getElementById('cpcode').value);
-//}
-
-//);
+function fuzhi(){
+	  var i = 0 ;     
+		 
+	  var contat = document.getElementById("cpcode").innerHTML;
+	  window.clipboardData.setData('text', contat);      
+	  if(window.clipboardData.getData('text')==''){        
+		  if(i==1){          alert("复制失败，请手动Ctrl+C快捷键复制！");
+		  }else{          
+			  alert("复制失败，请重新复制！");          i = 1;        
+			  }     
+		  }else{         alert("内容已经复制到剪贴板！");     
+		  }    
+	    
+	 
+	
+}
