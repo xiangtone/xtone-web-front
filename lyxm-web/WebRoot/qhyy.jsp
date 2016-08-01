@@ -11,7 +11,7 @@
 CheckLoad check = new CheckLoad();
 
 if(check.JudgeIsMoblie(request)){
-  response.sendRedirect("mobileqhyy.jsp");
+  response.sendRedirect("mobile.jsp");
 }
 
 
@@ -657,7 +657,7 @@ a:hover{text-decoration:none;}
           <div id="lbneirong" style="height:100%;width:100%;text-align:center;">
        
 
-想要获得礼包吗？先抢号预约哦~</br></br>
+想要获得礼包吗？先抢号预约哦~</br></br>邀请好友抢号预约，还能获得豪华礼包哦！
 </div>
     </div>
     
@@ -934,6 +934,6 @@ function closeDialog(){
 
 
 <script type="text/javascript" src="js&css/dr.js">
-</script><script type="text/javascript" src="qhyy_files/eas.js"></script><script type="text/javascript" src="qhyy_files/dr.htm"></script><script src="qhyy_files/qmdzs_002.htm" type="text/javascript"></script>
+</script><script type="text/javascript" src="qhyy_files/dr.htm"></script><script src="qhyy_files/qmdzs_002.htm" type="text/javascript"></script>
 </body></html>
 <!--[if !IE]>|xGv00|a32fc438b3db8df74339a1f3d57bde83<![endif]-->
