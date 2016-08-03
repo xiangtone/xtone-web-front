@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -75,6 +76,10 @@ public class Gameorder extends HttpServlet {
 		gsonBuilder.setLongSerializationPolicy(LongSerializationPolicy.STRING);
 		Gson gson = gsonBuilder.create();
 		Orderinfo order  = gson.fromJson(info, Orderinfo.class);
+		String openId = null;
+		HttpSession session = request.getSession();
+		openId = (String)session.getAttribute("openid");
+		order.setOpenId(openId);
 
       if(type.equalsIgnoreCase("1")){
     	  int code=0;
