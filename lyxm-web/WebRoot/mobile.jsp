@@ -231,7 +231,7 @@ a:hover{text-decoration:none;}
 .pop_tab td .pl{margin-left: 10px;}
 .pop_tab .txt{width: 100px;height: 20px;background: #ffffff;line-height:10px;color: #6e6e6e;padding-left: 3px;border: none;}
 .pop_tab .yzm{margin-left:10px;display:block;width: 95px;height: 30px;background: #ffd143;color: #4a2515;text-align: center;line-height: 20px;}
-.pop_desp{font-size:14px;color: #cda364;text-align: center;}
+.pop_desp{font-size:13px;color: #cda364;text-align: center;}
 .submit{display: block;width: 100px;height: 25px;background: #ffd244;font-size: 20px;color: #4a2515;text-align: center;line-height: 25px;
 			margin: 0px auto 0px;}
 .pop_close{top:-2px;right:-49px;display: block;width: 47px;height: 47px;background-position:  -260px -328px;}
@@ -458,7 +458,9 @@ a:hover{text-decoration:none;}
 <!--     		<p class="pop_desp" style="color:999999;">填写好友发给你的邀请码，帮助好友获得惊喜宝箱！</p> -->
     		<a href="javascript:;" id="yySubmitdl" class="submit">登录</a>
     	</div>
-    	<a class="pop_close sp pa" href="javascript:showDialog.hide()" title="关闭" style="background-image: url(images/guanbianniu.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;"></a>
+         <div style="margin-top:-260px;margin-left:94%;width:20px;height:20px;position:absolute;z-index:10000;">
+    	<a href="javascript:showDialog.hide()" title="关闭" style="position: absolute;width:20px;height:20px;background-image: url(images/guanbianniu.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;"></a>
+        </div> 
     </div>
     
 </div>
@@ -490,7 +492,7 @@ a:hover{text-decoration:none;}
     				</td>
     			</tr>
     			<tr>
-    				<td class="tr">邀请码（选填）：</td>
+    				<td class="tr">邀请码(选填)：</td>
     				<td><input class="txt pl" id="yqCode" type="text"></td>
     				<td></td>
     			</tr>
@@ -498,7 +500,9 @@ a:hover{text-decoration:none;}
     		<p class="pop_desp" style="color:999999;">填写好友发给你的邀请码，帮助好友获得惊喜宝箱！</p>
     		<a href="javascript:;" id="yySubmit" class="submit">提交</a>
     	</div>
-<!--     	<a class="pop_close sp pa" href="javascript:showDialog.hide()" title="关闭" style="background-image: url(images/guanbianniu.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;"></a> -->
+    	<div style="margin-top:-260px;margin-left:94%;width:20px;height:20px;position:absolute;z-index:10000;">
+    	<a href="javascript:showDialog.hide()" title="关闭" style="position: absolute;width:20px;height:20px;background-image: url(images/guanbianniu.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;"></a>
+        </div> 
     </div>
     
 </div>

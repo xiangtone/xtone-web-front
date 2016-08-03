@@ -57,6 +57,15 @@ session.setAttribute("openid",openid);
 </style>
 </head>
 <body>
+<div id="dianji" style="width:100%;height:100%;position:absolute;z-index:10000;display:none;">
+<img style="width:30%;margin-left:60%;margin-top:26%;" src="mobileimg\jiantou.png"></img>
+<div style="text-align:center;margin-top:50px;font-family:'微软雅黑';color:#ffffff;font-size:20px;font-weight: light;">
+点击右上角分享</br></br>邀请兄弟与您一起共战灵域仙魔
+
+</div>
+<a href="javascript:showDialog.hide();"><img style="width:30%;margin-left:35%;margin-top:15%;" src="mobileimg/guanbi.png"></img></a>
+</div>
+
 		<div class="logo">
         	<div class="logo-a">
         		<img  src="images/index/logo.png">
@@ -88,8 +97,43 @@ session.setAttribute("openid",openid);
         </div>
         <div class="pro">
         	<div class="pro-1">
-        		<img  src="images/index/fenxiang.png">
+        		<img id="fenxiang" src="images/index/fenxiang.png">
         	</div>
         </div>
+<script src="js&css/jquery-1.js"></script>
+<script src="js&css/ZeroClipboard.js"></script>
+<script src="js&css/milo.js"></script>
+<script type="text/javascript" src="js&css/reporting.js"></script>
+<script src="js&css/loadjs.js"></script>
+<script src="js&css/report.js"></script>
+<script src="js&css/swfobject.js"></script>
+<script type="text/javascript" src="js&css/dr.js"> </script>
+<script>
+
+$("#fenxiang").on('click', function(){  
+	TGDialogS("dianji");
+});
+function TGDialogS(e){
+    need("biz.dialog-min",function(Dialog){
+Dialog.show({
+	id:e,
+	bgcolor:'#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+	opacity:50      //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+});
+    });
+    
+}
+
+function closeDialog(){
+    need("biz.dialog-min",function(Dialog){
+Dialog.hide();
+    });
+}
+
+
+
+</script>
+
+
 </body>
 </html>
