@@ -10,10 +10,11 @@
 	<script src="jscss/hm.js"></script>
 	<script src="jscss/hm_001.js"></script>
 	<link rel="stylesheet" type="text/css" href="jscss/index.css" media="all">
-	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no"> -->
     <meta name="apple-mobile-web-app-capable" content="yes">
    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=0.1, maximum-scale=2.0, user-scalable=yes\"> 
+    
 		<!--标准mui.css-->
 			<link rel="stylesheet" href="mui/dist/css/mui.css">
 			<link rel="stylesheet" href="mui/sass/mui.scss">
@@ -25,7 +26,12 @@
 			<script src="mui/dist/js/mui.min.js"></script>
 
 </head>
-<body >
+<script type="text/javascript">
+
+              width_screen=document.documentElement.clientWidth;
+              
+              document.write("<body style='width="+width_screen+"px'>");
+</script>
 <div style="transform: scale(1.02812); transform-origin: left top 0px;" class="container">
 
 		<!--页眉-->
@@ -44,12 +50,12 @@
 		<!--top-->
 		<section class="top">
 			<div class="download-btn">
-				<a data-sb-indepth="true" href="id1072126000.html">ios下载</a>
-				<a href="http://uri6.com/YnmAZf">安卓下载</a>
+				<a data-sb-indepth="true" href="http://cdnsrc.xtonegame.com/download/lyxm/lyxm_xt.apk">安卓下载</a>
+				<a href="#">IOS下载</a>
 			</div>
 
 			<!-- <div class="erweima">
-				<img src="/rsc/mobile/images/new_erweima.png" alt="">
+				<img src="/rsc/images/new_erweima.png" alt="">
 				<p>扫描下载游戏</p>
 			</div> -->
 		</section>
@@ -117,7 +123,7 @@
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
-                                                      html+='<li><a data-sb-indepth="true" href="/lyxm.xtonegame.com/mobile/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                                      html+='<li><a data-sb-indepth="true" href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                     		 +'"> <em class="" style="color:#999999;">【'+comment['catalog']
                                                       		+'】'+comment['title']+'</em></a></li>'
                                                       		  
@@ -144,7 +150,7 @@
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
-                                                      html+='<li><a data-sb-indepth="true" href="/lyxm.xtonegame.com/mobile/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                                      html+='<li><a data-sb-indepth="true" href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                     		 +'"> <em class="" style="">【'+comment['catalog']
                                                       		+'】'+comment['title']+'</em></a></li>'
                                                       		  
@@ -163,7 +169,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "/lyxm.xtonegame.com/news?type=2&count=4",
+                                      url: "/lyxm.xtonegame.com/news?type=3&count=4",
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -171,7 +177,7 @@
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
-                                                      html+='<li><a data-sb-indepth="true" href="/lyxm.xtonegame.com/mobile/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                                      html+='<li><a data-sb-indepth="true" href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                     		 +'"> <em class="" style="">【'+comment['catalog']
                                                       		+'】'+comment['title']+'</em></a></li>'
                                                       		  
@@ -190,7 +196,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "/lyxm.xtonegame.com/news?type=3&count=4",
+                                      url: "/lyxm.xtonegame.com/news?type=2&count=4",
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -198,7 +204,7 @@
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
-                                                      html+='<li><a data-sb-indepth="true" href="/lyxm.xtonegame.com/mobile/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                                      html+='<li><a data-sb-indepth="true" href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                     		 +'"> <em class="" style="">【'+comment['catalog']
                                                       		+'】'+comment['title']+'</em></a><span></span></li>'
                                                       		  

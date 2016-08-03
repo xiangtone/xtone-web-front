@@ -131,7 +131,7 @@
                 <div class="download_ewm"></div>
 
 			<div class="download_btn1">
-				<a href="" style="cursor：pointer;"></a></div>
+				<a href="http://cdnsrc.xtonegame.com/download/lyxm/lyxm_xt.apk" style="cursor：pointer;"></a></div>
             <div class="download_btn2">
                     <a href="" style="cursor:pointer;"></a>
                 </div>
@@ -143,10 +143,10 @@
                 	<!-- 新闻类别按钮 开始-->
                         <div class="newsTit">
                             <ul>
-                                <li><a style="color:#ff4106;" href="/lyxm.xtonegame.com/News.jsp">综合</a></li>
-                                <li><a href="/lyxm.xtonegame.com/newsa.jsp">新闻</a></li>
-                                <li><a href="/lyxm.xtonegame.com/activity.jsp">活动</a></li>
-                                <li><a href="/lyxm.xtonegame.com/announce.jsp">公告</a></li>
+                                <li><a style="color:#ff4106;" href="News.jsp">综合</a></li>
+                                <li><a href="newsa.jsp">新闻</a></li>
+                                <li><a href="activity.jsp">活动</a></li>
+                                <li><a href="announce.jsp">公告</a></li>
 
                             </ul>
                             <div class="newsMore"><a target="_blank" href="News.jsp">更多</a></div>
@@ -164,7 +164,7 @@
 
                       $.ajax({
                           type: "GET",
-                          url: "/lyxm.xtonegame.com/news?type=0&count=5",
+                          url: "news?type=0&count=5",
                           data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                           dataType: "json",
                           success: function(data){
@@ -172,7 +172,7 @@
                                       var html = '';
                                       $.each(data, function(commentIndex, comment){
                                    
-                                          html+='<li><a href="/lyxm.xtonegame.com/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                          html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                         		 +'" target="_blank"> <em class="" style="color:#ff4106;">【'+comment['catalog']
                                           		+'】'+comment['title']+'</em><span style="color:#ff4106;">'+comment['lastModifyTime']+'</span></a></li>'
                                           		  
@@ -202,7 +202,7 @@
 
                     		  $.ajax({
                           type: "GET",
-                          url: "/lyxm.xtonegame.com/news?type=1&count=5",
+                          url: "news?type=1&count=5",
                           data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                           dataType: "json",
                           success: function(data){
@@ -210,7 +210,7 @@
                                       var html = '';
                                       $.each(data, function(commentIndex, comment){
                                     	  
-                                          html+='<li><a href="/lyxm.xtonegame.com/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                          html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                         		 +'" target="_blank"> <em class="" style="color:#ff4106;">【'+comment['catalog']
                                           		+'】'+comment['title']+'</em><span style="color:#ff4106;">'+comment['lastModifyTime']+'</span></a></li>'
                                           		  
@@ -240,7 +240,7 @@
 
                       $.ajax({
                           type: "GET",
-                          url: "/lyxm.xtonegame.com/news?type=2&count=5",
+                          url: "news?type=2&count=5",
                           data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                           dataType: "json",
                           success: function(data){
@@ -248,7 +248,7 @@
                                       var html = '';
                                       $.each(data, function(commentIndex, comment){
                                     	  
-                                          html+='<li><a href="/lyxm.xtonegame.com/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                          html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                         		 +'" target="_blank"> <em class="" style="color:#ff4106;">【'+comment['catalog']
                                           		+'】'+comment['title']+'</em><span style="color:#ff4106;">'+comment['lastModifyTime']+'</span></a></li>'
                                           		  
@@ -278,7 +278,7 @@
 
                       $.ajax({
                           type: "GET",
-                          url: "/lyxm.xtonegame.com/news?type=3&count=5",
+                          url: "news?type=3&count=5",
                           data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                           dataType: "json",
                           success: function(data){
@@ -286,7 +286,7 @@
                                       var html = '';
                                       $.each(data, function(commentIndex, comment){
                                     	  
-                                          html+='<li><a href="/lyxm.xtonegame.com/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                          html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                         		 +'" target="_blank"> <em class="" style="color:#ff4106;">【'+comment['catalog']
                                           		+'】'+comment['title']+'</em><span style="color:#ff4106;">'+comment['lastModifyTime']+'</span></a></li>'
                                           		  
@@ -381,7 +381,7 @@
               $.ajax({
             	  
             	  type: "GET",
-                  url: "/lyxm.xtonegame.com/getjson",
+                  url: "getjson",
                   data: {name:$("#name").val(),name_en:$("#name_en").val(),introduction:$("#introduction").val(),pic1:$("#pic1").val(),pic2:$("#pic2").val()},
                   dataType: "json",
                   success: function(data){

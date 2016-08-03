@@ -95,7 +95,7 @@ else{
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "/lyxm.xtonegame.com/events?pagenum="+<%=pageid%>+"&count=10",
+                                      url: "events?pagenum="+<%=pageid%>+"&count=10",
                                       data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -103,7 +103,7 @@ else{
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
-                                                      html+='<li><a href="/lyxm.xtonegame.com/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                                      html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                     		 +'" target="_blank"> <em class="" style="color:#ff4106;">【'+comment['catalog']
                                                       		+'】'+comment['title']+'</em><span style="color:#ff4106;">'+comment['lastModifyTime']+'</span></a></li>'
                                                       		  
@@ -127,7 +127,7 @@ else{
                              out.print("&nbsp<span class='de_prev'>上一页&nbsp </span>");
                              }else{
                             	 pagen=pageid-1;
-                            	 out.print("&nbsp<a href='/lyxm.xtonegame.com/Events.jsp?pagenum="+pagen+"&count=15'>上一页&nbsp </a>");
+                            	 out.print("&nbsp<a href='Events.jsp?pagenum="+pagen+"&count=15'>上一页&nbsp </a>");
                              }  
                              
                            %>
@@ -146,7 +146,7 @@ else{
                         		rowCount = rs.getInt("rowCount");
                         		if(rowCount>pageid*15){
                         			 pagen=pageid+1;
-                        			 out.print("&nbsp<a href='/lyxm.xtonegame.com/Events.jsp?pagenum="+pagen+"&count=15'>下一页&nbsp </a>");
+                        			 out.print("&nbsp<a href='Events.jsp?pagenum="+pagen+"&count=15'>下一页&nbsp </a>");
                                      
                         		}else{
                         			
@@ -175,7 +175,7 @@ else{
                     </div>
 
                     <div style="position: absolute; top: 0px; margin-left: 307px;" class="fr">
-    <div class="fr_ewm"><span><img src="images/erweima.jpg" height="230px" width="230px"></span></div>    <a href="http://uri6.com/2euqUv">
+    <div class="fr_ewm"><span><img src="images/erweima.jpg" height="230px" width="230px"></span></div>    <a href="http://cdnsrc.xtonegame.com/download/lyxm/lyxm_xt.apk">
     <div class="fr_btn1" style="cursor:pinter;"></div></a>
     <a href="http://uri6.com/YnmAZf">
     <div class="fr_btn2" style=""></div></a>
