@@ -123,7 +123,7 @@
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
-                                                      html+='<li><a href="/lyxm.xtonegame.com/mobile/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                                      html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                     		 +'" target="_blank"> <em class="" style="color:#999999;">【'+comment['catalog']
                                                       		+'】'+comment['title']+'</em></a><span></span></li>'
                                                       		  
@@ -188,7 +188,7 @@
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
-                                                      html+='<li><a href="/lyxm.xtonegame.com/mobile/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                                      html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                     		 +'" target="_blank"> <em class="" style="color:#999999;">【'+comment['catalog']
                                                       		+'】'+comment['title']+'</em></a><span></span></li>'
                                                       		  
@@ -217,7 +217,7 @@
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
-                                                      html+='<li><a href="/lyxm.xtonegame.com/mobile/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                                      html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                     		 +'" target="_blank"> <em class="" style="color:#999999;">【'+comment['catalog']
                                                       		+'】'+comment['title']+'</em></a><span></span></li>'
                                                       		  
@@ -274,7 +274,7 @@
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
-                                                      html+='<li><a href="/lyxm.xtonegame.com/mobile/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                                      html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                     		 +'" target="_blank"> <em class="" style="color:#999999;">【'+comment['catalog']
                                                       		+'】'+comment['title']+'</em></a><span></span></li>'
                                                       		  
@@ -301,7 +301,7 @@
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
-                                                      html+='<li><a href="/lyxm.xtonegame.com/mobile/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                                      html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                     		 +'" target="_blank"> <em class="" style="color:#999999;">【'+comment['catalog']
                                                       		+'】'+comment['title']+'</em></a><span></span></li>'
                                                       		  
@@ -357,7 +357,7 @@
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
-                                                      html+='<li><a href="/lyxm.xtonegame.com/mobile/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                                      html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                     		 +'" target="_blank"> <em class="" style="color:#999999;">【'+comment['catalog']
                                                       		+'】'+comment['title']+'</em></a><span></span></li>'
                                                       		  
@@ -384,7 +384,7 @@
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
-                                                      html+='<li><a href="/lyxm.xtonegame.com/mobile/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                                      html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                     		 +'" target="_blank"> <em class="" style="color:#999999;">【'+comment['catalog']
                                                       		+'】'+comment['title']+'</em></a><span></span></li>'
                                                       		  
@@ -442,7 +442,7 @@
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
-                                                      html+='<li><a href="/lyxm.xtonegame.com/mobile/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                                      html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                     		 +'" target="_blank"> <em class="" style="color:#999999;">【'+comment['catalog']
                                                       		+'】'+comment['title']+'</em></a><span></span></li>'
                                                       		  
@@ -468,7 +468,7 @@
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
-                                                      html+='<li><a href="/lyxm.xtonegame.com/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                                      html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                     		 +'" target="_blank"> <em class="" style="color:#999999;">【'+comment['catalog']
                                                       		+'】'+comment['title']+'</em></a><span></span></li>'
                                                       		  
@@ -528,7 +528,7 @@
                                                   var html = '';
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
-                                                      html+='<li><a href="/lyxm.xtonegame.com/mobile/Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+                                                      html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                     		 +'" target="_blank"> <em class="" style="color:#999999;">【'+comment['catalog']
                                                       		+'】'+comment['title']+'</em></a><span></span></li>'
                                                       		  

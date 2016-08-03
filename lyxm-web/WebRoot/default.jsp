@@ -135,9 +135,9 @@
          <!-- 下载 -->
          <div class="fload">
             <ul>
-               <li id="li_1"><a href="http://uri6.com/2euqUv"></a></li>
+               <li id="li_1"><a href="http://cdnsrc.xtonegame.com/download/lyxm/"></a></li>
                <li id="li_2"><a href="index.jsp"></a></li>
-               <li id="li_3"><a href="http://uri6.com/YnmAZf"></a></li>
+               <li id="li_3"><a href="http://cdnsrc.xtonegame.com/download/lyxm/lyxm_xt.apk"></a></li>
             </ul>
          </div>
          <!-- 职业介绍 -->
@@ -146,7 +146,7 @@
              $(function(){           	 
               $.ajax({           	  
             	  type: "GET",
-                  url: "/lyxm.xtonegame.com/getjson",
+                  url: "getjson",
                   data: {name:$("#name").val(),introduction:$("#introduction").val(),pic1:$("#pic1").val(),pic2:$("#pic2").val()},
                   dataType: "json",
                   success: function(data){

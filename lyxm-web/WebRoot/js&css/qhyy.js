@@ -150,7 +150,7 @@ document.getElementById("yySubmitdl").addEventListener("click", function () {
 		}else{
 			alert("图片验证码错误")
 		}
-		}
+		}else{alert('请输入正确的手机号')}
 } );
 document.getElementById("yzmsdl").addEventListener("click", function () {
 	var waitTime = 60;
@@ -311,7 +311,7 @@ document.getElementById("yzmsdl").addEventListener("click", function () {
     	 
     	},function(data){
 
-    	alert("网络错误")
+    	alert('网络错误')
 
     	},'Login');
     	 
@@ -334,7 +334,7 @@ document.getElementById("yzmsdl").addEventListener("click", function () {
     			$('#pop111').hide()
     			}
     		},function(data){
-    			
+    			alert('格式异常')
     			
     		},'Login');
     		

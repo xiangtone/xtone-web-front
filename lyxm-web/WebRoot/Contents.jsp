@@ -66,7 +66,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "/lyxm.xtonegame.com/content?type=<%=contentType%>&id=<%=contentId%>",
+                                      url: "content?type=<%=contentType%>&id=<%=contentId%>",
                                       data: {id:$("#id").val(),content:$("#content").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -79,8 +79,8 @@
                                                       		'<div class="con_xian"></div>'+comment['content']+'<p>&nbsp</p>'+
                                                       		'<p>&nbsp</p><div class="h_20"></div><div class="con_bm">'+
                                                       		'<div class="w_380"><div class="h_30"></div>'+
-                                                      		'<span class="qun">官方Q群: 3232698308</span>'+                                                      		
-                                                      		'<span class="qun">游戏客服: 495265372</span>'+
+                                                      		'<span class="qun">官方Q群: 495265372</span>'+                                                      		
+                                                      		'<span class="qun">游戏客服: 3232698308</span>'+
                                                       		'<a class="bd" style="color:#FFFFFF" href="http://tieba.baidu.com/f?ie=utf-8&kw=%E7%81%B5%E5%9F%9F%E4%BB%99%E9%AD%94&fr=search">百度官方贴吧：灵域仙魔吧</a></div>'+
                                                       		'<div class="w_380"><div class="h_10"></div><em><img src="images/erweima.jpg"></em>'+
                                                       		'<i>官方微信号：灵域仙魔<br>关注微信扫一扫<br>最新动态一手掌握</i></div></div>'
@@ -100,7 +100,7 @@
 	</div>
 	</div>
     <div style="position: absolute; top: 0px; margin-left: 307px;" class="fr">
-    <div class="fr_ewm"><span><img src="images/erweima.jpg" height="230px" width="230px"></span></div>    <a href="http://uri6.com/2euqUv">
+    <div class="fr_ewm"><span><img src="images/erweima.jpg" height="230px" width="230px"></span></div>    <a href="http://cdnsrc.xtonegame.com/download/lyxm/lyxm_xt.apk">
     <div class="fr_btn1" style="cursor:pinter;"></div></a>
     <a href="http://uri6.com/YnmAZf">
     <div class="fr_btn2" style=""></div></a>

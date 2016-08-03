@@ -250,11 +250,11 @@ a:hover{text-decoration:none;}
 .pop_tab td .radio.on{background-position: -284px -263px;}
 .pop_tab td .pl{margin-left: 20px;}
 .pop_tab .txt{width: 200px;height: 40px;background: #ffffff;font-size: 24px;line-height:40px;color: #6e6e6e;padding-left: 15px;border: none;}
-.pop_tab .yzm{display:block;width: 155px;height: 40px;background: #ffd143;color: #4a2515;text-align: center;line-height: 40px;}
+.pop_tab .yzm{display:block;width: 155px;height: 40px;background: #ffd143;color: #4a2515;text-align: center;line-height: 40px;border:0px;font-size:20px}
 .pop_desp{font-size:24px;color: #cda364;text-align: center;}
 .submit{display: block;width: 215px;height: 60px;background: #ffd244;font-size: 30px;color: #4a2515;text-align: center;line-height: 60px;
 			margin: 30px auto 0px;}
-.pop_close{top:-2px;right:-49px;display: block;width: 47px;height: 47px;background-position:  -260px -328px;}
+.pop_close{top:-1px;right:-45px;display: block;width: 47px;height: 47px;background-position:  -260px -328px;}
 
 .pop2{font-size: 24px;color: #fee5bf;width: 680px;margin: 0px auto;}
 .pop2_tab,.pop3_tab{width: 680px;margin: 15px auto;}
@@ -295,7 +295,13 @@ a:hover{text-decoration:none;}
 .pop8_tab span{color: #ffa829;display:inline-block;width:240px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden; height:23px;}
 .pop8_tl{text-align: left;padding-left: 280px;}
 </style>
-<style media="screen" type="text/css">#flash {visibility:hidden}#fsh {visibility:hidden}</style><link type="text/css" rel="stylesheet" href="qhyy_files/ost.css"><script charset="gb2312" type="text/javascript" src="qhyy_files/cgi_official_website.htm"></script><script charset="gb2312" type="text/javascript" src="qhyy_files/data.js"></script><script charset="gb2312" type="text/javascript" src="qhyy_files/data.js"></script><script charset="gb2312" type="text/javascript" src="qhyy_files/data.js"></script><script src="qhyy_files/report.htm" type="text/javascript"></script></head>
+<style media="screen" type="text/css">#flash {visibility:hidden}#fsh {visibility:hidden}</style>
+<link type="text/css" rel="stylesheet" href="js&css/buttons.css">
+<script charset="gb2312" type="text/javascript" src="qhyy_files/cgi_official_website.htm"></script>
+<script charset="gb2312" type="text/javascript" src="qhyy_files/data.js">
+</script><script charset="gb2312" type="text/javascript" src="qhyy_files/data.js"></script>
+<script charset="gb2312" type="text/javascript" src="qhyy_files/data.js"></script>
+<script src="qhyy_files/report.htm" type="text/javascript"></script></head>
 <body style="width:100%;height:auto">
 <!--头部flash-->
 <div class="flash_box pa">
@@ -303,7 +309,7 @@ a:hover{text-decoration:none;}
 	<div class="container pa">
 	<% if(phone==null){
 		out.write("<div style=\"margin-left:85%;color:#666666;font-size:15px;\">您好，请先"+
-				"<a id=\"dlbtn\" href=\"javacript:;\" style=\"color:blue;font-size:15px;\"><u>登录</u></a>"+
+				"<a id=\"dlbtn\"  style=\"color:blue;font-size:15px;\" href=\"javascript:void(0)\"><u>登录</u></a>"+
 				"</div>");
 		}
 
@@ -607,7 +613,10 @@ a:hover{text-decoration:none;}
 	</div>
 </div>
 <!-- 快速登录 -->
-<div class="dialog" id="pop111" role="dialog" tabindex="-1" style="display:none; visibility: visible; position: fixed; z-index: 9999; left: 50%; top: 50%; margin-top: -243px; margin-left: -403px;"> <div style="position:absolute;z-index:10000;margin-top:10px;margin-left:38%;"><img src="images/kuaisudenglu.png"></img></div>
+<div class="dialog" id="pop111" role="dialog" tabindex="-1" style="display:none; visibility: visible; position: fixed; z-index: 9999; left: 50%; top: 50%; margin-top: -243px; margin-left: -403px;"> 
+<div style="position:absolute;z-index:10000;margin-top:30px;margin-left:38%;">
+	<img src="images/kuaisudenglu.png"></img>
+	</div>
     <div class="pop_con pr" style="border:0;background-image: url(images/dikuan.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;">
     	<div class="pop">
     		<p class="pop1_tit sp"></p>
@@ -617,7 +626,7 @@ a:hover{text-decoration:none;}
     			<tr>
     				<td class="tr">手机号码：</td>
     				<td><input class="txt pl" id="mobiledl" type="text"></td>
-    				<td><button id="yzmsdl" href="javascript:;" class="yzm">发送登录码</button></td>
+    				<td><button id="yzmsdl" href="javascript:;" class="yzm button small orange" style="padding:1px;font-size:15px">发送登录码</button></td>
     			</tr>
     						<tr>
     				<td class="tr">登录码：</td>
@@ -673,7 +682,7 @@ a:hover{text-decoration:none;}
     			<tr>
     				<td class="tr">手机号码：</td>
     				<td><input class="txt pl" id="mobile" type="text"></td>
-    				<td><button id="yzms" href="javascript:;" class="yzm">发送登录码</button></td>
+    				<td><button id="yzms" href="javascript:;" class="yzm button small orange" style="padding:1px;font-size:16px;">发送登录码</button></td>
     			</tr>
     						<tr>
     				<td class="tr">登录码：</td>
