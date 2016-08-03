@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 	img{
-	width:50%;
+	width:100%;
 	height:auto;
 	display:block;
 	}
@@ -170,9 +170,9 @@
 	padding-left:8%;
 	}
 	.share3{
-	width:40%;
+	width:30%;
 	float:left;
-	padding-left:3%;
+	padding-left:5%;
 	}
 	.share4{
 	float:left;

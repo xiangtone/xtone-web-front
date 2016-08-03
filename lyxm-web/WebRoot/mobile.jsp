@@ -1,5 +1,25 @@
+<%@page import="org.common.util.ConnectionService"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="com.lyxm.info.Counter"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+    <%
+	Counter CountFileHandler=new Counter();//创建对象    
+    int count=0;    
+if(application.getAttribute("count")==null){     
+	  count=CountFileHandler.readFile(request.getRealPath("/")+"count.txt");//读取文件获取数据赋给count    
+	  application.setAttribute("count",new Integer(count));  }  
+    count=(Integer)application.getAttribute("count");  
+
+   /*  if(session.isNew()) */
+  	 count = count+1;  
+    application.setAttribute("count",count);  
+    CountFileHandler.writeFile(request.getRealPath("/")+"count.txt",count);//更新文件记录
+    
+    
+    %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -208,7 +228,7 @@ a:hover{text-decoration:none;}
 .pop_tab .yzm{margin-left:10px;display:block;width: 95px;height: 30px;background: #ffd143;color: #4a2515;text-align: center;line-height: 20px;}
 .pop_desp{font-size:14px;color: #cda364;text-align: center;}
 .submit{display: block;width: 115px;height: 30px;background: #ffd244;font-size: 20px;color: #4a2515;text-align: center;line-height: 30px;
-			margin: 10px auto 0px;}
+			margin: 0px auto 0px;}
 .pop_close{top:-2px;right:-49px;display: block;width: 47px;height: 47px;background-position:  -260px -328px;}
 
 .pop2{font-size: 24px;color: #fee5bf;width: 680px;margin: 0px auto;}
@@ -266,6 +286,37 @@ a:hover{text-decoration:none;}
 </style>
 </head>
 <body>
+ <% 
+            
+         	Connection con = null;
+         	PreparedStatement ps = null;
+         	ResultSet rs = null;
+         	String exchange = "";
+         	int rowCount=0;
+         	try{
+         		con = ConnectionService.getInstance().getConnectionForLocal();   		
+         		String sql = "SELECT COUNT(1) rowCount FROM tbl_orders_users";
+         		ps = con.prepareStatement(sql);
+         		rs = ps.executeQuery();
+         		while(rs.next()){
+         		rowCount = rs.getInt("rowCount");
+         		}         		
+         	}catch(Exception e){
+         		e.printStackTrace();
+         	}finally{
+         		if (con != null) {
+         			try {
+         				con.close();
+         			} catch (Exception e) {
+         				// TODO Auto-generated catch block
+         				e.printStackTrace();
+         			}
+         		}
+         	
+         	}
+             
+             
+             %>
         <div class="sept">
         	<div class="sept-l float">
         		<img  src="images/index/side_left.png">
@@ -282,7 +333,7 @@ a:hover{text-decoration:none;}
         		<img  src="images/index/yuyue.png">
         	</div>
         	<div class="sub-snav">
-        		<font id="yuyueNum" class="font-a">已有999999人预约</font>
+        		<font id="yuyueNum" class="font-a">已有<%=rowCount %>人预约</font>
         	</div>        <div id="achievebtn">
         	<div id="invitebtn" class="sub-dnav">
         		<img  src="images/index/baoxiang.png">
@@ -307,7 +358,7 @@ a:hover{text-decoration:none;}
         		<img  src="images/index/yaoqing.png">
         	</div>
         	<div class="invite-2">
-        		<font class="font-a">已有999999人查看</font>
+        		<font class="font-a">已有<%=count %>人查看</font>
         	</div>
         </div>
         
@@ -354,7 +405,7 @@ a:hover{text-decoration:none;}
     <div style="display:none"><script src='http//v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
 
 <!-- 点击抢号预约 -->
-<div class="dialog" id="pop1" style="display:block;width:100%;"> <div  style="position:absolute;z-index:10000;margin-top:10px;margin-left:34.5%;"><img src="images/kuaisuyuyue.png"></img></div>
+<div class="dialog" id="pop1" style="width:100%;"> <div  style="position:absolute;z-index:10000;margin-top:10px;margin-left:34.5%;"><img style="width:50%;" src="images/kuaisuyuyue.png"></img></div>
     <div class="pop_con pr" style="width:100%;border:0;background-image: url(images/dikuan.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;">
     	<div class="pop" style="width:100%;">
     		<p class="pop1_tit sp"></p>
@@ -394,6 +445,7 @@ a:hover{text-decoration:none;}
     
 </div>
 <script src="js/my.js"></script>
+<script src="js/qhyymobile.js"></script>
 <script src="js&css/jquery-1.js"></script>
 <script src="js&css/ZeroClipboard.js"></script>
 <script src="js&css/milo.js"></script>
@@ -403,7 +455,31 @@ a:hover{text-decoration:none;}
 <script src="js&css/swfobject.js"></script>
 <script type="text/javascript" src="js&css/dr.js"> </script>
 
+<script>  
+$("#yuyuebtn").on('click', function(){
+	TGDialogS("pop1");
+});
 
+
+function TGDialogS(e){
+    need("biz.dialog-min",function(Dialog){
+Dialog.show({
+	id:e,
+	bgcolor:'#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+	opacity:50      //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+});
+    });
+    
+}
+
+function closeDialog(){
+    need("biz.dialog-min",function(Dialog){
+Dialog.hide();
+    });
+}
+
+
+</script>
 
 </body>
 </html>

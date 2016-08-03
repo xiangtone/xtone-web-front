@@ -1,5 +1,18 @@
+<%@page import="org.mxkl.util.CheckLoad"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%
+
+String phone = null;
+try{
+phone = (String)session.getAttribute("id");}catch(Exception ex){
+	ex.printStackTrace(); 
+}
+
+
+
+
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -45,7 +58,7 @@
         </div>
         <div class="share1">
 	        	<div class="share2">
-	        		<strong class="font-d">您de邀请码是:xxx</strong>
+	        		<strong class="font-d">您de邀请码是:</strong><strong id="cde" style="color:red;font-size:12px;"><%=phone %></strong>
 	        	</div>
 	        	<div class="share3">
 	        		<img  src="images/index/tishi.png">
