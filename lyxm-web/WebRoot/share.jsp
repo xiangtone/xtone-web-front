@@ -1,3 +1,6 @@
+<%@page import="com.lyxm.info.Message"%>
+<%@page import="com.google.gson.Gson"%>
+<%@page import="org.mxkl.util.HttpsRequest"%>
 <%@page import="org.mxkl.util.CheckLoad"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
@@ -8,9 +11,16 @@ try{
 phone = (String)session.getAttribute("id");}catch(Exception ex){
 	ex.printStackTrace(); 
 }
-
-
-
+String userCode = "";
+String code = request.getParameter("code");
+HttpsRequest req = new HttpsRequest();
+String resours = (String)req.sendGet("https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx26d9b9ff5f0fc4ed&secret=8b1de189eefa9c0d78c1a847122eaf38&code="+code+"&grant_type=authorization_code");
+//	System.out.println(resours);
+//	System.out.println(1010);
+Gson gson = new Gson();
+Message msg = gson.fromJson(resours, Message.class);
+String openid = msg.getOpenid();
+session.setAttribute("openid",openid);
 
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">

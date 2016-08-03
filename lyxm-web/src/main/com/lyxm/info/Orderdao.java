@@ -27,6 +27,7 @@ public class Orderdao {
 				orderinfo.setInvitePhoneNum(rs.getLong("invitePhonenum"));
 				orderinfo.setAddTime(rs.getLong("addTime"));
 				orderinfo.setGift(rs.getString("gift"));
+				orderinfo.setOpenId(rs.getString("wechatOpenId"));
 				return orderinfo;
 			}
 		} catch (Exception e) {
@@ -51,12 +52,13 @@ public class Orderdao {
 	    ResultSet rs = null;
 		try {
 			con = ConnectionService.getInstance().getConnectionForLocal();
-			ps = con.prepareStatement("insert into tbl_orders_users values(?,?,?,?,?)");
+			ps = con.prepareStatement("insert into tbl_orders_users values(?,?,?,?,?,?)");
 		    ps.setLong(1, order.getPhoneNum());
 		    ps.setInt(2, order.getCodeNum());
 		    ps.setLong(3, order.getInvitePhoneNum());
 		    ps.setLong(4, order.getAddTime());
 		    ps.setString(5, order.getGift());
+		    ps.setString(6, order.getOpenId());
 		    ps.execute();
 			
 		} catch (Exception e) {
@@ -156,6 +158,7 @@ public class Orderdao {
 				orderinfo.setInvitePhoneNum(rs.getLong("invitePhonenum"));
 				orderinfo.setAddTime(rs.getLong("addTime"));
 				orderinfo.setGift(rs.getString("gift"));
+				orderinfo.setOpenId(rs.getString("wechatOpenId"));
 				return orderinfo;
 			}
 		} catch (Exception e) {

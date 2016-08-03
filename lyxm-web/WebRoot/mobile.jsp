@@ -6,6 +6,11 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
     <%
+    String phone = null;
+    try{
+    phone = (String)session.getAttribute("id");}catch(Exception ex){
+    	ex.printStackTrace(); 
+    }
 	Counter CountFileHandler=new Counter();//创建对象    
     int count=0;    
 if(application.getAttribute("count")==null){     
@@ -227,7 +232,7 @@ a:hover{text-decoration:none;}
 .pop_tab .txt{width: 100px;height: 20px;background: #ffffff;line-height:10px;color: #6e6e6e;padding-left: 3px;border: none;}
 .pop_tab .yzm{margin-left:10px;display:block;width: 95px;height: 30px;background: #ffd143;color: #4a2515;text-align: center;line-height: 20px;}
 .pop_desp{font-size:14px;color: #cda364;text-align: center;}
-.submit{display: block;width: 115px;height: 30px;background: #ffd244;font-size: 20px;color: #4a2515;text-align: center;line-height: 30px;
+.submit{display: block;width: 100px;height: 25px;background: #ffd244;font-size: 20px;color: #4a2515;text-align: center;line-height: 25px;
 			margin: 0px auto 0px;}
 .pop_close{top:-2px;right:-49px;display: block;width: 47px;height: 47px;background-position:  -260px -328px;}
 
@@ -318,13 +323,26 @@ a:hover{text-decoration:none;}
              
              %>
         <div class="sept">
-        	<div class="sept-l float">
+            <% if(phone==null){
+		out.write("<div style=\"margin-top:-112%;margin-left:70%;color:#666666;font-size:12px;\">您好，请先"+
+				"<a id=\"dlbtn\" href=\"javacript:;\" style=\"color:blue;font-size:12px;\"><u>登录</u></a>"+
+				"</div>");
+		}
+
+	else{
+		out.write("<div style=\"margin-top:-112%;margin-left:70%;color:#666666;font-size:12px;\">"+"<u style=\"color:blue;\">"+phone+"</u>"+",您好"+
+				"</div>");
+	}
+				
+				
+				%>
+        	<div class="sept-l float" style="margin-top:107%;">
         		<img  src="images/index/side_left.png">
         	</div>
-        	<div class="sept-c float">
+        	<div class="sept-c float" style="margin-top:107%;">
         		<img  src="images/index/first9.png">
         	</div>
-        	<div class="sept-r float">
+        	<div class="sept-r float" style="margin-top:107%;">
         		<img  src="images/index/side_right.png">
         	</div>	      	
         </div>
@@ -404,6 +422,46 @@ a:hover{text-decoration:none;}
         
     <div style="display:none"><script src='http//v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
 
+<!-- 登录 -->
+<div class="dialog" id="pop111" role="dialog" tabindex="-1" style="display:none; visibility: visible; position: fixed; z-index: 9999;width:100%;"> <div style="position:absolute;z-index:10000;margin-top:10px;margin-left:34.6%;"><img style="width:50%;" src="images/kuaisudenglu.png"></img></div>
+    <div class="pop_con pr" style="width:100%;border:0;background-image: url(images/dikuan.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;">
+    	<div class="pop" style="width:100%;">
+    		<p class="pop1_tit sp"></p>
+    		<table style="width:100%;" class="pop_tab">
+    			<tbody style="width:100%;">
+    		
+    			<tr>
+    				<td class="tr">手机号码：</td>
+    				<td><input class="txt pl" id="mobiledl" type="text"></td>
+    				<td><button id="yzmsdl" href="javascript:;" class="yzm">发送登录码</button></td>
+    			</tr>
+    						<tr>
+    				<td class="tr">登录码：</td>
+    				<td><input class="txt pl" id="codedl" type="text"></td>
+    				<td></td>
+    			</tr>
+    				<tr>
+    				<td class="tr lh">验证码：</td>
+    				<td class="c">
+    					<input class="txt pl" type="text" id="code2dl">
+    				</td>
+    				<td>
+<div id="vCode2dl" style="width:140px; height: 40px; border: 1px solid #ccc; display: inline-block;"></div>
+    				</td>
+    			</tr>
+<!--     			<tr> -->
+<!--     				<td class="tr">邀请码（选填）：</td> -->
+<!--     				<td><input class="txt pl" id="yqCode" type="text"></td> -->
+<!--     				<td></td> -->
+<!--     			</tr> -->
+    		</tbody></table>
+<!--     		<p class="pop_desp" style="color:999999;">填写好友发给你的邀请码，帮助好友获得惊喜宝箱！</p> -->
+    		<a href="javascript:;" id="yySubmitdl" class="submit">登录</a>
+    	</div>
+    	<a class="pop_close sp pa" href="javascript:showDialog.hide()" title="关闭" style="background-image: url(images/guanbianniu.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;"></a>
+    </div>
+    
+</div>
 <!-- 点击抢号预约 -->
 <div class="dialog" id="pop1" style="width:100%;"> <div  style="position:absolute;z-index:10000;margin-top:10px;margin-left:34.5%;"><img style="width:50%;" src="images/kuaisuyuyue.png"></img></div>
     <div class="pop_con pr" style="width:100%;border:0;background-image: url(images/dikuan.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;">
@@ -415,7 +473,7 @@ a:hover{text-decoration:none;}
     			<tr>
     				<td class="tr">手机号码：</td>
     				<td><input class="txt pl" id="mobile" type="text"></td>
-    				<td><button id="yzms"  class="yzm" style="">发送登录码</button></td>
+    				<td><button id="yzms"  class="yzm" style="width:85px;height:25px;">发送登录码</button></td>
     			</tr>
     						<tr>
     				<td class="tr">登录码：</td>
@@ -444,6 +502,22 @@ a:hover{text-decoration:none;}
     </div>
     
 </div>
+
+<div class="dialog" id="qxyy" class="dianji" style="width:95%;"> 
+
+<img id="closebtn" src="images\guanbianniu.png" align="right" style="width:20px;margin-left:100%;margin-top:-20px;"></img>
+
+
+    <div id="uplbneirong" class="pop_con pr" style="width:100%;position:relative;height:130px;border:0;background-image: url(images/dikuan.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;">
+          <div id="kong" style="width:100%;height:37px;"></div>
+          <div id="lbneirong" style="height:100%;width:100%;text-align:center;">
+       
+
+想要获得礼包吗？先抢号预约哦~</br></br>邀请好友抢号预约，还能获得豪华礼包哦！
+</div>
+    </div>
+    
+</div>
 <script src="js/my.js"></script>
 <script src="js/qhyymobile.js"></script>
 <script src="js&css/jquery-1.js"></script>
@@ -459,7 +533,27 @@ a:hover{text-decoration:none;}
 $("#yuyuebtn").on('click', function(){
 	TGDialogS("pop1");
 });
-
+$("#achievebtn").on('click', function(){
+	giftAjaxCommit(1);
+});
+$("#closebtn").on('click', function(){
+	showDialog.hide();
+});
+$("#seniorbtn").on('click', function(){
+	
+	giftAjaxCommit(2)
+});
+$("#luxurybtn").on('click', function(){
+	
+	giftAjaxCommit(3)
+});
+$("#extremebtn").on('click', function(){
+	
+	giftAjaxCommit(4)
+});
+$("#dlbtn").on('click', function(){ 
+	TGDialogS("pop111");
+});
 
 function TGDialogS(e){
     need("biz.dialog-min",function(Dialog){
