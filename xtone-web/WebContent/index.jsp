@@ -305,13 +305,13 @@
 			<a href="porducts.jsp"><img src="images/index/066.png"></a>	
 			</div>
 			<div class="item" style="border: none;">
-			<a href="porducts.jsp"><img src="images/index/1900x540-1.jpg" alt="Second banner"></a>
+			<a href="porducts.jsp"><img src="images/index/067.png" alt="Second banner"></a>
 			</div>
 			<div class="item" style="border: none;">
-			<a href="porducts.jsp"><img src="images/index/1900x540_3.jpg" alt="Thrid banner"></a>
+			<a href="porducts.jsp"><img src="images/index/068.png" alt="Thrid banner"></a>
 			</div>
 			<div class="item" style="border: none;">
-			<a href="porducts.jsp"><img src="images/index/1900x540_1.jpg" alt="Fourth banner"></a>
+			<a href="porducts.jsp"><img src="images/index/1900x540-1.jpg" alt="Fourth banner"></a>
 			</div>
 			<div class="item" style="border: none;">
 			<a href="porducts.jsp"><img src="images/index/zhulaile.jpg" alt="Fifth banner"></a>
