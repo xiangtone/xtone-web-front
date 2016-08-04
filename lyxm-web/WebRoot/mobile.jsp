@@ -335,7 +335,8 @@ a:hover{text-decoration:none;}
 		}
 
 	else{
-		out.write("<div style=\"margin-top:-112%;margin-left:70%;color:#666666;font-size:12px;\">"+"<u style=\"color:blue;\">"+phone+"</u>"+",您好"+
+		out.write("<div style=\"margin-top:-112%;margin-left:70%;color:#666666;font-size:12px;\">"+"<u style=\"color:blue;\">"+phone+"</u>"+",您好&nbps&nbps"+
+				"<a href=\"Cancelsession\">退出</a> "+
 				"</div>");
 	}
 				
