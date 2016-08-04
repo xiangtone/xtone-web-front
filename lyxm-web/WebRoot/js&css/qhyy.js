@@ -35,7 +35,12 @@ function ajaxCommit(type,data,success,error,svl){
 function sentCode(){
 	 var data = getData();
 ajaxCommit("1",data,function(data){
-   mobilecode = data.mobilecode;
+   var code = data.mobilecode;
+   if(code==500){
+	alert('该手机号已经预约过无需再次预约')   
+   }else{
+   mobilecode = code;
+   }
 //   alert(mobilecode)
  
 },function(data){

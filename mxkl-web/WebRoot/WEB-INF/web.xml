@@ -9,22 +9,6 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-<!--   <servlet> -->
-<!--     <servlet-name>DwonskipServlet</servlet-name> -->
-<!--     <servlet-class>com.x.interfaceRedirect.DownSkip</servlet-class> -->
-<!--   </servlet> -->
-<!--   <servlet-mapping> -->
-<!--     <servlet-name>DwonskipServlet</servlet-name> -->
-<!--     <url-pattern>/downskip</url-pattern> -->
-<!--   </servlet-mapping> -->
-<!--   <servlet> -->
-<!--     <servlet-name>Cg</servlet-name> -->
-<!--     <servlet-class>com.x.interfaceRedirect.Cg</servlet-class> -->
-<!--   </servlet> -->
-<!--   <servlet-mapping> -->
-<!--     <servlet-name>Cg</servlet-name> -->
-<!--     <url-pattern>/cg</url-pattern> -->
-<!--   </servlet-mapping> -->
   <servlet>
     <servlet-name>wechat</servlet-name>
     <servlet-class>org.mxkl.wctalk.WeChatTalkServlet</servlet-class>

@@ -1,3 +1,6 @@
+<%@page import="com.lyxm.info.Message"%>
+<%@page import="com.google.gson.Gson"%>
+<%@page import="org.mxkl.util.HttpsRequest"%>
 <%@page import="org.common.util.ConnectionService"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
@@ -11,6 +14,8 @@
     phone = (String)session.getAttribute("id");}catch(Exception ex){
     	ex.printStackTrace(); 
     }
+    String openid = request.getParameter("openid");
+    session.setAttribute("openid",openid);
 	Counter CountFileHandler=new Counter();//创建对象    
     int count=0;    
 if(application.getAttribute("count")==null){     
