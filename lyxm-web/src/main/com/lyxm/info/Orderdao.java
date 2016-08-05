@@ -177,4 +177,36 @@ public class Orderdao {
 		}
 	    return null;
 	}
+	
+	
+	
+	
+	public int deleteUserById(String id){
+		PreparedStatement ps = null;
+	    Connection con = null;
+	    ResultSet rs = null;
+		try {
+			con = ConnectionService.getInstance().getConnectionForLocal();
+			ps = con.prepareStatement("DELETE FROM `tbl_orders_users`  WHERE id = ?");
+		    ps.setString(1, id);
+		   
+		    ps.execute();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			return 0;
+		}finally{
+			if (con != null) {
+				try {
+					con.close();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+
+		}
+	    return 1;
+	}	
 }
