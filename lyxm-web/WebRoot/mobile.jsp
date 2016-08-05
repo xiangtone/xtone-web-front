@@ -16,6 +16,7 @@
     }
     String openid = request.getParameter("openid");
     session.setAttribute("openid",openid);
+    response.sendRedirect("mobile.jsp");
 	Counter CountFileHandler=new Counter();//创建对象    
     int count=0;    
 if(application.getAttribute("count")==null){     
@@ -401,7 +402,7 @@ a:hover{text-decoration:none;}
         	</div>
         	<div class="box-2 float">
         		<strong class="font-c">豪华宝箱</strong></br>
-        		<strong style="font-size:12px;">(成功邀请3名好友)</strong>
+        		<strong style="font-size:12px;">(成功邀请5名好友)</strong>
         	</div>	      	
         </div>
         <div id="extremebtn" class="box-z">
@@ -410,7 +411,7 @@ a:hover{text-decoration:none;}
         	</div>
         	<div class="box-2 float">
         		<strong class="font-c">至尊宝箱</strong></br>
-        		<strong style="font-size:12px;">(成功邀请3名好友)</strong>
+        		<strong style="font-size:12px;">(成功邀请10名好友)</strong>
         	</div>	      	
         </div>
         <div class="disb">
