@@ -335,8 +335,8 @@ a:hover{text-decoration:none;}
 		}
 
 	else{
-		out.write("<div style=\"margin-top:-112%;margin-left:70%;color:#666666;font-size:12px;\">"+"<u style=\"color:blue;\">"+phone+"</u>"+",您好&nbps&nbps"+
-				"<a href=\"Cancelsession\">退出</a> "+
+		out.write("<div style=\"margin-top:-112%;margin-left:70%;color:#666666;font-size:12px;\">"+"<u style=\"color:blue;\">"+phone+"</u>"+",您好"+
+				"<a href=\"Cancelsession\"><img style=\"width:51px;\" src=\"images\\tuichu.png\"></img></a> "+
 				"</div>");
 	}
 				
@@ -391,7 +391,8 @@ a:hover{text-decoration:none;}
         		<img  src="images/index/gaoji.png">
         	</div>
         	<div class="box-2 float">
-        		<strong class="font-c">高级宝箱</strong>
+        		<strong class="font-c">高级宝箱</strong></br>
+        		<strong style="font-size:12px;">(成功邀请3名好友)</strong>
         	</div>	      	
         </div>
         <div id="luxurybtn" class="box-h">
@@ -399,7 +400,8 @@ a:hover{text-decoration:none;}
         		<img  src="images/index/haohua.png">
         	</div>
         	<div class="box-2 float">
-        		<strong class="font-c">豪华宝箱</strong>
+        		<strong class="font-c">豪华宝箱</strong></br>
+        		<strong style="font-size:12px;">(成功邀请3名好友)</strong>
         	</div>	      	
         </div>
         <div id="extremebtn" class="box-z">
@@ -407,7 +409,8 @@ a:hover{text-decoration:none;}
         		<img  src="images/index/zhizun.png">
         	</div>
         	<div class="box-2 float">
-        		<strong class="font-c">至尊宝箱</strong>
+        		<strong class="font-c">至尊宝箱</strong></br>
+        		<strong style="font-size:12px;">(成功邀请3名好友)</strong>
         	</div>	      	
         </div>
         <div class="disb">
@@ -415,7 +418,8 @@ a:hover{text-decoration:none;}
         		<strong class="font-a">礼包领取说明：</strong>
         	</div>
         	<div class="disb-2 float">
-        		<font class="font-a">hlannk礼包领取说明礼包领取说明礼包领取说明</font>
+        		<font class="font-a">1、满足宝箱邀请好友数量要求，即可解锁领取；</br>
+2、礼包在封测公测期间均可使用，兑换限1次，请关注官方信息及时注册领取哦。</font>
         	</div>	      	
         </div>
         <div class="scan">

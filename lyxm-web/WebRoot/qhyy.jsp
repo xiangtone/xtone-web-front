@@ -308,14 +308,14 @@ a:hover{text-decoration:none;}
 	
 	<div class="container pa">
 	<% if(phone==null){
-		out.write("<div style=\"margin-left:85%;color:#666666;font-size:15px;\">您好，请先"+
+		out.write("<div style=\"margin-top:10px;margin-left:86.5%;color:#666666;font-size:15px;\">您好，请先"+
 				"<a id=\"dlbtn\"  style=\"color:blue;font-size:15px;\" href=\"javascript:void(0)\"><u>登录</u></a>"+
 				"</div>");
 		}
 
 	else{
-		out.write("<div style=\"margin-left:85%;color:#666666;font-size:15px;\">"+"<u style=\"color:blue;\">"+phone+"</u>"+",您好&nbps&nbps"+
-	              "<a href=\"Cancelsession\">退出</a> "+
+		out.write("<div style=\"margin-top:10px;margin-left:86.5%;color:#666666;font-size:15px;\">"+"<u style=\"color:blue;\">"+phone+"</u>"+",您好"+
+	              "<a style=\"margin-left:200px;width:100px;height:29px;\" href=\"Cancelsession\"><img style=\"margin-top:-30px;\" src=\"images\\yuyue-tuichu.png\"></img></a> "+
 				  "</div>");
 	}
 				
