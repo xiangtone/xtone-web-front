@@ -1,7 +1,7 @@
 /* ::::: http://sdo-shabake.com/rsc/mobile/css/common.css?v=16 ::::: */
 
-html, body { margin: 0px; padding: 0px; height: 100%; overflow-x: hidden; }
-html {  }
+html, body { margin: 0px; padding: 0px; height: 100%;}
+html {white-space:nowrap; }
 body, button, input, select, textarea { font: 20px/1.5 "Microsoft YaHei",Helvetica,Arial,sans-serif; color: rgb(212, 167, 119); }
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, q, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0px; padding: 0px; border: 0px none; font-weight: normal; font-style: normal; font-size: 100%; line-height: 1.5; font-family: inherit; }
 table { border-collapse: collapse; border-spacing: 0px; }
@@ -56,7 +56,7 @@ pre code { padding: 0px; color: inherit; white-space: pre-wrap; background-color
 .hide-text { font: 0px/0 a; color: transparent; text-shadow: none; background-color: transparent; border: 0px none; }
 .pointer { cursor: pointer; }
 .overflow { overflow: hidden; }
-html, body { width: 100%; height:1670px; }
+html, body { width: 100%; }
 
 .container { width: 640px; position: absolute; top: 0px; left: 0px; overflow: hidden; background:url("../images/bg.jpg")top  no-repeat,url("../images/top.png") top  no-repeat; }
 header { position: relative; }
@@ -134,7 +134,5 @@ footer img:nth-child(2){ height:104px;margin-top:-0px; }
 .job-nav { width: 100%; overflow: hidden; text-align: center; margin: 20px auto 40px; font-size: 30px; color: rgb(225, 208, 191); }
 .job-nav span { display: inline-block; width: 142px; height: 57px; line-height: 57px; background: transparent url("job_btn.png") no-repeat scroll -142px 0px; margin: 0px 10px; }
 .job-nav span.active { background-position: 0px 0px; color: rgb(227, 150, 51); }
-.features { margin-top: -30px; }
-.features-pic { height: 331px; }
 .features .carousel-control .control-item { width: 15px; height: 15px; border-radius: 50%; margin: 0px 2px; }
 .gotop { display: block; width: 80px; height: 44px; margin: 30px auto 0px; background: transparent url("gotop.png") no-repeat scroll 0% 0%; }

@@ -90,19 +90,19 @@
                             <ul style="width: 2200px;">
                          <li style="display: none; opacity: 1;" class="imgurl">
                                     <div class="pic">
-                                        <a href=" target="_blank"></a>
+                                        <a href=""></a>
                                         <span><img src="images/activity1.jpg"></span>
                                     </div>
                          </li>
                     <li style="display: none; opacity: 1;" class="imgurl">
                                     <div class="pic">
-                                        <a href="http://sdo-shabake.com/shabake/info?t=2&amp;aid=188" target="_blank"></a>
+                                        <a href=""></a>
                                         <span><img src="images/activity2.jpg"></span>
                                     </div>
                             </li>
                   <li style="display: block; opacity: 1;" class="imgurl"> 
                                      <div class="pic"> 
-                                         <a href="http://www.sdo-shabake.com/shabake/info?t=1&amp;aid=375" target="_blank"></a> 
+                                         <a href=""></a> 
                                          <span><img src="images/activity3.jpg"></span> 
                                      </div> 
                              </li> 
