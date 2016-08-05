@@ -65,7 +65,9 @@
 
 <article class="content">
 <style type="text/css">
+	body #NIE-art .artText{width:100% !important;}
 	body #NIE-art .artText  img{min-width:50%;width:99% !important;width:expression(0.9*documentElement.clientWidth + 'px');height:99% !important;}
+	body #NIE-art .artText  table{width:99% !important;}
 </style> 
   <section class="re-mod mod-frame-1" style="padding-bottom: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%;">
          <div id="NIE-art">

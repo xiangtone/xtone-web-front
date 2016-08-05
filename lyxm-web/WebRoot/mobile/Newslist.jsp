@@ -114,7 +114,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "post",
-                                      url: "/lyxm.xtonegame.com/news?type=0&pagenum="+<%=pagenum%>+"&count=15",
+                                      url: "../news?type=0&pagenum="+<%=pagenum%>+"&count=15",
                                       data: {type:1,count:15},
                                     		  //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
@@ -180,7 +180,7 @@
                     		   }else{ count = $("#ul1 li").length+0+0}
                                   $.ajax({
                                     type: "GET",
-                                     url: "/lyxm.xtonegame.com/news?type=0&pagenum=1&count="+count,
+                                     url: "../news?type=0&pagenum=1&count="+count,
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -208,7 +208,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "post",
-                                      url: "/lyxm.xtonegame.com/news?type=1&pagenum="+<%=pagenum%>+"&count=15",
+                                      url: "../news?type=1&pagenum="+<%=pagenum%>+"&count=15",
                                       data: {type:1,count:15},
                                     		  //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
@@ -266,7 +266,7 @@
                     		   }else{ count = $("#ul2 li").length+0+0;}
                                   $.ajax({
                                     type: "GET",
-                                     url: "/lyxm.xtonegame.com/news?type=1&pagenum=1&count="+count,
+                                     url: "../news?type=1&pagenum=1&count="+count,
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -293,7 +293,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "/lyxm.xtonegame.com/news?type=3&pagenum="+<%=pagenum%>+"&count=5",
+                                      url: "../news?type=3&pagenum="+<%=pagenum%>+"&count=5",
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -349,7 +349,7 @@
                     		   }else{ count = $("#ul3 li").length+0+0;}
                                   $.ajax({
                                     type: "GET",
-                                     url: "/lyxm.xtonegame.com/news?type=3&pagenum=1&count="+count,
+                                     url: "../news?type=3&pagenum=1&count="+count,
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -376,7 +376,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "/lyxm.xtonegame.com/news?type=2&pagenum="+<%=pagenum%>+"&count=15",
+                                      url: "../news?type=2&pagenum="+<%=pagenum%>+"&count=15",
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -434,7 +434,7 @@
                     		   }else{ count = $("#ul4 li").length+0+0;}
                                   $.ajax({
                                     type: "GET",
-                                     url: "/lyxm.xtonegame.com/news?type=2&pagenum=1&count="+count,
+                                     url: "../news?type=2&pagenum=1&count="+count,
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -460,7 +460,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "/lyxm.xtonegame.com/guides?type=0&pagenum="+<%=pagenum%>+"&count=15",
+                                      url: "../guides?type=0&pagenum="+<%=pagenum%>+"&count=15",
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -520,7 +520,7 @@
                     		   }else{ count = $("#ul5 li").length+0+0;}
                                   $.ajax({
                                     type: "GET",
-                                     url: "/lyxm.xtonegame.com/guides?type=0&pagenum=1&count="+count,
+                                     url: "../guides?type=0&pagenum=1&count="+count,
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
