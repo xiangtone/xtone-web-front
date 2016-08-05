@@ -596,7 +596,7 @@ a:hover{text-decoration:none;}
 					</li>
 				</ul>
 				<p>&nbsp</p>
-				<a href="javascript:;" class="yq_frid sp"></a>
+				<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis yq_frid sp"></a>
 				<p>&nbsp</p>
 				<p class="ck_yq">已有<span><%=count %></span>人查看</p>
 				<div class="ewm_frame">
@@ -826,6 +826,7 @@ a:hover{text-decoration:none;}
 		<a class="pop_close sp pa" href="javascript:showDialog.hide()" title="关闭"></a>
 	</div>
 </div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1" charset="utf-8"></script>
 <script src="js&css/yanzhengma.js"></script>
 <script src="js&css/qhyy.js"></script>
 <script src="js&css/jquery-1.js"></script>

@@ -16,6 +16,7 @@
     }
     String openid = request.getParameter("openid");
     session.setAttribute("openid",openid);
+    if(openid!=null)
     response.sendRedirect("mobile.jsp");
 	Counter CountFileHandler=new Counter();//创建对象    
     int count=0;    
@@ -83,7 +84,7 @@ a:hover{text-decoration:none;}
 
 /*head*/
 .head1{background: url() no-repeat;height: 400px;}
-.logo{width: 190px;height: 121px;top:20px;left:0;z-index: 88;background: url(images/flogo.png) no-repeat;}
+.logo{width: 190px;height: 121px;top:20px;left:0;z-index: 88;background: url(mobileimg/logo.png) no-repeat;}
 .btn-home{top: 30px;right: 10px;width: 125px;height: 42px;padding: 7px 18px 0 10px;}	
 .ico-topbtn{float: left;background-position: 0 -60px;width: 35px;height: 35px;}
 .txt-topbtn{float: right;background-position: -53px -74px;width: 78px;height: 20px;margin-top: 8px;}
