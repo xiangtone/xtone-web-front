@@ -135,7 +135,7 @@
          <!-- 下载 -->
          <div class="fload">
             <ul>
-               <li id="li_1"><a href="http://cdnsrc.xtonegame.com/download/lyxm/"></a></li>
+               <li id="li_1"><a href="javascript:alert('暂未开通，敬请期待')"></a></li>
                <li id="li_2"><a href="index.jsp"></a></li>
                <li id="li_3"><a href="http://cdnsrc.xtonegame.com/download/lyxm/lyxm_xt.apk"></a></li>
             </ul>

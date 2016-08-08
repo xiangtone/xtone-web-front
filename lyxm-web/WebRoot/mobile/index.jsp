@@ -25,9 +25,8 @@
 
 </head>
 <script type="text/javascript">
-
+			
               width_screen=1.5*document.documentElement.clientWidth;
-
              document.write("<body style='height:"+width_screen+"px'>");
 </script>
 
@@ -50,7 +49,7 @@
 		<section class="top">
 			<div class="download-btn">
 				<a data-sb-indepth="true" href="http://cdnsrc.xtonegame.com/download/lyxm/lyxm_xt.apk">安卓下载</a>
-				<a href="#">IOS下载</a>
+				<a href="javascript:alert('暂未开通，敬请期待')">IOS下载</a>
 			</div>
 
 			<!-- <div class="erweima">
@@ -62,7 +61,7 @@
 
 		<!--最新活动-->
 
-			<div id="slider1" class="mui-slider" style="width:100%;height:413px;align:center;margin-left:1px;margin-right:1px;margin-top:100px;">
+			<div id="slider1" class="mui-slider" style="width:100%;height:413px;align:center;margin-left:1px;margin-right:1px;margin-top:60px;">
 			<div class="mui-slider-group mui-slider-loop">
 				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
 				<div class="mui-slider-item mui-slider-item-duplicate">

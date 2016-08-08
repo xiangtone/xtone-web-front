@@ -58,13 +58,13 @@
        		</div>
         </div>
         <div class="sept-1">
-        	<div class="sept-l-1 float">
+        	<div class="sept-l float">
         		<img  src="images/index/side_left.png">
         	</div>
-        	<div class="sept-c-1 float">
-        		<strong class="font-b">邀请好友，仙盟争霸</strong>
+        	<div class="sept-c float" style="align:center">
+        		<b>邀请好友,仙魔争霸</b>
         	</div>
-        	<div class="sept-r-1 float">
+        	<div class="sept-r float">
         		<img  src="images/index/side_right.png">
         	</div>	      	
         </div>

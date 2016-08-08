@@ -89,7 +89,7 @@ public class Wallpaper extends HttpServlet {
 	               stmt = conn.createStatement();   
 	      
 				String sqlsel="SELECT id,title,CASE catalog \n WHEN 'wallpaper' THEN '精美壁纸' \n WHEN 'cutpic' THEN '游戏截图' \n   END as catalog,content,FROM_UNIXTIME(lastModifyTime/1000,'%Y-%m-%d %h:%i:%s') as lastModifyTime,title FROM tbl_cms_contents"+str_sql+" ORDER BY lastModifyTime limit "+allcount+",4";
-	               System.out.println(sqlsel);
+	           /*    System.out.println(sqlsel);*/
 	               rs = stmt.executeQuery(sqlsel);
 	               ResultSetMetaData metaData = rs.getMetaData();               
 	               int columnCount=metaData.getColumnCount();

@@ -57,7 +57,7 @@ public class Events extends HttpServlet {
 		  Integer coutint = Integer.valueOf(newscount);		
 		  Integer pageint = Integer.valueOf(pagenum);
 		 int allcount=coutint.intValue()*(pageint.intValue()-1);
-		 System.out.println(allcount);
+		
 		  response.setContentType("text/html;charset=UTF-8");
 
 	         PrintWriter out = response.getWriter();

@@ -107,7 +107,7 @@ public class Content extends HttpServlet {
 	               stmt = conn.createStatement();   
 	               String sqlsel="SELECT id,title,"+catalog_sql+",content,FROM_UNIXTIME(lastModifyTime/1000,'%Y-%m-%d %h:%i:%s') as lastModifyTime,title FROM tbl_cms_contents where id= "+contentId; 
 	               
-	               System.out.println(sqlsel);
+	          /*     System.out.println(sqlsel);*/
 	               rs = stmt.executeQuery(sqlsel);
 	               ResultSetMetaData metaData = rs.getMetaData();               
 	               int columnCount=metaData.getColumnCount();
