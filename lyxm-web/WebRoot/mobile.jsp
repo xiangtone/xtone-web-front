@@ -227,7 +227,7 @@ a:hover{text-decoration:none;}
 .dialog{display: none;}
 .pop_con{width: 802px;background: url(http://game.gtimg.cn/images/qmdzs/cp/a20160509gwyy/tc_bg.jpg) no-repeat;border: 2px solid #ffeace;}
 .pop{padding:0px 0px 20px;} 
-.pop1_tit{width: 226px;height: 46px;background-position: 0 -340px;margin: 0px auto;}
+.pop1_tit{width: 226px;height: 30px;background-position: 0 -340px;margin: 0px auto;}
 .pop_tab{width: 670px;height: 150px;}
 .pop_tab td{font-size: 12px;color: black;}
 .pop_tab td.tr{text-align: right;}
@@ -372,7 +372,7 @@ a:hover{text-decoration:none;}
         	<div class="sept-l-1 float">
         		<img  src="images/index/side_left.png">
         	</div>
-        	<div class="sept-c-1 float">
+        	<div class="sept-c-1 float" style="width:70%;">
         		<strong class="font-b">邀请好友，仙盟争霸</strong>
         	</div>
         	<div class="sept-r-1 float">
@@ -435,8 +435,8 @@ a:hover{text-decoration:none;}
     <div style="display:none"><script src='http//v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
 
 <!-- 登录 -->
-<div class="dialog" id="pop111" role="dialog" tabindex="-1" style="display:none; visibility: visible; position: fixed; z-index: 9999;width:100%;"> <div style="position:absolute;z-index:10000;margin-top:10px;margin-left:34.6%;"><img style="width:50%;" src="images/kuaisudenglu.png"></img></div>
-    <div class="pop_con pr" style="width:100%;border:0;background-image: url(images/dikuan.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;">
+<div class="dialog" id="pop111" role="dialog" tabindex="-1" style="display:none; visibility: visible; position: fixed; z-index: 9999;width:95%;"> <div style="position:absolute;z-index:10000;margin-top:10px;margin-left:34.6%;"><img style="width:50%;" src="images/kuaisudenglu.png"></img></div>
+    <div class="pop_con pr" style="background:url();width:100%;background-color:#DDDDDD;">
     	<div class="pop" style="width:100%;">
     		<p class="pop1_tit sp"></p>
     		<table style="width:100%;" class="pop_tab">
@@ -470,18 +470,18 @@ a:hover{text-decoration:none;}
 <!--     		<p class="pop_desp" style="color:999999;">填写好友发给你的邀请码，帮助好友获得惊喜宝箱！</p> -->
     		<a href="javascript:;" id="yySubmitdl" class="submit">登录</a>
     	</div>
-         <div style="margin-top:-260px;margin-left:94%;width:20px;height:20px;position:absolute;z-index:10000;">
+         <div style="margin-top:-66%;margin-left:94%;width:20px;height:20px;position:absolute;z-index:10000;">
     	<a href="javascript:showDialog.hide()" title="关闭" style="position: absolute;width:20px;height:20px;background-image: url(images/guanbianniu.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;"></a>
         </div> 
     </div>
     
 </div>
 <!-- 点击抢号预约 -->
-<div class="dialog" id="pop1" style="width:100%;"> <div  style="position:absolute;z-index:10000;margin-top:10px;margin-left:34.5%;"><img style="width:50%;" src="images/kuaisuyuyue.png"></img></div>
-    <div class="pop_con pr" style="width:100%;border:0;background-image: url(images/dikuan.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;">
+<div class="dialog" id="pop1" style="width:95%;"> <div  style="position:absolute;z-index:10000;margin-top:10px;margin-left:34.5%;"><img style="width:50%;" src="images/kuaisuyuyue.png"></img></div>
+    <div class="pop_con pr" style="width:100%;background:url();background-color:#DDDDDD;">
     	<div class="pop" style="width:100%;">
     		<p class="pop1_tit sp"></p>
-    		<table style="width:100%;margin-top:-20px;" class="pop_tab">
+    		<table style="width:100%;margin-top:;" class="pop_tab">
     			<tbody style="width:100%;">
     		
     			<tr>
@@ -512,7 +512,7 @@ a:hover{text-decoration:none;}
     		<p class="pop_desp" style="color:999999;">填写好友发给你的邀请码，帮助好友获得惊喜宝箱！</p>
     		<a href="javascript:;" id="yySubmit" class="submit">提交</a>
     	</div>
-    	<div style="margin-top:-260px;margin-left:94%;width:20px;height:20px;position:absolute;z-index:10000;">
+    	<div style="margin-top:-69.5%;margin-left:94%;width:20px;height:20px;position:absolute;z-index:10000;">
     	<a href="javascript:showDialog.hide()" title="关闭" style="position: absolute;width:20px;height:20px;background-image: url(images/guanbianniu.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;"></a>
         </div> 
     </div>

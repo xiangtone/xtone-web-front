@@ -51,8 +51,8 @@ if(phone==null){
 </style>
 </head>
 <body>
-<div id="dianji" style="width:100%;height:100%;position:absolute;z-index:10000;display:none;">
-<img style="width:30%;margin-left:60%;margin-top:26%;" src="mobileimg\jiantou.png"></img>
+<div id="dianji" style="width:80%;height:80%;position:absolute;z-index:10000;display:none;">
+<img style="width:30%;margin-left:60%;margin-top:2%;" src="mobileimg\jiantou.png"></img>
 <div style="text-align:center;margin-top:50px;font-family:'微软雅黑';color:#ffffff;font-size:20px;font-weight: light;">
 点击右上角分享</br></br>邀请兄弟与您一起共战灵域仙魔
 
@@ -71,7 +71,7 @@ if(phone==null){
         </div>
         <div class="share1">
 	        	<div class="share2">
-	        		<strong class="font-d">您de邀请码是:</strong><strong id="cde" style="color:red;font-size:12px;"><%=phone %></strong>
+	        		<strong class="font-d">您的邀请码是:</strong><strong id="cde" style="color:red;font-size:12px;"><%=phone %></strong>
 	        	</div>
 	        	<div class="share3">
 	        		<img  src="images/index/tishi.png">
