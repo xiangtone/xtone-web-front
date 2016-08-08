@@ -341,7 +341,7 @@ a:hover{text-decoration:none;}
 <div class="wrap">  
 	<div class="container">
 		<div class="head1 pr">
-			<h1 class="hide">斗心未泯  战火不熄</h1>
+			<h1 class="hide">仙魔争霸，由你主宰</h1>
 		   <a href="index.jsp" class="logo db pa" target="_blank" title="全民斗战神">全民斗战神</a>
 			
 		</div>

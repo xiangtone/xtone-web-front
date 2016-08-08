@@ -82,7 +82,7 @@ function commit(){
 	        		$('#lbneirong').append("恭喜您，</br>您已成功预约《灵域仙魔》！</br></br>您的邀请码是：<span id=\"cpcode\" style=\"color:red;\">"+getData().phoneNum+"</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a id=\"fuzhianniu\" href=\"javascript:fuzhi();\" style=\"width:180px;height:40px;\"><img src=\"images\\fuzhianniu.png\"></img></a></br></br>"+
 	        				"快将邀请码告知您的好友，好友预约成功您可获得惊喜宝箱哦</br>"+
 	        				"方法1：复制邀请码，好友预约时填写</br>"+
-	        				"方法2：用微信或手机QQ扫描下方二维码邀请好友。</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img style=\"align:center;text-align:center;vertical-align:middle;\"  src=\"images\\erweima2.png\"></img>"+
+	        				"方法2：用微信或手机QQ扫描下方二维码邀请好友。</br></br><img style=\"margin-left:35%;align:center;text-align:center;vertical-align:middle;\"  src=\"images\\erweima2.png\"></img>"+
 	        				"<div style=\"height:30px;\"></div>"
 	        				
 	        		);
