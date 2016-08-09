@@ -133,7 +133,7 @@
 			<div class="download_btn1">
 				<a href="http://cdnsrc.xtonegame.com/download/lyxm/lyxm_xt.apk" style="cursor：pointer;"></a></div>
             <div class="download_btn2">
-                    <a href="" style="cursor:pointer;"></a>
+                    <a href="javascript:alert('暂未开通，敬请期待')" style="cursor:pointer;"></a>
                 </div>
             </div>
         </div>

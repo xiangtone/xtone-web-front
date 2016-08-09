@@ -27,6 +27,7 @@ $(function() {
 					"-ms-transform":"scale("+ value +")",
 					"-ms-transform-origin":"left top"
 				});
+				
 				$("body").css({
 				"width":width_screen+"px",
 				

@@ -73,7 +73,7 @@ public class Guides extends HttpServlet {
 		  Integer coutint = Integer.valueOf(newscount);		
 		  Integer pageint = Integer.valueOf(pagenum);
 		 int allcount=coutint.intValue()*(pageint.intValue()-1);
-		 System.out.println(allcount);
+		 /*System.out.println(allcount);*/
 		  response.setContentType("text/html;charset=UTF-8");
 
 	         PrintWriter out = response.getWriter();
@@ -94,7 +94,7 @@ public class Guides extends HttpServlet {
 	        	 conn= ConnectionService.getInstance().getConnectionForLocal();
 	               stmt = conn.createStatement();   
 	               String sqlsel="SELECT id,CASE catalog \n WHEN 'strategy' THEN '游戏玩法' \n WHEN 'play' THEN '游戏攻略' \n END as catalog,\n FROM_UNIXTIME(lastModifyTime/1000,'%m-%d') as lastModifyTime,title FROM tbl_cms_contents "+str_sql+" ORDER BY lastModifyTime DESC limit "+allcount+","+newscount;
-	               System.out.println(sqlsel);
+	              /* System.out.println(sqlsel);*/
 	               rs = stmt.executeQuery(sqlsel);
 	              // rs = stmt.executeQuery("SELECT id,guidestype,guidestitle,guidesurl,date_format(guidesdate,'%c-%d') guidesdate FROM tbl_guides "+str_sql+" ORDER BY guidesdate desc,id desc limit "+allcount+","+guidescount);
 	               ResultSetMetaData metaData = rs.getMetaData();               

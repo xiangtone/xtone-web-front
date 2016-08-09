@@ -173,7 +173,7 @@ else{
                     <div style="position: absolute; top: 0px; margin-left: 307px;" class="fr">
     <div class="fr_ewm"><span><img src="images/erweima.jpg" height="230px" width="230px"></span></div>    <a href="http://cdnsrc.xtonegame.com/download/lyxm/lyxm_xt.apk">
     <div class="fr_btn1" style="cursor:pinter;"></div></a>
-    <a href="http://uri6.com/YnmAZf">
+    <a href="javascript:alert('暂未开通，敬请期待')">
     <div class="fr_btn2" style=""></div></a>
     <!--<div class="fr_btn1"><a href="javascript:alert('敬请期待！')"></a></div>
     <div class="fr_btn2"><a href="javascript:alert('敬请期待！')"></a></div>-->
