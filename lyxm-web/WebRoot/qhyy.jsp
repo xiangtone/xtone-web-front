@@ -236,7 +236,7 @@ a:hover{text-decoration:none;}
 	50% {
 		opacity: 1;
 	}
-}
+}http://lyxm.xtonegame.com/index.jsp
 @keyframes zoomIn {
 	0% {
 		opacity: 0;

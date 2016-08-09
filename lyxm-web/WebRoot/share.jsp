@@ -71,7 +71,7 @@ if(phone==null){
         </div>
         <div class="share1">
 	        	<div class="share2">
-	        		<strong class="font-d">您的邀请码是:</strong><strong id="cde" style="color:red;font-size:12px;"><%=phone %></strong>
+	        		<strong class="font-d">您的邀请码是:</strong></br><strong id="cde" style="color:red;font-size:12px;"><%=phone %></strong>
 	        	</div>
 	        	<div class="share3">
 	        		<img  src="images/index/tishi.png">

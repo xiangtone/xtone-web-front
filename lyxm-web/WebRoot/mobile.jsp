@@ -338,7 +338,7 @@ a:hover{text-decoration:none;}
 
 	else{
 		out.write("<div style=\"margin-top:-112%;margin-left:70%;color:#666666;font-size:12px;\">"+"<u style=\"color:blue;\">"+phone+"</u>"+",您好"+
-				"<a href=\"Cancelsession\"><img style=\"width:51px;\" src=\"images\\tuichu.png\"></img></a> "+
+				"<a href=\"Cancelsession\"><img style=\"position:absolute;width:51px;\" src=\"images\\tuichu.png\"></img></a> "+
 				"</div>");
 	}
 				
@@ -422,11 +422,13 @@ a:hover{text-decoration:none;}
         	<div class="disb-2 float">
         		<font class="font-a">1、满足宝箱邀请好友数量要求，即可解锁领取；</br>
 2、礼包在封测公测期间均可使用，兑换限1次，请关注官方信息及时注册领取哦。</font>
-        	</div>	      	
+        	</div>	
+        	     	
         </div>
-        <div class="scan">
+        <div style="width:100%;height:10px;display:block;"></div> 
+        <div class="scan" style="background-color:white;padding-top:0;margin-top:114%;">
         	<div class="scan-1">
-        		<img  src="images/index/scan.png">
+        		<img style="margin-top:10px;" src="images/index/scan.png">
         	</div>
         </div>
 
@@ -436,6 +438,9 @@ a:hover{text-decoration:none;}
 
 <!-- 登录 -->
 <div class="dialog" id="pop111" role="dialog" tabindex="-1" style="display:none; visibility: visible; position: fixed; z-index: 9999;width:95%;"> <div style="position:absolute;z-index:10000;margin-top:10px;margin-left:34.6%;"><img style="width:50%;" src="images/kuaisudenglu.png"></img></div>
+      <div id="pop111close" style="margin-top:2px;width:20px;height:20px;position:absolute;z-index:10000;">
+    	<a href="javascript:showDialog.hide()" title="关闭" style="position: absolute;width:20px;height:20px;background-image: url(images/guanbianniu.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;"></a>
+        </div> 
     <div class="pop_con pr" style="background:url();width:100%;background-color:#DDDDDD;">
     	<div class="pop" style="width:100%;">
     		<p class="pop1_tit sp"></p>
@@ -458,7 +463,7 @@ a:hover{text-decoration:none;}
     					<input class="txt pl" type="text" id="code2dl">
     				</td>
     				<td>
-<div id="vCode2dl" style="width:140px; height: 40px; border: 1px solid #ccc; display: inline-block;"></div>
+<div id="vCode2dl" style="width:120px; height: 30px; border: 1px solid #ccc; display: inline-block;"></div>
     				</td>
     			</tr>
 <!--     			<tr> -->
@@ -470,14 +475,15 @@ a:hover{text-decoration:none;}
 <!--     		<p class="pop_desp" style="color:999999;">填写好友发给你的邀请码，帮助好友获得惊喜宝箱！</p> -->
     		<a href="javascript:;" id="yySubmitdl" class="submit">登录</a>
     	</div>
-         <div style="margin-top:-66%;margin-left:94%;width:20px;height:20px;position:absolute;z-index:10000;">
-    	<a href="javascript:showDialog.hide()" title="关闭" style="position: absolute;width:20px;height:20px;background-image: url(images/guanbianniu.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;"></a>
-        </div> 
+       
     </div>
     
 </div>
 <!-- 点击抢号预约 -->
 <div class="dialog" id="pop1" style="width:95%;"> <div  style="position:absolute;z-index:10000;margin-top:10px;margin-left:34.5%;"><img style="width:50%;" src="images/kuaisuyuyue.png"></img></div>
+    <div id="pop1close" style="margin-top:2px;width:20px;height:20px;position:absolute;z-index:10000;">
+    	<a href="javascript:showDialog.hide()" title="关闭" style="position: absolute;width:20px;height:20px;background-image: url(images/guanbianniu.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;"></a>
+        </div>
     <div class="pop_con pr" style="width:100%;background:url();background-color:#DDDDDD;">
     	<div class="pop" style="width:100%;">
     		<p class="pop1_tit sp"></p>
@@ -512,19 +518,19 @@ a:hover{text-decoration:none;}
     		<p class="pop_desp" style="color:999999;">填写好友发给你的邀请码，帮助好友获得惊喜宝箱！</p>
     		<a href="javascript:;" id="yySubmit" class="submit">提交</a>
     	</div>
-    	<div style="margin-top:-69.5%;margin-left:94%;width:20px;height:20px;position:absolute;z-index:10000;">
-    	<a href="javascript:showDialog.hide()" title="关闭" style="position: absolute;width:20px;height:20px;background-image: url(images/guanbianniu.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;"></a>
-        </div> 
+    	 
     </div>
     
 </div>
 
 <div class="dialog" id="qxyy" class="dianji" style="width:95%;"> 
 
-<img id="closebtn" src="images\guanbianniu.png" align="right" style="width:20px;margin-left:100%;margin-top:-20px;"></img>
+<!-- <img id="closebtn" src="images\guanbianniu.png" align="right" style="width:20px;margin-left:100%;"></img> -->
 
 
-    <div id="uplbneirong" class="pop_con pr" style="width:100%;position:relative;height:130px;border:0;background-image: url(images/dikuan.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;">
+    <div id="uplbneirong" class="pop_con pr" style="width:100%;position:relative;height:130px;background:url();background-color:#DDDDDD;">
+    <img id="closebtn" src="images\guanbianniu.png" align="right" style="width:20px;margin-left:100%;"></img>
+    
           <div id="kong" style="width:100%;height:37px;"></div>
           <div id="lbneirong" style="height:100%;width:100%;text-align:center;">
        
@@ -546,6 +552,11 @@ a:hover{text-decoration:none;}
 <script type="text/javascript" src="js&css/dr.js"> </script>
 
 <script>  
+var c1 = document.getElementById("pop1close");
+var c2 = document.getElementById("pop111close");
+
+c1.style.marginLeft=document.body.clientWidth*0.95-20+'px';
+c2.style.marginLeft=document.body.clientWidth*0.95-20+'px';
 $("#yuyuebtn").on('click', function(){
 	TGDialogS("pop1");
 });
