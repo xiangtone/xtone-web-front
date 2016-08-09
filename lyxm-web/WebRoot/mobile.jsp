@@ -463,7 +463,7 @@ a:hover{text-decoration:none;}
     					<input class="txt pl" type="text" id="code2dl">
     				</td>
     				<td>
-<div id="vCode2dl" style="width:140px; height: 40px; border: 1px solid #ccc; display: inline-block;"></div>
+<div id="vCode2dl" style="width:120px; height: 30px; border: 1px solid #ccc; display: inline-block;"></div>
     				</td>
     			</tr>
 <!--     			<tr> -->
