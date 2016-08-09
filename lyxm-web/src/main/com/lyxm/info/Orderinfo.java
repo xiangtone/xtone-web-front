@@ -6,6 +6,13 @@ private int codeNum;
 private long invitePhoneNum;
 private long addTime;
 private String gift;
+private String openId;
+public String getOpenId() {
+	return openId;
+}
+public void setOpenId(String openId) {
+	this.openId = openId;
+}
 public String getGift() {
 	return gift;
 }

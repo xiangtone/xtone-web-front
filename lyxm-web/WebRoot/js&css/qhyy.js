@@ -35,7 +35,17 @@ function ajaxCommit(type,data,success,error,svl){
 function sentCode(){
 	 var data = getData();
 ajaxCommit("1",data,function(data){
-   mobilecode = data.mobilecode;
+   var code = data.mobilecode;
+   if(code==500){
+	alert('该手机号已经预约过无需再次预约,可通过点击右上角的登录按钮登录账号领取礼包')   
+	clearInterval(valid2);
+	$("#yzms").html('发送登录码');
+	$("#yzms").css("background","#ffd244");
+    $("#yzms").attr("disabled", false);
+    showDialog.hide()
+   }else{
+   mobilecode = code;
+   }
 //   alert(mobilecode)
  
 },function(data){
@@ -72,7 +82,7 @@ function commit(){
 	        		$('#lbneirong').append("恭喜您，</br>您已成功预约《灵域仙魔》！</br></br>您的邀请码是：<span id=\"cpcode\" style=\"color:red;\">"+getData().phoneNum+"</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a id=\"fuzhianniu\" href=\"javascript:fuzhi();\" style=\"width:180px;height:40px;\"><img src=\"images\\fuzhianniu.png\"></img></a></br></br>"+
 	        				"快将邀请码告知您的好友，好友预约成功您可获得惊喜宝箱哦</br>"+
 	        				"方法1：复制邀请码，好友预约时填写</br>"+
-	        				"方法2：用微信或手机QQ扫描下方二维码邀请好友。</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img style=\"align:center;text-align:center;vertical-align:middle;\"  src=\"images\\erweima2.png\"></img>"+
+	        				"方法2：用微信或手机QQ扫描下方二维码邀请好友。</br></br><img style=\"margin-left:35%;align:center;text-align:center;vertical-align:middle;\"  src=\"images\\erweima2.png\"></img>"+
 	        				"<div style=\"height:30px;\"></div>"
 	        				
 	        		);
@@ -150,7 +160,7 @@ document.getElementById("yySubmitdl").addEventListener("click", function () {
 		}else{
 			alert("图片验证码错误")
 		}
-		}
+		}else{alert('请输入正确的手机号')}
 } );
 document.getElementById("yzmsdl").addEventListener("click", function () {
 	var waitTime = 60;
@@ -311,7 +321,7 @@ document.getElementById("yzmsdl").addEventListener("click", function () {
     	 
     	},function(data){
 
-    	alert("网络错误")
+    	alert('网络错误')
 
     	},'Login');
     	 
@@ -334,7 +344,7 @@ document.getElementById("yzmsdl").addEventListener("click", function () {
     			$('#pop111').hide()
     			}
     		},function(data){
-    			
+    			alert('格式异常')
     			
     		},'Login');
     		

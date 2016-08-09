@@ -69,7 +69,7 @@ else{
     <div class="navBtn b5"><a href="http://tieba.baidu.com/f?ie=utf-8&kw=%E7%81%B5%E5%9F%9F%E4%BB%99%E9%AD%94&fr=search"></a></div>
     <div class="navBtn b6"><a href="qhyy.jsp"></a></div>
 </div>
-<div class="movBtn"><a class="popcl" href="http://sdo-shabake.com/video"></a></div>
+
                 </div>
                 <div class="conNav">
                     <span id="btn1">&nbsp</span>
@@ -96,7 +96,7 @@ else{
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "/lyxm.xtonegame.com/wallpaper?type=1&page="+<%=pageid %>+"&count=4",
+                                      url: "wallpaper?type=1&page="+<%=pageid %>+"&count=4",
                                       data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),content:$("#content").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -126,7 +126,7 @@ else{
                              out.print("&nbsp<span class='de_prev'>上一页&nbsp </span>");
                              }else{
                             	 pagen=pageid-1;
-                            	 out.print("&nbsp<a href='/lyxm.xtonegame.com/Wallpaper.jsp?type=1&pagenum="+pagen+"&count=4'>上一页&nbsp </a>");
+                            	 out.print("&nbsp<a href='Wallpaper.jsp?type=1&pagenum="+pagen+"&count=4'>上一页&nbsp </a>");
                              }  
                              
                            %>
@@ -145,7 +145,7 @@ else{
                         		rowCount = rs.getInt("rowCount");
                         		if(rowCount>pageid*4){
                         			 pagen=pageid+1;
-                        			 out.print("&nbsp<a href='/lyxm.xtonegame.com/Wallpaper.jsp?type=1&pagenum="+pagen+"&count=4'>下一页&nbsp </a>");
+                        			 out.print("&nbsp<a href='Wallpaper.jsp?type=1&pagenum="+pagen+"&count=4'>下一页&nbsp </a>");
                                      
                         		}else{
                         			
@@ -174,9 +174,9 @@ else{
                     </div>
 
                     <div style="position: absolute; top: 0px; margin-left: 307px;" class="fr">
-    <div class="fr_ewm"><span><img src="images/erweima.jpg" height="230px" width="230px"></span></div>    <a href="http://uri6.com/2euqUv">
+    <div class="fr_ewm"><span><img src="images/erweima.jpg" height="230px" width="230px"></span></div>    <a href="http://cdnsrc.xtonegame.com/download/lyxm/lyxm_xt.apk">
     <div class="fr_btn1" style="cursor:pinter;"></div></a>
-    <a href="http://uri6.com/YnmAZf">
+    <a href="javascript:alert('暂未开通，敬请期待')">
     <div class="fr_btn2" style=""></div></a>
     <!--<div class="fr_btn1"><a href="javascript:alert('敬请期待！')"></a></div>
     <div class="fr_btn2"><a href="javascript:alert('敬请期待！')"></a></div>-->

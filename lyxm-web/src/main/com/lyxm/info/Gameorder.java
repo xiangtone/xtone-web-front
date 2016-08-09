@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -75,6 +76,10 @@ public class Gameorder extends HttpServlet {
 		gsonBuilder.setLongSerializationPolicy(LongSerializationPolicy.STRING);
 		Gson gson = gsonBuilder.create();
 		Orderinfo order  = gson.fromJson(info, Orderinfo.class);
+		String openId = null;
+		HttpSession session = request.getSession();
+		openId = (String)session.getAttribute("openid");
+		order.setOpenId(openId);
 
       if(type.equalsIgnoreCase("1")){
     	  int code=0;
@@ -86,12 +91,13 @@ public class Gameorder extends HttpServlet {
     		  if(code<1000)code+=1000;    
     	  }
     	  else{
-    		  code = rsorder.getCodeNum();
+    		  code = 500;
     	  }
     	  PrintWriter pw =	response.getWriter();
     	    pw.write("{\"mobilecode\":\""+code+"\"}");
     	    pw.close();
     	  try {
+    		  if(code!=500)
 			Sentchit.sendTemplateSms(String.valueOf( order.getPhoneNum()), "ZD30010-0002", "@1@="+code);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

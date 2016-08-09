@@ -19,8 +19,11 @@
 <meta charset="UTF-8">
 
 
-<script src="js.dat" async="" type="text/javascript"></script><script charset="gb2312" type="text/javascript" src="jscss/jquery(mixNIE).last.js"></script>
-<script charset="gb2312" type="text/javascript" src="jscss/index2.js"></script>
+
+<script charset="UTF-8" type="text/javascript" src="jscss/jquery-1.7.js"></script>
+              
+<script charset="gb2312" type="text/javascript" src="jscss/index2.js"></script>              
+
 <!-- 为移动设备添加 viewport -->
 <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no">
 
@@ -32,15 +35,19 @@
 	String contentId=request.getParameter("id"); 
 	
 %>
+<script type="text/javascript">
 
-<body>
+              width_screen=document.documentElement.clientWidth;
+              
+              document.write("<body style='width="+width_screen+"px'>");
+</script>
 
 <header class="header">
     <div class="top-bar">
-        <div class="logo fl" style=""><a href="javascript:history.back(-1);" style="background:url(images/btn-left.png) center left no-repeat;margin-left:-28px;margin-top:1px" ></a></div>
+        <div class="logo fl" style=""><a href="javascript:history.back(-1);" style="background:url(images/btn-left.png) center left no-repeat;margin-left:-1px;margin-top:-8px" ></a></div>
         <div class="con-tit"><a href="javascript:;">news</a></div>
-        <a href="index.jsp"><div class="" style="width:48px;height:48px;float:right;margin-top:-53px;margin-right:13px;background:url() top center no-repeat"></div>
-        </a>
+       <div onclick="javascript:location.href='index.jsp'" style="width:48px;height:48px;margin-top:10px;background:url(images/bg_home.png) top center no-repeat;position:absolute;float:right;right:5px;"> <a href="index.jsp" style="width:100%;height:100%"></a></div>
+      
     </div>
     <nav class="nav-bar" id="j_head_nav" style="display: none;">
     <div class="t">
@@ -57,16 +64,18 @@
 </header>
 
 <article class="content">
- <style type="text/css">
-	body #NIE-art .artText p img {width:90%;height:90%;}
-</style>
+<style type="text/css">
+	body #NIE-art .artText{width:100% !important;}
+	body #NIE-art .artText  img{min-width:50%;width:99% !important;width:expression(0.9*documentElement.clientWidth + 'px');height:99% !important;}
+	body #NIE-art .artText  table{width:99% !important;}
+</style> 
   <section class="re-mod mod-frame-1" style="padding-bottom: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%;">
          <div id="NIE-art">
           <script type="text/javascript">
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "/lyxm.xtonegame.com/content?id=<%=contentId%>",
+                                      url: "/lyxm.xtonegame.com/content?id=<%=contentId %>",
                                       // data: {id:$("#id").val(),content:$("#content").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -79,10 +88,10 @@
                                                       		' <span class="artDate">发布日期:'+comment['lastModifyTime']+'</span>'+
                                                       		'<div class="artText">'+comment['content']+'</div>'+
                                                       		'<p></p>'+
-                                                      		'<p><span class="qun">&nbsp&nbsp&nbsp&nbsp官方Q群: 495265372</span></p>'+  
+                                                      		'<p><span class="qun">&nbsp&nbsp&nbsp&nbsp官方Q群: &nbsp495265372&nbsp</span></p>'+  
                                                       		'<p><span class="qun">&nbsp&nbsp&nbsp&nbsp游戏客服: 3232698308</span></p>'+  
-                                                      	    '<div class="w_380">'+
-                                                      		'</div>'
+                                                      	    '<div></div>'
+                                                      	
                                                       	
                                                       		
                                                                                          
@@ -91,9 +100,22 @@
                                    }
                                  })
 
-                               })
+                               });
+                                
+                                $(document).ready(function(){ 
+                                    var imgs = document.getElementsByTagName("img");
+
+
+                                    for(var i=0,len=imgs.length; i<len; i++){ 
+
+                                   	 imgs[i].style.width = '50%';
+
+                                    } 
+                                    }) 
                               </script>
-         
+<style type="text/css">
+	body #NIE-art .artText  img{min-width:50%;width:99% !important;width:expression(0.9*documentElement.clientWidth + 'px');height:99% !important;}
+</style> 
          
           </div>
    
@@ -106,11 +128,14 @@
   <%
                         Connection con=null;
                      	PreparedStatement ps = null;
+                     	PreparedStatement ps1 = null;
                      	ResultSet rs = null;
+                     	ResultSet rs1 = null;
                      	String exchange = "";
                      	try{
                      		con = ConnectionService.getInstance().getConnectionForLocal();   		
                      		String sql = "SELECT id,catalog,title FROM tbl_cms_contents WHERE id< "+contentId+"  AND STATUS=1 and catalog not in ('wallpaper','cutpic') ORDER BY id DESC LIMIT 1";
+                     		System.out.println(sql);
                      		ps = con.prepareStatement(sql);
                      		rs = ps.executeQuery();
                      		if(rs.next()){
@@ -136,18 +161,18 @@
                      			default:
                      				exchange=rs.getString("catalog");
                      			 }
-                     			 out.print(" <p class='no-break' style='margin-top: 10px; margin-right: auto;'><a data-sb-indepth='true' href='/lyxm.xtonegame.com/mobile/Contents.jsp?id="+rs.getInt("id")+"'>上一篇：【"+exchange+"】"+rs.getString("title")+" </a></p>");
+                     			 out.print(" <p class='no-break' style='margin-top: 10px; margin-right: auto;'><a data-sb-indepth='true' href='Contents.jsp?id="+rs.getInt("id")+"'>上一篇：【"+exchange+"】"+rs.getString("title")+" </a></p>");
                                  
                      		
                      		}else{
-                     			out.print(" <p class='no-break' style='margin-top: 10px; margin-right: auto;'><a data-sb-indepth='true' href=''>上一篇：无</a></p>");
+                     		/* 	out.print(" <p class='no-break' style='margin-top: 10px; margin-right: auto;'><a data-sb-indepth='true' href=''>上一篇：无</a></p>"); */
                      		}    
                      		
-                     		String sql1 = "SELECT id,catalog,title FROM tbl_cms_contents WHERE id> "+contentId+"  AND STATUS=1 and catalog not in ('wallpaper','cutpic') ORDER BY id DESC LIMIT 1";
-                     		ps = con.prepareStatement(sql1);
-                     		rs = ps.executeQuery();
-                     		if(rs.next()){
-                     			 switch(rs.getString("catalog")){
+                     		String sql1 = "SELECT id,catalog,title FROM tbl_cms_contents WHERE id > "+contentId+"  AND STATUS=1 and catalog not in ('wallpaper','cutpic') ORDER BY id LIMIT 1";
+                     		ps1 = con.prepareStatement(sql1);
+                     		rs1 = ps1.executeQuery();
+                     		if(rs1.next()){
+                     	    switch(rs1.getString("catalog")){
                      			 case "news":
                      				 exchange="新闻";
                      				 break;
@@ -169,11 +194,11 @@
                      			default:
                      				exchange=rs.getString("catalog");
                      			 }
-                     			 out.print(" <p class='no-break' style='margin-top: 10px; margin-right: auto;'><a data-sb-indepth='true' href='/lyxm.xtonegame.com/mobile/Contents.jsp?id="+rs.getInt("id")+"'>下一篇：【"+exchange+"】"+rs.getString("title")+" </a></p>");
+                     			 out.print(" <p class='no-break' style='margin-top: 10px; margin-right: auto;'><a data-sb-indepth='true' href='Contents.jsp?id="+rs1.getInt("id")+"'>下一篇：【"+exchange+"】"+rs1.getString("title")+" </a></p>");
                                  
                      		
                      		}else{
-                     			out.print(" <p class='no-break' style='margin-top: 10px; margin-right: auto;'><a data-sb-indepth='true' href=''>下一篇：无</a></p>");
+                     		/* 	out.print(" <p class='no-break' style='margin-top: 10px; margin-right: auto;'><a data-sb-indepth='true' href=''>下一篇：无</a></p>"); */
                      		}    
                      		
                      		
@@ -196,15 +221,19 @@
 
                 
               </div>
-
-<script type="text/javascript">
-	$(function(){
-		$(".artText img").removeAttr("style");
-		$(".artText img").css({"width":"90%","display":"block","clear":"both","margin":"auto"});
- 	});
-</script>
+              
+     <script type="text/javascript">         
+       $(document).ready(function(){ 
+     var imgs = document.getElementsByTagName("img");
 
 
+     for(var i=0,len=imgs.length; i<len; i++){ 
 
+    	 imgs[i].style.width = '99%';
+
+     } 
+     })
+     
+		</script>
 
 </body></html>

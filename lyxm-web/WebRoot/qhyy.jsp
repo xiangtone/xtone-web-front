@@ -37,8 +37,6 @@ phone = (String)session.getAttribute("id");}catch(Exception ex){
     pageEncoding="UTF-8"%>
 
 <html lang="zh-CN"><head>
-
-<meta property="qc:admins" content="2514161501560476571556375710116230" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
 <meta name="robots" content="all">
@@ -334,7 +332,7 @@ a:hover{text-decoration:none;}
 <div class="wrap">  
 	<div class="container">
 		<div class="head1 pr">
-			<h1 class="hide">斗心未泯  战火不熄</h1>
+			<h1 class="hide">仙魔争霸,由你主宰</h1>
 		   <a href="index.jsp" class="logo db pa" target="_blank" title="全民斗战神">全民斗战神</a>
 			
 		</div>
@@ -648,16 +646,13 @@ a:hover{text-decoration:none;}
 </div>
 <!-- 请先抢号预约  -->
 <div class="dialog" id="qxyy" class="dianji"> 
-
-<img id="closebtn" src="images\guanbianniu.png" width="20px" align="right" style="margin-left:800px;"></img>
-
-
     <div id="uplbneirong" class="pop_con pr" style="position:relative;height:130px;border:0;background-image: url(images/dikuan.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;">
           <div id="kong" style="width:100%;height:37px;"></div>
           <div id="lbneirong" style="height:100%;width:100%;text-align:center;">
        
 
 想要获得礼包吗？先抢号预约哦~</br></br>
+邀请好友抢号预约，还能获得豪华礼包哦！  
 </div>
     </div>
     
@@ -816,31 +811,25 @@ a:hover{text-decoration:none;}
 		<a class="pop_close sp pa" href="javascript:showDialog.hide()" title="关闭"></a>
 	</div>
 </div>
-<script src="js&css/yanzhengma.js"></script>
+<script src="js&css/dengluyanzhengma.js"></script>
+<script src="js&css/denglu.js"></script>
 <script src="js&css/qhyy.js"></script>
 <script src="js&css/jquery-1.js"></script>
+<script src="js&css/yanzhengma.js"></script>
 <script src="js&css/ZeroClipboard.js"></script>
 <script src="js&css/milo.js"></script>
 <script type="text/javascript" src="js&css/reporting.js"></script>
 <script src="js&css/loadjs.js"></script>
 <script src="js&css/report.js"></script>
 <script src="js&css/swfobject.js"></script>
-
-<script>  
-// alert(document.getElementById('closebtn').offsetLeft)
-
+<script>
 $(".yy_b_btn").on('click', function(){
 	TGDialogS("pop1");
 });
 $("#dlbtn").on('click', function(){
 	TGDialogS("pop111");
 });
-
-// $("#qxyy").on('click', function(){
-// 	showDialog.hide()
-// });
-$("#closebtn").on('click', function(){
-
+$("#qxyy").on('click', function(){
 	showDialog.hide()
 });
 $("#lbbtn1").on('click', function(){
@@ -913,16 +902,12 @@ function TGDialogS(e){
 			opacity:50      //弹出“遮罩”的透明度，格式为｛10-100｝，可选
 		});
             });
-            
 }
 function closeDialog(){
             need("biz.dialog-min",function(Dialog){
 		Dialog.hide();
             });
 }
-
-
-
 
 // 通用Top和统计
 
