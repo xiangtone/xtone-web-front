@@ -36,11 +36,19 @@ phone = (String)session.getAttribute("id");}catch(Exception ex){
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<html lang="zh-CN"><head>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- [if lt IE 7]> <html class="ie6" lang="en"> <![endif] -->
+<!-- [if IE 7]> <html class="ie6" lang="en"> <![endif] -->
+<!-- [if IE 8]> <html class="ie6" lang="en"> <![endif] -->
+<!-- [if IE 9]> <html class="ie6" lang="en"> <![endif] -->
+<!-- [if (gt IE 9)|!(IE)]><!-->
+<html lang="zh-CN">
+<!-- <![endif] -->
+<head>
 <meta property="qc:admins" content="2514161501560476571556375710116230" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=8">
 <meta name="robots" content="all">
 <meta name="author" content="Tencent-CP">
 <meta name="Description" content="《全民斗战神》是由《斗战神》原班团队倾力打造的腾讯3D动作手游钜制。连击、浮空、闪避！极具操控感的操作系统，挑战操作极限！拳拳到肉，真实场景反馈，让你领略极致的打击快感！首创七十二变玩法，突破职业桎梏，一次成长，玩遍所有职业！ ">
@@ -77,7 +85,12 @@ fieldset,img,abbr,acronym{border:0}
 .c:before,.c:after {content:"";display:table}
 .c:after {clear:both}
 .c {zoom:1}
-body {font:12px/1.5;font-family:"\5FAE\8F6F\96C5\9ED1";text-align:justify;background:url(images/orderbg.jpg)top center no-repeat;}
+body {font:12px/1.5;
+font-family:"\5FAE\8F6F\96C5\9ED1";
+text-align:justify;
+background:top center no-repeat;
+background-image:url(images/orderbg.jpg);
+}
 a{text-decoration:none;overflow:hidden;}
 a:hover{text-decoration:none;}
 .wrap,.flash_box{width: 100%;min-width: 1000px;}
@@ -110,9 +123,9 @@ a:hover{text-decoration:none;}
 .content1{background: url() no-repeat 0 1000px;}
 .box1{padding-top: 400px;}
 
-.box1 a,.yy_b_btn1{left:150px;bottom:40px;display: block;width: 500;height: 111px;animation:zoomIn 0.5s 0s ease-out both;-webkit-animation:zoomIn 0.5s 0s ease-out both;}
+.box1 a,.yy_b_btn1{left:150px;bottom:40px;display: block;width: 500px;height: 111px;animation:zoomIn 0.5s 0s ease-out both;-webkit-animation:zoomIn 0.5s 0s ease-out both;}
 
-.box1 a,.yy_b_btn{left:270px;bottom:-1px;display: block;width: 500;height: 111px;background:url("images/btnorder.png");animation:zoomIn 0.5s 0s ease-out both;-webkit-animation:zoomIn 0.5s 0s ease-out both;}
+.box1 a,.yy_b_btn{left:270px;bottom:-1px;display: block;width: 500px;height: 111px;background:url("images/btnorder.png");animation:zoomIn 0.5s 0s ease-out both;-webkit-animation:zoomIn 0.5s 0s ease-out both;}
 .box1 a,.yy_b_btn:hover{background:url("images/btnorderh.png");}
 
 
@@ -302,7 +315,7 @@ a:hover{text-decoration:none;}
 </script><script charset="gb2312" type="text/javascript" src="qhyy_files/data.js"></script>
 <script charset="gb2312" type="text/javascript" src="qhyy_files/data.js"></script>
 <script src="qhyy_files/report.htm" type="text/javascript"></script></head>
-<body style="width:100%;height:auto">
+<body style="width:100%;height:auto;margin:0;">
 <!--头部flash-->
 <div class="flash_box pa">
 	
@@ -331,7 +344,7 @@ a:hover{text-decoration:none;}
 			</div>
 		
 		
-		<a href="javascript:;" class="yy_b_btn sp pa" ontouchstart="pgvSendClick({hottag:'a20160509gwyy.btn.yuyue'});"></a>
+		<a href="javascript:;" class="yy_b_btn sp pa" ontouchstart="pgvSendClick({hottag:'a20160509gwyy.btn.yuyue'});"></a> 
 		<div class="login pa">
 		
 		</div>
@@ -342,7 +355,7 @@ a:hover{text-decoration:none;}
 	<div class="container">
 		<div class="head1 pr">
 			<h1 class="hide">仙魔争霸，由你主宰</h1>
-		   <a href="index.jsp" class="logo db pa" target="_blank" title="全民斗战神">全民斗战神</a>
+		   <a href="index.jsp" class="logo db pa" target="_blank" title="灵域仙魔">灵域仙魔</a>
 			
 		</div>
 		<div class="content">
@@ -438,7 +451,7 @@ a:hover{text-decoration:none;}
 			<div class="" style="margin-left:80px;margin-bottom:20px;">
             <table><tr>
 			<td><img src="images\xian_left.png";border=0;height=68px;width=140px></td>
-			<td style="font-size:48;color:#2e2323;">邀请好友，仙盟争霸</td>
+			<td style="font-size:48px;color:#2e2323;">邀请好友，仙盟争霸</td>
 			<td><img src="images/xian_right.png" border=0;padding-left=20px></td>
 			</tr>
 			</table>
@@ -449,7 +462,7 @@ a:hover{text-decoration:none;}
 					
 					<table>
 					<tr><td><p class="bx_num">高级宝箱  </p></td></tr>
-					<tr><td><div class="suc_fd">成功邀请<em>3名</em>好友</div></td></tr>
+					<tr><td><div class="suc_fd">成功邀请<em>3</em>名好友</div></td></tr>
 					<tr><td><img id="lbbtn2" src="images/gaojibaoxiang.png"></td></tr>
 <!-- 					<tr><td><a id="lbbtn2" href="javascript:;" style="color:#980c00;">领取礼包</a></td></tr> -->
 					
@@ -496,7 +509,7 @@ a:hover{text-decoration:none;}
 					<li class="z_index2">	
 					<table>
 					<tr><td><p class="bx_num">豪华宝箱</p></td></tr>
-					<tr><td><div class="suc_fd">成功邀请<em>5名</em>好友</div></td></tr>
+					<tr><td><div class="suc_fd">成功邀请<em>5</em>名好友</div></td></tr>
 					<tr><td><img id="lbbtn3" src="images/haohuabaoxiang.png"></td></tr>
 <!-- 					<tr><td><a id="lbbtn3" href="javascript:;" style="color:#980c00;">领取礼包</a></td></tr>					 -->
 					</table>					
@@ -541,7 +554,7 @@ a:hover{text-decoration:none;}
 					<li class="mr z_index3">
 					<table>
 					<tr><td><p class="bx_num">至尊宝箱</p></td></tr>
-					<tr><td><div class="suc_fd">成功邀请<em>10名</em>好友</div></td></tr>
+					<tr><td><div class="suc_fd">成功邀请<em>10</em>名好友</div></td></tr>
 					<tr><td><img id="lbbtn4" src="images/zhizunbaoxiang.png"></td></tr>
 <!-- 					<tr><td><a id="lbbtn4" href="javascript:;" style="color:#980c00;">领取礼包</a></td></tr>					 -->
 					</table>	
@@ -920,7 +933,7 @@ function TGDialogS(e){
             need("biz.dialog-min",function(Dialog){
 		Dialog.show({
 			id:e,
-			bgcolor:'#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+			bgcolor:'rgba(0, 0, 0, 0.55)', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
 			opacity:50      //弹出“遮罩”的透明度，格式为｛10-100｝，可选
 		});
             });

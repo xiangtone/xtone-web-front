@@ -57,8 +57,8 @@ i,em{font-style:normal;}
 .sj a:hover .sj_tan{ display:block;}
 .sj_tan span{width:136px;height:136px; float:left; margin:43px 0 0 10px;}
 .sj_tan em{width:136px; line-height:20px; float:left; margin:4px 0 0 10px; font-size:14px; color:#250600; text-align:center;}
-.movBtn{width:79px;height:79px; position:absolute;right:50px;top:200px;background:url(../images/movBtn2.png) left top no-repeat; z-index:5;}
-.movBtn a{width:79px;height:79px; float:left; background:url(../images/movBtn1.png) left top no-repeat;animation:3s linear 0s normal none infinite xz;-webkit-animation:3s linear 0s normal none infinite xz;-moz-animation:3s linear 0s normal none infinite xz;-o-animation:3s linear 0s normal none infinite xz;}
+.movBtn{width:79px;height:79px; position:absolute;right:50px;top:200px;background:url() left top no-repeat; z-index:5;}
+.movBtn a{width:79px;height:79px; float:left; background:url() left top no-repeat;animation:3s linear 0s normal none infinite xz;-webkit-animation:3s linear 0s normal none infinite xz;-moz-animation:3s linear 0s normal none infinite xz;-o-animation:3s linear 0s normal none infinite xz;}
 @keyframes xz { 
 0%{transform:rotate(0deg)}
 100%{transform:rotate(360deg)}
@@ -263,7 +263,7 @@ i,em{font-style:normal;}
 /*-------ÐÂÎÅÄÚÈÝÒ³CSS-------*/
 .nWrap{width:100%; height:auto;background:url(../images/body_bg3.jpg) center top no-repeat #190b09;}
 .nWrap .header{width:100%;height:93px;background:url(../images/Navigation.jpg) center top no-repeat}
-.nWrapper{width:1280px;height:auto;margin:0 auto;background:url(../images/nWrap_bg.jpg) center top no-repeat;margin-top:-93px}
+.nWrapper{width:1280px;height:auto;margin:0 auto;background:url() center top no-repeat;margin-top:-93px}
 .nW_top{width:990px;height:455px; margin:0 auto; position:relative;}
 .conNav{width:875px;height:79px; float:left; margin-top:20px;margin-left:60px;background:url(../images/ling_new.png) repeat;}
 .conNav span{min-width:40px; line-height:79px; float:left; font-size:26px; color:#ffffff;margin-left:20px}
