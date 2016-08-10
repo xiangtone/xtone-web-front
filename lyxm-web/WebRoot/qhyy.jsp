@@ -11,7 +11,7 @@
 CheckLoad check = new CheckLoad();
 
 if(check.JudgeIsMoblie(request)){
-  response.sendRedirect("mobileqhyy.jsp");
+  response.sendRedirect("mobile.jsp");
 }
 
 
@@ -36,9 +36,19 @@ phone = (String)session.getAttribute("id");}catch(Exception ex){
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<html lang="zh-CN"><head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- [if lt IE 7]> <html class="ie6" lang="en"> <![endif] -->
+<!-- [if IE 7]> <html class="ie6" lang="en"> <![endif] -->
+<!-- [if IE 8]> <html class="ie6" lang="en"> <![endif] -->
+<!-- [if IE 9]> <html class="ie6" lang="en"> <![endif] -->
+<!-- [if (gt IE 9)|!(IE)]><!-->
+<html lang="zh-CN">
+<!-- <![endif] -->
+<head>
+<meta property="qc:admins" content="2514161501560476571556375710116230" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=8">
 <meta name="robots" content="all">
 <meta name="author" content="Tencent-CP">
 <meta name="Description" content="《全民斗战神》是由《斗战神》原班团队倾力打造的腾讯3D动作手游钜制。连击、浮空、闪避！极具操控感的操作系统，挑战操作极限！拳拳到肉，真实场景反馈，让你领略极致的打击快感！首创七十二变玩法，突破职业桎梏，一次成长，玩遍所有职业！ ">
@@ -75,7 +85,12 @@ fieldset,img,abbr,acronym{border:0}
 .c:before,.c:after {content:"";display:table}
 .c:after {clear:both}
 .c {zoom:1}
-body {font:12px/1.5;font-family:"\5FAE\8F6F\96C5\9ED1";text-align:justify;background:url(images/orderbg.jpg)top center no-repeat;}
+body {font:12px/1.5;
+font-family:"\5FAE\8F6F\96C5\9ED1";
+text-align:justify;
+background:top center no-repeat;
+background-image:url(images/orderbg.jpg);
+}
 a{text-decoration:none;overflow:hidden;}
 a:hover{text-decoration:none;}
 .wrap,.flash_box{width: 100%;min-width: 1000px;}
@@ -108,9 +123,9 @@ a:hover{text-decoration:none;}
 .content1{background: url() no-repeat 0 1000px;}
 .box1{padding-top: 400px;}
 
-.box1 a,.yy_b_btn1{left:150px;bottom:40px;display: block;width: 500;height: 111px;animation:zoomIn 0.5s 0s ease-out both;-webkit-animation:zoomIn 0.5s 0s ease-out both;}
+.box1 a,.yy_b_btn1{left:150px;bottom:40px;display: block;width: 500px;height: 111px;animation:zoomIn 0.5s 0s ease-out both;-webkit-animation:zoomIn 0.5s 0s ease-out both;}
 
-.box1 a,.yy_b_btn{left:270px;bottom:-1px;display: block;width: 500;height: 111px;background:url("images/btnorder.png");animation:zoomIn 0.5s 0s ease-out both;-webkit-animation:zoomIn 0.5s 0s ease-out both;}
+.box1 a,.yy_b_btn{left:270px;bottom:-1px;display: block;width: 500px;height: 111px;background:url("images/btnorder.png");animation:zoomIn 0.5s 0s ease-out both;-webkit-animation:zoomIn 0.5s 0s ease-out both;}
 .box1 a,.yy_b_btn:hover{background:url("images/btnorderh.png");}
 
 
@@ -248,11 +263,11 @@ a:hover{text-decoration:none;}
 .pop_tab td .radio.on{background-position: -284px -263px;}
 .pop_tab td .pl{margin-left: 20px;}
 .pop_tab .txt{width: 200px;height: 40px;background: #ffffff;font-size: 24px;line-height:40px;color: #6e6e6e;padding-left: 15px;border: none;}
-.pop_tab .yzm{display:block;width: 155px;height: 40px;background: #ffd143;color: #4a2515;text-align: center;line-height: 40px;}
+.pop_tab .yzm{display:block;width: 155px;height: 40px;background: #ffd143;color: #4a2515;text-align: center;line-height: 40px;border:0px;font-size:20px}
 .pop_desp{font-size:24px;color: #cda364;text-align: center;}
 .submit{display: block;width: 215px;height: 60px;background: #ffd244;font-size: 30px;color: #4a2515;text-align: center;line-height: 60px;
 			margin: 30px auto 0px;}
-.pop_close{top:-2px;right:-49px;display: block;width: 47px;height: 47px;background-position:  -260px -328px;}
+.pop_close{top:-1px;right:-45px;display: block;width: 47px;height: 47px;background-position:  -260px -328px;}
 
 .pop2{font-size: 24px;color: #fee5bf;width: 680px;margin: 0px auto;}
 .pop2_tab,.pop3_tab{width: 680px;margin: 15px auto;}
@@ -293,21 +308,28 @@ a:hover{text-decoration:none;}
 .pop8_tab span{color: #ffa829;display:inline-block;width:240px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden; height:23px;}
 .pop8_tl{text-align: left;padding-left: 280px;}
 </style>
-<style media="screen" type="text/css">#flash {visibility:hidden}#fsh {visibility:hidden}</style><link type="text/css" rel="stylesheet" href="qhyy_files/ost.css"><script charset="gb2312" type="text/javascript" src="qhyy_files/cgi_official_website.htm"></script><script charset="gb2312" type="text/javascript" src="qhyy_files/data.js"></script><script charset="gb2312" type="text/javascript" src="qhyy_files/data.js"></script><script charset="gb2312" type="text/javascript" src="qhyy_files/data.js"></script><script src="qhyy_files/report.htm" type="text/javascript"></script></head>
-<body style="width:100%;height:auto">
+<style media="screen" type="text/css">#flash {visibility:hidden}#fsh {visibility:hidden}</style>
+<link type="text/css" rel="stylesheet" href="js&css/buttons.css">
+<script charset="gb2312" type="text/javascript" src="qhyy_files/cgi_official_website.htm"></script>
+<script charset="gb2312" type="text/javascript" src="qhyy_files/data.js">
+</script><script charset="gb2312" type="text/javascript" src="qhyy_files/data.js"></script>
+<script charset="gb2312" type="text/javascript" src="qhyy_files/data.js"></script>
+<script src="qhyy_files/report.htm" type="text/javascript"></script></head>
+<body style="width:100%;height:auto;margin:0;">
 <!--头部flash-->
 <div class="flash_box pa">
 	
 	<div class="container pa">
 	<% if(phone==null){
-		out.write("<div style=\"margin-left:85%;color:#666666;font-size:15px;\">您好，请先"+
-				"<a id=\"dlbtn\" href=\"javacript:;\" style=\"color:blue;font-size:15px;\"><u>登录</u></a>"+
+		out.write("<div style=\"margin-top:10px;margin-left:86.5%;color:#666666;font-size:15px;\">您好，请先"+
+				"<a id=\"dlbtn\"  style=\"color:blue;font-size:15px;\" href=\"javascript:void(0)\"><u>登录</u></a>"+
 				"</div>");
 		}
 
 	else{
-		out.write("<div style=\"margin-left:85%;color:#666666;font-size:15px;\">"+"<u style=\"color:blue;\">"+phone+"</u>"+",您好"+
-				"</div>");
+		out.write("<div style=\"margin-top:10px;margin-left:86.5%;color:#666666;font-size:15px;\">"+"<u style=\"color:blue;\">"+phone+"</u>"+",您好"+
+	              "<a style=\"margin-left:200px;width:100px;height:29px;\" href=\"Cancelsession\"><img style=\"margin-top:-30px;\" src=\"images\\yuyue-tuichu.png\"></img></a> "+
+				  "</div>");
 	}
 				
 				
@@ -322,7 +344,7 @@ a:hover{text-decoration:none;}
 			</div>
 		
 		
-		<a href="javascript:;" class="yy_b_btn sp pa" ontouchstart="pgvSendClick({hottag:'a20160509gwyy.btn.yuyue'});"></a>
+		<a href="javascript:;" class="yy_b_btn sp pa" ontouchstart="pgvSendClick({hottag:'a20160509gwyy.btn.yuyue'});"></a> 
 		<div class="login pa">
 		
 		</div>
@@ -332,8 +354,8 @@ a:hover{text-decoration:none;}
 <div class="wrap">  
 	<div class="container">
 		<div class="head1 pr">
-			<h1 class="hide">仙魔争霸,由你主宰</h1>
-		   <a href="index.jsp" class="logo db pa" target="_blank" title="全民斗战神">全民斗战神</a>
+			<h1 class="hide">仙魔争霸，由你主宰</h1>
+		   <a href="index.jsp" class="logo db pa" target="_blank" title="灵域仙魔">灵域仙魔</a>
 			
 		</div>
 		<div class="content">
@@ -429,7 +451,7 @@ a:hover{text-decoration:none;}
 			<div class="" style="margin-left:80px;margin-bottom:20px;">
             <table><tr>
 			<td><img src="images\xian_left.png";border=0;height=68px;width=140px></td>
-			<td style="font-size:48;color:#2e2323;">邀请好友，仙盟争霸</td>
+			<td style="font-size:48px;color:#2e2323;">邀请好友，仙盟争霸</td>
 			<td><img src="images/xian_right.png" border=0;padding-left=20px></td>
 			</tr>
 			</table>
@@ -440,7 +462,7 @@ a:hover{text-decoration:none;}
 					
 					<table>
 					<tr><td><p class="bx_num">高级宝箱  </p></td></tr>
-					<tr><td><div class="suc_fd">成功邀请<em>3名</em>好友</div></td></tr>
+					<tr><td><div class="suc_fd">成功邀请<em>3</em>名好友</div></td></tr>
 					<tr><td><img id="lbbtn2" src="images/gaojibaoxiang.png"></td></tr>
 <!-- 					<tr><td><a id="lbbtn2" href="javascript:;" style="color:#980c00;">领取礼包</a></td></tr> -->
 					
@@ -487,7 +509,7 @@ a:hover{text-decoration:none;}
 					<li class="z_index2">	
 					<table>
 					<tr><td><p class="bx_num">豪华宝箱</p></td></tr>
-					<tr><td><div class="suc_fd">成功邀请<em>5名</em>好友</div></td></tr>
+					<tr><td><div class="suc_fd">成功邀请<em>5</em>名好友</div></td></tr>
 					<tr><td><img id="lbbtn3" src="images/haohuabaoxiang.png"></td></tr>
 <!-- 					<tr><td><a id="lbbtn3" href="javascript:;" style="color:#980c00;">领取礼包</a></td></tr>					 -->
 					</table>					
@@ -532,7 +554,7 @@ a:hover{text-decoration:none;}
 					<li class="mr z_index3">
 					<table>
 					<tr><td><p class="bx_num">至尊宝箱</p></td></tr>
-					<tr><td><div class="suc_fd">成功邀请<em>10名</em>好友</div></td></tr>
+					<tr><td><div class="suc_fd">成功邀请<em>10</em>名好友</div></td></tr>
 					<tr><td><img id="lbbtn4" src="images/zhizunbaoxiang.png"></td></tr>
 <!-- 					<tr><td><a id="lbbtn4" href="javascript:;" style="color:#980c00;">领取礼包</a></td></tr>					 -->
 					</table>	
@@ -587,7 +609,7 @@ a:hover{text-decoration:none;}
 					</li>
 				</ul>
 				<p>&nbsp</p>
-				<a href="javascript:;" class="yq_frid sp"></a>
+				<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis yq_frid sp"></a>
 				<p>&nbsp</p>
 				<p class="ck_yq">已有<span><%=count %></span>人查看</p>
 				<div class="ewm_frame">
@@ -605,7 +627,10 @@ a:hover{text-decoration:none;}
 	</div>
 </div>
 <!-- 快速登录 -->
-<div class="dialog" id="pop111" role="dialog" tabindex="-1" style="display:none; visibility: visible; position: fixed; z-index: 9999; left: 50%; top: 50%; margin-top: -243px; margin-left: -403px;"> <div style="position:absolute;z-index:10000;margin-top:10px;margin-left:38%;"><img src="images/kuaisudenglu.png"></img></div>
+<div class="dialog" id="pop111" role="dialog" tabindex="-1" style="display:none; visibility: visible; position: fixed; z-index: 9999; left: 50%; top: 50%; margin-top: -243px; margin-left: -403px;"> 
+<div style="position:absolute;z-index:10000;margin-top:30px;margin-left:38%;">
+	<img src="images/kuaisudenglu.png"></img>
+	</div>
     <div class="pop_con pr" style="border:0;background-image: url(images/dikuan.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;">
     	<div class="pop">
     		<p class="pop1_tit sp"></p>
@@ -615,7 +640,7 @@ a:hover{text-decoration:none;}
     			<tr>
     				<td class="tr">手机号码：</td>
     				<td><input class="txt pl" id="mobiledl" type="text"></td>
-    				<td><button id="yzmsdl" href="javascript:;" class="yzm">发送登录码</button></td>
+    				<td><button id="yzmsdl" href="javascript:;" class="yzm button small orange" style="padding:1px;font-size:15px">发送登录码</button></td>
     			</tr>
     						<tr>
     				<td class="tr">登录码：</td>
@@ -646,13 +671,16 @@ a:hover{text-decoration:none;}
 </div>
 <!-- 请先抢号预约  -->
 <div class="dialog" id="qxyy" class="dianji"> 
+
+<img id="closebtn" src="images\guanbianniu.png" width="20px" align="right" style="margin-left:800px;"></img>
+
+
     <div id="uplbneirong" class="pop_con pr" style="position:relative;height:130px;border:0;background-image: url(images/dikuan.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;">
           <div id="kong" style="width:100%;height:37px;"></div>
           <div id="lbneirong" style="height:100%;width:100%;text-align:center;">
        
 
-想要获得礼包吗？先抢号预约哦~</br></br>
-邀请好友抢号预约，还能获得豪华礼包哦！  
+想要获得礼包吗？先抢号预约哦~</br></br>邀请好友抢号预约，还能获得豪华礼包哦！
 </div>
     </div>
     
@@ -668,7 +696,7 @@ a:hover{text-decoration:none;}
     			<tr>
     				<td class="tr">手机号码：</td>
     				<td><input class="txt pl" id="mobile" type="text"></td>
-    				<td><button id="yzms" href="javascript:;" class="yzm">发送登录码</button></td>
+    				<td><button id="yzms" href="javascript:;" class="yzm button small orange" style="padding:1px;font-size:16px;">发送登录码</button></td>
     			</tr>
     						<tr>
     				<td class="tr">登录码：</td>
@@ -811,25 +839,32 @@ a:hover{text-decoration:none;}
 		<a class="pop_close sp pa" href="javascript:showDialog.hide()" title="关闭"></a>
 	</div>
 </div>
-<script src="js&css/dengluyanzhengma.js"></script>
-<script src="js&css/denglu.js"></script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1" charset="utf-8"></script>
+<script src="js&css/yanzhengma.js"></script>
 <script src="js&css/qhyy.js"></script>
 <script src="js&css/jquery-1.js"></script>
-<script src="js&css/yanzhengma.js"></script>
 <script src="js&css/ZeroClipboard.js"></script>
 <script src="js&css/milo.js"></script>
 <script type="text/javascript" src="js&css/reporting.js"></script>
 <script src="js&css/loadjs.js"></script>
 <script src="js&css/report.js"></script>
 <script src="js&css/swfobject.js"></script>
-<script>
+
+<script>  
+// alert(document.getElementById('closebtn').offsetLeft)
+
 $(".yy_b_btn").on('click', function(){
 	TGDialogS("pop1");
 });
 $("#dlbtn").on('click', function(){
 	TGDialogS("pop111");
 });
-$("#qxyy").on('click', function(){
+
+// $("#qxyy").on('click', function(){
+// 	showDialog.hide()
+// });
+$("#closebtn").on('click', function(){
+
 	showDialog.hide()
 });
 $("#lbbtn1").on('click', function(){
@@ -898,16 +933,20 @@ function TGDialogS(e){
             need("biz.dialog-min",function(Dialog){
 		Dialog.show({
 			id:e,
-			bgcolor:'#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+			bgcolor:'rgba(0, 0, 0, 0.55)', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
 			opacity:50      //弹出“遮罩”的透明度，格式为｛10-100｝，可选
 		});
             });
+            
 }
 function closeDialog(){
             need("biz.dialog-min",function(Dialog){
 		Dialog.hide();
             });
 }
+
+
+
 
 // 通用Top和统计
 
@@ -919,6 +958,6 @@ function closeDialog(){
 
 
 <script type="text/javascript" src="js&css/dr.js">
-</script><script type="text/javascript" src="qhyy_files/eas.js"></script><script type="text/javascript" src="qhyy_files/dr.htm"></script><script src="qhyy_files/qmdzs_002.htm" type="text/javascript"></script>
+</script><script type="text/javascript" src="qhyy_files/dr.htm"></script><script src="qhyy_files/qmdzs_002.htm" type="text/javascript"></script>
 </body></html>
 <!--[if !IE]>|xGv00|a32fc438b3db8df74339a1f3d57bde83<![endif]-->

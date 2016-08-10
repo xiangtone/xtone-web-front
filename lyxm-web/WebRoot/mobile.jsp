@@ -298,6 +298,7 @@ a:hover{text-decoration:none;}
 </style>
 </head>
 <body>
+<div style="margin-top:10%;margin-left:10%;position:absolute;z-index:11111;"><img style="width:50%;" src="mobileimg\logo.png"></img></div>
  <% 
             
          	Connection con = null;

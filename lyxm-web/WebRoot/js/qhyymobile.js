@@ -37,12 +37,13 @@ function sentCode(){
 ajaxCommit("1",data,function(data){
 	 var code = data.mobilecode;
 	   if(code==500){
-		alert('该手机号已经预约过无需再次预约,可通过点击右上角的登录按钮登录账号领取礼包')   
+		alert('该手机号已经预约过无需再次预约,可直接登录领取礼包')   
 		clearInterval(valid2);
 	$("#yzms").html('发送登录码');
 	$("#yzms").css("background","#ffd244");
     $("#yzms").attr("disabled", false);
     showDialog.hide()
+    TGDialogS("pop111");
 	   }else{
 	   mobilecode = code;
 	   }
