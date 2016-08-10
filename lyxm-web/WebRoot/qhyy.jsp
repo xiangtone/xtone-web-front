@@ -51,7 +51,7 @@ phone = (String)session.getAttribute("id");}catch(Exception ex){
 <meta http-equiv="X-UA-Compatible" content="IE=8">
 <meta name="robots" content="all">
 <meta name="author" content="Tencent-CP">
-<meta name="Description" content="《全民斗战神》是由《斗战神》原班团队倾力打造的腾讯3D动作手游钜制。连击、浮空、闪避！极具操控感的操作系统，挑战操作极限！拳拳到肉，真实场景反馈，让你领略极致的打击快感！首创七十二变玩法，突破职业桎梏，一次成长，玩遍所有职业！ ">
+<meta name="Description" content="灵域仙魔 ">
 <title>灵域仙魔</title>
 <!-- <script>
 (function(){
