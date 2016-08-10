@@ -298,7 +298,15 @@ a:hover{text-decoration:none;}
 </style>
 </head>
 <body>
-<div style="margin-top:10%;margin-left:10%;position:absolute;z-index:11111;"><img style="width:50%;" src="mobileimg\logo.png"></img></div>
+<div id="dianji" style="width:80%;height:80%;position:absolute;z-index:10000;display:none;">
+<img style="width:30%;margin-left:60%;margin-top:2%;" src="mobileimg\jiantou.png"></img>
+<div style="text-align:center;margin-top:50px;font-family:'微软雅黑';color:#ffffff;font-size:20px;font-weight: light;">
+点击右上角分享</br></br>邀请兄弟与您一起共战灵域仙魔
+
+</div>
+<a href="javascript:showDialog.hide();"><img style="width:30%;margin-left:35%;margin-top:15%;" src="mobileimg/guanbi.png"></img></a>
+</div>
+<div style="margin-top:10%;margin-left:10%;position:absolute;z-index:8888;"><img style="width:50%;" src="mobileimg\logo.png"></img></div>
  <% 
             
          	Connection con = null;
@@ -381,7 +389,7 @@ a:hover{text-decoration:none;}
         	</div>	      	
         </div>
         <div class="invite">
-        	<div class="invite-1">
+        	<div id="yaoqing" class="invite-1">
         		<img  src="images/index/yaoqing.png">
         	</div>
         	<div class="invite-2">
@@ -560,6 +568,9 @@ c1.style.marginLeft=document.body.clientWidth*0.95-20+'px';
 c2.style.marginLeft=document.body.clientWidth*0.95-20+'px';
 $("#yuyuebtn").on('click', function(){
 	TGDialogS("pop1");
+});
+$("#yaoqing").on('click', function(){
+	TGDialogS("dianji");
 });
 $("#achievebtn").on('click', function(){
 	giftAjaxCommit(1);
