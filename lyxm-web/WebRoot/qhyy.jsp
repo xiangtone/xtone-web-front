@@ -1,4 +1,4 @@
-<%@page import="org.mxkl.util.CheckLoad"%>
+<%@page import="com.lyxm.util.CheckLoad"%>
 <%@page import="org.common.util.ConnectionService"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.ArrayList"%>

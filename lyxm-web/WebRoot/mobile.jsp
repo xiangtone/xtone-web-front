@@ -1,6 +1,5 @@
 <%@page import="com.lyxm.info.Message"%>
 <%@page import="com.google.gson.Gson"%>
-<%@page import="org.mxkl.util.HttpsRequest"%>
 <%@page import="org.common.util.ConnectionService"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>

@@ -31,7 +31,7 @@ Newsbean newsbean = Newsdao.selectByid(id);
 %>
 <header class="header">
     <div class="top-bar">
-        <div class="con-tit"><a href="javascript:;"><%=newsbean.getCatalog().substring(5) %></a></div>
+        <div class="con-tit"><a href="javascript:;"><%=newsbean.getCatalog().substring(4) %></a></div>
         <div class="fr"><span class="mod-tit1" style="background: transparent url('img/img/mp_list/bg_m.png') no-repeat scroll center center / auto 25px;"><i class="sign" id="nav_forum" onclick="headerToggle()"></i></span></div>
         <div class="logo fl" style="background: transparent url('img/img/mp_news/back.png') no-repeat scroll left center / 20px auto;"><a href="javascript:history.back(-1);" ></a></div>
     </div>
