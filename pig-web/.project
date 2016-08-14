@@ -4,7 +4,6 @@
 	<comment></comment>
 	<projects>
 		<project>xtone-common</project>
-		<project>xtone-java-common</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
