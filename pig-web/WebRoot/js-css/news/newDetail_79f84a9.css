@@ -147,7 +147,7 @@ body .wrap .right-wrap .content-wrap .content_list_wrap ul .content_list {
 	position:relative;
 	width:100%;
 	height:59px;
-	font-size:14px;
+	font-size:15px;
 	color:#aba49a;
 	line-height:70px;
 	border-bottom:1px solid #ebedee
@@ -168,9 +168,8 @@ body .wrap .right-wrap .content-wrap .content_list_wrap ul .lastList {
 body .wrap .right-wrap .content-wrap .pageNum {
 	width:auto;
 	height:39px;
-	margin-right:33px;
-	text-align:right;
-	margin-top:13px
+	text-align:center;
+	padding-top:3%
 }
 body .wrap .right-wrap .content-wrap .pageNum p {
 	width:100%;

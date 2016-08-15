@@ -29,7 +29,7 @@
 	List<News> list4 = new ArrayList();
 	try {
 		con = ConnectionService.getInstance().getConnectionForLocal();
-		String limit = " limit " + 0 + "," + 5;
+		String limit = " limit " + 0 + "," + 4;
 		String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `status`=1  ORDER BY priority DESC "
 				+ limit;
 		ps = con.prepareStatement(sql);
@@ -1221,17 +1221,26 @@ a.NIE-topBar-btn:hover {
 								String timeStr = sdf.format(news.getAddTime());
 								catalog = news.getCatalog();
 								if (catalog.equals("news")) {
-									catalog = "【新闻】";
+									catalog = "【公告】";
 								} else if (catalog.equals("material")) {
-									catalog = "【资料】";
+									catalog = "【消息】";
 								} else if (catalog.equals("forum")) {
 									catalog = "【论坛】";
 								}
 						%>
-						<li style="font-color:white;font-size=16px;"><a href="#" class="tit" data="0"
-							title="<%=news.getTitle()%>"><%=catalog%></a> <a
+						<%String title = news.getTitle();
+								  if(title.length()>18){
+									  title = title.subSequence(0, 17)+"...";
+								  }
+								
+								%>
+						<li style="font-color:white;font-size=16px;"><a href="#" class="tit" data="0" style="color:white"
+							title="<%=news.getTitle()%>"><%=catalog%></a> 
+							
+							
+							<a style="color:white"
 							href="view/content.jsp?id=<%=news.getId()%>" target="_blank"
-							title="<%=news.getTitle()%>"><%=news.getTitle()%></a> <font>[<%=timeStr%>]
+							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white">[<%=timeStr%>]
 						</font></li>
 						<%
 							}
@@ -1260,17 +1269,23 @@ a.NIE-topBar-btn:hover {
 								String timeStr = sdf.format(news.getAddTime());
 								catalog = news.getCatalog();
 								if (catalog.equals("news")) {
-									catalog = "【新闻】";
+									catalog = "【公告】";
 								} else if (catalog.equals("material")) {
-									catalog = "【资料】";
+									catalog = "【消息】";
 								} else if (catalog.equals("forum")) {
 									catalog = "【论坛】";
 								}
 						%>
-						<li><a href="#" class="tit" data="0"
-							title="<%=news.getTitle()%>"><%=catalog%></a> <a
+						<%String title = news.getTitle();
+								  if(title.length()>18){
+									  title = title.subSequence(0, 17)+"...";
+								  }
+								
+								%>
+						<li><a href="#" class="tit" data="0" style="color:white"
+							title="<%=news.getTitle()%>"><%=catalog%></a> <a style="color:white"
 							href="view/content.jsp?id=<%=news.getId()%>" target="_blank"
-							title="<%=news.getTitle()%>"><%=news.getTitle()%></a> <font>[<%=timeStr%>]
+							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white">[<%=timeStr%>]
 						</font></li>
 						<%
 							}
@@ -1299,17 +1314,23 @@ a.NIE-topBar-btn:hover {
 								String timeStr = sdf.format(news.getAddTime());
 								catalog = news.getCatalog();
 								if (catalog.equals("news")) {
-									catalog = "【新闻】";
+									catalog = "【公告】";
 								} else if (catalog.equals("material")) {
-									catalog = "【资料】";
+									catalog = "【消息】";
 								} else if (catalog.equals("forum")) {
 									catalog = "【论坛】";
 								}
 						%>
-						<li><a href="#" class="tit" data="0"
-							title="<%=news.getTitle()%>"><%=catalog%></a> <a
+						<%String title = news.getTitle();
+								  if(title.length()>18){
+									  title = title.subSequence(0, 17)+"...";
+								  }
+								
+								%>
+						<li><a href="#" class="tit" data="0" style="color:white"
+							title="<%=news.getTitle()%>"><%=catalog%></a> <a style="color:white"
 							href="view/content.jsp?id=<%=news.getId()%>" target="_blank"
-							title="<%=news.getTitle()%>"><%=news.getTitle()%></a> <font>[<%=timeStr%>]
+							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white">[<%=timeStr%>]
 						</font></li>
 						<%
 							}
@@ -1337,17 +1358,23 @@ a.NIE-topBar-btn:hover {
 								String timeStr = sdf.format(news.getAddTime());
 								catalog = news.getCatalog();
 								if (catalog.equals("news")) {
-									catalog = "【新闻】";
+									catalog = "【公告】";
 								} else if (catalog.equals("material")) {
-									catalog = "【资料】";
+									catalog = "【消息】";
 								} else if (catalog.equals("forum")) {
 									catalog = "【论坛】";
 								}
 						%>
-						<li><a href="#" class="tit" data="0"
-							title="<%=news.getTitle()%>"><%=catalog%></a> <a
+						<%String title = news.getTitle();
+								  if(title.length()>18){
+									  title = title.subSequence(0, 17)+"...";
+								  }
+								
+								%>
+						<li><a href="#" class="tit" data="0" style="color:white"
+							title="<%=news.getTitle()%>"><%=catalog%></a> <a style="color:white"
 							href="view/content.jsp?id=<%=news.getId()%>" target="_blank"
-							title="<%=news.getTitle()%>"><%=news.getTitle()%></a> <font>[<%=timeStr%>]
+							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white">[<%=timeStr%>]
 						</font></li>
 						<%
 							}

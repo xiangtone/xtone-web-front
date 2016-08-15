@@ -10,9 +10,10 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
+<%@page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%
+<%-- <%
 	/**CheckLoad check = new CheckLoad();
 	if(check.JudgeIsMoblie(request)){
 		response.sendRedirect("mpList.jsp?catalog=news");
@@ -59,7 +60,7 @@
 		}
 
 	}
-%>
+%> --%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -1036,11 +1037,6 @@ color: rgb(124, 115, 106);
 	<div class="wrap"
 		style="background: transparent url(../img/imgz/bg_neiye.jpg) no-repeat scroll center 0px; background-size: 100%;">
 		
-		
-		
-		
-		
-		
 		<div class="right-wrap">
 			<div class="content-wrap"
 				style="margin-left: 0%; border-radius: 20px;">
@@ -1055,15 +1051,15 @@ color: rgb(124, 115, 106);
 					<p style="color:#7c736a;font-size:14px;">您的位置 ： 官網首頁 > 新聞公告</p>
 				</div>
 				<div
-					style="width: 65px; height: 78px; z-index: 100;  margin-top: -7%;margin-left:-6%;position:absolute;">
-					<div style="background:url(../img/imgz/zhu3.png) no-repeat center 0 / 100% auto;
-					margin-top:650px;width:88px;height:194px;z-index:1;">
+					style="width: 65px; height: 78px; z-index: 100;  margin-top: -7%;margin-left:-4.5%;position:absolute;">
+					<div style="background:url(../img/imgz/zhu3.JPG) no-repeat center 0 / 100% auto;
+					margin-top:650px;width:65px;height:203px;z-index:1;">
 					</div>
 				</div>
 				<div
-					style="width: 65px; height: 78px; z-index: 100;  margin-top: -10.5%;margin-left:99.5%;float:left;">
-					<div style="background:url(../img/imgz/zhu4.png) no-repeat center 0 / 100% auto;
-					margin-top:650px;width:100px;height:194px;z-index:1;">
+					style="width: 65px; height: 78px; z-index: 100;  margin-top: -10.5%;margin-left:100.133%;float:left;">
+					<div style="background:url(../img/imgz/zhu4.jpg) no-repeat center 0 / 100% auto;
+					margin-top:650px;width:65px;height:194px;z-index:1;">
 					</div>
 				</div>
 				
@@ -1102,36 +1098,105 @@ color: rgb(124, 115, 106);
 						<div style="clear: both;"></div>
 					</ul>
 				</div>
-				<div class="content_list_wrap">
+				<div class="content_list_wrap" style="width:92%;margin-left:33px;height:80%">
 					<ul>
-						<%
+						<%-- <%
 							for (News news : list) {
 								SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 								String timeStr = sdf.format(news.getAddTime());
-						%>
+						%> --%>
+						
+						<%!public static final String DRIVER = "com.mysql.jdbc.Driver";
+						public static final String USER = "root";
+						public static final String PASS = "gangcaidemimahuanle";
+						public static final String URL = "jdbc:mysql://192.168.1.221:3306/cms_zy";
+						public static final int PAGESIZE = 10;
+						int pageCount;
+						int curPage = 1;%>
+							<%
+								News news = new News();
+								//一页放5个
+								String user = null;
+								String pass = null;
+								try {
+									Class.forName(DRIVER);
+									Connection con = DriverManager.getConnection(URL, USER, PASS);
+									String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%news%' AND `status`=1 ";
+									PreparedStatement stat = con.prepareStatement(sql, ResultSet.TYPE_FORWARD_ONLY,
+											ResultSet.CONCUR_READ_ONLY);
+									ResultSet rs = stat.executeQuery();
+									rs.last();
+									int size = rs.getRow();
+									pageCount = (size % PAGESIZE == 0) ? (size / PAGESIZE) : (size / PAGESIZE + 1);
+									String tmp = request.getParameter("curPage");
+									if (tmp == null) {
+										tmp = "1";
+									}
+									curPage = Integer.parseInt(tmp);
+									if (curPage >= pageCount)
+										curPage = pageCount;
+									boolean flag = rs.absolute((curPage - 1) * PAGESIZE + 1);
+									/* out.println(curPage); */
+									int count = 0;
+
+									do {
+										if (count >= PAGESIZE)
+											break;
+										news.setAddTime(rs.getLong("lastModifyTime"));
+										SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+										String timeStr = sdf.format(news.getAddTime());
+										int id = rs.getInt(1);
+										String title = rs.getString(2);
+										String lastModifyTime = rs.getString(3);
+										count++;
+										
+							%>
+						
+
 						<li class="content_list"><a
-							href="content.jsp?id=<%=news.getId()%>"><em>【新闻】 </em><%=news.getTitle()%></a>
+							href="content.jsp?id=<%=id%>"><em>【資訊】 </em><%=title%></a>
 							<span class="content_date"><%=timeStr%></span></li>
 						<%
-							}
-						%>
+			} 
+				while (rs.next());
+				con.close();
+			} catch (Exception e) {
 
-
+			}
+		%>
 					</ul>
 				</div>
-
-
-				<div class="pageNum">
-					<p>
-						<%
-							PageUtil util = new PageUtil();
-							String result = util.initPageQuery("news.jsp", null, count, pageIndex);
-						%>
-						<%=result%>
-
-
-					</p>
+				 <div class="pageNum">
+					<!-- <a href = "material.jsp?curPage=1" >首页</a> -->
+					
+						<%if(curPage>=1){%>
+					<a id="a1" href = "material.jsp?curPage=<%=curPage-1%>" >上壹頁</a>
+						<%} %>
+						<%if(curPage!=0){ %>
+						<<%=curPage%>>
+						<%} %>
+						<%if(curPage<=pageCount){ %>
+					<a id="a2" href = "material.jsp?curPage=<%=curPage+1%>" >下壹頁</a>
+						<%} %>
+					<%-- <a href = "material.jsp?curPage=<%=pageCount%>" >尾页</a>
+					第<%=curPage%>页/共<%=pageCount%>页 --%>
 				</div>
+				<script>
+				function show(){
+				if(document.getElementById("a1").href="material.jsp?curPage=0"){
+					$("#a1").removeAttr("href");
+					
+				}
+				}
+				function show2(){
+				if(document.getElementById("a2").href="material.jsp?curPage=<%=pageCount%>"){
+					$("#a2").removeAttr("href");
+				
+				}	
+				}
+				window.onload=show;show();
+				window.onload=show2;show2();
+				</script>
 			</div>
 			<!-- 分享 start -->
 			<div id="NIE-share" class="jltx-share"></div>
