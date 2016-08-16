@@ -13,6 +13,15 @@
 <%@page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+	<%
+	CheckLoad check = new CheckLoad();
+
+	if (check.JudgeIsMoblie(request)) {
+		response.sendRedirect("../mobile-news.jsp");
+	}
+	
+	%>
 <%-- <%
 	/**CheckLoad check = new CheckLoad();
 	if(check.JudgeIsMoblie(request)){
@@ -1045,9 +1054,9 @@ color: rgb(124, 115, 106);
 					</div>
 				</div>
 				<div
-					style="width: 65px; height: 78px; z-index: 100;  margin-top: -10.5%;margin-left:100.133%;float:left;">
+					style="width: 68px; height: 78px; z-index: 100;  margin-top: -10.5%;margin-left:100.133%;float:left;">
 					<div style="background:url(../img/imgz/zhu4.jpg) no-repeat center 0 / 100% auto;
-					margin-top:650px;width:65px;height:194px;z-index:1;">
+					margin-top:650px;width:68px;height:194px;z-index:1;">
 					</div>
 				</div>
 				
@@ -1142,7 +1151,7 @@ color: rgb(124, 115, 106);
 						
 
 						<li class="content_list"><a
-							href="content.jsp?id=<%=id%>"><em>【資訊】 </em><%=title%></a>
+							href="content.jsp?id=<%=id%>" target="_Blank"><em>【資訊】 </em><%=title%></a>
 							<span class="content_date"><%=timeStr%></span></li>
 						<%
 			} 

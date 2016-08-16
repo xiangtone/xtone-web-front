@@ -1260,18 +1260,18 @@ a.NIE-topBar-btn:hover {
 								}
 						%>
 						<%String title = news.getTitle();
-								  if(title.length()>18){
-									  title = title.subSequence(0, 17)+"...";
+								  if(title.length()>15){
+									  title = title.subSequence(0, 14)+"...";
 								  }
 								
 								%>
-						<li style="font-color:white;font-size=16px;"><a href="#" class="tit" data="0" style="color:white"
+						<li ><a href="#" class="tit" data="0" style="color:white;font-size=15px;"
 							title="<%=news.getTitle()%>"><%=catalog%></a> 
 							
 							
-							<a style="color:white"
+							<a style="color:white;font-size=15px;"
 							href="view/content.jsp?id=<%=news.getId()%>" target="_blank"
-							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white">[<%=timeStr%>]
+							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white;font-size=15px;padding-right:10%;">[<%=timeStr%>]
 						</font></li>
 						<%
 							}
@@ -1308,15 +1308,15 @@ a.NIE-topBar-btn:hover {
 								}
 						%>
 						<%String title = news.getTitle();
-								  if(title.length()>18){
-									  title = title.subSequence(0, 17)+"...";
+								  if(title.length()>15){
+									  title = title.subSequence(0, 14)+"...";
 								  }
 								
 								%>
-						<li><a href="#" class="tit" data="0" style="color:white"
-							title="<%=news.getTitle()%>"><%=catalog%></a> <a style="color:white"
+						<li ><a href="#" class="tit" data="0" style="color:white;font-size=15px;"
+							title="<%=news.getTitle()%>"><%=catalog%></a> <a style="color:white;font-size=15px;"
 							href="view/content.jsp?id=<%=news.getId()%>" target="_blank"
-							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white">[<%=timeStr%>]
+							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white;font-size=15px;padding-right:10%;">[<%=timeStr%>]
 						</font></li>
 						<%
 							}
@@ -1353,15 +1353,15 @@ a.NIE-topBar-btn:hover {
 								}
 						%>
 						<%String title = news.getTitle();
-								  if(title.length()>18){
-									  title = title.subSequence(0, 17)+"...";
+								  if(title.length()>15){
+									  title = title.subSequence(0, 14)+"...";
 								  }
 								
 								%>
-						<li><a href="#" class="tit" data="0" style="color:white"
-							title="<%=news.getTitle()%>"><%=catalog%></a> <a style="color:white"
+						<li ><a href="#" class="tit" data="0" style="color:white;font-size=15px;"
+							title="<%=news.getTitle()%>"><%=catalog%></a> <a style="color:white;font-size=15px;"
 							href="view/content.jsp?id=<%=news.getId()%>" target="_blank"
-							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white">[<%=timeStr%>]
+							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white;font-size=15px;padding-right:10%;">[<%=timeStr%>]
 						</font></li>
 						<%
 							}
@@ -1397,15 +1397,15 @@ a.NIE-topBar-btn:hover {
 								}
 						%>
 						<%String title = news.getTitle();
-								  if(title.length()>18){
-									  title = title.subSequence(0, 17)+"...";
+								  if(title.length()>15){
+									  title = title.subSequence(0, 14)+"...";
 								  }
 								
 								%>
-						<li><a href="#" class="tit" data="0" style="color:white"
-							title="<%=news.getTitle()%>"><%=catalog%></a> <a style="color:white"
-							href="view/content.jsp?id=<%=news.getId()%>" target="_blank"
-							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white">[<%=timeStr%>]
+						<li "><a href="#" class="tit" data="0" style="color:white;font-size=15px;
+							title="<%=news.getTitle()%>"><%=catalog%></a> <a style="color:white;font-size=15px;"
+							href="view/content.jsp?id=<%=news.getId()%>" target="_Blank"
+							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white;font-size=15px; padding-right:10%;">[<%=timeStr%>]
 						</font></li>
 						<%
 							}

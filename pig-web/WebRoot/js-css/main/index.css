@@ -789,7 +789,7 @@ translateY
 
 .newsList li {
 	padding: 0 1px 0;
-	line-height: 20px;
+	line-height: 25px;
 	text-align: right;
 	overflow: hidden;
 	color: #801623;
@@ -802,12 +802,12 @@ translateY
 }
 
 .newsList a {
-	width: 70%;
+	width: 55%;
 	float: left;
 	text-align: left;
 	text-decoration: none;
 	overflow: hidden;
-	height: 30px;
+	height: 29px;
 	color: rgb(109, 109, 109);
 }
 
@@ -817,7 +817,7 @@ translateY
 
 .newsList .tit {
 	float: left;
-	width: 16%;
+	width: 17%;
 }
 
 .a_bboxnav {

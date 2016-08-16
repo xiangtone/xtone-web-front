@@ -9,9 +9,15 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
+<%@page import="com.xtone.util.CheckLoad"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
+CheckLoad check = new CheckLoad();
+
+if (check.JudgeIsMoblie(request)) {
+	response.sendRedirect("../mobile-content.jsp");
+}
 	int id = StringUtil.getInteger(request.getParameter("id"), 1);
 	Connection con = null;
 	PreparedStatement ps = null;
