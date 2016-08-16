@@ -1039,7 +1039,7 @@ color: rgb(124, 115, 106);
 					<p style="color:#7c736a;font-size:14px;">您的位置 ： 官網首頁 > 新聞公告</p>
 				</div>
 				<div
-					style="width: 65px; height: 78px; z-index: 100;  margin-top: -7%;margin-left:-6%;position:absolute;">
+					style="width: 65px; height: 78px; z-index: 100;  margin-top: -10.5%;margin-left:-107.25%;float:left;">
 					<div style="background:url(../img/imgz/zhu3.JPG) no-repeat center 0 / 100% auto;
 					margin-top:650px;width:65px;height:203px;z-index:1;">
 					</div>

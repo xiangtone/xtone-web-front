@@ -1051,6 +1051,9 @@ a.NIE-topBar-btn:hover {
 	background: #FBFBFB none repeat scroll 0% 0%;
 }
 
+
+
+
 #NIE-topBar *, #NIE-topBar-include * {
 	font-size: 12px;
 	font-style: normal;
@@ -1104,7 +1107,20 @@ a.NIE-topBar-btn:hover {
 	min-width:1349px;
 }
 
+.scan{
+	position: relative; 
+	z-index: 9999; 
+	width: 800px; 
+	margin: 0 auto;
 
+}
+.scan1{
+	position: relative; 
+	z-index: 9999; 
+	width: 465px; 
+	margin: 0 auto;
+
+}
 
 
 
@@ -1128,8 +1144,8 @@ a.NIE-topBar-btn:hover {
 	</div>
 
 	<div class="wrap" style="width: 100%; background: url(img/imgz/bg_shouye.jpg) no-repeat center 0 / 100% 670px">
-		<div
-			style="position: relative; z-index: 9999; width: 800px; margin: 0 auto;">
+		<div id="scan"
+			class="scan">
 			
 				<div class="download">
 				<!-- <img  src="../img/main/code_main.jpg" width="125" height="124" alt="神魔传奇" style="margin-top: 23px;margin-left: 4px;"> -->
@@ -1149,6 +1165,21 @@ a.NIE-topBar-btn:hover {
 				<div class="download--qq1" id="qq1"/></div> 
 			
 		</div>
+		<script>
+			function show(){
+				var width= document.body.clientWidth; 
+				if (width>1439){
+					$("#scan").addClass("scan1");
+					$("#scan").removeClass("scan");
+					
+					
+				}
+				
+			}
+		
+			window.onload=show;show();
+		</script>
+		
 		<!-- <div class="wrap-1"
 			style="width: 100%; ">
 
