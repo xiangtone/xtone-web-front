@@ -927,9 +927,9 @@ a.NIE-topBar-btn:hover {
 }
 
 .back {
-	background: transparent url(../img/news/top.png) no-repeat scroll 0% 0%;
-	width: 67px;
-	height: 161px;
+	background: transparent url(../img/news/top.png) no-repeat center 0 / 100% auto;
+	width: 56px;
+	height: 155px;
 	right: 5%;
 	top: 53%;
 	position: fixed;
@@ -1050,7 +1050,7 @@ color: rgb(124, 115, 106);
 					</div>
 				</div> -->
 
-				<div id="NIE-art" style="width:682px;padding:58px 34px 0">
+				<div id="NIE-art" style="width:682px;padding:58px 34px 0;min-height:1400px;">
 					<h1 class="artTitle" ><%=news.getTitle()%></h1>
 					<%
 						SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
@@ -1083,7 +1083,7 @@ color: rgb(124, 115, 106);
 			<div id="backTop" class="back" style="display: none; opacity: 0.0;"
 				onclick="setTop();">
 				<a href="#"
-					style="width: 60px; height: 155px; display: block; margin-left: 5px; margin-top: 5px;"></a>
+					style="width: 56px; height: 155px; display: block; /* margin-left: 5px; margin-top: 5px; */"></a>
 			</div>
 			
 			

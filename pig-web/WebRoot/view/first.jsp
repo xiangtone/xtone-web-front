@@ -1109,7 +1109,7 @@ color: rgb(124, 115, 106);
 								try {
 									Class.forName(DRIVER);
 									Connection con = DriverManager.getConnection(URL, USER, PASS);
-									String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%news%' AND `status`=1 ";
+									String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE  `status`=1 ";
 									PreparedStatement stat = con.prepareStatement(sql, ResultSet.TYPE_FORWARD_ONLY,
 											ResultSet.CONCUR_READ_ONLY);
 									ResultSet rs = stat.executeQuery();
@@ -1157,34 +1157,23 @@ color: rgb(124, 115, 106);
 				 <div class="pageNum">
 					<!-- <a href = "material.jsp?curPage=1" >首页</a> -->
 					
-						<%if(curPage>=1){%>
-					<a id="a1" href = "material.jsp?curPage=<%=curPage-1%>" >上壹頁</a>
+						<%if(curPage>=2){%>
+					<a id="a1" href = "first.jsp?curPage=<%=curPage-1%>" >上壹頁</a>
+						<%}else if(curPage==1){ %>
+						<a href = "javascript:;" onclick="alert('已經是第壹頁了')" >上壹頁</a>
 						<%} %>
 						<%if(curPage!=0){ %>
 						<<%=curPage%>>
 						<%} %>
-						<%if(curPage<=pageCount){ %>
-					<a id="a2" href = "material.jsp?curPage=<%=curPage+1%>" >下壹頁</a>
+						<%if(curPage<pageCount){ %>
+					<a id="a2" href = "first.jsp?curPage=<%=curPage+1%>" >下壹頁</a>
+						<%} else if(curPage==pageCount){%>
+						<a href = "javascript:;" onclick="alert('已經是最後壹頁了')">下壹頁</a>
 						<%} %>
 					<%-- <a href = "material.jsp?curPage=<%=pageCount%>" >尾页</a>
 					第<%=curPage%>页/共<%=pageCount%>页 --%>
 				</div>
-				<script>
-				function show(){
-				if(document.getElementById("a1").href="material.jsp?curPage=1"){
-					$("#a1").removeAttr("href");
-					
-				}
-				}
-				function show2(){
-				if(document.getElementById("a2").href="material.jsp?curPage=<%=pageCount%>"){
-					$("#a2").removeAttr("href");
 				
-				}	
-				}
-				window.onload=show;show();
-				window.onload=show2;show2();
-				</script>
 			</div>
 			<!-- 分享 start -->
 			<div id="NIE-share" class="jltx-share"></div>
