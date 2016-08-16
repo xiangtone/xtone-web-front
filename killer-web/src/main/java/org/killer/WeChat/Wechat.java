@@ -98,33 +98,17 @@ public class Wechat extends HttpServlet {
 		            	 replyMsg.append("\n");
 
 		                 String code = wechatservice(textMsg.getFromUserName().trim(),receive);
-		                 String db = null;
-		                 
-		                 if(receive.equals("1d095528ec191047c59a7fe2adab47ab"))
-		                	 db = "200绑元\n银两*60000\n内息6000\n装备初级强化石*10\n灵宝初级进阶石*10\n境界丹*1";
-		                 if(receive.equals("3cf80f113461db4a67c9721c58b15d86"))
-		                	 db = "30钻石\n2000金币\n针织·初星*3\n染料·初星*3";
-		                 if(receive.equals("a2369958a9645eac52b58a8134e2ef5a"))
-		                	 db = "钻石*88\n金币*500000\n中经验瓶*30\n中级升阶卡*30\n高级经验卡*30\n洗练卡*200\n精炼石*200\n绿色结晶*50\n紫色结晶*20";
-		                
-		                 if(receive.equals("6f3ff53b44a071200d9ca3098fa861b0"))
-		                
-		                	 db = "高级喷漆*2\n舞团结晶*10";
-		                 
-		                 if(receive.equals("d75eccf4e68658bfb738679f9b2445ae"))
-		                	 db = "元宝 50\n铜币5000\n凰血石*3\n精英紫晶 *3\n至尊法宝袋*1";
-		                 
-		                 if(receive.equals("76e9468cd3b99d034481927975a16b68"))
-		                	 db = "木*1000\n石*1000\n金钱*1000\n元宝*60";
-		                 if(receive.equals("4fc51c170a8fc6c70d20c9636c9a83c8"))
-		                	 db = "仙灵进阶丹*3\n幸运石*1\n藏宝图*2\n银魂币*1000";
-		                
-		                
+		                 String db = new WechatCodeDao().selectPackageContentByGamename(receive);
+                         String [] dbary = db.split("/");
 		                 replyMsg.append("\n"+code);
 		                 replyMsg.append("\n");
-		                 replyMsg.append("\n【礼包内容:】");
-		                 replyMsg.append("\n"+db);
+		                 replyMsg.append("\n【礼包内容:】"); 
+		                 for(String te:dbary){
+		                 replyMsg.append("\n"+te);
 		                 
+		                 
+		                 }
+
 		             }
 		             else{
 		            	 replyMsg.append("领取礼包兑换码请输入正确的验证码!");

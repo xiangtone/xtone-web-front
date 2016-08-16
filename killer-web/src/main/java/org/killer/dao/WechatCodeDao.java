@@ -10,6 +10,36 @@ import org.common.util.ConnectionService;
 import org.killer.info.Code;
 
 public class WechatCodeDao {
+	public String selectPackageContentByGamename(String gameName){
+		PreparedStatement ps = null;
+	    Connection con = null;
+	    ResultSet rs = null;
+	    
+	    try {
+			con = ConnectionService.getInstance().getConnectionForLocal();
+			ps = con.prepareStatement("SELECT packageContents from tbl_games where gamename=?");
+			ps.setString(1, gameName);
+			rs = ps.executeQuery();
+			
+			if(rs.next()){
+				return rs.getString("packageContents");
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}finally{
+			if (con != null) {
+				try {
+					con.close();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+
+		}
+		return null;
+	}
 	
 	public int checkgamename(String gamename){
 		PreparedStatement ps = null;
@@ -128,7 +158,6 @@ public class WechatCodeDao {
 		return null;
 	}
 	public static void main(String[] args) {
-		CodeDAO dao = new CodeDAO();
-		System.out.println(dao.checkOpenId("o28_Sv9EUNCmNmn3NjN7lw9TdxXo"));
+		WechatCodeDao dao = new WechatCodeDao();
 	}
 }
