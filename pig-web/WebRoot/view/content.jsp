@@ -1037,7 +1037,7 @@ color: rgb(124, 115, 106);
 					<p style="color:#7c736a;font-size:37px;">新聞公告</p>
 					<p style="color:#7c736a;font-size:14px;">您的位置 ： 官網首頁 > 新聞公告</p>
 				</div>
-				<div
+				<!-- <div
 					style="width: 65px; height: 78px; z-index: 100;  margin-top: -7%;margin-left:-4.5%;position:absolute;">
 					<div style="background:url(../img/imgz/zhu3.JPG) no-repeat center 0 / 100% auto;
 					margin-top:650px;width:65px;height:203px;z-index:1;">
@@ -1048,7 +1048,7 @@ color: rgb(124, 115, 106);
 					<div style="background:url(../img/imgz/zhu4.jpg) no-repeat center 0 / 100% auto;
 					margin-top:650px;width:65px;height:194px;z-index:1;">
 					</div>
-				</div>
+				</div> -->
 
 				<div id="NIE-art" style="width:682px;padding:58px 34px 0">
 					<h1 class="artTitle" ><%=news.getTitle()%></h1>
@@ -1057,7 +1057,7 @@ color: rgb(124, 115, 106);
 							String timeStr = sdf.format(news.getAddTime());
 					%>
 					<span class="artDate"><%=timeStr%></span>
-					<div class="artText" style="border-top:1px solid rgba(124, 115, 106, 0.35);">
+					<div class="artText" style="border-top:1px solid rgba(124, 115, 106, 0.35);text-indent:2em;">
 						<%=news.getContent()%>
 
 						<div style="text-align: center;">

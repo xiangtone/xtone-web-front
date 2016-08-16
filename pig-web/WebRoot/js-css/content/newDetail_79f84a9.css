@@ -37,7 +37,7 @@ body .wrap {
 	width:100%;
 	min-width:1280px;
 /* 	min-height:1250px; */
-	height:1370px;
+	height:auto;
 	background:url(./img/bg_1.png) center 0 no-repeat;
 }
 .wrap .right-wrap {
@@ -49,7 +49,7 @@ body .wrap {
 }
 body .wrap .right-wrap .content-wrap {
 	width: 750px;
-	height:823px;
+	height:auto;
 	/* min-height: 955px; */
 	/* margin: 93px 0 0 116px; */
 	background-color: #fff;
@@ -86,6 +86,7 @@ body .wrap .right-wrap .content-wrap #NIE-art {
 	padding:58px 34px 0;
 	text-align:center
 }
+
 body .wrap .right-wrap .content-wrap #NIE-art .artTitle {
 	font-size:24px;
 	color:#a27c64
@@ -101,6 +102,11 @@ body .wrap .right-wrap .content-wrap #NIE-art .artText {
 	text-align:center;
 	margin-top:15px
 }
+body .wrap .right-wrap .content-wrap #NIE-art .artText img{
+	width:93%;
+	height:auto;	
+}
+
 body .wrap .right-wrap .content-wrap #NIE-art .artText h2 {
 	font-size:20px;
 	color:#6e6e6e;

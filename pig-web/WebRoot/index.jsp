@@ -1127,7 +1127,7 @@ a.NIE-topBar-btn:hover {
 
 	</div>
 
-	<div class="wrap" style="width: 100%; background: url(img/imgz/bg_shouye.jpg) no-repeat center 0 / 100% auto">
+	<div class="wrap" style="width: 100%; background: url(img/imgz/bg_shouye.jpg) no-repeat center 0 / 100% 670px">
 		<div
 			style="position: relative; z-index: 9999; width: 800px; margin: 0 auto;">
 			
@@ -1137,11 +1137,11 @@ a.NIE-topBar-btn:hover {
 					alt="捉妖友人帐" />
 				</div>
 				<div class="download1">
-				<a class="download--ios" id="ios" href="https://itunes.apple.com/cn/app/zhuo-yao-you-ren-zhang-2016zui/id1055284673?l=en&mt=8">App
+				<a class="download--ios" id="ios" href="https://appsto.re/tw/Mzencb.i" target="_Blank">App
 					Store下载</a> 
 				</div>
 				<div class="download2">
-				<a class="download--android" id="android" href="http://cdnsrc.xtonegame.com/download/zyyrz/Puzzleblast160513_02.apk"
+				<a class="download--android" id="android" href="https://goo.gl/bVdOVG" target="_Blank"
 					title="">安卓下载</a>
 				</div>
 				<!--epart end-->
@@ -1149,11 +1149,11 @@ a.NIE-topBar-btn:hover {
 				<div class="download--qq1" id="qq1"/></div> 
 			
 		</div>
-		<div class="wrap-1"
+		<!-- <div class="wrap-1"
 			style="width: 100%; ">
 
 		<div class="main"></div>
-		</div>
+		</div> -->
 
 
 	</div>
