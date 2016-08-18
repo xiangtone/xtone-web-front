@@ -834,8 +834,8 @@ a {
 
 .block-share {
 	background-color: #271d20;
-	color: #757575;
-	padding: 1.8rem 0 3.5rem;
+	color: white;
+	padding: 1.8rem 0 2.5rem;
 	font-size: 1.2rem;
 	position: relative;
 }
@@ -898,7 +898,7 @@ a {
 }
 
 .page-home body, .page-home #header {
-	height: 100%;
+	height: 113%;
 }
 
 .page-home .block-bbs {

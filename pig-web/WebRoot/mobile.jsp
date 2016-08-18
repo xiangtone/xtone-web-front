@@ -43,7 +43,7 @@
 <!--     <meta property="al:ios:app_name" content="梦想昆仑"> -->
 <link href="img/imgz/favicon.ico" rel="icon" type="image/x-icon" />
 <link type="text/css" rel="stylesheet" href="css/main.css">
-<link href="http://web.xdcdn.net/game/hsqj/img/favicon.ico?1423469731"
+<!-- <link href="http://web.xdcdn.net/game/hsqj/img/favicon.ico?1423469731"
 	type="image/x-icon" rel="shortcut icon bookmark">
 <link rel="apple-touch-icon-precomposed"
 	href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-60.png?1451359882">
@@ -52,10 +52,11 @@
 <link rel="apple-touch-icon-precomposed" sizes="120x120"
 	href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-120.png?1451359882">
 <link rel="apple-touch-icon-precomposed" sizes="152x152"
-	href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-152.png?1451359882">
+	href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-152.png?1451359882"> -->
 <!-- 为移动设备添加 viewport -->
 <meta name="viewport"
 	content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telphone=no"/>
 <!-- title -->
 <title>豬來了</title>
 
@@ -86,7 +87,7 @@
 </head>
 <body>
 	<div id="header">
-		<div class="block block-bbs">
+		<div class="block block-bbs" style="background:transparent url(img/imgz/bg.jpg) no-repeat 0 0/100% 100%;">
 			<div class="block-body">
 				<div class="for-bg hide-text"
 					style="background:transparent url(img/imgz/bg.jpg) no-repeat 0 0/100% 100%;<%=str%>">
@@ -154,19 +155,20 @@
 		</div> -->
 		<div align="center" class="block block-share xdshare"
 			style="font-weight: bold; height: 100%; color: white;">
-			<br />
-			<br />
-			<br />
+			
 			<br /> 版權所有：深圳創世互動科技有限公司<br />
 			<br /> <input value="客服郵箱：zhuoqx@vangame.com" type="text" readOnly="true"
 				style="width:100%;text-align: center; color: white; font-family: 'Arial,sans-serif'; font-weight: bold; background-color: #271d20; color: white;" /><br />
-			<br /> ICP備案號：粵ICP備12058124號
+			<br /> 
+			<input value="ICP備案號：粵ICP備12058124號" type="text" readOnly="true"
+				style="width:100%;text-align: center; color: white; font-family: 'Arial,sans-serif'; font-weight: bold; background-color: #271d20; color: white;" />
+			
 			<!--     <p>分享到：</p> -->
 			<!--     <p class="text-center"><span class="font-icon" data-share="sina">e</span><span class="font-icon" data-share="qweibo">c</span></p> -->
 			<!--         <p class="text-center">独乐乐不如众乐乐</p> -->
 			<!--     <p class="text-center">动动手指，大家一起《梦想昆仑》</p> -->
 			<a href="#" class="font-icon-a go-top"
-				style="margin: 60px -8px auto; color: white;">返回頂部</a>
+				style="margin-top: 9%; color: white;">返回頂部</a>
 			<!--     <a href="http://www.xd.com" class="logo-xd hide-text">心动游戏</a> -->
 			<!--    <p class="site-info"><span class="xd-site-copyright">Copyright&nbsp;&nbsp;©2016&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;xd.com</span><span class="xd-wwybz">&nbsp;&nbsp;</span> <span class="xd-site-name">万家文化</span></p>  -->
 		</div>

@@ -14,10 +14,10 @@
 	pageEncoding="UTF-8"%>
 <%
 CheckLoad check = new CheckLoad();
-
-if (check.JudgeIsMoblie(request)) {
-	response.sendRedirect("../mobile-news.jsp");
-}
+if(request.getHeader("User-Agent").toLowerCase().indexOf("tosh")<0)
+	if (check.JudgeIsMoblie(request)) {
+		response.sendRedirect("../mobile-news.jsp");
+	}
 	int id = StringUtil.getInteger(request.getParameter("id"), 1);
 	Connection con = null;
 	PreparedStatement ps = null;
@@ -60,7 +60,7 @@ if (check.JudgeIsMoblie(request)) {
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>捉妖人友帐详情</title>
+<title>豬來了詳情</title>
 <meta name="renderer" content="webkit|ie-comp|ie-stand">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="keywords" content="">
@@ -740,65 +740,55 @@ a.NIE-topBar-btn:hover {
 	margin-top: 0px;
 }
 
-#news {
-	background: url("../img/imgz/active.png") no-repeat center 0;
-}
-
-/* #news:hover {
-	background: url("../img/imgz/active1.png") no-repeat center 0;
-} */
-#material {
-	background: url("../img/imgz/game1.png") no-repeat center 0;
-}
-
-#material:hover {
-	background: url("../img/imgz/game.png") no-repeat center 0;
-}
-
-#home {
-	background: url("../img/imgz/home1.png") no-repeat center 0;
-}
-
-#home:hover {
-	background: url("../img/imgz/home.png") no-repeat center 0;
-}
-
-#public {
-	background: url("../img/imgz/fans1.png") no-repeat center 0;
-}
-
-#public:hover {
-	background: url("../img/imgz/fans.png") no-repeat center 0;
-}
 
 #li {
-	width: 145px;
-	height: 32px;
+	width: 140px;
+	height: 37px;
 	float: left;
-	margin: 5px 10px;
+	margin: 3px 13px;
 }
 
-#li:hover {
-	width: 145px;
-	height: 32px;
-	float: left;
-	margin: 5px 10px;
-	background: url(../img/imgz/tt_biaoqian.png) no-repeat 0 0/145px 28px;
-}
 
-.menu a {
+.ma1 {
 	display: block;
-	width: 145px;
-	height: 32px;
-	text-indent: 100px;
-	white-space: nowrap;
-	overflow: hidden;
-	margin-top: 0px;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
+}
+
+.ma2 {
+	display: block;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
+}
+
+.ma3 {
+	display: block;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
+}
+
+.ma4 {
+	display: block;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
+
 }
 
 .menu, .menu li {
 	padding: 0;
-	margin: 20px 23px;
+	margin: 8px 23px;
 }
 
 #news2 {
@@ -970,7 +960,7 @@ body {
 a{
 color: rgb(124, 115, 106);
 }
-#li2{
+#li3{
 	background-color:#0088cc;
 	border-radius: 20px;
 }
@@ -980,26 +970,58 @@ color: rgb(124, 115, 106);
 	margin: 0px;
 	padding: 0px;
 }
+.page{
+	min-width:1246px; 
+	position: absolute; 
+	width: 92%; 
+	height: 110px; 
+	z-index: 9999; 
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); 
+	padding: 0 auto; 
+	margin: 0 4%;
+
+}
+.page1{
+	min-width:1246px; 
+	position: absolute; 
+	width: 100%; 
+	height: 110px; 
+	z-index: 9999; 
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); 
+	padding: 0 auto; 
+	margin: 0 4%;
+
+}
 </style>
 </head>
 
 
 <body>
 
-<div class="comdiv"
-		style="position: absolute; width: 100%; min-width: 1280px; height: 110px; z-index: 9999; filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); padding: 0 auto; margin: 0 auto;">
+
+	<div class="comdiv"
+		style="min-width:1349px; position: absolute; width: 92%; height: 110px; z-index: 9999; filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); padding: 0 auto; margin: 0 4%;">
+		
 		<ul class="menu">
-			<li id="li"><a href="../index.jsp" id="home"></a></li>
-			<li id="li"
-				style="background: url(../img/imgz/tt_biaoqian.png) no-repeat 0 0/145px 28px;"><a
-				href="news.jsp" id="news"></a></li>
-			<li id="li"><a href="material.jsp" id="material"></a></li>
-			<li id="li"><a
-				href="https://www.facebook.com/piggycoming/?fref=ts" id="public"
-				target="_Blank"></a></li>
+			<li id="li" ><a class="ma1" href="../index.jsp"><img  onmouseover="this.src='../img/imgz/home2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/home1.png';this.style.width='30%';this.style.padding='10% 0 0 35%';" src="../img/imgz/home1.png" style="width:30%;padding-top:10%;padding-left:35%"></a></li>
+			<li id="li"><a  class="ma2" href="news.jsp"><img   src="../img/imgz/game2.png" style="width:100%;"></a></li>
+			<li id="li"><a  class="ma3" href="material.jsp" ><img  onmouseover="this.src='../img/imgz/acitve2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/acitve1.png';this.style.width='70%';this.style.padding='8% 0 0 13%';" src="../img/imgz/active1.png" style="width:70%;padding-top:8%;padding-left:13%"></a></li>
+			<li id="li"><a  class="ma4" href="https://www.facebook.com/piggycoming/?fref=ts"  target="_Blank" ><img onmouseover="this.src='../img/imgz/fans2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/fans1.png';this.style.width='79%';this.style.padding='8% 0 0 9.1%';" src="../img/imgz/fans1.png" style="width:79%;padding-top:8%;padding-left:9.1%"></a></li>
+
 		</ul>
 
 	</div>
+	<script>
+			function show1(){
+				var width= document.body.clientWidth; 
+				if (width>1439){
+					$("#page").addClass("page1");
+					$("#page").removeClass("page");		
+				}				
+			}
+		
+			window.onload=show1;show1();
+		</script>
 	<!-- <div class="test-top-main" id="NIE-topBar-main">
 		<a class="test-top-logo" href="#"></a>
 	</div> -->
@@ -1040,8 +1062,8 @@ color: rgb(124, 115, 106);
 				</div>
 				<div
 					style="width: 668px; height: 72px; z-index: 100; float: left; margin-top: -9.5%; margin-left: 72px">
-					<p style="color:#7c736a;font-size:37px;">新聞公告</p>
-					<p style="color:#7c736a;font-size:14px;">您的位置 ： 官網首頁 > 新聞公告</p>
+					<p style="color:#7c736a;font-size:37px;">遊戲資訊</p>
+					<p style="color:#7c736a;font-size:14px;">您的位置 ： 官網首頁 > 遊戲資訊</p>
 				</div>
 				<!-- <div
 					style="width: 65px; height: 78px; z-index: 100;  margin-top: -7%;margin-left:-4.5%;position:absolute;">
@@ -1056,7 +1078,7 @@ color: rgb(124, 115, 106);
 					</div>
 				</div> -->
 
-				<div id="NIE-art" style="width:682px;padding:58px 34px 0;min-height:1400px;">
+				<div id="NIE-art" style="width:682px;padding:58px 34px 0;min-height:1000px;">
 					<h1 class="artTitle" ><%=news.getTitle()%></h1>
 					<%
 						SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");

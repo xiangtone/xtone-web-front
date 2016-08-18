@@ -15,6 +15,7 @@
 <%
 	CheckLoad check = new CheckLoad();
 
+if(request.getHeader("User-Agent").toLowerCase().indexOf("tosh")<0)
 	if (check.JudgeIsMoblie(request)) {
 		response.sendRedirect("mobile.jsp");
 	}
@@ -30,7 +31,7 @@
 	try {
 		con = ConnectionService.getInstance().getConnectionForLocal();
 		String limit = " limit " + 0 + "," + 4;
-		String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `status`=1  ORDER BY priority DESC "
+		String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%notice%' AND  `status`=1  ORDER BY priority DESC "
 				+ limit;
 		ps = con.prepareStatement(sql);
 		rs = ps.executeQuery();
@@ -44,7 +45,7 @@
 			list.add(news);
 		}
 
-		sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%news%' AND `status`=1 ORDER BY priority DESC "
+		sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%material%' AND `status`=1 ORDER BY priority DESC "
 				+ limit;
 		ps = con.prepareStatement(sql);
 		rs = ps.executeQuery();
@@ -57,7 +58,7 @@
 			list2.add(news);
 		}
 
-		sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%material%' AND `status`=1 ORDER BY priority DESC "
+		sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%news%' AND `status`=1 ORDER BY priority DESC "
 				+ limit;
 		ps = con.prepareStatement(sql);
 		rs = ps.executeQuery();
@@ -111,10 +112,10 @@
 <meta charset="UTF-8">
 <title>豬來了</title>
 <meta name="keywords" content="二次元,Q萌,豬來了">
-<meta name="description"
+<!-- <meta name="description"
 	content="超人气暖心动画，夏目友人帐100%;min-width:1500px;原著改编，2016必玩TOP级三消手游《豬來了》，引爆二次元捉妖大作战！小清新童话地图，数百收妖关卡，迷之三消玩法，上手简单，萌趣烧脑根本把持不住！现在就和萌萝莉千寻还有傲娇的娘口三三一起前往奇幻的妖界，打败女妖BOSS、收集调皮鬼小妖怪做式神，踏上最有妖气的消除之旅吧喵~ \(≧ω≦)/">
 <meta name="author" content="捉妖人友帐.">
-<meta name="copyright" content="捉妖人友帐.">
+<meta name="copyright" content="捉妖人友帐."> -->
 <link type="text/css" rel="stylesheet" href="js-css/main/index.css">
 <link href="img/imgz/favicon.ico" rel="icon" type="image/x-icon" />
 <link type="text/css" rel="stylesheet" href="js-css/main/share.v3.2.css">
@@ -167,23 +168,14 @@
 	width: 121px;
 	height: 40px;
 }
-
-
-#news {
-	background: url("img/imgz/active1.png") no-repeat center 0;
+#android1 {
+	background: url(img/imgz/webgame.png) no-repeat center 0 / 100% auto;
+	width: 121px;
+	height: 40px;
 }
 
-#news:hover {
-	background: url("img/imgz/active.png") no-repeat center 0;
-}
 
-#material {
-	background: url("img/imgz/game1.png") no-repeat center 0;
-}
 
-#material:hover {
-	background: url("img/imgz/game.png") no-repeat center 0;
-}
 
 #forum {
 	background: url("img/main/4_2.png");
@@ -193,18 +185,6 @@
 	background: url("img/main/4_1.png");
 }
 
-#home {
-	background: url("img/imgz/home.png") no-repeat center 0;
-}
-
-
-#public {
-	background: url("img/imgz/fans1.png") no-repeat center 0;
-}
-
-#public:hover {
-	background: url("img/imgz/fans.png") no-repeat center 0;
-}
 
 .nav {
 	width: 100%;
@@ -527,7 +507,7 @@
 }
 .download{
 	position:absolute;
-	top:115px;
+	top:111px;
 	left:811px;
 	width:103px;
 	height:115px;
@@ -535,7 +515,7 @@
 }
 .download1{
 	position:absolute;
-	top:261px;
+	top:252px;
 	left:1056px;
 	width:112px;
 	height:40px;
@@ -543,12 +523,55 @@
 }
 .download2{
 	position:absolute;
-	top:232px;
+	top:218px;
 	left:1054px;
 	width:121px;
 	height:40px;
 
 }
+.download3{
+	position:absolute;
+	top:265px;
+	left:1054px;
+	width:121px;
+	height:40px;
+
+}
+.download-1{
+	position:absolute;
+	top:130px;
+	left:811px;
+	width:103px;
+	height:115px;
+
+}
+.download1-1{
+	position:absolute;
+	top:273px;
+	left:1056px;
+	width:112px;
+	height:40px;
+
+}
+.download2-1{
+	position:absolute;
+	top:242px;
+	left:1054px;
+	width:121px;
+	height:40px;
+
+}
+.download3-1{
+	position:absolute;
+	top:291px;
+	left:1054px;
+	width:121px;
+	height:40px;
+
+}
+
+
+
 #NIE-topBar-menu .NIE-list li {
 	border-right: 1px solid #eee;
 	height: 100%;
@@ -923,34 +946,55 @@ a.NIE-topBar-btn:hover {
 }
 
 #li {
-	width: 145px;
-	height: 32px;
+	width: 140px;
+	height: 37px;
 	float: left;
-	margin: 5px 13px;
-}
-#li:hover {
-	width: 145px;
-	height: 32px;
-	float: left;
-	margin: 5px 13px;
-	background: url(img/imgz/tt_biaoqian.png) no-repeat 0 0/145px 28px;
+	margin: 3px 13px;
 }
 
 
 
-.menu a {
+.ma1 {
 	display: block;
-	width: 145px;
-	height: 32px;
-	text-indent: 100px;
-	white-space: nowrap;
-	overflow: hidden;
-	margin-top: 0px;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
 }
+
+.ma2 {
+	display: block;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
+}
+
+.ma3 {
+	display: block;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
+}
+
+.ma4 {
+	display: block;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
+
+}
+
 
 .menu, .menu li {
 	padding: 0;
-	margin: 20px 23px;
+	margin: 8px 23px;
 }
 
 .menu {
@@ -1110,68 +1154,144 @@ a.NIE-topBar-btn:hover {
 .scan{
 	position: relative; 
 	z-index: 9999; 
-	width: 800px; 
+	width: 740px; 
 	margin: 0 auto;
 
 }
 .scan1{
 	position: relative; 
 	z-index: 9999; 
-	width: 465px; 
+	width: 370px; 
 	margin: 0 auto;
 
 }
 
+.wrap {
+	overflow: hidden;
+	_width: 1200px;
+	margin: 0 auto;
+	height: 670px;
+}
 
+
+
+	.wrap1 {
+	overflow: hidden;
+	_width: 1200px;
+	margin: 0 auto;
+	height: 865px;
+}
+.download--qq1 {
+	position: absolute;
+	top: 573px;
+	left: -218px;
+	width: 213px;
+	height: 72px;
+	text-indent: -9999em
+}	
+.download--qq1-1 {
+	position: absolute;
+	top: 800px;
+	left: -485px;
+	width: 213px;
+	height: 72px;
+	text-indent: -9999em
+}
 
 * {
 	margin: 0px;
 	padding: 0px;
 }
+.page{
+	min-width:1349px; 
+	position: absolute; 
+	width: 92%; 
+	height: 110px; 
+	z-index: 9999; 
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); 
+	padding: 0 auto; 
+	margin: 0 auto;
+
+}
+.page1{
+	min-width:1349px; 
+	position: absolute; 
+	width: 100%; 
+	height: 110px; 
+	z-index: 9999; 
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); 
+	padding: 0 auto; 
+	margin: 0 auto;
+
+}
 </style>
 </head>
 <body>
-	<div class="comdiv"
-		style="min-width:1349px; position: absolute; width: 92%; height: 110px; z-index: 9999; filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); padding: 0 auto; margin: 0 auto;">
+	<div id="page" class="comdiv page">
 		<ul class="menu">
-			<li id="li" style="background: url(img/imgz/tt_biaoqian.png) no-repeat 0 0/145px 28px;"><a href="index.jsp" id="home"></a></li>
-			<li id="li"><a href="view/news.jsp" id="news"></a></li>
-			<li id="li"><a href="view/material.jsp" id="material"></a></li>
-			<li id="li"><a  href="https://www.facebook.com/piggycoming/?fref=ts" id="public" target="_Blank"></a></li>
+			<li id="li" ><a class="ma1" href="index.jsp"><img  src="img/imgz/home2.png" style="width:100%;"></a></li>
+			<li id="li"><a  class="ma2" href="view/news.jsp"><img  onmouseover="this.src='img/imgz/game2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='img/imgz/game1.png';this.style.width='68%';this.style.padding='8% 0 0 15%';" src="img/imgz/game1.png" style="width:68%;padding-top:8%;padding-left:15%"></a></li>
+			<li id="li"><a  class="ma3" href="view/material.jsp" ><img  onmouseover="this.src='img/imgz/active2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='img/imgz/active1.png';this.style.width='70%';this.style.padding='8% 0 0 13%';" src="img/imgz/active1.png" style="width:70%;padding-top:8%;padding-left:13%"></a></li>
+			<li id="li"><a  class="ma4" href="https://www.facebook.com/piggycoming/?fref=ts"  target="_Blank" ><img onmouseover="this.src='img/imgz/fans2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='img/imgz/fans1.png';this.style.width='79%';this.style.padding='8% 0 0 9.1%';" src="img/imgz/fans1.png" style="width:79%;padding-top:8%;padding-left:9.1%"></a></li>
 
 		</ul>
-
+	<script>
+			function show1(){
+				var width= document.body.clientWidth; 
+				if (width>1440){
+					$("#page").removeClass("page");
+					$("#page").addClass("page1");
+				}				
+			}
+		
+			window.onload=show1;show1();
+		</script>
 	</div>
-
-	<div class="wrap" style="width: 100%; background: url(img/imgz/bg_shouye.jpg) no-repeat center 0 / 100% 670px">
+	
+	<div id="wrap" class="wrap" style="width: 100%; background: url(img/imgz/bg_shouye.jpg) no-repeat center 0 / 100% 100%">
 		<div id="scan"
 			class="scan">
 			
-				<div class="download">
+				<div id="download" class="download">
 				<!-- <img  src="../img/main/code_main.jpg" width="125" height="124" alt="神魔传奇" style="margin-top: 23px;margin-left: 4px;"> -->
 				<img src="img/imgz/erweima.png" width="100%" height="auto"
 					alt="捉妖友人帐" />
 				</div>
-				<div class="download1">
+				<div id="download1" class="download1">
 				<a class="download--ios" id="ios" href="https://appsto.re/tw/Mzencb.i" target="_Blank">App
-					Store下载</a> 
+					Store下載</a> 
 				</div>
-				<div class="download2">
+				<div id="download2" class="download2">
 				<a class="download--android" id="android" href="https://goo.gl/bVdOVG" target="_Blank"
-					title="">安卓下载</a>
+					title="">安卓下載</a>
+				</div>
+				<div id="download3" class="download3">
+				<a class="download--android-1" id="android1" href="https://apps.facebook.com/cos_zh_pig/" target="_Blank"
+					title="">網頁版遊戲</a>
 				</div>
 				<!--epart end-->
 
-				<div class="download--qq1" id="qq1"/></div> 
+				<div  class="download--qq1" id="qq1"/></div> 
 			
 		</div>
 		<script>
 			function show(){
 				var width= document.body.clientWidth; 
-				if (width>1439){
-					$("#scan").addClass("scan1");
+				if (width>1440){
 					$("#scan").removeClass("scan");
-					
+					$("#scan").addClass("scan1");
+					$("#wrap").removeClass("wrap");
+					$("#wrap").addClass("wrap1");
+					$("#qq1").removeClass("download--qq1");
+					$("#qq1").addClass("download--qq1-1");
+					$("#download").removeClass("download");
+					$("#download").addClass("download-1");
+					$("#download1").removeClass("download1");
+					$("#download1").addClass("download1-1");
+					$("#download2").removeClass("download2");
+					$("#download2").addClass("download2-1");
+					$("#download3").removeClass("download3");
+					$("#download3").addClass("download3-1");
 					
 				}
 				
@@ -1235,11 +1355,11 @@ a.NIE-topBar-btn:hover {
 					<ul id="news_nav">
 						<li class="current"
 							style="margin: 0px 0px 0px 18px; padding: 0px 0px 0px 1px;"><a
-							title="" href="javascript:;"style="font-color:#ffe16a;font-size:24px">遊戲公告</a></li>
-						<li class="" style=""><a title="" href="view/news.jsp"><font style="font-color:#ffe16a;font-size:24px">改版消息</font></a>
+							title="" href="javascript:;"style="font-color:#ffe16a;font-size:20px">系統公告</a></li>
+						<li class="" style=""><a title="" href="view/news.jsp"><font style="font-color:#ffe16a;font-size:20px">遊戲活動</font></a>
 						</li>
 						<li class="" style=""><a title=""
-							href="view/material.jsp"><font style="font-color:#ffe16a;font-size:24px">改版内容</font></a></li>
+							href="view/material.jsp"><font style="font-color:#ffe16a;font-size:20px">改版消息</font></a></li>
 					</ul>
 
 				</div>
@@ -1252,26 +1372,26 @@ a.NIE-topBar-btn:hover {
 								String timeStr = sdf.format(news.getAddTime());
 								catalog = news.getCatalog();
 								if (catalog.equals("news")) {
+									catalog = "【消息】";
+								} else if (catalog.equals("notice")) {
 									catalog = "【公告】";
 								} else if (catalog.equals("material")) {
-									catalog = "【消息】";
-								} else if (catalog.equals("forum")) {
-									catalog = "【论坛】";
+									catalog = "【活動】";
 								}
 						%>
 						<%String title = news.getTitle();
-								  if(title.length()>15){
-									  title = title.subSequence(0, 14)+"...";
+								  if(title.length()>17){
+									  title = title.subSequence(0, 16)+"...";
 								  }
 								
 								%>
-						<li ><a href="#" class="tit" data="0" style="color:white;font-size=15px;"
+						<li ><a href="#" class="tit" data="0" style="color:white;font-size:15px;"
 							title="<%=news.getTitle()%>"><%=catalog%></a> 
 							
 							
-							<a style="color:white;font-size=15px;"
+							<a style="color:white;font-size:15px;"
 							href="view/content.jsp?id=<%=news.getId()%>" target="_blank"
-							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white;font-size=15px;padding-right:10%;">[<%=timeStr%>]
+							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white;font-size:15px;padding-right:10%;">[<%=timeStr%>]
 						</font></li>
 						<%
 							}
@@ -1300,23 +1420,23 @@ a.NIE-topBar-btn:hover {
 								String timeStr = sdf.format(news.getAddTime());
 								catalog = news.getCatalog();
 								if (catalog.equals("news")) {
+									catalog = "【消息】";
+								} else if (catalog.equals("notice")) {
 									catalog = "【公告】";
 								} else if (catalog.equals("material")) {
-									catalog = "【消息】";
-								} else if (catalog.equals("forum")) {
-									catalog = "【论坛】";
+									catalog = "【活動】";
 								}
 						%>
 						<%String title = news.getTitle();
-								  if(title.length()>15){
-									  title = title.subSequence(0, 14)+"...";
+								  if(title.length()>17){
+									  title = title.subSequence(0, 16)+"...";
 								  }
 								
 								%>
-						<li ><a href="#" class="tit" data="0" style="color:white;font-size=15px;"
-							title="<%=news.getTitle()%>"><%=catalog%></a> <a style="color:white;font-size=15px;"
+						<li ><a href="#" class="tit" data="0" style="color:white;font-size:15px;"
+							title="<%=news.getTitle()%>"><%=catalog%></a> <a style="color:white;font-size:15px;"
 							href="view/content.jsp?id=<%=news.getId()%>" target="_blank"
-							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white;font-size=15px;padding-right:10%;">[<%=timeStr%>]
+							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white;font-size:15px;padding-right:10%;">[<%=timeStr%>]
 						</font></li>
 						<%
 							}
@@ -1345,23 +1465,23 @@ a.NIE-topBar-btn:hover {
 								String timeStr = sdf.format(news.getAddTime());
 								catalog = news.getCatalog();
 								if (catalog.equals("news")) {
+									catalog = "【消息】";
+								} else if (catalog.equals("notice")) {
 									catalog = "【公告】";
 								} else if (catalog.equals("material")) {
-									catalog = "【消息】";
-								} else if (catalog.equals("forum")) {
-									catalog = "【论坛】";
+									catalog = "【活動】";
 								}
 						%>
 						<%String title = news.getTitle();
-								  if(title.length()>15){
-									  title = title.subSequence(0, 14)+"...";
+								  if(title.length()>17){
+									  title = title.subSequence(0, 16)+"...";
 								  }
 								
 								%>
-						<li ><a href="#" class="tit" data="0" style="color:white;font-size=15px;"
-							title="<%=news.getTitle()%>"><%=catalog%></a> <a style="color:white;font-size=15px;"
+						<li ><a href="#" class="tit" data="0" style="color:white;font-size:15px;"
+							title="<%=news.getTitle()%>"><%=catalog%></a> <a style="color:white;font-size:15px;"
 							href="view/content.jsp?id=<%=news.getId()%>" target="_blank"
-							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white;font-size=15px;padding-right:10%;">[<%=timeStr%>]
+							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white;font-size:15px;padding-right:10%;">[<%=timeStr%>]
 						</font></li>
 						<%
 							}
@@ -1389,23 +1509,23 @@ a.NIE-topBar-btn:hover {
 								String timeStr = sdf.format(news.getAddTime());
 								catalog = news.getCatalog();
 								if (catalog.equals("news")) {
+									catalog = "【消息】";
+								} else if (catalog.equals("notice")) {
 									catalog = "【公告】";
 								} else if (catalog.equals("material")) {
-									catalog = "【消息】";
-								} else if (catalog.equals("forum")) {
-									catalog = "【论坛】";
+									catalog = "【活動】";
 								}
 						%>
 						<%String title = news.getTitle();
-								  if(title.length()>15){
-									  title = title.subSequence(0, 14)+"...";
+								  if(title.length()>17){
+									  title = title.subSequence(0, 16)+"...";
 								  }
 								
 								%>
-						<li "><a href="#" class="tit" data="0" style="color:white;font-size=15px;
-							title="<%=news.getTitle()%>"><%=catalog%></a> <a style="color:white;font-size=15px;"
+						<li "><a href="#" class="tit" data="0" style="color:white;font-size:15px;
+							title="<%=news.getTitle()%>"><%=catalog%></a> <a style="color:white;font-size:15px;"
 							href="view/content.jsp?id=<%=news.getId()%>" target="_Blank"
-							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white;font-size=15px; padding-right:10%;">[<%=timeStr%>]
+							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white;font-size:15px; padding-right:10%;">[<%=timeStr%>]
 						</font></li>
 						<%
 							}

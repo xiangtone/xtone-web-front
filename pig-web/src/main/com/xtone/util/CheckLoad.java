@@ -23,7 +23,7 @@ public class CheckLoad {
 		if (request.getHeader("User-Agent") != null) {
 			for (String mobileAgent : mobileAgents) {
 				if (request.getHeader("User-Agent").toLowerCase().indexOf(mobileAgent) >= 0) {
-					isMoblie = true;
+					isMoblie = true; 
 					break;
 				}
 			}

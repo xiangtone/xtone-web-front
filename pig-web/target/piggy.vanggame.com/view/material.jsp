@@ -14,8 +14,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
-	CheckLoad check = new CheckLoad();
-
+CheckLoad check = new CheckLoad();
+if(request.getHeader("User-Agent").toLowerCase().indexOf("tosh")<0)
 	if (check.JudgeIsMoblie(request)) {
 		response.sendRedirect("../mobile-news.jsp");
 	}
@@ -764,65 +764,63 @@ a.NIE-topBar-btn:hover {
 	margin-top: 0px;
 }
 
-#news {
-	background: url("../img/imgz/active1.png") no-repeat center 0;
-}
 
-#news:hover {
-	background: url("../img/imgz/active.png") no-repeat center 0;
-}
-#material {
-	background: url("../img/imgz/game.png") no-repeat center 0;
-}
-
-/* #material:hover {
-	background: url("../img/imgz/game1.png") no-repeat center 0;
-} */
-
-#home {
-	background: url("../img/imgz/home1.png") no-repeat center 0;
-}
-
-#home:hover {
-	background: url("../img/imgz/home.png") no-repeat center 0;
-}
-
-#public {
-	background: url("../img/imgz/fans1.png") no-repeat center 0;
-}
-
-#public:hover {
-	background: url("../img/imgz/fans.png") no-repeat center 0;
-}
 
 #li {
 	width: 145px;
-	height: 32px;
+	height: 45px;
 	float: left;
-	margin: 5px 10px;
+	margin: 3px 13px;
 }
 
-#li:hover {
-	width: 145px;
-	height: 32px;
+#li {
+	width: 140px;
+	height: 37px;
 	float: left;
-	margin: 5px 10px;
-	background: url(../img/imgz/tt_biaoqian.png) no-repeat 0 0/145px 28px;
+	margin: 3px 13px;
 }
 
-.menu a {
+
+.ma1 {
 	display: block;
-	width: 145px;
-	height: 32px;
-	text-indent: 100px;
-	white-space: nowrap;
-	overflow: hidden;
-	margin-top: 0px;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
+}
+
+.ma2 {
+	display: block;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
+}
+
+.ma3 {
+	display: block;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
+}
+
+.ma4 {
+	display: block;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
+
 }
 
 .menu, .menu li {
 	padding: 0;
-	margin: 20px 23px;
+	margin: 8px 23px;
 }
 
 #news2 {
@@ -850,8 +848,7 @@ a.NIE-topBar-btn:hover {
 	display: block;
 	width: 100%;
 	height: 100%;
-/* 	color: #9d8d87;
-	border-bottom: 2px solid #9d8d87; */
+
 }
 
 #forum2 {
@@ -865,8 +862,7 @@ a.NIE-topBar-btn:hover {
 	display: block;
 	width: 100%;
 	height: 100%;
-/* 	color: #9d8d87;
-	border-bottom: 2px solid #9d8d87; */
+
 }
 
 #first {
@@ -881,8 +877,7 @@ a.NIE-topBar-btn:hover {
 	width: 100%;
 	height: 100%;
 	color:white;
-/* 	color: #9d8d87;
-	border-bottom: 2px solid #9d8d87; */
+
 }
 
 .nav {
@@ -890,9 +885,7 @@ a.NIE-topBar-btn:hover {
 	height: 81px;
 	background: #000;
 }
-/* 		.menu li{width:163px;height:81px;float:left;margin:5px 13px;} */
-/* 	    .menu a{display:block;width:163px;height:81px;text-indent:100px;white-space:nowrap;overflow:hidden;} */
-/* 		.menu,.menu li{padding:0;margin: 0px ; } */
+
 .menu {
 	list-style-type: none;
 	margin-left: 30%
@@ -1004,6 +997,28 @@ color: rgb(124, 115, 106);
 	margin: 0px;
 	padding: 0px;
 }
+.page{
+	min-width:1246px; 
+	position: absolute; 
+	width: 92%; 
+	height: 110px; 
+	z-index: 9999; 
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); 
+	padding: 0 auto; 
+	margin: 0 4%;
+
+}
+.page1{
+	min-width:1246px; 
+	position: absolute; 
+	width: 100%; 
+	height: 110px; 
+	z-index: 9999; 
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); 
+	padding: 0 auto; 
+	margin: 0 4%;
+
+}
 </style>
 </head>
 
@@ -1037,20 +1052,27 @@ color: rgb(124, 115, 106);
 
 	<!-- </div> -->
 
-	<div class="comdiv"
-		style="position: absolute; width: 100%; min-width: 1280px; height: 110px; z-index: 9999; filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); padding: 0 auto; margin: 0 auto;">
+	<div id="page" class="comdiv page">
 		<ul class="menu">
-			<li id="li"><a href="../index.jsp" id="home"></a></li>
-			<li id="li"
-				><a
-				href="news.jsp" id="news"></a></li>
-			<li id="li" style="background: url(../img/imgz/tt_biaoqian.png) no-repeat 0 0/145px 28px;"><a href="material.jsp" id="material"></a></li>
-			<li id="li"><a
-				href="https://www.facebook.com/piggycoming/?fref=ts" id="public"
-				target="_Blank"></a></li>
+			<li id="li" ><a class="ma1" href="../index.jsp"><img  onmouseover="this.src='../img/imgz/home2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/home1.png';this.style.width='30%';this.style.padding='10% 0 0 35%';" src="../img/imgz/home1.png" style="width:30%;padding-top:10%;padding-left:35%"></a></li>
+			<li id="li"><a  class="ma2" href="news.jsp"><img  onmouseover="this.src='../img/imgz/game2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/game1.png';this.style.width='68%';this.style.padding='8% 0 0 15%';" src="../img/imgz/game1.png" style="width:68%;padding-top:8%;padding-left:15%"></a></li>
+			<li id="li"><a  class="ma3" href="material.jsp" ><img  src="../img/imgz/active2.png" style="width:100%;"></a></li>
+			<li id="li"><a  class="ma4" href="https://www.facebook.com/piggycoming/?fref=ts"  target="_Blank" ><img onmouseover="this.src='../img/imgz/fans2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/fans1.png';this.style.width='79%';this.style.padding='8% 0 0 9.1%';" src="../img/imgz/fans1.png" style="width:79%;padding-top:8%;padding-left:9.1%"></a></li>
+
 		</ul>
 
 	</div>
+	<script>
+			function show1(){
+				var width= document.body.clientWidth; 
+				if (width>1439){
+					$("#page").addClass("page1");
+					$("#page").removeClass("page");		
+				}				
+			}
+		
+			window.onload=show1;show1();
+		</script>
 	<!-- <div class="test-top-main" id="NIE-topBar-main">
 		<a class="test-top-logo" href="#"></a>
 	</div> -->
@@ -1072,11 +1094,11 @@ color: rgb(124, 115, 106);
 				</div>
 				<div
 					style="width: 668px; height: 72px; z-index: 100; float: left; margin-top: -9.5%; margin-left: 72px">
-					<p style="color:#7c736a;font-size:37px;">遊戲資訊</p>
-					<p style="color:#7c736a;font-size:14px;">您的位置 ： 官網首頁 > 遊戲資訊</p>
+					<p style="color:#7c736a;font-size:37px;">新聞公告</p>
+					<p style="color:#7c736a;font-size:14px;">您的位置 ： 官網首頁 > 新聞公告</p>
 				</div>
 				<div
-					style="width: 65px; height: 78px; z-index: 100;  margin-top: -10.5%;margin-left:-107.25%;float:left;">
+					style="width: 65px; height: 78px; z-index: 100;  margin-top: -10.4%;margin-right:100%;float:right;">
 					<div style="background:url(../img/imgz/zhu3.JPG) no-repeat center 0 / 100% auto;
 					margin-top:650px;width:65px;height:203px;z-index:1;">
 					</div>
@@ -1111,7 +1133,7 @@ color: rgb(124, 115, 106);
 							<div id="li2" style="width:100%;height:auto;">
 							<a
 							id="news2" href="news.jsp" 
-							style="display: block; width: 100%; height: 100%;">新聞</a>
+							style="display: block; width: 100%; height: 100%;">活動</a>
 							</div>
 							</li>
 						<li 
@@ -1149,7 +1171,7 @@ color: rgb(124, 115, 106);
 								try {
 									/* Class.forName(DRIVER); */
 									con = ConnectionService.getInstance().getConnectionForLocal();
-									String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%material%' AND `status`=1 ";
+									String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%notice%' AND `status`=1 ";
 									ps= con.prepareStatement(sql, ResultSet.TYPE_FORWARD_ONLY,
 											ResultSet.CONCUR_READ_ONLY);
 									rs= ps.executeQuery();

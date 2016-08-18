@@ -9,6 +9,9 @@
 <!-- 为移动设备添加 viewport -->
 <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no">
 <link type="text/css" rel="stylesheet" href="css/main.css">         
+
+
+
 <title>最新資訊 - 豬來了 -</title> 
 <style type="text/css">.fancybox-margin{margin-right:0px;}</style></head>
 <body>
@@ -17,7 +20,7 @@
         <div id="body">
     <div class="block block-news">
     <div class="block-header clearfix">
-                <a href="#" onclick="javascript:history.back(-1);" class="block-unit"><span class="font-icon-j for-align">返回</span></a>
+                <a href="javascript:;" onclick="javascript:history.back(-1);" class="block-unit"><span class="font-icon-j for-align">返回</span></a>
                         <div class="title material"><span class="font-icon-b">最新資訊</span></div>
                     </div>
     <div class="block-body">
@@ -33,7 +36,7 @@
                  }catch(Exception ex){
                 	 pagenum = 1;
                  }
-               Service.newsnew(out,pagenum,"select * from tbl_cms_contents where `status`=1"); %>  
+               Service.newsnew(out,pagenum,"select * from tbl_cms_contents where `catalog` LIKE '%notice%' AND `status`=1 "); %>  
 
                                                    
                                                     

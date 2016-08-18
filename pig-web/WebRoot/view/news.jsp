@@ -15,10 +15,10 @@
 	pageEncoding="UTF-8"%>
 	<%
 	CheckLoad check = new CheckLoad();
-
-	if (check.JudgeIsMoblie(request)) {
-		response.sendRedirect("../mobile-news.jsp");
-	}
+	  if(request.getHeader("User-Agent").toLowerCase().indexOf("tosh")<0)
+		if (check.JudgeIsMoblie(request)) {
+			response.sendRedirect("../mobile-news.jsp");
+		}
 	
 	%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -937,24 +937,55 @@ color: rgb(124, 115, 106);
 	margin: 0px;
 	padding: 0px;
 }
+.page{
+	min-width:1240px; 
+	position: absolute; 
+	width: 92%; 
+	height: 110px; 
+	z-index: 9999; 
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); 
+	padding: 0 auto; 
+	margin: 0 4%;
+
+}
+.page1{
+	min-width:1240px; 
+	position: absolute; 
+	width: 100%; 
+	height: 110px; 
+	z-index: 9999; 
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); 
+	padding: 0 auto; 
+	margin: 0 4%;
+
+}
 </style>
 </head>
 
 
 <body>
 
-	<div class="comdiv"
-		style="min-width:1349px; position: absolute; width: 92%; height: 110px; z-index: 9999; filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); padding: 0 auto; margin: 0 auto;">
-		
+	<div id="page" class="comdiv page">
 		<ul class="menu">
 			<li id="li" ><a class="ma1" href="../index.jsp"><img  onmouseover="this.src='../img/imgz/home2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/home1.png';this.style.width='30%';this.style.padding='10% 0 0 35%';" src="../img/imgz/home1.png" style="width:30%;padding-top:10%;padding-left:35%"></a></li>
-			<li id="li"><a  class="ma2" href="news.jsp"><img   src="../img/imgz/active2.png" style="width:100%;"></a></li>
-			<li id="li"><a  class="ma3" href="material.jsp" ><img  onmouseover="this.src='../img/imgz/game2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/game1.png';this.style.width='70%';this.style.padding='8% 0 0 13%';" src="../img/imgz/game1.png" style="width:70%;padding-top:8%;padding-left:13%"></a></li>
+			<li id="li"><a  class="ma2" href="news.jsp"><img   src="../img/imgz/game2.png" style="width:100%;"></a></li>
+			<li id="li"><a  class="ma3" href="material.jsp" ><img  onmouseover="this.src='../img/imgz/active2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/active1.png';this.style.width='70%';this.style.padding='8% 0 0 13%';" src="../img/imgz/active1.png" style="width:70%;padding-top:8%;padding-left:13%"></a></li>
 			<li id="li"><a  class="ma4" href="https://www.facebook.com/piggycoming/?fref=ts"  target="_Blank" ><img onmouseover="this.src='../img/imgz/fans2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/fans1.png';this.style.width='79%';this.style.padding='8% 0 0 9.1%';" src="../img/imgz/fans1.png" style="width:79%;padding-top:8%;padding-left:9.1%"></a></li>
 
 		</ul>
 
 	</div>
+	<script>
+			function show1(){
+				var width= document.body.clientWidth; 
+				if (width>1439){
+					$("#page").addClass("page1");
+					$("#page").removeClass("page");		
+				}				
+			}
+		
+			window.onload=show1;show1();
+		</script>
 	<div class="wrap"
 		style="background: transparent url(../img/imgz/bg_neiye.jpg) no-repeat scroll center 0px; background-size: 100%;">
 		
@@ -968,11 +999,11 @@ color: rgb(124, 115, 106);
 				</div>
 				<div
 					style="width: 668px; height: 72px; z-index: 100; float: left; margin-top: -9.5%; margin-left: 72px">
-					<p style="color:#7c736a;font-size:37px;">新聞公告</p>
-					<p style="color:#7c736a;font-size:14px;">您的位置 ： 官網首頁 > 新聞公告</p>
+					<p style="color:#7c736a;font-size:37px;">遊戲資訊</p>
+					<p style="color:#7c736a;font-size:14px;">您的位置 ： 官網首頁 > 遊戲資訊</p>
 				</div>
 				<div
-					style="width: 65px; height: 78px; z-index: 100;  margin-top: -10.5%;margin-left:-107.25%;float:left;">
+					style="width: 65px; height: 78px; z-index: 100;  margin-top: -10.4%;margin-right:100%;float:right;">
 					<div style="background:url(../img/imgz/zhu3.JPG) no-repeat center 0 / 100% auto;
 					margin-top:650px;width:65px;height:203px;z-index:1;">
 					</div>
@@ -1000,7 +1031,7 @@ color: rgb(124, 115, 106);
 							<div id="li2" style="width:100%;height:auto;">
 							<a
 							id="news2" href="news.jsp" 
-							style="display: block; width: 100%; height: 100%;">新聞</a>
+							style="display: block; width: 100%; height: 100%;">活動</a>
 							</div>
 							</li>
 						<li 
@@ -1042,7 +1073,7 @@ color: rgb(124, 115, 106);
 									
 									/* Connection con = DriverManager.getConnection(URL, USER, PASS); */
 									con = ConnectionService.getInstance().getConnectionForLocal();
-									String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%news%' AND `status`=1 ";
+									String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%material%' AND `status`=1 ";
 									ps = con.prepareStatement(sql, ResultSet.TYPE_FORWARD_ONLY,
 											ResultSet.CONCUR_READ_ONLY);
 									rs = ps.executeQuery();
