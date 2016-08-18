@@ -58,8 +58,8 @@ i,em{font-style:normal;}
 .sj a:hover .sj_tan{ display:block;}
 .sj_tan span{width:136px;height:136px; float:left; margin:43px 0 0 10px;}
 .sj_tan em{width:136px; line-height:20px; float:left; margin:4px 0 0 10px; font-size:14px; color:#250600; text-align:center;}
-.movBtn{width:79px;height:79px; position:absolute;right:50px;top:200px;background:url(../images/movBtn2.png) left top no-repeat; z-index:5;}
-.movBtn a{width:79px;height:79px; float:left; background:url(../images/movBtn1.png) left top no-repeat;animation:3s linear 0s normal none infinite xz;-webkit-animation:3s linear 0s normal none infinite xz;-moz-animation:3s linear 0s normal none infinite xz;-o-animation:3s linear 0s normal none infinite xz;}
+.movBtn{width:79px;height:79px; position:absolute;right:50px;top:200px;background:url() left top no-repeat; z-index:5;}
+.movBtn a{width:79px;height:79px; float:left; background:url() left top no-repeat;animation:3s linear 0s normal none infinite xz;-webkit-animation:3s linear 0s normal none infinite xz;-moz-animation:3s linear 0s normal none infinite xz;-o-animation:3s linear 0s normal none infinite xz;}
 @keyframes xz { 
 0%{transform:rotate(0deg)}
 100%{transform:rotate(360deg)}
@@ -88,7 +88,7 @@ i,em{font-style:normal;}
 .imgscroll .imglist li{ margin:0;}
 .imgscroll .imglist .imgurl{width:550px;min-height:172px;float:left;}
 .imgscroll .imglist .imgurl .pic{width:550px;height:172px;float:left;}
-.imgscroll .imglist .imgurl .pic a{width:550px;height:172px; position:absolute;left:0;top:0; z-index:9;background:url(../images/kuang.png) left top no-repeat;}
+.imgscroll .imglist .imgurl .pic a{width:550px;height:172px; position:absolute;left:0;top:0; z-index:9;background:url() left top no-repeat;}
 .imgscroll .imglist .imgurl .pic span{width:550px;height:172px; position:absolute;left:0;top:0; z-index:8;-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
 .imgscroll .imglist .imgurl .pic span img{width:550px;height:172px; display:block;-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
 .roll_l{min-width:100px;height:6px; position:absolute;left:200px; bottom:20px; z-index:10;}
@@ -108,7 +108,7 @@ i,em{font-style:normal;}
 .fr_ewm_wx{background:url(../images/erweimabg.png) no-repeat 0 0;width:140px;height:231px;z-index: 1001; position: fixed; right: 2%; top:50%; margin-top: -92px;}
 
 .w_main{width:990px;height:1400px; float:left;}
-.con1{width:990px;height:288px; float:left;background:url(../images/con1_bg2.jpg) left top no-repeat;}
+.con1{width:990px;height:288px; float:left;background:url() left top no-repeat;}
 .left_pic{width:242px;height:288px; float:left;}
 .left_pic a{width:242px;height:288px; float:left;}
 .left_pic a img{max-width:224px; margin:10px 0 0 9px;}
@@ -117,7 +117,7 @@ i,em{font-style:normal;}
 .newsTit{width:700px;height:40px; float:left;}
 .newsTit ul li{width:66px;height:40px; line-height:40px; float:left; font-size:18px;text-align:center;}
 .newsTit ul li a{width:66px;height:40px;float:left; text-decoration:none; color:#d4a777;}
-.newsMore{width:66px;height:40px; float:right;background:url(../images/moreBtn.png) no-repeat right 20px;}
+.newsMore{width:66px;height:40px; float:right;background:url() no-repeat right 20px;}
 .newsMore a{width:66px;height:40px; line-height:40px; float:right; font-size:18px;color:#b28b63; text-align:center;}
 .news_xian{width:700px;height:3px; float:left; border-bottom:1px #6c4e36 solid; position:relative;}
 .red{width:70px;height:3px; position:absolute;left:0;top:1px; background-color:#ff4106; transition:all 0.2s ease-in;}
@@ -186,7 +186,7 @@ i,em{font-style:normal;}
 .con3_tit{width:489px;height:41px; float:left;background:url(../images/con3_titBg.jpg) left top no-repeat;}
 .con3_tit ul li{width:124px;height:41px; line-height:41px; float:left; font-size:18px;text-align:center;}
 .con3_tit ul li a{width:124px;height:41px;float:left; text-decoration:none; color:#b28b63;}
-.con3_more1{width:66px;height:41px; float:right;background:url(../images/moreBtn.png) no-repeat right 12px; margin-right:26px;}
+.con3_more1{width:66px;height:41px; float:right;background:url() no-repeat right 12px; margin-right:26px;}
 .con3_more1 a{width:66px;height:41px; line-height:41px; float:right; font-size:18px;color:#b28b63; text-align:left;}
 .con3_list{width:437px;height:230px; float:left; background-color:#321711; border:1px #3f302d solid; padding:15px 25px 0 25px; display:none;}
 .con3_list ul li{width:437px;height:31px; float:left;}
@@ -380,7 +380,7 @@ i,em{font-style:normal;}
 .newsTit{width:710px;height:40px; float:left;}
 .newsTit ul li{width:66px;height:40px; line-height:40px; float:left; font-size:18px;text-align:center;}
 .newsTit ul li a{width:66px;height:40px;float:left; text-decoration:none; color:#d4a777;}
-.newsMore{width:66px;height:40pxpx; float:right;background:url(../images/moreBtn.png) no-repeat right 20px;}
+.newsMore{width:66px;height:40pxpx; float:right;background:url() no-repeat right 20px;}
 .newsMore a{width:66px;height:40px; line-height:40px; float:right; font-size:18px;color:#b28b63; text-align:left;}
 .news_xian{width:710px;height:3px; float:left; border-bottom:1px #6c4e36 solid; position:relative;}
 .red{width:70px;height:3px; position:absolute;left:0;top:1px; background-color:#ff4106; transition:all 0.2s ease-in;}

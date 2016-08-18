@@ -1,4 +1,4 @@
-package org.mxkl.util;
+package com.lyxm.util;
 
 import javax.servlet.http.HttpServletRequest;
 

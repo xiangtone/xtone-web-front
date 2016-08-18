@@ -9,7 +9,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 /**
- * Http Demo for Java
+ * 
  * 参考文档《短信综合信息管理系统_Http接口文档.doc》
  *
  */
