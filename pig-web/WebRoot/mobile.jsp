@@ -41,7 +41,7 @@
 <!--     <meta property="al:ios:url" content="https://itunes.apple.com/cn/app/heng-sao-qian-jun-tang-guo/id997636530"> -->
 <!--     <meta property="al:ios:app_store_id" content="997636530"> -->
 <!--     <meta property="al:ios:app_name" content="梦想昆仑"> -->
-
+<link href="img/imgz/favicon.ico" rel="icon" type="image/x-icon" />
 <link type="text/css" rel="stylesheet" href="css/main.css">
 <link href="http://web.xdcdn.net/game/hsqj/img/favicon.ico?1423469731"
 	type="image/x-icon" rel="shortcut icon bookmark">
@@ -76,8 +76,8 @@
 #download {
 	background:transparent url(img/imgz/azxz.png) no-repeat center 0 /100% auto ;
 	position: absolute;
-	height: 50%;
-	width: 53%;
+	height: 69%;
+	width: 72%;
 }
 
 
@@ -87,40 +87,26 @@
 <body>
 	<div id="header">
 		<div class="block block-bbs">
-			<!--         <div class="block-header"> -->
-			<!--             <img class="game-logo block-unit" src="http://web.xdcdn.net/game/hsqj/img/mobile/logo.png?1443064621" alt="梦想昆仑"> -->
-			<!--             <div class="title block-unit block-unit-left"> -->
-			<!--                 <h1>梦想昆仑</h1> -->
-			<!--                 <p class="size-small">1111</p> -->
-			<!--             </div> -->
-			<!--             <div class="block-unit more"> -->
-			<!--                 <i class="line"></i> -->
-			<!--             </div> -->
-			<!--         </div> -->
 			<div class="block-body">
 				<div class="for-bg hide-text"
 					style="background:transparent url(img/imgz/bg.jpg) no-repeat 0 0/100% 100%;<%=str%>">
+					
+					<!--android download  -->
 					<div class="list-outer list-outer-1" style="<%=str2%>">
 						<!--                     <a id="download" href="download.jsp" class="dl-btn hide-text" onClick="clicknum()"></a> -->
-						<a id="download" href="downskip?gamenameId=m"
+						<a id="download" href="https://goo.gl/bVdOVG"
 							class="dl-btn hide-text" onClick="clicknum()" style="background:transparent url(img/imgz/azxz.png) no-repeat center 0 /100% auto ;<%=str3%>"></a>
 					</div>
+					<!-- ios download -->
 					<div class="list-outer1 list-outer-1" style="<%=str2%>">
 						<!--                     <a id="download" href="download.jsp" class="dl-btn hide-text" onClick="clicknum()"></a> -->
-						<a id="download" href="downskip?gamenameId=m"
+						<a id="download" href="https://appsto.re/tw/Mzencb.i"
 							class="dl-btn hide-text" onClick="clicknum()" style="background:transparent url(img/imgz/iosxz.png) no-repeat center 0 /100% auto ;<%=str3%>"></a>
 					</div>
 
 				</div>
 			</div>
-			<!--         <div class="block-footer"> -->
-			<!--             <div class="content"> -->
-			<!--                 <a href="/data" class="custom-btn"><span class="font-icon-i">资料站</span></a> -->
-			<!--                 <div class="space"></div> -->
-			<!--                 <a href="http://bbs.xd.com/forum-109-1.html" class="custom-btn" target="_blank"><span class="font-icon-h">游戏论坛</span></a> -->
-			<!--             </div> -->
-			<!--         </div> -->
-			<ul class="block-other">
+			<!-- <ul class="block-other">
 				<li><a href="http://hs.xd.com" class="nav-home nav-item"><span
 						class="for-align">首页</span></a></li>
 				<li><a href="/data" class="nav-data nav-item"><span
@@ -130,24 +116,13 @@
 				<li><a href="http://bbs.xd.com/forum-109-1.html"
 					class="nav-bbs nav-item" target="_blank"><span
 						class="for-align">论坛</span></a></li>
-			</ul>
+			</ul> -->
 		</div>
 	</div>
 
 	<div style="background-color: #211f2c; width: 100%; height: 50px;"></div>
 	<div id="body">
-		<!--     <div class="block block-data"> -->
-		<!--     <div class="block-header clearfix"> -->
-		<!--         <div class="title hide-text material float-left"><span class="font-icon-i">资料站</span></div> -->
-		<!--                 <a href="/data" class="more float-right">MORE〉</a> -->
-		<!--             </div> -->
-		<!--     <div class="block-body clearfix"> -->
-		<!--         <a href="/data/?type=wujiang" class="material float-left hide-text role">武将</a> -->
-		<!--         <a href="/data/?type=zuoqi" class="material float-left hide-text ride">坐骑</a> -->
-		<!--         <a href="/data/?type=zhuangbei" class="material float-left hide-text equip">装备</a> -->
-		<!--         <a href="/data/?type=ziyuan" class="material float-left hide-text resource">资源</a> -->
-		<!--     </div> -->
-		<!-- </div>  -->
+		
 		<div class="block block-news">
 			<div class="block-header clearfix">
 				<div class="title material">
@@ -158,67 +133,34 @@
 				<div class="content">
 					<%
                
-                     Service.mainnew(out,"select * from tbl_cms_contents where catalog like 'news%' ORDER BY priority DESC");
+                     Service.mainnew(out,"select * from tbl_cms_contents where catalog like 'notice%' ORDER BY priority DESC");
                 
                 %>
-					<!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1594/"> -->
-					<!--                 <span class="label label-gg">公告</span> -->
-					<!--                 <span class="title ">五月战争季—至尊问鼎即将开启</span> -->
-					<!--                 <span class="size-small primary-note-color time">04 - 20</span> -->
-					<!--             </a> -->
-					<!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1591/"> -->
-					<!--                 <span class="label label-gg">公告</span> -->
-					<!--                 <span class="title ">7.0武将走势分析</span> -->
-					<!--                 <span class="size-small primary-note-color time">04 - 19</span> -->
-					<!--             </a> -->
-					<!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1585/"> -->
-					<!--                 <span class="label label-gg">公告</span> -->
-					<!--                 <span class="title ">《梦想昆仑》携手游戏多空降超级福利</span> -->
-					<!--                 <span class="size-small primary-note-color time">04 - 13</span> -->
-					<!--             </a> -->
-					<!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1578/"> -->
-					<!--                 <span class="label label-gg">公告</span> -->
-					<!--                 <span class="title ">6.0首届“万国远征”    今晚8点开打</span> -->
-					<!--                 <span class="size-small primary-note-color time">04 - 06</span> -->
-					<!--             </a> -->
-					<!--                                                             <a class="cat-list no-break" href="http://hs.xd.com/1571/"> -->
-					<!--                 <span class="label label-gg">公告</span> -->
-					<!--                 <span class="title ">《梦想昆仑》携手游戏多愚人节送福利</span> -->
-					<!--                 <span class="size-small primary-note-color time">03 - 31</span> -->
-					<!--             </a> -->
-					<a class="text-center more" href="mobile-news.jsp">查看更多〉</a>
+					
+					<a class="text-center more" href="mobile-news.jsp">查看更多 ></a>
 				</div>
 			</div>
 		</div>
 
-		<!--  <div class="block block-service"> -->
-		<!--     <div class="block-header"> -->
-		<!--         <div class="title hide-text material"><span class="font-icon-g">游戏客服</span></div> -->
-		<!--     </div> -->
-		<!--     <div class="block-body" style="text-align:center;width:100%;"> -->
-		<!--         <p style="margin:12% auto;">客服QQ:<span style="color:red;">&nbsp 3421893764</span></p> -->
-		<!-- <!--         <p>玩家交流QQ群：********</p> -->
-		<!-- <!--         <p>投诉邮箱: <a href="mailto:tousu@xindong.com" target="_blank">tousu@xindong.com</a></p> -->
-		<!--     </div> -->
-		<!-- </div>    -->
+		
 
-		<div class="block block-download">
+		<!-- <div class="block block-download">
 			<div class="block-header">
 				<a class="title custom-btn dl-btn" href="downskip?gamenameId=m"
 					onClick="clicknum()">立即下載</a>
-				<!--         <a class="title custom-btn dl-btn" href="downskip?gamenameId=m" onClick="clicknum()">立即下载</a> -->
+				        <a class="title custom-btn dl-btn" href="downskip?gamenameId=m" onClick="clicknum()">立即下载</a>
 
 			</div>
-		</div>
+		</div> -->
 		<div align="center" class="block block-share xdshare"
 			style="font-weight: bold; height: 100%; color: white;">
 			<br />
 			<br />
 			<br />
-			<br /> 版权所有：深圳创世互动科技有限公司<br />
-			<br /> <input value="客服QQ：3421893764" type="text" readOnly="true"
-				style="text-align: center; color: white; font-family: 'Arial,sans-serif'; font-weight: bold; background-color: #271d20; color: white;" /><br />
-			<br /> ICP备案号：粤ICP备12058124号
+			<br /> 版權所有：深圳創世互動科技有限公司<br />
+			<br /> <input value="客服郵箱：zhuoqx@vangame.com" type="text" readOnly="true"
+				style="width:100%;text-align: center; color: white; font-family: 'Arial,sans-serif'; font-weight: bold; background-color: #271d20; color: white;" /><br />
+			<br /> ICP備案號：粵ICP備12058124號
 			<!--     <p>分享到：</p> -->
 			<!--     <p class="text-center"><span class="font-icon" data-share="sina">e</span><span class="font-icon" data-share="qweibo">c</span></p> -->
 			<!--         <p class="text-center">独乐乐不如众乐乐</p> -->
@@ -249,11 +191,11 @@
 			</div>
 		</div>
 	</div>
-	<div id="customWechatShareInfo" class="hide" style="display: none"
+	<!-- <div id="customWechatShareInfo" class="hide" style="display: none"
 		data-title="横扫千军 - 心动游戏"
 		data-desc="全球第一即时战斗手游震撼来袭！华丽技能即时操控！丞相唐国强首次为手游配音，为中国十亿三国迷演绎气势磅礴的战争史诗；首度在游戏中实现拥有政治、经济、军事、人口的主城，更有拟真沙盘式国战地图、策略攻城掠地的国战打法，带来最真实最有趣的国战体验，三国真爱粉绝对不能错过！"
 		data-pic="http://web.xdcdn.net/game/hsqj/img/wx_share.png?1444491101"
-		data-link="http://hs.xd.com"></div>
+		data-link="http://hs.xd.com"></div> -->
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"
 		type="text/javascript"></script>
 	<script

@@ -3,45 +3,13 @@
     pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html dir="ltr" lang="zh-CN" class="is-mobile is-wechat page-news"><head>
- <script type="text/javascript" async="" src="js/main.js"></script>  
-  <script async="" src="js/main2.js"></script>  
-  <!-- 为移动设备添加 viewport -->
+<link href="img/imgz/favicon.ico" rel="icon" type="image/x-icon" />
+<script type="text/javascript" async="" src="js/main.js"></script>  
+<script async="" src="js/main2.js"></script>  
+<!-- 为移动设备添加 viewport -->
 <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no">
-<!--         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
-<!--         <meta name="viewport" content="width=device-width,user-scalable=no,minimal-ui"> -->
-<!--     <meta name="apple-mobile-web-app-capable" content="yes"> -->
-<!--     <meta name="apple-mobile-web-app-status-bar-style" content="blank"> -->
-    
-<!--     <meta property="al:ios:url" content="https://itunes.apple.com/cn/app/heng-sao-qian-jun-tang-guo/id997636530"> -->
-<!--     <meta property="al:ios:app_store_id" content="997636530"> -->
-<!--     <meta property="al:ios:app_name" content="横扫千军"> -->
-
-         <link type="text/css" rel="stylesheet" href="css/main.css">         
-<!-- <link href="http://web.xdcdn.net/game/hsqj/img/favicon.ico?1423469731" type="image/x-icon" rel="shortcut icon bookmark"> -->
-<!-- <link rel="apple-touch-icon-precomposed" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-60.png?1451359882"> -->
-<!-- <link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-76.png?1451359882"> -->
-<!-- <link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-120.png?1451359882"> -->
-<!-- <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-152.png?1451359882"> -->
-        
-    <!-- title -->
-    <title>最新資訊 - 豬來了 -</title>
-
-  
-<!-- This site is optimized with the Yoast WordPress SEO plugin v1.5.3 - https://yoast.com/wordpress/plugins/seo/ -->
-<!-- <meta name="description" content="《横扫千军》是由心动倾情研发的全新策略国战手游，游戏在传统的三国策略玩法中首度加入“国”和“内政”的概念，并采用即时演算的军事战斗方式，让玩家可以在游戏中体验到更接近三国时期历史原貌的战争和风云变幻。"> -->
-<!-- <meta name="keywords" content="横扫千军,策略国战,三国,手机游戏,iOS游戏,安卓游戏,心动手游"> -->
-<!-- <link rel="canonical" href="http://hs.xd.com/category/news/"> -->
-<!-- <link rel="next" href="http://hs.xd.com/category/news/page/2/"> -->
-<!-- <meta property="og:locale" content="zh_CN"> -->
-<!-- <meta property="og:type" content="object"> -->
-<!-- <meta property="og:title" content="最新资讯"> -->
-<!-- <meta property="og:url" content="http://hs.xd.com/category/news/"> -->
-<!-- <meta property="og:site_name" content="横扫千军"> -->
-<!-- <!-- / Yoast WordPress SEO plugin. --> 
-
-<!-- <link rel="alternate" type="application/rss+xml" title="横扫千军 » Feed" href="http://hs.xd.com/feed/"> -->
-<!-- <link rel="alternate" type="application/rss+xml" title="横扫千军 » 评论Feed" href="http://hs.xd.com/comments/feed/"> -->
-<!-- <link rel="alternate" type="application/rss+xml" title="横扫千军 » 最新资讯分类目录Feed" href="http://hs.xd.com/category/news/feed/"> -->
+<link type="text/css" rel="stylesheet" href="css/main.css">         
+<title>最新資訊 - 豬來了 -</title> 
 <style type="text/css">.fancybox-margin{margin-right:0px;}</style></head>
 <body>
         <div id="header">
@@ -49,7 +17,7 @@
         <div id="body">
     <div class="block block-news">
     <div class="block-header clearfix">
-                <a href="<%=request.getHeader("referer")%>" class="block-unit"><span class="font-icon-j for-align">返回</span></a>
+                <a href="#" onclick="javascript:history.back(-1);" class="block-unit"><span class="font-icon-j for-align">返回</span></a>
                         <div class="title material"><span class="font-icon-b">最新資訊</span></div>
                     </div>
     <div class="block-body">
@@ -70,15 +38,7 @@
                                                    
                                                     
                                                     
-<!-- <span class="current">1</span> -->
-<!-- <a href="http://hs.xd.com/category/news/page/2/" class="page larger">2</a> -->
-<!-- <a href="http://hs.xd.com/category/news/page/3/" class="page larger">3</a> -->
-<!-- <a href="http://hs.xd.com/category/news/page/4/" class="page larger">4</a> -->
-<!-- <a href="http://hs.xd.com/category/news/page/5/" class="page larger">5</a> -->
-<!-- <span class="extend">...</span> -->
-<!-- <a href="http://hs.xd.com/category/news/page/10/" class="larger page">10</a> -->
-<!-- <span class="extend">...</span> -->
-<!-- <a href="http://hs.xd.com/category/news/page/2/" class="nextpostslink">›</a> -->
+
 
 
 </div>                            </div>

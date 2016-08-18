@@ -116,7 +116,7 @@
 <meta name="author" content="捉妖人友帐.">
 <meta name="copyright" content="捉妖人友帐.">
 <link type="text/css" rel="stylesheet" href="js-css/main/index.css">
-<link href="/favicon.ico" rel="icon" type="image/x-icon" />
+<link href="img/imgz/favicon.ico" rel="icon" type="image/x-icon" />
 <link type="text/css" rel="stylesheet" href="js-css/main/share.v3.2.css">
 <style type="text/css">
 #NIE-copyRight a {
@@ -169,21 +169,7 @@
 }
 
 
-#news {
-	background: url("img/imgz/active1.png") no-repeat center 0;
-}
 
-#news:hover {
-	background: url("img/imgz/active.png") no-repeat center 0;
-}
-
-#material {
-	background: url("img/imgz/game1.png") no-repeat center 0;
-}
-
-#material:hover {
-	background: url("img/imgz/game.png") no-repeat center 0;
-}
 
 #forum {
 	background: url("img/main/4_2.png");
@@ -193,18 +179,6 @@
 	background: url("img/main/4_1.png");
 }
 
-#home {
-	background: url("img/imgz/home.png") no-repeat center 0;
-}
-
-
-#public {
-	background: url("img/imgz/fans1.png") no-repeat center 0;
-}
-
-#public:hover {
-	background: url("img/imgz/fans.png") no-repeat center 0;
-}
 
 .nav {
 	width: 100%;
@@ -923,34 +897,55 @@ a.NIE-topBar-btn:hover {
 }
 
 #li {
-	width: 145px;
-	height: 32px;
+	width: 140px;
+	height: 37px;
 	float: left;
-	margin: 5px 13px;
-}
-#li:hover {
-	width: 145px;
-	height: 32px;
-	float: left;
-	margin: 5px 13px;
-	background: url(img/imgz/tt_biaoqian.png) no-repeat 0 0/145px 28px;
+	margin: 3px 13px;
 }
 
 
 
-.menu a {
+.ma1 {
 	display: block;
-	width: 145px;
-	height: 32px;
-	text-indent: 100px;
-	white-space: nowrap;
-	overflow: hidden;
-	margin-top: 0px;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
 }
+
+.ma2 {
+	display: block;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
+}
+
+.ma3 {
+	display: block;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
+}
+
+.ma4 {
+	display: block;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
+
+}
+
 
 .menu, .menu li {
 	padding: 0;
-	margin: 20px 23px;
+	margin: 8px 23px;
 }
 
 .menu {
@@ -1122,7 +1117,37 @@ a.NIE-topBar-btn:hover {
 
 }
 
+.wrap {
+	overflow: hidden;
+	_width: 1200px;
+	margin: 0 auto;
+	height: 670px;
+}
 
+
+
+	.wrap1 {
+	overflow: hidden;
+	_width: 1200px;
+	margin: 0 auto;
+	height: 865px;
+}
+.download--qq1 {
+	position: absolute;
+	top: 573px;
+	left: -218px;
+	width: 213px;
+	height: 72px;
+	text-indent: -9999em
+}	
+.download--qq1-1 {
+	position: absolute;
+	top: 800px;
+	left: -485px;
+	width: 213px;
+	height: 72px;
+	text-indent: -9999em
+}
 
 * {
 	margin: 0px;
@@ -1132,18 +1157,19 @@ a.NIE-topBar-btn:hover {
 </head>
 <body>
 	<div class="comdiv"
-		style="position: absolute; width: 92%; height: 110px; z-index: 9999; filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); padding: 0 auto; margin: 0 auto;">
+		style="min-width:1349px; position: absolute; width: 92%; height: 110px; z-index: 9999; filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); padding: 0 auto; margin: 0 auto;">
+		
 		<ul class="menu">
-			<li id="li" style="background: url(img/imgz/tt_biaoqian.png) no-repeat 0 0/145px 28px;"><a href="index.jsp" id="home"></a></li>
-			<li id="li"><a href="view/news.jsp" id="news"></a></li>
-			<li id="li"><a href="view/material.jsp" id="material"></a></li>
-			<li id="li"><a  href="https://www.facebook.com/piggycoming/?fref=ts" id="public" target="_Blank"></a></li>
+			<li id="li" ><a class="ma1" href="index.jsp"><img  src="img/imgz/home2.png" style="width:100%;"></a></li>
+			<li id="li"><a  class="ma2" href="view/news.jsp"><img  onmouseover="this.src='img/imgz/active2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='img/imgz/active1.png';this.style.width='68%';this.style.padding='8% 0 0 15%';" src="img/imgz/active1.png" style="width:68%;padding-top:8%;padding-left:15%"></a></li>
+			<li id="li"><a  class="ma3" href="view/material.jsp" ><img  onmouseover="this.src='img/imgz/game2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='img/imgz/game1.png';this.style.width='70%';this.style.padding='8% 0 0 13%';" src="img/imgz/game1.png" style="width:70%;padding-top:8%;padding-left:13%"></a></li>
+			<li id="li"><a  class="ma4" href="https://www.facebook.com/piggycoming/?fref=ts"  target="_Blank" ><img onmouseover="this.src='img/imgz/fans2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='img/imgz/fans1.png';this.style.width='79%';this.style.padding='8% 0 0 9.1%';" src="img/imgz/fans1.png" style="width:79%;padding-top:8%;padding-left:9.1%"></a></li>
 
 		</ul>
 
 	</div>
 
-	<div class="wrap" style="width: 100%; background: url(img/imgz/bg_shouye.jpg) no-repeat center 0 / 100% 670px">
+	<div id="wrap" class="wrap" style="width: 100%; background: url(img/imgz/bg_shouye.jpg) no-repeat center 0 / 100% 100%">
 		<div id="scan"
 			class="scan">
 			
@@ -1162,7 +1188,7 @@ a.NIE-topBar-btn:hover {
 				</div>
 				<!--epart end-->
 
-				<div class="download--qq1" id="qq1"/></div> 
+				<div  class="download--qq1" id="qq1"/></div> 
 			
 		</div>
 		<script>
@@ -1171,8 +1197,10 @@ a.NIE-topBar-btn:hover {
 				if (width>1439){
 					$("#scan").addClass("scan1");
 					$("#scan").removeClass("scan");
-					
-					
+					$("#wrap").addClass("wrap1");
+					$("#wrap").removeClass("wrap");
+					$("#qq1").addClass("download--qq1-1");
+					$("#qq1").removeClass("download--qq1");
 				}
 				
 			}
@@ -1200,20 +1228,20 @@ a.NIE-topBar-btn:hover {
 
 			<div class="dyjGroup" style=" background-color:rgb(97, 198, 234); border-radius:60px 0px 0px 60px;">
 				<div id="eye_box" class="dyj_pics" style="margin: 10px 0px 0px 10px;">
-					<a href="#" class="ad_stat" target="_blank"
-						style="display: inline;"> <img
+					<a href="javascript:;" class="ad_stat" target="_blank"
+						style="display: inline;cursor:text;"> <img
 						src="img/imgz/da_1.png" width="100%" height="auto"
 						alt="" />
-					</a> <a href="#" class="ad_stat" target="_blank" style="display: none;">
+					</a> <a href="javascript:;" class="ad_stat" target="_blank" style="display: none;cursor:text;">
 						<img src="img/imgz/da_2.png" width="100%" height="auto"
 						alt="" />
-					</a> <a href="#" class="ad_stat" target="_blank" style="display: none;">
+					</a> <a href="javascript:;" class="ad_stat" target="_blank" style="display: none;cursor:text;">
 						<img src="img/imgz/da_3.png" width="100%" height="auto"
 						alt="" />
-					</a> <a href="#" class="ad_stat" target="_blank" style="display: none;">
+					</a> <a href="javascript:;" class="ad_stat" target="_blank" style="display: none;cursor:text;">
 						<img src="img/imgz/da_4.png" width="100%" height="auto"
 						alt="" />
-					</a> <a href="#" class="ad_stat" target="_blank" style="display: none;">
+					</a> <a href="javascript:;" class="ad_stat" target="_blank" style="display: none;cursor:text;">
 						<img src="img/imgz/da_5.png" width="100%" height="auto"
 						alt="" />
 					</a>

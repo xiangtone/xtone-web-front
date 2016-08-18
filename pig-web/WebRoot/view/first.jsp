@@ -79,7 +79,7 @@
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
 <!-- PM提取meta start -->
-
+<link href="../img/imgz/favicon.ico" rel="icon" type="image/x-icon" />
 
 <!-- PM提取meta end -->
 
@@ -764,65 +764,55 @@ a.NIE-topBar-btn:hover {
 	margin-top: 0px;
 }
 
-#news {
-	background: url("../img/imgz/active1.png") no-repeat center 0;
-}
-
-#news:hover {
-	background: url("../img/imgz/active.png") no-repeat center 0;
-}
-#material {
-	background: url("../img/imgz/game.png") no-repeat center 0;
-}
-
-/* #material:hover {
-	background: url("../img/imgz/game1.png") no-repeat center 0;
-} */
-
-#home {
-	background: url("../img/imgz/home1.png") no-repeat center 0;
-}
-
-#home:hover {
-	background: url("../img/imgz/home.png") no-repeat center 0;
-}
-
-#public {
-	background: url("../img/imgz/fans1.png") no-repeat center 0;
-}
-
-#public:hover {
-	background: url("../img/imgz/fans.png") no-repeat center 0;
-}
 
 #li {
-	width: 145px;
-	height: 32px;
+	width: 140px;
+	height: 37px;
 	float: left;
-	margin: 5px 10px;
+	margin: 3px 13px;
 }
 
-#li:hover {
-	width: 145px;
-	height: 32px;
-	float: left;
-	margin: 5px 13px;
-	background: url(../img/imgz/tt_biaoqian.png) no-repeat 0 0/145px 28px;
-}
 
-.menu a {
+.ma1 {
 	display: block;
-	width: 145px;
-	height: 32px;
-	text-indent: 100px;
-	white-space: nowrap;
-	overflow: hidden;
-	margin-top: 0px;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
+}
+
+.ma2 {
+	display: block;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
+}
+
+.ma3 {
+	display: block;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
+}
+
+.ma4 {
+	display: block;
+	width: 120px;
+	height: 40px;
+
+	position:absolute;
+	
+
 }
 
 .menu, .menu li {
 	padding: 0;
-	margin: 20px 23px;
+	margin: 8px 23px;
 }
 
 #news2 {
@@ -835,7 +825,7 @@ a.NIE-topBar-btn:hover {
 	display: block;
 	width: 100%;
 	height: 100%;
-	
+	color:white;
 }
 
 
@@ -850,6 +840,7 @@ a.NIE-topBar-btn:hover {
 	display: block;
 	width: 100%;
 	height: 100%;
+	color:white;
 /* 	color: #9d8d87;
 	border-bottom: 2px solid #9d8d87; */
 }
@@ -1010,16 +1001,14 @@ color: rgb(124, 115, 106);
 <body>
 
 <div class="comdiv"
-		style="position: absolute; width: 100%; min-width: 1280px; height: 110px; z-index: 9999; filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); padding: 0 auto; margin: 0 auto;">
+		style="min-width:1349px; position: absolute; width: 92%; height: 110px; z-index: 9999; filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); padding: 0 auto; margin: 0 auto;">
+		
 		<ul class="menu">
-			<li id="li"><a href="../index.jsp" id="home"></a></li>
-			<li id="li"
-				><a
-				href="news.jsp" id="news"></a></li>
-			<li id="li" style="background: url(../img/imgz/tt_biaoqian.png) no-repeat 0 0/145px 28px;"><a href="material.jsp" id="material"></a></li>
-			<li id="li"><a
-				href="https://www.facebook.com/piggycoming/?fref=ts" id="public"
-				target="_Blank"></a></li>
+			<li id="li" ><a class="ma1" href="../index.jsp"><img  onmouseover="this.src='../img/imgz/home2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/home1.png';this.style.width='30%';this.style.padding='10% 0 0 35%';" src="../img/imgz/home1.png" style="width:30%;padding-top:10%;padding-left:35%"></a></li>
+			<li id="li"><a  class="ma2" href="news.jsp"><img   src="../img/imgz/active2.png" style="width:100%;"></a></li>
+			<li id="li"><a  class="ma3" href="material.jsp" ><img  onmouseover="this.src='../img/imgz/game2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/game1.png';this.style.width='70%';this.style.padding='8% 0 0 13%';" src="../img/imgz/game1.png" style="width:70%;padding-top:8%;padding-left:13%"></a></li>
+			<li id="li"><a  class="ma4" href="https://www.facebook.com/piggycoming/?fref=ts"  target="_Blank" ><img onmouseover="this.src='../img/imgz/fans2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/fans1.png';this.style.width='79%';this.style.padding='8% 0 0 9.1%';" src="../img/imgz/fans1.png" style="width:79%;padding-top:8%;padding-left:9.1%"></a></li>
+
 		</ul>
 
 	</div>
@@ -1103,25 +1092,28 @@ color: rgb(124, 115, 106);
 								String timeStr = sdf.format(news.getAddTime());
 						%> --%>
 						
-						<%!public static final String DRIVER = "com.mysql.jdbc.Driver";
+						<%!/* public static final String DRIVER = "com.mysql.jdbc.Driver";
 						public static final String USER = "root";
 						public static final String PASS = "gangcaidemimahuanle";
-						public static final String URL = "jdbc:mysql://192.168.1.221:3306/cms_zy";
+						public static final String URL = "jdbc:mysql://192.168.1.221:3306/cms_zy"; */
 						public static final int PAGESIZE = 10;
 						int pageCount;
 						int curPage = 1;%>
 							<%
+							Connection con = null;
+							PreparedStatement ps = null;
+							ResultSet rs = null;
 								News news = new News();
 								//一页放5个
 								String user = null;
 								String pass = null;
 								try {
-									Class.forName(DRIVER);
-									Connection con = DriverManager.getConnection(URL, USER, PASS);
+									/* Class.forName(DRIVER); */
+									con = ConnectionService.getInstance().getConnectionForLocal();
 									String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` FROM `tbl_cms_contents` WHERE  `status`=1 ";
-									PreparedStatement stat = con.prepareStatement(sql, ResultSet.TYPE_FORWARD_ONLY,
+									ps = con.prepareStatement(sql, ResultSet.TYPE_FORWARD_ONLY,
 											ResultSet.CONCUR_READ_ONLY);
-									ResultSet rs = stat.executeQuery();
+									rs = ps.executeQuery();
 									rs.last();
 									int size = rs.getRow();
 									pageCount = (size % PAGESIZE == 0) ? (size / PAGESIZE) : (size / PAGESIZE + 1);
