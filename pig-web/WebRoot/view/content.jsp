@@ -741,17 +741,12 @@ a.NIE-topBar-btn:hover {
 }
 
 
-<<<<<<< HEAD
 .li {
-=======
-#li {
->>>>>>> zhuxizhe
 	width: 140px;
 	height: 37px;
 	float: left;
 	margin: 3px 13px;
 }
-<<<<<<< HEAD
 .li1{
 	width: 160px;
 	height: 37px;
@@ -759,9 +754,6 @@ a.NIE-topBar-btn:hover {
 	margin: 11px 23px;
 
 }
-=======
-
->>>>>>> zhuxizhe
 
 .ma1 {
 	display: block;
@@ -800,7 +792,6 @@ a.NIE-topBar-btn:hover {
 
 }
 
-<<<<<<< HEAD
 @media(min-width:520px){
 	.menu, .menu li {
 		padding: 0;
@@ -813,11 +804,6 @@ a.NIE-topBar-btn:hover {
 		padding: 0;
 		margin: 8px 23px;
 	}
-=======
-.menu, .menu li {
-	padding: 0;
-	margin: 8px 23px;
->>>>>>> zhuxizhe
 }
 
 #news2 {
@@ -1000,11 +986,7 @@ color: rgb(124, 115, 106);
 	padding: 0px;
 }
 .page{
-<<<<<<< HEAD
 	min-width:1233px; 
-=======
-	min-width:1246px; 
->>>>>>> zhuxizhe
 	position: absolute; 
 	width: 92%; 
 	height: 110px; 
@@ -1015,15 +997,9 @@ color: rgb(124, 115, 106);
 
 }
 .page1{
-<<<<<<< HEAD
 	min-width:1233px; 
 	position: absolute; 
 	width: 92%; 
-=======
-	min-width:1246px; 
-	position: absolute; 
-	width: 100%; 
->>>>>>> zhuxizhe
 	height: 110px; 
 	z-index: 9999; 
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); 
@@ -1042,17 +1018,10 @@ color: rgb(124, 115, 106);
 		style="min-width:1349px; position: absolute; width: 92%; height: 110px; z-index: 9999; filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); padding: 0 auto; margin: 0 4%;">
 		
 		<ul class="menu">
-<<<<<<< HEAD
 			<li id="li" class="li"><a class="ma1" href="../index.jsp"><img  onmouseover="this.src='../img/imgz/home2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/home1.png';this.style.width='30%';this.style.padding='10% 0 0 35%';" src="../img/imgz/home1.png" style="width:30%;padding-top:10%;padding-left:35%"></a></li>
 			<li id="li" class="li"><a  class="ma2" href="news.jsp"><img   src="../img/imgz/game2.png" style="width:100%;"></a></li>
 			<li id="li" class="li"><a  class="ma3" href="material.jsp" ><img  onmouseover="this.src='../img/imgz/acitve2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/acitve1.png';this.style.width='70%';this.style.padding='8% 0 0 13%';" src="../img/imgz/active1.png" style="width:70%;padding-top:8%;padding-left:13%"></a></li>
 			<li id="li" class="li"><a  class="ma4" href="https://www.facebook.com/piggycoming/?fref=ts"  target="_Blank" ><img onmouseover="this.src='../img/imgz/fans2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/fans1.png';this.style.width='79%';this.style.padding='8% 0 0 9.1%';" src="../img/imgz/fans1.png" style="width:79%;padding-top:8%;padding-left:9.1%"></a></li>
-=======
-			<li id="li" ><a class="ma1" href="../index.jsp"><img  onmouseover="this.src='../img/imgz/home2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/home1.png';this.style.width='30%';this.style.padding='10% 0 0 35%';" src="../img/imgz/home1.png" style="width:30%;padding-top:10%;padding-left:35%"></a></li>
-			<li id="li"><a  class="ma2" href="news.jsp"><img   src="../img/imgz/game2.png" style="width:100%;"></a></li>
-			<li id="li"><a  class="ma3" href="material.jsp" ><img  onmouseover="this.src='../img/imgz/acitve2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/acitve1.png';this.style.width='70%';this.style.padding='8% 0 0 13%';" src="../img/imgz/active1.png" style="width:70%;padding-top:8%;padding-left:13%"></a></li>
-			<li id="li"><a  class="ma4" href="https://www.facebook.com/piggycoming/?fref=ts"  target="_Blank" ><img onmouseover="this.src='../img/imgz/fans2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/fans1.png';this.style.width='79%';this.style.padding='8% 0 0 9.1%';" src="../img/imgz/fans1.png" style="width:79%;padding-top:8%;padding-left:9.1%"></a></li>
->>>>>>> zhuxizhe
 
 		</ul>
 
@@ -1060,40 +1029,17 @@ color: rgb(124, 115, 106);
 	<script>
 			function show1(){
 				var width= document.body.clientWidth; 
-<<<<<<< HEAD
 				if (width>1500){
 					$("#page").addClass("page1");
 					$("#page").removeClass("page");	
 					$("#li").removeClass("li");
 					$("#li").addClass("li1");	
-=======
-				if (width>1439){
-					$("#page").addClass("page1");
-					$("#page").removeClass("page");		
->>>>>>> zhuxizhe
 				}				
 			}
 		
 			window.onload=show1;show1();
 		</script>
-<<<<<<< HEAD
 	
-=======
-	<!-- <div class="test-top-main" id="NIE-topBar-main">
-		<a class="test-top-logo" href="#"></a>
-	</div> -->
-	<!-- 新闻详情 start -->
-	<!-- <div class="nav"> -->
-	<!-- 	  <div class="test-top-main" id="NIE-topBar-main"> -->
-	<!--         <a class="test-top-logo" href="#" ></a> -->
-	<!--       </div> -->
-	<!--       <ul class="menu"> -->
-	<!--         <li ><a href="../index.jsp" id="home"></a></li> -->
-	<!-- 		<li><a href="news.jsp" id="news"></a></li> -->
-	<!-- 		<li><a href="material.jsp" id="material"></a></li> -->
-	<!--       </ul> -->
-	<!-- </div> -->
->>>>>>> zhuxizhe
 	<%
 		String catalog = "";
 		for (News news : list) {
