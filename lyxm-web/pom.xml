@@ -147,7 +147,7 @@
 		<profile>
 			<id>lyxm</id>
 			<properties>
-				<runtime.env>config\lyxm</runtime.env>
+				<runtime.env>config/lyxm</runtime.env>
 				<final.name>lyxm.xtonegame.com</final.name>
 				<ftp.server.id>HYServer</ftp.server.id>
 				<ftp.to.url>ftp://121.40.125.15/lyxm.xtonegame.com/swap_dir</ftp.to.url>
@@ -159,7 +159,7 @@
 		<profile>
 			<id>test</id>
 			<properties>
-				<runtime.env>config\test</runtime.env>
+				<runtime.env>config/test</runtime.env>
 				<final.name>lyxm.xtonegame.com-test</final.name>
 			</properties>
 		</profile>

@@ -531,6 +531,12 @@
 					    <div class="tt20"><a target="_blank" class="links" href="http://www.shouyouya.com/">手游呀</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a target="_blank" class="links" href="http://www.9669.com/">9669手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a target="_blank" class="links" href="http://www.diyiyou.com/">第一手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.dunwan.com/">蹲玩游戏</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+					    <div class="tt20"><a target="_blank" class="links" href="http://www.youxiniao.com/">游戏鸟</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.yxyue.com/">游戏约</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.yoyou.com/">优游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://game.91.com/">91手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://game.hiapk.com/">安卓游戏</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 	
 	
 					</div>
