@@ -86,6 +86,10 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 <!-- <script>!function(e,t,a,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(a),s=t.getElementsByTagName(a)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-146052-10","getbootstrap.com"),ga("send","pageview");</script> -->
 <style>
+@font-face { 
+  font-family:pictos; 
+  src:url('css/zaozi.OTF'); 
+} 
 .newsli {
 	border-bottom: #e1e1e0 solid 1px;
 	padding-top: 15px;
@@ -140,18 +144,21 @@
 .content-all {
 	float: right;
 	color: #8f8f8f;
+	font-family:pictos; 
 }
 
 .content-title {
 	float: left;
-	font-size: 24px;
-	color: #cf1232;
+	font-size: 18px;
+	color: #ea474c;
+	font-family: pictos;
 }
 
 .content-time {
-	float: right;
-	padding-top: 10px;
-	color: #cf1232;
+	float: left;
+	padding-bottom: 10px;
+	color: #8f8f8f;
+	font-family:pictos; 
 }
 </style>
 
@@ -161,8 +168,8 @@
 		role="banner">
 		<jsp:include page="top.html"></jsp:include>
 	</header>
-	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/news/banner_news.jpg" class="bsimg"></div>
-	<div class="bs-docs-featurette" style="background: #f1f1f1">
+	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/news/banner_news.png" class="bsimg"></div>
+	<div class="bs-docs-featurette" style="background: #fff">
 		<div class="container">
 			<div class="row ztgs">
 				<div class="col-md-12 col-sm-12 col-xs-12 nopadding">
@@ -171,27 +178,42 @@
 				<%
 						for (Content news : list) {
 							
-// 							String content = news.getContent();
-// 							if (content.length() > 150) {
-// 								content = content.substring(0, 150) + "...";
-// 							}
+/* 							String content = news.getContent();
+ 							if (content.length() > 150) {
+ 								content = content.substring(0, 150) + "...";
+ 							} */
 					%>
 				<div class="col-md-12 col-sm-12 col-xs-12 content">
-					<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="col-md-12 col-sm-12 col-xs-12" style="font-family:pictos;">
 						<div class="col-md-12 col-sm-12 col-xs-12 nopadding">
-							<div class="col-md-9 col-sm-9 col-xs-9 nopadding">
-								<a href="news-content.jsp?pageindex=<%=pageIndex%>&id=<%=news.getId()%>"target="_blank"><strong class="content-title"><%=news.getTitle()%></strong></a>
+							<div class="col-md-9 col-xs-9 col-sm-9-1 nopadding">
+								<a href="news-content.jsp?pageindex=<%=pageIndex%>&id=<%=news.getId()%>"target="_blank"><p class="content-title"><%=news.getTitle()%></p></a>
 							</div>
+							<%-- <div class="col-md-3 col-sm-3 col-xs-3 nopadding">
+								<small class="content-time"><%=news.getTimeStr()%></small>
+							</div> --%>
+						</div>
+						<div class="col-md-12 col-sm-12 col-xs-12 nopadding">
 							<div class="col-md-3 col-sm-3 col-xs-3 nopadding">
 								<small class="content-time"><%=news.getTimeStr()%></small>
 							</div>
 						</div>
-						<%=news.getSubTitle()%>
+						<%String title = null;
+						try{
+						  if(news.getSubTitle()!=null){
+							   title = news.getSubTitle();
+							  title = title.substring(0, 50);
+						  }
+						}catch(Exception e){
+							e.printStackTrace();
+						}
+						%>
+						<font color="#8f8f8f" ><%=title%>......</font>
 					</div>
 					<div class="col-md-12 col-sm-12 col-xs-12">
 						<a	
 							href="news-content.jsp?pageindex=<%=pageIndex%>&id=<%=news.getId()%>"
-							target="_blank" class="content-all">[阅读全文]</a>
+							target="_blank" class="content-all"><font style="font-family:pictos;">[阅读全文]</font></a>
 					</div>
 					<div class="col-md-12 col-sm-12 col-xs-12 nopadding">
 						<hr style="margin: 0px;">

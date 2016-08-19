@@ -22,7 +22,10 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 <!-- <script>!function(e,t,a,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(a),s=t.getElementsByTagName(a)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-146052-10","getbootstrap.com"),ga("send","pageview");</script> -->
 <style>
-
+@font-face { 
+  font-family:pictos; 
+  src:url('css/zaozi.OTF'); 
+} 
 .newsli{
 	border-bottom: #e1e1e0 solid 1px;
 	padding-top: 15px;
@@ -30,7 +33,29 @@
 /* 	list-style-image: url("images/index/dian_1.png"); */
 	color: #cf1232;
 }
-
+@media ( min-width :168px){
+/*  .newsli{
+	border-bottom: #e1e1e0 solid 1px;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	color: #cf1232;
+} */
+.vg{
+	margin-bottom:0px;
+	padding:15px 60px 0px 60px;
+}
+@media ( min-width :520px){
+.newsli{
+	border-bottom: #e1e1e0 solid 1px;
+	padding-top: 11px;
+	padding-bottom: 11px;
+/* 	list-style-image: url("images/index/dian_1.png"); */
+color: #cf1232;
+}
+.vg{
+	margin-bottom:0px;
+	padding:15px 90px 0px 90px;
+}
 @media ( min-width :768px){
 .newsli{
 	border-bottom: #e1e1e0 solid 1px;
@@ -38,6 +63,10 @@
 	padding-bottom: 11px;
 /* 	list-style-image: url("images/index/dian_1.png"); */
 color: #cf1232;
+}
+.vg{
+	margin-bottom:30px;
+	padding:15px 160px 0px 160px;
 }
 }
 @media ( min-width :1201px){
@@ -47,6 +76,10 @@ color: #cf1232;
 	padding-bottom: 16px;
 /* 	list-style-image: url("images/index/dian_1.png"); */
 color: #cf1232;
+}
+.vg{
+	margin-bottom:40px;
+	padding:20px 260px 0px 260px;
 }
 }
 
@@ -74,6 +107,11 @@ color: #aaaaaa;
     padding-top: 10px;
     margin-right: 10px;
 }
+.h1{
+	width:740px;
+	size:2px;
+	color:#ebebeb;
+}
 
 </style>
 </head>
@@ -82,12 +120,12 @@ color: #aaaaaa;
 		role="banner">
 		<jsp:include page="top.html"></jsp:include>
 	</header>
-	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/about/banner_vanggame.jpg" class="bsimg"></div>
-	<div class="bs-docs-featurette" style="background: #f1f1f1">
+	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/about/banner_vanggame.png" class="bsimg"></div>
+	<div class="bs-docs-featurette" style="background: #fff">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 col-sm-12 col-xs-12 nopadding"> -->
-					<a href="#"><img src="images/about/gsjs.jpg"
+				<div class="col-md-12 col-sm-12 col-xs-12 nopadding"> 
+					<a href="#"><img src="images/about/gywm.png"
 						class="bsimg tab"></a>
 				</div>
 <!-- 				<div class="col-md-6 col-sm-6 col-xs-6 nopadding"> -->
@@ -99,16 +137,19 @@ color: #aaaaaa;
 <!-- 						class="bsimg tab"></a> -->
 <!-- 				</div> -->
 				<div class="col-md-12 col-sm-12 col-xs-12 nopadding">
-					<img src="images/about/logo.jpg" class="bsimg" style="margin-bottom: 30px;">
+					<div class="vg">
+					<img class="imga" src="images/about/vanggame.PNG">
+					</div>
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12">
-					<div class="artText ztgs" style="background: #f1f1f1;">
-						<p style="line-height: 1.5;" class="content-size">
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;万家游戏是浙江万好万家文化股份有限公司（简称：万家文化，股票代码：600576）旗下全资子公司，万家游戏是万家文化在移动互联网和文化领域的核心战略产业布局，公司成立于2015年11月，总部设在杭州，并在北京、上海、深圳等地设有分公司。<br><br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;万家游戏专注精品移动游戏的研发和发行业务，汇聚全球精品游戏，为全球游戏玩家提供高品质的移动游戏，致力成为全球顶尖的移动游戏开发商与发行商，打造全球玩家热爱的游戏品牌。<br><br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;万家游戏着重在IP挖掘开发、CP深度合作方面拓展，拥有成龙、范冰冰同名大电影《绝地逃亡》等强势IP资源，全面打造影视、动漫、文学、综艺等影游IP资源互动的泛娱乐产业链。<br><br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;万家游戏的产品和运营核心团队均来自腾讯、网易、新浪等知名互联网公司，核心团队均拥有8年以上的知名互联网公司从业经验，在产品发行、游戏运营、商务合作和市场推广方面拥有成熟丰富的经验。<br><br>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“专注、高效、且富有创造力”是我们引以自豪的企业价值观，坚持“用户第一”的理念，为游戏玩家提供高品质的移动游戏，持续创新，提升玩家体验，我们的愿景是汇聚全球精品游戏，坚持精细化的运营理念，成为深受玩家喜爱的国际化品牌游戏运营商。		
+					<div class="artText ztgs" style="background: #fff;">
+						<font style="font-family:pictos;" color="#8f8f8f";><p style="line-height: 1.5;" class="content-size">
+						万家游戏是浙江万好万家文化股份有限公司（简称：万家文化，股票代码：600576）旗下全资子公司，万家游戏是万家文化在移动互联网和文化领域的核心战略产业布局，公司成立于2015年11月，总部设在杭州，并在北京、上海、深圳等地设有分公司。<br><br>
+						万家游戏专注精品移动游戏的研发和发行业务，汇聚全球精品游戏，为全球游戏玩家提供高品质的移动游戏，致力成为全球顶尖的移动游戏开发商与发行商，打造全球玩家热爱的游戏品牌。<br><br>
+						万家游戏着重在IP挖掘开发、CP深度合作方面拓展，拥有成龙、范冰冰同名大电影《绝地逃亡》等强势IP资源，全面打造影视、动漫、文学、综艺等影游IP资源互动的泛娱乐产业链。<br><br>
+						万家游戏的产品和运营核心团队均来自腾讯、网易、新浪等知名互联网公司，核心团队均拥有8年以上的知名互联网公司从业经验，在产品发行、游戏运营、商务合作和市场推广方面拥有成熟丰富的经验。<br><br>
+						“专注、高效、且富有创造力”是我们引以自豪的企业价值观，坚持“用户第一”的理念，为游戏玩家提供高品质的移动游戏，持续创新，提升玩家体验，我们的愿景是汇聚全球精品游戏，坚持精细化的运营理念，成为深受玩家喜爱的国际化品牌游戏运营商。</p>
+						</font>		
 					</div>
 <!-- 						<img src="images/content/gsjs.png" class="bsimg"> -->
 				</div>

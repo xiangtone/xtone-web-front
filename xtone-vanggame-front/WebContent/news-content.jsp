@@ -66,7 +66,10 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 <!-- <script>!function(e,t,a,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(a),s=t.getElementsByTagName(a)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-146052-10","getbootstrap.com"),ga("send","pageview");</script> -->
 <style>
-
+@font-face { 
+  font-family:pictos; 
+  src:url('css/zaozi.OTF'); 
+}
 .links{
 	color: #aaaaaa;
     text-decoration: none;
@@ -104,7 +107,7 @@
 		role="banner">
 		<jsp:include page="top.html"></jsp:include>
 	</header>
-	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/news/banner_news.jpg" class="bsimg"></div>
+	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/news/banner_news.png" class="bsimg"></div>
 	<div class="bs-docs-featurette" style="background: #f1f1f1">
 		<div class="container">
 			<div class="row">
@@ -113,18 +116,18 @@
 						class="bsimg tab"></a>
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12 content-top ztgs">
-				<font class="locate">您所在位置&nbsp;:&nbsp;<a class="locate" href="news.jsp">新闻中心</a>&nbsp;>&nbsp;<a class="locate" href="#">综合正文</a></font>
+				<font style="font-family:pictos;" color="#8f8f8f"; class="locate">您所在位置&nbsp;:&nbsp;<a class="locate" href="news.jsp">新闻中心</a>&nbsp;>&nbsp;<a class="locate" href="#">综合正文</a></font>
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12 artText">
 					<div class="col-md-12 col-sm-12 col-xs-12 ztgs" align="center">
-						<strong style="font-size: 30px;"><%=content.getTitle()%></strong>
+						<p class="" style="font-size: 22px;font-family:pictos;" color="#8f8f8f"; ><%=content.getTitle()%></p>
 					</div>
 					<div class="col-md-12 col-sm-12 col-xs-12 ztgs" align="center">
-						<p class="" style="color: #8f8f8f;"><%=content.getTimeStr()%>
+						<p class="" style="color: #8f8f8f;font-family:pictos;"><%=content.getTimeStr()%>
 					</div>
 					<div class="col-md-12 col-sm-12 col-xs-12 nopadding" id="content">
 
-					<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="col-md-12 col-sm-12 col-xs-12" style="color: #8f8f8f; font-family:pictos;">
 
 						<%=content.getContent()%>
 					</div>

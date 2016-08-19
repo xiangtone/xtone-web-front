@@ -21,7 +21,10 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 <!-- <script>!function(e,t,a,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(a),s=t.getElementsByTagName(a)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-146052-10","getbootstrap.com"),ga("send","pageview");</script> -->
 <style>
-
+@font-face { 
+  font-family:pictos; 
+  src:url('css/zaozi.OTF'); 
+} 
 .newsli{
 	border-bottom: #e1e1e0 solid 1px;
 	padding-top: 15px;
@@ -87,8 +90,8 @@ color: #aaaaaa;
 		role="banner">
 		<jsp:include page="top.html"></jsp:include>
 	</header>
-	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/about-us/banner_recruitment.jpg" class="bsimg"></div>
-	<div class="bs-docs-featurette" style="background: #f1f1f1">
+	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/about-us/banner_recruitment.png" class="bsimg"></div>
+	<div class="bs-docs-featurette" style="background: #fff">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
@@ -96,11 +99,11 @@ color: #aaaaaa;
 						class="bsimg tab"></a>
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
-					<a href="#"><img src="images/about-us/lxwm2.jpg"
+					<a href="#"><img src="images/about-us/lxwm2.png"
 						class="bsimg tab"></a>
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12 nopadding bottom-hieght">					
-						<img src="images/about-us/map.png" class="bsimg" style="padding-top: 100px;padding-bottom: 103px;background: #fff;">
+						<img src="images/about-us/map.png" class="bsimg" style="padding-top: 90px;padding-bottom: 93px;background: #fff;">
 				</div>
 			</div>
 		</div>	

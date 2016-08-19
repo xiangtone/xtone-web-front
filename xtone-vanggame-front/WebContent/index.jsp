@@ -62,6 +62,7 @@
 
 <meta name="author" content="Shirp" />
 <title>万家游戏 -万家游戏 汇聚精品</title>
+<script src="js/bootstrap/jquery.min.js"></script>
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/docs.min.css" rel="stylesheet">
@@ -132,7 +133,7 @@
 }
 
 .newsli {
-	border-bottom: #e1e1e0 solid 1px;
+	border-bottom: #e1e1e0 dashed 1px;
 	padding-top: 17px;
 	padding-bottom: 16px;
 	/* 	list-style-image: url("images/index/dian_1.png"); */
@@ -150,8 +151,8 @@
 
 @media ( min-width :168px) {
 	.newsli {
-		padding-top: 5px;
-		padding-bottom: 18px;
+		padding-top: 11px;
+		padding-bottom: 16px;
 	}
 	.newsli font {
 		font-size: 12px;
@@ -166,7 +167,7 @@
 
 @media ( min-width :768px) {
 	.newsli {
-		padding-top: 11px;
+		padding-top: 10px;
 		padding-bottom: 11px;
 	}
 	.newsli font {
@@ -182,8 +183,8 @@
 
 @media ( min-width :1201px) {
 	.newsli {
-		padding-top: 17px;
-		padding-bottom: 16px;
+		padding-top: 12px;
+		padding-bottom: 13px;
 	}
 	.newsli font {
 		font-size: 17px;
@@ -200,6 +201,7 @@
 	color: #aaaaaa;
 	text-decoration: none;
 	font-size: 15px;
+	/* font-family:pictos; */
 }
 
 #overlay {
@@ -258,7 +260,27 @@
 	background: transparent url("images/index/pop_close.png") no-repeat
 		scroll 0% 0%;
 }
+#gd-1{
+	overflow:hidden;
+	width:100%;
+}
+#gd-2{
+	float:left;
+	width: 1200%;
+}
+#gd-3{
+	float:left;
+}
+#gd-4{
+	float:left;
+	/* margin-left:10px; */
+}
+
+
+
+
 </style>
+
 </head>
 <body class="bs-docs-home">
 	<header class="navbar navbar-static-top bs-docs-nav" id="top"
@@ -280,19 +302,19 @@
 		<!-- 轮播（Carousel）项目 -->
 		<div class="carousel-inner">
 			<div class="item active" style="border: none;">
-				<img src="images/index/1900x540_2.jpg" alt="First banner">
+			<a href="porducts.jsp"><img src="images/index/066.png"></a>	
 			</div>
 			<div class="item" style="border: none;">
-				<img src="images/index/1900x540-1.jpg" alt="Second banner">
+			<a href="porducts.jsp"><img src="images/index/067.png" alt="Second banner"></a>
 			</div>
 			<div class="item" style="border: none;">
-				<img src="images/index/1900x540_3.jpg" alt="Thrid banner">
+			<a href="porducts.jsp"><img src="images/index/068.png" alt="Thrid banner"></a>
 			</div>
 			<div class="item" style="border: none;">
-				<img src="images/index/1900x540_1.jpg" alt="Fourth banner">
+			<a href="porducts.jsp"><img src="images/index/1900x540-1.jpg" alt="Fourth banner"></a>
 			</div>
 			<div class="item" style="border: none;">
-				<img src="images/index/zhulaile.jpg" alt="Fifth banner">
+			<a href="porducts.jsp"><img src="images/index/zhulaile.jpg" alt="Fifth banner"></a>
 			</div>
 			<!-- 		<div class="item" style="border: none;"> -->
 			<!--          <img src="images/index/1900x540_2.png" alt="Second slide"> -->
@@ -304,154 +326,17 @@
 		   <a class="carousel-control right" href="#myCarousel" 
 		      data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 	</div>
-	<div
-		style="background-image: url(images/index/index-bg.jpg); background-size: cover;">
+	<div style="background-color: #f1f0ee; background-size: cover;">
 		<div class="bs-docs-featurette">
 			<div class="container">
 				<div class="row home-padding">
-					<div class="col-md-12 col-sm-12 col-xs-12 nopadding title">
-						<div class="col-md-3 col-sm-3 col-xs-6 nopadding">
-							<img src="images/index/hot_game.png" class=""></img>
-						</div>
-
-						<div class="col-md-9 col-sm-9 col-xs-6 nopadding">
-							<a href="porducts.jsp" style="float: right"><img
-								src="images/index/more.png"></img></a>
-						</div>
+					<div class="col-md-12 col-sm-12 col-xs-12 nopadding title">	
 					</div>
-
-					<div class="col-md-12 col-sm-12 col-xs-12 nopadding">
-						<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
-							<div class="hot_game hot_list">
-
-								<div class="l hot_gamebox mb1">
-									<a href="porducts.jsp"><img
-										src="images/index/350x290_2.jpg" class="bsimg" alt="First game"></a>
-									<div class="hot_yt hot_yt_sw ztgs">
-										<h4 class="hot_yt_left">《绝地逃亡》</h4>
-										<h4 class="hot_yt_right">动作格斗</h4>
-									</div>
-									<!-- 								<div class="hot_mark" align="center"> -->
-									<!-- 									<dl class="c" style="box-sizing: content-box"> -->
-									<!-- 										<dd class="game_erweima l"> -->
-									<!-- 											<img src="images/index/erweima_smzg.png"> -->
-									<!-- 										</dd> -->
-									<!-- 										<dd class="game_str" style="padding-top: 10px;">《零纪元》</dd> -->
-									<!-- 										<dd class="game_lx">简介|官网</dd> -->
-									<!-- 									</dl> -->
-									<!-- 								</div> -->
-								</div>
-
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
-							<div class="hot_game hot_list">
-								<div class="l hot_gamebox mb1">
-									<a href="porducts.jsp"><img
-										src="images/index/350x290-2.jpg" class="bsimg" alt="Second game"></a>
-									<div class="hot_yt hot_yt_sw ztgs">
-										<h4 class="hot_yt_left">《梦想昆仑》</h4>
-										<h4 class="hot_yt_right">仙侠/RPG</h4>
-									</div>
-									<!-- 								<div class="hot_mark" align="center"> -->
-									<!-- 									<dl class="c" style="box-sizing: content-box"> -->
-									<!-- 										<dd class="game_erweima l"> -->
-									<!-- 											<img src="images/index/erweima_smzg.png"> -->
-									<!-- 										</dd> -->
-									<!-- 										<dd class="game_str" style="padding-top: 10px;">《闪客快打》</dd> -->
-									<!-- 										<dd class="game_lx">简介|官网</dd> -->
-									<!-- 									</dl> -->
-									<!-- 								</div> -->
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4 col-xs-4 nopadding">
-							<div class="hot_game hot_list">
-								<div class="hot_gamebox mb1">
-									<a href="porducts.jsp"><img
-										src="images/index/zhulaile2.jpg" class="bsimg" alt="Third game"></a>
-									<div class="hot_yt hot_yt_sw ztgs">
-										<h4 class="hot_yt_left">《猪来了》</h4>
-										<h4 class="hot_yt_right">社交/休闲</h4>
-									</div>
-									<!-- 								<div class="hot_mark" align="center"> -->
-									<!-- 									<dl class="c" style="box-sizing: content-box"> -->
-
-									<!-- 										<dd class="game_erweima"> -->
-									<!-- 											<img src="images/index/erweima_smzg.png"> -->
-									<!-- 										</dd> -->
-									<!-- 										<dd class="game_str" style="padding-top: 10px;">《神魔战歌》</dd> -->
-									<!-- 										<dd class="game_lx">简介|官网</dd> -->
-									<!-- 									</dl> -->
-									<!-- 								</div> -->
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-<!-- 		<div class="bs-docs-featurette"> -->
-<!-- 			<div class="container"> -->
-<!-- 				<div class="row home-padding"> -->
-<!-- 					<div class="col-md-12 col-sm-12 col-xs-12 nopadding title"> -->
-<!-- 						<div class="col-md-3 col-sm-3 nopadding"> -->
-<!-- 							<img src="images/index/business_structure.png"></img> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 					<div class="col-md-4 col-sm-4 col-xs-4 nopadding"> -->
-<!-- 											<a href="http://expo.getbootstrap.com/2014/10/29/lyft/" -->
-<!-- 												target="_blank" title="Lyft"> -->
-
-<!-- 						<a -->
-<!-- 							href="cooperation.html"> <img src="images/index/ad1.jpg" -->
-<!-- 							alt="First cooperation" class="bsimg"> -->
-<!-- 						</a> -->
-<!-- 					</div> -->
-<!-- 					<div class="col-md-4 col-sm-4 col-xs-4 nopadding"> -->
-<!-- 						<a href="cooperation.html"> <img src="images/index/ad3.jpg" -->
-<!-- 							alt="Second cooperation" class="bsimg"> -->
-<!-- 						</a> -->
-<!-- 					</div> -->
-<!-- 					<div class="col-md-4 col-sm-4 col-xs-4 nopadding"> -->
-<!-- 						<a href="cooperation.html"> <img src="images/index/ad2.jpg" -->
-<!-- 							alt="Third cooperation" class="bsimg"> -->
-<!-- 						</a> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
-		<div class="bs-docs-featurette">
-			<div class="container">
-				<div class="row home-padding">
-					<div class="col-md-12 col-sm-12 col-xs-12 nopadding title">
-						<div class="col-md-3 col-sm-3 col-xs-6 nopadding">
-							<img src="images/index/vangame_news.png"></img>
-						</div>
-						<div class="col-md-5 col-sm-9 col-xs-6 nopadding">
-							<a href="news.jsp" style="float: right;"><img
-								src="images/index/more.png"></img></a>
-						</div>
-					</div>
-					<div class="col-md-12 col-sm-12 col-xs-12 nopadding">
-					<div class="col-md-8 col-sm-12 col-xs-12 nopadding ztgs"
-						style="background-color: white;">
-						<ul class="" style="margin-right: 20px; margin-bottom: 0px;">
-							<%
-								for (Content news : list) {
-							%>
-							<li class="newsli"><a
-								href="news-content.jsp?pageindex=1&id=<%=news.getId()%>"
-								target="_blank"><font><%=news.getTitle()%></font></a> <em
-								style="float: right;"><%=news.getTimeStr()%></em> <%
- 	}
- %>
-						</ul>
-					</div>
-					<div class="col-md-4 col-sm-12 col-xs-12 video nopadding">
-
+					
+					<div class="col-md-12 col-sm-12 col-xs-12 nopadding" style="background-color: white;">
+					<div class="col-md-4-1 col-sm-12 col-xs-12 video nopadding" style="padding:10px;">
 						<a class="btn-video" href="javascript:openVideo();" id="pop-video-a"><img
-							src="images/index/vedio-kddmx.jpg" class="bsimg" > </a>
+							src="images/index/vedio-kddmx.png" class="bsimg" > </a>
 
 						<div id="overlay" style="display: none;"></div>
 						<div class="pop videoPop" id="pop-video" style="display: none;">
@@ -460,33 +345,156 @@
 						</div>
 
 					</div>
+					
+					<div class="col-md-8-1 col-sm-12 col-xs-12 nopadding ztgs"
+						>
+						<ul class="" style="margin-right: -10px; margin-bottom: 0px;">
+							<%
+								for (Content news : list) {
+							%>
+							
+							<li class="newsli" type = "square"><a
+								href="news-content.jsp?pageindex=1&id=<%=news.getId()%>"          
+								<%String title = news.getTitle();
+								  if(title.length()>15){
+									  title = title.subSequence(0, 14)+"...";
+								  }
+								
+								%>
+								target="_blank"><font style="font-size:15px;font-family:pictos;margin-right: 20px;"><%=title%></font></a> <em
+								style="float: right;"><font style="font-size:13px;font-family:pictos;margin-right: 20px;"><%=news.getTimeStr()%></font></em> <%
+ 	}
+ %>
+						</ul>
+					</div>
+					
+
 					</div>
 				</div>
 			</div>
 		</div>
+		
+		<div class="bs-docs-featurette">
+			<div class="container">
+				<div class="row home-padding jx">
+					<div class="col-md-12 col-sm-12 col-xs-12 nopadding title">
+						<!--  <div class="col-md-3 col-sm-3 col-xs-6 nopadding">
+							<img src="images/index/hot_game.png" class=""></img>
+						</div> 
+
+						<div class="col-md-9 col-sm-9 col-xs-6 nopadding">
+							<a href="porducts.jsp" style="float: right"><img
+								src="images/index/more.png"></img></a>
+						</div> -->
+					</div>
+
+					<div class="col-md-12 col-sm-12 col-xs-12 nopadding">
+						<div class="col-md-4 col-sm-4 col-xs-4 nopadding a-1-0">
+							<div class="hot_game hot_list">
+
+								<div class="l hot_gamebox mb1" >
+									<a href="porducts.jsp"><img
+										src="images/index/065.png" class="bsimg-x" alt="First game" >
+									</a>
+									<div class="bmbox2" >
+									 <div class="bmbox" >
+										<a class="a-1-1" href="porducts.jsp"><img class="imgz" alt="First game" src="images/index/jrgw.png"></a>					
+									</div> 
+									  <div class="bmbox1">
+										<a href="porducts.jsp"><img class="imgz" alt="First game" src="images/index/download.png"></a>					
+									</div>
+									</div>										
+								</div>
+
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-4 nopadding a-1-0">
+							<div class="hot_game hot_list">
+								<div class="l hot_gamebox mb1">
+									
+									<a href="porducts.jsp"><img
+										src="images/index/064.png" class="bsimg-x" alt="Second game" ></a>
+									 <div class="bmbox2" >
+									 <div class="bmbox">
+										<a class="a-1-1" href="porducts.jsp"><img class="imgz" alt="First game" src="images/index/jrgw.png"></a>					
+									</div> 
+									  <div class="bmbox1">
+										<a href="porducts.jsp"><img class="imgz" alt="First game" src="images/index/download.png"></a>					
+									</div>
+									</div> 
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-4 nopadding a-1-0">
+							<div class="hot_game hot_list">
+								<div class="l hot_gamebox mb1">
+									<a href="porducts.jsp"><img
+										src="images/index/063.png" class="bsimg-x" alt="Third game" ></a>
+									<div class="bmbox2" >
+									<div class="bmbox">
+										<a class="a-1-1" href="porducts.jsp"><img class="imgz" alt="First game" src="images/index/jrgw.png"></a>					
+									</div> 
+									  <div class="bmbox1">
+										<a href="porducts.jsp"><img class="imgz" alt="First game" src="images/index/download.png"></a>					
+									</div> 
+									</div> 
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 		<div class="bs-docs-featurette bottom-hieght">
 			<div class="container">
 				<div class="row home-padding">
 					<div class="col-md-12 col-sm-12 col-xs-12 nopadding title">
-						<div class="col-md-3 col-sm-3 nopadding">
+						<!-- <div class="col-md-3 col-sm-3 nopadding">
 							<img src="images/index/links.png"></img>
-						</div>
+						</div> -->
 					</div>
 					<div class="col-md-12 col-sm-12 col-xs-12 nopadding ztgs"
-						style="background-color: #fafafa; padding: 22px;text-align: center;">
-						<div class="tt20"><a href="http://www.alllink.com.cn/" class="links" target="_blank">北京通联天地科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a href="http://www.xtonecomic.com/" class="links" target="_blank">北京讯宇创世科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a href="http://14643233.czvv.com/" class="links" target="_blank">北京游动天地科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a href="http://www.pvc123.com/b-pxtonewinnie/" class="links"	target="_blank">深圳市创世互动科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp; </div>
-						<div class="tt20"><a href="http://www.m-time.com/" class="links" target="_blank">深圳市浩天投资有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a href="http://dmx.xtonegame.com" class="links" target="_blank">口袋大冒险</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-<!-- 						<div class="tt20"><a href="http://lznh.cooguo.com/" class="links" target="_blank">龙之怒吼</a>&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
-<!-- 						<div class="tt20"><a href="http://smzg.xtonegame.com/" class="links" target="_blank">神魔战歌</a>&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
-<!-- 						<div class="tt20"><a href="http://fsz.ganwan.com/" class="links" target="_blank">封神战</a>&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
-<!-- 						<div class="tt20"><a href="http://www.ljy0.com/home.html" class="links" target="_blank">零纪元</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>	 -->
-<!-- 						<div class="tt20"><a href="http://mmd.xtonegame.com/" class="links" target="_blank">电视萌萌答</a>&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
-						<div class="tt20"><a href="http://jdtw.xtonegame.com/" class="links" target="_blank">绝地逃亡</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a href="http://zy.xtonegame.com/" class="links" target="_blank">捉妖友人帐</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						style="background-color: #fafafa; font-family:pictos;padding: 5px;text-align: center;">
+						<div class="tt20"><font  class="links">友情链接：</font></div>
+							 <div class="tt20 tt20-1">
+							   <script type="text/javascript">
+									window.onload = function(){
+									var speed=20; 
+									var tab=document.getElementById("gd-1");
+									var tab1=document.getElementById("gd-3");
+									var tab2=document.getElementById("gd-4");
+									tab2.innerHTML=tab1.innerHTML;
+									function Marquee(){
+									if(tab2.offsetWidth-tab.scrollLeft<=0)
+									tab.scrollLeft-=tab1.offsetWidth
+									else{
+									tab.scrollLeft++;
+									}
+									}
+									var MyMar=setInterval(Marquee,speed);
+									tab.onmouseover=function() {clearInterval(MyMar)};
+									tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+								}
+								</script>
+							    <div id="gd-1">
+								   	<div id="gd-2">
+										<div id="gd-3">
+											<a href="http://www.alllink.com.cn/" class="links tt20-1" target="_blank">北京通联天地科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				 							<a href="http://www.xtonecomic.com/" class="links tt20-1" target="_blank">北京讯宇创世科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				 							<a href="http://14643233.czvv.com/" class="links tt20-1" target="_blank">北京游动天地科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				 							<a href="http://www.pvc123.com/b-pxtonewinnie/" class="links tt20-1"	target="_blank">深圳市创世互动科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				 							<a href="http://www.m-time.com/" class="links tt20-1" target="_blank">深圳市浩天投资有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				 							<a href="porducts.jsp" class="links tt20-1" target="_blank">龙之怒吼</a>&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="http://zy.xtonegame.com/" class="links tt20-1" target="_blank">神魔战歌</a>&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="porducts.jsp" class="links" target="_blank tt20-1">封神战</a>&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="porducts.jsp" class="links" target="_blank tt20-1">零纪元</a>&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="http://dmx.xtonegame.com" class="links tt20-1" target="_blank">口袋大冒险</a>&nbsp;&nbsp;&nbsp;&nbsp;
+										</div>
+										<div id="gd-4"></div>
+								   </div>
+							   </div> 
+							 </div>
 					</div>
 					
 				</div>
@@ -507,7 +515,7 @@
 // 			t.parentNode.insertBefore(e, t)
 // 		}();
 	</script>
-	<script src="js/bootstrap/jquery.min.js"></script>
+	
 	<script type="text/javascript">
 // 	$("#top").load("top.html");
 	$("#footer").load("footer.html");

@@ -1,0 +1,173 @@
+秘钥交换算法：
+	过程：
+		A拥有x
+		B拥有y
+
+		A将g^x'p 发送给B
+		B将g^y'p 发送给A
+
+		网络上传输：g、p、g^x'p、g^y'p四个值（注：拥有g^x'p、g、p算不出x）
+
+		A拥有：(g^y'p)^x=g^yx'g
+		B拥有：(g^x'p)^y=g^yx'g
+		
+		g^yx'g为秘钥
+
+私钥作用：
+	一：加密信息
+	二：身份验证
+
+CRL: 证书吊销列表
+X509：常用证书格式
+	包含内容：
+		公钥及有效期限
+		证书合法拥有者
+		证书使用用途
+		CA信息
+		CA签名（CA的私钥）
+
+PKI:
+	TLS/SSL使用 X509
+	openGPG
+
+HTTPs会话建立过程：
+	建立TCP连接
+	协商协议
+	服务端将自己的证书发送给客户端
+	客户端验证证书
+	客户端生成会话秘钥（对称秘钥）
+	客户端通过服务端公钥加密传递对称秘钥给服务端
+
+
+
+对称加密：
+	DES:使用56位秘钥
+	3DES:使用3轮DES
+	AES：使用128位秘钥
+	blowfish
+
+单向加密：
+	MD4
+	MD5
+	SHA1
+	CRC-32：循环冗余检验码
+	
+非对称加密：
+	身份认证（数字签名）
+	数据加密
+	RSA：加密、签名
+	DSA：签名
+
+
+
+openssl:
+	libcrypto:加密库
+	libssl:TLS/SSL的实现
+		基于会话、实现身份认证、数据机密性和会话完整性的TLS/SSL
+
+
+
+speed 加密算法速度测试，不加算法则将所有算法都测一遍
+
+enc ：加密解密文件
+	openssl enc -des3 -in inittab -out inittab.des3 回车后输入密码完成加密
+	openssl enc -des3 -d -in inittab.des3 -out inittab 回车后输入密码完成解密
+
+获取指纹数据：
+	openssl dgst -md5 inittab
+
+rsautl：rsa加密解密工具
+
+rand ：生成伪随机数
+	openssl rand -base64 10 最后的数字为长度
+
+genrsa: 生成私钥SA
+	openssl genrsa -out KEYFILRNAME ### 后面可以指定长度(默认1024)
+
+rsa：生成公钥
+	openssl rsa -in KEYFILENAME -pubout
+
+req: 生成证书工具（自签证书）
+	openssl req -new -x509 -key KEYFILENAME -out crtFILENAME -days 365（默认一年）
+	回车后提示输入证书拥有者的信息：
+		国家：CN
+		省份：GUANGDONG
+		市：
+		公司名称：
+		组织名称：
+		主机名称：
+		管理员地址：
+
+	查看证书内容：openssl x509 -text -in crtFILENAME 
+
+
+
+生成签名请求：
+	openssl req -new -key 私钥 -out httpd.csr（请求文件）
+
+
+文件签名：
+	openssl ca -in httpd.csr -out httpd.crt -days 365
+
+
+
+
+注意：以上所有步骤都必须设置好时间，否则证书不受信任
+
+
+
+
+
+
+CA的配置：
+	配置文件路径：/etc/pki/tls/openssl.cnf
+		注：以下路径文件可能需要自己手动生成
+	dir = /etc/pki/CA           # 工作目录
+	certs = $dir/certs            # 证书保存路径
+	crl_dir = $dir/crl              # 证书吊销列表路径
+	database = $dir/index.txt        # 证书数据列表文件（手动）
+	new_certs_dir = $dir/newcerts         # 新生成的证书存放路径
+	certificate = $dir/cacert.pem       # CA自己证书（手动）
+	serial = $dir/serial           # 证书数据列表的索引号文件，内容一般为初始为00或01（手动）
+	crlnumber = $dir/crlnumber        # 证书吊销列表工作号文件（手动）
+	crl = $dir/crl.pem          # 证书吊销列表文件（手动）
+	private_key = $dir/private/cakey.pem	# CA自己的私钥（手动）
+	RANDFILE = $dir/private/.rand    # 随机数文件，系统会自己生成，不用手动创建
+	
+
+
+
+
+
+
+
+
+步骤简述：
+首先创建CA：
+	为CA创建签证环境：
+		置文件路径：/etc/pki/tls/openssl.cnf
+			database = $dir/index.txt  
+			certificate = $dir/cacert.pem
+			serial = $dir/serial
+			crl = $dir/crl.pem
+			private_key = $dir/private/cakey.pem
+	为CA创建私钥：
+		openssl genrsa -out /cakey.pem
+	为CA自签证书：
+		openssl req -new -x509 -days 365  -key /cakey.pem -out /cacert.pem
+        
+
+客户端创建私钥：
+	openssl genrsa -out /web.key
+
+客户端创建签证请求：
+	openssl req -new -key /web.key -out /web.csr
+
+将客户端签证请求发送给CA，方法自己想（U盘、FTP、.....）
+
+CA为客户端签证：
+	openssl ca -in web.csr -out web.crt
+
+
+
+注意：以上所有步骤不管客户端或CA都必须设置好时间，否则证书不受信任
