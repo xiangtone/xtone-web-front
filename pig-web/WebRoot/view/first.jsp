@@ -765,13 +765,19 @@ a.NIE-topBar-btn:hover {
 }
 
 
-#li {
+.li {
 	width: 140px;
 	height: 37px;
 	float: left;
 	margin: 3px 13px;
 }
+.li1{
+	width: 160px;
+	height: 37px;
+	float: left;
+	margin: 11px 23px;
 
+}
 
 .ma1 {
 	display: block;
@@ -809,11 +815,20 @@ a.NIE-topBar-btn:hover {
 	
 
 }
-
-.menu, .menu li {
-	padding: 0;
-	margin: 8px 23px;
+@media(min-width:520px){
+	.menu, .menu li {
+		padding: 0;
+		margin: 8px 11px;
+	}
 }
+
+@media(min-width:1200px){
+	.menu, .menu li {
+		padding: 0;
+		margin: 8px 23px;
+	}
+}
+
 
 #news2 {
 	display: block;
@@ -996,7 +1011,7 @@ color: rgb(124, 115, 106);
 	padding: 0px;
 }
 .page{
-	min-width:1246px; 
+	min-width:1233px; 
 	position: absolute; 
 	width: 92%; 
 	height: 110px; 
@@ -1007,9 +1022,9 @@ color: rgb(124, 115, 106);
 
 }
 .page1{
-	min-width:1246px; 
+	min-width:1233px; 
 	position: absolute; 
-	width: 100%; 
+	width: 92%; 
 	height: 110px; 
 	z-index: 9999; 
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); 
@@ -1024,10 +1039,10 @@ color: rgb(124, 115, 106);
 
 <div id="page" class="comdiv page">
 		<ul class="menu">
-			<li id="li" ><a class="ma1" href="../index.jsp"><img  onmouseover="this.src='../img/imgz/home2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/home1.png';this.style.width='30%';this.style.padding='10% 0 0 35%';" src="../img/imgz/home1.png" style="width:30%;padding-top:10%;padding-left:35%"></a></li>
-			<li id="li"><a  class="ma2" href="news.jsp"><img   src="../img/imgz/game2.png" style="width:100%;"></a></li>
-			<li id="li"><a  class="ma3" href="material.jsp" ><img  onmouseover="this.src='../img/imgz/active2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/active1.png';this.style.width='70%';this.style.padding='8% 0 0 13%';" src="../img/imgz/active1.png" style="width:70%;padding-top:8%;padding-left:13%"></a></li>
-			<li id="li"><a  class="ma4" href="https://www.facebook.com/piggycoming/?fref=ts"  target="_Blank" ><img onmouseover="this.src='../img/imgz/fans2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/fans1.png';this.style.width='79%';this.style.padding='8% 0 0 9.1%';" src="../img/imgz/fans1.png" style="width:79%;padding-top:8%;padding-left:9.1%"></a></li>
+			<li id="li" class="li"><a class="ma1" href="../index.jsp"><img  onmouseover="this.src='../img/imgz/home2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/home1.png';this.style.width='30%';this.style.padding='10% 0 0 35%';" src="../img/imgz/home1.png" style="width:30%;padding-top:10%;padding-left:35%"></a></li>
+			<li id="li" class="li"><a  class="ma2" href="news.jsp"><img   src="../img/imgz/game2.png" style="width:100%;"></a></li>
+			<li id="li" class="li"><a  class="ma3" href="material.jsp" ><img  onmouseover="this.src='../img/imgz/active2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/active1.png';this.style.width='70%';this.style.padding='8% 0 0 13%';" src="../img/imgz/active1.png" style="width:70%;padding-top:8%;padding-left:13%"></a></li>
+			<li id="li" class="li"><a  class="ma4" href="https://www.facebook.com/piggycoming/?fref=ts"  target="_Blank" ><img onmouseover="this.src='../img/imgz/fans2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/fans1.png';this.style.width='79%';this.style.padding='8% 0 0 9.1%';" src="../img/imgz/fans1.png" style="width:79%;padding-top:8%;padding-left:9.1%"></a></li>
 
 		</ul>
 
@@ -1035,9 +1050,11 @@ color: rgb(124, 115, 106);
 	<script>
 			function show1(){
 				var width= document.body.clientWidth; 
-				if (width>1439){
+				if (width>1500){
 					$("#page").addClass("page1");
-					$("#page").removeClass("page");		
+					$("#page").removeClass("page");
+					$("#li").removeClass("li");
+					$("#li").addClass("li1");	
 				}				
 			}
 		
