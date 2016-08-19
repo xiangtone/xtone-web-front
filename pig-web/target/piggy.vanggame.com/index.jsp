@@ -138,12 +138,9 @@ if(request.getHeader("User-Agent").toLowerCase().indexOf("tosh")<0)
   <style type="text/css"> 
  .main { 
  	height:610px; 
-<<<<<<< HEAD
  	.page{
  	
  	}
-=======
->>>>>>> zhuxizhe
  }</style><![endif]-->
 
 <style type="text/css">
@@ -519,66 +516,7 @@ if(request.getHeader("User-Agent").toLowerCase().indexOf("tosh")<0)
 	height:115px;
 
 }
-<<<<<<< HEAD
 
-=======
-.download1{
-	position:absolute;
-	top:252px;
-	left:1056px;
-	width:112px;
-	height:40px;
-
-}
-.download2{
-	position:absolute;
-	top:218px;
-	left:1054px;
-	width:121px;
-	height:40px;
-
-}
-.download3{
-	position:absolute;
-	top:265px;
-	left:1054px;
-	width:121px;
-	height:40px;
-
-}
-.download-1{
-	position:absolute;
-	top:130px;
-	left:811px;
-	width:103px;
-	height:115px;
-
-}
-.download1-1{
-	position:absolute;
-	top:273px;
-	left:1056px;
-	width:112px;
-	height:40px;
-
-}
-.download2-1{
-	position:absolute;
-	top:242px;
-	left:1054px;
-	width:121px;
-	height:40px;
-
-}
-.download3-1{
-	position:absolute;
-	top:291px;
-	left:1054px;
-	width:121px;
-	height:40px;
-
-}
->>>>>>> zhuxizhe
 
 
 
@@ -955,17 +893,12 @@ a.NIE-topBar-btn:hover {
 	margin-left: -650px
 }
 
-<<<<<<< HEAD
 .li {
-=======
-#li {
->>>>>>> zhuxizhe
 	width: 140px;
 	height: 37px;
 	float: left;
 	margin: 3px 13px;
 }
-<<<<<<< HEAD
 .li1{
 	width: 160px;
 	height: 37px;
@@ -973,9 +906,6 @@ a.NIE-topBar-btn:hover {
 	margin: 11px 23px;
 
 }
-=======
-
->>>>>>> zhuxizhe
 
 
 .ma1 {
@@ -1015,7 +945,6 @@ a.NIE-topBar-btn:hover {
 
 }
 
-<<<<<<< HEAD
 @media(min-width:520px){
 	.menu, .menu li {
 		padding: 0;
@@ -1032,14 +961,6 @@ a.NIE-topBar-btn:hover {
 
 
 
-=======
-
-.menu, .menu li {
-	padding: 0;
-	margin: 8px 23px;
-}
-
->>>>>>> zhuxizhe
 .menu {
 	width: 900px;
 	-margin: 0;
@@ -1197,7 +1118,6 @@ a.NIE-topBar-btn:hover {
 .scan{
 	position: relative; 
 	z-index: 9999; 
-<<<<<<< HEAD
 	width: 780px; 
 	margin: 0 auto;
 }
@@ -1216,35 +1136,21 @@ a.NIE-topBar-btn:hover {
 	margin: 0 auto;
 
 }
-=======
-	width: 740px; 
-	margin: 0 auto;
-
-}
-.scan1{
-	position: relative; 
-	z-index: 9999; 
-	width: 370px; 
-	margin: 0 auto;
-
-}
-
->>>>>>> zhuxizhe
 .wrap {
 	overflow: hidden;
 	_width: 1200px;
 	margin: 0 auto;
-	height: 670px;
+	height: 100%;
 }
 
 
 
-	.wrap1 {
+/* 	.wrap1 {
 	overflow: hidden;
 	_width: 1200px;
 	margin: 0 auto;
-	height: 865px;
-}
+	height: 100%;
+} */
 .download--qq1 {
 	position: absolute;
 	top: 573px;
@@ -1267,11 +1173,7 @@ a.NIE-topBar-btn:hover {
 	padding: 0px;
 }
 .page{
-<<<<<<< HEAD
 	min-width:1233px; 
-=======
-	min-width:1349px; 
->>>>>>> zhuxizhe
 	position: absolute; 
 	width: 92%; 
 	height: 110px; 
@@ -1284,11 +1186,7 @@ a.NIE-topBar-btn:hover {
 .page1{
 	min-width:1349px; 
 	position: absolute; 
-<<<<<<< HEAD
 	width: 92%; 
-=======
-	width: 100%; 
->>>>>>> zhuxizhe
 	height: 110px; 
 	z-index: 9999; 
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); 
@@ -1301,7 +1199,6 @@ a.NIE-topBar-btn:hover {
 <body>
 	<div id="page" class="comdiv page">
 		<ul class="menu">
-<<<<<<< HEAD
 			<li id="li" class="li"><a class="ma1" href="index.jsp"><img  src="img/imgz/home2.png" style="width:100%;"></a></li>
 			<li id="li" class="li"><a  class="ma2" href="view/news.jsp"><img  onmouseover="this.src='img/imgz/game2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='img/imgz/game1.png';this.style.width='68%';this.style.padding='8% 0 0 15%';" src="img/imgz/game1.png" style="width:68%;padding-top:8%;padding-left:15%"></a></li>
 			<li id="li" class="li"><a  class="ma3" href="view/material.jsp" ><img  onmouseover="this.src='img/imgz/active2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='img/imgz/active1.png';this.style.width='70%';this.style.padding='8% 0 0 13%';" src="img/imgz/active1.png" style="width:70%;padding-top:8%;padding-left:13%"></a></li>
@@ -1331,99 +1228,23 @@ a.NIE-topBar-btn:hover {
 				<img alt="" src ="img/imgz/zhu1.png" style="width:100%;height:auto;">
 			</div>
 		
-=======
-			<li id="li" ><a class="ma1" href="index.jsp"><img  src="img/imgz/home2.png" style="width:100%;"></a></li>
-			<li id="li"><a  class="ma2" href="view/news.jsp"><img  onmouseover="this.src='img/imgz/game2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='img/imgz/game1.png';this.style.width='68%';this.style.padding='8% 0 0 15%';" src="img/imgz/game1.png" style="width:68%;padding-top:8%;padding-left:15%"></a></li>
-			<li id="li"><a  class="ma3" href="view/material.jsp" ><img  onmouseover="this.src='img/imgz/active2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='img/imgz/active1.png';this.style.width='70%';this.style.padding='8% 0 0 13%';" src="img/imgz/active1.png" style="width:70%;padding-top:8%;padding-left:13%"></a></li>
-			<li id="li"><a  class="ma4" href="https://www.facebook.com/piggycoming/?fref=ts"  target="_Blank" ><img onmouseover="this.src='img/imgz/fans2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='img/imgz/fans1.png';this.style.width='79%';this.style.padding='8% 0 0 9.1%';" src="img/imgz/fans1.png" style="width:79%;padding-top:8%;padding-left:9.1%"></a></li>
-
-		</ul>
-	<script>
-			function show1(){
-				var width= document.body.clientWidth; 
-				if (width>1440){
-					$("#page").removeClass("page");
-					$("#page").addClass("page1");
-				}				
-			}
-		
-			window.onload=show1;show1();
-		</script>
-	</div>
-	
-	<div id="wrap" class="wrap" style="width: 100%; background: url(img/imgz/bg_shouye.jpg) no-repeat center 0 / 100% 100%">
-		<div id="scan"
-			class="scan">
-			
-				<div id="download" class="download">
-				<!-- <img  src="../img/main/code_main.jpg" width="125" height="124" alt="神魔传奇" style="margin-top: 23px;margin-left: 4px;"> -->
-				<img src="img/imgz/erweima.png" width="100%" height="auto"
-					alt="捉妖友人帐" />
-				</div>
-				<div id="download1" class="download1">
-				<a class="download--ios" id="ios" href="https://appsto.re/tw/Mzencb.i" target="_Blank">App
-					Store下載</a> 
-				</div>
-				<div id="download2" class="download2">
-				<a class="download--android" id="android" href="https://goo.gl/bVdOVG" target="_Blank"
-					title="">安卓下載</a>
-				</div>
-				<div id="download3" class="download3">
-				<a class="download--android-1" id="android1" href="https://apps.facebook.com/cos_zh_pig/" target="_Blank"
-					title="">網頁版遊戲</a>
-				</div>
-				<!--epart end-->
-
-				<div  class="download--qq1" id="qq1"/></div> 
-			
->>>>>>> zhuxizhe
 		</div>
 		<script>
 			function show(){
 				var width= document.body.clientWidth; 
-<<<<<<< HEAD
 				if (width>1500){
-					$("#wrap").removeClass("wrap");
-					$("#wrap").addClass("wrap1");
+					/* $("#wrap").removeClass("wrap");
+					$("#wrap").addClass("wrap1"); */
 					$("#page").removeClass("page");
 					$("#page").addClass("page1");	
 					$("#li").removeClass("li");
-					$("#li").addClass("li1");	
+					$("#li").addClass("li1");
+					$()
 				}		
 			}
 			window.onload=show;show();
 		</script>
 		
-=======
-				if (width>1440){
-					$("#scan").removeClass("scan");
-					$("#scan").addClass("scan1");
-					$("#wrap").removeClass("wrap");
-					$("#wrap").addClass("wrap1");
-					$("#qq1").removeClass("download--qq1");
-					$("#qq1").addClass("download--qq1-1");
-					$("#download").removeClass("download");
-					$("#download").addClass("download-1");
-					$("#download1").removeClass("download1");
-					$("#download1").addClass("download1-1");
-					$("#download2").removeClass("download2");
-					$("#download2").addClass("download2-1");
-					$("#download3").removeClass("download3");
-					$("#download3").addClass("download3-1");
-					
-				}
-				
-			}
-		
-			window.onload=show;show();
-		</script>
-		
-		<!-- <div class="wrap-1"
-			style="width: 100%; ">
-
-		<div class="main"></div>
-		</div> -->
->>>>>>> zhuxizhe
 
 
 	</div>
@@ -1670,23 +1491,23 @@ a.NIE-topBar-btn:hover {
 		</div>
 
 	</div>
-	<div id="NIE-copyRight" style="margin-top: 0px;">
+	 <div id="NIE-copyRight" style="margin-top: 0px;">
 		<p id="NIE-copyRight-corp"
 			style=" text-align: center; margin: 12px auto; font-size: 12px; font-family: &amp; #39; 宋体 &amp;#39;; line-height: 20px; display: block;color:#7c736a;">
-			<span
+			<!-- <span
 				style="position: relative; vertical-align: top; top: 4px; display: inline-block; position: relative;">
 				<a href="http://www.vanggame.com/" target="_blank"
 				style="width: 220px; height: 64px; display: inline-block; cursor: pointer; background: url(img/imgz/logo.png) no-repeat"></a>
-			</span> <span
+			</span> --> <span
 				style="text-align: left; display: inline-block; padding-left: 6px;">
-				<span id="ncp-l1"> 萬家遊戲版權所有 Copyright@2016 中國網絡遊戲版權保護聯盟舉報中心</span><a
+				<span id="ncp-l1"> 版權所有 Copyright@2016 中國網絡遊戲版權保護聯盟舉報中心</span><a
 				href="http://www.miitbeian.gov.cn/"> 閩南B2-20040096-20</a>
 				&nbsp;&nbsp;&nbsp;&nbsp;<br> <span id="ncp-l2">抵制不良遊戲&nbsp;拒絕盜版遊戲&nbsp;注意自我保護&nbsp;謹防受騙上當&nbsp;<br>適當遊戲益腦&nbsp;沉迷遊戲傷身&nbsp;合理安排遊戲時間&nbsp;享受健康生活
 			</span><br>
 			</span>
 
 		</p>
-	</div>
+	</div> 
 
 
 

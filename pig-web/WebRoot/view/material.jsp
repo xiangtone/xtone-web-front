@@ -764,7 +764,6 @@ a.NIE-topBar-btn:hover {
 	margin-top: 0px;
 }
 
-<<<<<<< HEAD
 .li {
 	width: 140px;
 	height: 37px;
@@ -779,25 +778,6 @@ a.NIE-topBar-btn:hover {
 
 }
 
-=======
-
-
-#li {
-	width: 145px;
-	height: 45px;
-	float: left;
-	margin: 3px 13px;
-}
-
-#li {
-	width: 140px;
-	height: 37px;
-	float: left;
-	margin: 3px 13px;
-}
-
-
->>>>>>> zhuxizhe
 .ma1 {
 	display: block;
 	width: 120px;
@@ -835,7 +815,6 @@ a.NIE-topBar-btn:hover {
 
 }
 
-<<<<<<< HEAD
 @media(min-width:520px){
 	.menu, .menu li {
 		padding: 0;
@@ -848,11 +827,6 @@ a.NIE-topBar-btn:hover {
 		padding: 0;
 		margin: 8px 23px;
 	}
-=======
-.menu, .menu li {
-	padding: 0;
-	margin: 8px 23px;
->>>>>>> zhuxizhe
 }
 
 #news2 {
@@ -865,11 +839,7 @@ a.NIE-topBar-btn:hover {
 	display: block;
 	width: 100%;
 	height: 100%;
-<<<<<<< HEAD
 	color:white;
-=======
-	
->>>>>>> zhuxizhe
 }
 
 
@@ -1034,11 +1004,7 @@ color: rgb(124, 115, 106);
 	padding: 0px;
 }
 .page{
-<<<<<<< HEAD
 	min-width:1233px; 
-=======
-	min-width:1246px; 
->>>>>>> zhuxizhe
 	position: absolute; 
 	width: 92%; 
 	height: 110px; 
@@ -1049,15 +1015,9 @@ color: rgb(124, 115, 106);
 
 }
 .page1{
-<<<<<<< HEAD
 	min-width:1233px; 
 	position: absolute; 
 	width: 92%; 
-=======
-	min-width:1246px; 
-	position: absolute; 
-	width: 100%; 
->>>>>>> zhuxizhe
 	height: 110px; 
 	z-index: 9999; 
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#7F000000', endColorstr='#7F000000'); 
@@ -1100,17 +1060,10 @@ color: rgb(124, 115, 106);
 
 	<div id="page" class="comdiv page">
 		<ul class="menu">
-<<<<<<< HEAD
 			<li id="li" class="li"><a class="ma1" href="../index.jsp"><img  onmouseover="this.src='../img/imgz/home2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/home1.png';this.style.width='30%';this.style.padding='10% 0 0 35%';" src="../img/imgz/home1.png" style="width:30%;padding-top:10%;padding-left:35%"></a></li>
 			<li id="li" class="li"><a  class="ma2" href="news.jsp"><img  onmouseover="this.src='../img/imgz/game2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/game1.png';this.style.width='68%';this.style.padding='8% 0 0 15%';" src="../img/imgz/game1.png" style="width:68%;padding-top:8%;padding-left:15%"></a></li>
 			<li id="li" class="li"><a  class="ma3" href="material.jsp" ><img  src="../img/imgz/active2.png" style="width:100%;"></a></li>
 			<li id="li" class="li"><a  class="ma4" href="https://www.facebook.com/piggycoming/?fref=ts"  target="_Blank" ><img onmouseover="this.src='../img/imgz/fans2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/fans1.png';this.style.width='79%';this.style.padding='8% 0 0 9.1%';" src="../img/imgz/fans1.png" style="width:79%;padding-top:8%;padding-left:9.1%"></a></li>
-=======
-			<li id="li" ><a class="ma1" href="../index.jsp"><img  onmouseover="this.src='../img/imgz/home2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/home1.png';this.style.width='30%';this.style.padding='10% 0 0 35%';" src="../img/imgz/home1.png" style="width:30%;padding-top:10%;padding-left:35%"></a></li>
-			<li id="li"><a  class="ma2" href="news.jsp"><img  onmouseover="this.src='../img/imgz/game2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/game1.png';this.style.width='68%';this.style.padding='8% 0 0 15%';" src="../img/imgz/game1.png" style="width:68%;padding-top:8%;padding-left:15%"></a></li>
-			<li id="li"><a  class="ma3" href="material.jsp" ><img  src="../img/imgz/active2.png" style="width:100%;"></a></li>
-			<li id="li"><a  class="ma4" href="https://www.facebook.com/piggycoming/?fref=ts"  target="_Blank" ><img onmouseover="this.src='../img/imgz/fans2.png';this.style.width='100%';this.style.padding='0px'" onmouseout="this.src='../img/imgz/fans1.png';this.style.width='79%';this.style.padding='8% 0 0 9.1%';" src="../img/imgz/fans1.png" style="width:79%;padding-top:8%;padding-left:9.1%"></a></li>
->>>>>>> zhuxizhe
 
 		</ul>
 
@@ -1118,17 +1071,11 @@ color: rgb(124, 115, 106);
 	<script>
 			function show1(){
 				var width= document.body.clientWidth; 
-<<<<<<< HEAD
 				if (width>1500){
 					$("#page").addClass("page1");
 					$("#page").removeClass("page");	
 					$("#li").removeClass("li");
 					$("#li").addClass("li1");	
-=======
-				if (width>1439){
-					$("#page").addClass("page1");
-					$("#page").removeClass("page");		
->>>>>>> zhuxizhe
 				}				
 			}
 		
@@ -1315,13 +1262,13 @@ color: rgb(124, 115, 106);
 		<div id="" style="background-color: black;" class="test-foot">
 			<p id="NIE-copyRight-corp"
 				style="width: 100%; text-align: center; margin: 0 auto; padding: 15px 0 0 0; font-size: 12px; font-family: &amp; amp; #39; 宋体 &amp;amp; #39;; line-height: 20px; display: block; position: relative; color: #7c736a;">
-				<span
+				<!-- <span
 					style="position: relative; vertical-align: top; top: 4px; display: inline-block; position: relative;">
 					<a href="http://www.vanggame.com/" target="_blank"
 					style="width: 220px; height: 64px; display: inline-block; cursor: pointer; background: url(../img/imgz/logo.png) no-repeat"></a>
-				</span> <span
+				</span> --> <span
 					style="text-align: left; display: inline-block; padding-left: 6px;">
-					<span id="ncp-l1"> 萬家遊戲版權所有 Copyright@2016 中國網絡遊戲版權保護聯盟舉報中心</span><a
+					<span id="ncp-l1"> 版權所有 Copyright@2016 中國網絡遊戲版權保護聯盟舉報中心</span><a
 					href="http://www.miitbeian.gov.cn/"> 閩南B2-20040096-20</a>
 					&nbsp;&nbsp;&nbsp;&nbsp;<br> <span id="ncp-l2">抵制不良遊戲&nbsp;拒絕盜版遊戲&nbsp;注意自我保護&nbsp;謹防受騙上當&nbsp;<br>適當遊戲益腦&nbsp;沉迷遊戲傷身&nbsp;合理安排遊戲時間&nbsp;享受健康生活
 				</span><br>
