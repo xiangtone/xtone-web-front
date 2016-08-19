@@ -34,6 +34,12 @@ if(application.getAttribute("count")==null){
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<div id='wx_pic' style='margin:0 auto;display:none;'>
+
+<img src='images/300x300.png' />
+
+</div>
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="description" content="Welcome to the wedding website for Sarah and Brad's Big Day!">
@@ -43,10 +49,25 @@ if(application.getAttribute("count")==null){
 <link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-76.png?1451359882">
 <link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-120.png?1451359882">
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-152.png?1451359882">
-<link rel="shortcut icon" href="logo.icon">
+<link rel="shortcut icon" href="logo.ico" type="image/x-icon"/>
 
 <link rel="stylesheet" href="css/main.css">
 <script src="js2/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+wx.onMenuShareTimeline({
+    title: 'dffdfdfdf', // 分享标题
+    link: 'www.baidu.com', // 分享链接
+    imgUrl: '', // 分享图标
+    success: function () { 
+        // 用户确认分享后执行的回调函数
+    },
+    cancel: function () { 
+        // 用户取消分享后执行的回调函数
+    }
+});
+
+</script>
 <title>灵域仙魔</title>
 <style>
 /* reset */

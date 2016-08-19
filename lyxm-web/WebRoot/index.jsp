@@ -50,7 +50,7 @@
 </style>
 </head>
 
-<body>
+<body style="background:#FFFFFF">
 
 <!--视频弹出内容 start-->
 <div id="dialog-overlay"></div>
@@ -511,6 +511,39 @@
         <div class="clearit"></div>
     </div>
     <div class="clearit"></div>
+    
+    
+    <div class="bs-docs-featurette bottom-hieght">
+			<div class="container">
+				<div class="row home-padding">
+					<div class="col-md-12 col-sm-12 col-xs-12 nopadding title">
+						<div class="col-md-3 col-sm-3 nopadding">
+							<img src="images/links.png">
+						</div>
+					</div>
+					<div style="background-color: rgb(250, 250, 250); padding: 22px; text-align: center;" class="col-md-12 col-sm-12 col-xs-12 nopadding ztgs">
+						<div class="tt20"><a target="_blank" class="links" href="http://www.17huang.com/">一起晃手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.bianwanjia.com">便玩家手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.youxiwangguo.com/">游戏王国</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.shouyoubus.com/">手游巴士</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.app178.com/">APP178手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.ppswan.com/">PPSWAN手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+					    <div class="tt20"><a target="_blank" class="links" href="http://www.shouyouya.com/">手游呀</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.9669.com/">9669手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.diyiyou.com/">第一手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.dunwan.com/">蹲玩游戏</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+					    <div class="tt20"><a target="_blank" class="links" href="http://www.youxiniao.com/">游戏鸟</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.yxyue.com/">游戏约</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.yoyou.com/">优游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://game.91.com/">91手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://game.hiapk.com/">安卓游戏</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+	
+	
+					</div>
+					
+				</div>
+			</div>
+		</div>
 </div>
 
 <div class="footerx">
