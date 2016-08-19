@@ -1262,13 +1262,13 @@ color: rgb(124, 115, 106);
 		<div id="" style="background-color: black;" class="test-foot">
 			<p id="NIE-copyRight-corp"
 				style="width: 100%; text-align: center; margin: 0 auto; padding: 15px 0 0 0; font-size: 12px; font-family: &amp; amp; #39; 宋体 &amp;amp; #39;; line-height: 20px; display: block; position: relative; color: #7c736a;">
-				<span
+				<!-- <span
 					style="position: relative; vertical-align: top; top: 4px; display: inline-block; position: relative;">
 					<a href="http://www.vanggame.com/" target="_blank"
 					style="width: 220px; height: 64px; display: inline-block; cursor: pointer; background: url(../img/imgz/logo.png) no-repeat"></a>
-				</span> <span
+				</span> --> <span
 					style="text-align: left; display: inline-block; padding-left: 6px;">
-					<span id="ncp-l1"> 萬家遊戲版權所有 Copyright@2016 中國網絡遊戲版權保護聯盟舉報中心</span><a
+					<span id="ncp-l1"> 版權所有 Copyright@2016 中國網絡遊戲版權保護聯盟舉報中心</span><a
 					href="http://www.miitbeian.gov.cn/"> 閩南B2-20040096-20</a>
 					&nbsp;&nbsp;&nbsp;&nbsp;<br> <span id="ncp-l2">抵制不良遊戲&nbsp;拒絕盜版遊戲&nbsp;注意自我保護&nbsp;謹防受騙上當&nbsp;<br>適當遊戲益腦&nbsp;沉迷遊戲傷身&nbsp;合理安排遊戲時間&nbsp;享受健康生活
 				</span><br>

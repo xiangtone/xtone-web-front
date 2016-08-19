@@ -1140,17 +1140,17 @@ a.NIE-topBar-btn:hover {
 	overflow: hidden;
 	_width: 1200px;
 	margin: 0 auto;
-	height: 670px;
+	height: 100%;
 }
 
 
 
-	.wrap1 {
+/* 	.wrap1 {
 	overflow: hidden;
 	_width: 1200px;
 	margin: 0 auto;
-	height: 865px;
-}
+	height: 100%;
+} */
 .download--qq1 {
 	position: absolute;
 	top: 573px;
@@ -1233,12 +1233,13 @@ a.NIE-topBar-btn:hover {
 			function show(){
 				var width= document.body.clientWidth; 
 				if (width>1500){
-					$("#wrap").removeClass("wrap");
-					$("#wrap").addClass("wrap1");
+					/* $("#wrap").removeClass("wrap");
+					$("#wrap").addClass("wrap1"); */
 					$("#page").removeClass("page");
 					$("#page").addClass("page1");	
 					$("#li").removeClass("li");
-					$("#li").addClass("li1");	
+					$("#li").addClass("li1");
+					$()
 				}		
 			}
 			window.onload=show;show();
@@ -1490,23 +1491,23 @@ a.NIE-topBar-btn:hover {
 		</div>
 
 	</div>
-	<div id="NIE-copyRight" style="margin-top: 0px;">
+	 <div id="NIE-copyRight" style="margin-top: 0px;">
 		<p id="NIE-copyRight-corp"
 			style=" text-align: center; margin: 12px auto; font-size: 12px; font-family: &amp; #39; 宋体 &amp;#39;; line-height: 20px; display: block;color:#7c736a;">
-			<span
+			<!-- <span
 				style="position: relative; vertical-align: top; top: 4px; display: inline-block; position: relative;">
 				<a href="http://www.vanggame.com/" target="_blank"
 				style="width: 220px; height: 64px; display: inline-block; cursor: pointer; background: url(img/imgz/logo.png) no-repeat"></a>
-			</span> <span
+			</span> --> <span
 				style="text-align: left; display: inline-block; padding-left: 6px;">
-				<span id="ncp-l1"> 萬家遊戲版權所有 Copyright@2016 中國網絡遊戲版權保護聯盟舉報中心</span><a
+				<span id="ncp-l1"> 版權所有 Copyright@2016 中國網絡遊戲版權保護聯盟舉報中心</span><a
 				href="http://www.miitbeian.gov.cn/"> 閩南B2-20040096-20</a>
 				&nbsp;&nbsp;&nbsp;&nbsp;<br> <span id="ncp-l2">抵制不良遊戲&nbsp;拒絕盜版遊戲&nbsp;注意自我保護&nbsp;謹防受騙上當&nbsp;<br>適當遊戲益腦&nbsp;沉迷遊戲傷身&nbsp;合理安排遊戲時間&nbsp;享受健康生活
 			</span><br>
 			</span>
 
 		</p>
-	</div>
+	</div> 
 
 
 
