@@ -28,7 +28,6 @@
 	 background-size: 100%; 
 	 position: absolute;
 	 margin:0;
-	 padding:0;
 	}
 </style>
 </head>
