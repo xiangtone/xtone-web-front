@@ -9,13 +9,12 @@
 </head>
 <body>
 	<c:forEach var="me" items="${fileNameMap}">
-	<c:url value="/DownLoadServlet" var="downurl">
-	<a href="${downurl}">下载</a>
-	<c:param name="filename" value="${me.key}"></c:param>
-	</c:url>
-	${me.value}<a href="${downurl}">下载</a>
-	<br/>
-	</c:forEach>
+        <c:url value="/DownLoadServlet" var="downurl">
+             <c:param name="filename" value="${me.key}"></c:param>
+        </c:url>
+         ${me.value}<a href="${downurl}">下载</a>
+         <br/>
+    </c:forEach>
 	<a href="message.jsp">返回</a>
 </body>
 </html>
