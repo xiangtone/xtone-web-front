@@ -208,7 +208,7 @@
 							e.printStackTrace();
 						}
 						%>
-						<font color="#8f8f8f" ><%=title%>......</font>
+						<font color="#8f8f8f" >&nbsp;&nbsp;<%=title%>......</font>
 					</div>
 					<div class="col-md-12 col-sm-12 col-xs-12">
 						<a	
