@@ -1228,7 +1228,7 @@ color: rgb(124, 115, 106);
 					<!-- <a href = "material.jsp?curPage=1" >首页</a> -->
 					
 						<%if(curPage>=2){%>
-					<a id="a1" href = "first.jsp?curPage=<%=curPage-1%>" >上壹頁</a>
+					<a id="a1" href = "material.jsp?curPage=<%=curPage-1%>" >上壹頁</a>
 						<%}else if(curPage==1){ %>
 						<a href = "javascript:;" onclick="alert('已經是第壹頁了')" >上壹頁</a>
 						<%} %>
@@ -1236,7 +1236,7 @@ color: rgb(124, 115, 106);
 						<<%=curPage%>>
 						<%} %>
 						<%if(curPage<pageCount){ %>
-					<a id="a2" href = "first.jsp?curPage=<%=curPage+1%>" >下壹頁</a>
+					<a id="a2" href = "material.jsp?curPage=<%=curPage+1%>" >下壹頁</a>
 						<%} else if(curPage==pageCount){%>
 						<a href = "javascript:;" onclick="alert('已經是最後壹頁了')">下壹頁</a>
 						<%} %>
