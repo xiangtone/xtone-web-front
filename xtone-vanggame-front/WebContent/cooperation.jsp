@@ -22,6 +22,10 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 <!-- <script>!function(e,t,a,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(a),s=t.getElementsByTagName(a)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-146052-10","getbootstrap.com"),ga("send","pageview");</script> -->
 <style>
+@font-face { 
+  font-family:pictos; 
+  src:url('css/zaozi.OTF'); 
+} 
 .newsli {
 	border-bottom: #e1e1e0 solid 1px;
 	padding-top: 15px;
@@ -82,18 +86,18 @@
 		<jsp:include page="top.html"></jsp:include>
 	</header>
 	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding">
-		<img src="images/cooperation/banner_business.jpg" class="bsimg">
+		<img src="images/cooperation/banner_business.PNG" class="bsimg">
 	</div>
-	<div class="bs-docs-featurette" style="background: #f1f1f1">
-		<div class="container ztgs">
+	<div class="bs-docs-featurette" style="background: #fff">
+		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-sm-12 col-xs-12 nopadding">
 					<a href="#"><img src="images/cooperation/business.png"
 						class="bsimg tab"></a>
 				</div>
-				<div class="col-md-12 col-sm-12 col-xs-12 artText">
+				<div class="col-md-12 col-sm-12 col-xs-12 artText1">
 					<div class="col-md-12 col-sm-12 col-xs-12">
-						<font style="font-size: 18px;" class="content-size">
+						<font style="font-size: 16px; " color="#8f8f8f"; class="content-size">
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;万家游戏专注于手机游戏的研发和发行，总部设在杭州，并在北京、上海、深圳等地成立分公司。拥有丰富的游戏发行和运营经验，为品牌的持续发展打下了坚实的基础。目前，万家游戏已拥有雄厚的资本实力、强大的研发能力、熟稔的运营能力、完善精湛的技术支持能力、人性化的客户服务能力，以及强大的销售能力，未来我们还将继续努力，共同为万家文化发展成“亚文化第一股”的目标而奋斗。
 							<br>
 						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中，商务合作是万家游戏发展壮大的重要途径之一。在经历了近年的探索和发展以后，不但获得了十分有效可观的合作成果，还沉淀了一套专业规范的游戏发行和运营模式。万家游戏愿意与全球的优秀渠道合作，通过资源互换的方式，整合双方的优势，达到共赢的目的，为游戏爱好者提供最高品质的网络娱乐产品和体验。
@@ -102,29 +106,29 @@
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12 artText">
 					<div class="col-md-12 col-sm-12 col-xs-12">
-						<img src="images/cooperation/call.png" class="titleimg">
-						<p class="title">产品接入</p>
+						<img src="images/cooperation/call1.png" class="titleimg">
+						<!--<p class="title">产品接入</p>-->
 					</div>
 					<div class="col-md-12 col-sm-12 col-xs-12">
-						联系人:韦先生<br>QQ: 6595191<br>邮箱:weizy@bjxiangtone.com&nbsp;&nbsp;<br>联系电话:18682058727
-					</div>
-				</div>
-				<div class="col-md-12 col-sm-12 col-xs-12 artText">
-					<div class="col-md-12 col-sm-12 col-xs-12">
-						<img src="images/cooperation/call.png" class="titleimg">
-						<p class="title">渠道发行</p>
-					</div>
-					<div class="col-md-12 col-sm-12 col-xs-12">
-						联系人:陈小姐<br>QQ: 1113837295<br>邮箱:chenxin@bjxiangtone.com&nbsp;&nbsp;<br>联系电话:13632643990
+						<font style="font-size: 16px;font-family:pictos;" color="#8f8f8f";>联系人:韦先生<br>QQ: 6595191<br>邮箱:weizy@bjxiangtone.com&nbsp;&nbsp;<br>联系电话:18682058727</font>
 					</div>
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12 artText">
 					<div class="col-md-12 col-sm-12 col-xs-12">
-						<img src="images/cooperation/call.png" class="titleimg">
-						<p class="title">市场活动</p>
+						<img src="images/cooperation/call2.png" class="titleimg">
+						<!-- <p class="title">渠道发行</p> -->
 					</div>
 					<div class="col-md-12 col-sm-12 col-xs-12">
-						联系人:张小姐<br>QQ:355975399<br>邮箱:zhangliang@bjxiangtone.com&nbsp;&nbsp;<br>联系电话:18670747388
+						<font style="font-size: 16px;font-family:pictos;" color="#8f8f8f";>联系人:陈小姐<br>QQ: 1113837295<br>邮箱:chenxin@bjxiangtone.com&nbsp;&nbsp;<br>联系电话:13632643990</font>
+					</div>
+				</div>
+				<div class="col-md-12 col-sm-12 col-xs-12 artText">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<img src="images/cooperation/call3.png" class="titleimg">
+						<!--<p class="title">市场活动</p> -->
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<font style="font-size: 16px;font-family:pictos;" color="#8f8f8f";>联系人:张小姐<br>QQ:355975399<br>邮箱:zhangliang@bjxiangtone.com&nbsp;&nbsp;<br>联系电话:18670747388</font>
 					</div>
 				</div>
 				<!-- 				<div class="col-md-12 col-sm-12 col-xs-12 text-padding"> -->

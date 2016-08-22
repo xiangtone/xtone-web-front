@@ -17,6 +17,7 @@ public class Content {
 	private String timeStr;
 	private String subTitle;
 	private int priority;
+	private String timeStr1;
 	public Content() {
 		super();
 	}
@@ -129,7 +130,7 @@ public class Content {
 	}
 
 	public void setTimeStr(Long time) {
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
 		this.timeStr = sdf.format(time);
 	}
 

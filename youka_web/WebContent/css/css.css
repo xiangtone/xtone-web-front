@@ -1,0 +1,91 @@
+#news_superiority {
+	display: block;
+	width: 902px;
+	height: 340px;
+	margin: 20px auto 0px auto;
+}
+#news_superiority #news-index {
+	width: 590px;
+	height: 340px;
+	float: left;
+}
+#news_superiority #news-index .title {
+	background: url(../images/web/news-title_index.jpg) no-repeat 5px center;
+	width: 550px;
+	height: 50px;
+	text-align: right;
+	padding-right: 40px;
+ *padding-left: 320px;
+	_padding-left: 300px;
+ *width: 210px;
+	_width: 210px;
+}
+#news_superiority #news-index .title li {
+	display: inline-block;
+ *display: block;
+ *float: left;
+	_display: block;
+	_float: left;
+	margin-top: 15px;
+	width: 80px;
+}
+#news_superiority #news-index .title li.current a {
+	color: #d12121;
+	font-weight: bold;
+	background: url(../images/web/news-current-bg_index.jpg) repeat-x center bottom;
+}
+#news_superiority #news-index .title a {
+	font-family: "Î¢ÈíÑÅºÚ";
+	font-size: 14px;
+	color: #333333;
+	display: block;
+	text-align: center;
+	height: 36px;
+	line-height: 36px;
+	margin: 0px 10px 0px 10px;
+	padding: 0px;
+}
+#news_superiority #news-index .title_shadow {
+	background: url(../images/web/news-title-bg_index.jpg) no-repeat left bottom;
+	width: 590px;
+	height: 21px;
+}
+#news_superiority #news-index .con {
+	position: relative;/*±ØÒªÔªËØ*/
+	height: 275px;
+	overflow: hidden;
+}
+#news_superiority #news-index .con .box {
+	position: absolute;
+	width: 570px;
+	margin-right: 20px;
+	text-align: left;
+	padding: 0px;
+	left: 0;
+}
+#news_superiority #news-index .con .list {
+	width: 570px;
+	height: 272px;
+}
+#news_superiority #news-index .list a {
+	background: url(../images/web/news-arr_index.jpg) no-repeat;
+	background-position: 3px 0px;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px dotted #dddddd;
+	color: #333333;
+}
+#news_superiority #news-index .list a .heading {
+	font-family: "Î¢ÈíÑÅºÚ";
+	font-size: 13px;
+	width: 450px;
+	padding-left: 20px;
+}
+#news_superiority #news-index .list a .time {
+	text-align: center;
+	color: #cccccc;
+	font-size: 11px;
+	width: 100px;
+	font-family: Arial, Helvetica, sans-serif;
+}

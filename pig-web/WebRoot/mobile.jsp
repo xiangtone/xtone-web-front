@@ -156,19 +156,19 @@
 		<div align="center" class="block block-share xdshare"
 			style="font-weight: bold; height: 100%; color: white;">
 			
-			<br /> 版權所有：深圳創世互動科技有限公司<br />
-			<br /> <input value="客服郵箱：zhuoqx@vangame.com" type="text" readOnly="true"
+			<!-- <br /> --> <!-- 版權所有：深圳創世互動科技有限公司 <br />-->
+			<br /> <input value="客服郵箱：zhuoqx@vanggame.com" type="text" readOnly="true"
 				style="width:100%;text-align: center; color: white; font-family: 'Arial,sans-serif'; font-weight: bold; background-color: #271d20; color: white;" /><br />
 			<br /> 
-			<input value="ICP備案號：粵ICP備12058124號" type="text" readOnly="true"
-				style="width:100%;text-align: center; color: white; font-family: 'Arial,sans-serif'; font-weight: bold; background-color: #271d20; color: white;" />
+			<!-- <input value="ICP備案號：粵ICP備12058124號" type="text" readOnly="true"
+				style="width:100%;text-align: center; color: white; font-family: 'Arial,sans-serif'; font-weight: bold; background-color: #271d20; color: white;" /> -->
 			
 			<!--     <p>分享到：</p> -->
 			<!--     <p class="text-center"><span class="font-icon" data-share="sina">e</span><span class="font-icon" data-share="qweibo">c</span></p> -->
 			<!--         <p class="text-center">独乐乐不如众乐乐</p> -->
 			<!--     <p class="text-center">动动手指，大家一起《梦想昆仑》</p> -->
 			<a href="#" class="font-icon-a go-top"
-				style="margin-top: 9%; color: white;">返回頂部</a>
+				style="margin-top: 4%; color: white;">返回頂部</a>
 			<!--     <a href="http://www.xd.com" class="logo-xd hide-text">心动游戏</a> -->
 			<!--    <p class="site-info"><span class="xd-site-copyright">Copyright&nbsp;&nbsp;©2016&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;xd.com</span><span class="xd-wwybz">&nbsp;&nbsp;</span> <span class="xd-site-name">万家文化</span></p>  -->
 		</div>
