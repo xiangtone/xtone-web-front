@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
+<%@page import="java.sql.*"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="org.vanggame.info.Content"%>
+<%@page import="org.common.util.ConnectionService"%>
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -103,7 +108,7 @@ color: #aaaaaa;
     border: 1px solid #9e9e9e;
     -moz-border-radius: 15px; 
     -webkit-border-radius: 15px; 
-    border-radius:15px;           
+    border-radius:23px;           
 }
 .xx{
 	width:100%;
@@ -119,7 +124,16 @@ color: #aaaaaa;
 .rt{
 	padding:0px 9px 0px 9px;
 }
+ 
 
+.pageNum{
+	width:100%;
+	height:50px;
+	text-align:center;
+	margin-top:20px;
+	float:left;
+}
+ 
 </style>
 </head>
 <body class="bs-docs-home">
@@ -141,368 +155,105 @@ color: #aaaaaa;
 				</div>
 				
 				
-				<div class="col-md-12 col-sm-12 col-xs-12 content ztgs rt">
-				<div class="col-md-12 col-sm-12 col-xs-12 content ztgs bg ">		
+				<div class="col-md-12 col-sm-12 col-xs-12 content ztgs rt ">
+				<div class="col-md-12 col-sm-12 col-xs-12 content ztgs bg " >
+					<%!
+						
+			
+						public static final int PAGESIZE = 8;
+						int pageCount;
+						int curPage = 1;%>
+							<%
+							Connection con = null;
+							PreparedStatement ps = null;
+							ResultSet rs = null;
+								Content news = new Content();
+								//一页放5个
+								String user = null;
+								String pass = null;
+								try {
+									/* Class.forName(DRIVER); */
+									
+									/* Connection con = DriverManager.getConnection(URL, USER, PASS); */
+									con = ConnectionService.getInstance().getConnectionForLocal();
+									String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` ,`subTitle` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%job%' AND `status`=1 ";
+									ps = con.prepareStatement(sql, ResultSet.TYPE_FORWARD_ONLY,
+											ResultSet.CONCUR_READ_ONLY);
+									rs = ps.executeQuery();
+									rs.last();
+									int size = rs.getRow();
+									pageCount = (size % PAGESIZE == 0) ? (size / PAGESIZE) : (size / PAGESIZE + 1);
+									String tmp = request.getParameter("curPage");
+									if (tmp == null) {
+										tmp = "1";
+									}
+									curPage = Integer.parseInt(tmp);
+									if (curPage >= pageCount)
+										curPage = pageCount;
+									boolean flag = rs.absolute((curPage - 1) * PAGESIZE + 1);
+									/* out.println(curPage); */
+									int count = 0;
+
+									do {
+										if (count >= PAGESIZE)
+											break;
+										news.setAddTime(rs.getLong("lastModifyTime"));
+										SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+										String timeStr = sdf.format(news.getAddTime());
+										int id = rs.getInt(1);
+										String title = rs.getString(2);
+										String lastModifyTime = rs.getString(3);
+										String subTitle = rs.getString(5);
+										count++;
+										
+							%>	
 					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
 					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">国内商务经理</p>						
+						 <p class="title"><%=title%></p>						
 					</div>
 					<div class="col-md-2 col-sm-3 col-xs-5 ck">
 						<!-- <input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn"> -->
 						<a href="shzp1.html"><img src="images/about-us/ckxq.png"></a>
 					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
+					<div class="col-md-3 col-sm-4 col-xs-12 nei" style="width:100%">&nbsp;&nbsp;&nbsp;&nbsp;<%=subTitle%></div>
+					<!-- <div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
 					<div class="col-md-3 col-sm-4 col-xs-12 nei">
 					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">资深游戏特效设计师</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<!-- <input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn"> -->
-						<a href="shzp2.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：上海杨浦区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">运维工程师</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<!-- <input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn"> -->
-						<a href="shzp3.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">高级软件工程师</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<!-- <input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn"> -->
-						<a href="shzp4.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">游戏策划</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<!-- <input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn"> -->
-						<a href="shzp5.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：上海杨浦区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">运营经理</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<!-- <input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn"> -->
-						<a href="shzp6.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：广州天河区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx1">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">手游运营专用</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<!-- <input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn"> -->
-						<a href="shzp7.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：广州天河区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					<!-- 
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">国内商务经理</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn">
-						<a href="shzp1.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">国内商务经理</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn">
-						<a href="shzp1.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">国内商务经理</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn">
-						<a href="shzp1.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">国内商务经理</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn">
-						<a href="shzp1.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">国内商务经理</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn">
-						<a href="shzp1.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">国内商务经理</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn">
-						<a href="shzp1.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">国内商务经理</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn">
-						<a href="shzp1.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">国内商务经理</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn">
-						<a href="shzp1.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">国内商务经理</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn">
-						<a href="shzp1.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">国内商务经理</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn">
-						<a href="shzp1.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">国内商务经理</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn">
-						<a href="shzp1.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">国内商务经理</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn">
-						<a href="shzp1.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">国内商务经理</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn">
-						<a href="shzp1.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">国内商务经理</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn">
-						<a href="shzp1.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">国内商务经理</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn">
-						<a href="shzp1.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">国内商务经理</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn">
-						<a href="shzp1.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
-					</div>
-					
-					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx1">
-					<div class="col-md-100 col-sm-9 col-xs-7">
-						 <p class="title">国内商务经理</p>						
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
-						<input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn">
-						<a href="shzp1.html"><img src="images/about-us/ckxq.png"></a>
-					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作地点：深圳南山区</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
-					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
-					</div>
 					</div> -->
+			
+					</div>
+					
+							<%
+			} 
+				while (rs.next());
+				con.close();
+			} catch (Exception e) {
+
+			}
+		%>
+					<div class="pageNum" >
+					<!-- <a href = "material.jsp?curPage=1" >首页</a> -->
+					
+						<%if(curPage>=2){%>
+					<a id="a1" href = "join-us-shzp.jsp?curPage=<%=curPage-1%>" >上壹頁</a>
+						<%}else if(curPage==1){ %>
+						<a href = "javascript:;" onclick="alert('已經是第壹頁了')" >上壹頁</a>
+						<%} %>
+						<%if(curPage!=0){ %>
+						<<%=curPage%>>
+						<%} %>
+						<%if(curPage<pageCount){ %>
+					<a id="a2" href = "join-us-shzp.jsp?curPage=<%=curPage+1%>" >下壹頁</a>
+						<%} else if(curPage==pageCount){%>
+						<a href = "javascript:;" onclick="alert('已經是最後壹頁了')">下壹頁</a>
+						<%} %>
+					<%-- <a href = "material.jsp?curPage=<%=pageCount%>" >尾页</a>
+					第<%=curPage%>页/共<%=pageCount%>页 --%>
 				</div>
+					
+				</div>
+				
+				 
 				</div>
 				
 				<div class="col-md-12 col-sm-12 col-xs-12 bottom-hieght"></div>
