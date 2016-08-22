@@ -111,7 +111,7 @@
 	<div class="bs-docs-featurette" style="background: #f1f1f1">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 col-sm-12 col-xs-12 nopadding">
+				<div class="col-md-12 col-sm-12 col-xs-12 nopadding" style="padding:0px;">
 					<a href="news.jsp"><img src="images/news/news.png"
 						class="bsimg tab"></a>
 				</div>
