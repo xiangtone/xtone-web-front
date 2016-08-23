@@ -1,3 +1,4 @@
+<%@page import="com.lyxm.wechat.Wechat"%>
 <%@page import="com.lyxm.info.Message"%>
 <%@page import="com.google.gson.Gson"%>
 <%@page import="com.lyxm.util.CheckLoad"%>
@@ -9,14 +10,12 @@ try{
 phone = (String)session.getAttribute("id");}catch(Exception ex){
 	ex.printStackTrace(); 
 }
-if(phone==null){
-	
-	response.sendRedirect("mobile.jsp");
-}
+String ticket = Wechat.getTicketFromloc();
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<div id="ticket" style="display:none;"><%=ticket %></div>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-9">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -31,6 +30,101 @@ if(phone==null){
 
 <link rel="stylesheet" href="css/main.css">
 <script src="js2/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="js/sha1.js"></script>
+<script type="text/javascript">
+var plc = '<<灵域仙魔>> ';
+var strAry =[plc+' 我已经预约灵域仙魔了，兄弟快来与我一起战斗吧！',plc+' 预约灵域仙魔，用你的洪荒之力助我一战！',plc+' 我已预约灵域仙魔，I want you，加入我的仙盟吧！',plc+' 这波不亏，我已预约灵域仙魔，不明真相的观众请点我！',plc+' 陪我玩灵域仙魔吧，点一下又不会怀孕！'];
+var index = Math.floor(Math.random()*5);
+
+ var href = window.location.href
+  var ticket = document.getElementById('ticket').innerText;  
+  var timestamp = new Date().getTime();
+  var str = 'jsapi_ticket='+ticket+'&noncestr=Wm3WZYTPz0wzccnW&timestamp='+timestamp+'&url=http://lyxm.xtonegame.com/share.jsp';
+  var signature = hex_sha1(str);
+
+
+wx.config({
+    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+    appId: 'wx26d9b9ff5f0fc4ed', // 必填，公众号的唯一标识
+    timestamp: timestamp, // 必填，生成签名的时间戳
+    nonceStr: 'Wm3WZYTPz0wzccnW', // 必填，生成签名的随机串
+    signature: signature,// 必填，签名，见附录1
+    jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareQZone'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+});
+
+wx.ready(function(){
+	wx.onMenuShareTimeline({
+	    title: strAry[index], // 分享标题
+	    link: 'http://lyxm.xtonegame.com/mobile.jsp', // 分享链接
+	    imgUrl: 'http://lyxm.xtonegame.com/images/300x300.png', // 分享图标
+	    success: function () { 
+	        // 用户确认分享后执行的回调函数
+	    },
+	    cancel: function () { 
+	    	index = Math.floor(Math.random()*5);
+	        this.title = strAry[index];
+	    }
+	});
+
+
+	wx.onMenuShareAppMessage({
+	    title: '灵域仙魔', // 分享标题
+	    link: 'http://lyxm.xtonegame.com/mobile.jsp', // 分享链接
+	    desc: strAry[index], 
+	    imgUrl: 'http://lyxm.xtonegame.com/images/300x300.png', // 分享图标
+	    type: '', // 分享类型,music、video或link，不填默认为link
+	    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+	    success: function () { 
+	        // 用户确认分享后执行的回调函数
+	    },
+	    cancel: function () { 
+	    	index = Math.floor(Math.random()*5);
+	        this.desc = strAry[index];
+	    }
+	});
+	wx.onMenuShareQQ({
+	    title: '灵域仙魔', // 分享标题
+	    desc:strAry[index], // 分享描述
+	    link: 'http://lyxm.xtonegame.com/mobile.jsp', // 分享链接
+	    imgUrl: 'http://lyxm.xtonegame.com/images/300x300.png', // 分享图标
+	    success: function () { 
+	       // 用户确认分享后执行的回调函数
+	    },
+	    cancel: function () { 
+	    	index = Math.floor(Math.random()*5);
+	        this.desc = strAry[index];
+	    }
+	});
+
+	wx.onMenuShareQZone({
+	    title: '灵域仙魔', // 分享标题
+	    desc: strAry[index], // 分享描述
+	    link: 'http://lyxm.xtonegame.com/mobile.jsp', // 分享链接
+	    imgUrl: 'http://lyxm.xtonegame.com/images/300x300.png', // 分享图标
+	    success: function () { 
+	       // 用户确认分享后执行的回调函数
+	    },
+	    cancel: function () { 
+	        // 用户取消分享后执行的回调函数
+	    	index = Math.floor(Math.random()*5);
+	        this.desc = strAry[index];
+	    }
+	});
+    // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+});
+
+wx.error(function(res){
+    alert('失败,请检查token或者ticket是否失效')
+    // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+
+});
+
+
+
+
+
+</script>
 <title>灵域仙魔</title>
 <style type="text/css">
 	body{

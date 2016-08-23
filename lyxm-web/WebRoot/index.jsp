@@ -537,6 +537,13 @@
 						<div class="tt20"><a target="_blank" class="links" href="http://www.yoyou.com/">优游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a target="_blank" class="links" href="http://game.91.com/">91手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a target="_blank" class="links" href="http://game.hiapk.com/">安卓游戏</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://shouyou.kuai8.com/">快吧手机游戏</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.wanyx.com/">玩游戏网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.xiaopi.com/">小皮游戏</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.336yx.com">336游戏网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.15153.com">15153手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.woyoo.com">沃游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						
 	
 	
 					</div>
