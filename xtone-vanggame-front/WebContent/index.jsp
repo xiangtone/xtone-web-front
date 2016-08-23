@@ -291,7 +291,7 @@
 	<div id="myCarousel" class="carousel slide" data-ride="carousel"
 		data-interval="5000">
 		<!-- 轮播（Carousel）指标 -->
-		<ol class="carousel-indicators">
+		<ol class="carousel-indicators" style="width:30%;">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 			<li data-target="#myCarousel" data-slide-to="1"></li>
 			<li data-target="#myCarousel" data-slide-to="2"></li>
@@ -348,7 +348,7 @@
 					
 					<div class="col-md-8-1 col-sm-12 col-xs-12 nopadding ztgs"
 						>
-						<ul class="" style="margin-right: -10px; margin-bottom: 0px;">
+						<ul class="" style="margin-right: -10px; margin-bottom: 5px;width:100%;">
 							<%
 								for (Content news : list) {
 							%>
