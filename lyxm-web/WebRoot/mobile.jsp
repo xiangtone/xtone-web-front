@@ -1,3 +1,4 @@
+<%@page import="com.lyxm.wechat.Wechat"%>
 <%@page import="com.lyxm.info.Message"%>
 <%@page import="com.google.gson.Gson"%>
 <%@page import="org.common.util.ConnectionService"%>
@@ -29,7 +30,8 @@ if(application.getAttribute("count")==null){
     application.setAttribute("count",count);  
     CountFileHandler.writeFile(request.getRealPath("/")+"count.txt",count);//更新文件记录
     
-    
+  //ticket
+  String ticket = Wechat.getTicketFromloc();
     %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -54,7 +56,27 @@ if(application.getAttribute("count")==null){
 <link rel="stylesheet" href="css/main.css">
 <script src="js2/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="js/sha1.js"></script>
 <script type="text/javascript">
+window.onload=function(){ 
+  var ticket = document.getElementById('ticket').innerText;  
+  var timestamp = new Date().getTime();
+  var str = 'jsapi_ticket='+ticket+'&noncestr=Wm3WZYTPz0wzccnW&timestamp='+timestamp+'&url=http://lyxm.xtonegame.com/mobile.jsp';
+  var signature = hex_sha1(str);
+
+
+wx.config({
+    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+    appId: 'wx26d9b9ff5f0fc4ed', // 必填，公众号的唯一标识
+    timestamp: timestamp, // 必填，生成签名的时间戳
+    nonceStr: 'Wm3WZYTPz0wzccnW', // 必填，生成签名的随机串
+    signature: signature,// 必填，签名，见附录1
+    jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+});
+
+
+
+
 wx.onMenuShareTimeline({
     title: 'dffdfdfdf', // 分享标题
     link: 'www.baidu.com', // 分享链接
@@ -67,6 +89,23 @@ wx.onMenuShareTimeline({
     }
 });
 
+
+wx.onMenuShareAppMessage({
+    title: 'fh', // 分享标题
+    desc: 'dhdhdh', // 分享描述
+    link: 'dhdhd', // 分享链接
+    imgUrl: '', // 分享图标
+    type: '', // 分享类型,music、video或link，不填默认为link
+    dataUrl: 'www.baidu.com', // 如果type是music或video，则要提供数据链接，默认为空
+    success: function () { 
+        // 用户确认分享后执行的回调函数
+    },
+    cancel: function () { 
+        // 用户取消分享后执行的回调函数
+    }
+});
+
+}
 </script>
 <title>灵域仙魔</title>
 <style>
@@ -317,7 +356,7 @@ a:hover{text-decoration:none;}
 	}
 </style>
 </head>
-<body>
+<body><div id="ticket" style="display:none;"><%=ticket %></div>
 <div id="dianji" style="width:80%;height:80%;position:absolute;z-index:10000;display:none;">
 <img style="width:30%;margin-left:60%;margin-top:2%;" src="mobileimg\jiantou.png"></img>
 <div style="text-align:center;margin-top:50px;font-family:'微软雅黑';color:#ffffff;font-size:20px;font-weight: light;">
