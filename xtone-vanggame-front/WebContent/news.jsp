@@ -194,7 +194,7 @@
 							</div> --%>
 						</div>
 						<div class="col-md-12 col-sm-12 col-xs-12 nopadding">
-							<div class="col-md-3 col-sm-3 col-xs-3 nopadding">
+							<div class="col-md-3 col-sm-3 col-xs-3 nopadding" style="width:50%;">
 								<small class="content-time"><%=news.getTimeStr()%></small>
 							</div>
 						</div>
