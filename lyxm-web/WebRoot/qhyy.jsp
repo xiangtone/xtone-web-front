@@ -337,7 +337,7 @@ a:hover{text-decoration:none;}
 			<div class="yy_b_btn1 sp pa" style="margin-left:40px;margin-bottom:20px;">
             <table><tr>
 			<td><img src="images/xian_left.png";border=0;height=68px;width=140px></td>
-			<td><img src="images/sep_first.png"></td>
+			<td><img src="images/shiyueshoufa.png"></td>
 			<td><img src="images/xian_right.png" border=0;padding-left=20px></td>
 			</tr>
 			</table>
