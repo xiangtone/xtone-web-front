@@ -1330,7 +1330,7 @@ a.NIE-topBar-btn:hover {
 							
 							
 							<a style="color:white;font-size:15px;"
-							href="view/content.jsp?id=<%=news.getId()%>" target="_blank"
+							href="view/content.jsp?id=<%=news.getId()%>" 
 							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white;font-size:15px;padding-right:10%;">[<%=timeStr%>]
 						</font></li>
 						<%
@@ -1375,7 +1375,7 @@ a.NIE-topBar-btn:hover {
 								%>
 						<li ><a href="#" class="tit" data="0" style="color:white;font-size:15px;"
 							title="<%=news.getTitle()%>"><%=catalog%></a> <a style="color:white;font-size:15px;"
-							href="view/content.jsp?id=<%=news.getId()%>" target="_blank"
+							href="view/content.jsp?id=<%=news.getId()%>" 
 							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white;font-size:15px;padding-right:10%;">[<%=timeStr%>]
 						</font></li>
 						<%
@@ -1420,7 +1420,7 @@ a.NIE-topBar-btn:hover {
 								%>
 						<li ><a href="#" class="tit" data="0" style="color:white;font-size:15px;"
 							title="<%=news.getTitle()%>"><%=catalog%></a> <a style="color:white;font-size:15px;"
-							href="view/content.jsp?id=<%=news.getId()%>" target="_blank"
+							href="view/content.jsp?id=<%=news.getId()%>" 
 							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white;font-size:15px;padding-right:10%;">[<%=timeStr%>]
 						</font></li>
 						<%
@@ -1464,7 +1464,7 @@ a.NIE-topBar-btn:hover {
 								%>
 						<li "><a href="#" class="tit" data="0" style="color:white;font-size:15px;
 							title="<%=news.getTitle()%>"><%=catalog%></a> <a style="color:white;font-size:15px;"
-							href="view/content.jsp?id=<%=news.getId()%>" target="_Blank"
+							href="view/content.jsp?id=<%=news.getId()%>" 
 							title="<%=news.getTitle()%>"><%=title%></a> <font style="color:white;font-size:15px; padding-right:10%;">[<%=timeStr%>]
 						</font></li>
 						<%
