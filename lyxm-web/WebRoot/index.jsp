@@ -502,7 +502,9 @@
             
             
             <div class="h_30"></div>
+            
         </div>
+        
 	<!--微信二维码浮框-->
         <div class="fr_wx" style="position: fixed;left:50%;margin-left:600px;bottom:200px;z-index: 20  ">
             <div class="fr_ewm_wx">
@@ -510,10 +512,7 @@
         </div>
         <div class="clearit"></div>
     </div>
-    <div class="clearit"></div>
-    
-    
-    <div class="bs-docs-featurette bottom-hieght">
+      <div class="bs-docs-featurette bottom-hieght">
 			<div class="container">
 				<div class="row home-padding">
 					<div class="col-md-12 col-sm-12 col-xs-12 nopadding title">
@@ -521,8 +520,31 @@
 							<img src="images/links.png">
 						</div>
 					</div>
-					<div style="background-color: rgb(250, 250, 250); padding: 22px; text-align: center;" class="col-md-12 col-sm-12 col-xs-12 nopadding ztgs">
-						<div class="tt20"><a target="_blank" class="links" href="http://www.17huang.com/">一起晃手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+					<div id="links" style="background-color: rgb(250, 250, 250); padding: 22px; text-align: center; height:auto;overflow:;" class="col-md-12 col-sm-12 col-xs-12 nopadding ztgs">
+				<script type="text/javascript">
+		         $(function(){
+
+                      $.ajax({
+                          type: "GET",
+                          url: "Link",
+                          data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
+                          dataType: "json",
+                          success: function(data){
+                                      //$('#resText').empty();   //清空resText里面的所有内容
+                                      var html = '';
+                                      $.each(data, function(commentIndex, comment){
+                                   
+                                          html+='<div class="tt20"><a target="_blank" class="links" href="'+ 
+                                                 comment['subTitle']+'">'+comment['title']+'</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>';
+                                      })
+                                      $('#links').html(html);
+                          }
+                      })
+
+             })
+             </script>
+					
+						<!-- <div class="tt20"><a target="_blank" class="links" href="http://www.17huang.com/">一起晃手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a target="_blank" class="links" href="http://www.bianwanjia.com">便玩家手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a target="_blank" class="links" href="http://www.youxiwangguo.com/">游戏王国</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a target="_blank" class="links" href="http://www.shouyoubus.com/">手游巴士</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -537,20 +559,26 @@
 						<div class="tt20"><a target="_blank" class="links" href="http://www.yoyou.com/">优游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a target="_blank" class="links" href="http://game.91.com/">91手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<div class="tt20"><a target="_blank" class="links" href="http://game.hiapk.com/">安卓游戏</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a target="_blank" class="links" href="http://shouyou.kuai8.com/">快吧手机游戏</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a target="_blank" class="links" href="http://www.wanyx.com/">玩游戏网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a target="_blank" class="links" href="http://www.xiaopi.com/">小皮游戏</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a target="_blank" class="links" href="http://www.336yx.com">336游戏网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a target="_blank" class="links" href="http://www.15153.com">15153手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						<div class="tt20"><a target="_blank" class="links" href="http://www.woyoo.com">沃游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-						
-	
+						<div class="tt20"><a target="_blank" class="links" href="http://www.17huang.com/">一起晃手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.bianwanjia.com">便玩家手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.youxiwangguo.com/">游戏王国</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.shouyoubus.com/">手游巴士</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.app178.com/">APP178手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.ppswan.com/">PPSWAN手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+					    <div class="tt20"><a target="_blank" class="links" href="http://www.shouyouya.com/">手游呀</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.9669.com/">9669手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.diyiyou.com/">第一手游网</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div class="tt20"><a target="_blank" class="links" href="http://www.dunwan.com/">蹲玩游戏</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+					     -->
 	
 					</div>
 					
 				</div>
 			</div>
-		</div>
+	</div>
+    <div class="clearit"></div>
+    
+    
 </div>
 
 <div class="footerx">
