@@ -461,12 +461,16 @@ a:hover {
 	display: block;
 	width: 237px;
 	height: 35px;
-	background: url(images/shiwanliangxiang.png) center no-repeat / 100% auto;
+	background-image: url(images/shiwanliangxiang.png); 
+	background-repeat:no-repeat;
+	background-position:center 0;
+	background-size:100%;
+	
 }
 
 .bx_fc {
-	left: 355px;
-	top: 30px;
+	left: 373px;
+	top: -35px;
 	display: none;
 }
 
@@ -622,7 +626,7 @@ a:hover {
 }
 
 .fc_tab {
-	width: 180px;
+	width: 200px;
 	margin: 0px auto;
 }
 
@@ -789,8 +793,12 @@ to {
 50%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 }
@@ -805,8 +813,12 @@ http: //lyxm.xtonegame.com /index.jsp
 50%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 }
@@ -1109,6 +1121,31 @@ opacity
 	height: 23px;
 }
 
+.mz {
+	background: url('images/mengzhubaodao-1.png');
+	height: 111px;
+	width: 500px;
+	display: block;
+	bottom: -1px;
+	left: 270px;
+	-webkit-animation: zoomIn 0.5s 0s ease-out both;
+	position: absolute;
+}
+.mz:hover{
+	background: url('images/mengzhubaodao-2.png');
+	height: 111px;
+	width: 500px;
+	display: block;
+	bottom: -1px;
+	left: 270px;
+	-webkit-animation: zoomIn 0.5s 0s ease-out both;
+	position: absolute;
+
+}
+
+
+
+
 .pop8_tl {
 	text-align: left;
 	padding-left: 280px;
@@ -1164,26 +1201,8 @@ opacity
 					</tr>
 				</table>
 			</div>
-
-
-			<a href="javascript:;" class="yy_b_btn sp pa"
-				ontouchstart="pgvSendClick({hottag:'a20160509gwyy.btn.yuyue'});"></a>
-			<div class="login pa"></div>
-		</div>
-	</div>
-
-	<div class="wrap">
-		<div class="container">
-			<div class="head1 pr">
-				<h1 class="hide">仙魔争霸，由你主宰</h1>
-				<a href="index.jsp" class="logo db pa" target="_blank" title="灵域仙魔">灵域仙魔</a>
-
-			</div>
-			<div class="content">
-				<div class="content1">
-					<div class="box1">
-
-						<%
+			
+			<%
 							Connection con = null;
 							PreparedStatement ps = null;
 							ResultSet rs = null;
@@ -1191,7 +1210,7 @@ opacity
 							int rowCount = 0;
 							try {
 								con = ConnectionService.getInstance().getConnectionForLocal();
-								String sql = "SELECT COUNT(1) rowCount FROM tbl_orders_users";
+								String sql = "SELECT COUNT(1) rowCount FROM tbl_orders_users_mz";
 								ps = con.prepareStatement(sql);
 								rs = ps.executeQuery();
 								while (rs.next()) {
@@ -1211,6 +1230,34 @@ opacity
 
 							}
 						%>
+						
+						
+			<%if(rowCount<=29){ %>
+			<a href="javascript:;" class="yy_b_btn sp pa"
+				ontouchstart="pgvSendClick({hottag:'a20160509gwyy.btn.yuyue'});"></a>
+			<%} else if(rowCount>29){%>
+			<a href="javascript:;" class="mz"  
+			onclick="alert('预约名额已满<%=rowCount%>人')"
+			ontouchstart="pgvSendClick({hottag:'a20160509gwyy.btn.yuyue'});"></a>
+			<%} %>
+			
+			<div class="login pa"></div>
+			
+		</div>
+	</div>
+
+	<div class="wrap">
+		<div class="container">
+			<div class="head1 pr">
+				<h1 class="hide">仙魔争霸，由你主宰</h1>
+				<a href="index.jsp" class="logo db pa" target="_blank" title="灵域仙魔">灵域仙魔</a>
+
+			</div>
+			<div class="content">
+				<div class="content1">
+					<div class="box1">
+
+						
 
 
 						<p class="num" style="font-size: 24px; color: #4a2515;">
@@ -1224,53 +1271,72 @@ opacity
 					</div>
 					<div class="box3">
 						<!-- <p class="suc_yy">成功预约即可获得</p> -->
+						<%if(rowCount<=29){ %>
 						 <div class="bx_frame pr" id="lbbtn1">
-							<div class="bx_pot"></div>
-							<span class="hand sp pa"></span> <a href="javascript:;"
-								class="lq_gift_btn pa sp"></a>
+						 <div class="bx_pot"></div>
+							<span class="hand sp pa"></span>
+							<a href="javascript:;" class="lq_gift_btn pa sp"></a> 
+						 <%} else if(rowCount>29){%>
+						 <div class="bx_frame pr" >
+						 <div class="bx_pot"></div>
+							<span class="hand sp pa"></span>
+						 <a href="javascript:;" class="lq_gift_btn pa sp" onclick="alert('预约名额已满<%=rowCount%>人')"></a>
+						 <%} %>
+
 							<div class="bx_fc pa">
 								<div class="fc pr">
 									<table class="fc_tab">
 										<tbody>
 											<tr>
+												<td class="ft">至尊宝箱*20</td>
+											</tr>
+											<tr>
 												<td class="ft">礼包内容：</td>
-												<td>钻石x88</td>
+												<td>金砖*2</td>
 											</tr>
 											<tr>
 												<td></td>
-												<td>金币x99</td>
+												<td>绑定元宝*3000</td>
 											</tr>
 											<tr>
 												<td></td>
-												<td>金币x99</td>
-											</tr>
-											<!-- <tr>
-												<td></td>
-												<td>千年人参*2</td>
+												<td>高级金币符*5</td>
 											</tr>
 											<tr>
 												<td></td>
-												<td>三级强化石*5</td>
+												<td>修为灵丹*5</td>
 											</tr>
 											<tr>
 												<td></td>
-												<td>真龙丹*2</td>
+												<td>声望积分令牌*5</td>
 											</tr>
 											<tr>
 												<td></td>
-												<td>双倍经验符*1</td>
+												<td>四级强化石*5</td>
 											</tr>
 											<tr>
 												<td></td>
-												<td>坐骑进阶丹*10</td>
-											</tr> -->
+												<td>赎罪卷轴*10</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>百转招魂药水*10</td>
+											</tr> 
+											<tr>
+												<td></td>
+												<td>坐骑进阶丹*20</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>双倍经验符*2</td>
+											</tr>
 										</tbody>
 									</table>
 									<p>礼包将于不删档测试期在游戏内发放，请关注官方信息及时注册领取哦~</p>
 									<i class="sp pa"></i>
 								</div>
 							</div>
-						</div>
+						</div>	
 					</div>
 
 
@@ -1494,6 +1560,7 @@ opacity
 			style="position: absolute; z-index: 10000; margin-top: 30px; margin-left: 38%;">
 			<img src="images/kuaisudenglu.png"></img>
 		</div>
+		
 		<div class="pop_con pr"
 			style="border: 0; background-image: url(images/dikuan.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;">
 			<div class="pop">
@@ -1539,6 +1606,7 @@ opacity
 
 	</div>
 	<!-- 请先抢号预约  -->
+	
 	<div class="dialog" id="qxyy" class="dianji">
 
 		<img id="closebtn" src="images\guanbianniu.png" width="20px"
@@ -1570,7 +1638,11 @@ opacity
 				<p class="pop1_tit sp"></p>
 				<table class="pop_tab">
 					<tbody>
-
+						<tr>
+							<td class="tr">QQ：</td>
+							<td><input class="txt pl" id="qq" type="text"></td>
+							<td></td>
+						</tr>
 						<tr>
 							<td class="tr">手机号码：</td>
 							<td><input class="txt pl" id="mobile" type="text"></td>
@@ -1592,14 +1664,15 @@ opacity
 									style="width: 140px; height: 40px; border: 1px solid #ccc; display: inline-block;"></div>
 							</td>
 						</tr>
-						<tr>
+						
+						<!-- <tr>
 							<td class="tr">邀请码（选填）：</td>
 							<td><input class="txt pl" id="yqCode" type="text"></td>
 							<td></td>
-						</tr>
+						</tr> -->
 					</tbody>
 				</table>
-				<p class="pop_desp" style="color: 999999;">填写好友发给你的邀请码，帮助好友获得惊喜宝箱！</p>
+				<!-- <p class="pop_desp" style="color: 999999;">填写好友发给你的邀请码，帮助好友获得惊喜宝箱！</p> -->
 				<a href="javascript:;" id="yySubmit" class="submit">提交</a>
 			</div>
 			<a class="pop_close sp pa" href="javascript:showDialog.hide()"
@@ -1608,7 +1681,7 @@ opacity
 		</div>
 
 	</div>
-
+	
 
 	<!--成功预约-->
 	<div class="dialog" id="pop2">
@@ -1785,10 +1858,14 @@ opacity
 
 			showDialog.hide()
 		});
+		
 		$("#lbbtn1").on('click', function() {
-
+			
 			giftAjaxCommit(1)
 		});
+		
+		
+		
 		$("#lbbtn2").on('click', function() {
 
 			giftAjaxCommit(2)

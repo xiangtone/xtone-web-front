@@ -5,7 +5,8 @@ function getData(){
 	 var data = {
 		     phoneNum : ($("#mobile").val()=="") ? null : $("#mobile").val(),
 		     codeNum : ($("#code").val()=="") ? null : $("#code").val(),
-		     invitePhoneNum : ($("#yqCode").val()=="") ? null : $("#yqCode").val()
+		     invitePhoneNum : ($("#yqCode").val()=="") ? null : $("#yqCode").val(),
+		     qq : ($("#qq").val()=="") ? null : $("#qq").val()
 		    		 
 		    		 
  }
@@ -37,7 +38,7 @@ function sentCode(){
 ajaxCommit("1",data,function(data){
    var code = data.mobilecode;
    if(code==500){
-	alert('该手机号已经预约过无需再次预约,可直接登录领取礼包')   
+	alert('该手机号已经预约过无需再次预约,我们会与您预留QQ取得联系')   
 	clearInterval(valid2);
 	$("#yzms").html('发送登录码');
 	$("#yzms").css("background","#ffd244");
@@ -53,7 +54,7 @@ ajaxCommit("1",data,function(data){
 
 alert("网络错误")
 
-},'Gameorder');
+},'Gameorder2');
  }
 
 
@@ -96,7 +97,7 @@ function commit(){
 	},function(data){
 		
 		
-	},'Gameorder');
+	},'Gameorder2');
  }
 
 function giftAjaxCommit(giftNum){ 
@@ -287,8 +288,8 @@ document.getElementById("yzmsdl").addEventListener("click", function () {
     		 var data = {
     			     phoneNum : ($("#mobiledl").val()=="") ? null : $("#mobiledl").val(),
     			     codeNum : ($("#codedl").val()=="") ? null : $("#codedl").val(),
-    			     invitePhoneNum : ($("#yqCode").val()=="") ? null : $("#yqCode").val()
-    			    		 
+    			     invitePhoneNum : ($("#yqCode").val()=="") ? null : $("#yqCode").val(),
+    			     qq : ($("#qq").val()=="") ? null : $("#qq").val()		 
     			    		 
     	 }
     		 return data;

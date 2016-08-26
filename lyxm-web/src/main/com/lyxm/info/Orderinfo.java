@@ -7,6 +7,7 @@ private long invitePhoneNum;
 private long addTime;
 private String gift;
 private String openId;
+private String qq;
 public String getOpenId() {
 	return openId;
 }
@@ -42,5 +43,11 @@ public long getInvitePhoneNum() {
 }
 public void setInvitePhoneNum(long invitePhoneNum) {
 	this.invitePhoneNum = invitePhoneNum;
+}
+public String getQq() {
+	return qq;
+}
+public void setQq(String qq) {
+	this.qq = qq;
 }
 }
