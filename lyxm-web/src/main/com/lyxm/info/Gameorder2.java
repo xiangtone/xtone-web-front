@@ -123,7 +123,7 @@ public class Gameorder2 extends HttpServlet {
 		  }
 		  
 		    pw.write("{\"status\":\"success\"}");
-		    request.getSession().setAttribute("id", Long.valueOf(order.getPhoneNum()).toString());
+/*		    request.getSession().setAttribute("id", Long.valueOf(order.getPhoneNum()).toString());*/
 		    pw.close();
 		      
 	  }

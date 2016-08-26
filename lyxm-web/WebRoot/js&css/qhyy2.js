@@ -44,7 +44,7 @@ ajaxCommit("1",data,function(data){
 	$("#yzms").css("background","#ffd244");
     $("#yzms").attr("disabled", false);
     showDialog.hide();
-    TGDialogS("pop111");
+    /*TGDialogS("pop111");*/
    }else{
    mobilecode = code;
    }

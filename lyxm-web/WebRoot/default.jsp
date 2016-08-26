@@ -13,7 +13,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta property="qc:admins" content="15472131256533256375">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<link rel="shortcut icon" href="" type="image/x-icon">
+<link rel="shortcut icon" href="logo.ico" type="image/x-icon">
 <meta name="Keywords" content="">
 <link rel="stylesheet" type="text/css" href="js&css/common.css">
 <script type="text/javascript" src="js&css/jquery-1.js"></script>

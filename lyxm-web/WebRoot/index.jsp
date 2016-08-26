@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
    灵域仙魔</title>
-		<link rel="shortcut icon" href="" type="image/x-icon"><meta name="Keywords" content=" "><meta name="description" content=""><meta name="applicable-device" content="pc,mobile"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=EDGE,chrome=1">
+		<link rel="shortcut icon" href="logo.ico" type="image/x-icon"><meta name="Keywords" content=" "><meta name="description" content=""><meta name="applicable-device" content="pc,mobile"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=EDGE,chrome=1">
 		<link type="text/css" rel="stylesheet" href="js&css/201512121.css">
         <link rel="stylesheet" href="js&css/footer.css">
         <script src="js&css/hm.js"></script>

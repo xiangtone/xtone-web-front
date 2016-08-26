@@ -6,7 +6,8 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
-<%@ page import="com.lyxm.info.Counter"%>
+<%@page import="com.lyxm.info.Counter"%>
+<%@page import="com.lyxm.info.Orderinfo"%>
 <%
 	/* CheckLoad check = new CheckLoad();
 
@@ -1160,7 +1161,9 @@ opacity
 	visibility: hidden
 }
 </style>
+
 <link type="text/css" rel="stylesheet" href="js&css/buttons.css">
+<link rel="shortcut icon" href="logo.ico" type="image/x-icon">
 <script charset="gb2312" type="text/javascript"
 	src="qhyy_files/cgi_official_website.htm"></script>
 <script charset="gb2312" type="text/javascript" src="qhyy_files/data.js">
@@ -1175,20 +1178,6 @@ opacity
 	<div class="flash_box pa">
 
 		<div class="container pa">
-			<%-- <% if(phone==null){
-		out.write("<div style=\"margin-top:10px;margin-left:86.5%;color:#666666;font-size:15px;\">您好，请先"+
-				"<a id=\"dlbtn\"  style=\"color:blue;font-size:15px;\" href=\"javascript:void(0)\"><u>登录</u></a>"+
-				"</div>");
-		}
-
-	else{
-		out.write("<div style=\"margin-top:10px;margin-left:86.5%;color:#666666;font-size:15px;\">"+"<u style=\"color:blue;\">"+phone+"</u>"+",您好"+
-	              "<a style=\"margin-left:200px;width:100px;height:29px;\" href=\"Cancelsession\"><img style=\"margin-top:-30px;\" src=\"images\\yuyue-tuichu.png\"></img></a> "+
-				  "</div>");
-	}
-				
-				
-				%> --%>
 			<div class="yy_b_btn1 sp pa"
 				style="margin-left: 40px; margin-bottom: 20px;">
 				<table>
@@ -1208,6 +1197,8 @@ opacity
 							ResultSet rs = null;
 							String exchange = "";
 							int rowCount = 0;
+							String qq1 = request.getParameter("qq");
+							
 							try {
 								con = ConnectionService.getInstance().getConnectionForLocal();
 								String sql = "SELECT COUNT(1) rowCount FROM tbl_orders_users_mz";
@@ -1215,6 +1206,7 @@ opacity
 								rs = ps.executeQuery();
 								while (rs.next()) {
 									rowCount = rs.getInt("rowCount");
+									
 								}
 							} catch (Exception e) {
 								e.printStackTrace();
@@ -1232,10 +1224,10 @@ opacity
 						%>
 						
 						
-			<%if(rowCount<=29){ %>
+			<%if(rowCount<=2){ %>
 			<a href="javascript:;" class="yy_b_btn sp pa"
 				ontouchstart="pgvSendClick({hottag:'a20160509gwyy.btn.yuyue'});"></a>
-			<%} else if(rowCount>29){%>
+			<%} else if(rowCount>2){%>
 			<a href="javascript:;" class="mz"  
 			onclick="alert('预约名额已满<%=rowCount%>人')"
 			ontouchstart="pgvSendClick({hottag:'a20160509gwyy.btn.yuyue'});"></a>
@@ -1271,12 +1263,12 @@ opacity
 					</div>
 					<div class="box3">
 						<!-- <p class="suc_yy">成功预约即可获得</p> -->
-						<%if(rowCount<=29){ %>
+						<%if(rowCount<=2){ %>
 						 <div class="bx_frame pr" id="lbbtn1">
 						 <div class="bx_pot"></div>
 							<span class="hand sp pa"></span>
 							<a href="javascript:;" class="lq_gift_btn pa sp"></a> 
-						 <%} else if(rowCount>29){%>
+						 <%} else if(rowCount>2){%>
 						 <div class="bx_frame pr" >
 						 <div class="bx_pot"></div>
 							<span class="hand sp pa"></span>
@@ -1640,9 +1632,11 @@ opacity
 					<tbody>
 						<tr>
 							<td class="tr">QQ：</td>
-							<td><input class="txt pl" id="qq" type="text"></td>
+							<td><input class="txt pl" id="qq" name="qq" type="text" ></td>
+								
 							<td></td>
 						</tr>
+						
 						<tr>
 							<td class="tr">手机号码：</td>
 							<td><input class="txt pl" id="mobile" type="text"></td>
@@ -1673,7 +1667,10 @@ opacity
 					</tbody>
 				</table>
 				<!-- <p class="pop_desp" style="color: 999999;">填写好友发给你的邀请码，帮助好友获得惊喜宝箱！</p> -->
-				<a href="javascript:;" id="yySubmit" class="submit">提交</a>
+				<!-- <a href="javascript:;" onclick="alert('此QQ号已存在')" class="submit">提交</a> -->
+					
+					<a href="javascript:;" id="yySubmit" class="submit">提交</a>
+					
 			</div>
 			<a class="pop_close sp pa" href="javascript:showDialog.hide()"
 				title="关闭"

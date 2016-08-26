@@ -29,6 +29,7 @@ public class Orderdao2 {
 				orderinfo.setGift(rs.getString("gift"));
 				orderinfo.setOpenId(rs.getString("wechatOpenId"));
 				orderinfo.setQq(rs.getString("qq"));
+				
 				return orderinfo;
 			}
 		} catch (Exception e) {
