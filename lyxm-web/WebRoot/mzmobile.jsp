@@ -18,7 +18,7 @@
 	String openid = request.getParameter("openid");
 	session.setAttribute("openid", openid);
 	if (openid != null)
-		response.sendRedirect("mobile.jsp");
+		response.sendRedirect("mzmobile.jsp");
 	Counter CountFileHandler = new Counter();//创建对象    
 	int count = 0;
 	if (application.getAttribute("count") == null) {
@@ -56,12 +56,12 @@
 	href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-152.png?1451359882">
 <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
 
-<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/main2.css">
 <script src="js2/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 <script type="text/javascript"
 	src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script type="text/javascript" src="js/sha1.js"></script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	var plc = '<<灵域仙魔>> ';
 	var strAry = [ plc + ' 我已经预约灵域仙魔了，兄弟快来与我一起战斗吧！',
 			plc + ' 预约灵域仙魔，用你的洪荒之力助我一战！',
@@ -70,13 +70,13 @@
 	var index = Math.floor(Math.random() * 5);
 
 	var href = window.location.href
-	if (href != 'http://lyxm.xtonegame.com/mobile.jsp')
-		window.location.href = 'http://lyxm.xtonegame.com/mobile.jsp'
+	if (href != 'http://lyxm.xtonegame.com/mzmobile.jsp')
+		window.location.href = 'http://lyxm.xtonegame.com/mzmobile.jsp'
 	var ticket = document.getElementById('ticket').innerText;
 	var timestamp = new Date().getTime();
 	var str = 'jsapi_ticket=' + ticket
 			+ '&noncestr=Wm3WZYTPz0wzccnW&timestamp=' + timestamp
-			+ '&url=http://lyxm.xtonegame.com/mobile.jsp';
+			+ '&url=http://lyxm.xtonegame.com/mzmobile.jsp';
 	var signature = hex_sha1(str);
 
 	wx.config({
@@ -93,7 +93,7 @@
 	wx.ready(function() {
 		wx.onMenuShareTimeline({
 			title : strAry[index], // 分享标题
-			link : 'http://lyxm.xtonegame.com/mobile.jsp', // 分享链接
+			link : 'http://lyxm.xtonegame.com/mzmobile.jsp', // 分享链接
 			imgUrl : 'http://lyxm.xtonegame.com/images/300x300.png', // 分享图标
 			success : function() {
 				// 用户确认分享后执行的回调函数
@@ -106,7 +106,7 @@
 
 		wx.onMenuShareAppMessage({
 			title : '灵域仙魔', // 分享标题
-			link : 'http://lyxm.xtonegame.com/mobile.jsp', // 分享链接
+			link : 'http://lyxm.xtonegame.com/mzmobile.jsp', // 分享链接
 			desc : strAry[index],
 			imgUrl : 'http://lyxm.xtonegame.com/images/300x300.png', // 分享图标
 			type : '', // 分享类型,music、video或link，不填默认为link
@@ -123,7 +123,7 @@
 		wx.onMenuShareQQ({
 			title : '灵域仙魔', // 分享标题
 			desc : strAry[index], // 分享描述
-			link : 'http://lyxm.xtonegame.com/mobile.jsp', // 分享链接
+			link : 'http://lyxm.xtonegame.com/mzmobile.jsp', // 分享链接
 			imgUrl : 'http://lyxm.xtonegame.com/images/300x300.png', // 分享图标
 			success : function() {
 				// 用户确认分享后执行的回调函数
@@ -138,7 +138,7 @@
 		wx.onMenuShareQZone({
 			title : '灵域仙魔', // 分享标题
 			desc : strAry[index], // 分享描述
-			link : 'http://lyxm.xtonegame.com/mobile.jsp', // 分享链接
+			link : 'http://lyxm.xtonegame.com/mzmobile.jsp', // 分享链接
 			imgUrl : 'http://lyxm.xtonegame.com/images/300x300.png', // 分享图标
 			success : function() {
 
@@ -159,7 +159,7 @@
 		// config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
 
 	});
-</script>
+</script> -->
 <title>灵域仙魔</title>
 <style>
 /* reset */
@@ -923,7 +923,7 @@ opacity
 	width: 226px;
 	height: 30px;
 	background-position: 0 -340px;
-	margin: 0px auto;
+	margin: 5px auto;
 }
 
 .pop_tab {
@@ -1216,7 +1216,7 @@ opacity
 body {
 	width: 100%;
 	height: 100%;
-	background-image: url(images/index/background.jpg);
+	background-image: url(images/index/mz-beijing.jpg);
 	background-repeat: no-repeat;
 	background-position: center 0;
 	background-color: transparent;
@@ -1253,7 +1253,7 @@ body {
 		int rowCount = 0;
 		try {
 			con = ConnectionService.getInstance().getConnectionForLocal();
-			String sql = "SELECT COUNT(1) rowCount FROM tbl_orders_users";
+			String sql = "SELECT COUNT(1) rowCount FROM tbl_orders_users_mz";
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
 			while (rs.next()) {
@@ -1274,95 +1274,55 @@ body {
 		}
 	%>
 	<div class="sept">
-		<%
-			if (phone == null) {
-				out.write("<div style=\"margin-top:-112%;margin-left:70%;color:#666666;font-size:12px;\">您好，请先"
-						+ "<a id=\"dlbtn\" href=\"javacript:;\" style=\"color:blue;font-size:12px;\"><u>登录</u></a>"
-						+ "</div>");
-			}
-
-			else {
-				out.write("<div style=\"margin-top:-112%;margin-left:70%;color:#666666;font-size:12px;\">"
-						+ "<u style=\"color:blue;\">" + phone + "</u>" + ",您好"
-						+ "<a href=\"Cancelsession\"><img style=\"position:absolute;width:51px;\" src=\"images\\tuichu.png\"></img></a> "
-						+ "</div>");
-			}
-		%>
 		<div class="sept-l float" style="margin-top: 107%;">
 			<img src="images/index/side_left.png">
 		</div>
 		<div class="sept-c float" style="margin-top: 107%;">
-			<img src="images/index/first9.png">
+			<img src="images/index/Oct-first.png">
 		</div>
 		<div class="sept-r float" style="margin-top: 107%;">
 			<img src="images/index/side_right.png">
 		</div>
 	</div>
 	<div class="sub">
+		<%if(rowCount<=2){ %>
 		<div id="yuyuebtn" class="sub-nav">
-			<img src="images/index/yuyue.png">
+			<img src="images/index/mzbaodao.png">
 		</div>
+		<%} else if(rowCount>2){%>
+		<div onclick="alert('预约名额已满<%=rowCount%>人')" class="sub-nav">
+			<img src="images/index/mzbaodao.png">
+		</div>
+		<%} %>
+		
 		<div class="sub-snav">
-			<font id="yuyueNum" class="font-a">已有<%=rowCount%>人预约
+			<font id="yuyueNum" class="font-a">我要做盟主</br>我又兄弟千千万
 			</font>
 		</div>
+		<%if(rowCount<=2){ %>
 		<div id="achievebtn">
 			<div id="invitebtn" class="sub-dnav">
 				<img src="images/index/baoxiang.png">
 			</div>
 			<div class="sub-bnav">
-				<strong class="font-a"><<获取宝箱>></strong>
+				<strong class="font-a" style="font-weight:bold;"><<领取十万粮饷>></strong>
 			</div>
 		</div>
-	</div>
-	<div class="sept-1">
-		<div class="sept-l-1 float">
-			<img src="images/index/side_left.png">
+		 <%} else if(rowCount>2){%>
+		 <div onclick="alert('预约名额已满<%=rowCount%>人')">
+			<div onclick="alert('预约名额已满<%=rowCount%>人')" class="sub-dnav">
+				<img src="images/index/baoxiang.png">
+			</div>
+			<div class="sub-bnav">
+				<strong class="font-a" style="font-weight:bold;"><<领取十万粮饷>></strong>
+			</div>
 		</div>
-		<div class="sept-c-1 float" style="width: 70%;">
-			<strong class="font-b">邀请好友，仙盟争霸</strong>
-		</div>
-		<div class="sept-r-1 float">
-			<img src="images/index/side_right.png">
-		</div>
-	</div>
-	<div class="invite">
-		<div id="yaoqing" class="invite-1">
-			<img src="images/index/yaoqing.png">
-		</div>
-		<div class="invite-2">
-			<font class="font-a">已有<%=count%>人查看
-			</font>
-		</div>
-	</div>
-
-	<div id="seniorbtn" class="box">
-		<div class="box-1 float">
-			<img src="images/index/gaoji.png">
-		</div>
-		<div class="box-2 float">
-			<strong class="font-c">高级宝箱</strong></br> <strong style="font-size: 12px;">(成功邀请3名好友)</strong>
-		</div>
-	</div>
-	<div id="luxurybtn" class="box-h">
-		<div class="box-1 float">
-			<img src="images/index/haohua.png">
-		</div>
-		<div class="box-2 float">
-			<strong class="font-c">豪华宝箱</strong></br> <strong style="font-size: 12px;">(成功邀请5名好友)</strong>
-		</div>
-	</div>
-	<div id="extremebtn" class="box-z">
-		<div class="box-1a float">
-			<img src="images/index/zhizun.png">
-		</div>
-		<div class="box-2 float">
-			<strong class="font-c">至尊宝箱</strong></br> <strong style="font-size: 12px;">(成功邀请10名好友)</strong>
-		</div>
+		 <%} %>
+		
 	</div>
 	<div class="disb">
 		<div class="disb-1 float">
-			<strong class="font-a">礼包领取说明：</strong>
+			<strong class="font-a" style="font-weight:bold;">礼包领取说明：</strong>
 		</div>
 		<div class="disb-2 float">
 			<font class="font-a">1、满足宝箱邀请好友数量要求，即可解锁领取；</br>
@@ -1373,9 +1333,9 @@ body {
 	</div>
 	<div style="width: 100%; height: 10px; display: block;"></div>
 	<div class="scan"
-		style="background-color: white; padding-top: 0; margin-top: 114%;">
+		style="background-color: white; padding-top: 0; margin-top: 33%;">
 		<div class="scan-1">
-			<img style="margin-top: 10px;" src="images/index/scan.png">
+			<img style="margin-top: 10px;" src="images/index/mz-scan.png">
 		</div>
 	</div>
 
@@ -1455,7 +1415,10 @@ body {
 				<p class="pop1_tit sp"></p>
 				<table style="width: 100%; margin-top:;" class="pop_tab">
 					<tbody style="width: 100%;">
-
+						<tr>
+							<td class="tr">QQ：</td>
+							<td><input class="txt pl" id="qq" type="text"></td>	
+						</tr>
 						<tr>
 							<td class="tr">手机号码：</td>
 							<td><input class="txt pl" id="mobile" type="text"></td>
@@ -1476,14 +1439,15 @@ body {
 									style="width: 120px; height: 30px; border: 1px solid #ccc; display: inline-block;"></div>
 							</td>
 						</tr>
-						<tr>
+						<!-- <tr>
 							<td class="tr">邀请码(选填)：</td>
 							<td><input class="txt pl" id="yqCode" type="text"></td>
 							<td></td>
-						</tr>
+						</tr> -->
 					</tbody>
 				</table>
-				<p class="pop_desp" style="color: 999999;">填写好友发给你的邀请码，帮助好友获得惊喜宝箱！</p>
+				<!-- <p class="pop_desp" style="color: 999999;">填写好友发给你的邀请码，帮助好友获得惊喜宝箱！</p> -->
+				</br>
 				<a href="javascript:;" id="yySubmit" class="submit">提交</a>
 			</div>
 
@@ -1497,23 +1461,20 @@ body {
 
 
 		<div id="uplbneirong" class="pop_con pr"
-			style="width: 100%; position: relative; height: 130px; background: url(); background-color: #DDDDDD;">
+			style="width: 100%; position: relative; height: 95px; background: url(); background-color: #DDDDDD;">
 			<img id="closebtn" src="images\guanbianniu.png" align="right"
 				style="width: 20px; margin-left: 100%;"></img>
 
 			<div id="kong" style="width: 100%; height: 37px;"></div>
 			<div id="lbneirong"
 				style="height: 100%; width: 100%; text-align: center;">
-
-
-				想要获得礼包吗？先抢号预约哦~</br>
-				</br>邀请好友抢号预约，还能获得豪华礼包哦！
+					盟主预约，即可获得十万粮饷
 			</div>
 		</div>
 
 	</div>
 	<script src="js/my.js"></script>
-	<script src="js/qhyymobile.js"></script>
+	<script src="js/mzmobile.js"></script>
 	<script src="js&css/jquery-1.js"></script>
 	<script src="js&css/ZeroClipboard.js"></script>
 	<script src="js&css/milo.js"></script>
