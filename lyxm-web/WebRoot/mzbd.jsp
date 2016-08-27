@@ -9,11 +9,11 @@
 <%@page import="com.lyxm.info.Counter"%>
 <%@page import="com.lyxm.info.Orderinfo"%>
 <%
-	 /* CheckLoad check = new CheckLoad();
+	  CheckLoad check = new CheckLoad();
 
 	if (check.JudgeIsMoblie(request)) {
 		response.sendRedirect("mzmobile.jsp");
-	}  */
+	}  
 
 	String phone = null;
 	try {
