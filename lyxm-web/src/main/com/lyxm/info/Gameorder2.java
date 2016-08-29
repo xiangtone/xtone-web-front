@@ -110,6 +110,11 @@ public class Gameorder2 extends HttpServlet {
 	  if(type.equalsIgnoreCase("2")){
 		  PrintWriter pw =	response.getWriter();
 		  Orderdao2 od = new Orderdao2();
+		  if(od.selectByQq(order.getQq())==null){
+			  pw.write("{\"status\":\"500\"}");
+			  pw.close();
+			  return ;
+		  }
 		  if(order.getInvitePhoneNum()!=0&&od.selectById(order.getInvitePhoneNum())==null){
 			  pw.write("{\"status\":\"error\"}");
 			  pw.close();

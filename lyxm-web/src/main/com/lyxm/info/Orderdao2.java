@@ -213,4 +213,42 @@ public class Orderdao2 {
 		}
 	    return 1;
 	}	
+	
+	public Orderinfo selectByQq(String qq){
+		PreparedStatement ps = null;
+	    Connection con = null;
+	    ResultSet rs = null;
+		try {
+			con = ConnectionService.getInstance().getConnectionForLocal();
+			ps = con.prepareStatement("select * from tbl_orders_users_mz where qq = ?");
+			ps.setString(1, qq);
+			rs = ps.executeQuery();
+			if(rs.next()){
+				Orderinfo orderinfo = new Orderinfo();
+				orderinfo.setPhoneNum(rs.getLong("id"));
+				orderinfo.setCodeNum(rs.getInt("codeNum"));
+				orderinfo.setInvitePhoneNum(rs.getLong("invitePhonenum"));
+				orderinfo.setAddTime(rs.getLong("addTime"));
+				orderinfo.setGift(rs.getString("gift"));
+				orderinfo.setOpenId(rs.getString("wechatOpenId"));
+				orderinfo.setQq(rs.getString("qq"));
+				
+				return orderinfo;
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}finally{
+			if (con != null) {
+				try {
+					con.close();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+
+		}
+	    return null;
+	}
 }
