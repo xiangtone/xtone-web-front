@@ -61,7 +61,7 @@
 <script type="text/javascript"
 	src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script type="text/javascript" src="js/sha1.js"></script>
-<!-- <script type="text/javascript">
+<!--    <script type="text/javascript">
 	var plc = '<<灵域仙魔>> ';
 	var strAry = [ plc + ' 我已经预约灵域仙魔了，兄弟快来与我一起战斗吧！',
 			plc + ' 预约灵域仙魔，用你的洪荒之力助我一战！',
@@ -159,7 +159,7 @@
 		// config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
 
 	});
-</script> -->
+</script>  -->
 <title>灵域仙魔</title>
 <style>
 /* reset */
@@ -1285,11 +1285,11 @@ body {
 		</div>
 	</div>
 	<div class="sub">
-		<%if(rowCount<=2){ %>
+		<%if(rowCount<=29){ %>
 		<div id="yuyuebtn" class="sub-nav">
 			<img src="images/index/mzbaodao.png">
 		</div>
-		<%} else if(rowCount>2){%>
+		<%} else if(rowCount>29){%>
 		<div onclick="alert('预约名额已满<%=rowCount%>人')" class="sub-nav">
 			<img src="images/index/mzbaodao.png">
 		</div>
@@ -1299,7 +1299,7 @@ body {
 			<font id="yuyueNum" class="font-a">我要做盟主</br>我又兄弟千千万
 			</font>
 		</div>
-		<%if(rowCount<=2){ %>
+		<%if(rowCount<=29){ %>
 		<div id="achievebtn">
 			<div id="invitebtn" class="sub-dnav">
 				<img src="images/index/baoxiang.png">
@@ -1308,9 +1308,9 @@ body {
 				<strong class="font-a" style="font-weight:bold;"><<领取十万粮饷>></strong>
 			</div>
 		</div>
-		 <%} else if(rowCount>2){%>
+		 <%} else if(rowCount>29){%>
 		 <div onclick="alert('预约名额已满<%=rowCount%>人')">
-			<div onclick="alert('预约名额已满<%=rowCount%>人')" class="sub-dnav">
+			<div  class="sub-dnav">
 				<img src="images/index/baoxiang.png">
 			</div>
 			<div class="sub-bnav">
@@ -1333,7 +1333,7 @@ body {
 	</div>
 	<div style="width: 100%; height: 10px; display: block;"></div>
 	<div class="scan"
-		style="background-color: white; padding-top: 0; margin-top: 33%;">
+		style=" padding-top: 0; margin-top: 33%;">
 		<div class="scan-1">
 			<img style="margin-top: 10px;" src="images/index/mz-scan.png">
 		</div>
@@ -1417,7 +1417,7 @@ body {
 					<tbody style="width: 100%;">
 						<tr>
 							<td class="tr">QQ：</td>
-							<td><input class="txt pl" id="qq" type="text"></td>	
+							<td><input class="txt pl" id="qq" name ="qq" type="text"></td>	
 						</tr>
 						<tr>
 							<td class="tr">手机号码：</td>
@@ -1447,8 +1447,10 @@ body {
 					</tbody>
 				</table>
 				<!-- <p class="pop_desp" style="color: 999999;">填写好友发给你的邀请码，帮助好友获得惊喜宝箱！</p> -->
-				</br>
-				<a href="javascript:;" id="yySubmit" class="submit">提交</a>
+				<br>
+				
+				<a href="javascript:;" id="yySubmit" class="submit" >提交</a>
+				
 			</div>
 
 		</div>

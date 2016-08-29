@@ -10,7 +10,7 @@
 <%@page import="com.lyxm.info.Orderinfo"%>
 <%
 	  CheckLoad check = new CheckLoad();
-
+if(request.getHeader("User-Agent").toLowerCase().indexOf("tosh")<0)
 	if (check.JudgeIsMoblie(request)) {
 		response.sendRedirect("mzmobile.jsp");
 	}  

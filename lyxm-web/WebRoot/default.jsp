@@ -176,12 +176,54 @@
 				<a href="index.jsp"><img src="images/flogo.png" alt="logo"></a>
 			</div>
 			
+			<%
+							Connection con = null;
+							PreparedStatement ps = null;
+							ResultSet rs = null;
+							String exchange = "";
+							int rowCount = 0;
+							String qq1 = request.getParameter("qq");
+							
+							try {
+								con = ConnectionService.getInstance().getConnectionForLocal();
+								String sql = "SELECT COUNT(1) rowCount FROM tbl_orders_users_mz";
+								ps = con.prepareStatement(sql);
+								rs = ps.executeQuery();
+								while (rs.next()) {
+									rowCount = rs.getInt("rowCount");
+									
+								}
+							} catch (Exception e) {
+								e.printStackTrace();
+							} finally {
+								if (con != null) {
+									try {
+										con.close();
+									} catch (Exception e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									}
+								}
+
+							}
+						%>
+						
+						
+			<%if(rowCount<=29){ %>
 			<!-- 视频链接 -->
 			<div class="leader">
              	<a href="mzbd.jsp" > 
              		<img alt="我是盟主，我要招募！" src="images/mz.png" style="width:100%;height:auto;display:block;">           		
              	</a>  
              </div>
+             <%} else if(rowCount>29){%>
+			<div class="leader">
+             	<a href="javaScript:;"  onclick="alert('预约名额已满<%=rowCount%>人')"> 
+             		<img alt="我是盟主，我要招募！" src="images/mz.png" style="width:100%;height:auto;display:block;">           		
+             	</a>  
+             </div>
+			<%} %>
+             
               <div class="warrior">
              	<a href="qhyy.jsp" > 
              		<img alt="我是战士，领取宝箱！" src="images/zs.png" style="width:100%;height:auto;display:block;">           		

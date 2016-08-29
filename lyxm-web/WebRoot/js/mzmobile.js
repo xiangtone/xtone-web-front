@@ -75,7 +75,7 @@ function commit(){
 //		alert("成功预约")
 //	window.location.reload()
 			
-			document.location.href = 'share.jsp';
+			document.location.href = 'share2.jsp';
 		
 		}
 	},function(data){
@@ -94,13 +94,16 @@ function giftAjaxCommit(giftNum){
 	        dataType:"json",
 	        success:function(data){
 	        	if(data.code!=null){
-	        		document.getElementById('kong').style.height='0px'
-		        		document.getElementById('uplbneirong').style.height=''
-		        		document.getElementById('uplbneirong').style.width='400px'
-		    	        document.getElementById('uplbneirong').style.height='126px'
+	        		document.getElementById('uplbneirong').style.height=''
+		        		document.getElementById('uplbneirong').style.width='320px'
+		    	        document.getElementById('uplbneirong').style.height='0px'
+		    	        document.getElementById('uplbneirong').style.border='0px'
 		    	        document.getElementById('lbneirong').style.textAlign=''	
-		    	        document.getElementById('uplbneirong').style.marginLeft='62px'
-		    	        document.getElementById('closebtn').style.marginLeft='462px'
+		    	        document.getElementById('lbneirong').style.width='93%'	
+		    	        document.getElementById('uplbneirong').style.marginLeft='95px'
+		    	        document.getElementById('closebtn').style.marginLeft='0px'
+			    	    document.getElementById('closebtn').style.marginLeft='0px'
+			    	    document.getElementById('closebtn').style.marginTop='16px'
 //		        		document.getElementById('lbneirong').style.textAlign=''	
 //		        		document.getElementById('lbneirong').style.marginLeft='50px'
 		        		$('#lbneirong').text("");
@@ -354,13 +357,16 @@ function giftAjaxCommit(giftNum){
     		        dataType:"json",
     		        success:function(data){
     		        	if(data.code!=null){
-    		        		document.getElementById('kong').style.height='0px'
-    			        		document.getElementById('uplbneirong').style.height=''
-    			        		document.getElementById('uplbneirong').style.width='400px'
-    			    	        document.getElementById('uplbneirong').style.height='126px'
+    		        		document.getElementById('uplbneirong').style.height=''
+    			        		document.getElementById('uplbneirong').style.width='320px'
+    			    	        document.getElementById('uplbneirong').style.height='0px'
+    			    	        document.getElementById('uplbneirong').style.border='0px'
     			    	        document.getElementById('lbneirong').style.textAlign=''	
-    			    	        document.getElementById('uplbneirong').style.marginLeft='62px'
-    			    	        document.getElementById('closebtn').style.marginLeft='462px'
+    			    	        document.getElementById('lbneirong').style.width='93%'	
+    			    	        document.getElementById('uplbneirong').style.marginLeft='95px'
+    			    	        document.getElementById('closebtn').style.marginLeft='0px'
+    				    	    document.getElementById('closebtn').style.marginLeft='0px'
+    				    	    document.getElementById('closebtn').style.marginTop='16px'
 //    			        		document.getElementById('lbneirong').style.textAlign=''	
 //    			        		document.getElementById('lbneirong').style.marginLeft='50px'
     			        		$('#lbneirong').text("");

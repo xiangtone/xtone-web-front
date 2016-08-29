@@ -129,7 +129,7 @@ wx.error(function(res){
 <style type="text/css">
 	body{
 	width: 100%; 
-	height: auto; 
+	height: 100%; 
 	background-image: url(images/index/tiaozhuan.jpg); 
 	background-repeat: no-repeat; 
 	background-position: center 0;
@@ -157,9 +157,9 @@ wx.error(function(res){
         </div>
         <div class="share">
         	<p ><strong class="font-d">恭喜您</strong></p>
-        	<p ><strong class="font-d">已成功预约《灵域仙魔》</strong></p>	
+        	<p ><strong class="font-d">已成功预约盟主礼包，稍后与您预留QQ联系</strong></p>	
         </div>
-        <div class="share1">
+       <%--  <div class="share1">
 	        	<div class="share2">
 	        		<strong class="font-d">您的邀请码是:</strong></br><strong id="cde" style="color:red;font-size:12px;"><%=phone %></strong>
 	        	</div>
@@ -167,7 +167,7 @@ wx.error(function(res){
 	        		<img  src="images/index/tishi.png">
 	        	</div>
 	        	<p class="share4"><strong class="font-d">将邀请码发给好友，或分享当前页面，即可获取宝箱！</strong></p>
-	        </div>
+	        </div> --%>
         <div class="box-ax">
         	<div class="box-ax1">
         		<img  src="images/index/gaoji.png">
