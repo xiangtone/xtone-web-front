@@ -104,7 +104,7 @@ else{
                                                 var html = '';
                                                 $.each(data, function(commentIndex, comment){
                                               	  
-                                                    html+='<li><a href="Contents?type='+comment['catalog']+'&id='+comment['id']
+                                                    html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
                                                   		 +'" target="_blank"> <em class="" style="color:#ff4106;">【'+comment['catalog']
                                                     		+'】'+comment['title']+'</em><span style="color:#ff4106;">'+comment['lastModifyTime']+'</span></a></li>'
                                                     		  
