@@ -129,7 +129,7 @@ wx.error(function(res){
 <style type="text/css">
 	body{
 	width: 100%; 
-	height: 100%; 
+	height: auto; 
 	background-image: url(images/index/tiaozhuan.jpg); 
 	background-repeat: no-repeat; 
 	background-position: center 0;

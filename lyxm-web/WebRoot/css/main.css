@@ -145,7 +145,7 @@
 	}
 		.logo{
 	width:100%;
-	padding-top:20%;
+	padding-top:15%;
 	position:absolute;
 	}
 	.logo-a{
@@ -154,7 +154,7 @@
 	}
 	.share{
 	width:100%;
-	padding-top:53%;
+	padding-top:40%;
 	}
 	p{
 	padding-left:8%;
@@ -172,11 +172,12 @@
 	.share3{
 	width:40%;
 	float:left;
-	padding-left:5%;
+	padding-left:3%;
 	}
 	.share4{
 	float:left;
 	padding-top:5%;
+	padding-right:5%;
 	}
 	.font-d{
 	font-family:微软雅黑;

@@ -1124,7 +1124,7 @@ color: rgb(124, 115, 106);
 						
 
 						<li class="content_list"><a
-							href="content.jsp?id=<%=id%>" target="_Blank"><em>【資訊】 </em><%=title%></a>
+							href="content.jsp?id=<%=id%>" ><em>【資訊】 </em><%=title%></a>
 							<span class="content_date"><%=timeStr%></span></li>
 						<%
 			} 

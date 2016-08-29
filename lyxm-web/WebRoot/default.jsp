@@ -6,20 +6,22 @@
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="zh-cn"><head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta property="qc:admins" content="15472131256533256375">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
-    <link rel="shortcut icon" href="" type="image/x-icon"><meta name="Keywords" content="">
-	<link rel="stylesheet" type="text/css" href="js&css/common.css">
-    <script type="text/javascript" src="js&css/jquery-1.js"></script>
-    <script type="text/javascript" src="js&css/slide.htm"></script>
-    <script type="text/javascript" src="js&css/placeholderfriend.js"></script>
-    <script type="text/javascript" src="js&css/jquery.js"></script>
-	<title>灵域仙魔</title>
-	<script type="text/javascript">
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta property="qc:admins" content="15472131256533256375">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+<meta name="Keywords" content="">
+<link rel="stylesheet" type="text/css" href="js&css/common.css">
+<script type="text/javascript" src="js&css/jquery-1.js"></script>
+<script type="text/javascript" src="js&css/slide.htm"></script>
+<script type="text/javascript" src="js&css/placeholderfriend.js"></script>
+<script type="text/javascript" src="js&css/jquery.js"></script>
+<title>灵域仙魔</title>
+<script type="text/javascript">
     function browserRedirect() {
         var sUserAgent = navigator.userAgent.toLowerCase();
         var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
@@ -36,29 +38,29 @@
     }
     browserRedirect();
 	</script>
- 		
-  <script type="text/javascript">
+
+<script type="text/javascript">
 
               width_screen=document.documentElement.clientWidth;
               bodyheight=1.555*document.documentElement.clientWidth;
             
-   </script> 
-	
-	
-		
-	<script type="text/javascript">    
+   </script>
+
+
+
+<script type="text/javascript">    
     window.onerror = function () { return true; }    
-    </script>   
-    <script type="text/javascript">
+    </script>
+<script type="text/javascript">
     function jjkf(){
     	window.location.href="qhyy.jsp";    	
     	
     }
     
     </script>
-    
-    
-  <script type="text/javascript">
+
+
+<script type="text/javascript">
    $(function(){
     focus:input =function(){
      var oval = $(this).val();
@@ -72,30 +74,168 @@
     }
    }(jQuery);
   </script>
-   <script type="text/javascript">
+<script type="text/javascript">
 	   $(document).ready(function(){
 		   function showfirst(){
 			   $('#ftab-0').show();
 		   }
 		   window.onload=showfirst;		  
 	   })
-	 </script>    
+	 </script>
+	 
+<style type="text/css">
+@media(min-width:168px){
+.leader {
+	float: left;
+	width: 136px;
+	height: 175px;
+	margin-top: 260px;
+	margin-left: 0;
+}
+.warrior {
+	float: right;
+	width: 136px;
+	height: 175px;
+	margin-top: 260px;
+	margin-right: 0;
+}
+}
+@media(min-width:520px){
+.leader {
+	float: left;
+	width: 136px;
+	height: 175px;
+	margin-top: 260px;
+	margin-left: 0;
+}
+.warrior {
+	float: right;
+	width: 136px;
+	height: 175px;
+	margin-top: 260px;
+	margin-right: 0;
+}
+}
+@media(min-width:768px){
+.leader {
+	float: left;
+	width: 136px;
+	height: 175px;
+	margin-top: 260px;
+	margin-left: 0;
+}
+.warrior {
+	float: right;
+	width: 136px;
+	height: 175px;
+	margin-top: 260px;
+	margin-right: 0;
+}
+}
+@media(min-width:970px){
+.leader {
+	float: left;
+	width: 136px;
+	height: 175px;
+	margin-top: 260px;
+	margin-left: 5%;
+}
+.warrior {
+	float: right;
+	width: 136px;
+	height: 175px;
+	margin-top: 260px;
+	margin-right: 5%;
+}
+}
+@media(min-width:1200px){
+.leader {
+	float: left;
+	width: 136px;
+	height: 175px;
+	margin-top: 260px;
+	margin-left: 14%;
+}
+.warrior {
+	float: right;
+	width: 136px;
+	height: 175px;
+	margin-top: 260px;
+	margin-right: 14%;
+}
+}
+</style>
 </head>
 <body>
-<!-- <div class="erweima"> -->
-<!--   <img src="images/erweima.jpg" alt=""> -->
-<!-- </div>  -->
-     <div class="fbg">
-         <div class="fcontainer">
-             <div class="flogo"><a href="index.jsp"><img src="images/flogo.png" alt="logo"></a></div>
-             <!-- 视频链接 -->
-             <div class="fv">
-				<!--                  <div style="text-align:center; bottom:0px;"><a href="javascript:jjkf()"><img src="images/qhyy.png"></a></div> -->
+	<!-- <div class="erweima"> -->
+	<!--   <img src="images/erweima.jpg" alt=""> -->
+	<!-- </div>  -->
+	<div class="fbg">
+		<div class="fcontainer">
+			<div class="flogo">
+				<a href="index.jsp"><img src="images/flogo.png" alt="logo"></a>
+			</div>
+			
+			<%
+							Connection con = null;
+							PreparedStatement ps = null;
+							ResultSet rs = null;
+							String exchange = "";
+							int rowCount = 0;
+							String qq1 = request.getParameter("qq");
+							
+							try {
+								con = ConnectionService.getInstance().getConnectionForLocal();
+								String sql = "SELECT COUNT(1) rowCount FROM tbl_orders_users_mz";
+								ps = con.prepareStatement(sql);
+								rs = ps.executeQuery();
+								while (rs.next()) {
+									rowCount = rs.getInt("rowCount");
+									
+								}
+							} catch (Exception e) {
+								e.printStackTrace();
+							} finally {
+								if (con != null) {
+									try {
+										con.close();
+									} catch (Exception e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									}
+								}
+
+							}
+						%>
+						
+						
+			<%if(rowCount<=29){ %>
+			<!-- 视频链接 -->
+			<div class="leader">
+             	<a href="mzbd.jsp" > 
+             		<img alt="我是盟主，我要招募！" src="images/mz.png" style="width:100%;height:auto;display:block;">           		
+             	</a>  
+             </div>
+             <%} else if(rowCount>29){%>
+			<div class="leader">
+             	<a href="javaScript:;"  onclick="alert('预约名额已满<%=rowCount%>人')"> 
+             		<img alt="我是盟主，我要招募！" src="images/mz.png" style="width:100%;height:auto;display:block;">           		
+             	</a>  
+             </div>
+			<%} %>
              
-              <div style="width:100%;height:70%"></div>
-             <a href="qhyy.jsp" target="_blank">            
-             <div id="qhyy"></div>
-             <% 
+              <div class="warrior">
+             	<a href="qhyy.jsp" > 
+             		<img alt="我是战士，领取宝箱！" src="images/zs.png" style="width:100%;height:auto;display:block;">           		
+             	</a>  
+             </div>
+			
+			<div class="fv">
+				<!--                  <div style="text-align:center; bottom:0px;"><a href="javascript:jjkf()"><img src="images/qhyy.png"></a></div> -->
+
+				<div style="width: 100%; height: 70%"></div>
+				<%-- <a href="qhyy.jsp" target="_blank">
+					<div id="qhyy"></div> <% 
             
          	Connection con = null;
          	PreparedStatement ps = null;
@@ -126,22 +266,25 @@
              
              
              %>
-             
-             
-             <div style="margin-top:10px;text-align:center;">已有<%=rowCount %>人预约</div>
-             </a>
-             </div>
-         </div>
-         <!-- 下载 -->
-         <div class="fload">
-            <ul>
-               <li id="li_1"><a href="javascript:alert('暂未开通，敬请期待')"></a></li>
-               <li id="li_2"><a href="index.jsp"></a></li>
-               <li id="li_3"><a href="http://cdnsrc.xtonegame.com/download/lyxm/lyxm_xt.apk"></a></li>
-            </ul>
-         </div>
-         <!-- 职业介绍 -->
-        <!--  <div class="fbg1">    
+
+
+					<div style="margin-top: 10px; text-align: center;">
+						已有<%=rowCount %>人预约
+					</div>
+				</a> --%>
+			</div>
+		</div>
+		<!-- 下载 -->
+		<div class="fload">
+			<ul>
+				<li id="li_1"><a href="javascript:alert('暂未开通，敬请期待')"></a></li>
+				<li id="li_2"><a href="index.jsp"></a></li>
+				<li id="li_3"><a
+					href="http://cdnsrc.xtonegame.com/download/lyxm/lyxm_xt.apk"></a></li>
+			</ul>
+		</div>
+		<!-- 职业介绍 -->
+		<!--  <div class="fbg1">    
              <script type="text/javascript">
              $(function(){           	 
               $.ajax({           	  
@@ -179,93 +322,96 @@
              </script>
            
          </div> -->
-         <div class="fbg1">         
-                 <p><img src="images/zyjs.png" style="top:20px" />&nbsp职业介绍<p>
-             <div class="ftab-main" id="ftab-0" style="z-index:0;">
-             <table><tr>
-			<td><img src="images\conxy.png";border=0;height=68px;width=140px></td>
-			<td>&nbsp&nbsp&nbsp&nbsp</td>
-			<td><img src="images/xydw.png" border=5;padding-left=20px></td>
-			</tr></table>
-               <!--   <img src="images\conxy.png" alt="" height="68px" width="140px">
+		<div class="fbg1">
+			<p>
+				<img src="images/zyjs.png" style="top: 20px" />&nbsp职业介绍
+			<p>
+			<div class="ftab-main" id="ftab-0" style="z-index: 0;">
+				<table>
+					<tr>
+						<td><img src="images\conxy.png"
+							;border=0;height=68px;width=140px></td>
+						<td>&nbsp&nbsp&nbsp&nbsp</td>
+						<td><img src="images/xydw.png" border=5;padding-left=20px></td>
+					</tr>
+				</table>
+				<!--   <img src="images\conxy.png" alt="" height="68px" width="140px">
                  <img alt="" src="images/xydw.png" float:left> -->
-                 <span style="width:825px;height:395px;background:url(images/rwfs.png) left center;top:-90px;left:158px"></span>
-                 <p>战场上最强大的杀手！手持法杖，掌控元素之力，高群攻伤害！技能多，依靠高超的技巧与风骚的走位更是让敌人眼花缭乱！</p>
-             </div>
-             <div class="ftab-main" id="ftab-1" style="display: none;">
-                  <table><tr>
-			<td><img src="images\conkz.png";border=0;height=68px;width=140px></td>
-			<td>&nbsp&nbsp&nbsp&nbsp</td>
-			<td><img src="images/kzdw.png" border=5;padding-left=20px></td>
-			</tr></table>
-                 <span style="left:430px"><img src="images\rwzs.png" ></span>
-                 <p>战场上的先锋，手持利剑，勇闯敌阵！PK节奏爽快！1V1单挑很少有人能够完全正面的击败他！！</p>
-             </div>
-             <div class="ftab-main" id="ftab-2" style="display: none;">
-                  <table><tr>
-			<td><img src="images\conjl.png";border=0;height=68px;width=140px></td>
-			<td>&nbsp&nbsp&nbsp&nbsp</td>
-			<td><img src="images/jldw.png" border=5;padding-left=20px></td>
-			</tr></table>
-                 <span style="left:468px"><img src="images\rwds.png" alt="人物道士"></span>
-                 <p>战场上最理想的辅助!并有神秘的召唤术，可召唤精灵、神兽、魔王作为强大的作战伙伴！还拥有治疗和增强防御等辅助手段！</p>
-             </div>
-             <div class="ftab-conl" style="position:absolute;z-index:1;margin-top:20px;">
-                <ul>
-                   <li id="l0"><a id="a0" class="" href="javascript:void(0);"></a></li>
-                   <li id="l1"><a id="a1" class="" href="javascript:void(0);"></a></li>
-                   <li id="l2"><a id="a2" class="" href="javascript:void(0);"></a></li>
-                </ul>
-             </div>
-         </div>
-         
-         
-         
-         <!-- 上线 -->
-             <div class="state-line" style="display:none;">
-                  <ul>
-                    <span class="ffsl"></span>
-                    <span class="ffsr"></span>
-                    <li class="active">
-                      <i>
-                      <span class="fsl"></span></i>
-                      <p>版正式上线！</p>
-                    </li>
-                    <li>
-                      <i><span class="fsr"></span>
-                      <span class="fsl"></span></i>
-                      <p>版正式上线！</p>
-                    </li>
-                    <li>
-                      <i><span class="fsr"></span>
-                      <span class="fsl"></span></i>
-                      <p>安卓版正式上线！</p>
-                    </li>
-                    <li>
-                      <i><span class="fsr"></span>
-                      </i>
-                      <p>安卓版正式上线！</p>
-                    </li>
-                  </ul>
-             </div>
+				<span
+					style="width: 825px; height: 395px; background: url(images/rwfs.png) left center; top: -90px; left: 158px"></span>
+				<p>战场上最强大的杀手！手持法杖，掌控元素之力，高群攻伤害！技能多，依靠高超的技巧与风骚的走位更是让敌人眼花缭乱！</p>
+			</div>
+			<div class="ftab-main" id="ftab-1" style="display: none;">
+				<table>
+					<tr>
+						<td><img src="images\conkz.png"
+							;border=0;height=68px;width=140px></td>
+						<td>&nbsp&nbsp&nbsp&nbsp</td>
+						<td><img src="images/kzdw.png" border=5;padding-left=20px></td>
+					</tr>
+				</table>
+				<span style="left: 430px"><img src="images\rwzs.png"></span>
+				<p>战场上的先锋，手持利剑，勇闯敌阵！PK节奏爽快！1V1单挑很少有人能够完全正面的击败他！！</p>
+			</div>
+			<div class="ftab-main" id="ftab-2" style="display: none;">
+				<table>
+					<tr>
+						<td><img src="images\conjl.png"
+							;border=0;height=68px;width=140px></td>
+						<td>&nbsp&nbsp&nbsp&nbsp</td>
+						<td><img src="images/jldw.png" border=5;padding-left=20px></td>
+					</tr>
+				</table>
+				<span style="left: 468px"><img src="images\rwds.png"
+					alt="人物道士"></span>
+				<p>战场上最理想的辅助!并有神秘的召唤术，可召唤精灵、神兽、魔王作为强大的作战伙伴！还拥有治疗和增强防御等辅助手段！</p>
+			</div>
+			<div class="ftab-conl"
+				style="position: absolute; z-index: 1; margin-top: 20px;">
+				<ul>
+					<li id="l0"><a id="a0" class="" href="javascript:void(0);"></a></li>
+					<li id="l1"><a id="a1" class="" href="javascript:void(0);"></a></li>
+					<li id="l2"><a id="a2" class="" href="javascript:void(0);"></a></li>
+				</ul>
+			</div>
+		</div>
 
-     </div>
-     <div class="footerx">
-    <div class="logox" style="padding-left:20px;">
-        <div class="logo-s" style="padding:0 50px;">
-        <a class="baidux"> <img src="images/footer.png" style="border-right: 1px solid grey;" alt=""></a>
-    </div>
-        <div class="font">
-           <div class="font">
-        	<p>备案号:粤ICP备11029425号-2 丨粤网文[2013]0810-210号丨</p>
-            <p>抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防上当受骗</p>
-            <p>适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
-    	    </div>
-        </div>
-    </div>
 
-</div>
- <script>
+
+		<!-- 上线 -->
+		<div class="state-line" style="display: none;">
+			<ul>
+				<span class="ffsl"></span>
+				<span class="ffsr"></span>
+				<li class="active"><i> <span class="fsl"></span></i>
+					<p>版正式上线！</p></li>
+				<li><i><span class="fsr"></span> <span class="fsl"></span></i>
+					<p>版正式上线！</p></li>
+				<li><i><span class="fsr"></span> <span class="fsl"></span></i>
+					<p>安卓版正式上线！</p></li>
+				<li><i><span class="fsr"></span> </i>
+					<p>安卓版正式上线！</p></li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="footerx">
+		<div class="logox" style="padding-left: 20px;">
+			<div class="logo-s" style="padding: 0 50px;">
+				<a class="baidux"> <img src="images/footer.png"
+					style="border-right: 1px solid grey;" alt=""></a>
+			</div>
+			<div class="font">
+				<div class="font">
+					<p>备案号:粤ICP备11029425号-2 丨粤网文[2013]0810-210号丨</p>
+					<p>抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防上当受骗</p>
+					<p>适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script>
         $(document).ready(function(){
             var oConl = $('.ftab-conl li');
             oConl.click(function(){
@@ -277,6 +423,6 @@
             });
         });
 </script>
-	 
+
 </body>
 </html>
