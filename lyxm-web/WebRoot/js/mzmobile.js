@@ -66,17 +66,38 @@ function commit(){
 		alert("短信验证码错误")
 		return ;
 	}
-	 var data = getData();
+	var data = getData();
 	ajaxCommit("2",data,function(data){
+		if(data.status=="500"){
+			alert("该QQ号已经预约过");
+		}else {
 		if(data.status=="error"){
 			alert("请填入正确的邀请人手机号")
 		}
 		else{
 //		alert("成功预约")
 //	window.location.reload()
-			
-			document.location.href = 'share2.jsp';
-		
+			document.getElementById('kong').style.height='0px'
+			document.getElementById('uplbneirong').style.height=''
+        		document.getElementById('uplbneirong').style.width='215px'
+    	        document.getElementById('uplbneirong').style.height='0px'
+    	        document.getElementById('uplbneirong').style.border='0px'
+    	        document.getElementById('lbneirong').style.textAlign=''	
+    	        document.getElementById('lbneirong').style.width='90%'	
+    	        document.getElementById('uplbneirong').style.marginLeft='18.5%'
+    	        document.getElementById('closebtn').style.marginLeft='0px'
+	    	    document.getElementById('closebtn').style.marginLeft='0px'
+	    	    document.getElementById('closebtn').style.marginTop='0px'
+//        		document.getElementById('lbneirong').style.textAlign=''	
+//        		document.getElementById('lbneirong').style.marginLeft='50px'
+        		$('#lbneirong').text("");
+        		$('#lbneirong').append(
+        				
+        				"<img style=\"margin-top:-93px;align:center;text-align:center;vertical-align:middle;width:101%;height:auto;\"  src=\"images\\yuyuesuccess.png\"></img>"
+        				
+        		);
+    		TGDialogS("qxyy");
+		}
 		}
 	},function(data){
 		alert(data.status)
@@ -94,22 +115,23 @@ function giftAjaxCommit(giftNum){
 	        dataType:"json",
 	        success:function(data){
 	        	if(data.code!=null){
+	        		document.getElementById('kong').style.height='0px'
 	        		document.getElementById('uplbneirong').style.height=''
-		        		document.getElementById('uplbneirong').style.width='320px'
-		    	        document.getElementById('uplbneirong').style.height='0px'
-		    	        document.getElementById('uplbneirong').style.border='0px'
-		    	        document.getElementById('lbneirong').style.textAlign=''	
-		    	        document.getElementById('lbneirong').style.width='93%'	
-		    	        document.getElementById('uplbneirong').style.marginLeft='95px'
+	        			document.getElementById('uplbneirong').style.width='215px'
+	            	        document.getElementById('uplbneirong').style.height='0px'
+	            	        document.getElementById('uplbneirong').style.border='0px'
+	            	        document.getElementById('lbneirong').style.textAlign=''	
+	            	        document.getElementById('lbneirong').style.width='90%'	
+	            	        document.getElementById('uplbneirong').style.marginLeft='18.5%'
 		    	        document.getElementById('closebtn').style.marginLeft='0px'
 			    	    document.getElementById('closebtn').style.marginLeft='0px'
-			    	    document.getElementById('closebtn').style.marginTop='16px'
+			    	    document.getElementById('closebtn').style.marginTop='0px'
 //		        		document.getElementById('lbneirong').style.textAlign=''	
 //		        		document.getElementById('lbneirong').style.marginLeft='50px'
 		        		$('#lbneirong').text("");
 		        		$('#lbneirong').append(
 		        				
-		        				"<img style=\"margin-top:-20px;align:center;text-align:center;vertical-align:middle;width:100%;height:auto;\"  src=\"images\\yuyuesuccess.png\"></img>"
+		        				"<img style=\"margin-top:-93px;align:center;text-align:center;vertical-align:middle;width:101%;height:auto;\"  src=\"images\\yuyuesuccess.png\"></img>"
 		        				
 		        		);
 	        		TGDialogS("qxyy");
@@ -358,12 +380,12 @@ function giftAjaxCommit(giftNum){
     		        success:function(data){
     		        	if(data.code!=null){
     		        		document.getElementById('uplbneirong').style.height=''
-    			        		document.getElementById('uplbneirong').style.width='320px'
-    			    	        document.getElementById('uplbneirong').style.height='0px'
-    			    	        document.getElementById('uplbneirong').style.border='0px'
-    			    	        document.getElementById('lbneirong').style.textAlign=''	
-    			    	        document.getElementById('lbneirong').style.width='93%'	
-    			    	        document.getElementById('uplbneirong').style.marginLeft='95px'
+    		        			document.getElementById('uplbneirong').style.width='215px'
+    		            	    document.getElementById('uplbneirong').style.height='0px'
+    		            	    document.getElementById('uplbneirong').style.border='0px'
+    		            	    document.getElementById('lbneirong').style.textAlign=''	
+    		            	    document.getElementById('lbneirong').style.width='90%'	
+    		            	    document.getElementById('uplbneirong').style.marginLeft='18.5%'
     			    	        document.getElementById('closebtn').style.marginLeft='0px'
     				    	    document.getElementById('closebtn').style.marginLeft='0px'
     				    	    document.getElementById('closebtn').style.marginTop='16px'

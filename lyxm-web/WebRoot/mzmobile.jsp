@@ -1296,7 +1296,7 @@ body {
 		<%} %>
 		
 		<div class="sub-snav">
-			<font id="yuyueNum" class="font-a">我要做盟主</br>我又兄弟千千万
+			<font id="yuyueNum" class="font-a">我要做盟主</br>我有兄弟千千万
 			</font>
 		</div>
 		<%if(rowCount<=29){ %>

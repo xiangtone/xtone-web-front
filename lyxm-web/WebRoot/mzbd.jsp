@@ -1224,10 +1224,10 @@ opacity
 						%>
 						
 						
-			<%if(rowCount<=2){ %>
+			<%if(rowCount<=29){ %>
 			<a href="javascript:;" class="yy_b_btn sp pa"
 				ontouchstart="pgvSendClick({hottag:'a20160509gwyy.btn.yuyue'});"></a>
-			<%} else if(rowCount>2){%>
+			<%} else if(rowCount>29){%>
 			<a href="javascript:;" class="mz"  
 			onclick="alert('预约名额已满<%=rowCount%>人')"
 			ontouchstart="pgvSendClick({hottag:'a20160509gwyy.btn.yuyue'});"></a>
@@ -1263,12 +1263,12 @@ opacity
 					</div>
 					<div class="box3">
 						<!-- <p class="suc_yy">成功预约即可获得</p> -->
-						<%if(rowCount<=2){ %>
+						<%if(rowCount<=29){ %>
 						 <div class="bx_frame pr" id="lbbtn1">
 						 <div class="bx_pot"></div>
 							<span class="hand sp pa"></span>
 							<a href="javascript:;" class="lq_gift_btn pa sp"></a> 
-						 <%} else if(rowCount>2){%>
+						 <%} else if(rowCount>29){%>
 						 <div class="bx_frame pr" >
 						 <div class="bx_pot"></div>
 							<span class="hand sp pa"></span>
