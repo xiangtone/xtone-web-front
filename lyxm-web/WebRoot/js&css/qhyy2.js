@@ -71,12 +71,12 @@ function commit(){
 	 var data = getData();
 	ajaxCommit("2",data,function(data){
 		if(data.status=="500"){
-			alert("该QQ号已经预约过")
-		}
-		if(data.status=="error"){
+			alert("该QQ号已经预约过");
+		}else {
+			if(data.status=="error"){
 			alert("请填入正确的邀请人手机号")
-		}
-		else{
+			}
+			else{
 //		alert("成功预约")
 //	window.location.reload()
 			document.getElementById('kong').style.height='0px'
@@ -94,7 +94,7 @@ function commit(){
 	        				
 	        		);
 	        		TGDialogS("qxyy");
-	        	
+		}   	
 		
 		}
 	},function(data){
