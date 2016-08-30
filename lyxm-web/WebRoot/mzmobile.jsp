@@ -1285,11 +1285,11 @@ body {
 		</div>
 	</div>
 	<div class="sub">
-		<%if(rowCount<=29){ %>
+		<%if(rowCount<=2){ %>
 		<div id="yuyuebtn" class="sub-nav">
 			<img src="images/index/mzbaodao.png">
 		</div>
-		<%} else if(rowCount>29){%>
+		<%} else if(rowCount>2){%>
 		<div onclick="alert('预约名额已满<%=rowCount%>人')" class="sub-nav">
 			<img src="images/index/mzbaodao.png">
 		</div>
@@ -1299,7 +1299,7 @@ body {
 			<font id="yuyueNum" class="font-a">我要做盟主</br>我有兄弟千千万
 			</font>
 		</div>
-		<%if(rowCount<=29){ %>
+		<%-- <%if(rowCount<=2){ %> --%>
 		<div id="achievebtn">
 			<div id="invitebtn" class="sub-dnav">
 				<img src="images/index/baoxiang.png">
@@ -1308,7 +1308,7 @@ body {
 				<strong class="font-a" style="font-weight:bold;"><<领取十万粮饷>></strong>
 			</div>
 		</div>
-		 <%} else if(rowCount>29){%>
+		<%--  <%} else if(rowCount>2){%>
 		 <div onclick="alert('预约名额已满<%=rowCount%>人')">
 			<div  class="sub-dnav">
 				<img src="images/index/baoxiang.png">
@@ -1317,7 +1317,7 @@ body {
 				<strong class="font-a" style="font-weight:bold;"><<领取十万粮饷>></strong>
 			</div>
 		</div>
-		 <%} %>
+		 <%} %> --%>
 		
 	</div>
 	<div class="disb">
@@ -1503,6 +1503,7 @@ $("#achievebtn").on('click', function(){
 });
 $("#closebtn").on('click', function(){
 	showDialog.hide();
+	/* window.location.reload(); */
 });
 $("#seniorbtn").on('click', function(){
 	
@@ -1519,7 +1520,9 @@ $("#extremebtn").on('click', function(){
 $("#dlbtn").on('click', function(){ 
 	TGDialogS("pop111");
 });
-
+/* $("#qxyy").on('click', function(){
+	 window.location.reload();
+}); */
 function TGDialogS(e){
     need("biz.dialog-min",function(Dialog){
 Dialog.show({

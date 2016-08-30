@@ -209,16 +209,16 @@
 						%>
 						
 						
-			<%if(rowCount<=29){ %>
+			<%if(rowCount<=2){ %>
 			<!-- 视频链接 -->
 			<div class="leader">
              	<a href="mzbd.jsp" > 
              		<img alt="我是盟主，我要招募！" src="images/mz.png" style="width:100%;height:auto;display:block;">           		
              	</a>  
              </div>
-             <%} else if(rowCount>29){%>
+             <%} else if(rowCount>2){%>
 			<div class="leader">
-             	<a href="javaScript:;"  onclick="alert('预约名额已满<%=rowCount%>人')"> 
+             	<a href="javaScript:;"  onclick="alert('领取名额已满，感谢您的参与！')"> 
              		<img alt="我是盟主，我要招募！" src="images/mz.png" style="width:100%;height:auto;display:block;">           		
              	</a>  
              </div>

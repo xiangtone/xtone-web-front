@@ -1,4 +1,4 @@
-var mobilecode = "19940514"; 
+var mobilecode = "19940514";
 var valid;
 var valid2
 function getData(){
@@ -97,6 +97,10 @@ function commit(){
         				
         		);
     		TGDialogS("qxyy");
+    		var qx = document.getElementById("qxyy");
+    		qx.onclick = function(){
+    			window.location.reload();
+    		}
 		}
 		}
 	},function(data){
