@@ -1224,12 +1224,12 @@ opacity
 						%>
 						
 						
-			<%if(rowCount<=2){ %>
+			<%if(rowCount<=29){ %>
 			<a href="javascript:;" class="yy_b_btn sp pa"
 				ontouchstart="pgvSendClick({hottag:'a20160509gwyy.btn.yuyue'});"></a>
-			<%} else if(rowCount>2){%>
+			<%} else if(rowCount>29){%>
 			<a href="javascript:;" class="mz"  
-			onclick="alert('预约名额已满<%=rowCount%>人')"
+			onclick="alert('领取名额已满，感谢您的参与！')"
 			ontouchstart="pgvSendClick({hottag:'a20160509gwyy.btn.yuyue'});"></a>
 			<%} %>
 			

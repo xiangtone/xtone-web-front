@@ -1177,7 +1177,7 @@ opacity
 		<div class="container">
 			<div class="head1 pr">
 				<h1 class="hide">仙魔争霸，由你主宰</h1>
-				<a href="index.jsp" class="logo db pa" target="_blank" title="灵域仙魔">灵域仙魔</a>
+				<a href="default.jsp" class="logo db pa"  title="灵域仙魔">灵域仙魔</a>
 
 			</div>
 			<div class="content">

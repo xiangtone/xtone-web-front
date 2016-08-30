@@ -1285,12 +1285,12 @@ body {
 		</div>
 	</div>
 	<div class="sub">
-		<%if(rowCount<=2){ %>
+		<%if(rowCount<=29){ %>
 		<div id="yuyuebtn" class="sub-nav">
 			<img src="images/index/mzbaodao.png">
 		</div>
-		<%} else if(rowCount>2){%>
-		<div onclick="alert('预约名额已满<%=rowCount%>人')" class="sub-nav">
+		<%} else if(rowCount>29){%>
+		<div onclick="alert('领取名额已满，感谢您的参与！')" class="sub-nav">
 			<img src="images/index/mzbaodao.png">
 		</div>
 		<%} %>
