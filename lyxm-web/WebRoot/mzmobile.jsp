@@ -61,7 +61,7 @@
 <script type="text/javascript"
 	src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script type="text/javascript" src="js/sha1.js"></script>
-<!--    <script type="text/javascript">
+  <!-- <script type="text/javascript">
 	var plc = '<<灵域仙魔>> ';
 	var strAry = [ plc + ' 我已经预约灵域仙魔了，兄弟快来与我一起战斗吧！',
 			plc + ' 预约灵域仙魔，用你的洪荒之力助我一战！',
@@ -159,7 +159,7 @@
 		// config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
 
 	});
-</script>  -->
+</script> -->
 <title>灵域仙魔</title>
 <style>
 /* reset */
