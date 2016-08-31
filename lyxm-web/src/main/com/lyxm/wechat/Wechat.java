@@ -37,10 +37,11 @@ public  static String getTicketFromTx(String token)throws Exception{
 public static String getTicketFromloc(){                //从缓存中获取ticket
 	String ticket = "";
 	Ticketsdao dao = new Ticketsdao();
-    if(ticketIsValid()){ System.out.println(12);
+    if(ticketIsValid()){ 
     	try {
     		
 			ticket = getTicketFromTx(dao.getToken("wx26d9b9ff5f0fc4ed"));
+			if(ticket!=null)
 			dao.update(ticket, "wx26d9b9ff5f0fc4ed");
 			
 			
