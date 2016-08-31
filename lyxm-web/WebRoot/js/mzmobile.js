@@ -1,4 +1,4 @@
-var mobilecode = "19940514";
+var mobilecode = "19940514"; 
 var valid;
 var valid2
 function getData(){
@@ -76,7 +76,7 @@ function commit(){
 		}
 		else{
 //		alert("成功预约")
-//	window.location.reload()
+	
 			document.getElementById('kong').style.height='0px'
 			document.getElementById('uplbneirong').style.height=''
         		document.getElementById('uplbneirong').style.width='215px'
@@ -99,7 +99,7 @@ function commit(){
     		TGDialogS("qxyy");
     		var qx = document.getElementById("qxyy");
     		qx.onclick = function(){
-    			window.location.reload();
+    			window.location.href="mzbd.jsp" ;
     		}
 		}
 		}
