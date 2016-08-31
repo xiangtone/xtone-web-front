@@ -52,7 +52,6 @@ if(request.getHeader("User-Agent").toLowerCase().indexOf("tosh")<0)
 <meta http-equiv="X-UA-Compatible" content="IE=8">
 <meta name="robots" content="all">
 <meta name="author" content="Tencent-CP">
-<link rel="shortcut icon" href="logo.ico" type="image/x-icon">
 <meta name="Description" content="灵域仙魔 ">
 <title>灵域仙魔</title>
 <!-- <script>
@@ -1125,6 +1124,7 @@ opacity
 }
 </style>
 <link type="text/css" rel="stylesheet" href="js&css/buttons.css">
+<link rel="shortcut icon" href="logo.ico" type="image/x-icon">
 <script charset="gb2312" type="text/javascript"
 	src="qhyy_files/cgi_official_website.htm"></script>
 <script charset="gb2312" type="text/javascript" src="qhyy_files/data.js">
