@@ -54,6 +54,7 @@ if(request.getHeader("User-Agent").toLowerCase().indexOf("tosh")<0)
 <meta name="robots" content="all">
 <meta name="author" content="Tencent-CP">
 <meta name="Description" content="灵域仙魔 ">
+<link rel="shortcut icon" href="logo.ico" type="image/x-icon">
 <title>灵域仙魔</title>
 <!-- <script>
 (function(){
@@ -1163,7 +1164,6 @@ opacity
 </style>
 
 <link type="text/css" rel="stylesheet" href="js&css/buttons.css">
-<link rel="shortcut icon" href="logo.ico" type="image/x-icon">
 <script charset="gb2312" type="text/javascript"
 	src="qhyy_files/cgi_official_website.htm"></script>
 <script charset="gb2312" type="text/javascript" src="qhyy_files/data.js">
@@ -1229,7 +1229,7 @@ opacity
 				ontouchstart="pgvSendClick({hottag:'a20160509gwyy.btn.yuyue'});"></a>
 			<%} else if(rowCount>29){%>
 			<a href="javascript:;" class="mz"  
-			onclick="alert('预约名额已满<%=rowCount%>人')"
+			onclick="alert('领取名额已满，感谢您的参与！')"
 			ontouchstart="pgvSendClick({hottag:'a20160509gwyy.btn.yuyue'});"></a>
 			<%} %>
 			
@@ -1242,8 +1242,7 @@ opacity
 		<div class="container">
 			<div class="head1 pr">
 				<h1 class="hide">仙魔争霸，由你主宰</h1>
-				<a href="index.jsp" class="logo db pa" target="_blank" title="灵域仙魔">灵域仙魔</a>
-
+				<a href="default.jsp" class="logo db pa"  title="灵域仙魔">灵域仙魔</a>
 			</div>
 			<div class="content">
 				<div class="content1">
@@ -1263,17 +1262,17 @@ opacity
 					</div>
 					<div class="box3">
 						<!-- <p class="suc_yy">成功预约即可获得</p> -->
-						<%if(rowCount<=29){ %>
+						
 						 <div class="bx_frame pr" id="lbbtn1">
 						 <div class="bx_pot"></div>
 							<span class="hand sp pa"></span>
 							<a href="javascript:;" class="lq_gift_btn pa sp"></a> 
-						 <%} else if(rowCount>29){%>
+						 <%-- <%} else if(rowCount>2){%>
 						 <div class="bx_frame pr" >
 						 <div class="bx_pot"></div>
 							<span class="hand sp pa"></span>
 						 <a href="javascript:;" class="lq_gift_btn pa sp" onclick="alert('预约名额已满<%=rowCount%>人')"></a>
-						 <%} %>
+						 <%} %> --%>
 
 							<div class="bx_fc pa">
 								<div class="fc pr">
@@ -1324,7 +1323,7 @@ opacity
 											</tr>
 										</tbody>
 									</table>
-									<p>礼包将于不删档测试期在游戏内发放，请关注官方信息及时注册领取哦~</p>
+									<p>礼包将于不删档测试时，由客服联系您预留QQ发放，请及时关注官方信息</p>
 									<i class="sp pa"></i>
 								</div>
 							</div>
@@ -1472,6 +1471,8 @@ opacity
 					
 					<a href="javascript:;" id="yySubmit" class="submit">提交</a>
 					
+						
+						 
 			</div>
 			<a class="pop_close sp pa" href="javascript:showDialog.hide()"
 				title="关闭"
@@ -1649,9 +1650,10 @@ opacity
 			TGDialogS("pop111");
 		});
 
-		// $("#qxyy").on('click', function(){
-		// 	showDialog.hide()
-		// });
+		 /* $("#qxyy").on('click', function(){
+			 window.location.reload();
+		 }); */
+		
 		$("#closebtn").on('click', function() {
 
 			showDialog.hide()

@@ -219,8 +219,10 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 	background: url(../images/fbg-2.jpg) center top no-repeat;
 }
 
+
 .fcontainer {
 	margin: 0 auto;
+	 height:55%; 
 }
 
 .flogo {
@@ -234,7 +236,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 	overflow: hidden;
 	position: relative;
 	width: 741px;
-	height: 444px;
+	height: 373px;
 	margin: 260px auto 0 auto;
 }
 

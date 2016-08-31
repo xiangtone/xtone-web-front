@@ -78,7 +78,7 @@ function commit(){
 			}
 			else{
 //		alert("成功预约")
-//	window.location.reload()
+				//window.location.reload()
 			document.getElementById('kong').style.height='0px'
         		document.getElementById('uplbneirong').style.height=''
         		document.getElementById('uplbneirong').style.width='400px'
@@ -87,15 +87,17 @@ function commit(){
     	        document.getElementById('uplbneirong').style.marginLeft='62px'
     	        document.getElementById('closebtn').style.marginLeft='462px'
 	        		$('#lbneirong').text("");
-	        		$('#lbneirong').append(
-	        				
-	        				
+	        		$('#lbneirong').append(	
 	        				"<img style=\"margin-top:-20px;align:center;text-align:center;vertical-align:middle;width:100%;height:auto;\"  src=\"images\\yuyuesuccess.png\"></img>"
 	        				
 	        		);
 	        		TGDialogS("qxyy");
+	        		$("#qxyy").on('click', function(){
+	       			 window.location.reload();
+	       		 });
+	        				
 		}   	
-		
+			
 		}
 	},function(data){
 		

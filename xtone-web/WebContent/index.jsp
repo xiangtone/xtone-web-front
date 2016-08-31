@@ -302,19 +302,19 @@
 		<!-- 轮播（Carousel）项目 -->
 		<div class="carousel-inner">
 			<div class="item active" style="border: none;">
-			<a href="porducts.jsp"><img src="images/index/066.png"></a>	
+			<a href="porducts.jsp"><img src="images/index/jpqy2.jpg"></a>	
 			</div>
 			<div class="item" style="border: none;">
-			<a href="porducts.jsp"><img src="images/index/067.png" alt="Second banner"></a>
+			<a href="porducts.jsp"><img src="images/index/lyxm-big.jpg" alt="Second banner"></a>
 			</div>
 			<div class="item" style="border: none;">
 			<a href="porducts.jsp"><img src="images/index/068.png" alt="Thrid banner"></a>
 			</div>
 			<div class="item" style="border: none;">
-			<a href="porducts.jsp"><img src="images/index/1900x540-1.jpg" alt="Fourth banner"></a>
+			<a href="porducts.jsp"><img src="images/index/mxkl2.jpg" alt="Fourth banner"></a>
 			</div>
 			<div class="item" style="border: none;">
-			<a href="porducts.jsp"><img src="images/index/zhulaile.jpg" alt="Fifth banner"></a>
+			<a href="porducts.jsp"><img src="images/index/mhxm2.jpg" alt="Fifth banner"></a>
 			</div>
 			<!-- 		<div class="item" style="border: none;"> -->
 			<!--          <img src="images/index/1900x540_2.png" alt="Second slide"> -->
@@ -394,7 +394,7 @@
 
 								<div class="l hot_gamebox mb1" >
 									<a href="porducts.jsp"><img
-										src="images/index/065.png" class="bsimg-x" alt="First game" >
+										src="images/index/jpqy3.jpg" class="bsimg-x" alt="First game" >
 									</a>
 									<div class="bmbox2" >
 									 <div class="bmbox" >
@@ -413,7 +413,7 @@
 								<div class="l hot_gamebox mb1">
 									
 									<a href="porducts.jsp"><img
-										src="images/index/064.png" class="bsimg-x" alt="Second game" ></a>
+										src="images/index/lyxm2.jpg" class="bsimg-x" alt="Second game" ></a>
 									 <div class="bmbox2" >
 									 <div class="bmbox">
 										<a class="a-1-1" href="porducts.jsp"><img class="imgz" alt="First game" src="images/index/jrgw.png"></a>					
@@ -429,7 +429,7 @@
 							<div class="hot_game hot_list">
 								<div class="l hot_gamebox mb1">
 									<a href="porducts.jsp"><img
-										src="images/index/063.png" class="bsimg-x" alt="Third game" ></a>
+										src="images/index/mxkl3.jpg" class="bsimg-x" alt="Third game" ></a>
 									<div class="bmbox2" >
 									<div class="bmbox">
 										<a class="a-1-1" href="porducts.jsp"><img class="imgz" alt="First game" src="images/index/jrgw.png"></a>					

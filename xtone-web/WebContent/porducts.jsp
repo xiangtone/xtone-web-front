@@ -183,15 +183,61 @@ height: 116px;
 				</div>	
 			<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
 					<div class="sjyx1">
-						<img src="images/products/jdtw2.png" class="bsimg">
+						<img src="images/products/lyxm3.jpg" class="bsimg">
 					</div>
 					<div class="sjyx2">
-						<img src="images/products/jdtw1.png" class="bsimg">
+						<ul style="list-style:none; margin-bottom:0px;margin-left:-32px;">
+								<li>
+									<img  src="images/products/lyxm.png" style="width:18%;float:left;">
+									<font style="font-family:pictos;color:#ea474c;padding-top:1%;padding-left:3%;">灵域仙魔</font>
+									<br>
+									<font style="font-family:pictos;color:#ea474c;font-size:14px;padding-left:3%;">魔幻动作</font>
+								</li>	
+								<li style="padding-top:7px;float:left;line-height:initial;width:100%;">
+									<font style="font-family:pictos;font-size:13px;color:#a4a4a4;">
+									仙魔争霸，由你主宰！《灵域仙魔》是2016年首款无限制魔幻动作手游，开启魔幻类手游全图自由PK新纪元！它由万家游戏主力团队倾情打造，革新手游经济系统，史上对玩家最友好的、最公平的拍卖交易系统，打</font>
+								</li>
+						</ul>
 					</div>
 					<div class="sjyx3">
 						<div>
-						<a href="javascript:alert('敬请期待！');" onmouseover="mouseOver1()" onmouseout="mouseOut1()">
+						<a href="http://lyxm.xtonegame.com/" onmouseover="mouseOver1()" onmouseout="mouseOut1()" target="_Blank">
 							<img id="a" class="img2" src="images/products/jdtw3.png"></a>
+						</div>
+						<div>
+						<a href="http://cdnsrc.xtonegame.com/download/lyxm/lyxm_xt.apk" >
+							<img  class="img2" src="images/products/jdtw6.png"></a>
+						</div>
+						<div>
+						<a href="javascript:alert('敬请期待！');" >
+							<img  class="img2" src="images/products/jdtw5.png"></a>
+						</div>
+					</div>
+					
+			</div>
+			
+			<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
+					<div class="sjyx1">
+						<img src="images/products/jpqy4.jpg" class="bsimg">
+					</div>
+					<div class="sjyx2">
+						<ul style="list-style:none; margin-bottom:0px;margin-left:-32px;">
+								<li>
+									<img  src="images/products/jpqy.png" style="width:18%;float:left;">
+									<font style="font-family:pictos;color:#ea474c;padding-top:1%;padding-left:3%;">剑仆契约</font>
+									<br>
+									<font style="font-family:pictos;color:#ea474c;font-size:14px;padding-left:3%;">策略养成</font>
+								</li>	
+								<li style="padding-top:7px;float:left;line-height:initial;width:100%;">
+									<font style="font-family:pictos;font-size:13px;color:#a4a4a4;">
+									<br>不知道写些什么，敬请期待？</font>
+								</li>
+						</ul>
+					</div>
+					<div class="sjyx3">
+						<div>
+						<a href="javascript:alert('敬请期待！');" onmouseover="mouseOver2()" onmouseout="mouseOut2()" target="_Blank">
+							<img id="b" class="img2" src="images/products/jdtw3.png"></a>
 						</div>
 						<div>
 						<a href="javascript:alert('敬请期待！');" >
@@ -204,20 +250,32 @@ height: 116px;
 					</div>
 					
 			</div>
+			
 			<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
 					<div class="sjyx1">
-						<img src="images/products/jdtw2.png" class="bsimg">
+						<img src="images/products/mxkl4.jpg" class="bsimg">
 					</div>
 					<div class="sjyx2">
-						<img src="images/products/jdtw1.png" class="bsimg">
+						<ul style="list-style:none; margin-bottom:0px;margin-left:-32px;">
+								<li>
+									<img  src="images/products/mxkl.png" style="width:18%;float:left;">
+									<font style="font-family:pictos;color:#ea474c;padding-top:1%;padding-left:3%;">梦想昆仑</font>
+									<br>
+									<font style="font-family:pictos;color:#ea474c;font-size:14px;padding-left:3%;">仙侠动作</font>
+								</li>	
+								<li style="padding-top:7px;float:left;line-height:initial;width:100%;">
+									<font style="font-family:pictos;font-size:13px;color:#a4a4a4;">
+									全民仙侠动作手游《梦想昆仑》，由万家游戏主力精英团队倾力打造，将经典仙侠元素与代入感极强的唯美画面融于一体，完美呈现热血江湖的剧情故事，四大个性化职业，体验百余种玩法更有神仙眷侣，携手畅游，仙</font>
+								</li>
+						</ul>
 					</div>
 					<div class="sjyx3">
 						<div>
-						<a href="javascript:alert('敬请期待！');" onmouseover="mouseOver2()" onmouseout="mouseOut2()">
-							<img id="b" class="img2" src="images/products/jdtw3.png"></a>
+						<a href="http://mxkl.xtonegame.com/" onmouseover="mouseOver3()" onmouseout="mouseOut3()" target="_Blank">
+							<img id="c" class="img2" src="images/products/jdtw3.png"></a>
 						</div>
 						<div>
-						<a href="javascript:alert('敬请期待！');" >
+						<a href="http://mxkl.xtonegame.com/downskip?gamenameId=m" >
 							<img  class="img2" src="images/products/jdtw6.png"></a>
 						</div>
 						<div>
@@ -225,47 +283,50 @@ height: 116px;
 							<img  class="img2" src="images/products/jdtw5.png"></a>
 						</div>
 					</div>
-				</div>
+					
+			</div>
 				
 				
 				<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
 					<div class="sjyx1">
-						<img src="images/products/jdtw2.png" class="bsimg">
+						<img src="images/products/mhxm4.jpg" class="bsimg">
 					</div>
 					<div class="sjyx2">
-						<img src="images/products/jdtw1.png" class="bsimg">
+						<ul style="list-style:none; margin-bottom:0px;margin-left:-32px;">
+								<li>
+									<img  src="images/products/mhxm.png" style="width:18%;float:left;">
+									<font style="font-family:pictos;color:#ea474c;padding-top:1%;padding-left:3%;">梦幻仙魔</font>
+									<br>
+									<font style="font-family:pictos;color:#ea474c;font-size:14px;padding-left:3%;">魔幻ARPG</font>
+								</li>	
+								<li style="padding-top:7px;float:left;line-height:initial;width:100%;">
+									<font style="font-family:pictos;font-size:13px;color:#a4a4a4;">
+									魔幻东方，决战六界！新西游魔幻手游《梦幻仙魔》2016年将震撼临世，《梦幻仙魔》以九宫格策略布阵革新魔幻类手游玩法，多元化组队系统、以实时交互为特点的特色经济环境和精彩绝伦的跨服世界大战！必将为广大玩家带来酣畅淋漓的极致魔幻体验。</font>
+								</li>
+						</ul>
 					</div>
 					<div class="sjyx3">
-						
-						<a href="javascript:alert('敬请期待！');" onmouseover="mouseOver3()" onmouseout="mouseOut3()">
-							<img id="c" class="img2" src="images/products/jdtw3.png"></a>
-						<a href="javascript:alert('敬请期待！');" >
-							<img  class="img2" src="images/products/jdtw6.png"></a>
-						<a href="javascript:alert('敬请期待！');" >
-							<img  class="img2" src="images/products/jdtw5.png"></a>
-						
-					</div>
-				</div>
-				
-				
-				
-		 	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
-					<div class="sjyx1">
-						<img src="images/products/jdtw2.png" class="bsimg">
-					</div>
-					<div class="sjyx2">
-						<img src="images/products/jdtw1.png" class="bsimg">
-					</div>
-					<div class="sjyx3">
-						<a href="javascript:alert('敬请期待！');" onmouseover="mouseOver4()" onmouseout="mouseOut4()">
+						<div>
+						<a href="http://mxkl.xtonegame.com/Mhxm/" onmouseover="mouseOver4()" onmouseout="mouseOut4()" target="_Blank">
 							<img id="d" class="img2" src="images/products/jdtw3.png"></a>
-						<a href="javascript:alert('敬请期待！');" >
+						</div>
+						<div>
+						<a href="http://mxkl.xtonegame.com/downskip?gamenameId=h" >
 							<img  class="img2" src="images/products/jdtw6.png"></a>
+						</div>
+						<div>
 						<a href="javascript:alert('敬请期待！');" >
 							<img  class="img2" src="images/products/jdtw5.png"></a>
+						</div>
 					</div>
+					
 			</div>
-			<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
+				
+				
+				
+		 	
+			
+			<!-- <div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
 					<div class="sjyx1">
 						<img src="images/products/jdtw2.png" class="bsimg">
 					</div>
@@ -296,7 +357,7 @@ height: 116px;
 						<a href="javascript:alert('敬请期待！');" >
 							<img  class="img2" src="images/products/jdtw5.png"></a>
 					</div>
-			</div>
+			</div> -->
 					
 				<div class="col-md-12 col-sm-12 col-xs-12 bottom-hieght"></div>
 			</div>

@@ -61,7 +61,8 @@
 <script type="text/javascript"
 	src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script type="text/javascript" src="js/sha1.js"></script>
-<!--    <script type="text/javascript">
+
+  <!-- <script type="text/javascript">
 	var plc = '<<灵域仙魔>> ';
 	var strAry = [ plc + ' 我已经预约灵域仙魔了，兄弟快来与我一起战斗吧！',
 			plc + ' 预约灵域仙魔，用你的洪荒之力助我一战！',
@@ -159,7 +160,7 @@
 		// config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
 
 	});
-</script>  -->
+</script> -->
 <title>灵域仙魔</title>
 <style>
 /* reset */
@@ -1290,7 +1291,7 @@ body {
 			<img src="images/index/mzbaodao.png">
 		</div>
 		<%} else if(rowCount>29){%>
-		<div onclick="alert('预约名额已满<%=rowCount%>人')" class="sub-nav">
+		<div onclick="alert('领取名额已满，感谢您的参与！')" class="sub-nav">
 			<img src="images/index/mzbaodao.png">
 		</div>
 		<%} %>
@@ -1299,7 +1300,7 @@ body {
 			<font id="yuyueNum" class="font-a">我要做盟主</br>我有兄弟千千万
 			</font>
 		</div>
-		<%if(rowCount<=29){ %>
+		<%-- <%if(rowCount<=2){ %> --%>
 		<div id="achievebtn">
 			<div id="invitebtn" class="sub-dnav">
 				<img src="images/index/baoxiang.png">
@@ -1308,7 +1309,7 @@ body {
 				<strong class="font-a" style="font-weight:bold;"><<领取十万粮饷>></strong>
 			</div>
 		</div>
-		 <%} else if(rowCount>29){%>
+		<%--  <%} else if(rowCount>2){%>
 		 <div onclick="alert('预约名额已满<%=rowCount%>人')">
 			<div  class="sub-dnav">
 				<img src="images/index/baoxiang.png">
@@ -1317,7 +1318,7 @@ body {
 				<strong class="font-a" style="font-weight:bold;"><<领取十万粮饷>></strong>
 			</div>
 		</div>
-		 <%} %>
+		 <%} %> --%>
 		
 	</div>
 	<div class="disb">
@@ -1503,6 +1504,7 @@ $("#achievebtn").on('click', function(){
 });
 $("#closebtn").on('click', function(){
 	showDialog.hide();
+/* 	window.location.reload(); */
 });
 $("#seniorbtn").on('click', function(){
 	
@@ -1519,7 +1521,9 @@ $("#extremebtn").on('click', function(){
 $("#dlbtn").on('click', function(){ 
 	TGDialogS("pop111");
 });
-
+/* $("#qxyy").on('click', function(){
+	 window.location.reload();
+}); */
 function TGDialogS(e){
     need("biz.dialog-min",function(Dialog){
 Dialog.show({
@@ -1536,6 +1540,7 @@ function closeDialog(){
 Dialog.hide();
     });
 }
+
 
 
 </script>

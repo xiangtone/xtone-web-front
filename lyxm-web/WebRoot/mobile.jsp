@@ -61,7 +61,7 @@
 <script type="text/javascript"
 	src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script type="text/javascript" src="js/sha1.js"></script>
-  <script type="text/javascript">
+   <script type="text/javascript">
 	var plc = '<<灵域仙魔>> ';
 	var strAry = [ plc + ' 我已经预约灵域仙魔了，兄弟快来与我一起战斗吧！',
 			plc + ' 预约灵域仙魔，用你的洪荒之力助我一战！',
@@ -1292,7 +1292,7 @@ body {
 			<img src="images/index/side_left.png">
 		</div>
 		<div class="sept-c float" style="margin-top: 107%;">
-			<img src="images/index/first9.png">
+			<img src="images/index/Oct-first.png">
 		</div>
 		<div class="sept-r float" style="margin-top: 107%;">
 			<img src="images/index/side_right.png">

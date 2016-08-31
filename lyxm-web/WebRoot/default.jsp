@@ -218,7 +218,7 @@
              </div>
              <%} else if(rowCount>29){%>
 			<div class="leader">
-             	<a href="javaScript:;"  onclick="alert('预约名额已满<%=rowCount%>人')"> 
+             	<a href="javaScript:;"  onclick="alert('领取名额已满，感谢您的参与！')"> 
              		<img alt="我是盟主，我要招募！" src="images/mz.png" style="width:100%;height:auto;display:block;">           		
              	</a>  
              </div>
@@ -230,11 +230,11 @@
              	</a>  
              </div>
 			
-			<div class="fv">
+			<%-- <div class="fv">
 				<!--                  <div style="text-align:center; bottom:0px;"><a href="javascript:jjkf()"><img src="images/qhyy.png"></a></div> -->
 
 				<div style="width: 100%; height: 70%"></div>
-				<%-- <a href="qhyy.jsp" target="_blank">
+				<a href="qhyy.jsp" target="_blank">
 					<div id="qhyy"></div> <% 
             
          	Connection con = null;
@@ -271,8 +271,8 @@
 					<div style="margin-top: 10px; text-align: center;">
 						已有<%=rowCount %>人预约
 					</div>
-				</a> --%>
-			</div>
+				</a>
+			</div> --%>
 		</div>
 		<!-- 下载 -->
 		<div class="fload">
@@ -369,13 +369,13 @@
 			<div class="ftab-conl"
 				style="position: absolute; z-index: 1; margin-top: 20px;">
 				<ul>
-					<li id="l0"><a id="a0" class="" href="javascript:void(0);"></a></li>
+					<li id="l0"><a id="a0" class="on2" href="javascript:void(0);"></a></li>
 					<li id="l1"><a id="a1" class="" href="javascript:void(0);"></a></li>
 					<li id="l2"><a id="a2" class="" href="javascript:void(0);"></a></li>
 				</ul>
 			</div>
 		</div>
-
+		
 
 
 		<!-- 上线 -->
