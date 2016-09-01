@@ -179,7 +179,7 @@ color: #aaaaaa;
 		role="banner">
 		<jsp:include page="top.html"></jsp:include>
 	</header>
-	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/about-us/banner_recruitment2.png" class="bsimg"></div>
+	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/about-us/banner_recruitment2.png" class="bsimg" ></div>
 	<div class="bs-docs-featurette " style="background: #fff;">
 		<div class="container cb" >
 			<div class="row">
