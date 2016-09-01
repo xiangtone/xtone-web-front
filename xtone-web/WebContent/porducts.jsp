@@ -181,6 +181,7 @@ height: 116px;
 					<a href="#"><img src="images/products/sjyx.png" alt="手机游戏"
 						class="bsimg tab"></a>
 				</div>	
+			<!-- 灵域仙魔 -->
 			<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
 					<div class="sjyx1">
 						<img src="images/products/lyxm3.jpg" class="bsimg">
@@ -195,7 +196,7 @@ height: 116px;
 								</li>	
 								<li style="padding-top:7px;float:left;line-height:initial;width:100%;">
 									<font style="font-family:pictos;font-size:13px;color:#a4a4a4;">
-									仙魔争霸，由你主宰！《灵域仙魔》是2016年首款无限制魔幻动作手游，开启魔幻类手游全图自由PK新纪元！它由万家游戏主力团队倾情打造，革新手游经济系统，史上对玩家最友好的、最公平的拍卖交易系统，打</font>
+									万家游戏倾情打造《灵域仙魔》，开启仙魔手游全图自由PK新纪元！作为 2016年首款无限制魔幻动作手游，革新手游经济系统，劲爽PVP系统！即时语音号令三军，仙魔争霸，由你主宰！</font>
 								</li>
 						</ul>
 					</div>
@@ -215,7 +216,7 @@ height: 116px;
 					</div>
 					
 			</div>
-			
+			<!-- 剑仆契约 -->
 			<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
 					<div class="sjyx1">
 						<img src="images/products/jpqy4.jpg" class="bsimg">
@@ -230,7 +231,7 @@ height: 116px;
 								</li>	
 								<li style="padding-top:7px;float:left;line-height:initial;width:100%;">
 									<font style="font-family:pictos;font-size:13px;color:#a4a4a4;">
-									<br>不知道写些什么，敬请期待？</font>
+									《剑仆契约》是一款策略性萌娘养成手游，P站名画师亲自操刀立绘，神兵利器全都萌娘化，玩家化身织田信长后裔，策略排兵布阵，精彩PVP动作玩法不停场！二次元和风美少女，等待主上来收集养成！</font>
 								</li>
 						</ul>
 					</div>
@@ -250,7 +251,7 @@ height: 116px;
 					</div>
 					
 			</div>
-			
+			<!-- 梦想昆仑 -->
 			<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
 					<div class="sjyx1">
 						<img src="images/products/mxkl4.jpg" class="bsimg">
@@ -265,7 +266,7 @@ height: 116px;
 								</li>	
 								<li style="padding-top:7px;float:left;line-height:initial;width:100%;">
 									<font style="font-family:pictos;font-size:13px;color:#a4a4a4;">
-									全民仙侠动作手游《梦想昆仑》，由万家游戏主力精英团队倾力打造，将经典仙侠元素与代入感极强的唯美画面融于一体，完美呈现热血江湖的剧情故事，四大个性化职业，体验百余种玩法更有神仙眷侣，携手畅游，仙</font>
+									全民仙侠动作手游《梦想昆仑》，由万家游戏主力团队倾力打造，经典仙侠元素，唯美画面极致代入感，感受热血江湖剧情，四大个性化职业，百余种玩法！更有神仙眷侣，携手畅游，仙侠梦想，尽在昆仑!</font>
 								</li>
 						</ul>
 					</div>
@@ -286,7 +287,7 @@ height: 116px;
 					
 			</div>
 				
-				
+				<!-- 梦幻仙魔 -->
 				<div class="col-sm-12 col-sm-12 col-xs-12 nopadding game-top">
 					<div class="sjyx1">
 						<img src="images/products/mhxm4.jpg" class="bsimg">
@@ -301,7 +302,7 @@ height: 116px;
 								</li>	
 								<li style="padding-top:7px;float:left;line-height:initial;width:100%;">
 									<font style="font-family:pictos;font-size:13px;color:#a4a4a4;">
-									魔幻东方，决战六界！新西游魔幻手游《梦幻仙魔》2016年将震撼临世，《梦幻仙魔》以九宫格策略布阵革新魔幻类手游玩法，多元化组队系统、以实时交互为特点的特色经济环境和精彩绝伦的跨服世界大战！必将为广大玩家带来酣畅淋漓的极致魔幻体验。</font>
+									魔幻东方，决战六界！新西游魔幻手游《梦幻仙魔》已震撼临世，以九宫格策略布阵革新魔幻类手游玩法，多元化组队系统、实时交互、跨服世界大战，畅享酣畅淋漓的魔幻体验。</font>
 								</li>
 						</ul>
 					</div>

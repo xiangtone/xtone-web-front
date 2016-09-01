@@ -296,7 +296,7 @@
 			<li data-target="#myCarousel" data-slide-to="1"></li>
 			<li data-target="#myCarousel" data-slide-to="2"></li>
 			<li data-target="#myCarousel" data-slide-to="3"></li>
-			<li data-target="#myCarousel" data-slide-to="4"></li>
+			<!-- <li data-target="#myCarousel" data-slide-to="4"></li> -->
 			<!--       <li data-target="#myCarousel" data-slide-to="3"></li> -->
 		</ol>
 		<!-- 轮播（Carousel）项目 -->
@@ -307,9 +307,9 @@
 			<div class="item" style="border: none;">
 			<a href="porducts.jsp"><img src="images/index/lyxm-big.jpg" alt="Second banner"></a>
 			</div>
-			<div class="item" style="border: none;">
+			<!-- <div class="item" style="border: none;">
 			<a href="porducts.jsp"><img src="images/index/068.png" alt="Thrid banner"></a>
-			</div>
+			</div> -->
 			<div class="item" style="border: none;">
 			<a href="porducts.jsp"><img src="images/index/mxkl2.jpg" alt="Fourth banner"></a>
 			</div>

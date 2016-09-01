@@ -1,10 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
-<%@page import="java.sql.*"%>
+<%@page import="org.common.util.ConnectionService"%>
+<%@page import="java.util.List"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="org.vanggame.info.Content"%>
-<%@page import="org.common.util.ConnectionService"%>
+<%@page import="org.vanggame.util.PageUtil"%>
+<%
+int pageIndex =1;
+try{
+	String index = request.getParameter("pageindex");
+	pageIndex =Integer.parseInt(index);
+}catch(Exception e){
+//		System.out.println("第一页");
+//		e.printStackTrace();
+}
+int count = 0;
+
+%>
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -55,9 +71,7 @@ color: #cf1232;
 /* 	list-style-image: url("images/index/dian_1.png"); */
 color: #cf1232;
 }
-.ck{
-	margin-top:35px;
-}   
+   
 }
 
 .newsli i{
@@ -77,7 +91,7 @@ color: #aaaaaa;
     display: block;
     color: #ea474a;
     padding-left: 15px;
-    font-size: 20px;
+    font-size: 18px;
     font-family:pictos;
     padding-left:0px;
 }
@@ -114,7 +128,7 @@ color: #aaaaaa;
 	width:100%;
 	border-bottom:1px solid #9e9e9e;
 	margin-top: 0px;
- 	padding: 0px 0px 10px 0px;
+ 	padding: 0px;
 }
 .xx1{
 	width:100%;
@@ -133,7 +147,31 @@ color: #aaaaaa;
 	margin-top:20px;
 	float:left;
 }
- 
+@media(min-width:168px){
+.cb{
+	min-height:475px;
+}
+}
+@media(min-width:520px){
+.cb{
+	min-height:485px;
+}
+}
+@media(min-width:768px){
+.cb{
+	min-height:421px;
+}
+}
+@media(min-width:992px){
+.cb{
+	min-height:520px;
+}
+}
+@media(min-width:1200px){
+.cb{
+	min-height:550px;
+}
+}
 </style>
 </head>
 <body class="bs-docs-home">
@@ -142,8 +180,8 @@ color: #aaaaaa;
 		<jsp:include page="top.html"></jsp:include>
 	</header>
 	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/about-us/banner_recruitment2.png" class="bsimg"></div>
-	<div class="bs-docs-featurette" style="background: #fff">
-		<div class="container">
+	<div class="bs-docs-featurette " style="background: #fff;">
+		<div class="container cb" >
 			<div class="row">
 				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
 					<a href="join-us-shzp.jsp"><img src="images/about-us/shzp2.png"
@@ -158,7 +196,7 @@ color: #aaaaaa;
 				<div class="col-md-12 col-sm-12 col-xs-12 content ztgs rt ">
 				<div class="col-md-12 col-sm-12 col-xs-12 content ztgs bg " >
 					<%!
-						
+					
 			
 						public static final int PAGESIZE = 8;
 						int pageCount;
@@ -168,19 +206,17 @@ color: #aaaaaa;
 							PreparedStatement ps = null;
 							ResultSet rs = null;
 								Content news = new Content();
-								//一页放5个
+								//一页放8个
 								String user = null;
 								String pass = null;
 								try {
-									/* Class.forName(DRIVER); */
-									
-									/* Connection con = DriverManager.getConnection(URL, USER, PASS); */
-									con = ConnectionService.getInstance().getConnectionForLocal();
-									String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` ,`subTitle` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%job%' AND `status`=1 ";
+									con = ConnectionService.getInstance().getConnectionForLocal();								
+									String sql = "SELECT id,`title`,`lastModifyTime`,`catalog` ,`subTitle`,`content` FROM `tbl_cms_contents` WHERE `catalog` = 'job' AND `status`=1 ";
 									ps = con.prepareStatement(sql, ResultSet.TYPE_FORWARD_ONLY,
 											ResultSet.CONCUR_READ_ONLY);
 									rs = ps.executeQuery();
 									rs.last();
+									
 									int size = rs.getRow();
 									pageCount = (size % PAGESIZE == 0) ? (size / PAGESIZE) : (size / PAGESIZE + 1);
 									String tmp = request.getParameter("curPage");
@@ -192,32 +228,35 @@ color: #aaaaaa;
 										curPage = pageCount;
 									boolean flag = rs.absolute((curPage - 1) * PAGESIZE + 1);
 									/* out.println(curPage); */
-									int count = 0;
+									
 
 									do {
 										if (count >= PAGESIZE)
 											break;
+										Content news1 = new Content();
 										news.setAddTime(rs.getLong("lastModifyTime"));
 										SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 										String timeStr = sdf.format(news.getAddTime());
 										int id = rs.getInt(1);
+										System.out.println(id);
 										String title = rs.getString(2);
-										String lastModifyTime = rs.getString(3);
+										/* String lastModifyTime = rs.getString(3); */
+										String content = rs.getString(6);
 										String subTitle = rs.getString(5);
 										count++;
 										
 							%>	
 					<div class="col-md-12 col-sm-12 col-xs-12 ztgs xx">
-					<div class="col-md-100 col-sm-9 col-xs-7">
+					<div class="col-md-100 col-sm-9 col-xs-7" style="padding-top:10px;">
 						 <p class="title"><%=title%></p>						
 					</div>
-					<div class="col-md-2 col-sm-3 col-xs-5 ck">
+					<div class="col-md-2 col-sm-3 col-xs-5 ck" style="width:105px;">
 						<!-- <input type="button" value="查看详情" onclick="window.location.href='shzp1.html'" class="btn"> -->
-						<a href="shzp1.html"><img src="images/about-us/ckxq.png"></a>
+						<a href="job-content.jsp?pageindex=<%=pageIndex%>&id=<%=id%>"><img src="images/about-us/ckxq.png" style="width:100%"></a>
 					</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei" style="width:100%">&nbsp;&nbsp;&nbsp;&nbsp;<%=subTitle%></div>
-					<!-- <div class="col-md-3 col-sm-4 col-xs-12 nei">&nbsp;&nbsp;&nbsp;&nbsp;工作性质：全职</div>
-					<div class="col-md-3 col-sm-4 col-xs-12 nei">
+					<div class="col-md-3 col-sm-4 col-xs-12 nei" style="width:100%;padding:8px 14px;"><%=subTitle%></div>
+					  <%-- <div class="col-md-3 col-sm-4 col-xs-12 nei" ><%=content%></div>  --%>
+				<!--	<div class="col-md-3 col-sm-4 col-xs-12 nei">
 					&nbsp;&nbsp;&nbsp;&nbsp;招聘名额：1人
 					</div> -->
 			
@@ -235,17 +274,17 @@ color: #aaaaaa;
 					<!-- <a href = "material.jsp?curPage=1" >首页</a> -->
 					
 						<%if(curPage>=2){%>
-					<a id="a1" href = "join-us-shzp.jsp?curPage=<%=curPage-1%>" >上壹頁</a>
+					<a id="a1" href = "join-us-shzp.jsp?curPage=<%=curPage-1%>" >上一页</a>
 						<%}else if(curPage==1){ %>
-						<a href = "javascript:;" onclick="alert('已經是第壹頁了')" >上壹頁</a>
+						<a href = "javascript:;" onclick="alert('已经是第一页了')" >上一页</a>
 						<%} %>
 						<%if(curPage!=0){ %>
 						<<%=curPage%>>
 						<%} %>
 						<%if(curPage<pageCount){ %>
-					<a id="a2" href = "join-us-shzp.jsp?curPage=<%=curPage+1%>" >下壹頁</a>
+					<a id="a2" href = "join-us-shzp.jsp?curPage=<%=curPage+1%>" >下一页</a>
 						<%} else if(curPage==pageCount){%>
-						<a href = "javascript:;" onclick="alert('已經是最後壹頁了')">下壹頁</a>
+						<a href = "javascript:;" onclick="alert('已经是最后一页了')">下一页</a>
 						<%} %>
 					<%-- <a href = "material.jsp?curPage=<%=pageCount%>" >尾页</a>
 					第<%=curPage%>页/共<%=pageCount%>页 --%>
