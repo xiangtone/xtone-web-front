@@ -154,22 +154,22 @@ color: #aaaaaa;
 }
 @media(min-width:520px){
 .cb{
-	min-height:485px;
+	min-height:514px;
 }
 }
 @media(min-width:768px){
 .cb{
-	min-height:421px;
+	min-height:430px;
 }
 }
 @media(min-width:992px){
 .cb{
-	min-height:520px;
+	min-height:529px;
 }
 }
 @media(min-width:1200px){
 .cb{
-	min-height:550px;
+	min-height:558px;
 }
 }
 </style>
