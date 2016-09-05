@@ -148,7 +148,7 @@
 												
 					<div class="col-md-12 col-sm-12 col-xs-12" style="padding-left: 7px;">
 						<font class="title-left"><%=content.getTitle()%></font><br>
-						<font style="font-family:pictos;color:#a4a4a4;"><%=content.getContent() %></font>
+						<font style="font-family:pictos;color:#8f8f8f;"><%=content.getContent() %></font>
 						
 						
 						

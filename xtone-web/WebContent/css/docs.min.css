@@ -12,7 +12,8 @@
 } 
 .content-size{
 	font-size: 16px;
-	font-family:pictos; 
+	font-family:pictos;
+	color:#a4a4a4; 
 }
 .title-size{
 	font-size: 21px;
@@ -2036,7 +2037,7 @@ h1[id] {
 .game-top{
 	margin-top: 40px;
 	border-bottom:2px solid rgba(0, 0, 0, 0.11);
-	padding:0px 20px;	
+	padding:0px 20px 20px;	
 }
 
 
@@ -2385,7 +2386,7 @@ h1[id] {
 		padding: 15px 50px 15px 50px;
 	}
 	.tab{
-		bottom: 0.844px;
+		bottom: 1px;
 	}
 	.locate{
 		font-size:17px;

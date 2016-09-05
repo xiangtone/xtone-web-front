@@ -18,6 +18,7 @@
 	PreparedStatement ps = null;
 	ResultSet rs = null;
 	List<Content> list = new ArrayList<Content>();
+	List<Content> list1 = new ArrayList<Content>();
 	try {
 		con = ConnectionService.getInstance().getConnectionForLocal();
 		String limit = " limit " + 6 * (1 - 1) + "," + 6;
@@ -32,6 +33,17 @@
 			news.setTitle(rs.getString("title"));
 			news.setLastModifyTime(rs.getLong("lastModifyTime"));
 			list.add(news);
+		}
+		sql = "SELECT id,`title`,`subTitle` FROM `tbl_cms_contents` WHERE `catalog` LIKE '%link%' AND `status`=1 ORDER BY priority DESC,lastModifyTime DESC ";
+		ps = con.prepareStatement(sql);
+		rs = ps.executeQuery();
+
+		while (rs.next()) {
+			Content news = new Content();
+			news.setId(rs.getInt("id"));
+			news.setTitle(rs.getString("title"));
+			news.setSubTitle(rs.getString("subTitle"));
+			list1.add(news);
 		}
 
 	} catch (Exception e) {
@@ -480,16 +492,14 @@
 							    <div id="gd-1">
 								   	<div id="gd-2">
 										<div id="gd-3">
-											<a href="http://www.alllink.com.cn/" class="links tt20-1" target="_blank">北京通联天地科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;
-				 							<a href="http://www.xtonecomic.com/" class="links tt20-1" target="_blank">北京讯宇创世科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;
-				 							<a href="http://14643233.czvv.com/" class="links tt20-1" target="_blank">北京游动天地科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;
-				 							<a href="http://www.pvc123.com/b-pxtonewinnie/" class="links tt20-1"	target="_blank">深圳市创世互动科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;
-				 							<a href="http://www.m-time.com/" class="links tt20-1" target="_blank">深圳市浩天投资有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;
-				 							<a href="porducts.jsp" class="links tt20-1" target="_blank">龙之怒吼</a>&nbsp;&nbsp;&nbsp;&nbsp;
-											<a href="http://zy.xtonegame.com/" class="links tt20-1" target="_blank">神魔战歌</a>&nbsp;&nbsp;&nbsp;&nbsp;
-											<a href="porducts.jsp" class="links" target="_blank tt20-1">封神战</a>&nbsp;&nbsp;&nbsp;&nbsp;
-											<a href="porducts.jsp" class="links" target="_blank tt20-1">零纪元</a>&nbsp;&nbsp;&nbsp;&nbsp;
-											<a href="http://dmx.xtonegame.com" class="links tt20-1" target="_blank">口袋大冒险</a>&nbsp;&nbsp;&nbsp;&nbsp;
+										<%
+								for (Content news : list1) {
+							%>
+							<a href="<%=news.getSubTitle() %>" class="links tt20-1" target="_blank"><%=news.getTitle() %></a>&nbsp;&nbsp;&nbsp;&nbsp;
+											
+										<%} %>
+										<!-- <a href="http://www.alllink.com.cn/" class="links tt20-1" target="_blank">北京通联天地科技有限公司</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				 							-->
 										</div>
 										<div id="gd-4"></div>
 								   </div>

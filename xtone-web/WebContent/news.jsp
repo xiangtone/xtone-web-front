@@ -227,13 +227,13 @@
 						try{
 						  if(news.getSubTitle()!=null){
 							   title = news.getSubTitle();
-							  title = title.substring(0, 36);
+							  title = title.substring(0, 36)+"......";
 						  }
 						}catch(Exception e){
 							e.printStackTrace();
 						}
 						%>
-						<font color="#8f8f8f" class="content-article"><%=title%>......</font>
+						<font color="#8f8f8f" class="content-article"><%=title%></font>
 					</div>
 					<div class="col-md-12 col-sm-12 col-xs-12">
 						<a	
