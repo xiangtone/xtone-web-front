@@ -1,3 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page import="org.vanggame.info.Content" %>
+<%@page import="java.sql.*" %>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="org.common.util.ConnectionService"%>
+<%@page import="org.vanggame.util.StringUtil"%>
+<%@page import="org.vanggame.util.PageUtil"%>
+<%@page import="org.vanggame.util.CheckLoad"%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +22,43 @@
 	content="Bootstrap.">
 <meta name="keywords"
 	content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<%
+	CheckLoad check = new CheckLoad();
+	if(check.JudgeIsMoblie(request)){
+		out.print("<script type=\"text/javascript\">function checkload(){$('#content img').attr({style:\"width: 100%;\"});}</script>");
+	}
+	String idStr = request.getParameter("id");
+	String index = request.getParameter("pageindex");
+	int pageIndex=Integer.parseInt(index);
+	int id = Integer.parseInt(idStr);
+	Connection con = null;
+	PreparedStatement ps = null;
+	ResultSet rs = null;
+	Content content = new Content();
+	try {
+		con = ConnectionService.getInstance().getConnectionForLocal();
+		String sql = "SELECT `title`,`content`,`lastModifyTime` FROM `tbl_cms_contents` WHERE id=? ";
+		ps = con.prepareStatement(sql);
+		ps.setInt(1, id);
+		rs = ps.executeQuery();
+		if (rs.next()) {
+			content.setTitle(rs.getString("title"));
+			content.setContent(rs.getString("content"));
+			content.setLastModifyTime(rs.getLong("lastModifyTime"));
+		}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}finally {
+		if (con != null) {
+			try {
+				con.close();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+%>
 <title>万家游戏-关于我们</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/docs.min.css" rel="stylesheet">
@@ -46,39 +96,41 @@
 	margin-top: 25px;
 	padding: 15px 0px 15px 20px;
 }
-
+@media(min-width:168px){
+.cb{
+	min-height:475px;
+}
+}
+@media(min-width:520px){
+.cb{
+	min-height:485px;
+}
+}
+@media(min-width:768px){
+.cb{
+	min-height:421px;
+}
+}
+@media(min-width:992px){
+.cb{
+	min-height:520px;
+}
+}
+@media(min-width:1200px){
+.cb{
+	min-height:550px;
+}
+}
 </style>
 </head>
 <body class="bs-docs-home">
 	<header class="navbar navbar-static-top bs-docs-nav" id="top"
 		role="banner">
-<!-- 		<div class="container"> -->
-<!-- 			<div class="navbar-header"> -->
-<!-- 				<button class="navbar-toggle collapsed" type="button" -->
-<!-- 					data-toggle="collapse" data-target="#bs-navbar" -->
-<!-- 					aria-controls="bs-navbar" aria-expanded="false"> -->
-<!-- 					<span class="sr-only"></span> <span -->
-<!-- 						class="icon-bar"></span> <span class="icon-bar"></span> <span -->
-<!-- 						class="icon-bar"></span> -->
-<!-- 				</button> -->
-<!-- 				<a href="index.jsp"><img alt="logo" src="images/logo.png" class="logo-size"></a> -->
-<!-- 			</div> -->
-<!-- 			<nav id="bs-navbar" class="collapse navbar-collapse"> -->
-<!-- 				<ul class="nav navbar-nav navbar-right ztgs"> -->
-<!-- 					<li><a id="index" href="index.jsp"><small class="nav-chinese">首页</small><br><small class="nav-english">HOME</small></a></li> -->
-<!-- 					<li><a id="news" href="news.jsp"><small class="nav-chinese">新闻动态</small><br><small class="nav-english">NEWS</small></a></li> -->
-<!-- 					<li><a id="partform" href="porducts.html"><small class="nav-chinese">旗下产品</small><br><small class="nav-english">PORDUCTS</small></a></li>					 -->
-<!-- 					<li><a id="abouts" href="about-us-gsjs.html"><small class="nav-chinese">关于我们</small><br><small class="nav-english">VANGGAME</small></a></li> -->
-<!-- 					<li><a id="cooperation" href="cooperation.html"><small class="nav-chinese">商务合作</small><br><small class="nav-english">COOPERATION</small></a></li> -->
-<!-- 					<li class="active"><a id="join" href="join-us-shzp.html"><small class="nav-chinese">招贤纳士</small><br><small class="nav-english">JOIN&nbsp;US</small></a></li> -->
-					
-<!-- 				</ul> -->
-<!-- 			</nav> -->
-<!-- 		</div> -->
+
 	</header>
 	<div class="col-sm-12 col-sm-12 col-xs-12 nopadding"><img src="images/about-us/banner_recruitment2.png" class="bsimg"></div>
-	<div class="bs-docs-featurette" style="background: #fff">
-		<div class="container">
+	<div class="bs-docs-featurette" style="background: #fff;">
+		<div class="container cb">
 			<div class="row">
 				<div class="col-md-6 col-sm-6 col-xs-6 nopadding">
 					<a href="join-us-shzp.jsp"><img src="images/about-us/shzp2.png"
@@ -88,14 +140,19 @@
 					<a href="join-us-contact.jsp"><img src="images/about-us/lxwm1.png"
 						class="bsimg tab"></a>
 				</div>
+				
 				<div class="col-md-12 col-sm-12 col-xs-12 content-top ztgs">
-				<font style="font-family:pictos;" color="#8f8f8f"; class="locate">您所在位置&nbsp;:&nbsp;<a class="locate" href="join-us-shzp.jsp">社会招聘</a>&nbsp;>&nbsp;<a class="locate" href="#">国内商务经理</a></font>
+				<font style="font-family:pictos;" color="#8f8f8f"; class="locate">您所在位置&nbsp;:&nbsp;<a class="locate" href="join-us-shzp.jsp">社会招聘</a>&nbsp;>&nbsp;<a class="locate" href="#"><%=content.getTitle()%></a></font>
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12 content ztgs">
 												
-					<div class="col-md-12 col-sm-12 col-xs-12" style="padding-left: 37px;">
-						<font class="title-left">国内商务经理</font><br>
-						<font class="title-right content-size">薪资：面议</font><br><br>
+					<div class="col-md-12 col-sm-12 col-xs-12" style="padding-left: 7px;">
+						<font class="title-left"><%=content.getTitle()%></font><br>
+						<font style="font-family:pictos;color:#8f8f8f;"><%=content.getContent() %></font>
+						
+						
+						
+						<!-- <font class="title-right content-size">薪资：面议</font><br><br>
 						<font style="font-size: 22px;font-family:pictos;" color="#8f8f8f";">职位描述</font><br><br>
 						<font class="content-size title-right">1、线上渠道精品游戏渠道拓展、产品接入；<br>
 2、各大应用平台、store的合作推广；<br>
@@ -112,12 +169,11 @@
 <font style="font-size: 22px;font-family:pictos;" color="#8f8f8f";>联系方式</font><br><br>
 <font class="content-size title-right">简历发送至：hr.@bjxiangtone.com<br>
 联系电话：0755-86665507<br>
-地址：深圳市南山区中科大厦21楼B1单元</font>
+地址：深圳市南山区中科大厦21楼B1单元</font> -->
 
 
 					</div>
 
-					
 				</div>
 				
 			</div>

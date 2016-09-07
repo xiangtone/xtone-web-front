@@ -100,6 +100,35 @@
     padding-left: 35px;
     padding-right: 35px;
     }
+.col-md-12 .col-sm-12 .col-xs-12 p{
+	color: #8f8f8f; 
+	font-family:pictos;
+}
+.col-md-12 .col-sm-12 .col-xs-12 p span{
+	color: #8f8f8f; 
+	font-family:pictos !important;
+}
+@media(min-width:168px){
+  .col-md-12 .col-sm-12 .col-xs-12 img{
+	width:100%;
+	height:auto;
+
+} 
+} 
+@media(min-width:520px){
+  .col-md-12 .col-sm-12 .col-xs-12 img{
+	width:100%;
+	height:auto;
+
+} 
+} 
+@media(min-width:768px){
+  .col-md-12 .col-sm-12 .col-xs-12 img{
+	width:62%;
+	height:auto;
+
+} 
+}
 </style>
 </head>
 <body class="bs-docs-home">
@@ -120,16 +149,16 @@
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12 artText">
 					<div class="col-md-12 col-sm-12 col-xs-12 ztgs" align="center">
-						<p class="" style="font-size: 22px;font-family:pictos;" color="#8f8f8f"; ><%=content.getTitle()%></p>
+						<p class="" ><font style="color: #8f8f8f; font-family:pictos;font-size: 22px;"><%=content.getTitle()%></font></p>
 					</div>
 					<div class="col-md-12 col-sm-12 col-xs-12 ztgs" align="center">
-						<p class="" style="color: #8f8f8f;font-family:pictos;"><%=content.getTimeStr()%>
+						<p class="" ><font style="color: #8f8f8f;font-family:pictos !important;"><%=content.getTimeStr()%></font></p>
 					</div>
 					<div class="col-md-12 col-sm-12 col-xs-12 nopadding" id="content">
 
-					<div class="col-md-12 col-sm-12 col-xs-12" style="color: #8f8f8f; font-family:pictos;">
+					<div class="col-md-12 col-sm-12 col-xs-12" >
 
-						<%=content.getContent()%>
+						<font style="color: #8f8f8f; font-family:pictos;"><%=content.getContent()%></font>
 					</div>
 					</div>
 <!-- 					<div class="col-md-12 col-sm-12 col-xs-12"> -->

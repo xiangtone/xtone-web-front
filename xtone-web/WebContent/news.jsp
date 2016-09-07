@@ -160,6 +160,31 @@
 	color: #8f8f8f;
 	font-family:pictos; 
 }
+@media(min-width:168px){
+	.content-article{
+		padding-left:0px;
+	}
+}
+@media(min-width:520px){
+	.content-article{
+		padding-left:0px;
+	}
+}
+@media(min-width:768px){
+	.content-article{
+		padding-left:3px;
+	}
+}
+@media(min-width:992px){
+	.content-article{
+		padding-left:5px;
+	}
+}
+@media(min-width:1200px){
+	.content-article{
+		padding-left:8px;
+	}
+}
 </style>
 
 </head>
@@ -202,13 +227,13 @@
 						try{
 						  if(news.getSubTitle()!=null){
 							   title = news.getSubTitle();
-							  title = title.substring(0, 50);
+							  title = title.substring(0, 36)+"......";
 						  }
 						}catch(Exception e){
 							e.printStackTrace();
 						}
 						%>
-						<font color="#8f8f8f" >&nbsp;&nbsp;<%=title%>......</font>
+						<font color="#8f8f8f" class="content-article"><%=title%></font>
 					</div>
 					<div class="col-md-12 col-sm-12 col-xs-12">
 						<a	

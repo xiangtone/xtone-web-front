@@ -12,7 +12,8 @@
 } 
 .content-size{
 	font-size: 16px;
-	font-family:pictos; 
+	font-family:pictos;
+	color:#a4a4a4; 
 }
 .title-size{
 	font-size: 21px;
@@ -2036,7 +2037,7 @@ h1[id] {
 .game-top{
 	margin-top: 40px;
 	border-bottom:2px solid rgba(0, 0, 0, 0.11);
-	padding:0px 20px;	
+	padding:0px 20px 20px;	
 }
 
 
@@ -2078,10 +2079,10 @@ h1[id] {
 	height: 93px;
 }
 
-.logo-foot-size {
+/* .logo-foot-size {
 	width: 251px;
     height: 62px;
-}
+} */
 @media ( min-width :168px) {
 	.my-nav{
 	width: 70%;
@@ -2121,12 +2122,13 @@ h1[id] {
 		height: auto;
 		margin-top: 22px;
 		margin-left:10px;
+		
 	}
 	
 	.logo-foot-size {
-		width: 210px;
+		width: 240px;
     	height: 50px;
-    	margin-bottom: 5px;
+    	margin-bottom: 10px;
 	}
 	.home-padding{
 		padding: 0px 10px 0px 10px;
@@ -2153,7 +2155,8 @@ h1[id] {
     min-height: 1px;
 }
 .ck{
-	margin-top:0px;
+	margin-top:10px;
+	
 } 
 	.img2{
 	padding:3px;
@@ -2262,7 +2265,7 @@ h1[id] {
 	}
 	.tt20{
 		width: 100%;
-		margin-top:10px
+		
 	}
 	.tt20-1{
 		width:100%;
@@ -2272,7 +2275,8 @@ h1[id] {
 		padding: 40px 10px 15px 10px;
 	}
 	.ck{
-	margin-top:2px;
+	margin-top:10px;
+	
 } 
 .sjyx1{
 	width: 100%;
@@ -2382,7 +2386,7 @@ h1[id] {
 		padding: 15px 50px 15px 50px;
 	}
 	.tab{
-		bottom: 0.844px;
+		bottom: 1px;
 	}
 	.locate{
 		font-size:17px;
@@ -2400,12 +2404,12 @@ h1[id] {
 	.logo-size {
 		width: 316px;
 		height: 65px;
-		margin-top: 29px;
+		margin-top: 20px;
 	}
 	.logo-foot-size {
 		width: 316px;
     	height: 65px;
-    	margin-top: 10px;
+    	margin-top: 33px;
 	}
 	.home-padding{
 		padding: 0px;
@@ -2418,7 +2422,8 @@ h1[id] {
     margin-bottom:15px;
 }
 .ck{
-	margin-top:5px;
+	margin-top:24px;
+	
 } 
 .sjyx2{
 	width: 46.1788396%;
@@ -2536,6 +2541,7 @@ h1[id] {
 		width:90%;
 		
 	} 
+	
 	.imga{
 		width:100%;
 		height:auto;
@@ -2547,7 +2553,8 @@ h1[id] {
 	padding-top:15px;
 }
 .ck{
-	margin-top:9px;
+	margin-top:24px;
+	
 } 
 .sjyx1{
 	width: 35.8327645%;
@@ -2830,6 +2837,11 @@ h1[id] {
 	height:auto;
 	
 	}
+	.logo-foot-size {
+		width: 316px;
+    	height: 65px;
+    	margin-top: 15px;
+	}
 	.col-xs-4 {
 	width: 33.33333333%
 	}
@@ -2851,6 +2863,11 @@ h1[id] {
 	}	
 }	
 @media ( min-width :1200px) {
+	.logo-foot-size {
+		width: 316px;
+    	height: 65px;
+    	margin-top: 6px;
+	}
 	.row {
 	margin-right: 130px;
 	margin-left: 130px
