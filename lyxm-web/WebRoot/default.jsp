@@ -212,7 +212,7 @@
 			<%if(rowCount<=29){ %>
 			<!-- 视频链接 -->
 			<div class="leader">
-             	<a href="mzbd.jsp" > 
+             	<a href="javascript:alert('【盟主招募10日12日开启，敬请期待！】');" > 
              		<img alt="我是盟主，我要招募！" src="images/mz.png" style="width:100%;height:auto;display:block;">           		
              	</a>  
              </div>
