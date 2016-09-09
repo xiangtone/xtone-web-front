@@ -39,10 +39,10 @@ $(function() {
 
 	}
 	 width_screen=document.documentElement.clientWidth;
-	doWinScale(640);
+	doWinScale(720);
 
 	$(window).resize(function() {
-		doWinScale(640);
+		doWinScale(720);
 	});
 
 });

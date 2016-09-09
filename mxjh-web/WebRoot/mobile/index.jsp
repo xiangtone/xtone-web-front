@@ -11,8 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
- <!--    <meta name="viewport" content="initial-scale=1.0, minimum-scale=0.1, maximum-scale=2.0, user-scalable=yes\"> -->
-
+ 
 		<!--标准mui.css-->
 			<link rel="stylesheet" href="mui/dist/css/mui.css">
 			<link rel="stylesheet" href="mui/sass/mui.scss">
@@ -26,7 +25,7 @@
 </head>
 <script type="text/javascript">
 			
-              width_screen=1.5*document.documentElement.clientWidth;
+              width_screen=1.3333333*document.documentElement.clientWidth;
              document.write("<body style='height:"+width_screen+"px'>");
 </script>
 
@@ -58,10 +57,10 @@
 			</div> -->
 		</section>
 		<!--top end-->
-
+	
 		<!--最新活动-->
-
-			<div id="slider1" class="mui-slider" style="width:100%;height:413px;align:center;margin-left:1px;margin-right:1px;margin-top:60px;">
+			<img style="width:100%;height:60px;" src="images/zxhd.png" />
+			<div id="slider1" class="mui-slider" style="width:80%;height:260px;align:center;margin-left:10%;margin-top:50px;">
 			<div class="mui-slider-group mui-slider-loop">
 				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
 				<div class="mui-slider-item mui-slider-item-duplicate">
@@ -113,7 +112,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "/lyxm.xtonegame.com/news?type=0&count=4",
+                                      url:"/mxjh.xtonegame.com/Selnews?type=00&count=4",
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -140,7 +139,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "/lyxm.xtonegame.com/news?type=1&count=4",
+                                    url: "/mxjh.xtonegame.com/Selnews?type=01&count=4",
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -167,7 +166,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "/lyxm.xtonegame.com/news?type=3&count=4",
+                                    url: "/mxjh.xtonegame.com/Selnews?type=02&count=4",
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -194,7 +193,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "/lyxm.xtonegame.com/news?type=2&count=4",
+                                    url: "/mxjh.xtonegame.com/Selnews?type=03&count=4",
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -222,7 +221,7 @@
 				<a data-sb-indepth="true" class="more" href="Newslist.jsp">查看更多</a>
 			</div>
 
-		</section>
+   </section>
 		<!--最新活动 end-->
 
 		<!--联系方式-->
@@ -233,9 +232,9 @@
 
 
 		<!--游戏介绍 end-->
-
+			<img style="width:100%;height:60px;" src="images/yxts.png" />
 		<!--游戏特色-->
-		<div id="slider" class="mui-slider" style="width:100%;height:413px;align:center;margin-left:1px;margin-right:1px;margin-top:120px;">
+		<div id="slider" class="mui-slider" style="width:90%;height:390px;align:center;margin-left:5%;margin-right:;margin-top:60px;">
 			<div class="mui-slider-group mui-slider-loop">
 				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
 				<div class="mui-slider-item mui-slider-item-duplicate">
@@ -297,7 +296,10 @@
 		<!--回到顶部-->
 		<a href="#" class="gotop"></a>
 		<!--回到顶部 end-->
+<div style="width:100%;height:550px;text-align:center;">
 
+<img alt="二维码" src="images/ewm.png" style="margin-top:250px;"/>
+</div>
 		<!-- footer -->
 <footer style="height:260px">
 		<img src="images/qqinfo.png">

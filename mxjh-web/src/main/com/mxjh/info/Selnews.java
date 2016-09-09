@@ -49,6 +49,8 @@ public class Selnews extends HttpServlet {
 		  case "11":
 			  str_sql=" where status=1 and catalog='events' ";//改成英文！！！！
 		   break;
+		  case "20":
+			  str_sql=" where status=1 and catalog in ('strategy','play')  ";//改成英文！！！！
 		  case "21":
 			  str_sql=" where status=1 and catalog='strategy' ";//改成英文！！！！
 		   break;
@@ -94,7 +96,7 @@ public class Selnews extends HttpServlet {
 	        	   conn= ConnectionService.getInstance().getConnectionForLocal();
 	               stmt = conn.createStatement();
 	               String sqlsel="SELECT id,CASE catalog \n WHEN 'news' THEN '新闻' \n WHEN 'announce' THEN '公告' \n WHEN 'activity' THEN '活动'\n WHEN 'events' THEN '精彩活动'\n WHEN 'strategy' THEN '游戏玩法'\n WHEN 'play' THEN '游戏攻略'\n WHEN 'wallpaper' THEN '精彩壁纸'\n WHEN 'cutpic' THEN '游戏截图' \n END as catalog,\n content,\n subTitle, \n FROM_UNIXTIME(lastModifyTime/1000,'%m-%d') as lastModifyTime,title FROM tbl_cms_contents "+str_sql+" ORDER BY priority DESC, lastModifyTime DESC limit "+allcount+","+newscount;
-	               // System.out.println(sqlsel);
+	              // System.out.println(sqlsel);
 	               rs = stmt.executeQuery(sqlsel);
 	               ResultSetMetaData metaData = rs.getMetaData();               
 	               int columnCount=metaData.getColumnCount();

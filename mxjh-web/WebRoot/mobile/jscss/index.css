@@ -58,7 +58,7 @@ pre code { padding: 0px; color: inherit; white-space: pre-wrap; background-color
 .overflow { overflow: hidden; }
 html, body { width: 100%;}
 
-.container { width: 640px; position: absolute; top: 0px; left: 0px; overflow: hidden; background:url("../images/bg.jpg")top  no-repeat,url("../images/top.png") top  no-repeat; }
+.container { width: 720px; position: absolute; top: 0px; left: 0px; overflow: hidden; background:url("../images/bg.jpg")top  no-repeat,url("../images/top.png") top  no-repeat; }
 header { position: relative; }
 .headbar { width: 100%; height: 93px; position: absolute; top: 0px; left: 0px; background-color: rgb(0, 0, 0); }
 .icon-logo { width: 115px; height: 115px; margin: 10px 0px 0px 32px; }
@@ -79,11 +79,11 @@ footer img:nth-child(2){ height:104px;margin-top:-0px; }
 .dialog-in p { margin-bottom: 0px; }
 /* ::::: http://sdo-shabake.com/rsc/mobile/css/index.css?v=16 ::::: */
 
-.top { width: 100%; overflow: hidden; margin-top: 860px; }
+.top { width: 100%; overflow: hidden; margin-top: 960px; }
 .slogan { display: block; margin: 0px auto; }
 .download-btn { text-align: center; overflow: hidden; }
-.download-btn a { display: inline-block; margin: 60px 15px; width: 247px; height: 82px; background: transparent url("../images/anzhuoxiazai.png") no-repeat scroll 0% 0%; font: 0px/0 a; color: transparent; text-indent: -9999px; }
-.download-btn a:nth-child(2) {background: transparent url("../images/iosxiazai.png") no-repeat scroll 0% 0%; }
+.download-btn a { display: inline-block; margin: 40px 15px 20px 15px; width: 275px; height: 108px; background: transparent url("../images/azxz.png") no-repeat scroll 0% 0%; font: 0px/0 a; color: transparent; text-indent: -9999px; }
+.download-btn a:nth-child(2) {background: transparent url("../images/iosxz.png") no-repeat scroll 0% 0%; }
 .erweima { color: rgb(212, 167, 119); font-size: 20px; text-align: center; margin-top: 60px; }
 .erweima img { width: 193px; height: 193px; }
 .erweima p { margin-top: 12px; }

@@ -855,7 +855,13 @@
   });
   
   </script>
-  
-
+ <script type="text/javascript">
+ $(document).ready(function(){
+	$(".section-07 fp-tableCell").css("height","121px");	 	 
+ })
+</script>
 </body>
+
+
+
 </html>

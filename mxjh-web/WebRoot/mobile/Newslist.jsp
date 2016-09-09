@@ -51,7 +51,7 @@
    
     <!--顶栏 end-->
     <!--头图-->
-    <section class="head-pic" style="height:400px;">
+    <section class="head-pic" style="height:280px;">
        <div id="slider1" class="mui-slider" style="width:100%;height:413px;align:center;margin-left:0px;margin-top:0px;">
 			<div class="mui-slider-group mui-slider-loop">
 				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
@@ -114,7 +114,8 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "post",
-                                      url: "../news?type=0&pagenum="+<%=pagenum%>+"&count=15",
+                                    
+                                      url: "/mxjh.xtonegame.com/Selnews?type=00&pagenum="+<%=pagenum%>+"&count=15",
                                       data: {type:1,count:15},
                                     		  //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
@@ -180,7 +181,7 @@
                     		   }else{ count = $("#ul1 li").length+0+0}
                                   $.ajax({
                                     type: "GET",
-                                     url: "../news?type=0&pagenum=1&count="+count,
+                                     url: "/mxjh.xtonegame.com/Selnews?type=00&pagenum=1&count="+count,
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -208,8 +209,8 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "post",
-                                      url: "../news?type=1&pagenum="+<%=pagenum%>+"&count=15",
-                                      data: {type:1,count:15},
+                                      url: "/mxjh.xtonegame.com/Selnews?type=01&pagenum="+<%=pagenum%>+"&count=15",
+                                      data: {type:01,count:15},
                                     		  //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -266,7 +267,7 @@
                     		   }else{ count = $("#ul2 li").length+0+0;}
                                   $.ajax({
                                     type: "GET",
-                                     url: "../news?type=1&pagenum=1&count="+count,
+                                     url: "/mxjh.xtonegame.com/Selnews?type=01&pagenum=1&count="+count,
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -293,7 +294,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "../news?type=3&pagenum="+<%=pagenum%>+"&count=5",
+                                      url: "/mxjh.xtonegame.com/Selnews?type=02&pagenum="+<%=pagenum%>+"&count=15",
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -349,7 +350,7 @@
                     		   }else{ count = $("#ul3 li").length+0+0;}
                                   $.ajax({
                                     type: "GET",
-                                     url: "../news?type=3&pagenum=1&count="+count,
+                                     url: "/mxjh.xtonegame.com/Selnews?type=02&pagenum=1&count="+count,
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -376,7 +377,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "../news?type=2&pagenum="+<%=pagenum%>+"&count=15",
+                                      url: "/mxjh.xtonegame.com/Selnews?type=03&pagenum="+<%=pagenum%>+"&count=15",
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -434,7 +435,7 @@
                     		   }else{ count = $("#ul4 li").length+0+0;}
                                   $.ajax({
                                     type: "GET",
-                                     url: "../news?type=2&pagenum=1&count="+count,
+                                     url: "/mxjh.xtonegame.com/Selnews?type=03&pagenum=1&count="+count,
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -460,7 +461,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "../guides?type=0&pagenum="+<%=pagenum%>+"&count=15",
+                                      url: "/mxjh.xtonegame.com/Selnews?type=20&pagenum="+<%=pagenum%>+"&count=15",
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -520,7 +521,7 @@
                     		   }else{ count = $("#ul5 li").length+0+0;}
                                   $.ajax({
                                     type: "GET",
-                                     url: "../guides?type=0&pagenum=1&count="+count,
+                                     url: "/mxjh.xtonegame.com/Selnews?type=20&pagenum=1&count="+count,
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
