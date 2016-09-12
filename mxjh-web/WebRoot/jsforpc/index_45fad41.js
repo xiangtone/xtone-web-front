@@ -380,7 +380,7 @@ nie.define(function() {
             e.show().animate({
                 opacity: "0.85"
             }),
-            n.find("img").attr("src", "http://res.lxf.netease.com/pc/gw/20160315172502/" + $(this).attr("data-big")),
+            n.find("img").attr("src", $(this).attr("data-big")),
             n.show()
         }),
         $(".btn-close").click(function() {
@@ -395,13 +395,13 @@ nie.define(function() {
         t.click(function() {
             var e;
             o == a.length - 1 ? o = 0 : o++,
-            e = "http://res.lxf.netease.com/pc/gw/20160315172502/" + a.eq(o).attr("data-big"),
+            e =  a.eq(o).attr("data-big"),
             n.find("img").attr("src", e)
         }),
         i.click(function() {
             var e;
             0 == o ? o = a.length - 1 : o--,
-            e = "http://res.lxf.netease.com/pc/gw/20160315172502/" + a.eq(o).attr("data-big"),
+            e =  a.eq(o).attr("data-big"),
             n.find("img").attr("src", e)
         })
     }

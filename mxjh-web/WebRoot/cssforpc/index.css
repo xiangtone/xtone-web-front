@@ -35,7 +35,7 @@ body { min-width: 1260px; position: relative; margin: 0px auto; }
 .section-01 a.download-btn { background-repeat: no-repeat; }
 .section-01 a.download-btn:hover { background-repeat: no-repeat; }
 .section-01 .qrcode_wx_box { background:url("../img/gzwx.png");width: 143px; height: 89px; position: absolute; top: 580px; left: 50%; margin-left: -125px; z-index: 10; font-size: 0px; background-repeat: no-repeat; }
-.section-01 .erweima{ background:url("../img/ewm01.png");width: 100px; height: 89px; position: absolute; top: 580px; left: 50%; margin-left: -25px; z-index: 10; font-size: 0px; background-repeat: no-repeat; }
+.section-01 .erweima{ background:url("../img/wxewm001.png");width: 100px; height: 99px; position: absolute; top: 580px; left: 50%; margin-left: -25px; z-index: 10; font-size: 0px; background-repeat: no-repeat;background-size:cover }
 .section-01 .luntan_btn {background:url("../img/jrgw01.png"); width: 112px; height: 89px; position: absolute; top: 680px; left: 50%; margin-left: -125px; z-index: 10; font-size: 0px; background-repeat: no-repeat; }
 .section-01 .gift_con { background:url("../img/yylb.png");width: 112px; height: 89px; position: absolute; top: 780px; left: 50%; margin-left: -125px; z-index: 10; font-size: 0px; background-repeat: no-repeat; }
 .logo { position: absolute; width: 262px; height: 120px; top: 137px; left: 50%; margin-left: 202px; background-repeat: no-repeat; }
@@ -236,7 +236,7 @@ body #NIE-topBar-include { position: fixed; width: 100%; top: 0px; left: 0px; z-
 .pop-video-box i { position: absolute; width: 119px; height: 450px; top: 10px; right: -40px; background-repeat: no-repeat; }
 .pop-video-close { position: absolute; width: 30px; height: 31px; top: 0px; right: 12px; transition: all 0.5s ease-in-out 0s; background-repeat: no-repeat; }
 .pop-video-close:hover { transform: rotate(180deg); }
-.picture-box { position: fixed; z-index: 100; width: 600px; height: 338px; top: 50%; left: 50%; border: 4px solid rgb(3, 3, 2); margin: -169px 0px 0px -300px; display: none; }
+.picture-box { position: fixed; z-index: 100; width: 600px; height: 338px; top: 50%; left: 50%; border:0px solid rgb(3, 3, 2); margin: -169px 0px 0px -300px; display: none; }
 .picture-box img { width: 100%; height: auto; }
 .picture-box i { position: absolute; width: 119px; height: 338px; top: 10px; right: -124px; background-repeat: no-repeat; }
 .picture-box .pop-video-close { right: -74px; }
@@ -639,7 +639,7 @@ body #NIE-topBar-include { position: fixed; width: 100%; top: 0px; left: 0px; z-
 
 .section-04 .role-name { background-position: -1054px -761px; }
 .i-arrow { background-position: -475px -384px; }
-.tips_gift { background-position: -1034px -712px; }
+
 
 
 .nav-light-box .btn-nav-download { background-position: -396px -390px; }
@@ -661,7 +661,7 @@ body #NIE-topBar-include { position: fixed; width: 100%; top: 0px; left: 0px; z-
 .pop-yuyue .yuyue-wrap .choose-box .ios-type i { background-position: -517px -410px; }
 
 .pop-video-box i, .picture-box i,.nav-light-box a:hover, .nav-light-box a.current,.yuyue-btn, .section-01 a.download-btn, .section-01 .yuyue-btn:hover, .section-01 a.download-btn:hover, .nav-light-box i, .download-img, .leaf-01,.code_show, .btn-video { background-image: url("index_z_a439b05.png"); }
-.logo, .pop-download .gzh-wrap .gzh, .leaf-04,  .leaf-03, .section-04 .role-name,  .section-02 .role-name, .section-03 .role-name-01, .i-arrow, .arrow2, .pop-yuyue .yuyue-wrap .yuyue-btn:hover, .pop-yuyue .yuyue-wrap .yuyue-btn, .tips_gift, .nav-light-box .btn-nav-download, .nav-light-box .btn-nav-download:hover,  .leaf-02, .picture-box-prev, .picture-box-next,.btn-video i, .pop-yuyue .yuyue-wrap .phonenum, .pop-video-close { background-image: url("index_z_a439b05.png"); }
+.logo, .pop-download .gzh-wrap .gzh, .leaf-04,  .leaf-03, .section-04 .role-name,  .section-02 .role-name, .section-03 .role-name-01, .i-arrow, .arrow2, .pop-yuyue .yuyue-wrap .yuyue-btn:hover, .pop-yuyue .yuyue-wrap .yuyue-btn, .nav-light-box .btn-nav-download, .nav-light-box .btn-nav-download:hover,  .leaf-02, .picture-box-prev, .picture-box-next,.btn-video i, .pop-yuyue .yuyue-wrap .phonenum, .pop-video-close { background-image: url("index_z_a439b05.png"); }
 .download-btns em, .pop-yuyue .yuyue-wrap .choose-box label.checked, .pop-yuyue .yuyue-wrap .choose-box label, .pop-yuyue .yuyue-wrap .choose-box .android-type i, .pop-yuyue .sub-title i, .pop-yuyue .yuyue-wrap .choose-box .ios-type i,.btn-nav-download i { background-image: url("index_z_a439b05.png"); }
 /* ::::: http://res.nie.netease.com/comm/js/nie/util/share/css/share.v5.css ::::: */
 

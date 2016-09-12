@@ -115,7 +115,6 @@
         <p class="desc"></p>
         <div class="role role-03"></div>
         <div class="role-name"></div>
-
         <span class="tips_download"></span>
         <a href="javascript:;" class="tips_gift"></a>
         <!-- <div class="leaf leaf-01"></div>
@@ -133,24 +132,24 @@
             <div class="bd" id="pics">
                 <ul id="0">
                     <li class="slide-item-01">
-                        <a href="javascript:;" data-big="data/big/csd1_600.jpg" data-index="0">
+                        <a href="javascript:;" data-big="img/11_0000_1.png" data-index="0">
                             <img src="img/pg02_01.png" alt="img_01" height="301" width="301">
                         </a>
                     </li>
                     <li class="slide-item-02">
-                        <a href="javascript:;" data-big="data/big/csd2_600.jpg" data-index="1">
+                        <a href="javascript:;" data-big="img/11_0001_2.png" data-index="1">
                             <img src="img/pg02_02.png" alt="img_02" height="301" width="301">
                         </a>
                     </li>
                 </ul>
                 <ul id="1" style="display: none;">
                     <li class="slide-item-01">
-                        <a href="javascript:;" data-big="data/big/csd3_600.jpg" data-index="2">
+                        <a href="javascript:;" data-big="img/11_0002_3.png" data-index="2">
                             <img src="img/pg02_03.png" alt="img_03" height="301" width="301">
                         </a>
                     </li>
                     <li class="slide-item-02">
-                        <a href="javascript:;" data-big="data/big/csd4_600.jpg" data-index="3">
+                        <a href="javascript:;" data-big="img/11_0003_4.png" data-index="3">
                             <img src="img/pg02_04.png" alt="img_04" height="301" width="301">
                         </a>
                     </li>
@@ -177,6 +176,44 @@
             	 }); 
               
                </script> 
+               <script type="text/javascript">
+               $(document).ready( function() {
+                   var o, e = $("#mask"),
+                   n = $(".picture-box"),
+                   a = $("#pics a"),
+                   i = $(".picture-box-prev"),
+                   t = $(".picture-box-next");
+                   a.click(function() {
+                       o = 1 * $(this).attr("data-index"),
+                       e.show().animate({
+                           opacity: "0.85"
+                       }),
+                       n.find("img").attr("src", $(this).attr("data-big")),
+                       n.show()
+                   }),
+                   $(".btn-close").click(function() {
+                       e.hide().animate({
+                           opacity: "0"
+                       }),
+                       n.hide(),
+                       $("#video-box").hide(),
+                       $("#video2-box").hide(),
+                       $(".pop-box").hide()
+                   }),
+                   t.click(function() {
+                       var e;
+                       o == a.length - 1 ? o = 0 : o++,
+                       e =  a.eq(o).attr("data-big"),
+                       n.find("img").attr("src", e)
+                   }),
+                   i.click(function() {
+                       var e;
+                       0 == o ? o = a.length - 1 : o--,
+                       e =  a.eq(o).attr("data-big"),
+                       n.find("img").attr("src", e)
+                   })
+               })
+               </script>
                 
             </div>
 
@@ -205,53 +242,8 @@
         <a href="javascript:;" class="tips_gift"></a>
         
         <div class="pic-box">
-            <ul class="pic-list pic-list-odd clearfix">
-                <li>
-                    <img src="pic_01_9ed55ef.png" alt="" height="132" width="132">
-                </li>
-            </ul>
-            <ul class="pic-list clearfix">
-                <li>
-                    
-                </li>
-                <li>
-                    <img src="xyj1_0963aee.png" alt="" height="132" width="132">
-                </li>
-            </ul>
-            <ul class="pic-list pic-list-odd clearfix">
-                <li>
-                    <img src="xyj2_ec78781.png" alt="" height="132" width="132">
-                </li>
-            </ul>
-            <ul class="pic-list clearfix">
-                <li>
-                    <img src="xyj3_0a1a61e.png" alt="" height="132" width="132">
-                </li>
-                <li>
-                    <img src="pic_05_c4c8156.png" alt="" height="132" width="132">
-                </li>
-            </ul>
-            <ul class="pic-list pic-list-odd clearfix">
-                <li>
-                    <img src="xyj4_2722786.png" alt="" height="132" width="132">
-                </li>
-            </ul>
-            <ul class="pic-list clearfix">
-                <li>
-                    <img src="pic_07_8a1c5d2.png" alt="" height="132" width="132">
-                </li>
-                <li>
-                    <img src="xyj5_a566ed0.png" alt="" height="132" width="132">
-                </li>
-            </ul>
-            <ul class="pic-list pic-list-odd clearfix">
-                <li>
-                    <img src="pic_09_6912db7.png" alt="" height="132" width="132">
-                </li>
-                <li>
-                    <img src="xyj6_08c9b45.png" alt="" height="132" width="132">
-                </li>
-            </ul>
+          
+         
         </div>
     </div>
 
@@ -557,7 +549,7 @@
 
 <div class="picture-box">
     <i></i>
-    <img src="untitled.dat" height="530" width="708">
+    <img src="" height="530" width="708">
     <a href="javascript:;" class="picture-box-next"></a>
     <a href="javascript:;" class="picture-box-prev"></a>
     <a href="javascript:;" class="pop-video-close JpopClose btn-close"></a>
@@ -569,14 +561,14 @@
         <div id="share_title" pub-name="分享文案">《陆小凤传奇》邀你决战紫禁之巅！</div><!--设置分享标题-->
         <div id="share_url" pub-name="分享地址"></div><!--设置分享ＵＲＬ-->
         <img id="share_pic" data-src="http://res.lxf.netease.com/pc/gw/20160315172502/img/share_b5456bf.png" pub-name="分享图片"><!--设置分享图片地址，使用src指定图片地址，可加快在微信中点击分享时弹框中分享图标的显示速度-->
-        <div id="share_desc" pub-name="分享描述">《陆小凤传奇》月圆夜，紫禁之巅，一剑破飞仙。君，可敢拔剑一战？</div>
+        <div id="share_desc" pub-name="分享描述">find君，可敢拔剑一战？</div>
     </div>
     <div pub-name="JS" id="js_bottom" style="display: none;"></div>
     <!-- 营销点代码 -->
     <iframe id="yxd" src="index_1.html" pub-name="营销点代码" style="display: none;"></iframe>
 
     <!-- jquery mix NIE (最新版本）-->
-    <script src="untitled_001.dat"></script>
+
     <script type="text/javascript" charset="gbk" src="jsforpc/index_45fad41.js"></script>
 
 <!-- fullpage.js 的基本设置 -->
@@ -642,6 +634,7 @@
 				break;	
 			case '#2':
 				idcode="02";
+				$("#nav-box-02 .fea-01").css("background","url(img/dflx1.png) no-repeat");
 				break;
 			case '#3':
 				idcode="03";
@@ -709,9 +702,11 @@
 				break;	
 			case '#2':
 				idcode="02";
+	
 				break;
 			case '#3':
 				idcode="03";
+				
 				break;
 			case '#4':
 				idcode="04";

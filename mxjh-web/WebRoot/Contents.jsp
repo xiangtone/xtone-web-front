@@ -104,7 +104,7 @@
 	</div>
 	</div>
     <div style="position: absolute; top: 0px; margin-left: 307px;" class="fr">
-    <div class="fr_ewm"><span><img src="images/erweima.jpg" height="230px" width="230px"></span></div>  
+    <div class="fr_ewm"><span></span></div>  
       <a href="http://cdnsrc.xtonegame.com/download/lyxm/lyxm_xt.apk">
     <div class="fr_btn1" style="cursor:pinter;"></div></a>
     <a href="">
