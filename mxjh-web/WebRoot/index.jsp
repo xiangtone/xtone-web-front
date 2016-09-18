@@ -132,25 +132,25 @@
             <div class="bd" id="pics">
                 <ul id="0">
                     <li class="slide-item-01">
-                        <a href="javascript:;" data-big="img/11_0000_1.png" data-index="0">
-                            <img src="img/pg02_01.png" alt="img_01" height="301" width="301">
+                        <a href="javascript:;" data-big="img/11_0001_2.png" data-index="0">
+                            <img src="img/pg02_01.png" alt="img_01" height="237px" width="100%">
                         </a>
                     </li>
                     <li class="slide-item-02">
-                        <a href="javascript:;" data-big="img/11_0001_2.png" data-index="1">
-                            <img src="img/pg02_02.png" alt="img_02" height="301" width="301">
+                        <a href="javascript:;" data-big="img/11_0000_1.png" data-index="1">
+                            <img src="img/pg02_02.png" alt="img_02" height="237px" width="100%">
                         </a>
                     </li>
                 </ul>
                 <ul id="1" style="display: none;">
                     <li class="slide-item-01">
-                        <a href="javascript:;" data-big="img/11_0002_3.png" data-index="2">
-                            <img src="img/pg02_03.png" alt="img_03" height="301" width="301">
+                        <a href="javascript:;" data-big="img/11_0003_4.png" data-index="2">
+                            <img src="img/pg02_03.png" alt="img_03" height="237px" width="100%">
                         </a>
                     </li>
                     <li class="slide-item-02">
-                        <a href="javascript:;" data-big="img/11_0003_4.png" data-index="3">
-                            <img src="img/pg02_04.png" alt="img_04" height="301" width="301">
+                        <a href="javascript:;" data-big="img/11_0002_3.png" data-index="3">
+                            <img src="img/pg02_04.png" alt="img_04" height="237px" width="100%">
                         </a>
                     </li>
                 </ul>
@@ -287,7 +287,7 @@
     
     <!-- 第6屏 end -->
      <!--此乃底部-->
-    <div id="07" style="height: 472px !important;" class="footerx section fp-auto-height section-07  myConten">
+    <div id="07" style="height: 472px !important;min-height:auto;" class="footerx section fp-auto-height section-07  myConten">
       <!--   <div style="display: block;" class="share-box" id="NIE-share"><div class="NIE-share NIE-share6"><span class="NIE-share-txt">分享到:</span><ul class="NIE-share-iconBtn"><li><a target="_self" title="分享到微信二维码" href="javascript:;" style="" class="iconfont NIE-share-btn23"><span class="iconfont"></span><em>微信</em></a></li><li><a target="_self" title="分享到易信" href="javascript:;" style="" class="iconfont NIE-share-btn22"><span class="iconfont"></span><em>易信</em></a></li><li><a target="_self" title="分享到新浪微博" href="javascript:;" style="" class="iconfont NIE-share-btn2"><span class="iconfont"></span><em>新浪微博</em></a></li><li><a href="javascript:void(0)" class="iconfont morebtn"><span class="iconfont"></span><em>更多</em></a></li></ul><div class="NIE-share-clearfix"></div><div class="NIE-share-more"><ul><li><a target="_self" title="分享到QQ空间" href="javascript:;" style="" class="iconfont NIE-share-btn1">QQ空间</a></li><li><a target="_self" title="分享到人人网" href="javascript:;" style="" class="iconfont NIE-share-btn8">人人网</a></li><li><a target="_self" title="分享到腾讯微博" href="javascript:;" style="" class="iconfont NIE-share-btn3">腾讯微博</a></li><li><a target="_self" title="分享到QQ好友" href="javascript:;" style="" class="iconfont NIE-share-btn24">QQ好友</a></li><li><a target="_self" title="分享到豆瓣" href="javascript:;" style="" class="iconfont NIE-share-btn11">豆瓣</a></li><li><a target="_self" title="分享到百度贴吧" href="javascript:;" style="" class="iconfont NIE-share-btn14">百度贴吧</a></li></ul></div></div><div class="NIE-share-clearfix"></div></div>
 
        <div id="NIE-copyRight"><p id="NIE-copyRight-corp" style="width: 832px; text-align: left; margin: 0px auto; padding: 15px 0px 0px; font-size: 12px; font-family: &quot;宋体&quot;; line-height: 24px; display: block; position: relative;"><span style="vertical-align: top; top: 4px; display: inline-block; position: relative;"><a href="http://www.163.com/" target="_blank" style="width: 118px; height: 31px; padding-right: 0px; display: inline-block; cursor: pointer; background: transparent url(&quot;netease.1.png&quot;) no-repeat scroll 0% 0%;"></a><a href="http://game.163.com/" target="_blank" style="width: 134px; height: 31px; padding-right: 15px; display: inline-block; cursor: pointer; background: transparent url(&quot;nie.1.png&quot;) no-repeat scroll 0% 0%;"></a></span><span style="text-align: left; display: inline-block; padding-left: 6px;"><span id="ncp-l1"><a href="http://gb.corp.163.com/gb/about/overview.html" target="_blank">公司简介</a> - <a href="http://help.163.com/" target="_blank">客户服务</a> - <a href="http://gb.corp.163.com/gb/legal.html" target="_blank">相关法律</a> - <a href="http://game.163.com/about/about.html" target="_blank">网易游戏</a> - <a href="http://game.163.com/about/contactus.html" target="_blank">联系我们</a> - <a href="http://game.163.com/bs/business.html" target="_blank">商务合作</a> - <a href="http://game.163.com/job/" target="_blank">加入我们</a> - <a href="http://game.163.com/sy/client/userAgreement2.html" target="_blank">用户协议</a></span><br><span id="ncp-l2">网易公司版权所有 ©1997-2016　　  </span></span><a href="http://www.leihuo.net/jiazhang.html" style="display: inline-block; padding: 2px; color: white; background-color: rgb(97, 0, 0); position: absolute; right: 70px; top: 38px;" target="_blank">点击查看家长监护工程&nbsp;&gt;</a><br><span id="ncp-l3" style="display: inline-block; padding-top: 10px;">本游戏适合16岁以上的玩家进入。<br>积极健康的游戏心态是健康游戏的开端，本游戏故事情节设置紧凑，请您合理控制游戏时间，避免沉溺游戏影响生活，注意自我保护，防范网络陷阱。<br>《网络文化经营许可证》浙网文[2016]0155-055号 </span></p></div>
@@ -803,16 +803,16 @@
    $(".tips_download").mouseover(function(){
 	   $(".tips_download").css("display","none"); 
 	  $("#nie-download-com").css("display","block"); 
-	  $("#nie-download-com").css("right","0px"); 	   
+	  $("#nie-download-com").css("right","2px"); 	   
    });
    $(".nie-download-com").mouseover(function(){
 	   $(".tips_download").css("display","none"); 
 	  $("#nie-download-com").css("display","block"); 
-	  $("#nie-download-com").css("right","0px"); 	   
+	  $("#nie-download-com").css("right","2px"); 	   
    });
    $(".nie-download-com").mouseout(function(){
 	   	sleep(100);
-	   	$(".nie-download-com").css("right","0px"); 
+	   	$(".nie-download-com").css("right","3px"); 
 		  $(".nie-download-com").css("display","none"); 
 		   $(".tips_download").css("display","block"); 		   
 	   });
