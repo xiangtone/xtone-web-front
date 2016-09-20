@@ -77,7 +77,6 @@ function commit(){
 			
 			document.location.href = 'share.jsp';
 		
-		
 		}
 	},function(data){
 		alert(data.status)
@@ -218,10 +217,7 @@ function giftAjaxCommit(giftNum){
       			
       		}else{
       			alert("图片验证码错误")
-      		}*/
-      		
-      		commit();
-      	
+      		}*/commit();
       		}
       } );
       

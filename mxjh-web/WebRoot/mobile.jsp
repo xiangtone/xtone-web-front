@@ -831,14 +831,13 @@ opacity
 }
 
 .pop_tab td {
-	font-size: 16px;
-	color: #352a5f;
+	font-size: 12px;
+	color: black;
 }
 
 .pop_tab td.tr {
 	text-align: left;
-	padding-left:8%;
-
+	padding-left:85px;
 }
 
 .pop_tab .lh {
@@ -865,12 +864,12 @@ opacity
 }
 
 .pop_tab td .pl {
-	margin-left: 14%;
+	margin-left: 85px;
 }
 
 .pop_tab .txt {
-	width: 80%;
-	height: 90%;
+	width: 210px;
+	height: 42px;
 	background: #ffffff;
 	line-height: 10px;
 	color: #6e6e6e;
@@ -879,36 +878,35 @@ opacity
 }
 
 .pop_tab .yzm {
-	margin-left: 7%;
+	margin-left: 10px;
 	display: block;
+	background: url(imgqhyy/an.png) no-repeat;
+	background-size:100%;
 	color: #ffffff;
 	text-align: center;
 	line-height: 20px;
-	border:#1d84bd 1px solid;
-	background:#1d84bd ! important;
-	border-radius:5px;
+	border:none;
 }
 
 .pop_desp {
-	font-size: 14px;
+	font-size: 17px;
 	color: #352a5f;
 	text-align: left;
-	padding-top:5%;
-	padding-left:7%;
-	padding-right:13%;
+	padding-top:36px;
+	padding-left:10%;
 }
 
 .submit {
 	display: block;
-	width: 31%;
-	height: 34px;
+	width: 100px;
+	height: 25px;
 	background: url(imgqhyy/tj.png) no-repeat;
 	background-size:100%;
-	font-size: 14px;
+	font-size: 17px;
 	color: #ffffff;
 	text-align: center;
 	line-height: 25px;
-	margin: 4% 0 0 -3%;
+	margin: 12px auto 0px;
 }
 
 .pop_close {
@@ -1107,7 +1105,7 @@ opacity
 	padding-left: 280px;
 }
 .dialog tr{
-	height:28px;
+	height:50px;
 }
 </style>
 <style media="screen" type="text/css">
@@ -1143,7 +1141,7 @@ body {
 		<div
 			style="text-align: center; margin-top: 50px; font-family: '微软雅黑'; color: #ffffff; font-size: 20px; font-weight: light;">
 			点击右上角分享</br>
-			</br>邀请兄弟与您一起共战梦想江湖
+			</br>邀请兄弟与您一起共战灵域仙魔
 
 		</div>
 		<a href="javascript:showDialog.hide();"><img
@@ -1245,7 +1243,7 @@ body {
 			<img src="imgqhyy/bxgj.png">
 		</div>
 		<div class="box-2 float">
-			<img src="imgqhyy/gjbx.png">
+			<strong class="font-c">高级宝箱</strong></br> <strong style="font-size: 12px;">(成功邀请3名好友)</strong>
 		</div>
 	</div>
 	<div id="luxurybtn" class="box-h">
@@ -1253,7 +1251,7 @@ body {
 			<img src="imgqhyy/bxhh.png">
 		</div>
 		<div class="box-2 float">
-			<img src="imgqhyy/hhbx.png">
+			<strong class="font-c">豪华宝箱</strong></br> <strong style="font-size: 12px;">(成功邀请5名好友)</strong>
 		</div>
 	</div>
 	<div id="extremebtn" class="box-z">
@@ -1261,7 +1259,7 @@ body {
 			<img src="imgqhyy/bxzz.png">
 		</div>
 		<div class="box-2 float">
-			<img src="imgqhyy/zzbx.png">
+			<strong class="font-c">至尊宝箱</strong></br> <strong style="font-size: 12px;">(成功邀请10名好友)</strong>
 		</div>
 	</div>
 	<div class="disb">
@@ -1277,7 +1275,7 @@ body {
 	</div>
 	<div style="width: 100%; height: 10px; display: block;"></div>
 	<div class="scan"
-		style="padding-top: 0;height:auto; margin-top: 124%; margin-bottom:4%; ">
+		style="padding-top: 0;height:160px; margin-top: 124%; margin-bottom:20px ">
 		<div class="scan-1">
 			<img style="margin-top: 10px;" src="imgqhyy/ewm.png">
 		</div>
@@ -1292,61 +1290,40 @@ body {
 
 	<!-- 登录 -->
 	<div class="dialog" id="pop111" role="dialog" tabindex="-1"
-		style="background: url(imgqhyy/bg_yy.png);background-size: 100%;display: none; visibility: visible; position: fixed; z-index: 9999; width: 95%;height:auto;left:54% ! important;top:50%;">
-		<table
-			style="position: absolute; z-index: 10000; margin-top: 10%; margin-left: 7.5%;margin-right:13.5%;">
-			
-			<tbody style="width: 100%;">
-			<tr>
-			
-			<td style="width:25%;"><img alt="" src="imgqhyy/xina2.png" style="width:100%;height:auto;"></td>
-			<td style="width:40%;text-align:center;"><font style="font-size:22px;color:#352a5f;padding:0 5%;">快速登录</font></td>
-			<td style="width:25%;"><img alt="" src="imgqhyy/xina.png" style="width:100%;height:auto;"></td>
-			</tr>
-			
-			</tbody>
-		</table>
+		style="display: none; visibility: visible; position: fixed; z-index: 9999; width: 95%;">
+		<div
+			style="position: absolute; z-index: 10000; margin-top: 10px; margin-left: 34.6%;">
+			<img style="width: 50%;" src="imgqhyy/kuaisudenglu.png"></img>
+		</div>
 		<div id="pop111close"
-			style="margin-top: 5%; width: 20px; height: 20px; position: absolute; z-index: 10000;margin-left:81% ! important;">
+			style="margin-top: 2px; width: 20px; height: 20px; position: absolute; z-index: 10000;">
 			<a href="javascript:showDialog.hide()" title="关闭"
 				style="position: absolute; width: 20px; height: 20px; background-image: url(imgqhyy/guanbianniu.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;"></a>
 		</div>
 		<div class="pop_con pr"
-			style=" width: 100%;padding-top:24%; ">
+			style="background: url(); width: 100%; background-color: #DDDDDD;">
 			<div class="pop" style="width: 100%;">
-				<!-- <p class="pop1_tit sp"></p> -->
+				<p class="pop1_tit sp"></p>
 				<table style="width: 100%;" class="pop_tab">
 					<tbody style="width: 100%;">
 
 						<tr>
 							<td class="tr">手机号码：</td>
-							
-						</tr>
-						<tr>
-							
-							<td><input class="txt pl" id="mobiledl" type="text" style="height:27px;"></td>
+							<td><input class="txt pl" id="mobiledl" type="text"></td>
 							<td ><button id="yzmsdl" href="javascript:;" class="yzm">发送登录码</button></td>
 						</tr>
 						<tr>
 							<td class="tr">登录码：</td>
-							
-						</tr>
-						<tr>
-							
-							<td><input class="txt pl" id="codedl" type="text" style="height:27px;"></td>
+							<td><input class="txt pl" id="codedl" type="text"></td>
 							<td></td>
 						</tr>
 						<tr>
 							<td class="tr lh">验证码：</td>
-							
-						</tr>
-						<tr>
-							
-							<td class="c" style="width:53%;"><input class="txt pl" type="text" id="code2dl" style="height:27px;">
+							<td class="c"><input class="txt pl" type="text" id="code2dl">
 							</td>
 							<td>
 								<div id="vCode2dl"
-									style="width: 104px; height: 30px; border: 1px solid #ccc; display: inline-block;"></div>
+									style="width: 120px; height: 30px; border: 1px solid #ccc; display: inline-block;"></div>
 							</td>
 						</tr>
 						<!--     			<tr> -->
@@ -1357,7 +1334,7 @@ body {
 					</tbody>
 				</table>
 				<!--     		<p class="pop_desp" style="color:999999;">填写好友发给你的邀请码，帮助好友获得惊喜宝箱！</p> -->
-				<a href="javascript:;" id="yySubmitdl" class="submit" style="margin-left:30%;margin-top:8%;">登录</a>
+				<a href="javascript:;" id="yySubmitdl" class="submit">登录</a>
 			</div>
 
 		</div>
@@ -1365,47 +1342,47 @@ body {
 	</div>
 	<!-- 点击抢号预约 -->
 	<center>
-	<div class="dialog" id="pop1" style="width: 100%;background:url(imgqhyy/bg_yy.png) no-repeat;background-size:100%;top:50px ! important;position:fixed ! important;left:54% ! important;height:100%;">
+	<div class="dialog" id="pop1" style="width: 100%;background:url(imgqhyy/bg_yy.png) no-repeat;background-size:100%;height:100%;top:20px ! important;position:fixed ! important;">
 		<table
-			style="position: absolute; z-index: 10000; margin-top: 7%; margin-left: 7.5%;margin-right:13.5%;">
+			style="position: absolute; z-index: 10000; margin-top: 40px; margin-left: 10.5%;">
 			
 			<tbody style="width: 100%;">
 			<tr>
 			
-			<td style="width:25%;"><img alt="" src="imgqhyy/xina2.png" style="width:100%;height:auto;"></td>
-			<td style="width:40%;text-align:center;"><font style="font-size:25px;color:#352a5f;padding:0 5%;">快速预约</font></td>
-			<td style="width:25%;"><img alt="" src="imgqhyy/xina.png" style="width:100%;height:auto;"></td>
+			<td><img alt="" src="imgqhyy/xina2.png" style="width:100%;height:auto;"></td>
+			<td><font style="font-size:34px;color:#352a5f;padding:0 10px;">快速预约</font></td>
+			<td><img alt="" src="imgqhyy/xina.png" style="width:100%;height:auto;"></td>
 			</tr>
 			
 			</tbody>
 		</table>
 		<div id="pop1close"
-			style="margin-top: 5%; width: 20px; height: 20px; position: absolute; z-index: 10000;margin-left:79%;">
+			style="margin-top: 22px; width: 20px; height: 20px; position: absolute; z-index: 10000;margin-left:439.7px;">
 			<a href="javascript:showDialog.hide()" title="关闭"
 				style="position: absolute; width: 20px; height: 20px; background-image: url(imgqhyy/guanbianniu.png); background-repeat: no-repeat; background-position: center 0; background-color: transparent; background-size: 100%;"></a>
 		</div>
 		<div class="pop_con pr"
 			style="width: 100%; padding-top:13%;">
 			<div class="pop" style="width: 100%;">
-				<!-- <p class="pop1_tit sp"></p> -->
-				<table style="width: 100%; margin-top:7%;" class="pop_tab">
+				<p class="pop1_tit sp"></p>
+				<table style="width: 100%; margin-top:;" class="pop_tab">
 					<tbody style="width: 100%;">
 
 						<tr>
-							<td class="tr"><font style="font-size:16px;color:#352a5f;">手机号码：</font></td>	
+							<td class="tr"><font style="font-size:25px;color:#352a5f;">手机号码：</font></td>	
 							
 						</tr>
 						
 						<tr>
 							<td><input class="txt pl" id="mobile" type="text"></td>
-							<td style="padding-right:18%;"><button id="yzms" class="yzm"
-									style="width: 100%; height: 30px;"><font style="font-size:13px;color:#ffffff;">发送验证码</font></button></td>
+							<td style="padding-right:70px;"><button id="yzms" class="yzm"
+									style="width: 122px; height: 45px;"><font style="font-size:17px;color:#ffffff;">发送验证码</font></button></td>
 						</tr>
 						
 						<!-- <tr class=""></tr> -->
 						
 						<tr>
-							<td class="tr"><font style="font-size:16px;color:#352a5f;">验证码：</font></td>
+							<td class="tr"><font style="font-size:25px;color:#352a5f;">验证码：</font></td>
 							
 						</tr>
 						<!-- <tr></tr> -->
@@ -1425,7 +1402,7 @@ body {
 							</td>
 						</tr> -->
 						<tr>
-							<td class="tr"><font style="font-size:16px;color:#352a5f;">邀请码(选填)：</font></td>
+							<td class="tr"><font style="font-size:25px;color:#352a5f;">邀请码(选填)：</font></td>
 							
 						</tr>
 						<!-- <tr></tr> -->
@@ -1480,7 +1457,7 @@ var c1 = document.getElementById("pop1close");
 var c2 = document.getElementById("pop111close");
 
 /* c1.style.marginLeft=document.body.clientWidth*0.95-20+'px'; */
-/* c2.style.marginLeft=document.body.clientWidth*0.95-20+'px'; */
+c2.style.marginLeft=document.body.clientWidth*0.95-20+'px';
 $("#yuyuebtn").on('click', function(){
 	TGDialogS("pop1");
 });

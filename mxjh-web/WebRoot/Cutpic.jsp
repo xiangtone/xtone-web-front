@@ -70,7 +70,7 @@ else{
     <div class="navBtn b2"><a href="News.jsp"></a></div>
     <div class="navBtn b3"><a href="Events.jsp"></a></div>
     <div class="navBtn b4"><a href="Strategy.jsp"></a></div>
-    <div class="navBtn b5"><a href="http://tieba.baidu.com/f?ie=utf-8&kw=%E7%81%B5%E5%9F%9F%E4%BB%99%E9%AD%94&fr=search"></a></div>
+    <div class="navBtn b5"><a href="http://tieba.baidu.com/f?kw=%E6%A2%A6%E6%83%B3%E6%B1%9F%E6%B9%96"></a></div>
     <div class="navBtn b6"><a href="qhyy.jsp"></a></div>
 </div>
 <div class="movBtn"><a class="popcl" href="http://sdo-shabake.com/video"></a></div>

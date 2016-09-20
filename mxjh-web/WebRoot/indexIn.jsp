@@ -76,7 +76,7 @@
     <div class="navBtn b2"><a href="News.jsp"></a></div>
     <div class="navBtn b3"><a href="Events.jsp"></a></div>
     <div class="navBtn b4"><a href="Strategy.jsp"></a></div>
-    <div class="navBtn b5"><a href="http://tieba.baidu.com/f?ie=utf-8&kw=%E7%81%B5%E5%9F%9F%E4%BB%99%E9%AD%94&fr=search" target="_blank"></a></div>
+    <div class="navBtn b5"><a href="http://tieba.baidu.com/f?kw=%E6%A2%A6%E6%83%B3%E6%B1%9F%E6%B9%96" target="_blank"></a></div>
     <div class="navBtn b6"><a href="qhyy.jsp" target="_blank"></a></div>
 </div>
             <div class="slogan"></div>
@@ -270,10 +270,10 @@
                   <div class="ch_bm">
                   <p><h1>QQ游戏群</h1></p>
                   
-                  <img src="img/qq.png"/>&nbsp 495265372</div>
+                  <img src="img/qq.png"/>&nbsp 476114315</div>
                    <div class="ch_bm">
                    <p><h1>QQ客服</h1></p>
-                   <img src="img/qq.png"/>&nbsp 3232698308</div>
+                   <img src="img/qq.png"/>&nbsp 3421893764</div>
                 </div>
             </div>
             <div class="h_30"></div>

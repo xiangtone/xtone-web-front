@@ -3,7 +3,6 @@
 	<name>mxjh-web</name>
 	<comment></comment>
 	<projects>
-		<project>xtone-java-common</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
