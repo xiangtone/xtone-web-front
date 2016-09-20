@@ -76,7 +76,7 @@ function commit(){
 //	window.location.reload()
 			
 			document.location.href = 'share.jsp';
-		
+			
 		
 		}
 	},function(data){
@@ -532,15 +532,17 @@ function commitdl(){
 	 var data = getDatadl();
 	ajaxCommit("2",data,function(data){
 		if(data.status=="error"){
-			alert("手机未预约或登录码错误")
+			alert("手机未预约或登录码错误");
 		}
 		else{
-		alert("登录成功")
-		window.location.reload()
-		$('#pop111').hide()
+			//window.location.reload();
+		alert("登录成功");
+		//document.location.href = 'mobile2.jsp';
+		window.location.href=window.location.href+"?id="+10000*Math.random();;
+		$('#pop111').hide();
 		}
 	},function(data){
-		alert('格式错误')
+		alert('格式错误');
 		
 	},'Login');
 	
