@@ -1,22 +1,28 @@
 package com.mxjh2.info;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.common.util.ConfigManager;
-import org.common.util.ConnectionService;
 
 public class Ticketsdao {
-public String getToken(String appId){    // get token form tbl_wechat_tokens
+	
+public  String getToken(String appId){    // get token form tbl_wechat_tokens
 
 	PreparedStatement ps = null;
     Connection con = null;
     ResultSet rs = null;
+    String url = "jdbc:mysql://scorpio.db:3306/cms_lyxm";
+    String username="cms_lyxm";
+    String password="nQ9zb6y4GlCvukMF";            
     
     try {
-		con = ConnectionService.getInstance().getConnectionForLocal();
+    	Class.forName("com.mysql.jdbc.Driver");
+		con = DriverManager.getConnection(url,username,password);
+		
 		
 		ps = con.prepareStatement("select token from tbl_wechat_tokens where appid=?");
 		ps.setString(1, appId);
@@ -48,9 +54,13 @@ public String getTicket(String appId){
 	PreparedStatement ps = null;
     Connection con = null;
     ResultSet rs = null;
+    String url = "jdbc:mysql://scorpio.db:3306/cms_lyxm";
+    String username="cms_lyxm";
+    String password="nQ9zb6y4GlCvukMF";
     
     try {
-		con = ConnectionService.getInstance().getConnectionForLocal();
+    	Class.forName("com.mysql.jdbc.Driver");
+		con = DriverManager.getConnection(url,username,password);
 		
 		ps = con.prepareStatement("select ticket from tbl_wechat_tickets where appid=?");
 		ps.setString(1, appId);
@@ -82,9 +92,13 @@ public long getValidTime(String appId){
 	PreparedStatement ps = null;
     Connection con = null;
     ResultSet rs = null;
+    String url = "jdbc:mysql://scorpio.db:3306/cms_lyxm";
+    String username="cms_lyxm";
+    String password="nQ9zb6y4GlCvukMF";
     
     try {
-		con = ConnectionService.getInstance().getConnectionForLocal();
+    	Class.forName("com.mysql.jdbc.Driver");
+		con = DriverManager.getConnection(url,username,password);
 		
 		ps = con.prepareStatement("select validtime from tbl_wechat_tickets where appid=?");
 		ps.setString(1, appId);
@@ -119,8 +133,13 @@ public int update(String ticket,String appId){
     PreparedStatement ps = null;
     Connection con = null;
     ResultSet rs = null;
+    String url = "jdbc:mysql://scorpio.db:3306/cms_lyxm";
+    String username="cms_lyxm";
+    String password="nQ9zb6y4GlCvukMF";
+    
     try {
-      con = ConnectionService.getInstance().getConnectionForLocal();
+    	Class.forName("com.mysql.jdbc.Driver");
+		con = DriverManager.getConnection(url,username,password);
       ps = con.prepareStatement(sql);
       int m = 1;
       Long now = System.currentTimeMillis();
