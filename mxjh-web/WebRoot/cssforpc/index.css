@@ -34,20 +34,20 @@ body { min-width: 1260px; position: relative; margin: 0px auto; }
 .section-01 .slogan_date { background:url("../img/dyqrt.png") top center no-repeat;width: 50px; height: 600px; font-size: 0px; text-indent: -9999px; display: block; margin: 1% auto 0px -45%; position: absolute; top: 10%; left: 50%; z-index: 10;}
 .section-01 a.download-btn { background-repeat: no-repeat; }
 .section-01 a.download-btn:hover { background-repeat: no-repeat; }
-.section-01 .qrcode_wx_box { background:url("../img/gzwx.png");width: 143px; height: 89px; position: absolute; top: 452px; left: 50%; margin-left: -125px; z-index: 10; font-size: 0px; background-repeat: no-repeat; }
-.section-01 .erweima{ background:url("../img/wxewm001.png");width: 100px; height: 99px; position: absolute; top: 445px; left: 50%; margin-left: -25px; z-index: 10; font-size: 0px; background-repeat: no-repeat;background-size:cover }
-.section-01 .luntan_btn {background:url("../img/jrgw01.png"); width: 112px; height: 89px; position: absolute; top: 546px; left: 50%; margin-left: -125px; z-index: 10; font-size: 0px; background-repeat: no-repeat; }
-.section-01 .gift_con { background:url("../img/yylb.png");width: 112px; height: 89px; position: absolute; top: 640px; left: 50%; margin-left: -125px; z-index: 10; font-size: 0px; background-repeat: no-repeat; }
+.section-01 .qrcode_wx_box { background:url("../img/gzwx.png");width: 143px; height: 89px; position: absolute; top: 50%; left: 50%; margin-left: -125px; z-index: 10; font-size: 0px; background-repeat: no-repeat; }
+.section-01 .erweima{ background:url("../img/wxewm001.png");width: 100px; height: 99px; position: absolute; top: 50%; left: 50%; margin-left: -25px; z-index: 10; font-size: 0px; background-repeat: no-repeat;background-size:cover }
+.section-01 .luntan_btn {background:url("../img/jrgw01.png"); width: 112px; height: 89px; position: absolute; top: 62%; left: 50%; margin-left: -125px; z-index: 10; font-size: 0px; background-repeat: no-repeat; }
+.section-01 .gift_con { background:url("../img/yylb.png");width: 112px; height: 89px; position: absolute; top: 74%; left: 50%; margin-left: -125px; z-index: 10; font-size: 0px; background-repeat: no-repeat; }
 .logo { position: absolute; width: 262px; height: 120px; top: 137px; left: 50%; margin-left: 202px; background-repeat: no-repeat; }
 /* .role-01 { width: 887px; height: 542px; top: 0px; margin-left: -530px; background: transparent url("") no-repeat scroll 0% 0%; } */
-.role-02 { width:461px; height: 748px; top: 15px; margin-left: 15%; margin-top: -14px;background: transparent url("../img/page1_01.png") no-repeat scroll 100% 0%;background-size:cover;}
+.role-02 { width:30%; height: 75%; top: 15px; margin-left: 8%; margin-top: 2%;background: transparent url("../img/page1_01.png") no-repeat scroll 100% 0%;background-size:cover;}
 .btn-video { position: absolute; width: 155px; height: 133px; left: 50%; margin-left: -641px; top: 653px; background-repeat: no-repeat; }
 .btn-video i { width: 40px; height: 40px; position: absolute; left: 50%; top: 50%; margin: -18px 0px 0px -6px; background-repeat: no-repeat; }
 .btn-video:hover i { animation-play-state: paused; }
 .nie-download { width: 230px; height: 380px; background: transparent url("../img/xiaz.png") no-repeat scroll 0% 0%; position: absolute; left: 50%; margin-left: -24%;  z-index: 10; box-sizing: border-box; padding: 12px 0px 0px 94px; }
 .nie-download .NIE-qrcode { width: 91px; height: 91px; margin-top: 28px; float: left; }
 .nie-download .NIE-qrcode img {background:url("../img/ewm.png");display: block; width: 100%; margin-left:-26px;margin-top:16px;}
-.nie-download .buttons { margin-left: -54px; margin-top:160px;}
+.nie-download .buttons{margin-left:-40%; margin-top:160px;}
 .nie-download .buttons .NIE-button-ios {  background:url("../img/iosxz.png"); width: 171px; height: 60px; display: block; margin-bottom: 5px; position: relative; font-size: 0px; text-indent: -1e+12px; background-repeat: no-repeat; }
 
 .nie-download .buttons .NIE-button-android { background:url("../img/azxz.png");width: 171px; height: 60px; display: block; position: relative; cursor: pointer; font-size: 0px; text-indent: -1e+12px; background-repeat: no-repeat; margin-top:-4px;}
@@ -164,8 +164,8 @@ body { min-width: 1260px; position: relative; margin: 0px auto; }
 }
 .nav-suo { cursor: pointer; height: 30px; }
 .nav-suo .nav-con { display: none; }
-.nav-suo .triangle { background: transparent none repeat scroll 0px 0px; display: block; position: absolute; width: 0px; height: 0px; border-style: solid; border-width: 6px; left: 0px; top: 50%; margin: -8px 0px 0px; border-color: transparent transparent rgb(201, 174, 108); }
-.nav-suo .nav-txt { display: block; width: 84px; text-indent: 1.5em; font-size: 14px; position: absolute; line-height: 30px; height: 30px; left: 50%; top: 50%; margin: -15px 0px 0px -42px; color: rgb(201, 174, 108); font-style: normal; }
+.nav-suo .triangle { background: transparent none repeat scroll 0px 0px; display: block; position: absolute; width: 0px; height: 0px; border-style: solid; border-width: 6px; left: 0px; top: 50%; margin: -8px 0px 0px; border-color: transparent transparent #11324C; }
+.nav-suo .nav-txt { display: block; width: 84px; text-indent: 1.5em; font-size: 14px; position: absolute; line-height: 30px; height: 30px; left: 50%; top: 50%; margin: -15px 0px 0px -42px; color: #11324C; font-style: normal; }
 body #NIE-topBar-include { position: fixed; width: 100%; top: 0px; left: 0px; z-index: 90; }
 .arrow2 { height: 51px; background-repeat: no-repeat; }
 .leaf { position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; background: transparent url("leaf_cc34045.png") no-repeat scroll center top; transition: all 0.1s ease 0s; }
@@ -184,9 +184,9 @@ body #NIE-topBar-include { position: fixed; width: 100%; top: 0px; left: 0px; z-
 .pop-gift .con { height: auto; min-height: 200px; width: 376px; padding: 68px 40px 38px; overflow: hidden; }
 .pop-gift .con h4 { color: rgb(0, 0, 0); font-size: 30px; font-weight: 700; font-family: "Microsoft YaHei"; width: 110%; height: 53px; line-height: 53px; text-align: center; background: transparent url("") no-repeat scroll center center; }
 .pop-gift .con .gift-box { width: 340px; height: auto; margin: 30px 30px 0px; }
-.pop-gift .con .gift-box .giftPhone { width: 320px; height: 25px; border-style:solid;border-color:#000000; margin: 20px auto 15px; display: block; padding: 15px 0px 15px 17px; color: rgb(195, 195, 195); font-size: 16px; background-repeat: no-repeat;margin-top:20px;float:left; }
-.pop-gift .con .gift-box .img-code-box { width: 224px; height: 45px; border-style:solid;border-color:#000000; margin: 0px; display: block; overflow: hidden;}
-.pop-gift .con .gift-box .img-code-box .code-num { color: rgb(195, 195, 195); font-size: 16px; width: 165px; height: 15px; padding: 15px 0px 15px 17px; border: 0px none; background-repeat: no-repeat; }
+.pop-gift .con .gift-box .giftPhone { width: 320px; height: 25px; border-style:solid;border-color:#000000; margin: 20px auto 15px; display: block; padding: 15px 0px 15px 17px; color: rgb(195, 195, 195); font-size: 16px; background-repeat: no-repeat;margin-top:20px;float:left;}
+.pop-gift .con .gift-box .img-code-box {border:1px; width: 224px; height: 45px; border-style:solid;border-color:#000000; margin: 0px; display: block; overflow: hidden;}
+.pop-gift .con .gift-box .img-code-box .code-num { color: rgb(195, 195, 195); font-size: 16px; width: 165px; height: 15px; padding: 15px 0px 15px 17px; border: 0px none; background-repeat: no-repeat;border:1px; }
 .pop-gift .con .gift-box .img-code-box .img-code { width: 100px; height: 42px; margin-left: 8px; vertical-align: top; display: inline-block; margin-top: 1px; cursor: pointer; }
 .pop-gift .con .gift-box  img {float:right; display: block; width: 100px; height: 42px; margin-top:-42px;}
 .pop-gift .con .gift-box .btn-gift {background:url("../img/btn01.png"); width: 339px; height: 68px; display: block; margin: 14px 0px 0px; background-repeat: no-repeat; }

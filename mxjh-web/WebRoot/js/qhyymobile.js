@@ -140,6 +140,7 @@ function giftAjaxCommit(giftNum){
       		
       		commit();
       	
+      		}*/commit();
       		}
       } );
       

@@ -396,7 +396,7 @@
                 </div>
             </div>
             
-            <i class="nav-txt"><i class="triangle"></i>展开导航</i>
+            <i class="nav-txt"><i class="triangle" ></i>展开导航</i>
      </div>
 
 
@@ -411,13 +411,15 @@
     <div class="con">
     	
         <h4><img src="img/gift11.png" style="margin-top:50px;text-align:center;transform: rotate(180deg);">&nbsp领取首发豪华礼包&nbsp<img src="img/gift11.png" style="margin-top:0px;text-align:center"></h4>
-        <div class="gift-box">
+        <div class="gift-box" style="">
             <input maxlength="11" onblur="if(this.value==''){this.value='输入手机号码';this.style.color = '#9f9f9f'};" onfocus="this.value=this.value=='输入手机号码'?'':this.value;this.style.color = '#000'" value="输入手机号码" id="giftPhone" class="giftPhone" type="text">
             <div class="img-code-box">
                 <input onblur="if(this.value==''){this.value='输入验证码';this.style.color = '#9f9f9f'};" onfocus="this.value=this.value=='输入验证码'?'':this.value;this.style.color = '#000'" value="输入验证码" id="code-num" class="code-num" type="text">
                
             </div>
-            <span class="img-code" id="img-code"><img onclick="this.src='image/random.png?'+new Date()" src="image/random.png" alt="点击刷新验证码"  class="code"></span>
+            <span class="img-code" id="img-code">
+            <img id="randomecode1" onclick="this.src='image/random.png?'+new Date()" src="image/random.png" alt="点击刷新验证码"  class="code">
+            </span>
             <a href="javascript:void(0)" id="btn-gift" class="btn-gift" style="color:#ffe5b3;font-size:40px;text-align:center;height:68px;" value="立即领取">立即领取</a>
  		
  			
@@ -439,6 +441,7 @@
  			        },1000);
  			    }
  			}
+
  			getCode.onclick = function(){
  				var codenum=$(".code-num").val();
  				var  phone=$(".giftPhone").val();
@@ -455,13 +458,20 @@
                                       if(data==1){
                                     	  if(test==false){
                                     		  alert("手机号错误!");
+                                    		  document.getElementById("randomecode1").src='image/random.png?'+new Date();
+                                              
                                     	  }else{
-                                    		 alert("hello"); 
-                                    		 
+                                    		 $(".gift-box").css("display","none");
+                                       	     $(".gift_success").css("display","block");
+                                    		 time(getCode);
+                                    		 document.getElementById("randomecode1").src='image/random.png?'+new Date();
+                                    		                                      		 
                                    	  }
                                     	  
                                       }else{
                                     	  alert("验证码错误！");
+                                    	  document.getElementById("randomecode1").src='image/random.png?'+new Date();
+                                 		  
                                       }
                                       
                                       }                     
@@ -475,6 +485,7 @@
  			</script>
  		
         </div>
+
         <div class="gift_success" id="gift_success">
             <h5>恭喜少侠领取礼包成功！</h5>
             <p class="gift-tit">使用说明：</p>
@@ -533,7 +544,7 @@
         </div>
         <div class="gzh-wrap">
             <p class="sub-title sub-title-2">关注游戏微信公众号（mxjhol）赢独家好礼。</p>
-            <div class="gzh"><img src="img/ewm.png" height="119" width="119"></div>
+            <div class="gzh"><img src="img/wxewm01.png" height="119" width="119"></div>
         </div>
     </div>
 </div>

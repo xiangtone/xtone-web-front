@@ -54,7 +54,7 @@
     <div class="navBtn b2"><a href="News.jsp"></a></div>
     <div class="navBtn b3"><a href="Events.jsp"></a></div>
     <div class="navBtn b4"><a href="Strategy.jsp"></a></div>
-    <div class="navBtn b5"><a href="http://tieba.baidu.com/f?ie=utf-8&kw=%E7%81%B5%E5%9F%9F%E4%BB%99%E9%AD%94&fr=search"></a></div>
+    <div class="navBtn b5"><a href="http://tieba.baidu.com/f?kw=%E6%A2%A6%E6%83%B3%E6%B1%9F%E6%B9%96"></a></div>
     <div class="navBtn b6"><a href="qhyy.jsp"></a></div>
 </div>
 <div class="movBtn"><a class="popcl" href=""></a></div>
@@ -83,11 +83,11 @@
                                                       		'<div class="con_xian"></div>'+comment['content']+'<p>&nbsp</p>'+
                                                       		'<p>&nbsp</p><div class="h_20"></div><div class="con_bm">'+
                                                       		'<div class="w_380"><div class="h_30"></div>'+
-                                                      		'<span class="qun">官方Q群: 495265372</span>'+                                                      		
-                                                      		'<span class="qun">游戏客服: 3232698308</span>'+
-                                                      		'<a class="bd" style="color:#FFFFFF" href="http://tieba.baidu.com/f?ie=utf-8&kw=%E7%81%B5%E5%9F%9F%E4%BB%99%E9%AD%94&fr=search">百度官方贴吧：灵域仙魔吧</a></div>'+
-                                                      		'<div class="w_380"><div class="h_10"></div><em><img src="images/erweima.jpg"></em>'+
-                                                      		'<i>官方微信号：灵域仙魔<br>关注微信扫一扫<br>最新动态一手掌握</i></div></div>'
+                                                      		'<span class="qun">官方Q群: 476114315</span>'+                                                      		
+                                                      		'<span class="qun">游戏客服: 3421893764</span>'+
+                                                      		'<a class="bd" style="color:" href="http://tieba.baidu.com/f?kw=%E6%A2%A6%E6%83%B3%E6%B1%9F%E6%B9%96">百度官方贴吧：梦想江湖吧</a></div>'+
+                                                      		'<div class="w_380"><div class="h_10"></div><em><img src="img/wxewm01.jpg"></em>'+
+                                                      		'<i>官方微信号：梦想江湖<br>关注微信扫一扫<br>最新动态一手掌握</i></div></div>'
                                                       	
                                                       		
                                                                                          

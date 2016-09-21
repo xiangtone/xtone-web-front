@@ -28,13 +28,13 @@ String ticket = Wechat.getTicketFromloc();
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://web.xdcdn.net/game/hsqj/img/mobile_icon/icon-152.png?1451359882">
 <link rel="shortcut icon" href="logo.ico" type="image/x-icon"/>
 
-<link rel="stylesheet" href="cssforpc/main.css">
-
+<link rel="stylesheet" href="css/main.css">
+<script src="js2/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script type="text/javascript" src="js/sha1.js"></script>
 <script type="text/javascript">
-var plc = '<<梦想江湖>> ';
-var strAry =[plc+' 我已经预约梦想江湖了，兄弟快来与我一起战斗吧！',plc+' 预约梦想江湖，用你的洪荒之力助我一战！',plc+' 我已预约梦想江湖，I want you，加入我的仙盟吧！',plc+' 这波不亏，我已预约梦想江湖，不明真相的观众请点我！',plc+' 陪我玩梦想江湖吧，点一下又不会怀孕！'];
+var plc = '<<灵域仙魔>> ';
+var strAry =[plc+' 我已经预约灵域仙魔了，兄弟快来与我一起战斗吧！',plc+' 预约灵域仙魔，用你的洪荒之力助我一战！',plc+' 我已预约灵域仙魔，I want you，加入我的仙盟吧！',plc+' 这波不亏，我已预约灵域仙魔，不明真相的观众请点我！',plc+' 陪我玩灵域仙魔吧，点一下又不会怀孕！'];
 var index = Math.floor(Math.random()*5);
 
  var href = window.location.href
@@ -69,7 +69,7 @@ wx.ready(function(){
 
 
 	wx.onMenuShareAppMessage({
-	    title: '梦想江湖', // 分享标题
+	    title: '灵域仙魔', // 分享标题
 	    link: 'http://lyxm.xtonegame.com/mobile.jsp', // 分享链接
 	    desc: strAry[index], 
 	    imgUrl: 'http://lyxm.xtonegame.com/images/300x300.png', // 分享图标
@@ -84,7 +84,7 @@ wx.ready(function(){
 	    }
 	});
 	wx.onMenuShareQQ({
-	    title: '梦想江湖', // 分享标题
+	    title: '灵域仙魔', // 分享标题
 	    desc:strAry[index], // 分享描述
 	    link: 'http://lyxm.xtonegame.com/mobile.jsp', // 分享链接
 	    imgUrl: 'http://lyxm.xtonegame.com/images/300x300.png', // 分享图标
@@ -98,7 +98,7 @@ wx.ready(function(){
 	});
 
 	wx.onMenuShareQZone({
-	    title: '梦想江湖', // 分享标题
+	    title: '灵域仙魔', // 分享标题
 	    desc: strAry[index], // 分享描述
 	    link: 'http://lyxm.xtonegame.com/mobile.jsp', // 分享链接
 	    imgUrl: 'http://lyxm.xtonegame.com/images/300x300.png', // 分享图标
@@ -125,12 +125,12 @@ wx.error(function(res){
 
 
 </script>
-<title>梦想江湖</title>
+<title>灵域仙魔</title>
 <style type="text/css">
 	body{
 	width: 100%; 
 	height: auto; 
-	background-image: url(imgqhyy/tiaozhuan.jpg); 
+	background-image: url(images/index/tiaozhuan.jpg); 
 	background-repeat: no-repeat; 
 	background-position: center 0;
 	background-color: transparent; 
@@ -144,7 +144,7 @@ wx.error(function(res){
 <div id="dianji" style="width:80%;height:80%;position:absolute;z-index:10000;display:none;">
 <img style="width:30%;margin-left:60%;margin-top:2%;" src="mobileimg\jiantou.png"></img>
 <div style="text-align:center;margin-top:50px;font-family:'微软雅黑';color:#ffffff;font-size:20px;font-weight: light;">
-点击右上角分享</br></br>邀请兄弟与您一起共战梦想江湖
+点击右上角分享</br></br>邀请兄弟与您一起共战灵域仙魔
 
 </div>
 <a href="javascript:showDialog.hide();"><img style="width:30%;margin-left:35%;margin-top:15%;" src="mobileimg/guanbi.png"></img></a>
@@ -152,46 +152,46 @@ wx.error(function(res){
 
 		<div class="logo">
         	<div class="logo-a">
-        		<img  src="imgqhyy/logo.png">
+        		<img  src="images/index/logo.png">
         	</div>	      	
         </div>
         <div class="share">
         	<p ><strong class="font-d">恭喜您</strong></p>
-        	<p ><strong class="font-d">已成功预约《梦想江湖》</strong></p>	
+        	<p ><strong class="font-d">已成功预约《灵域仙魔》</strong></p>	
         </div>
         <div class="share1">
 	        	<div class="share2">
-	        		<strong class="font-d">您的邀请码是&nbsp;:</strong>&nbsp;<strong id="cde" style="color:#ff4e00;font-size:12px;"><%=phone %></strong>
+	        		<strong class="font-d">您的邀请码是:</strong></br><strong id="cde" style="color:red;font-size:12px;"><%=phone %></strong>
 	        	</div>
 	        	<div class="share3">
-	        		<img  src="imgqhyy/tishi.png">
+	        		<img  src="images/index/tishi.png">
 	        	</div>
 	        	<p class="share4"><strong class="font-d">将邀请码发给好友，或分享当前页面，即可获取宝箱！</strong></p>
 	        </div>
         <div class="box-ax">
         	<div class="box-ax1">
-        		<img  src="imgqhyy/bxgj.png">
+        		<img  src="images/index/gaoji.png">
         	</div>
         	<div class="box-ax2">
-        		<img  src="imgqhyy/bxhh.png">
+        		<img  src="images/index/haohua.png">
         	</div>
         	<div class="box-ax3">
-        		<img  src="imgqhyy/bxzz.png">
+        		<img  src="images/index/zhizun.png">
         	</div>
         </div>
         <div class="pro">
         	<div class="pro-1">
-        		<img id="fenxiang" src="imgqhyy/fenxiang.png">
+        		<img id="fenxiang" src="images/index/fenxiang.png">
         	</div>
         </div>
-<script src="js/jquery-1.js"></script>
-<script src="js/ZeroClipboard.js"></script>
-<script src="js/milo.js"></script>
-<script type="text/javascript" src="js/reporting.js"></script>
-<script src="js/loadjs.js"></script>
-<script src="js/report.js"></script>
-<script src="js/swfobject.js"></script>
-<script type="text/javascript" src="js/dr.js"> </script>
+<script src="js&css/jquery-1.js"></script>
+<script src="js&css/ZeroClipboard.js"></script>
+<script src="js&css/milo.js"></script>
+<script type="text/javascript" src="js&css/reporting.js"></script>
+<script src="js&css/loadjs.js"></script>
+<script src="js&css/report.js"></script>
+<script src="js&css/swfobject.js"></script>
+<script type="text/javascript" src="js&css/dr.js"> </script>
 <script>
 $("#fenxiang").on('click', function(){  
 	TGDialogS("dianji");
