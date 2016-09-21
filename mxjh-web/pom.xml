@@ -168,7 +168,7 @@
 	</build>
 	<profiles>
 		<profile>
-			<id>lyxm</id>
+			<id>mxjh</id>
 			<properties>
 				<runtime.env>config/mxjh</runtime.env>
 				<final.name>mxjh.xtonegame.com</final.name>

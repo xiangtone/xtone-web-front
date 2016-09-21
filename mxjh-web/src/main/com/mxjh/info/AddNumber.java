@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.common.util.ConnectionService;
 
+import com.mxjh2.info.Sentchit;
+
 /**
  * Servlet implementation class AddNumber
  */
@@ -69,9 +71,12 @@ public class AddNumber extends HttpServlet {
           		//System.out.println(sql);
           		ps = con.prepareStatement(sql);
           		ps.executeUpdate();
+          		
+          		Sentchit.sendTemplateSms(String.valueOf(phone), "ZD30010-0002", "@1@="+idString);
+          		//System.out.println(String.valueOf(phone));
       			data=2;
       	 		}
-      		System.out.println(data);
+      		//System.out.println(data);
       		response.getWriter().write(String.valueOf(data));  
       		      		
       		

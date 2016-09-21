@@ -509,10 +509,10 @@
  		
         </div>
 
-        <div class="gift_success" id="gift_success">
-            <h5>恭喜少侠领取礼包成功！</h5>
+        <div class="gift_success" id="gift_success" style="">
+            <h5 style="margin-left:16px">&nbsp;&nbsp;&nbsp;&nbsp;恭喜少侠领取礼包成功！</h5>
             <p class="gift-tit">使用说明：</p>
-            <p>安卓用户进入游戏主界面-右侧设置-礼包兑换，输入激活码即可通过系统邮件领取奖励。</p>
+            <p>iOS与安卓玩家，进入游戏主页面→活动按钮→兑换按钮→输入短信中的礼包码，即可领取奖励。</p>
         </div>
         <div class="gzh-wrap">
             <p class="sub-title sub-title-2">关注游戏微信公众号（<i>mxjhol</i>）赢独家好礼</p>
