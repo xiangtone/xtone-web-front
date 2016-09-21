@@ -5,9 +5,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.util.Date;
 import java.util.Random;
-
-import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,6 +14,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import org.apache.log4j.Logger;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -108,6 +109,11 @@ public class Gameorder extends HttpServlet {
     	
       }
 	  if(type.equalsIgnoreCase("2")){
+		
+		  /*
+		  * 获取邀请手机号
+		  */
+		  
 		  PrintWriter pw =	response.getWriter();
 		  Orderdao od = new Orderdao();
 		  if(order.getInvitePhoneNum()!=0&&od.selectById(order.getInvitePhoneNum())==null){
@@ -125,6 +131,65 @@ public class Gameorder extends HttpServlet {
 		    pw.write("{\"status\":\"success\"}");
 		    request.getSession().setAttribute("id", Long.valueOf(order.getPhoneNum()).toString());
 		    pw.close();
+		    
+		    
+		    /*
+		     * 获取手机对应的礼包兑换码
+		     */
+		    System.out.println(1);
+			HttpSession session1 = request.getSession();	
+			String userCode = ""; //礼包兑换码
+			String phone = null;
+			
+			
+			try{
+			phone = (String)session1.getAttribute("id");
+			}
+			catch(Exception ex){
+				ex.printStackTrace();System.out.println(2);
+			}
+		    
+		    
+		    	long phoneNum = Long.parseLong(phone);
+		    	String giftNum = request.getParameter("giftNum");
+		    	Codedao dao = new Codedao();
+		    	Orderdao orderdao = new Orderdao();
+		       
+		        	String codeForPhone = dao.checkPhone(phone,"meiti");
+		        	
+		        	if(codeForPhone!=null){
+		    			userCode = codeForPhone+"";
+		    		}else{
+		    			String CodeNumber = dao.checkGameId("meiti");
+		    			if(CodeNumber!=null){
+		    				Date date = new Date();
+		    				long time = date.getTime();
+		    				if(dao.updatePhoneForId(CodeNumber, phone,time,"meiti")>0){
+		    					userCode = CodeNumber+" ";
+		    				}else{
+		    					userCode = "服务器繁忙，请稍后重试！";
+		    				}
+		    				
+		    			}else{
+		    				userCode = "兑换码已发放完！";
+		    			} 
+		    		}
+		        	try {
+		        		//发送短信
+						Sentchit.sendTemplateSms(String.valueOf( order.getPhoneNum()), "ZD30010-0002", "@1@="+userCode);
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}	
+		        	System.out.println(userCode);
+		        	
+		        
+		    	
+		
+	            
+	           
+		    
+		  
 		      
 	  }
 		
