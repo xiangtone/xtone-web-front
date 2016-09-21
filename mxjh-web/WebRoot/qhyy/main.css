@@ -108,8 +108,8 @@
 	}
 	.box-2{
 	padding-top:8%;
-	width:62%;
-	text-align:center;
+	width:35%;
+	padding-left:12%;
 	}
 	.box-1a{
 	width:28%;
@@ -120,7 +120,7 @@
 	font-size:19px;
 	}
 	.disb{
-	padding-top:102.5%;
+	padding-top:104.5%;
 	position:absolute;
 	width:100%;
 	z-index:4;
@@ -142,6 +142,7 @@
 	.scan-1{
 	width:26%;
 	padding-left:37%;
+	padding-bottom:5px;
 	}
 		.logo{
 	width:100%;
@@ -165,14 +166,14 @@
 	padding:5% 0 5% 0;
 	}
 	.share2{
-	width:40%;
+	width:57%;
 	float:left;
 	padding-left:8%;
 	}
 	.share3{
-	width:40%;
+	width:30%;
 	float:left;
-	padding-left:3%;
+	padding-left:1%;
 	}
 	.share4{
 	float:left;
@@ -182,6 +183,7 @@
 	.font-d{
 	font-family:微软雅黑;
 	font-size:14px;
+	color:#321e60;
 	}
 	.box-ax{
 	width:90%;
@@ -189,23 +191,24 @@
 	padding:4% 5%;
 	}
 	.box-ax1{
-	width:30%;
+	width:25%;
 	float:left;
 	margin-right:3%;
 	}
 	.box-ax2{
-	width:30%;
+	width:27%;
 	float:left;
-	margin-right:3%;
+	margin-right:7%;
 	}
 	.box-ax3{
-	width:32%;
+	width:30%;
 	float:left;
+	margin-top:-2%;
 	}
 	.pro{
 	width:100%;
 	float:left;
-	padding:8% 0 12% 0;
+	padding:8% 0 8% 0;
 	}
 	.pro-1{
 	width:44%;
