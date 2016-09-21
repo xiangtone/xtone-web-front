@@ -7,15 +7,15 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.Statement;
 
+import org.common.util.ConnectionService;
+import org.json.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.common.util.ConnectionService;
-import org.json.JSONArray;
-import org.json.JSONObject;
+
 
 /**
  * Servlet implementation class Selnews
