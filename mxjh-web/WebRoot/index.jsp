@@ -1,3 +1,11 @@
+<%@page import="org.common.util.ConnectionService"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
@@ -412,7 +420,7 @@
     	
         <h4><img src="img/gift11.png" style="margin-top:50px;text-align:center;transform: rotate(180deg);">&nbsp领取首发豪华礼包&nbsp<img src="img/gift11.png" style="margin-top:0px;text-align:center"></h4>
         <div class="gift-box" style="">
-            <input maxlength="11" onblur="if(this.value==''){this.value='输入手机号码';this.style.color = '#9f9f9f'};" onfocus="this.value=this.value=='输入手机号码'?'':this.value;this.style.color = '#000'" value="输入手机号码" id="giftPhone" class="giftPhone" type="text">
+            <input maxlength="11" onblur="if(this.value==''){this.value='输入手机号码';this.style.color = '#9f9f9f'};" onfocus="this.value=this.value=='输入手机号码'?'':this.value;this.style.color = '#000'" value="输入手机号码" id="giftPhone" name="giftPhone" class="giftPhone" type="text">
             <div class="img-code-box">
                 <input onblur="if(this.value==''){this.value='输入验证码';this.style.color = '#9f9f9f'};" onfocus="this.value=this.value=='输入验证码'?'':this.value;this.style.color = '#000'" value="输入验证码" id="code-num" class="code-num" type="text">
                
@@ -421,10 +429,8 @@
             <img id="randomecode1" onclick="this.src='image/random.png?'+new Date()" src="image/random.png" alt="点击刷新验证码"  class="code">
             </span>
             <a href="javascript:void(0)" id="btn-gift" class="btn-gift" style="color:#ffe5b3;font-size:40px;text-align:center;height:68px;" value="立即领取">立即领取</a>
- 		
  			
- 			<script type="text/javascript">
- 			
+ 			<script type="text/javascript"> 			
  			var getCode = document.getElementById('btn-gift');
  			var wait = 60;
  			function time(btn){
@@ -461,11 +467,28 @@
                                     		  document.getElementById("randomecode1").src='image/random.png?'+new Date();
                                               
                                     	  }else{
-                                    		 $(".gift-box").css("display","none");
-                                       	     $(".gift_success").css("display","block");
+                                    		  $.ajax({                                  			 
+                                                      type: "GET",
+                                                      url: "AddNumber?phone="+phone,                        
+                                                      dataType: "text",
+                                                      success: function(data){
+                                                    	   
+                                                        	if(data=='1'){
+                                                        		alert("您已经领取了礼包，请勿重新领取");
+                                                        	}else{
+                                                        		 $(".gift-box").css("display","none");
+                                                           	     $(".gift_success").css("display","block");
+                                                           	   
+                                                        	}
+                                                        	
+                                                        }
+                                        	    	 
+                                        	     });
+                                    		
+                                     /*   	    
                                     		 time(getCode);
                                     		 document.getElementById("randomecode1").src='image/random.png?'+new Date();
-                                    		                                      		 
+                                    	 */	                                      		 
                                    	  }
                                     	  
                                       }else{
