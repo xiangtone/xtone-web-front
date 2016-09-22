@@ -44,7 +44,7 @@ body { min-width: 1260px; position: relative; margin: 0px auto; }
 .btn-video { position: absolute; width: 155px; height: 133px; left: 50%; margin-left: -641px; top: 653px; background-repeat: no-repeat; }
 .btn-video i { width: 40px; height: 40px; position: absolute; left: 50%; top: 50%; margin: -18px 0px 0px -6px; background-repeat: no-repeat; }
 .btn-video:hover i { animation-play-state: paused; }
-.nie-download { width: 230px; height: 380px; background: transparent url("../img/xiaz.png") no-repeat scroll 0% 0%; position: absolute; left: 50%; margin-left: -24%;  z-index: 10; box-sizing: border-box; padding: 12px 0px 0px 94px; }
+.nie-download { width: 230px; height: 380px; background: transparent url("../img/xiaz.png") no-repeat scroll 0% 0%; position: absolute; left: 50%; margin-left: -25%;  z-index: 10; box-sizing: border-box; padding: 12px 0px 0px 94px; }
 .nie-download .NIE-qrcode { width: 91px; height: 91px; margin-top: 28px; float: left; }
 .nie-download .NIE-qrcode img {background:url("../img/ewm.png");display: block; width: 100%; margin-left:-26px;margin-top:16px;}
 .nie-download .buttons{margin-left:-40%; margin-top:160px;}

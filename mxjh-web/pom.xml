@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.xtone</groupId>
+	<groupId>com.vanggame</groupId>
 	<artifactId>mxjh</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
@@ -171,9 +171,9 @@
 			<id>mxjh</id>
 			<properties>
 				<runtime.env>config/mxjh</runtime.env>
-				<final.name>mxjh.xtonegame.com</final.name>
+				<final.name>mxjh.vanggame.com</final.name>
 				<ftp.server.id>HYServer</ftp.server.id>
-				<ftp.to.url>ftp://121.40.125.15/lyxm.xtonegame.com/swap_dir</ftp.to.url>
+				<ftp.to.url>ftp://114.55.226.218/mxjh.vanggame.com/swap_dir</ftp.to.url>
 			</properties>
 			<activation>
 				<activeByDefault>true</activeByDefault>
@@ -183,7 +183,7 @@
 			<id>test</id>
 			<properties>
 				<runtime.env>config/mxjh</runtime.env>
-				<final.name>mxjh.xtonegame.com-test</final.name>
+				<final.name>mxjh.vanggame.com-test</final.name>
 			</properties>
 		</profile>
 
