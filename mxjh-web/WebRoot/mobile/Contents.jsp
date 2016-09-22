@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-   <title>灵域仙魔</title>
+   <title>梦想江湖</title>
 
 
 

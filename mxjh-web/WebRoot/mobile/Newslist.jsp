@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
     <meta content="telephone=no, email=no" name="format-detection">
-    <title>灵域仙魔</title>
+    <title>梦想江湖</title>
     <metaname="viewport" content="width=100%, initial-scale=0.9"/>
 	<link rel="stylesheet" type="text/css" href="jscss/newscss.css" media="all">
 	<link rel="stylesheet" href="mui/dist/css/mui.css">

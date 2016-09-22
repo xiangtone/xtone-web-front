@@ -15,7 +15,6 @@ if(request.getHeader("User-Agent").toLowerCase().indexOf("tosh")<0)
 if (check.JudgeIsMoblie(request)) {
 	response.sendRedirect("indexIn.jsp");
 }  
-
 %>
     
 <!DOCTYPE html>
