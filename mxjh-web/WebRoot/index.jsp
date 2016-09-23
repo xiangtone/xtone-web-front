@@ -5,21 +5,33 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
-<%@page import="com.mxjh.util.CheckLoad"%>
+
+
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%
-CheckLoad check = new CheckLoad();
-if(request.getHeader("User-Agent").toLowerCase().indexOf("tosh")<0)
-if (check.JudgeIsMoblie(request)) {
-	response.sendRedirect("indexIn.jsp");
-}  
-%>
+
     
 <!DOCTYPE html>
 <html>
 <head>
+  <script type="text/javascript">
+    function browserRedirect() {
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+        if ((bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){
+            window.location.href="mobile/index.jsp";
+        }
+    }
+    browserRedirect();
+	</script> 
     <meta charset="UTF-8">
 <!--This is Git Project From LXF/lxf-gw-20160315-->
     <title>梦想江湖</title>
@@ -36,6 +48,7 @@ if (check.JudgeIsMoblie(request)) {
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="renderer" content="webkit">
+  
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
@@ -43,7 +56,7 @@ if (check.JudgeIsMoblie(request)) {
 <link rel="stylesheet" type="text/css" href="cssforpc/index.css"/>
 <link rel="stylesheet" type="text/css" href="cssforpc/footer.css"/>
 <link rel="stylesheet" type="text/css" href="cssforpc/share.v5.css"/>
-
+<link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
 <script type="text/javascript" charset="gbk" src="jsforpc/fullPage/jquery.fullPage.js"></script>
 <script type="text/javascript" charset="gbk" src="jsforpc/fullPage/jquery.fullPage.min.js"></script>
 
