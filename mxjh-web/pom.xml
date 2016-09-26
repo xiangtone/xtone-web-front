@@ -1,7 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+<<<<<<< HEAD
 	<groupId>com.xtone</groupId>
+=======
+	<groupId>com.vanggame</groupId>
+>>>>>>> master
 	<artifactId>mxjh</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
@@ -10,6 +14,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
+<<<<<<< HEAD
+=======
+	  
+>>>>>>> master
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -32,6 +40,7 @@
 			<artifactId>commons-dbcp</artifactId>
 			<version>1.4</version>
 		</dependency>
+<<<<<<< HEAD
 		<dependency>
 			<groupId>commons-pool</groupId>
 			<artifactId>commons-pool</artifactId>
@@ -41,6 +50,22 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.29</version>
+=======
+		<!--  <dependency>
+			<groupId>commons-pool</groupId>
+			<artifactId>commons-pool</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>3.1</version>
+		</dependency>-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.22</version>
+>>>>>>> master
 		</dependency>
 		<dependency>
 			<groupId>com.thoughtworks.xstream</groupId>
@@ -52,6 +77,21 @@
 			<artifactId>gson</artifactId>
 			<version>2.3.1</version>
 		</dependency>
+<<<<<<< HEAD
+=======
+			<dependency>
+    <groupId>org.json</groupId>
+    <artifactId>json</artifactId>
+    <version>20090211</version>
+		</dependency>
+
+		<dependency>
+    <groupId>org.glassfish</groupId>
+    <artifactId>jsonp-jaxrs-1x</artifactId>
+    <version>1.0</version>
+	</dependency>
+
+>>>>>>> master
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient-osgi</artifactId>
@@ -150,12 +190,21 @@
 	</build>
 	<profiles>
 		<profile>
+<<<<<<< HEAD
 			<id>lyxm</id>
 			<properties>
 				<runtime.env>config/mxjh</runtime.env>
 				<final.name>mxjh.xtonegame.com</final.name>
 				<ftp.server.id>HYServer</ftp.server.id>
 				<ftp.to.url>ftp://121.40.125.15/lyxm.xtonegame.com/swap_dir</ftp.to.url>
+=======
+			<id>mxjh</id>
+			<properties>
+				<runtime.env>config/mxjh</runtime.env>
+				<final.name>mxjh.vanggame.com</final.name>
+				<ftp.server.id>HYServer</ftp.server.id>
+				<ftp.to.url>ftp://114.55.226.218/mxjh.vanggame.com/swap_dir</ftp.to.url>
+>>>>>>> master
 			</properties>
 			<activation>
 				<activeByDefault>true</activeByDefault>
@@ -165,7 +214,11 @@
 			<id>test</id>
 			<properties>
 				<runtime.env>config/mxjh</runtime.env>
+<<<<<<< HEAD
 				<final.name>mxjh.xtonegame.com-test</final.name>
+=======
+				<final.name>mxjh.vanggame.com-test</final.name>
+>>>>>>> master
 			</properties>
 		</profile>
 

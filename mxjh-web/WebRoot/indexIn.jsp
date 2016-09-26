@@ -4,7 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
    梦想江湖</title>
+<<<<<<< HEAD
 		<link rel="shortcut icon" href="" type="image/x-icon"><meta name="Keywords" content=" "><meta name="description" content=""><meta name="applicable-device" content="pc,mobile"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=EDGE,chrome=1">
+=======
+		<link rel="shortcut icon" href="logo.ico" type="image/x-icon" /><meta name="Keywords" content=" "><meta name="description" content=""><meta name="applicable-device" content="pc,mobile"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=EDGE,chrome=1">
+>>>>>>> master
 		<link type="text/css" rel="stylesheet" href="cssforpc/201512122.css">
         <link rel="stylesheet" href="cssforpc/footer.css">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -123,7 +127,11 @@
                 	<!-- 新闻类别按钮 开始-->
                         <div class="newsTit">
                             <ul>
+<<<<<<< HEAD
                                 <li><a style="color:#ff4106;" href="News.jsp">综合</a></li>
+=======
+                                <li><a style="color:#f4ca79;" href="News.jsp">综合</a></li>
+>>>>>>> master
                                 <li><a href="newsa.jsp">新闻</a></li>
                                 <li><a href="activity.jsp">活动</a></li>
                                 <li><a href="announce.jsp">公告</a></li>
@@ -134,7 +142,11 @@
                         <div class="news_xian">
                             <div class="red"></div>
                         </div>
+<<<<<<< HEAD
                         <!-- 新闻类别按钮 结束-->
+=======
+                        <!-- javascript:alert('暂未开通，敬请期待')类别按钮 结束-->
+>>>>>>> master
                         <!-- 新闻列表 开始-->
     					<div style="display:block;" class="newsList">
              <ul id=url_0>
@@ -153,8 +165,13 @@
                                       $.each(data, function(commentIndex, comment){
                                    
                                           html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+<<<<<<< HEAD
                                         		 +'" target="_blank"> <em class="" style="color:#ff4106;">【'+comment['catalog']
                                           		+'】'+comment['title']+'</em><span style="color:#ff4106;">'+comment['lastModifyTime']+'</span></a></li>'
+=======
+                                        		 +'" target="_blank"> <em class="" style="color:#395378;">【'+comment['catalog']
+                                          		+'】'+comment['title']+'</em><span style="color:#395378;">'+comment['lastModifyTime']+'</span></a></li>'
+>>>>>>> master
                                           		  
                                       })
                                       $('#url_0').html(html);
@@ -182,8 +199,13 @@
                                       $.each(data, function(commentIndex, comment){
                                     	  
                                           html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+<<<<<<< HEAD
                                         		 +'" target="_blank"> <em class="" style="color:#ff4106;">【'+comment['catalog']
                                           		+'】'+comment['title']+'</em><span style="color:#ff4106;">'+comment['lastModifyTime']+'</span></a></li>'
+=======
+                                        		 +'" target="_blank"> <em class="" style="color:#395378;">【'+comment['catalog']
+                                          		+'】'+comment['title']+'</em><span style="color:#395378;">'+comment['lastModifyTime']+'</span></a></li>'
+>>>>>>> master
                                           		  
                                       })
                                       $('#url_1').html(html);
@@ -214,8 +236,13 @@
                                       $.each(data, function(commentIndex, comment){
                                     	  
                                           html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+<<<<<<< HEAD
                                         		 +'" target="_blank"> <em class="" style="color:#ff4106;">【'+comment['catalog']
                                           		+'】'+comment['title']+'</em><span style="color:#ff4106;">'+comment['lastModifyTime']+'</span></a></li>'
+=======
+                                        		 +'" target="_blank"> <em class="" style="color:#395378;">【'+comment['catalog']
+                                          		+'】'+comment['title']+'</em><span style="color:#395378;">'+comment['lastModifyTime']+'</span></a></li>'
+>>>>>>> master
                                           		  
                                       })
                                       $('#url_2').html(html);
@@ -245,8 +272,13 @@
                                       $.each(data, function(commentIndex, comment){
                                     	  
                                           html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
+<<<<<<< HEAD
                                         		 +'" target="_blank"> <em class="" style="color:#ff4106;">【'+comment['catalog']
                                           		+'】'+comment['title']+'</em><span style="color:#ff4106;">'+comment['lastModifyTime']+'</span></a></li>'
+=======
+                                        		 +'" target="_blank"> <em class="" style="color:#395378;">【'+comment['catalog']
+                                          		+'】'+comment['title']+'</em><span style="color:#395378;">'+comment['lastModifyTime']+'</span></a></li>'
+>>>>>>> master
                                           		  
                                       })
                                       $('#url_3').html(html);

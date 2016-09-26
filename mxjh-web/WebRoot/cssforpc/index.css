@@ -44,13 +44,21 @@ body { min-width: 1260px; position: relative; margin: 0px auto; }
 .btn-video { position: absolute; width: 155px; height: 133px; left: 50%; margin-left: -641px; top: 653px; background-repeat: no-repeat; }
 .btn-video i { width: 40px; height: 40px; position: absolute; left: 50%; top: 50%; margin: -18px 0px 0px -6px; background-repeat: no-repeat; }
 .btn-video:hover i { animation-play-state: paused; }
+<<<<<<< HEAD
 .nie-download { width: 230px; height: 380px; background: transparent url("../img/xiaz.png") no-repeat scroll 0% 0%; position: absolute; left: 50%; margin-left: -24%;  z-index: 10; box-sizing: border-box; padding: 12px 0px 0px 94px; }
+=======
+.nie-download { width: 230px; height: 380px; background: transparent url("../img/xiaz.png") no-repeat scroll 0% 0%; position: absolute; left: 50%; margin-left: -25%;  z-index: 10; box-sizing: border-box; padding: 12px 0px 0px 94px; }
+>>>>>>> master
 .nie-download .NIE-qrcode { width: 91px; height: 91px; margin-top: 28px; float: left; }
 .nie-download .NIE-qrcode img {background:url("../img/ewm.png");display: block; width: 100%; margin-left:-26px;margin-top:16px;}
 .nie-download .buttons{margin-left:-40%; margin-top:160px;}
 .nie-download .buttons .NIE-button-ios {  background:url("../img/iosxz.png"); width: 171px; height: 60px; display: block; margin-bottom: 5px; position: relative; font-size: 0px; text-indent: -1e+12px; background-repeat: no-repeat; }
 
+<<<<<<< HEAD
 .nie-download .buttons .NIE-button-android { background:url("../img/azxz.png");width: 171px; height: 60px; display: block; position: relative; cursor: pointer; font-size: 0px; text-indent: -1e+12px; background-repeat: no-repeat; margin-top:-4px;}
+=======
+.nie-download .buttons .NIE-button-android { background:url("../img/anzxz.png");width: 171px; height: 60px; display: block; position: relative; cursor: pointer; font-size: 0px; text-indent: -1e+12px; background-repeat: no-repeat; margin-top:-4px;}
+>>>>>>> master
 
 .nie-download-com { right: -280px; margin-left: 0px; left: auto; position: fixed; top: 27%; display: none; }
 .code_show { width: 136px; height: 135px; position: absolute; z-index: 10; top: 438px; left: 50%; margin-left: -322px; display: none; background-repeat: no-repeat; }
@@ -79,10 +87,17 @@ body { min-width: 1260px; position: relative; margin: 0px auto; }
 .section-05 { background: rgb(235, 235, 235) url("../img/bg_05.jpg") no-repeat scroll center top;background-size:cover; }
 .section-05 h2 { background:url("../img/pg05_01.png") top center no-repeat;width: 221px; height: 503px; top: 1px; margin-left: -45%; background-repeat: no-repeat;z-index:100;background-size:100%; }
 .section-05 .desc { background:url("../img/pg05_02.png") top center no-repeat;width: 88px; height: 502px; top: 103px; margin-left: 35%; background-repeat: no-repeat; }
+<<<<<<< HEAD
 .section-05 .role-name-01 {background:url("../img/pg05_11.png") top center no-repeat; width: 145px; height: 33px; top: 652px; margin-left: -17%; background-repeat: no-repeat;z-index:100 ;background-size:100%;}
 .section-05 .role-name-02 { background:url("../img/pg05_14.png") top center no-repeat; width: 145px; height: 33px; top: 730px; margin-left: -44%; background-repeat: no-repeat;background-size:100%; }
 .section-05 .role-name-03 {background:url("../img/pg05_13.png") top center no-repeat;  width: 145px; height: 33px; top: 372px; margin-left: 9%; background-repeat: no-repeat;background-size:100%; }
 .section-05 .role-name-04 { background:url("../img/pg05_12.png") top center no-repeat; width: 145px; height: 33px; top: 730px; margin-left: 17%; background-repeat: no-repeat;background-size:100%; }
+=======
+.section-05 .role-name-01 {background:url("../img/pg05_11.png") top center no-repeat; width: 145px; height: 33px; top: 632px; margin-left: -17%; background-repeat: no-repeat;z-index:100 ;background-size:100%;}
+.section-05 .role-name-02 { background:url("../img/pg05_14.png") top center no-repeat; width: 145px; height: 33px; top: 710px; margin-left: -44%; background-repeat: no-repeat;background-size:100%; }
+.section-05 .role-name-03 {background:url("../img/pg05_13.png") top center no-repeat;  width: 145px; height: 33px; top: 342px; margin-left: 9%; background-repeat: no-repeat;background-size:100%; }
+.section-05 .role-name-04 { background:url("../img/pg05_12.png") top center no-repeat; width: 145px; height: 33px; top: 740px; margin-left: 17%; background-repeat: no-repeat;background-size:100%; }
+>>>>>>> master
 
 .section-05 .role-06 { width: 375px; height: 528px; top: 245px; margin-left: -24%; background: transparent url("../img/pg05_O1.png") no-repeat scroll 0% 0%; background-size:100%;}
 .section-05 .role-07 { width: 325px; height: 431px; top: 377px; margin-left: -50%; background: transparent url("../img/pg05_O2.png") no-repeat scroll 0% 0%; background-size:100%;}
@@ -186,7 +201,11 @@ body #NIE-topBar-include { position: fixed; width: 100%; top: 0px; left: 0px; z-
 .pop-gift .con .gift-box { width: 340px; height: auto; margin: 30px 30px 0px; }
 .pop-gift .con .gift-box .giftPhone { width: 320px; height: 25px; border-style:solid;border-color:#000000; margin: 20px auto 15px; display: block; padding: 15px 0px 15px 17px; color: rgb(195, 195, 195); font-size: 16px; background-repeat: no-repeat;margin-top:20px;float:left;}
 .pop-gift .con .gift-box .img-code-box {border:1px; width: 224px; height: 45px; border-style:solid;border-color:#000000; margin: 0px; display: block; overflow: hidden;}
+<<<<<<< HEAD
 .pop-gift .con .gift-box .img-code-box .code-num { color: rgb(195, 195, 195); font-size: 16px; width: 165px; height: 15px; padding: 15px 0px 15px 17px; border: 0px none; background-repeat: no-repeat;border:1px; }
+=======
+.pop-gift .con .gift-box .img-code-box .code-num { color: rgb(195, 195, 195); font-size: 16px; width: 165px; height: 20px; padding: 15px 0px 14px 14px; border: 0px none; background-repeat: no-repeat;border:1px; }
+>>>>>>> master
 .pop-gift .con .gift-box .img-code-box .img-code { width: 100px; height: 42px; margin-left: 8px; vertical-align: top; display: inline-block; margin-top: 1px; cursor: pointer; }
 .pop-gift .con .gift-box  img {float:right; display: block; width: 100px; height: 42px; margin-top:-42px;}
 .pop-gift .con .gift-box .btn-gift {background:url("../img/btn01.png"); width: 339px; height: 68px; display: block; margin: 14px 0px 0px; background-repeat: no-repeat; }
@@ -255,7 +274,11 @@ body #NIE-topBar-include { position: fixed; width: 100%; top: 0px; left: 0px; z-
 .btn-download { display: block; text-indent: -9999px; margin-top: 8px; }
 .btn-download:hover { opacity: 0.8; }
 .btn-download-ios { background:url("../img/iosxz.png") top center no-repeat; width: 171px; height: 61px; background-repeat: no-repeat; }
+<<<<<<< HEAD
 .btn-download-and {background:url("../img/azxz.png") top center no-repeat;  width: 173px; height: 61px; background-repeat: no-repeat; }
+=======
+.btn-download-and {background:url("../img/anzxz.png") top center no-repeat;  width: 173px; height: 61px; background-repeat: no-repeat; }
+>>>>>>> master
 .pop-download .gzh-wrap .gzh { background-repeat: no-repeat; }
 .btn-more {background:url("../img/more.png"); position: absolute; width: 26px; height: 26px; right: 10px; top: 27px; background-repeat: no-repeat; }
 .role, .section h2, .desc, .role-name, .title { opacity: 0; }

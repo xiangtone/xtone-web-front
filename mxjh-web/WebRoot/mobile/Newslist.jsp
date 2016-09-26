@@ -14,7 +14,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
     <meta content="telephone=no, email=no" name="format-detection">
+<<<<<<< HEAD
     <title>灵域仙魔</title>
+=======
+    <title>梦想江湖</title>
+>>>>>>> master
     <metaname="viewport" content="width=100%, initial-scale=0.9"/>
 	<link rel="stylesheet" type="text/css" href="jscss/newscss.css" media="all">
 	<link rel="stylesheet" href="mui/dist/css/mui.css">
@@ -115,7 +119,11 @@
                                   $.ajax({
                                     type: "post",
                                     
+<<<<<<< HEAD
                                       url: "/mxjh.xtonegame.com/Selnews?type=00&pagenum="+<%=pagenum%>+"&count=15",
+=======
+                                      url: "../Selnews?type=00&pagenum="+<%=pagenum%>+"&count=15",
+>>>>>>> master
                                       data: {type:1,count:15},
                                     		  //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
@@ -181,7 +189,11 @@
                     		   }else{ count = $("#ul1 li").length+0+0}
                                   $.ajax({
                                     type: "GET",
+<<<<<<< HEAD
                                      url: "/mxjh.xtonegame.com/Selnews?type=00&pagenum=1&count="+count,
+=======
+                                     url: "../Selnews?type=00&pagenum=1&count="+count,
+>>>>>>> master
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -209,7 +221,11 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "post",
+<<<<<<< HEAD
                                       url: "/mxjh.xtonegame.com/Selnews?type=01&pagenum="+<%=pagenum%>+"&count=15",
+=======
+                                      url: "../Selnews?type=01&pagenum="+<%=pagenum%>+"&count=15",
+>>>>>>> master
                                       data: {type:01,count:15},
                                     		  //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
@@ -267,7 +283,11 @@
                     		   }else{ count = $("#ul2 li").length+0+0;}
                                   $.ajax({
                                     type: "GET",
+<<<<<<< HEAD
                                      url: "/mxjh.xtonegame.com/Selnews?type=01&pagenum=1&count="+count,
+=======
+                                     url: "../Selnews?type=01&pagenum=1&count="+count,
+>>>>>>> master
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -294,7 +314,11 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
+<<<<<<< HEAD
                                       url: "/mxjh.xtonegame.com/Selnews?type=02&pagenum="+<%=pagenum%>+"&count=15",
+=======
+                                      url: "../Selnews?type=02&pagenum="+<%=pagenum%>+"&count=15",
+>>>>>>> master
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -350,7 +374,11 @@
                     		   }else{ count = $("#ul3 li").length+0+0;}
                                   $.ajax({
                                     type: "GET",
+<<<<<<< HEAD
                                      url: "/mxjh.xtonegame.com/Selnews?type=02&pagenum=1&count="+count,
+=======
+                                     url: "../Selnews?type=02&pagenum=1&count="+count,
+>>>>>>> master
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -377,7 +405,11 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
+<<<<<<< HEAD
                                       url: "/mxjh.xtonegame.com/Selnews?type=03&pagenum="+<%=pagenum%>+"&count=15",
+=======
+                                      url: "../Selnews?type=03&pagenum="+<%=pagenum%>+"&count=15",
+>>>>>>> master
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -435,7 +467,11 @@
                     		   }else{ count = $("#ul4 li").length+0+0;}
                                   $.ajax({
                                     type: "GET",
+<<<<<<< HEAD
                                      url: "/mxjh.xtonegame.com/Selnews?type=03&pagenum=1&count="+count,
+=======
+                                     url: "../Selnews?type=03&pagenum=1&count="+count,
+>>>>>>> master
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -461,7 +497,11 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
+<<<<<<< HEAD
                                       url: "/mxjh.xtonegame.com/Selnews?type=20&pagenum="+<%=pagenum%>+"&count=15",
+=======
+                                      url: "../Selnews?type=20&pagenum="+<%=pagenum%>+"&count=15",
+>>>>>>> master
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -521,7 +561,11 @@
                     		   }else{ count = $("#ul5 li").length+0+0;}
                                   $.ajax({
                                     type: "GET",
+<<<<<<< HEAD
                                      url: "/mxjh.xtonegame.com/Selnews?type=20&pagenum=1&count="+count,
+=======
+                                     url: "../Selnews?type=20&pagenum=1&count="+count,
+>>>>>>> master
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){

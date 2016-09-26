@@ -125,7 +125,7 @@
 			<id>product</id>
 			<properties>
 				<runtime.env>config\product</runtime.env>
-				<final.name>smzg.xtonegame.com</final.name>
+				<final.name>zy.xtonegame.com</final.name>
 			</properties>
 			<activation>
 				<activeByDefault>true</activeByDefault>
@@ -135,7 +135,7 @@
 			<id>test</id>
 			<properties>
 				<runtime.env>config\test</runtime.env>
-				<final.name>smzg.xtonegame.com-test</final.name>
+				<final.name>zy.xtonegame.com-test</final.name>
 			</properties>
 		</profile>
 		<profile>

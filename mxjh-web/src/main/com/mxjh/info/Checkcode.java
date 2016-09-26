@@ -46,8 +46,13 @@ public class Checkcode extends HttpServlet {
 		  String code = request.getParameter("code");
 		  String rand = (String)session.getAttribute("validateCode");
 		  String status;
+<<<<<<< HEAD
 		  System.out.println(code);
 		  System.out.println(rand);
+=======
+		  //System.out.println(code);
+		  //System.out.println(rand);
+>>>>>>> master
 		  if(code.equals(rand)){
 			  status="1";
 		  }else{

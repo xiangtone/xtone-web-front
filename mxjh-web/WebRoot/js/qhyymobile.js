@@ -362,7 +362,10 @@ function commitdl(){
 		//window.location.reload();
 		window.location.href=window.location.href+"?id="+10000*Math.random();;
 		$('#pop111').hide();
+<<<<<<< HEAD
 		
+=======
+>>>>>>> master
 		}
 	},function(data){
 		alert('格式错误');
