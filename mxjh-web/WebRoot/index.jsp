@@ -31,7 +31,7 @@
     <meta charset="UTF-8">
 <!--This is Git Project From LXF/lxf-gw-20160315-->
     <title>梦想江湖</title>
-	<meta name="from" content="git:LXF/lxf-gw-20160315">
+	<meta name="from" content="">
 	<meta name="author" content="">
 	<meta name="copyright" content="">
 	<meta name="editor" content="leleli">
@@ -411,7 +411,7 @@
                </style>
                     <i></i>
                 </div>
-                <a href="#1" class="btn-back"><i></i>返回首页</a>
+                <a href="index.jsp#1" class="btn-back"><i></i>返回首页</a>
                 <a href="javascript:void(0);" class="btn-nav-download Jdownload"><i></i>下载游戏</a>
                 <div class="public-box">
                     <img src="img/wxewm01.jpg" alt="" height="90" width="90">
@@ -536,7 +536,7 @@
         </div>
         <div class="gzh-wrap">
             <p class="sub-title sub-title-2">关注游戏微信公众号（<i>mxjhol</i>）赢独家好礼</p>
-            <div class="gzh"><img src="img/wxewm.png"></div>
+            <div class="gzh"><img src="img/wxewm01.png"></div>
         </div>
     </div>
 </div>
@@ -558,7 +558,7 @@
         </div>
         <div class="gzh-wrap">
             <p class="sub-title sub-title-2"><i>2</i>关注游戏微信公众号（lxfcq163），赢专属好礼。</p>
-            <div class="gzh"><img src="gzh_f0f5b4d.png" height="119" width="119"></div>
+            <div class="gzh"><img src="wxewm01.png" height="119" width="119"></div>
         </div>
     </div>
 </div>

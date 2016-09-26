@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Random;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -73,7 +74,14 @@ public class AddNumber extends HttpServlet {
           		ps = con.prepareStatement(sql);
           		ps.executeUpdate();
           		
-          		sql="insert into tbl_orders_users(id,invitephoneNum,addTime) values(\""+phone+"\",0,UNIX_TIMESTAMP()*1000)";
+          		
+          		
+          		 int code=(new   Random()).nextInt(9999);//   
+       		  
+       		     if(code<1000)code+=1000; 
+       			 //System.out.println(code);
+          		
+          		sql="insert into tbl_orders_users(id,codeNum,invitephoneNum,addTime) values(\""+phone+"\","+code+",0,UNIX_TIMESTAMP()*1000)";
           		//System.out.println(sql);
           		ps = con.prepareStatement(sql);
           		ps.executeUpdate();
