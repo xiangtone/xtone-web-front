@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-<!--This is Git Project From LXF/lxf-gw-20160315-->
-    <title>梦想江湖</title>
-	<meta name="from" content="git:LXF/lxf-gw-20160315">
-=======
 <%@page import="org.common.util.ConnectionService"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.ArrayList"%>
@@ -44,7 +32,6 @@
 <!--This is Git Project From LXF/lxf-gw-20160315-->
     <title>梦想江湖</title>
 	<meta name="from" content="">
->>>>>>> master
 	<meta name="author" content="">
 	<meta name="copyright" content="">
 	<meta name="editor" content="leleli">
@@ -57,10 +44,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="renderer" content="webkit">
-<<<<<<< HEAD
-=======
   
->>>>>>> master
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
@@ -68,11 +52,7 @@
 <link rel="stylesheet" type="text/css" href="cssforpc/index.css"/>
 <link rel="stylesheet" type="text/css" href="cssforpc/footer.css"/>
 <link rel="stylesheet" type="text/css" href="cssforpc/share.v5.css"/>
-<<<<<<< HEAD
-
-=======
 <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
->>>>>>> master
 <script type="text/javascript" charset="gbk" src="jsforpc/fullPage/jquery.fullPage.js"></script>
 <script type="text/javascript" charset="gbk" src="jsforpc/fullPage/jquery.fullPage.min.js"></script>
 
@@ -178,40 +158,24 @@
                 <ul id="0">
                     <li class="slide-item-01">
                         <a href="javascript:;" data-big="img/11_0001_2.png" data-index="0">
-<<<<<<< HEAD
-                            <img src="img/pg02_01.png" alt="img_01" height="237px" width="100%">
-=======
                             <img src="img/pg02_01.png" alt="img_01" height="237px" width="90%">
->>>>>>> master
                         </a>
                     </li>
                     <li class="slide-item-02">
                         <a href="javascript:;" data-big="img/11_0000_1.png" data-index="1">
-<<<<<<< HEAD
-                            <img src="img/pg02_02.png" alt="img_02" height="237px" width="100%">
-=======
                             <img src="img/pg02_02.png" alt="img_02" height="237px" width="90%">
->>>>>>> master
                         </a>
                     </li>
                 </ul>
                 <ul id="1" style="display: none;">
                     <li class="slide-item-01">
                         <a href="javascript:;" data-big="img/11_0003_4.png" data-index="2">
-<<<<<<< HEAD
-                            <img src="img/pg02_03.png" alt="img_03" height="237px" width="100%">
-=======
                             <img src="img/pg02_03.png" alt="img_03" height="237px" width="90%">
->>>>>>> master
                         </a>
                     </li>
                     <li class="slide-item-02">
                         <a href="javascript:;" data-big="img/11_0002_3.png" data-index="3">
-<<<<<<< HEAD
-                            <img src="img/pg02_04.png" alt="img_04" height="237px" width="100%">
-=======
                             <img src="img/pg02_04.png" alt="img_04" height="237px" width="90%">
->>>>>>> master
                         </a>
                     </li>
                 </ul>
@@ -221,11 +185,6 @@
             	 $("#pics #0").css("display","block");
             	 
             	 $(".arrow .next").click(function(){
-<<<<<<< HEAD
-            		 
-            		 
-=======
->>>>>>> master
             		 if(document.getElementById("0").style.display=="block"){
             			 $("#pics #0").css("display","none");
             			 $("#pics #1").css("display","block");         			 
@@ -452,11 +411,7 @@
                </style>
                     <i></i>
                 </div>
-<<<<<<< HEAD
-                <a href="#1" class="btn-back"><i></i>返回首页</a>
-=======
                 <a href="index.jsp#1" class="btn-back"><i></i>返回首页</a>
->>>>>>> master
                 <a href="javascript:void(0);" class="btn-nav-download Jdownload"><i></i>下载游戏</a>
                 <div class="public-box">
                     <img src="img/wxewm01.jpg" alt="" height="90" width="90">
@@ -480,11 +435,7 @@
     	
         <h4><img src="img/gift11.png" style="margin-top:50px;text-align:center;transform: rotate(180deg);">&nbsp领取首发豪华礼包&nbsp<img src="img/gift11.png" style="margin-top:0px;text-align:center"></h4>
         <div class="gift-box" style="">
-<<<<<<< HEAD
-            <input maxlength="11" onblur="if(this.value==''){this.value='输入手机号码';this.style.color = '#9f9f9f'};" onfocus="this.value=this.value=='输入手机号码'?'':this.value;this.style.color = '#000'" value="输入手机号码" id="giftPhone" class="giftPhone" type="text">
-=======
             <input maxlength="11" onblur="if(this.value==''){this.value='输入手机号码';this.style.color = '#9f9f9f'};" onfocus="this.value=this.value=='输入手机号码'?'':this.value;this.style.color = '#000'" value="输入手机号码" id="giftPhone" name="giftPhone" class="giftPhone" type="text">
->>>>>>> master
             <div class="img-code-box">
                 <input onblur="if(this.value==''){this.value='输入验证码';this.style.color = '#9f9f9f'};" onfocus="this.value=this.value=='输入验证码'?'':this.value;this.style.color = '#000'" value="输入验证码" id="code-num" class="code-num" type="text">
                
@@ -493,15 +444,8 @@
             <img id="randomecode1" onclick="this.src='image/random.png?'+new Date()" src="image/random.png" alt="点击刷新验证码"  class="code">
             </span>
             <a href="javascript:void(0)" id="btn-gift" class="btn-gift" style="color:#ffe5b3;font-size:40px;text-align:center;height:68px;" value="立即领取">立即领取</a>
-<<<<<<< HEAD
- 		
- 			
- 			<script type="text/javascript">
- 			
-=======
  			
  			<script type="text/javascript"> 			
->>>>>>> master
  			var getCode = document.getElementById('btn-gift');
  			var wait = 60;
  			function time(btn){
@@ -538,13 +482,6 @@
                                     		  document.getElementById("randomecode1").src='image/random.png?'+new Date();
                                               
                                     	  }else{
-<<<<<<< HEAD
-                                    		 $(".gift-box").css("display","none");
-                                       	     $(".gift_success").css("display","block");
-                                    		 time(getCode);
-                                    		 document.getElementById("randomecode1").src='image/random.png?'+new Date();
-                                    		                                      		 
-=======
                                     		  $.ajax({                                  			 
                                                       type: "GET",
                                                       url: "AddNumber?phone="+phone,                        
@@ -571,7 +508,6 @@
                                     		 time(getCode);
                                     		 document.getElementById("randomecode1").src='image/random.png?'+new Date();
                                     	 */	                                      		 
->>>>>>> master
                                    	  }
                                     	  
                                       }else{
@@ -592,16 +528,6 @@
  		
         </div>
 
-<<<<<<< HEAD
-        <div class="gift_success" id="gift_success">
-            <h5>恭喜少侠领取礼包成功！</h5>
-            <p class="gift-tit">使用说明：</p>
-            <p>安卓用户进入游戏主界面-右侧设置-礼包兑换，输入激活码即可通过系统邮件领取奖励。</p>
-        </div>
-        <div class="gzh-wrap">
-            <p class="sub-title sub-title-2">关注游戏微信公众号（<i>mxjhol</i>）赢独家好礼</p>
-            <div class="gzh"><img src="img/wxewm.png"></div>
-=======
         <div class="gift_success" id="gift_success" style="">
             <h5 style="margin-left:16px">&nbsp;&nbsp;&nbsp;&nbsp;恭喜少侠领取礼包成功！</h5>
             <p class="gift-tit">使用说明：</p>
@@ -611,7 +537,6 @@
         <div class="gzh-wrap">
             <p class="sub-title sub-title-2">关注游戏微信公众号（<i>mxjhol</i>）赢独家好礼</p>
             <div class="gzh"><img src="img/wxewm01.png"></div>
->>>>>>> master
         </div>
     </div>
 </div>
@@ -633,11 +558,7 @@
         </div>
         <div class="gzh-wrap">
             <p class="sub-title sub-title-2"><i>2</i>关注游戏微信公众号（lxfcq163），赢专属好礼。</p>
-<<<<<<< HEAD
-            <div class="gzh"><img src="gzh_f0f5b4d.png" height="119" width="119"></div>
-=======
             <div class="gzh"><img src="wxewm01.png" height="119" width="119"></div>
->>>>>>> master
         </div>
     </div>
 </div>

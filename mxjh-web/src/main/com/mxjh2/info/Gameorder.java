@@ -176,11 +176,7 @@ public class Gameorder extends HttpServlet {
 		    		}
 		        	try {
 		        		//发送短信
-<<<<<<< HEAD
-						Sentchit.sendTemplateSms(String.valueOf( order.getPhoneNum()), "ZD30010-0002", "@1@="+userCode);
-=======
 						Sentchit2.sendTemplateSms(String.valueOf( order.getPhoneNum()), "ZD30010-0004", "@1@="+userCode);
->>>>>>> master
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();

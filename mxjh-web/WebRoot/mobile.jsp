@@ -1240,11 +1240,7 @@ body {
 		</div>
 	</div>
 
-<<<<<<< HEAD
-	<div id="seniorbtn" class="box">
-=======
 	<div  class="box">
->>>>>>> master
 		<div class="box-1 float">
 			<img src="imgqhyy/bxgj.png">
 		</div>
@@ -1252,11 +1248,7 @@ body {
 			<img src="imgqhyy/gjbx.png">
 		</div>
 	</div>
-<<<<<<< HEAD
-	<div id="luxurybtn" class="box-h">
-=======
 	<div  class="box-h">
->>>>>>> master
 		<div class="box-1 float">
 			<img src="imgqhyy/bxhh.png">
 		</div>
@@ -1264,11 +1256,7 @@ body {
 			<img src="imgqhyy/hhbx.png">
 		</div>
 	</div>
-<<<<<<< HEAD
-	<div id="extremebtn" class="box-z">
-=======
 	<div  class="box-z">
->>>>>>> master
 		<div class="box-1a float">
 			<img src="imgqhyy/bxzz.png">
 		</div>

@@ -7,24 +7,15 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.Statement;
 
-<<<<<<< HEAD
-=======
 import org.common.util.ConnectionService;
 import org.json.*;
->>>>>>> master
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-<<<<<<< HEAD
-import org.common.util.ConnectionService;
-import org.json.JSONArray;
-import org.json.JSONObject;
-=======
 
->>>>>>> master
 
 /**
  * Servlet implementation class Selnews
@@ -105,11 +96,7 @@ public class Selnews extends HttpServlet {
 	        	   conn= ConnectionService.getInstance().getConnectionForLocal();
 	               stmt = conn.createStatement();
 	               String sqlsel="SELECT id,CASE catalog \n WHEN 'news' THEN '新闻' \n WHEN 'announce' THEN '公告' \n WHEN 'activity' THEN '活动'\n WHEN 'events' THEN '精彩活动'\n WHEN 'strategy' THEN '游戏玩法'\n WHEN 'play' THEN '游戏攻略'\n WHEN 'wallpaper' THEN '精彩壁纸'\n WHEN 'cutpic' THEN '游戏截图' \n END as catalog,\n content,\n subTitle, \n FROM_UNIXTIME(lastModifyTime/1000,'%m-%d') as lastModifyTime,title FROM tbl_cms_contents "+str_sql+" ORDER BY priority DESC, lastModifyTime DESC limit "+allcount+","+newscount;
-<<<<<<< HEAD
-	               System.out.println(sqlsel);
-=======
 	               //System.out.println(sqlsel);
->>>>>>> master
 	               rs = stmt.executeQuery(sqlsel);
 	               ResultSetMetaData metaData = rs.getMetaData();               
 	               int columnCount=metaData.getColumnCount();

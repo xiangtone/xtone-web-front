@@ -40,11 +40,7 @@ var index = Math.floor(Math.random()*5);
  var href = window.location.href
   var ticket = document.getElementById('ticket').innerText;  
   var timestamp = new Date().getTime();
-<<<<<<< HEAD
-  var str = 'jsapi_ticket='+ticket+'&noncestr=Wm3WZYTPz0wzccnW&timestamp='+timestamp+'&url=http://lyxm.xtonegame.com/share.jsp';
-=======
   var str = 'jsapi_ticket='+ticket+'&noncestr=Wm3WZYTPz0wzccnW&timestamp='+timestamp+'&url=http://mxjh.xtonegame.com/share.jsp';
->>>>>>> master
   var signature = hex_sha1(str);
 
 
@@ -60,13 +56,8 @@ wx.config({
 wx.ready(function(){
 	wx.onMenuShareTimeline({
 	    title: strAry[index], // 分享标题
-<<<<<<< HEAD
-	    link: 'http://lyxm.xtonegame.com/mobile.jsp', // 分享链接
-	    imgUrl: 'http://lyxm.xtonegame.com/images/300x300.png', // 分享图标
-=======
 	    link: 'http://mxjh.xtonegame.com/mobile.jsp', // 分享链接
 	    imgUrl: 'http://mxjh.xtonegame.com/images/300x300.png', // 分享图标
->>>>>>> master
 	    success: function () { 
 	        // 用户确认分享后执行的回调函数
 	    },
@@ -79,15 +70,9 @@ wx.ready(function(){
 
 	wx.onMenuShareAppMessage({
 	    title: '梦想江湖', // 分享标题
-<<<<<<< HEAD
-	    link: 'http://lyxm.xtonegame.com/mobile.jsp', // 分享链接
-	    desc: strAry[index], 
-	    imgUrl: 'http://lyxm.xtonegame.com/images/300x300.png', // 分享图标
-=======
 	    link: 'http://mxjh.xtonegame.com/mobile.jsp', // 分享链接
 	    desc: strAry[index], 
 	    imgUrl: 'http://mxjh.xtonegame.com/images/300x300.png', // 分享图标
->>>>>>> master
 	    type: '', // 分享类型,music、video或link，不填默认为link
 	    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
 	    success: function () { 
@@ -101,13 +86,8 @@ wx.ready(function(){
 	wx.onMenuShareQQ({
 	    title: '梦想江湖', // 分享标题
 	    desc:strAry[index], // 分享描述
-<<<<<<< HEAD
-	    link: 'http://lyxm.xtonegame.com/mobile.jsp', // 分享链接
-	    imgUrl: 'http://lyxm.xtonegame.com/images/300x300.png', // 分享图标
-=======
 	    link: 'http://mxjh.xtonegame.com/mobile.jsp', // 分享链接
 	    imgUrl: 'http://mxjh.xtonegame.com/images/300x300.png', // 分享图标
->>>>>>> master
 	    success: function () { 
 	       // 用户确认分享后执行的回调函数
 	    },
@@ -120,13 +100,8 @@ wx.ready(function(){
 	wx.onMenuShareQZone({
 	    title: '梦想江湖', // 分享标题
 	    desc: strAry[index], // 分享描述
-<<<<<<< HEAD
-	    link: 'http://lyxm.xtonegame.com/mobile.jsp', // 分享链接
-	    imgUrl: 'http://lyxm.xtonegame.com/images/300x300.png', // 分享图标
-=======
 	    link: 'http://mxjh.xtonegame.com/mobile.jsp', // 分享链接
 	    imgUrl: 'http://mxjh.xtonegame.com/images/300x300.png', // 分享图标
->>>>>>> master
 	    success: function () { 
 	       // 用户确认分享后执行的回调函数
 	    },

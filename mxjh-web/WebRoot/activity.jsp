@@ -10,11 +10,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<<<<<<< HEAD
-        <title>灵域仙魔
-=======
         <title>梦想江湖
->>>>>>> master
         </title>
 		<link rel="shortcut icon" href="" type="image/x-icon"><meta name="Keywords" content="">
 		<meta name="description" content=""><meta name="applicable-device" content="pc,mobile"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=EDGE,chrome=1">
@@ -78,13 +74,8 @@ else{
 <div class="movBtn"><a class="popcl" href="http://sdo-shabake.com/video"></a></div>
                 </div>
                 <div class="conNav">
-<<<<<<< HEAD
-                    <span>新闻公告</span>
-                    <em><a href="index.jsp">官网首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a>新闻公告</a></em>
-=======
                      <span style="color:#ffdb94">新闻公告</span>
                     <em>您的位置：<a href="index.jsp">官网首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a>新闻公告</a></em>
->>>>>>> master
                 </div>
                 <div class="nW_main">
                     <div class="conMain">
@@ -118,13 +109,8 @@ else{
                                                 $.each(data, function(commentIndex, comment){
                                               	  
                                                     html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
-<<<<<<< HEAD
-                                                  		 +'" target="_blank"> <em class="" style="color:#ff4106;">【'+comment['catalog']
-                                                    		+'】'+comment['title']+'</em><span style="color:#ff4106;">'+comment['lastModifyTime']+'</span></a></li>'
-=======
                                                   		 +'" target="_blank"> <em class="" style="color:#395378;">【'+comment['catalog']
                                                     		+'】'+comment['title']+'</em><span style="color:#395378;">'+comment['lastModifyTime']+'</span></a></li>'
->>>>>>> master
                                                     		  
                                                 })
                                   $('#news_2 ul').html(html);
@@ -192,11 +178,7 @@ else{
     <div class="fr_ewm">
     <span><img src="img/wxewm01.png" height="98px" width="98px">
     </span></div>   
-<<<<<<< HEAD
-    <a href="http://cdnsrc.xtonegame.com/download/lyxm/lyxm_xt.apk">
-=======
     <a href="javascript:alert('暂未开通，敬请期待')">
->>>>>>> master
     <div class="fr_btn1" style="cursor:pinter;"></div></a>
     <a href="javascript:alert('暂未开通，敬请期待')">
     <div class="fr_btn2" style=""></div></a>

@@ -111,16 +111,10 @@ i,em{font-style:normal;}
 .news{background:rgb(32,48,73);width:730px;height:235px; float:left;}
 .newsTit{width:730px;height:56px; float:left;}
 .newsTit ul li{width:66px;height:56px; line-height:56px; float:left; font-size:18px;text-align:center;}
-<<<<<<< HEAD
-.newsTit ul li a{width:66px;height:56px;float:left; text-decoration:none; color:#d4a777;}
-.newsMore{width:66px;height:56px; float:right;background:url(../images/moreBtn.png) no-repeat right 20px;}
-.newsMore a{width:66px;height:56px; line-height:56px; float:right; font-size:18px;color:#b28b63; text-align:left;}
-=======
 .newsTit ul li a{width:66px;height:56px;float:left; text-decoration:none; color:#FFFFFF;}
 .newsMore{width:66px;height:56px; float:right;background:url() no-repeat right 20px;}
 .newsMore a{width:66px;height:56px; line-height:56px; float:right; font-size:18px;color:#FFFFFF; text-align:left;}
 .newsMore a:hover{color:#f4ca79}
->>>>>>> master
 .news_xian{width:730px;height:3px; float:left; border-bottom:1px #6c4e36 solid; position:relative;}
 .red{width:70px;height:3px; position:absolute;left:0;top:1px; background-color:#ff4106; transition:all 0.2s ease-in;}
 .newsList{width:730px;float:left; display:none;}
@@ -200,11 +194,7 @@ i,em{font-style:normal;}
 
 
 .ch_xian{width:210px;height:1px; float:left; background-color:#5c2e1e;border-bottom:1px #170b07 solid;}
-<<<<<<< HEAD
-.ch_bm{width:208px;height:70px; line-height:22px; padding-top:3px;margin:20px 20px; float:left; border:0px #51281b solid; text-align:center; font-size:12px; color:#b28b63;}
-=======
 .ch_bm{width:208px;height:70px; line-height:22px; padding-top:3px;margin:20px 20px; margin-top:10px;float:left; border:0px #51281b solid; text-align:center; font-size:22px; color:#b28b63;}
->>>>>>> master
 .ch_bm span{color:#ff4106;} 
 
 .con3{width:990px;height:288px; float:left;}
@@ -298,21 +288,13 @@ i,em{font-style:normal;}
 .nWrapper{width:1280px;height:auto;margin:0 auto;background:url() center top no-repeat;margin-top:-93px}
 .nW_top{width:990px;height:455px; margin:0 auto; position:relative;}
 .conNav{width:875px;height:75px; float:left; margin-top:20px;margin-left:160px;background:url(../img/newslist.png) center top no-repeat;}
-<<<<<<< HEAD
-.conNav span{min-width:40px; line-height:79px; float:left;margin-left:20px; font-size:26px; color:#ffffff;}
-=======
 .conNav span{min-width:40px;width:100%; line-height:49px; float:left;margin-left:20px; font-size:26px; color:#ffffff;}
->>>>>>> master
 .conNav span#btn1{min-width:40px;width:81px; line-height:79px; float:left;margin-left:20px; font-size:26px; color:#ffffff;background:url(../images/conbg.jpg) center top no-repeat;}
 
 .conNav span#btn2{min-width:40px;width:81px; line-height:79px; float:left;margin-left:0px; font-size:26px; color:#ffffff;background:url(../images/concut.jpg) center top no-repeat;}
 .conNav span#btn1:hover{background:url(../images/conbgh.jpg) center top no-repeat;}
 .conNav span#btn2:hover{background:url(../images/concuth.jpg) center top no-repeat;}
-<<<<<<< HEAD
-.conNav em{min-width:40px; line-height:79px; float:right; font-size:16px; color:#ffffff;margin-right:20px; }
-=======
 .conNav em{min-width:40px; line-height:29px; float:left; font-size:16px; color:#ffffff;margin-left:25px; }
->>>>>>> master
 .conNav em a{color:#ffffff;}
 .conNav em a:hover{ text-decoration:underline;color:#d4a777;}
 
@@ -341,21 +323,6 @@ i,em{font-style:normal;}
 .fr{width:275px;height:640px; position:absolute; left:50%; margin-left:307px; top:0; z-index:9;}
 .fr_ewm{width:105px;height:105px; float:left;background:url() center top no-repeat;margin:-18px 80px;}
 .fr_ewm span{width:105px;height:105px; float:left; margin:68px 0 0 23px;}
-<<<<<<< HEAD
-.fr_btn1{width:146px;height:59px; float:left; margin:110px 75px;background:url(../img/azxz.png) center top no-repeat;}
-
-
-.fr_btn1 a{width:146px;height:59px; float:left;background:url(../img/anxz.png) center top no-repeat;}
-
-
-
-.fr_btn2{width:146px;height:59px; float:left;margin:-105px 75px;background:url(../img/iosxz.png) center top no-repeat;}
-.fr_btn2:hover{background:url(../img/iosxz.png) center top no-repeat;}
-
-
-.fr_btn2 a{width:146px;height:59px;float:left;background:url(../img/iosxz.png) center top no-repeat;}
-.fr_btn2 a:hover{background:url(../img/iosxz.png) center top no-repeat;}
-=======
 .fr_btn1{width:146px;height:59px; float:left; margin:100px 75px;background:url(../img/iosxz.png) center top no-repeat;}
 
 
@@ -368,7 +335,6 @@ i,em{font-style:normal;}
 
 
 .fr_btn2 a{width:146px;height:59px;float:left;background:url(../img/anzxz.png) center top no-repeat;}
->>>>>>> master
 
 
 

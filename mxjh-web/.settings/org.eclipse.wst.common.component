@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-<<<<<<< HEAD
-	<wb-module deploy-name="mxjh.xtonegame.com">
-=======
 	<wb-module deploy-name="mxjh.vanggame.com">
->>>>>>> master
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/WebRoot" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
-<<<<<<< HEAD
         <dependent-module archiveName="xtone-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/xtone-common/xtone-common">
             <dependency-type>uses</dependency-type>
         </dependent-module>
 		<property name="java-output-path" value="/lyxm-web/target/classes"/>
-        <property name="context-root" value="mxjh.xtonegame.com"/>
-=======
-        <dependent-module archiveName="xtone-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/xtone-java-common/xtone-java-common">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-		<property name="java-output-path" value="/lyxm-web/target/classes"/>
         <property name="context-root" value="mxjh.vanggame.com"/>
->>>>>>> master
 	</wb-module>
 </project-modules>
