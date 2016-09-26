@@ -1269,8 +1269,7 @@ body {
 			<strong class="font-a">礼包领取说明：</strong>
 		</div>
 		<div class="disb-2 float">
-			<font class="font-a">1、满足宝箱邀请好友数量要求，即可解锁领取；</br>
-				2、礼包在封测公测期间均可使用，兑换限1次，请关注官方信息及时注册领取哦。
+			<font class="font-a">进入游戏主页面→活动按钮→兑换按钮→粘贴礼包码，即可领取奖励。
 			</font>
 		</div>
 
