@@ -339,7 +339,7 @@ i,em{font-style:normal;}
 
 
 
-.fr_goTop{width:35px;height:100px; float:left; margin-top:13px;background:url(../images/goTop.png) center top no-repeat;margin-left:17px;}
+.fr_goTop{width:35px;height:100px; float:left; margin-top:13px;background:url() center top no-repeat;margin-left:17px;}
 .fr_goTop a{width:35px;height:100px; float:left;}
 
 /*@media (min-width: 0px) and (max-width: 1200px){

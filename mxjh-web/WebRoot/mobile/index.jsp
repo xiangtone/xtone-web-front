@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 	<meta content="telephone=no, email=no" name="format-detection">
-    <title>灵域仙魔</title>
+    <title>梦想江湖</title>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -38,7 +38,6 @@
     <!--顶栏 end-->
     <!--头图-->
    <!--  <section class="head-pic">
-        <img src="images/top.png" />
     </section> -->
     <!--头图 end-->
 </header>
@@ -47,7 +46,7 @@
 		<!--top-->
 		<section class="top">
 			<div class="download-btn">
-				<a data-sb-indepth="true" href="http://cdnsrc.xtonegame.com/download/lyxm/lyxm_xt.apk">安卓下载</a>
+				<a data-sb-indepth="true" href="javascript:alert('暂未开通，敬请期待')">安卓下载</a>
 				<a href="javascript:alert('暂未开通，敬请期待')">IOS下载</a>
 			</div>
 
@@ -60,7 +59,7 @@
 	
 		<!--最新活动-->
 			<img style="width:100%;height:60px;" src="images/zxhd.png" />
-			<div id="slider1" class="mui-slider" style="width:80%;height:260px;align:center;margin-left:10%;margin-top:50px;">
+			<div id="slider1" class="mui-slider" style="width:90%;height:270px;align:center;margin-left:5%;margin-top:40px;">
 			<div class="mui-slider-group mui-slider-loop">
 				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
 				<div class="mui-slider-item mui-slider-item-duplicate">
@@ -112,7 +111,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url:"/mxjh.xtonegame.com/Selnews?type=00&count=4",
+                                      url:"../Selnews?type=00&count=4",
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -139,7 +138,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                    url: "/mxjh.xtonegame.com/Selnews?type=01&count=4",
+                                    url: "../Selnews?type=01&count=4",
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -166,7 +165,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                    url: "/mxjh.xtonegame.com/Selnews?type=02&count=4",
+                                    url: "../Selnews?type=02&count=4",
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -193,7 +192,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                    url: "/mxjh.xtonegame.com/Selnews?type=03&count=4",
+                                    url: "../Selnews?type=03&count=4",
                                     //  data: {id:$("#id").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -301,8 +300,8 @@
 <img alt="二维码" src="images/ewm.png" style="margin-top:250px;"/>
 </div>
 		<!-- footer -->
-<footer style="height:260px">
-		<img src="images/qqinfo.png">
+<footer style="height:20px">
+		<!-- <img src="images/qqinfo.png"> -->
 		<img src="images/companyinfo.png">
 
 </footer>
@@ -322,7 +321,7 @@
 	<script src="jscss/zepto.min.js"></script>
 	<script src="jscss/touch.js"></script>
 	<script src="jscss/fx.js"></script>
-	<script src="jscss/widget.1.0.2.js"></script>
+
 	<script src="jscss/carousel.1.0.3.js"></script>
 	<script src="jscss/scale.js"></script>
 	<script src="jscss/base.js"></script>

@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.common.util.ConnectionService;
 
+import com.mxjh2.info.Sentchit;
+
 /**
  * Servlet implementation class AddNumber
  */
@@ -37,7 +39,7 @@ public class AddNumber extends HttpServlet {
 	    response.setContentType("application/json;charset=UTF-8");  
 		int data;
 		String phone=request.getParameter("phone");
-		System.out.print(phone);
+		//System.out.print(phone);
         Connection con = null;
       	PreparedStatement ps = null;
       	ResultSet rs = null;
@@ -47,7 +49,7 @@ public class AddNumber extends HttpServlet {
       	try{
       		con = ConnectionService.getInstance().getConnectionForLocal();   		
       		String sql = "SELECT COUNT(1) rowCount FROM tbl_exchange_codes WHERE phone = \""+phone+"\"";
-      		System.out.println(sql);
+      		//System.out.println(sql);
       		ps = con.prepareStatement(sql);
       		rs = ps.executeQuery();
       		while(rs.next()){
@@ -66,12 +68,21 @@ public class AddNumber extends HttpServlet {
           		}
           		sql="update tbl_exchange_codes set phone=\""+phone+"\", addtime= UNIX_TIMESTAMP()*1000 where id= \""+idString+"\"";
       			
+          		
           		//System.out.println(sql);
           		ps = con.prepareStatement(sql);
           		ps.executeUpdate();
+          		
+          		sql="insert into tbl_orders_users(id,invitephoneNum,addTime) values(\""+phone+"\",0,UNIX_TIMESTAMP()*1000)";
+          		//System.out.println(sql);
+          		ps = con.prepareStatement(sql);
+          		ps.executeUpdate();
+          		
+          		Sentchit.sendTemplateSms(String.valueOf(phone), "ZD30010-0002", "@1@="+idString);
+          		//System.out.println(String.valueOf(phone));
       			data=2;
       	 		}
-      		System.out.println(data);
+      		//System.out.println(data);
       		response.getWriter().write(String.valueOf(data));  
       		      		
       		

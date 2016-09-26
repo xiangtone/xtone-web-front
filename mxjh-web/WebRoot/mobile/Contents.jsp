@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-   <title>灵域仙魔</title>
+   <title>梦想江湖</title>
 
 
 
@@ -75,7 +75,7 @@
                                 $(document).ready(function(){
                                   $.ajax({
                                     type: "GET",
-                                      url: "/mxjh.xtonegame.com/content?id=<%=contentId %>",
+                                      url: "../content?id=<%=contentId %>",
                                       // data: {id:$("#id").val(),content:$("#content").val(),catalog:$("#catalog").val(),title:$("#title").val(),lastModifyTime:$("#lastModifyTime").val()},
                                       dataType: "json",
                                       success: function(data){
@@ -88,8 +88,8 @@
                                                       		' <span class="artDate">发布日期:'+comment['lastModifyTime']+'</span>'+
                                                       		'<div class="artText">'+comment['content']+'</div>'+
                                                       		'<p></p>'+
-                                                      		'<p><span class="qun">&nbsp&nbsp&nbsp&nbsp官方Q群: &nbsp495265372&nbsp</span></p>'+  
-                                                      		'<p><span class="qun">&nbsp&nbsp&nbsp&nbsp游戏客服: 3232698308</span></p>'+  
+                                                      		'<p><span class="qun">&nbsp&nbsp&nbsp&nbsp官方Q群: &nbsp;476114315&nbsp;</span></p>'+  
+                                                      		'<p><span class="qun">&nbsp&nbsp&nbsp&nbsp游戏客服: 3421893764</span></p>'+  
                                                       	    '<div></div>'
                                                       	
                                                       	

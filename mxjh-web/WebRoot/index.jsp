@@ -12,6 +12,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+	  <script type="text/javascript">
+    function browserRedirect() {
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+        if ((bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){
+            window.location.href="mobile/index.jsp";
+        }
+    }
+    browserRedirect();
+	</script>
+
+
     <meta charset="UTF-8">
 <!--This is Git Project From LXF/lxf-gw-20160315-->
     <title>梦想江湖</title>
@@ -28,6 +47,9 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="renderer" content="webkit">
+   
+    
+    
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
@@ -102,8 +124,8 @@
         <div id="nie-download" class="nie-download" data-download="lxf|gw">
             <div class="NIE-qrcode"><img src="img/wxewm01.png"></div>
              <div class="buttons">
-                <a href="http://adl.netease.com/d/g/lxf/c/gw?type=ios" class="link-apple NIE-button-ios" target="_blank" style="width:146px;height:60px;background:url(img/iosxz.png);">App Store下载</a>
-                <a href="http://adl.netease.com/d/g/lxf/c/gw?type=android" class="link-android NIE-button-android" target="_blank">安卓版下载</a>
+                <a href="" class="link-apple NIE-button-ios" target="_blank" style="width:146px;height:60px;background:url(img/iosxz.png);">App Store下载</a>
+                <a href="" class="link-android NIE-button-android" target="_blank">安卓版下载</a>
              </div>
         </div>
         <a href="javascript:;" class="qrcode_wx_box"></a>
@@ -352,7 +374,7 @@
 </ul>
 <!--stamp:c04759ab-7694-4ec0-892a-1cf898dcbe81,tplId:14829,pageId:18309,tplName:16v1PC官网首页.新闻模块-->
 
-            <a href="News.jsp" target="_blank" class="btn-more"></a>
+            <a href="Newsnjp" target="_blank" class="btn-more"></a>
             <i></i>
         </div>
         <div class="nav-item nav-games-box clearfix">
@@ -509,10 +531,10 @@
  		
         </div>
 
-        <div class="gift_success" id="gift_success">
-            <h5>恭喜少侠领取礼包成功！</h5>
+        <div class="gift_success" id="gift_success" style="">
+            <h5 style="margin-left:16px">&nbsp;&nbsp;&nbsp;&nbsp;恭喜少侠领取礼包成功！</h5>
             <p class="gift-tit">使用说明：</p>
-            <p>安卓用户进入游戏主界面-右侧设置-礼包兑换，输入激活码即可通过系统邮件领取奖励。</p>
+            <p>iOS与安卓玩家，进入游戏主页面→活动按钮→兑换按钮→输入短信中的礼包码，即可领取奖励。</p>
         </div>
         <div class="gzh-wrap">
             <p class="sub-title sub-title-2">关注游戏微信公众号（<i>mxjhol</i>）赢独家好礼</p>
