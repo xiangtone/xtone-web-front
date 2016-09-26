@@ -531,7 +531,8 @@
         <div class="gift_success" id="gift_success" style="">
             <h5 style="margin-left:16px">&nbsp;&nbsp;&nbsp;&nbsp;恭喜少侠领取礼包成功！</h5>
             <p class="gift-tit">使用说明：</p>
-            <p>iOS与安卓玩家，进入游戏主页面→活动按钮→兑换按钮→输入短信中的礼包码，即可领取奖励。<font color="red">备注：礼包码短信将在10分钟内发送至手机，敬请等待。</font></p>
+            <p>iOS与安卓玩家，进入游戏主页面→活动按钮→兑换按钮→输入短信中的礼包码，即可领取奖励。
+            <font color="" size="2.5px"><br/><br/>备注：礼包码短信将在10分钟内发送至手机，敬请等待。</font></p>
             
         </div>
         <div class="gzh-wrap">
