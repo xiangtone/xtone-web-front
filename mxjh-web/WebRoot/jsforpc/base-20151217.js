@@ -3,8 +3,8 @@
 $(function () {
         $(".newsTit ul li").each(function (i) {
             $(this).mouseover(function () {
-				$(".newsTit ul li a").css({"color":"#b28b63"});
-				$(".newsTit ul li a").eq(i).css({"color":"#ff4106"});							
+				$(".newsTit ul li a").css({"color":"#FFFFFF"});
+				$(".newsTit ul li a").eq(i).css({"color":"#f4ca79"});							
                 $(".newsList").hide();
                 $(".newsList").eq(i).show();				
 				$(".red").css("left",66 * i);				

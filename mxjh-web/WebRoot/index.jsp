@@ -162,24 +162,24 @@
                 <ul id="0">
                     <li class="slide-item-01">
                         <a href="javascript:;" data-big="img/11_0001_2.png" data-index="0">
-                            <img src="img/pg02_01.png" alt="img_01" height="237px" width="100%">
+                            <img src="img/pg02_01.png" alt="img_01" height="237px" width="90%">
                         </a>
                     </li>
                     <li class="slide-item-02">
                         <a href="javascript:;" data-big="img/11_0000_1.png" data-index="1">
-                            <img src="img/pg02_02.png" alt="img_02" height="237px" width="100%">
+                            <img src="img/pg02_02.png" alt="img_02" height="237px" width="90%">
                         </a>
                     </li>
                 </ul>
                 <ul id="1" style="display: none;">
                     <li class="slide-item-01">
                         <a href="javascript:;" data-big="img/11_0003_4.png" data-index="2">
-                            <img src="img/pg02_03.png" alt="img_03" height="237px" width="100%">
+                            <img src="img/pg02_03.png" alt="img_03" height="237px" width="90%">
                         </a>
                     </li>
                     <li class="slide-item-02">
                         <a href="javascript:;" data-big="img/11_0002_3.png" data-index="3">
-                            <img src="img/pg02_04.png" alt="img_04" height="237px" width="100%">
+                            <img src="img/pg02_04.png" alt="img_04" height="237px" width="90%">
                         </a>
                     </li>
                 </ul>

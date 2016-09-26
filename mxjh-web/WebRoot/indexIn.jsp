@@ -123,7 +123,7 @@
                 	<!-- 新闻类别按钮 开始-->
                         <div class="newsTit">
                             <ul>
-                                <li><a style="color:#ff4106;" href="News.jsp">综合</a></li>
+                                <li><a style="color:#f4ca79;" href="News.jsp">综合</a></li>
                                 <li><a href="newsa.jsp">新闻</a></li>
                                 <li><a href="activity.jsp">活动</a></li>
                                 <li><a href="announce.jsp">公告</a></li>
@@ -134,7 +134,7 @@
                         <div class="news_xian">
                             <div class="red"></div>
                         </div>
-                        <!-- 新闻类别按钮 结束-->
+                        <!-- javascript:alert('暂未开通，敬请期待')类别按钮 结束-->
                         <!-- 新闻列表 开始-->
     					<div style="display:block;" class="newsList">
              <ul id=url_0>
@@ -153,8 +153,8 @@
                                       $.each(data, function(commentIndex, comment){
                                    
                                           html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
-                                        		 +'" target="_blank"> <em class="" style="color:#ff4106;">【'+comment['catalog']
-                                          		+'】'+comment['title']+'</em><span style="color:#ff4106;">'+comment['lastModifyTime']+'</span></a></li>'
+                                        		 +'" target="_blank"> <em class="" style="color:#395378;">【'+comment['catalog']
+                                          		+'】'+comment['title']+'</em><span style="color:#395378;">'+comment['lastModifyTime']+'</span></a></li>'
                                           		  
                                       })
                                       $('#url_0').html(html);
@@ -182,8 +182,8 @@
                                       $.each(data, function(commentIndex, comment){
                                     	  
                                           html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
-                                        		 +'" target="_blank"> <em class="" style="color:#ff4106;">【'+comment['catalog']
-                                          		+'】'+comment['title']+'</em><span style="color:#ff4106;">'+comment['lastModifyTime']+'</span></a></li>'
+                                        		 +'" target="_blank"> <em class="" style="color:#395378;">【'+comment['catalog']
+                                          		+'】'+comment['title']+'</em><span style="color:#395378;">'+comment['lastModifyTime']+'</span></a></li>'
                                           		  
                                       })
                                       $('#url_1').html(html);
@@ -214,8 +214,8 @@
                                       $.each(data, function(commentIndex, comment){
                                     	  
                                           html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
-                                        		 +'" target="_blank"> <em class="" style="color:#ff4106;">【'+comment['catalog']
-                                          		+'】'+comment['title']+'</em><span style="color:#ff4106;">'+comment['lastModifyTime']+'</span></a></li>'
+                                        		 +'" target="_blank"> <em class="" style="color:#395378;">【'+comment['catalog']
+                                          		+'】'+comment['title']+'</em><span style="color:#395378;">'+comment['lastModifyTime']+'</span></a></li>'
                                           		  
                                       })
                                       $('#url_2').html(html);
@@ -245,8 +245,8 @@
                                       $.each(data, function(commentIndex, comment){
                                     	  
                                           html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
-                                        		 +'" target="_blank"> <em class="" style="color:#ff4106;">【'+comment['catalog']
-                                          		+'】'+comment['title']+'</em><span style="color:#ff4106;">'+comment['lastModifyTime']+'</span></a></li>'
+                                        		 +'" target="_blank"> <em class="" style="color:#395378;">【'+comment['catalog']
+                                          		+'】'+comment['title']+'</em><span style="color:#395378;">'+comment['lastModifyTime']+'</span></a></li>'
                                           		  
                                       })
                                       $('#url_3').html(html);

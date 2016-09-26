@@ -75,9 +75,8 @@ else{
 
                 </div>
                 <div class="conNav">
-                    <span id="btn1">&nbsp</span>
-                      <a href="Cutpic.jsp"> <span id="btn2">&nbsp</span></a>
-                    <em><a href="index.jsp">官网首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a>精美壁纸</a></em>
+                      <span style="color:#ffdb94">精美壁纸</span>
+                       <em>您的位置：<a href="index.jsp">官网首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a>精美壁纸</a></em>
                 </div>
                 <div class="nW_main">
                     <div class="conMain">
@@ -177,7 +176,7 @@ else{
                     </div>
 
                     <div style="position: absolute; top: 0px; margin-left: 307px;" class="fr">
-    <div class="fr_ewm"><span></span></div>    <a href="http://cdnsrc.xtonegame.com/download/lyxm/lyxm_xt.apk">
+    <div class="fr_ewm"><span></span></div>    <a href="javascript:alert('暂未开通，敬请期待')">
     <div class="fr_btn1" style="cursor:pinter;"></div></a>
     <a href="javascript:alert('暂未开通，敬请期待')">
     <div class="fr_btn2" style=""></div></a>

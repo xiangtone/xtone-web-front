@@ -11,7 +11,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>灵域仙魔
+        <title>梦想江湖
         </title>
 		<link rel="shortcut icon" href="" type="image/x-icon"><meta name="Keywords" content="沙巴克传奇,沙巴克,传奇,沙巴克传奇官网,新游,盛大,正版传奇,角色扮演,RPG手游,传奇手机版,传奇手游,热血传奇手游,屠龙刀,1.76,传奇手游攻略,热血传奇"><meta name="description" content="《沙巴克传奇》是由盛大网络最新力推的正版传奇IP手机游戏,游戏不仅继承了传奇游戏的核心玩法,延续了传奇类游戏的经典设定,更是支持手机千人同屏的攻城战.无论是精致细腻的地图场景,还是眩人双目的技能都会带给玩家不一样的感受.《沙巴克传奇》将带你真正地重拾兄弟情义,点燃激情,让我们再战沙巴克,我就是盛大传奇!"><meta name="applicable-device" content="pc,mobile"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=EDGE,chrome=1">
          <link type="text/css" rel="stylesheet" href="cssforpc/201512122.css">
@@ -74,8 +74,8 @@ else{
 <div class="movBtn"><a class="popcl" href="http://sdo-shabake.com/video"></a></div>
                 </div>
                 <div class="conNav">
-                    <span>新闻公告</span>
-                    <em><a href="index.jsp">官网首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a>新闻公告</a></em>
+                     <span style="color:#ffdb94">新闻公告</span>
+                    <em>您的位置：<a href="index.jsp">官网首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a>新闻公告</a></em>
                 </div>
                 <div class="nW_main">
                     <div class="conMain">
@@ -110,8 +110,8 @@ else{
                                                   $.each(data, function(commentIndex, comment){
                                                 	  
                                                       html+='<li><a href="Contents.jsp?type='+comment['catalog']+'&id='+comment['id']
-                                                    		 +'" target="_blank"> <em class="" style="color:#ff4106;">【'+comment['catalog']
-                                                      		+'】'+comment['title']+'</em><span style="color:#ff4106;">'+comment['lastModifyTime']+'</span></a></li>'
+                                                    		 +'" target="_blank"> <em class="" style="color:#395378;">【'+comment['catalog']
+                                                      		+'】'+comment['title']+'</em><span style="color:#395378;">'+comment['lastModifyTime']+'</span></a></li>'
                                                       		  
                                                   })
                                      $('#news_0 ul').html(html);
@@ -181,7 +181,7 @@ else{
                     </div>
 
                     <div style="position: absolute; top: 0px; margin-left: 307px;" class="fr">
-    <div class="fr_ewm"><span></span></div>    <a href="http://cdnsrc.xtonegame.com/download/lyxm/lyxm_xt.apk">
+    <div class="fr_ewm"><span></span></div>    <a href="javascript:alert('暂未开通，敬请期待')">
     <div class="fr_btn1" style="cursor:pinter;"></div></a>
     <a href="javascript:alert('暂未开通，敬请期待')">
     <div class="fr_btn2" style=""></div></a>

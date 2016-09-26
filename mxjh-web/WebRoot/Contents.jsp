@@ -60,8 +60,8 @@
 <div class="movBtn"><a class="popcl" href=""></a></div>
                 </div>
                 <div class="conNav">
-                    <span>文章详情</span>
-                    <em><a href="index.jsp">官网首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a>文章阅读</a></em>
+                    <span style="color:#ffdb94">文章详情</span>
+                    <em>您的位置：<a href="index.jsp">官网首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a>文章阅读</a></em>
                 </div>
                 <div class="nW_main" >
                       <div class="conMain">
@@ -105,7 +105,7 @@
 	</div>
     <div style="position: absolute; top: 0px; margin-left: 307px;" class="fr">
     <div class="fr_ewm"><span></span></div>  
-      <a href="http://cdnsrc.xtonegame.com/download/lyxm/lyxm_xt.apk">
+      <a href="javascript:alert('暂未开通，敬请期待')">
     <div class="fr_btn1" style="cursor:pinter;"></div></a>
     <a href="">
     <div class="fr_btn2" style=""></div></a>
