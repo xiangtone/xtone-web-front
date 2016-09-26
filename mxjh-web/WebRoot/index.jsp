@@ -6,12 +6,8 @@
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
 
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
-    
+    pageEncoding="UTF-8"%>   
 <!DOCTYPE html>
 <html>
 <head>
@@ -189,8 +185,6 @@
             	 $("#pics #0").css("display","block");
             	 
             	 $(".arrow .next").click(function(){
-            		 
-            		 
             		 if(document.getElementById("0").style.display=="block"){
             			 $("#pics #0").css("display","none");
             			 $("#pics #1").css("display","block");         			 
@@ -496,6 +490,10 @@
                                                     	   
                                                         	if(data=='1'){
                                                         		alert("您已经领取了礼包，请勿重新领取");
+                                                        		document.getElementById("giftPhone").value='输入手机号码';
+                                                        		document.getElementById("code-num").value='输入验证码';
+                                                        		document.getElementById("randomecode1").src='image/random.png?'+new Date();
+                                                                 
                                                         	}else{
                                                         		 $(".gift-box").css("display","none");
                                                            	     $(".gift_success").css("display","block");

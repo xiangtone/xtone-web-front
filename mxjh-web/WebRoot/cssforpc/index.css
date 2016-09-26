@@ -186,7 +186,7 @@ body #NIE-topBar-include { position: fixed; width: 100%; top: 0px; left: 0px; z-
 .pop-gift .con .gift-box { width: 340px; height: auto; margin: 30px 30px 0px; }
 .pop-gift .con .gift-box .giftPhone { width: 320px; height: 25px; border-style:solid;border-color:#000000; margin: 20px auto 15px; display: block; padding: 15px 0px 15px 17px; color: rgb(195, 195, 195); font-size: 16px; background-repeat: no-repeat;margin-top:20px;float:left;}
 .pop-gift .con .gift-box .img-code-box {border:1px; width: 224px; height: 45px; border-style:solid;border-color:#000000; margin: 0px; display: block; overflow: hidden;}
-.pop-gift .con .gift-box .img-code-box .code-num { color: rgb(195, 195, 195); font-size: 16px; width: 165px; height: 15px; padding: 15px 0px 15px 17px; border: 0px none; background-repeat: no-repeat;border:1px; }
+.pop-gift .con .gift-box .img-code-box .code-num { color: rgb(195, 195, 195); font-size: 16px; width: 165px; height: 20px; padding: 15px 0px 14px 14px; border: 0px none; background-repeat: no-repeat;border:1px; }
 .pop-gift .con .gift-box .img-code-box .img-code { width: 100px; height: 42px; margin-left: 8px; vertical-align: top; display: inline-block; margin-top: 1px; cursor: pointer; }
 .pop-gift .con .gift-box  img {float:right; display: block; width: 100px; height: 42px; margin-top:-42px;}
 .pop-gift .con .gift-box .btn-gift {background:url("../img/btn01.png"); width: 339px; height: 68px; display: block; margin: 14px 0px 0px; background-repeat: no-repeat; }
