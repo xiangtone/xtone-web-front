@@ -144,7 +144,7 @@ wx.error(function(res){
 <div id="dianji" style="width:80%;height:80%;position:absolute;z-index:10000;display:none;">
 <img style="width:30%;margin-left:60%;margin-top:2%;" src="mobileimg\jiantou.png"></img>
 <div style="text-align:center;margin-top:50px;font-family:'微软雅黑';color:#ffffff;font-size:20px;font-weight: light;">
-点击右上角分享</br></br>邀请兄弟与您一起共战梦想江湖
+点击右上角分享</br></br>这位少侠，快邀好友一起浪迹天涯，剑挑江湖！
 
 </div>
 <a href="javascript:showDialog.hide();"><img style="width:30%;margin-left:35%;margin-top:15%;" src="mobileimg/guanbi.png"></img></a>
