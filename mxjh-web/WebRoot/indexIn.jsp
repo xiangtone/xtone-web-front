@@ -145,7 +145,7 @@
                       $.ajax({
                           type: "GET",
                           url: "Selnews",
-                          data: {type:00,count:4},
+                          data: {type:'00',count:4},
                           dataType: "json",
                           success: function(data){
                                       //$('#resText').empty();   //清空resText里面的所有内容

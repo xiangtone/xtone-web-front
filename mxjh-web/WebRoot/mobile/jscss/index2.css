@@ -5,7 +5,7 @@ Data:2015/6/10
 Author:+c
 */
 /* css reset */
-@charset "utf-8";body,h1,h2,h3,h4,h5,h6,hr,p,pre,dl,dt,dd,ul,ol,li,th,td,form,fieldset,legend,button,input,textarea,figure,figcaption,nav,footer,menu{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}address,em,i,b{font-style:normal}a,a:hover{color:#EEEEF6;text-decoration:none}ul,ol,li{list-style:none}fieldset,img{border:0}button,input,select,textarea{font:15px \5FAE\8F6F\96C5\9ED1,Helvetica;outline:none}body{background:#5C095A none repeat scroll 0% 0%;font:15px \5FAE\8F6F\96C5\9ED1,Helvetica;color:#20202c;overflow:visible}html{-webkit-text-size-adjust:none}.header,.content,.footer{width:100%;overflow:hidden;z-index:1}
+@charset "utf-8";body,h1,h2,h3,h4,h5,h6,hr,p,pre,dl,dt,dd,ul,ol,li,th,td,form,fieldset,legend,button,input,textarea,figure,figcaption,nav,footer,menu{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}address,em,i,b{font-style:normal}a,a:hover{color:#EEEEF6;text-decoration:none}ul,ol,li{list-style:none}fieldset,img{border:0}button,input,select,textarea{font:15px \5FAE\8F6F\96C5\9ED1,Helvetica;outline:none}body{background:#273C72 none repeat scroll 0% 0%;font:15px \5FAE\8F6F\96C5\9ED1,Helvetica;color:#20202c;overflow:visible}html{-webkit-text-size-adjust:none}.header,.content,.footer{width:100%;overflow:hidden;z-index:1}
 
 /*锟斤拷锟斤拷*/
 figure{display:-webkit-box;display:box;display:-ms-flexbox;}
