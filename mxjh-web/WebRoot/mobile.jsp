@@ -1143,7 +1143,7 @@ body {
 		<div
 			style="text-align: center; margin-top: 50px; font-family: '微软雅黑'; color: #ffffff; font-size: 20px; font-weight: light;">
 			点击右上角分享</br>
-			</br>邀请兄弟与您一起共战梦想江湖
+			</br>这位少侠，快邀好友一起浪迹天涯，剑挑江湖！
 
 		</div>
 		<a href="javascript:showDialog.hide();"><img
@@ -1291,7 +1291,7 @@ body {
 
 	<!-- 登录 -->
 	<div class="dialog" id="pop111" role="dialog" tabindex="-1"
-		style="background: url(imgqhyy/bg_yy.png);background-size: 100%;display: none; visibility: visible; position: fixed; z-index: 9999; width: 95%;height:auto;left:54% ! important;top:50%;">
+		style="background: url(imgqhyy/bg_yy.png) no-repeat center 0 / 100% 100%;display: none; visibility: visible; position: fixed; z-index: 9999; width: 95%;height:auto;left:54% ! important;top:50%;">
 		<table
 			style="position: absolute; z-index: 10000; margin-top: 10%; margin-left: 7.5%;margin-right:13.5%;">
 			
