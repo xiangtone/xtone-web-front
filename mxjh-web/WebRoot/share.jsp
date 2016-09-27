@@ -166,7 +166,7 @@ wx.error(function(res){
 	        	<div class="share3">
 	        		<img  src="imgqhyy/tishi.png">
 	        	</div>
-	        	<p class="share4"><strong class="font-d">将邀请码发给好友，或分享当前页面，即可获取宝箱！</strong></p>
+	        	<p class="share4"><strong class="font-d">将邀请码发给好友，或分享当前页面，好友注册成功，即可获取宝箱！</strong></p>
 	        </div>
         <div class="box-ax">
         	<div class="box-ax1">
