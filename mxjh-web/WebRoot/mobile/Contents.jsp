@@ -23,7 +23,7 @@
 <script charset="UTF-8" type="text/javascript" src="jscss/jquery-1.7.js"></script>
               
 <script charset="gb2312" type="text/javascript" src="jscss/index2.js"></script>              
-
+<link rel="shortcut icon" href="../logo.ico" type="image/x-icon" />
 <!-- 为移动设备添加 viewport -->
 <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no">
 

@@ -50,21 +50,20 @@
     <title>梦想江湖</title>
 	<meta name="from" content="">
 	<meta name="author" content="">
+     <meta http-equiv="X-UA-Compatible" content="IE=8">
 	<meta name="copyright" content="">
 	<meta name="editor" content="leleli">
 	<meta name="designer" content="gzyiying">
 	<meta name="front-end technicist" content="limengshi">
 	<meta name="pmid" content="15869">
-    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+   <meta name="renderer" content="webkit|ie-comp|ie-stand"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"  content="width=device-width, initial-scale=0.8, maximum-scale=1.0, user-scalable=no;"/>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="renderer" content="webkit">
   
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
+<script src="jsforpc/jquery-1.js"></script>
 <link rel="stylesheet" type="text/css" href="jsforpc/fullPage/jquery.fullPage.css"/>
 <link rel="stylesheet" type="text/css" href="cssforpc/index.css"/>
 <link rel="stylesheet" type="text/css" href="cssforpc/footer.css"/>
@@ -136,8 +135,8 @@
         <div id="nie-download" class="nie-download" data-download="lxf|gw">
             <div class="NIE-qrcode"><img src="img/wxewm01.png"></div>
              <div class="buttons">
-                <a href="http://adl.netease.com/d/g/lxf/c/gw?type=ios" class="link-apple NIE-button-ios" target="_blank" style="width:146px;height:60px;background:url(img/iosxz.png);">App Store下载</a>
-                <a href="http://adl.netease.com/d/g/lxf/c/gw?type=android" class="link-android NIE-button-android" target="_blank">安卓版下载</a>
+                <a href="" class="link-apple NIE-button-ios" target="_blank" style="width:146px;height:60px;background:url(img/iosxz.png);">App Store下载</a>
+                <a href="" class="link-android NIE-button-android" target="_blank">安卓版下载</a>
              </div>
         </div>
         <a href="javascript:;" class="qrcode_wx_box"></a>
@@ -146,7 +145,7 @@
         <a href="indexIn.jsp" class="luntan_btn" target="_blank">进入管网</a>
         <a href="javascript:;" class="gift_con">安卓礼包</a>
         <div class="code_show">
-            <img src="code_show_2d1bf97.png" alt="" title="">
+            <img src="" alt="" title="">
         </div>
     </div>
     <!-- 第一屏 end -->
@@ -327,7 +326,7 @@
     
     <!-- 第6屏 end -->
      <!--此乃底部-->
-    <div id="07" style="height: 472px !important;min-height:auto;" class="footerx section fp-auto-height section-07  myConten">
+    <div id="07"  class="footerx section  section-07  myConten fp-auto-height" style="min-height:100px; max-height:472px;height: 140px !important;">
       <!--   <div style="display: block;" class="share-box" id="NIE-share"><div class="NIE-share NIE-share6"><span class="NIE-share-txt">分享到:</span><ul class="NIE-share-iconBtn"><li><a target="_self" title="分享到微信二维码" href="javascript:;" style="" class="iconfont NIE-share-btn23"><span class="iconfont"></span><em>微信</em></a></li><li><a target="_self" title="分享到易信" href="javascript:;" style="" class="iconfont NIE-share-btn22"><span class="iconfont"></span><em>易信</em></a></li><li><a target="_self" title="分享到新浪微博" href="javascript:;" style="" class="iconfont NIE-share-btn2"><span class="iconfont"></span><em>新浪微博</em></a></li><li><a href="javascript:void(0)" class="iconfont morebtn"><span class="iconfont"></span><em>更多</em></a></li></ul><div class="NIE-share-clearfix"></div><div class="NIE-share-more"><ul><li><a target="_self" title="分享到QQ空间" href="javascript:;" style="" class="iconfont NIE-share-btn1">QQ空间</a></li><li><a target="_self" title="分享到人人网" href="javascript:;" style="" class="iconfont NIE-share-btn8">人人网</a></li><li><a target="_self" title="分享到腾讯微博" href="javascript:;" style="" class="iconfont NIE-share-btn3">腾讯微博</a></li><li><a target="_self" title="分享到QQ好友" href="javascript:;" style="" class="iconfont NIE-share-btn24">QQ好友</a></li><li><a target="_self" title="分享到豆瓣" href="javascript:;" style="" class="iconfont NIE-share-btn11">豆瓣</a></li><li><a target="_self" title="分享到百度贴吧" href="javascript:;" style="" class="iconfont NIE-share-btn14">百度贴吧</a></li></ul></div></div><div class="NIE-share-clearfix"></div></div>
 
        <div id="NIE-copyRight"><p id="NIE-copyRight-corp" style="width: 832px; text-align: left; margin: 0px auto; padding: 15px 0px 0px; font-size: 12px; font-family: &quot;宋体&quot;; line-height: 24px; display: block; position: relative;"><span style="vertical-align: top; top: 4px; display: inline-block; position: relative;"><a href="http://www.163.com/" target="_blank" style="width: 118px; height: 31px; padding-right: 0px; display: inline-block; cursor: pointer; background: transparent url(&quot;netease.1.png&quot;) no-repeat scroll 0% 0%;"></a><a href="http://game.163.com/" target="_blank" style="width: 134px; height: 31px; padding-right: 15px; display: inline-block; cursor: pointer; background: transparent url(&quot;nie.1.png&quot;) no-repeat scroll 0% 0%;"></a></span><span style="text-align: left; display: inline-block; padding-left: 6px;"><span id="ncp-l1"><a href="http://gb.corp.163.com/gb/about/overview.html" target="_blank">公司简介</a> - <a href="http://help.163.com/" target="_blank">客户服务</a> - <a href="http://gb.corp.163.com/gb/legal.html" target="_blank">相关法律</a> - <a href="http://game.163.com/about/about.html" target="_blank">网易游戏</a> - <a href="http://game.163.com/about/contactus.html" target="_blank">联系我们</a> - <a href="http://game.163.com/bs/business.html" target="_blank">商务合作</a> - <a href="http://game.163.com/job/" target="_blank">加入我们</a> - <a href="http://game.163.com/sy/client/userAgreement2.html" target="_blank">用户协议</a></span><br><span id="ncp-l2">网易公司版权所有 ©1997-2016　　  </span></span><a href="http://www.leihuo.net/jiazhang.html" style="display: inline-block; padding: 2px; color: white; background-color: rgb(97, 0, 0); position: absolute; right: 70px; top: 38px;" target="_blank">点击查看家长监护工程&nbsp;&gt;</a><br><span id="ncp-l3" style="display: inline-block; padding-top: 10px;">本游戏适合16岁以上的玩家进入。<br>积极健康的游戏心态是健康游戏的开端，本游戏故事情节设置紧凑，请您合理控制游戏时间，避免沉溺游戏影响生活，注意自我保护，防范网络陷阱。<br>《网络文化经营许可证》浙网文[2016]0155-055号 </span></p></div>
@@ -576,7 +575,7 @@
         </div>
         <div class="gzh-wrap">
             <p class="sub-title sub-title-2"><i>2</i>关注游戏微信公众号（lxfcq163），赢专属好礼。</p>
-            <div class="gzh"><img src="wxewm01.png" height="119" width="119"></div>
+            <div class="gzh"><img src="img/wxewm01.png" height="119" width="119"></div>
         </div>
     </div>
 </div>
@@ -632,16 +631,14 @@
     <div id="share_content" style="display: none;"><!--设置浏览器及微信中点击分享的默认内容-->
         <div id="share_title" pub-name="分享文案">《陆小凤传奇》邀你决战紫禁之巅！</div><!--设置分享标题-->
         <div id="share_url" pub-name="分享地址"></div><!--设置分享ＵＲＬ-->
-        <img id="share_pic" data-src="http://res.lxf.netease.com/pc/gw/20160315172502/img/share_b5456bf.png" pub-name="分享图片"><!--设置分享图片地址，使用src指定图片地址，可加快在微信中点击分享时弹框中分享图标的显示速度-->
-        <div id="share_desc" pub-name="分享描述">find君，可敢拔剑一战？</div>
+        <img id="share_pic" data-src=""><!--设置分享图片地址，使用src指定图片地址，可加快在微信中点击分享时弹框中分享图标的显示速度-->
+        <div id="share_desc" pub-name="分享描述"></div>
     </div>
     <div pub-name="JS" id="js_bottom" style="display: none;"></div>
     <!-- 营销点代码 -->
-    <iframe id="yxd" src="index_1.html" pub-name="营销点代码" style="display: none;"></iframe>
+    <iframe id="yxd" src="" pub-name="营销点代码" style="display: none;"></iframe>
 
     <!-- jquery mix NIE (最新版本）-->
-
-    <script type="text/javascript" charset="gbk" src="jsforpc/index_45fad41.js"></script>
 
 <!-- fullpage.js 的基本设置 -->
 
@@ -806,6 +803,125 @@
 			
 		});
 	  </script>
+	  <script type="text/javascript">
+	  $(window).bind('mousewheel', function() {
+			var hash=window.location.hash;	
+			
+			 if(hash=="#1"||hash==""||hash==null){
+				 $("#nav-box-02").css("display","none");
+				 $("#nav-box-01").css("display","block");
+				 $(".i-arrow").css("display","block"); 
+			 }else{
+				 if(hash=="#7"){
+					 $("#nav-box-01").css("display","none");
+					 $("#nav-box-02").css("display","none");
+					 $(".i-arrow").css("display","none"); 
+				 }else{
+				 $("#nav-box-01").css("display","none");
+				 $("#nav-box-02").css("display","block");
+				 $(".i-arrow").css("display","block"); 
+				 }
+			 }
+			var idcode;
+			switch(hash){
+			case '#1':
+				idcode="01";
+				break;	
+			case '#2':
+				idcode="02";
+	
+				break;
+			case '#3':
+				idcode="03";
+				
+				break;
+			case '#4':
+				idcode="04";
+				break;
+			case '#5':
+				idcode="05";
+				break;	
+			case '#6':
+				idcode="06";
+				break;	
+			case '#7':
+				idcode="06";
+				break;	
+			default:
+				idcode="01";
+				break;
+			}
+	
+			 $(".section").removeClass("section-in");
+			 
+			 sleep(300);
+			 $(".section-"+idcode).addClass("section-in");
+			 $("#"+idcode).addClass("section-in");
+						 
+			
+		});
+	  
+	  
+	  </script>
+	  <script type="text/javascript">
+	  window.onhashchange= function() {
+			var hash=window.location.hash;	
+			
+			if(hash=="#1"||hash==""||hash==null){
+				 $("#nav-box-02").css("display","none");
+				 $("#nav-box-01").css("display","block");
+				 $(".i-arrow").css("display","block"); 
+			 }else{
+				 if(hash=="#7"){
+					 $("#nav-box-01").css("display","none");
+					 $("#nav-box-02").css("display","none");
+					 $(".i-arrow").css("display","none"); 
+				 }else{
+				 $("#nav-box-01").css("display","none");
+				 $("#nav-box-02").css("display","block");
+				 $(".i-arrow").css("display","block"); 
+				 }
+			 }
+			var idcode;
+			switch(hash){
+			case '#1':
+				idcode="01";
+				break;	
+			case '#2':
+				idcode="02";
+	
+				break;
+			case '#3':
+				idcode="03";
+				
+				break;
+			case '#4':
+				idcode="04";
+				break;
+			case '#5':
+				idcode="05";
+				break;	
+			case '#6':
+				idcode="06";
+				break;	
+			case '#7':
+				idcode="06";
+				break;	
+			default:
+				idcode="01";
+				break;
+			}
+	
+			 $(".section").removeClass("section-in");
+			 
+			 sleep(300);
+			 $(".section-"+idcode).addClass("section-in");
+			 $("#"+idcode).addClass("section-in");
+						 
+			
+		};	  
+	  </script>
+	  
 	<!--js暂停 function sleep  -->  
     <script type="text/javascript"> 
 		function sleep(ms){

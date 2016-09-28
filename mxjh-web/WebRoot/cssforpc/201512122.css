@@ -292,7 +292,7 @@ i,em{font-style:normal;}
 .conNav span#btn2{min-width:40px;width:81px; line-height:79px; float:left;margin-left:0px; font-size:26px; color:#ffffff;background:url(../images/concut.jpg) center top no-repeat;}
 .conNav span#btn1:hover{background:url(../images/conbgh.jpg) center top no-repeat;}
 .conNav span#btn2:hover{background:url(../images/concuth.jpg) center top no-repeat;}
-.conNav em{min-width:40px; line-height:29px; float:left; font-size:16px; color:#ffffff;margin-left:25px; }
+.conNav em{min-width:40px; line-height:29px; float:left; font-size:16px; color:#ffffff;margin-left:20px; }
 .conNav em a{color:#ffffff;}
 .conNav em a:hover{ text-decoration:underline;color:#d4a777;}
 
@@ -346,7 +346,7 @@ i,em{font-style:normal;}
 
 /*-------�����б�ҳCSS-------*/
 .nNewsTit{width:842px;height:65px; float:left;}
-.nNewsTit ul li{width:106px;height:65px;padding-left:20px;line-height:56px; float:left; font-size:22px;text-align:center;}
+.nNewsTit ul li{width:106px;height:65px;padding-right:20px;line-height:56px; float:left; font-size:22px;text-align:left;}
 .nNewsTit ul li a{width:106px;height:65px;float:left; text-decoration:none; color:#355378;}
 .nNewsTit ul li a.active{color:#d79618;}
 .nNewsTit ul li a:hover{color:#920000;}

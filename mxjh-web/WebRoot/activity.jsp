@@ -16,7 +16,7 @@
 		<meta name="description" content=""><meta name="applicable-device" content="pc,mobile"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=EDGE,chrome=1">
         <link type="text/css" rel="stylesheet" href="cssforpc/201512122.css">
         <link rel="stylesheet" href="cssforpc/footer.css">
-     
+       <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
      

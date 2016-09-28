@@ -29,6 +29,7 @@
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
     <!--百度统计-->   
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
     <script type="text/javascript" src="js&css/baidu.js"></script>   
      </head>
     <body>

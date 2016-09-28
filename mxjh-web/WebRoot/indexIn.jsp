@@ -49,7 +49,7 @@
         .roll_l{left: 150px;}
         .slogan{display: none;}
 </style>
-
+<link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
 </head>
 
 <body style="background:#FFFFFF">

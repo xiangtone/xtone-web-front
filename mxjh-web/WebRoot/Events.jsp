@@ -29,7 +29,8 @@
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
     <!--百度统计-->   
-    <script type="text/javascript" src="js&css/baidu.js"></script>   
+    <script type="text/javascript" src="js&css/baidu.js"></script>  
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon" /> 
      </head>
     <body>
 
@@ -83,7 +84,7 @@ else{
                             <!-- 新闻类别按钮 开始-->
                             <div class="nNewsTit">
                             	
-                                <ul style="margin-left:10px">
+                                <ul style="margin-left:0px">
                                 
                                 <li class="" id="nli_0"><a href="Events.jsp" class="roll_t" title="">精彩活动</a></li>                               
                                 </ul>

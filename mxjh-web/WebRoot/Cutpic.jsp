@@ -31,6 +31,7 @@
     <![endif]-->
     <!--百度统计-->   
     <script type="text/javascript" src="js&css/baidu.js"></script>   
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
      </head>
     <body>
 

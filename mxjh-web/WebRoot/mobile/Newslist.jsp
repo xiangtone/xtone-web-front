@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="mui/dist/css/mui.css">
     <link rel="stylesheet" href="mui/sass/mui.scss">
     <link rel="stylesheet" href="mui/dist/css/mui.min.css">
-
+    <link rel="shortcut icon" href="../logo.ico" type="image/x-icon" />
 	 <link rel="stylesheet" type="text/css" href="mui/dist/css/mui.css" media="all">
 	<script src="jscss/jquery-1.7.js"></script>
 	<script src="mui/dist/js/mui.js"></script>

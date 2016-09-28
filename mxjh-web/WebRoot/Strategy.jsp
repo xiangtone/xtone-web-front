@@ -29,7 +29,7 @@
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
     <!--百度统计-->   
-     
+     <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
      </head>
     <body>
 
@@ -82,7 +82,7 @@ else{
                         <div class="con">
                             <!-- 新闻类别按钮 开始-->
                             <div class="nNewsTit">
-                                <ul style="margin-left:10px">
+                                <ul style="margin-left:0px">
                                 
                                 <li class="" id="nli_0"><a href="Strategy.jsp" class="roll_t" title="">游戏玩法</a></li>
                                 <li class="" id="nli_1"><a href="gameplay.jsp" class="roll_t" title="">游戏攻略</a></li>
