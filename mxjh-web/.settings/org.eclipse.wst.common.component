@@ -4,7 +4,11 @@
         <wb-resource deploy-path="/" source-path="/WebRoot" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
+<<<<<<< HEAD
         <dependent-module archiveName="xtone-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/xtone-java-common/xtone-java-common">
+=======
+        <dependent-module archiveName="xtone-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/xtone-common/xtone-common">
+>>>>>>> df71e85ca7b6d362c65134769a29e2e0c499f420
             <dependency-type>uses</dependency-type>
         </dependent-module>
 		<property name="java-output-path" value="/lyxm-web/target/classes"/>
