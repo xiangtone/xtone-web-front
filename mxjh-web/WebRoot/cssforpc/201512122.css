@@ -117,12 +117,12 @@ i,em{font-style:normal;}
 .newsMore a:hover{color:#f4ca79}
 .news_xian{width:730px;height:3px; float:left; border-bottom:1px #6c4e36 solid; position:relative;}
 .red{width:70px;height:3px; position:absolute;left:0;top:1px; background-color:#ff4106; transition:all 0.2s ease-in;}
-.newsList{width:730px;float:left; display:none;}
-.newsList ul li{width:725px;height:40px; float:left; border-bottom:1px #381f13 solid;}
-.newsList ul li a{width:725px;height:40px; float:left;}
-.newsList ul li a em{width:660px;line-height:40px;float:left;font-size:14px; color:#6eacdc !important; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-.newsList ul li a span{width:60px;line-height:40px;float:left;font-size:14px; color:#6eacdc !important; text-align:right;}
-.newsList ul li a:hover em{color:#f4ca79 !important;text-decoration:underline;}
+.newsList{width:700px;float:left; display:none;}
+.newsList ul li{margin-left:15px;width:700px;height:40px; float:left; border-bottom:0.1px #999 solid ;}
+.newsList ul li a{width:705px;height:40px; float:left;}
+.newsList ul li a em{width:650px;line-height:40px;float:left;font-size:14px; color:#6eacdc !important; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.newsList ul li a span{width:50px;line-height:40px;float:left;font-size:14px; color:#6eacdc !important; text-align:right;}
+.newsList ul li a:hover em{color:#f4ca79 !important;}
 
 .newsList ul li a:hover span{color:#f4ca79 !important;}
 .newsList ul li a em.Red{color:#ff0000 !important;}

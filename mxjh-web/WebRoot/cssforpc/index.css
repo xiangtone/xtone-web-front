@@ -27,7 +27,7 @@ body { min-width: 1260px; position: relative; margin: 0px auto; }
 .section { min-height: 800px; position: relative; width: 100%; height: 100%; min-width: 1260px; overflow:; }
 .section h2, .section .desc, .section .role-name { position: absolute; text-indent: -9999px; left: 50%; }
 .role { position: absolute; left: 50%; }
-.section-01 { background: rgb(0, 0, 0) url("../img/bg_01.jpg") no-repeat scroll center top;background-size:cover; }
+.section-01 { background:url("../img/bg_01.jpg") no-repeat scroll center top;background-size:cover; }
 .section-01 .title { position: absolute; left: 50%; width: 231px; height: 633px; top: 10%; margin-left: -41%; }
 .section-01 .yuyue-btn { position: absolute; text-indent: -9999px; width: 105px; height: 168px; top: 202px; left: 50%; margin-left: -512px; background-repeat: no-repeat; }
 .section-01 .yuyue-btn:hover { background-repeat: no-repeat; }
@@ -40,7 +40,7 @@ body { min-width: 1260px; position: relative; margin: 0px auto; }
 .section-01 .gift_con { background:url("../img/yylb.png");width: 112px; height: 89px; position: absolute; top: 74%; left: 50%; margin-left: -125px; z-index: 10; font-size: 0px; background-repeat: no-repeat; }
 .logo { position: absolute; width: 262px; height: 120px; top: 137px; left: 50%; margin-left: 202px; background-repeat: no-repeat; }
 /* .role-01 { width: 887px; height: 542px; top: 0px; margin-left: -530px; background: transparent url("") no-repeat scroll 0% 0%; } */
-.role-02 { width:30%;min-height:75%; height:auto; top: 15px; margin-left: 8%; margin-top: 2%;background:url("../img/page1_01.png") no-repeat top center;background-size:cover;}
+.role-02 { width:30%;min-height:75%; height:auto; top: 15px; margin-left: 8%; margin-top: 2%;background:url("../img/page1_01.png") no-repeat top center;background-size:cover;overflow:display;}
 .btn-video { position: absolute; width: 155px; height: 133px; left: 50%; margin-left: -641px; top: 653px; background-repeat: no-repeat; }
 .btn-video i { width: 40px; height: 40px; position: absolute; left: 50%; top: 50%; margin: -18px 0px 0px -6px; background-repeat: no-repeat; }
 .btn-video:hover i { animation-play-state: paused; }
@@ -57,18 +57,18 @@ body { min-width: 1260px; position: relative; margin: 0px auto; }
 .code_show img { width: 105px; height: 106px; margin: 14px auto 0px; display: block; }
 .section-02 { background: rgb(6, 16, 29) url("../img/bg_02.jpg") no-repeat scroll center top;background-size:cover; }
 .section-02 h2 { background:url("../img/dflx.png") center no-repeat;width: 285px; height: 447px; top: 100px; margin-left: -45%; background-repeat: no-repeat; background-size:100%;}
-.section-02 .desc {background:url("../img/lycbg.png") center no-repeat; width: 90px; height: 500px; top: 37px; margin-left: 37%; background-repeat: no-repeat; }
+.section-02 .desc {background:url("../img/lycbg.png") center no-repeat; width: 90px; height: 500px; top: 37px; margin-left: 27%; background-repeat: no-repeat;z-index:99999 }
 .section-02 .role-name { width: 41px; height: 85px; top: 280px; margin-left: 550px; background-repeat: no-repeat; }
-.role-03 { width: 527px; height: 660px; top: 146px; margin-left: 0px; background: transparent url("../img/role02.png") no-repeat scroll 0% 0%;background-size:100%;}
+.role-03 { width: 527px; height: 660px; top: 146px; margin-left: -5%; background: transparent url("../img/role02.png") no-repeat scroll 0% 0%;background-size:100%;}
 .section-03 { background: rgb(235, 235, 235) url("../img/bg_03.jpg") no-repeat scroll center top; background-size:cover;}
 .section-03 h2 { background:url("../img/pg03wldh.png") center top no-repeat;width: 291px; height: 437px; top: 150px; margin-left: -45%; background-repeat: no-repeat; }
-.section-03 .desc { background:url("../img/pg03yly.png") center top no-repeat;width: 88px; height: 501px; top: 122px; margin-left: 35%; background-repeat: no-repeat; }
+.section-03 .desc { background:url("../img/pg03yly.png") center top no-repeat;width: 88px; height: 501px; top: 122px; margin-left: 25%; background-repeat: no-repeat; }
 .section-03 .role-name-01 { width: 40px; height: 84px; top: 158px; margin-left: -406px; background-repeat: no-repeat; }
 .section-03 .role-name-02 { width: 41px; height: 84px; top: 330px; margin-left: 433px; background-repeat: no-repeat; }
-.role-04 { width: 866px !important; height: 741px !important; top: 66px; margin-left: -27%; background:url("../img/pg03_01.png") no-repeat top center;background-size:cover;overflow:display;}
+.role-04 { width: 866px !important; height: 741px !important; top: 66px; margin-left: -37%; background:url("../img/pg03_01.png") no-repeat top center;background-size:cover;overflow:display;}
 .section-04 { background: rgb(0, 0, 0) url("../img/bg_04.jpg") no-repeat scroll center top; background-size:cover;}
-.section-04 h2 { background:url("../img/xkyc.png") center top no-repeat;width: 312px; height: 446px; top: 104px; margin-left: -45%; background-repeat: no-repeat; }
-.section-04 .desc {background:url("../img/pg04lmhm.png") center top no-repeat; width: 88px; height: 501px; top: 107px; margin-left: 34%; background-repeat: no-repeat; }
+.section-04 h2 { background:url("../img/xkyc.png") center top no-repeat;width: 235px; height: 334px; top: 104px; margin-left: -40%; background-repeat: no-repeat;background-size:cover; }
+.section-04 .desc {background:url("../img/pg04lmhm.png") center top no-repeat; width: 66px; height: 375px; top: 107px; margin-left: 34%; background-repeat: no-repeat;background-size:cover; overflow:display;}
 .section-04 .role-name { width: 40px; height: 88px; top: 546px; margin-left: 476px; background-repeat: no-repeat; }
 .role-05 { width: 900px; height: 894px; top: 60px; margin-left: -25.2%; background: transparent url("../img/page04role.png") no-repeat scroll 0% 0%;background-size:100%; }
 .pic-box { width: 516px; position: absolute; left: 50%; margin-left: -584px; top: 163px; }
@@ -79,21 +79,21 @@ body { min-width: 1260px; position: relative; margin: 0px auto; }
 .section-05 { background: rgb(235, 235, 235) url("../img/bg_05.jpg") no-repeat scroll center top;background-size:cover; }
 .section-05 h2 { background:url("../img/pg05_01.png") top center no-repeat;width: 221px; height: 503px; top: 1px; margin-left: -35%; background-repeat: no-repeat;z-index:100;background-size:100%; }
 .section-05 .desc { background:url("../img/pg05_02.png") top center no-repeat;width: 88px; height: 502px; top: 103px; margin-left: 35%; background-repeat: no-repeat; }
-.section-05 .role-name-01 {background:url("../img/pg05_11.png") top center no-repeat; width: 145px; height: 33px; top: 632px; margin-left: -7%; background-repeat: no-repeat;z-index:100 ;background-size:100%;}
-.section-05 .role-name-02 { background:url("../img/pg05_14.png") top center no-repeat; width: 145px; height: 33px; top: 730px; margin-left: -29%; background-repeat: no-repeat;background-size:100%; }
-.section-05 .role-name-03 {background:url("../img/pg05_13.png") top center no-repeat;  width: 145px; height: 33px; top: 342px; margin-left: 9%; background-repeat: no-repeat;background-size:100%; }
-.section-05 .role-name-04 { background:url("../img/pg05_12.png") top center no-repeat; width: 145px; height: 33px; top: 740px; margin-left: 17%; background-repeat: no-repeat;background-size:100%; }
+.section-05 .role-name-01 {background:url("../img/pg05_11.png") top center no-repeat; width: 145px; height: 33px; top: 572px; margin-left: -9%; background-repeat: no-repeat;z-index:100 ;background-size:100%;}
+.section-05 .role-name-02 { background:url("../img/pg05_14.png") top center no-repeat; width: 145px; height: 33px; top: 650px; margin-left: -32%; background-repeat: no-repeat;background-size:100%; }
+.section-05 .role-name-03 {background:url("../img/pg05_13.png") top center no-repeat;  width: 145px; height: 33px; top: 270px; margin-left: 12%; background-repeat: no-repeat;background-size:100%; }
+.section-05 .role-name-04 { background:url("../img/pg05_12.png") top center no-repeat; width: 145px; height: 33px; top: 650px; margin-left: 14%; background-repeat: no-repeat;background-size:100%; }
 
-.section-05 .role-06 { width: 375px; height: 528px; top: 245px; margin-left: -14%; background: transparent url("../img/pg05_O1.png") no-repeat scroll 0% 0%; background-size:100%;}
-.section-05 .role-07 { width: 325px; height: 431px; top: 397px; margin-left: -35%; background: transparent url("../img/pg05_O2.png") no-repeat scroll 0% 0%; background-size:100%;}
-.section-05 .role-08 { width: 325px; height: 527px; top: 28px; margin-left: 3%; background: transparent url("../img/pg05_O4.png") no-repeat scroll 0% 0%; background-size:100%;}
-.section-05 .role-09 { width: 325px; height: 495px; top: 410px; margin-left: 11%; background: transparent url("../img/pg05_O3.png") no-repeat scroll 0% 0%; background-size:100%;}
+.section-05 .role-06 { width: 300px; height: 315px; top: 245px; margin-left: -14%; background: transparent url("../img/pg05_O1.png") no-repeat scroll 0% 0%; background-size:100%;}
+.section-05 .role-07 { width: 250px; height: 251px; top: 397px; margin-left: -35%; background: transparent url("../img/pg05_O2.png") no-repeat scroll 0% 0%; background-size:100%;}
+.section-05 .role-08 { width: 250px; height: 241px; top: 28px; margin-left: 8%; background: transparent url("../img/pg05_O4.png") no-repeat scroll 0% 0%; background-size:100%;}
+.section-05 .role-09 { width: 228px; height: 234px; top: 410px; margin-left: 11%; background: transparent url("../img/pg05_O3.png") no-repeat scroll 0% 0%; background-size:100%;}
 
 
 
 
 .section-06 { background: rgb(235, 235, 235) url("../img/bg_06.jpg") no-repeat scroll center top;background-size:cover; }
-.section-06 h2 { background:url("../img/pg06_01.png") top center no-repeat;width: 276px; height: 508px; top:30%; margin-left: -41%; background-repeat: no-repeat; }
+.section-06 h2 { background:url("../img/pg06_01.png") top center no-repeat;width: 276px; height: 508px; top:25%; margin-left: -41%; background-repeat: no-repeat; }
 .section-06 .desc {background:url("../img/pg06_02.png") top center no-repeat; width: 88px; height: 501px; top: 53px; margin-left: 35%; background-repeat: no-repeat; }
 .section-06 .role-name-01 { width: 41px; height: 88px; top: 148px; margin-left: -224px; background-repeat: no-repeat; }
 .section-06 .role-name-02 { width: 41px; height: 84px; top: 148px; margin-left: 26px; background-repeat: no-repeat; }
@@ -128,7 +128,7 @@ body { min-width: 1260px; position: relative; margin: 0px auto; }
 .nav-box .nav-txt { display: none; background: transparent none repeat scroll 0px 0px; }
 .nav-con { width: 1200px; margin: 0px auto; }
 .nav-box-light { background-repeat: repeat-x; }
-.nav-box-02 { display: none; transition: height 0.8s ease 0s; }
+.nav-box-02 { display: none; transition: height 0.8s ease 0s;z-index:19; }
 .nav-box-02.fix { position: absolute; }
 .nav-item { float: left; position: relative; }
 .nav-news-box { width: 560px; }
@@ -168,7 +168,7 @@ body { min-width: 1260px; position: relative; margin: 0px auto; }
 .nav-suo .nav-txt { display: block; width: 110px; text-indent: 1.5em; font-size: 14px; position: absolute; line-height: 30px; height: 30px; left: 50%; top: 50%; margin: -15px 0px 0px -42px; color: #11324C; font-style: normal; }
 body #NIE-topBar-include { position: fixed; width: 100%; top: 0px; left: 0px; z-index: 90; }
 .arrow2 { height: 51px; background-repeat: no-repeat; }
-.leaf { position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; background: transparent url("leaf_cc34045.png") no-repeat scroll center top; transition: all 0.1s ease 0s; }
+.leaf { position: absolute; width: 100%; height: 100%;left: 0px; top: 0px; background:transparent url("../img/luoye.png") no-repeat scroll center top; transition: all 0.1s ease 0s; z-index:9 }
 .leaf-01 { top: 0px; background-repeat: no-repeat; }
 .leaf-02 { top: 0px; background-repeat: no-repeat; }
 .leaf-03 { top: 0px; background-repeat: no-repeat; }
@@ -263,7 +263,7 @@ body #NIE-topBar-include { position: fixed; width: 100%; top: 0px; left: 0px; z-
 
 
 
-.section-01.section-in .role-01 { opacity: 0; animation: 0.6s ease-out 0.1s normal forwards 1 running westNorth; }
+.section-01.section-in .role-01 { opacity: 0; animation: 1.5s ease-out 0.1s normal forwards 1 running westNorth;-webkit-animation: 1.5s ease-out 0.1s normal forwards 1 running westNorth; }
 <!--new add-->
 
 
@@ -432,7 +432,7 @@ body #NIE-topBar-include { position: fixed; width: 100%; top: 0px; left: 0px; z-
 0% { opacity: 0; transform: translate(0px, 5%); }
 100% { opacity: 1; transform: translate(0px, 0px); }
 }
-.section-03.section-in .role-04 { opacity: 0; -webkit-animation: 2s ease-out 0s normal forwards 1 running comeUp2; animation: 0.6s ease-out 0s normal forwards 1 running comeUp; }
+.section-03.section-in .role-04 { opacity: 0; -webkit-animation: 2s ease-out 0s normal forwards 1 running comeUp2; animation: 2s ease-out 0s normal forwards 1 running comeUp; }
 @-webkit-keyframes comeUp2{
 0% { opacity: 0; transform: translate(200%, 200%); -webkit-transform: translate(0%, 200%);}
 60% { transform: translate(-15px, -15px); -webkit-transform: translate(0px, -15px); }
@@ -445,7 +445,7 @@ body #NIE-topBar-include { position: fixed; width: 100%; top: 0px; left: 0px; z-
 0% { opacity: 0; transform: translate(0px, 50%); }
 100% { opacity: 1; transform: translate(0px, 0px); }
 }
-.section-03.section-in h2 { opacity: 0;  -webkit-animation: 0.6s ease-out 0s normal forwards 1 running comeUp;-webkit-animation: 0.6s ease-out 0.6s normal forwards 1 running comeUp;animation: 0.6s ease-out 0.6s normal forwards 1 running comeUp; }
+.section-03.section-in h2 { opacity: 0;  -webkit-animation: 1.2s ease-out 0s normal forwards 1 running comeUp;-webkit-animation: 2s ease-out 0.6s normal forwards 1 running comeUp;animation: 1.2s ease-out 0.6s normal forwards 1 running comeUp; }
 @-webkit-keyframes comeUp {
 0% { opacity: 0; transform: translate(0px, 50%); }
 100% { opacity: 1; transform: translate(0px, 0px); }
@@ -482,7 +482,7 @@ body #NIE-topBar-include { position: fixed; width: 100%; top: 0px; left: 0px; z-
 100% { opacity: 1; transform: translate(0px, 0px); }
 }
 .section-04 .pic-box { opacity: 0; }
-.section-04.section-in .role-05 { opacity: 0;-webkit-animation: 2s ease-out 0s normal forwards 1 running comeUp3;  animation: 0.6s ease-out 0s normal forwards 1 running comeUp; }
+.section-04.section-in .role-05 { opacity: 0;-webkit-animation: 2s ease-out 1s normal forwards 1 running comeUp3;  animation: 2s ease-out 0s normal forwards 1 running comeUp; }
 @-webkit-keyframes comeUp3{
 0% { opacity: 0; transform: translate(200%, 200%); -webkit-transform: translate(0%, 200%);}
 60% { transform: translate(-15px, -15px); -webkit-transform: translate(0px, -15px); }
@@ -664,15 +664,11 @@ body #NIE-topBar-include { position: fixed; width: 100%; top: 0px; left: 0px; z-
 .pop-gift .con .gzh-wrap .gzh { background-position: -935px 0px; }
 .nav-light-box i { background-position: -935px -315px; }
 .download-img { background-position: -935px -471px; }
-.leaf-01 { background-position: 0px -893px; }
+
 .code_show { background-position: -211px -893px; }
 .btn-video { background-position: -347px -893px; }
 .logo { background-position: -502px -893px; }
 .pop-download .gzh-wrap .gzh { background-position: -935px -761px; }
-.leaf-04 { background-position: -127px -782px; }
-
-.leaf-03 { background-position: -810px -371px; }
-
 
 .section-04 .role-name { background-position: -1054px -761px; }
 .i-arrow { background-position: -475px -384px; }
@@ -683,7 +679,7 @@ body #NIE-topBar-include { position: fixed; width: 100%; top: 0px; left: 0px; z-
 .nav-light-box .btn-nav-download:hover { background-position: -396px -390px; }
 
 .pop-gift .con .gift-box .img-code-box .code-num { background:url("../img/goftbg.png") }
-.leaf-02 { background-position: -396px -436px; }
+
 .picture-box-prev { background-position: -1051px -405px; }
 .picture-box-next { background-position: -879px -464px; }
 .btn-video i { background-position: -857px -607px; }
@@ -697,8 +693,8 @@ body #NIE-topBar-include { position: fixed; width: 100%; top: 0px; left: 0px; z-
 .pop-yuyue .sub-title i { background-position: -1072px -447px; }
 .pop-yuyue .yuyue-wrap .choose-box .ios-type i { background-position: -517px -410px; }
 
-.pop-video-box i, .picture-box i,.nav-light-box a:hover, .nav-light-box a.current,.yuyue-btn, .section-01 a.download-btn, .section-01 .yuyue-btn:hover, .section-01 a.download-btn:hover, .nav-light-box i, .download-img, .leaf-01,.code_show, .btn-video { background-image: url("index_z_a439b05.png"); }
-.logo, .pop-download .gzh-wrap .gzh, .leaf-04,  .leaf-03, .section-04 .role-name,  .section-02 .role-name, .section-03 .role-name-01, .i-arrow, .arrow2, .pop-yuyue .yuyue-wrap .yuyue-btn:hover, .pop-yuyue .yuyue-wrap .yuyue-btn, .nav-light-box .btn-nav-download, .nav-light-box .btn-nav-download:hover,  .leaf-02, .picture-box-prev, .picture-box-next,.btn-video i, .pop-yuyue .yuyue-wrap .phonenum, .pop-video-close { background-image: url("index_z_a439b05.png"); }
+.pop-video-box i, .picture-box i,.nav-light-box a:hover, .nav-light-box a.current,.yuyue-btn, .section-01 a.download-btn, .section-01 .yuyue-btn:hover, .section-01 a.download-btn:hover, .nav-light-box i, .download-img,.code_show, .btn-video { background-image: url("index_z_a439b05.png"); }
+.logo, .pop-download .gzh-wrap .gzh, .section-04 .role-name,  .section-02 .role-name, .section-03 .role-name-01, .i-arrow, .arrow2, .pop-yuyue .yuyue-wrap .yuyue-btn:hover, .pop-yuyue .yuyue-wrap .yuyue-btn, .nav-light-box .btn-nav-download, .nav-light-box .btn-nav-download:hover,   .picture-box-prev, .picture-box-next,.btn-video i, .pop-yuyue .yuyue-wrap .phonenum, .pop-video-close { background-image: url("index_z_a439b05.png"); }
 .download-btns em, .pop-yuyue .yuyue-wrap .choose-box label.checked, .pop-yuyue .yuyue-wrap .choose-box label, .pop-yuyue .yuyue-wrap .choose-box .android-type i, .pop-yuyue .sub-title i, .pop-yuyue .yuyue-wrap .choose-box .ios-type i,.btn-nav-download i { background-image: url("index_z_a439b05.png"); }
 /* ::::: http://res.nie.netease.com/comm/js/nie/util/share/css/share.v5.css ::::: */
 

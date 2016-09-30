@@ -43,7 +43,7 @@
  document.addEventListener('DOMMouseScroll',scrollFunc,false); 
  }//W3C 
  window.onmousewheel=document.onmousewheel=scrollFunc;//IE/Opera/Chrome/Safari 
-  
+
 </script>
     <meta charset="UTF-8">
 <!--This is Git Project From LXF/lxf-gw-20160315-->
@@ -102,16 +102,38 @@
 </script>
 </head>
 <body>
-			
-    <!--[if lt IE 7]>
-    <div style="position:absolute;left:0;top:0;width:100%;height:50px;background:rgb(255,255,233);color:rgb(30,84,148);border-bottom:1px solid rgb(230,230,198);text-align:center;line-height:50px;font-size:12px;">您使用的浏览器版本过低，可能会影响到您浏览本网页，建议您升级您的浏览器。</div>
-    <![endif]-->
+	 <script type="text/javascript">
+	 var event=event||window.event;
+	 var sx=event.x||event.pageX;                         
+	 var sy=event.offsetY || event.layerY;
+      function moveFunc(event){
+	   var event=event||window.event;
+	   event.x=event.x||event.pageX;
+	   event.y=event.y||event.pageY;
+	   if(sx==event.x){
+                
+		  }else if(sx>event.x){
+		 
+			  $(".section .leaf").css("transform","translateX(-37.2333px)")  
+		  }else if(sx<event.x){
+			  $(".section .leaf").css("transform","translateX(104.2333px) ") 
+			   
+		  }
+		  
+		  if(sy==event.y){
+			       
+		  }else if(sy>event.y){
+			  $(".section .leaf").css("transform","translateY(-14.5px)")              
+		  }else if(sy<event.y){
+			  $(".section .leaf").css("transform","translateY(29px)")           
+		  }
+		  sx=event.x;
+		  sy=event.y ;  
+   }
+    </script>
+   
 
- 
-<!--This is Git Project From NIE-COMM-A/nie-top-bar(21)-->
-    <!--内嵌inline/index.html文件-->
     <div id="fullpage" class="wrap">
-    <!-- 下载组件 -->
     
     <div id="nie-download-com" class="nie-download nie-download-com" onclick="javascript:void(0)" data-download="lxf|gw">
         <div class="NIE-qrcode"><img src="img/wxewm01.png"></div>
@@ -122,16 +144,10 @@
     </div>
     <!-- 第一屏 start -->
 
- <div id="01" style="height: 800px;" class="section section-01">
+ <div id="01" style="height: 800px;" class="section section-01" onmousemove=moveFunc(event)>
  		<div class="role role-02"></div>
         <img src="img/yxfm.png" alt="" class="title">
-        <!-- 预约 -->
-        <!-- <a href="javascript:void(0);" class="yuyue-btn" id="yuyue-btn">立即预约</a> -->
-        <!-- 下载 -->
-        <!-- <a href="javascript:void(0);" class="yuyue-btn download-btn Jdownload">立即下载</a> -->
         <span class="slogan_date"></span>
-       <!--  <a href="javascript:;" class="btn-video" data-url="http://v.nie.netease.com/nie/2016/0318/3d3172f921d23d330d24b9849cea0ac2qt.mp4"><i></i></a> -->
-       <!--         <a href="http://lxf.163.com/index.html" class="logo"></a> -->
         <div id="nie-download" class="nie-download" data-download="lxf|gw">
             <div class="NIE-qrcode"><img src="img/wxewm01.png"></div>
              <div class="buttons">
@@ -150,27 +166,28 @@
     </div>
     <!-- 第一屏 end -->
     <!-- 第二屏 start -->
-    <div id="02" style="height: 800px;" class="section section-02">
+    <div id="02" style="height: 800px;" class="section section-02" onmousemove=moveFunc(event)>
         
         <h2></h2>
         <p class="desc"></p>
         <div class="role role-03"></div>
         <div class="role-name"></div>
+        <div style="transform: translate3d(237.2333px, 14.5px, 0px);" class="leaf"></div>
         <span class="tips_download"></span>
         <a href="javascript:;" class="tips_gift"></a>
         <!-- <div class="leaf leaf-01"></div>
         <div class="leaf leaf-02"></div>
         <div class="leaf leaf-03"></div>
         <div class="leaf leaf-04"></div> -->
-        <div class="slideTxtBox">
+        <div class="slideTxtBox" style="z-index:19">
            
-            <div class="hd">
+            <div class="hd" style="z-index:19">
                 <span class="arrow">
                     <a class="next"></a>
                     <a class="prev"></a>
                 </span>
             </div>
-            <div class="bd" id="pics">
+            <div class="bd" id="pics" style="z-index:19">
                 <ul id="0">
                     <li class="slide-item-01">
                         <a href="javascript:;" data-big="img/11_0001_2.png" data-index="0">
@@ -260,23 +277,23 @@
     </div>
     <!-- 第二屏 end -->
     <!-- 第三屏 start -->
-    <div id="03" style="height: 800px;" class="section section-03">
+    <div id="03" style="height: 800px;" class="section section-03" onmousemove=moveFunc(event)>
         <div class="role role-04" style="height:940px;"></div>
         <h2>强对决</h2>
         <p class="desc"></p>
         <!-- <div class="role-name role-name-01">小武</div>
         <div class="role-name role-name-02">无名</div> -->
-
+       <div style="transform: translate3d(37.2333px, 14.5px, 0px);" class="leaf"></div>
         <span class="tips_download"></span>
         <a href="javascript:;" class="tips_gift"></a>
     </div>
     <!-- 第三屏 end -->
     <!-- 第四屏 start -->
-    <div id="04" style="height: 800px;" class="section section-04 ">
+    <div id="04" style="height: 800px;" class="section section-04 " onmousemove=moveFunc(event)>
         <h2></h2>
         <p class="desc"></p>
         <div class="role role-05"></div>
-
+        <div style="transform: translate3d(37.2333px, 14.5px, 0px);" class="leaf"></div>
         <span class="tips_download"></span>
         <a href="javascript:;" class="tips_gift"></a>
         
@@ -287,7 +304,7 @@
     </div>
 
     <!-- 第五屏 start -->
-    <div id="05" style="height: 800px;" class="section section-05 ">
+    <div id="05" style="height: 800px;" class="section section-05 " onmousemove=moveFunc(event)>
         <h2></h2>
         <p class="desc"></p>
         <div class="role role-06"></div>
@@ -296,7 +313,7 @@
         <div class="role role-07"></div>
         <span class="tips_download"></span>
         <a href="javascript:;" class="tips_gift"></a>
-
+        <div style="transform: translate3d(37.2333px, 14.5px, 0px);" class="leaf"></div>
         <div class="role-name role-name-01"></div>
         <div class="role-name role-name-02"></div>
         <div class="role-name role-name-03"></div>
@@ -307,7 +324,7 @@
     
     <!-- 第五屏 end -->
       <!-- 第6屏 start -->
-    <div id="06" style="height: 800px;background:url(img/bg_06.jpg) top center no-repeat;background-size:cover;" class="section section-06" style="">
+    <div id="06" style="height: 800px;background:url(img/bg_06.jpg) top center no-repeat;background-size:cover;" class="section section-06" onmousemove=moveFunc(event)>
         <h2></h2>
         <p class="desc"></p>
         <div class="role role-06"></div>
@@ -316,13 +333,15 @@
         <div class="role role-07"></div>
         <span class="tips_download"></span>
         <a href="javascript:;" class="tips_gift"></a>
-
+        <div style="transform: translate3d(37.2333px, 14.5px, 0px);" class="leaf"></div>      
         <div class="role-name role-name-01"></div>
         <div class="role-name role-name-02"></div>
         <div class="role-name role-name-03"></div>
         <div class="role-name role-name-04"></div>
         
+        
     </div>
+   
     
     <!-- 第6屏 end -->
      <!--此乃底部-->
@@ -393,11 +412,17 @@
            			 <a href="javascript:;" class="fea-04" style="height:150px;width:60px;background:url(img/jyhz2.png); background-repeat: no-repeat;"></a>
           			 <a href="javascript:;" class="fea-05" style="height:150px;width:60px;background:url(img/szdp2.png); background-repeat: no-repeat;"></a>
                 <style>
-               .nav-con  .nav-games-box .fea-01:hover{background:url(img/dflx1.png) no-repeat !important}
+                .nav-con  .nav-games-box .fea-01:hover{background:url(img/dflx1.png) no-repeat !important}
                 .nav-con  .nav-games-box .fea-02:hover{background:url(img/wldh1.png) no-repeat !important}
                 .nav-con  .nav-games-box .fea-03:hover{background:url(img/xkyc1.png) no-repeat !important}
                 .nav-con  .nav-games-box .fea-04:hover{background:url(img/jyhz1.png) no-repeat !important}
                 .nav-con  .nav-games-box .fea-05:hover{background:url(img/szdp1.png) no-repeat !important}
+                
+                .nav-con  .nav-games-box .fea-01.on{background:url(img/dflx1.png) no-repeat !important}
+                .nav-con  .nav-games-box .fea-02.on{background:url(img/wldh1.png) no-repeat !important}
+                .nav-con  .nav-games-box .fea-03.on{background:url(img/xkyc1.png) no-repeat !important}
+                .nav-con  .nav-games-box .fea-04.on{background:url(img/jyhz1.png) no-repeat !important}
+                .nav-con  .nav-games-box .fea-05.on{background:url(img/szdp1.png) no-repeat !important}
                
                </style>
             <i></i>
@@ -414,15 +439,22 @@
                 
                      <a href="javascript:;" class="fea-01" style="height:150px;width:60px;background:url(img/dflx2.png); background-repeat: no-repeat;"></a>
            			 <a href="javascript:;" class="fea-02" style="height:150px;width:60px;background:url(img/wldh2.png); background-repeat: no-repeat;"></a>
-          			  <a href="javascript:;" class="fea-03" style="height:150px;width:60px;background:url(img/xkyc2.png); background-repeat: no-repeat;"></a>
+          			  <a href="javascript:;" class="fea-03"  style="height:150px;width:60px;background:url(img/xkyc2.png); background-repeat: no-repeat;"></a>
            			 <a href="javascript:;" class="fea-04" style="height:150px;width:60px;background:url(img/jyhz2.png); background-repeat: no-repeat;"></a>
           			 <a href="javascript:;" class="fea-05" style="height:150px;width:60px;background:url(img/szdp2.png); background-repeat: no-repeat;"></a>
                 <style>
-               .nav-con  .nav-games-box .fea-01:hover{background:url(img/dflx1.png) no-repeat !important}
+                
+                .nav-con  .nav-games-box .fea-01:hover{background:url(img/dflx1.png) no-repeat !important}
                 .nav-con  .nav-games-box .fea-02:hover{background:url(img/wldh1.png) no-repeat !important}
                 .nav-con  .nav-games-box .fea-03:hover{background:url(img/xkyc1.png) no-repeat !important}
                 .nav-con  .nav-games-box .fea-04:hover{background:url(img/jyhz1.png) no-repeat !important}
                 .nav-con  .nav-games-box .fea-05:hover{background:url(img/szdp1.png) no-repeat !important}
+                 
+                .nav-con  .nav-games-box .fea-01.on{background:url(img/dflx1.png) no-repeat !important}
+                .nav-con  .nav-games-box .fea-02.on{background:url(img/wldh1.png) no-repeat !important}
+                .nav-con  .nav-games-box .fea-03.on{background:url(img/xkyc1.png) no-repeat !important}
+                .nav-con  .nav-games-box .fea-04.on{background:url(img/jyhz1.png) no-repeat !important}
+                .nav-con  .nav-games-box .fea-05.on{background:url(img/szdp1.png) no-repeat !important}
                
                </style>
                     <i></i>
@@ -645,10 +677,11 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
+
 				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
 				anchors: ['1', '2', '3', '4', '5','6','7'],
 				menu: '#menu',
-				scrollingSpeed: 1000,
+				scrollingSpeed: 900,
 				scrollBar: true,
 				menu: '#menu',
 				continuousVertical: true
@@ -703,7 +736,6 @@
 				break;	
 			case '#2':
 				idcode="02";
-				$("#nav-box-02 .fea-01").css("background","url(img/dflx1.png) no-repeat");
 				break;
 			case '#3':
 				idcode="03";
@@ -724,9 +756,9 @@
 				idcode="01";
 				break;
 			}
-			sleep(300);
+			sleep(100);
 			 $(".section-"+idcode).addClass("section-in");
-			
+			 
 			 if(hash=="#1"||hash==""||hash==null){
 				 $("#nav-box-02").css("display","none");
 				 $("#nav-box-01").css("display","block");
@@ -742,7 +774,10 @@
 				 $(".i-arrow").css("display","block"); 
 				 }
 			 }
-			 
+			 var fea=idcode-1;
+	
+			 $('#nav-box-02 .nav-con  .nav-games-box a').removeClass("on");
+			 $('#nav-box-02 .nav-con  .nav-games-box  .fea-0'+fea).addClass("on");
 			 
 			 
 		});
@@ -799,6 +834,10 @@
 			 sleep(300);
 			 $(".section-"+idcode).addClass("section-in");
 			 $("#"+idcode).addClass("section-in");
+			 var fea=idcode-1;
+
+			 $("#nav-box-02 .nav-con  .nav-games-box a").removeClass("on");
+			 $("#nav-box-02 .nav-con  .nav-games-box  .fea-0"+fea).addClass("on");
 						 
 			
 		});
@@ -854,7 +893,7 @@
 	
 			 $(".section").removeClass("section-in");
 			 
-			 sleep(300);
+			 sleep(50);
 			 $(".section-"+idcode).addClass("section-in");
 			 $("#"+idcode).addClass("section-in");
 						 
@@ -914,7 +953,7 @@
 	
 			 $(".section").removeClass("section-in");
 			 
-			 sleep(300);
+			 sleep(10);
 			 $(".section-"+idcode).addClass("section-in");
 			 $("#"+idcode).addClass("section-in");
 						 
@@ -1040,8 +1079,8 @@
   </script>
  <script type="text/javascript">
  $(document).ready(function(){
-	$(".section-07 fp-tableCell").css("height","121px");	 	 
- })
+	$(".section-07 fp-tableCell").css("height","121px"); 	 
+ });
 </script>
 </body>
 

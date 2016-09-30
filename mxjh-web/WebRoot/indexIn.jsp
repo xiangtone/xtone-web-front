@@ -7,9 +7,8 @@
 		<link rel="shortcut icon" href="logo.ico" type="image/x-icon" /><meta name="Keywords" content=" "><meta name="description" content=""><meta name="applicable-device" content="pc,mobile"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=EDGE,chrome=1">
 		<link type="text/css" rel="stylesheet" href="cssforpc/201512122.css">
         <link rel="stylesheet" href="cssforpc/footer.css">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-        <script src="jsforpc/hm.js"></script>
+       <script src="jsforpc/jquery-1.js"></script>
+       <script src="jsforpc/hm.js"></script>
         <script type="text/javascript" language="javascript" src="jsforpc/base-20151217.js" charset="gb2312"></script>
         <script type="text/javascript" src="jsforpc/tan.js" charset="gb2312"></script>
     <!--兼容ie6-->
@@ -268,12 +267,12 @@
                 </div>
                 <div class="right_pic" style="">
                   <div class="ch_bm">
-                  <p><h1>QQ游戏群</h1></p>
+                  <p><h1>游&nbsp;戏&nbsp;Q&nbsp;Q&nbsp;群</h1></p>
                   
-                  <img src="img/qq.png"/>&nbsp 476114315</div>
+                  <p style="color:white;font-size:14px;"><img src="img/qq.png"/>&nbsp 476114315</p></div>
                    <div class="ch_bm">
-                   <p><h1>QQ客服</h1></p>
-                   <img src="img/qq.png"/>&nbsp 3421893764</div>
+                   <p><h1>游&nbsp;戏&nbsp;客&nbsp;服</h1></p>
+                  <p style="color:white;font-size:14px;"><img src="img/qq.png"/>&nbsp;3421893764</p></div>
                 </div>
             </div>
             <div class="h_30"></div>

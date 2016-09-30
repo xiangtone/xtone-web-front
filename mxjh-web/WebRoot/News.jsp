@@ -63,18 +63,18 @@
                 <div class="nW_top">
                  <div class="logo"><a target="_blank" href="index.jsp"></a></div>
 <div class="nav">
-    <div class="navBtn b1"><a href="index.jsp"></a></div>
+    <div class="navBtn b1"><a href="indexIn.jsp"></a></div>
     <div class="navBtn b2"><a href="News.jsp"></a></div>
     <div class="navBtn b3"><a href="Events.jsp"></a></div>
     <div class="navBtn b4"><a href="Strategy.jsp"></a></div>
-    <div class="navBtn b5"><a href="http://tieba.baidu.com/f?kw=%E6%A2%A6%E6%83%B3%E6%B1%9F%E6%B9%96"></a></div>
+    <div class="navBtn b5"><a href="http://tieba.baidu.com/f?kw=%E6%A2%A6%E6%83%B3%E6%B1%9F%E6%B9%96" target="_blank"></a></div>
     <div class="navBtn b6"><a href="qhyy.jsp"></a></div>
 </div>
 <div class="movBtn"><a class="popcl" href="http://sdo-shabake.com/video"></a></div>
                 </div>
                 <div class="conNav">
                     <span style="color:#ffdb94">新闻公告</span>
-                    <em>您的位置：<a href="index.jsp">官网首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a>新闻公告</a></em>
+                    <em>您的位置：<a href="indexIn.jsp">官网首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a>新闻公告</a></em>
                 </div>
                 <div class="nW_main">
                     <div class="conMain">

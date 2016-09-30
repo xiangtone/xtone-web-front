@@ -134,8 +134,8 @@
                      	String exchange = "";
                      	try{
                      		con = ConnectionService.getInstance().getConnectionForLocal();   		
-                     		String sql = "SELECT id,catalog,title FROM tbl_cms_contents WHERE id< "+contentId+"  AND STATUS=1 and catalog not in ('wallpaper','cutpic') ORDER BY id DESC LIMIT 1";
-                     		System.out.println(sql);
+                     		String sql = "SELECT id,catalog,title FROM tbl_cms_contents WHERE id< "+contentId+"  AND STATUS=1 and catalog not in ('wallpaper','cutpic','links') ORDER BY id DESC LIMIT 1";
+                     		//System.out.println(sql);
                      		ps = con.prepareStatement(sql);
                      		rs = ps.executeQuery();
                      		if(rs.next()){
