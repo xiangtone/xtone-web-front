@@ -84,7 +84,7 @@
                                                       		'<div class="w_380"><div class="h_30"></div>'+
                                                       		'<span class="qun">官方Q群: 476114315</span>'+                                                      		
                                                       		'<span class="qun">游戏客服: 3421893764</span>'+
-                                                      		'<a class="bd" style="color:" href="http://tieba.baidu.com/f?kw=%E6%A2%A6%E6%83%B3%E6%B1%9F%E6%B9%96">百度官方贴吧：梦想江湖吧</a></div>'+
+                                                      		'<a class="bd" style="color:" href="http://tieba.baidu.com/f?kw=%E6%A2%A6%E6%83%B3%E6%B1%9F%E6%B9%96" target="_blank">百度官方贴吧：梦想江湖吧</a></div>'+
                                                       		'<div class="w_380"><div class="h_10"></div><em><img src="img/wxewm01.jpg"></em>'+
                                                       		'<i>官方微信号：梦想江湖<br>关注微信扫一扫<br>最新动态一手掌握</i></div></div>'
                                                       	

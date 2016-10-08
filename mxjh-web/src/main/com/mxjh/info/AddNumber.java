@@ -49,8 +49,8 @@ public class AddNumber extends HttpServlet {
       	String idString="";
       	try{
       		con = ConnectionService.getInstance().getConnectionForLocal();   		
-      		String sql = "SELECT COUNT(1) rowCount FROM tbl_exchange_codes WHERE phone = \""+phone+"\"";
-      		//System.out.println(sql);
+      		String sql = "SELECT COUNT(1) rowCount FROM tbl_exchange_codes WHERE phone = "+phone;
+      		//system.out.println(sql);
       		ps = con.prepareStatement(sql);
       		rs = ps.executeQuery();
       		while(rs.next()){
@@ -67,7 +67,7 @@ public class AddNumber extends HttpServlet {
           		while(rs.next()){
           		 idString=rs.getString("id");
           		}
-          		sql="update tbl_exchange_codes set phone=\""+phone+"\", addtime= UNIX_TIMESTAMP()*1000 where id= \""+idString+"\"";
+          		sql="update tbl_exchange_codes set phone="+phone+", addtime= UNIX_TIMESTAMP()*1000 where id= \""+idString+"\"";
       			
           		
           		//System.out.println(sql);
@@ -81,7 +81,7 @@ public class AddNumber extends HttpServlet {
        		     if(code<1000)code+=1000; 
        			 //System.out.println(code);
           		
-          		sql="insert into tbl_orders_users(id,codeNum,invitephoneNum,addTime) values(\""+phone+"\","+code+",0,UNIX_TIMESTAMP()*1000)";
+          		sql="insert into tbl_orders_users(id,codeNum,invitephoneNum,addTime) values("+phone+","+code+",0,UNIX_TIMESTAMP()*1000)";
           		//System.out.println(sql);
           		ps = con.prepareStatement(sql);
           		ps.executeUpdate();

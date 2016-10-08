@@ -104,29 +104,31 @@
 <body>
 	 <script type="text/javascript">
 	 var event=event||window.event;
-	 var sx=event.x||event.pageX;                         
+	 var sx=event.offsetX || event.layerX;                       
 	 var sy=event.offsetY || event.layerY;
       function moveFunc(event){
 	   var event=event||window.event;
 	   event.x=event.x||event.pageX;
 	   event.y=event.y||event.pageY;
-	   if(sx==event.x){
-                
-		  }else if(sx>event.x){
-		 
-			  $(".section .leaf").css("transform","translateX(-37.2333px)")  
-		  }else if(sx<event.x){
-			  $(".section .leaf").css("transform","translateX(104.2333px) ") 
-			   
-		  }
-		  
-		  if(sy==event.y){
-			       
-		  }else if(sy>event.y){
-			  $(".section .leaf").css("transform","translateY(-14.5px)")              
-		  }else if(sy<event.y){
-			  $(".section .leaf").css("transform","translateY(29px)")           
-		  }
+
+	   if(sx==event.x&&sy==event.y){              
+		  }else if(sx==event.x&&sy<event.y){		 
+			  $(".section .leaf").css("transform","translate3d(37.2333px,29px,0px)")  
+		  } else if(sx==event.x&&sy>event.y){		 
+			  $(".section .leaf").css("transform","translate3d(37.2333px,0px,0px)")  
+		  }else if(sx>event.x&&sy==event.y){		 
+			  $(".section .leaf").css("transform","translate3d(-37.2333px,14.5px,0px)")  
+		  }else if(sx>event.x&&sy<event.y){		 
+			  $(".section .leaf").css("transform","translate3d(-37.2333px,29px,0px)")  
+		  }else if(sx>event.x&&sy>event.y){		 
+			  $(".section .leaf").css("transform","translate3d(-37.2333px,0px,0px)")  
+		  }else if(sx<event.x&&sy==event.y){
+			  $(".section .leaf").css("transform","translate3d(104.2333px,14.5px,0px)")  		   
+		  }	else if(sx<event.x&&sy<event.y){
+			  $(".section .leaf").css("transform","translate3d(104.2333px,29px,0px)")  	   
+		  }	else if(sx<event.x&&sy>event.y){
+			  $(".section .leaf").css("transform","translate3d(104.2333px,0px,0px)")  	   
+		  }		  
 		  sx=event.x;
 		  sy=event.y ;  
    }
@@ -166,7 +168,7 @@
     </div>
     <!-- 第一屏 end -->
     <!-- 第二屏 start -->
-    <div id="02" style="height: 800px;" class="section section-02" onmousemove=moveFunc(event)>
+    <div id="02" style="height: 800px;" class="section section-02"  onmousemove=moveFunc(event)>
         
         <h2></h2>
         <p class="desc"></p>
@@ -681,7 +683,7 @@
 				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
 				anchors: ['1', '2', '3', '4', '5','6','7'],
 				menu: '#menu',
-				scrollingSpeed: 900,
+				scrollingSpeed: 1000,
 				scrollBar: true,
 				menu: '#menu',
 				continuousVertical: true
