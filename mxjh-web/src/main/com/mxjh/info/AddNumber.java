@@ -56,7 +56,7 @@ public class AddNumber extends HttpServlet {
       		while(rs.next()){
       		rowCount = rs.getInt("rowCount");
       		}
-      		if(rowCount==1){                                         			 
+      		if(rowCount>=1){                                         			 
                   data=1;
       			
       		}else{  

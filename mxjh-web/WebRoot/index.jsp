@@ -110,24 +110,41 @@
 	   var event=event||window.event;
 	   event.x=event.x||event.pageX;
 	   event.y=event.y||event.pageY;
-
+	   /* if(sx==event.x&&sy==event.y){              
+		  }else if(sx==event.x&&event.y-sy>30){		 
+			  $(".section .leaf").css("transform","translate3d(37.2333px,19px,0px)")  
+		  } else if(sx==event.x&&sy-event.y>30){		 
+			  $(".section .leaf").css("transform","translate3d(37.2333px,10px,0px)")  
+		  }else if(sx-event.x>30&&sy==event.y){		 
+			  $(".section .leaf").css("transform","translate3d(30.2333px,14.5px,0px)")  
+		  }else if(sx-event.x>30&&event.y-sy>30){		 
+			  $(".section .leaf").css("transform","translate3d(30.2333px,19px,0px)")  
+		  }else if(sx-event.x>30&&sy-event.y>30){		 
+			  $(".section .leaf").css("transform","translate3d(30.2333px,10px,0px)")  
+		  }else if(event.x-sx>30&&sy==event.y){
+			  $(".section .leaf").css("transform","translate3d(44.2333px,14.5px,0px)")  		   
+		  }	else if(event.x-sx>30&&event.y-sy>30){
+			  $(".section .leaf").css("transform","translate3d(44.2333px,19px,0px)")  	   
+		  }	else if(event.x-sx>30&&sy-event.y>30){
+			  $(".section .leaf").css("transform","translate3d(44.2333px,10px,0px)")  	   
+		  } */		  
 	   if(sx==event.x&&sy==event.y){              
 		  }else if(sx==event.x&&sy<event.y){		 
-			  $(".section .leaf").css("transform","translate3d(37.2333px,29px,0px)")  
+			  $(".section .leaf").css("transform","translate3d(37.2333px,19px,0px)")  
 		  } else if(sx==event.x&&sy>event.y){		 
-			  $(".section .leaf").css("transform","translate3d(37.2333px,0px,0px)")  
+			  $(".section .leaf").css("transform","translate3d(37.2333px,10px,0px)")  
 		  }else if(sx>event.x&&sy==event.y){		 
-			  $(".section .leaf").css("transform","translate3d(-37.2333px,14.5px,0px)")  
+			  $(".section .leaf").css("transform","translate3d(30.2333px,14.5px,0px)")  
 		  }else if(sx>event.x&&sy<event.y){		 
-			  $(".section .leaf").css("transform","translate3d(-37.2333px,29px,0px)")  
+			  $(".section .leaf").css("transform","translate3d(30.2333px,19px,0px)")  
 		  }else if(sx>event.x&&sy>event.y){		 
-			  $(".section .leaf").css("transform","translate3d(-37.2333px,0px,0px)")  
+			  $(".section .leaf").css("transform","translate3d(30.2333px,10px,0px)")  
 		  }else if(sx<event.x&&sy==event.y){
-			  $(".section .leaf").css("transform","translate3d(104.2333px,14.5px,0px)")  		   
+			  $(".section .leaf").css("transform","translate3d(44.2333px,14.5px,0px)")  		   
 		  }	else if(sx<event.x&&sy<event.y){
-			  $(".section .leaf").css("transform","translate3d(104.2333px,29px,0px)")  	   
+			  $(".section .leaf").css("transform","translate3d(44.2333px,19px,0px)")  	   
 		  }	else if(sx<event.x&&sy>event.y){
-			  $(".section .leaf").css("transform","translate3d(104.2333px,0px,0px)")  	   
+			  $(".section .leaf").css("transform","translate3d(44.2333px,10px,0px)")  	   
 		  }		  
 		  sx=event.x;
 		  sy=event.y ;  
@@ -174,7 +191,7 @@
         <p class="desc"></p>
         <div class="role role-03"></div>
         <div class="role-name"></div>
-        <div style="transform: translate3d(237.2333px, 14.5px, 0px);" class="leaf"></div>
+        <div style="transform: translate3d(37.2333px, 14.5px, 0px);" class="leaf"></div>
         <span class="tips_download"></span>
         <a href="javascript:;" class="tips_gift"></a>
         <!-- <div class="leaf leaf-01"></div>
@@ -683,7 +700,7 @@
 				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
 				anchors: ['1', '2', '3', '4', '5','6','7'],
 				menu: '#menu',
-				scrollingSpeed: 1000,
+				scrollingSpeed: 300,
 				scrollBar: true,
 				menu: '#menu',
 				continuousVertical: true
@@ -833,11 +850,10 @@
 	
 			 $(".section").removeClass("section-in");
 			 
-			 sleep(300);
+			 //sleep(300);
 			 $(".section-"+idcode).addClass("section-in");
 			 $("#"+idcode).addClass("section-in");
 			 var fea=idcode-1;
-
 			 $("#nav-box-02 .nav-con  .nav-games-box a").removeClass("on");
 			 $("#nav-box-02 .nav-con  .nav-games-box  .fea-0"+fea).addClass("on");
 						 
@@ -895,7 +911,7 @@
 	
 			 $(".section").removeClass("section-in");
 			 
-			 sleep(50);
+			  sleep(50);
 			 $(".section-"+idcode).addClass("section-in");
 			 $("#"+idcode).addClass("section-in");
 						 
