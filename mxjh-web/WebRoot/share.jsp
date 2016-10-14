@@ -40,7 +40,7 @@ var index = Math.floor(Math.random()*5);
  var href = window.location.href
   var ticket = document.getElementById('ticket').innerText;  
   var timestamp = new Date().getTime();
-  var str = 'jsapi_ticket='+ticket+'&noncestr=Wm3WZYTPz0wzccnW&timestamp='+timestamp+'&url=http://mxjh.xtonegame.com/share.jsp';
+  var str = 'jsapi_ticket='+ticket+'&noncestr=Wm3WZYTPz0wzccnW&timestamp='+timestamp+'&url=http://mxjh.vanggame.com/share.jsp';
   var signature = hex_sha1(str);
 
 

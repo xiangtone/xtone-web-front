@@ -45,7 +45,6 @@ public static String getTicketFromloc(){                //从缓存中获取tick
 			dao.update(ticket, "wx26d9b9ff5f0fc4ed");
 			
 			
-			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
