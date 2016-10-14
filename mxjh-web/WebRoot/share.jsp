@@ -33,8 +33,8 @@ String ticket = Wechat.getTicketFromloc();
 <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script type="text/javascript" src="js/sha1.js"></script>
 <script type="text/javascript">
-var plc = '<<梦想江湖>> ';
-var strAry =[plc+' 我已经预约梦想江湖了，兄弟快来与我一起战斗吧！',plc+' 预约梦想江湖，用你的洪荒之力助我一战！',plc+' 我已预约梦想江湖，I want you，加入我的仙盟吧！',plc+' 这波不亏，我已预约梦想江湖，不明真相的观众请点我！',plc+' 陪我玩梦想江湖吧，点一下又不会怀孕！'];
+var plc = '【梦想江湖】 ';
+var strAry =[plc+' 连服团战，开启东方新武侠'];
 var index = Math.floor(Math.random()*5);
 
  var href = window.location.href
@@ -56,8 +56,8 @@ wx.config({
 wx.ready(function(){
 	wx.onMenuShareTimeline({
 	    title: strAry[index], // 分享标题
-	    link: 'http://mxjh.xtonegame.com/mobile.jsp', // 分享链接
-	    imgUrl: 'http://mxjh.xtonegame.com/images/300x300.png', // 分享图标
+	    link: 'http://mxjh.vanggame.com/mobile.jsp', // 分享链接
+	    imgUrl: 'http://mxjh.vanggame.com/img/share-icon.png', // 分享图标
 	    success: function () { 
 	        // 用户确认分享后执行的回调函数
 	    },
@@ -69,10 +69,10 @@ wx.ready(function(){
 
 
 	wx.onMenuShareAppMessage({
-	    title: '梦想江湖', // 分享标题
-	    link: 'http://mxjh.xtonegame.com/mobile.jsp', // 分享链接
+	    title: '【梦想江湖】', // 分享标题
+	    link: 'http://mxjh.vanggame.com/mobile.jsp', // 分享链接
 	    desc: strAry[index], 
-	    imgUrl: 'http://mxjh.xtonegame.com/images/300x300.png', // 分享图标
+	    imgUrl: 'http://mxjh.vanggame.com/img/share-icon.png', // 分享图标
 	    type: '', // 分享类型,music、video或link，不填默认为link
 	    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
 	    success: function () { 
@@ -84,10 +84,10 @@ wx.ready(function(){
 	    }
 	});
 	wx.onMenuShareQQ({
-	    title: '梦想江湖', // 分享标题
+	    title: '【梦想江湖】', // 分享标题
 	    desc:strAry[index], // 分享描述
-	    link: 'http://mxjh.xtonegame.com/mobile.jsp', // 分享链接
-	    imgUrl: 'http://mxjh.xtonegame.com/images/300x300.png', // 分享图标
+	    link: 'http://mxjh.vanggame.com/mobile.jsp', // 分享链接
+	    imgUrl: 'http://mxjh.vanggame.com/img/share-icon.png', // 分享图标
 	    success: function () { 
 	       // 用户确认分享后执行的回调函数
 	    },
@@ -98,10 +98,10 @@ wx.ready(function(){
 	});
 
 	wx.onMenuShareQZone({
-	    title: '梦想江湖', // 分享标题
+	    title: '【梦想江湖】', // 分享标题
 	    desc: strAry[index], // 分享描述
-	    link: 'http://mxjh.xtonegame.com/mobile.jsp', // 分享链接
-	    imgUrl: 'http://mxjh.xtonegame.com/images/300x300.png', // 分享图标
+	    link: 'http://mxjh.vanggame.com/mobile.jsp', // 分享链接
+	    imgUrl: 'http://mxjh.vanggame.com/img/share-icon.png', // 分享图标
 	    success: function () { 
 	       // 用户确认分享后执行的回调函数
 	    },
