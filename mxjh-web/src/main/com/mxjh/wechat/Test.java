@@ -9,15 +9,16 @@ import com.mxjh.info.Ticketsdao;
 public class Test {
 
 	public static void main(String[] args) {
-		Ticketsdao dao = new Ticketsdao();
-		String ticket = "";
-		try {
-			 ticket = Wechat.getTicketFromTx(dao.getToken("wx26d9b9ff5f0fc4ed"));
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-System.out.println(ticket);
+	try {
+		// wx26d9b9ff5f0fc4ed=8b1de189eefa9c0d78c1a847122eaf38
+		TokenGet tk =  new TokenGet();
+		tk.setAppId("wx26d9b9ff5f0fc4ed");
+		tk.setSecret("8b1de189eefa9c0d78c1a847122eaf38");
+		System.out.println(tk.get());
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
 	}
   
+}
 }
