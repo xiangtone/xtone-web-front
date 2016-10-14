@@ -97,9 +97,11 @@
 
 <script type="text/javascript">
 			
-              width_screen=document.documentElement.clientWidth;
-              height_screen=document.documentElement.clientHeight;
+              var width_screen=document.documentElement.clientWidth;
+              var height_screen=document.documentElement.clientHeight;
+                      
 </script>
+
 </head>
 <body>
 	 <script type="text/javascript">

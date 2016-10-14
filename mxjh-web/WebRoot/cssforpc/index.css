@@ -27,6 +27,7 @@ body { min-width: 1260px; position: relative; margin: 0px auto; }
 .section { min-height: 800px; position: relative; width: 100%; height: 100%; min-width: 1260px; overflow:; }
 .section h2, .section .desc, .section .role-name,.section  .leaf{ position: absolute; text-indent: -9999px; left: 50%; }
 .role { position: absolute; left: 50%; }
+
 .section-01 { background:url("../img/bg_01.jpg") no-repeat scroll center top;background-size:cover; }
 .section-01 .title { position: absolute; left: 50%; width: 231px; height: 633px; top: 10%; margin-left: -500px; }
 .section-01 .yuyue-btn { position: absolute; text-indent: -9999px; width: 105px; height: 168px; top: 202px; left: 50%; margin-left: -512px; background-repeat: no-repeat; }
@@ -42,6 +43,22 @@ body { min-width: 1260px; position: relative; margin: 0px auto; }
 /* .role-01 { width: 887px; height: 542px; top: 0px; margin-left: -530px; background: transparent url("") no-repeat scroll 0% 0%; } */
 /* .role-02 { width:30%;min-height:75%; height:auto; top: 15px; margin-left: 8%; margin-top: 2%;background:url("../img/page1_01.png") no-repeat top center;background-size:cover;overflow:display;}*/
 .role-02 { width:472px;height:680px; top: 15px; margin-left: 8%; margin-top: 2%;background:url("../img/page1_01.png") no-repeat top center;background-size:cover;overflow:display;}
+
+
+@media screen and (min-width: 1600px) {
+.section-01 .title {width: 256px; height: 703px;margin-left: -555px;}
+.section-01 .yuyue-btn {width: 116px; height: 186px; top: 224px;margin-left: -568px; }
+.section-01 .slogan_date{width: 56px; height: 667px;margin-left:-644px}
+.role-02 { width:524px;height:756px; top: 17px;}
+} 
+
+@media screen and (min-width: 1900px) {
+.section-01 .title {width: 308px; height: 744px;margin-left: -666px;}
+.section-01 .yuyue-btn {width: 140px; height: 224px; top: 281px;margin-left: -682px; }
+.section-01 .slogan_date{width: 66px; height: 800px;margin-left:-773px}
+.role-02 { width:629px;height:906px; top: 20px;}
+} 
+
 .btn-video { position: absolute; width: 155px; height: 133px; left: 50%; margin-left: -641px; top: 653px; background-repeat: no-repeat; }
 .btn-video i { width: 40px; height: 40px; position: absolute; left: 50%; top: 50%; margin: -18px 0px 0px -6px; background-repeat: no-repeat; }
 .btn-video:hover i { animation-play-state: paused; }
@@ -61,17 +78,51 @@ body { min-width: 1260px; position: relative; margin: 0px auto; }
 .section-02 .desc {background:url("../img/lycbg.png") center no-repeat; width: 90px; height: 500px; top: 37px; margin-left: 27%; background-repeat: no-repeat;z-index:99999 }
 .section-02 .role-name { width: 41px; height: 85px; top: 280px; margin-left: 550px; background-repeat: no-repeat; }
 .role-03 { width: 527px; height: 660px; top: 146px; margin-left: -5%; background: transparent url("../img/role02.png") no-repeat scroll 0% 0%;background-size:100%;}
+@media screen and (min-width: 1600px) {
+.section-02 h2 {width: 316px; height: 497px; top: 111px;}
+.section-02 .desc {width: 100px; height: 555px; top: 41px;}
+.role-03 { width: 585px; height: 733px; top: 162px; }
+} 
+@media screen and (min-width: 1900px) {
+.section-02 h2 {width: 380px; height: 596px; top: 133px;}
+.section-02 .desc {width: 120px; height: 667px; top: 49px;}
+.role-03 { width: 702px; height: 992px; top: 195px; }
+} 
+
 .section-03 { background: rgb(235, 235, 235) url("../img/bg_03.jpg") no-repeat scroll center top; background-size:cover;}
 .section-03 h2 { background:url("../img/pg03wldh.png") center top no-repeat;width: 291px; height: 437px; top: 150px; margin-left: -45%; background-repeat: no-repeat; }
 .section-03 .desc { background:url("../img/pg03yly.png") center top no-repeat;width: 88px; height: 501px; top: 122px; margin-left: 25%; background-repeat: no-repeat; }
 .section-03 .role-name-01 { width: 40px; height: 84px; top: 158px; margin-left: -406px; background-repeat: no-repeat; }
 .section-03 .role-name-02 { width: 41px; height: 84px; top: 330px; margin-left: 433px; background-repeat: no-repeat; }
 .role-04 { width: 866px !important; height: 741px !important; top: 66px; margin-left: -37%; background:url("../img/pg03_01.png") no-repeat top center;background-size:cover;overflow:display;}
+@media screen and (min-width: 1600px) {
+.section-03 h2 { width: 323px; height: 485px; top: 166px;}
+.section-03 .desc { width: 98px; height: 556px; top: 135px;}
+.role-04 { width: 984px !important; height: 823px !important; top: 73px;}
+} 
+@media screen and (min-width: 1900px) {
+.section-03 h2 { width: 388px; height: 582px; top: 200px;}
+.section-03 .desc { width: 117px; height: 668px; top: 163px;}
+.role-04 { width: 1154px !important; height: 988px !important; top: 88px;}
+} 
+
 .section-04 { background: rgb(0, 0, 0) url("../img/bg_04.jpg") no-repeat scroll center top; background-size:cover;}
 .section-04 h2 { background:url("../img/xkyc.png") center top no-repeat;width: 235px; height: 334px; top: 104px; margin-left: -40%; background-repeat: no-repeat;background-size:cover; }
 .section-04 .desc {background:url("../img/pg04lmhm.png") center top no-repeat; width: 66px; height: 375px; top: 107px; margin-left: 34%; background-repeat: no-repeat;background-size:cover; overflow:display;}
 .section-04 .role-name { width: 40px; height: 88px; top: 546px; margin-left: 476px; background-repeat: no-repeat; }
 .role-05 { width: 900px; height: 894px; top: 60px; margin-left: -25.2%; background: transparent url("../img/page04role.png") no-repeat scroll 0% 0%;background-size:100%; }
+@media screen and (min-width: 1600px) {
+.section-04 h2 { width: 261px; height: 371px; top: 115px;}
+.section-04 .desc { width: 73px; height: 416px; top: 119px;}
+.role-05 { width: 1000px !important; height: 993px !important; top: 67px;}
+} 
+@media screen and (min-width: 1900px) {
+.section-04 h2 { width: 313px; height: 445px; top: 139px;}
+.section-04 .desc { width: 88px; height: 500px; top: 143px;}
+.role-05 { width: 1200px !important; height: 1192px !important; top: 80px;}
+} 
+
+
 .pic-box { width: 516px; position: absolute; left: 50%; margin-left: -584px; top: 163px; }
 .pic-list { position: relative; }
 .pic-list img { display: block; }
@@ -87,9 +138,35 @@ body { min-width: 1260px; position: relative; margin: 0px auto; }
 
 .section-05 .role-06 { width: 300px; height: 315px; top: 245px; margin-left: -14%; background: transparent url("../img/pg05_O1.png") no-repeat scroll 0% 0%; background-size:100%;}
 .section-05 .role-07 { width: 250px; height: 251px; top: 397px; margin-left: -35%; background: transparent url("../img/pg05_O2.png") no-repeat scroll 0% 0%; background-size:100%;z-index:99;}
-.section-05 .role-08 { width: 250px; height: 241px; top: 28px; margin-left: 8%; background: transparent url("../img/pg05_O4.png") no-repeat scroll 0% 0%; background-size:100%;}
+.section-05 .role-08 { width: 250px; height: 251px; top: 28px; margin-left: 8%; background: transparent url("../img/pg05_O4.png") no-repeat scroll 0% 0%; background-size:100%;}
 .section-05 .role-09 { width: 228px; height: 234px; top: 410px; margin-left: 11%; background: transparent url("../img/pg05_O3.png") no-repeat scroll 0% 0%; background-size:100%;}
 
+
+@media screen and (min-width: 1600px) {
+.section-05 h2{width: 245px; height: 614px;top:2px}
+.section-05 .desc{width: 98px; height: 558px;top:114px}
+.section-05 .role-name-01{width: 161px; height: 37px; top: 636px; }
+.section-05 .role-name-02{width: 161px; height: 37px; top: 724px; }
+.section-05 .role-name-03{width: 161px; height: 37px; top: 300px; }
+.section-05 .role-name-04{width: 161px; height: 37px; top: 724px; }
+.section-05 .role-06{ width: 333px; height: 350px; top: 272px;}
+.section-05 .role-07{ width: 278px; height: 278px; top: 441px; }
+.section-05 .role-08{ width: 278px; height: 267px; top: 31px; }
+.section-05 .role-09{ width: 253px; height: 260px; top: 455px; }
+} 
+
+@media screen and (min-width: 1900px) {
+.section-05 h2{width: 295px; height: 818px;top:3px;}
+.section-05 .desc{width: 117px; height: 670px;top:152px;}
+.section-05 .role-name-01{width: 193px; height: 44px; top: 762px; }
+.section-05 .role-name-02{width: 193px; height: 44px; top: 866px; }
+.section-05 .role-name-03{width: 193px; height: 44px; top: 360px; }
+.section-05 .role-name-04{width: 193px; height: 44px; top: 866px; }
+.section-05 .role-06{ width: 400px; height: 620px; top: 323px;}
+.section-05 .role-07{ width: 333px; height: 334px; top: 529px; }
+.section-05 .role-08{ width: 333px; height: 334px; top: 37px; }
+.section-05 .role-09{ width: 304px; height: 312px; top: 547px; }
+} 
 
 
 
@@ -106,6 +183,15 @@ body { min-width: 1260px; position: relative; margin: 0px auto; }
 .section-06 .role-08 { width: 456px; height: 827px; top: 240px; margin-left: 6%; background: transparent url("../img/pg06_O2.png") no-repeat scroll 0% 0%;background-size:100%; }
 .section-06 .role-09 { width: 450px; height: 495px; top: 503px; margin-left: 78px; background: transparent url("") no-repeat scroll 0% 0%; }
 .section-06 { min-height: 244px; height: 244px ! important; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+ 
+@media screen and (min-width:1900px) {
+.section-06 h2{ width: 417px; height: 593px; top:182px;}
+.section-06 .desc{ width: 107ox; height: 667px; top: 191px;}
+.section-06 .role-06{ width: 660px !important; height: 1104px !important; top: 106px;}
+.section-06 .role-08{ width: 608px !important; height: 1102px !important; top: 320px;}
+} 
+
+
 #NIE-copyRight { border-top: 1px solid rgb(237, 237, 235); width: 1200px; margin: 0px auto; padding-bottom: 40px; position: relative; }
 #NIE-copyRight #ncp-l2, #NIE-copyRight #ncp-l1, #NIE-copyRight a { color: rgb(118, 118, 118); }
 .share-box { width: 488px; margin: 0px auto; padding-top: 34px; color: rgb(55, 55, 55); z-index: 10; position: relative; }
@@ -170,6 +256,13 @@ body { min-width: 1260px; position: relative; margin: 0px auto; }
 body #NIE-topBar-include { position: fixed; width: 100%; top: 0px; left: 0px; z-index: 90; }
 .arrow2 { height: 51px; background-repeat: no-repeat; }
 .leaf { position: absolute; width:1105px; height: 587px;margin-left: -552px; top: 2%; background:transparent url("../img/luoye.png") no-repeat scroll center top; transition: all 0.1s ease 0s; z-index:9;background-size:cover; }
+@media screen and (min-width: 1600px) {
+.leaf {width:1228px; height: 652px;margin-left: -613px;}
+} 
+@media screen and (min-width: 1600px) {
+.leaf {width:1535px; height: 782px;margin-left: -736px;}
+} 
+
 .leaf-01 { top: 0px; background-repeat: no-repeat; }
 .leaf-02 { top: 0px; background-repeat: no-repeat; }
 .leaf-03 { top: 0px; background-repeat: no-repeat; }
