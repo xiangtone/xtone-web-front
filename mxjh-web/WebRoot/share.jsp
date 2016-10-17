@@ -34,11 +34,11 @@ String ticket = Wechat.getTicketFromloc();
 <script type="text/javascript" src="js/sha1.js"></script>
 <script type="text/javascript">
 var plc = '【梦想江湖】 ';
-var strAry =[plc+' 连服团战，开启东方新武侠'];
+var strAry =plc+' 连服团战，开启东方新武侠';
 var index = Math.floor(Math.random()*5);
 
  var href = window.location.href
-  var ticket = document.getElementById('ticket').innerText;  
+  var ticket = document.getElementById('ticket').innerText;    
   var timestamp = new Date().getTime();
   var str = 'jsapi_ticket='+ticket+'&noncestr=Wm3WZYTPz0wzccnW&timestamp='+timestamp+'&url=http://mxjh.vanggame.com/share.jsp';
   var signature = hex_sha1(str);
@@ -55,15 +55,15 @@ wx.config({
 
 wx.ready(function(){
 	wx.onMenuShareTimeline({
-	    title: strAry[index], // 分享标题
+	    title: strAry, // 分享标题
 	    link: 'http://mxjh.vanggame.com/mobile.jsp', // 分享链接
 	    imgUrl: 'http://mxjh.vanggame.com/img/share-icon.png', // 分享图标
 	    success: function () { 
 	        // 用户确认分享后执行的回调函数
 	    },
 	    cancel: function () { 
-	    	index = Math.floor(Math.random()*5);
-	        this.title = strAry[index];
+	    	
+	        this.title = strAry;
 	    }
 	});
 
@@ -71,35 +71,35 @@ wx.ready(function(){
 	wx.onMenuShareAppMessage({
 	    title: '【梦想江湖】', // 分享标题
 	    link: 'http://mxjh.vanggame.com/mobile.jsp', // 分享链接
-	    desc: strAry[index], 
+	    desc: strAry, 
 	    imgUrl: 'http://mxjh.vanggame.com/img/share-icon.png', // 分享图标
 	    type: '', // 分享类型,music、video或link，不填默认为link
 	    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
 	    success: function () { 
-	        // 用户确认分享后执行的回调函数
+	        // 用户确认分享后执行的回调函数                            
 	    },
 	    cancel: function () { 
-	    	index = Math.floor(Math.random()*5);
-	        this.desc = strAry[index];
+	        
+	        this.desc = strAry;
 	    }
 	});
 	wx.onMenuShareQQ({
 	    title: '【梦想江湖】', // 分享标题
-	    desc:strAry[index], // 分享描述
+	    desc:strAry, // 分享描述
 	    link: 'http://mxjh.vanggame.com/mobile.jsp', // 分享链接
 	    imgUrl: 'http://mxjh.vanggame.com/img/share-icon.png', // 分享图标
 	    success: function () { 
 	       // 用户确认分享后执行的回调函数
 	    },
 	    cancel: function () { 
-	    	index = Math.floor(Math.random()*5);
-	        this.desc = strAry[index];
+	    
+	        this.desc = strAry;
 	    }
 	});
 
 	wx.onMenuShareQZone({
 	    title: '【梦想江湖】', // 分享标题
-	    desc: strAry[index], // 分享描述
+	    desc: strAry, // 分享描述
 	    link: 'http://mxjh.vanggame.com/mobile.jsp', // 分享链接
 	    imgUrl: 'http://mxjh.vanggame.com/img/share-icon.png', // 分享图标
 	    success: function () { 
@@ -107,8 +107,8 @@ wx.ready(function(){
 	    },
 	    cancel: function () { 
 	        // 用户取消分享后执行的回调函数
-	    	index = Math.floor(Math.random()*5);
-	        this.desc = strAry[index];
+	  
+	        this.desc = strAry;
 	    }
 	});
     // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。

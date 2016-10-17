@@ -10,7 +10,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.LongSerializationPolicy;
 import com.mxjh.info.Ticjsoninfo;
-import com.mxjh.info.Ticketsdao;
+import com.mxjh2.info.Ticketsdao;
 
 public class Wechat {
 public  static String getTicketFromTx(String token)throws Exception{
