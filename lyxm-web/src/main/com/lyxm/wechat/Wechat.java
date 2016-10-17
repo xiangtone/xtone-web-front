@@ -43,6 +43,7 @@ public static String getTicketFromloc(){                //从缓存中获取tick
 			ticket = getTicketFromTx(dao.getToken("wx26d9b9ff5f0fc4ed"));
 			if(ticket!=null)
 			dao.update(ticket, "wx26d9b9ff5f0fc4ed");
+
 			
 			
 			
